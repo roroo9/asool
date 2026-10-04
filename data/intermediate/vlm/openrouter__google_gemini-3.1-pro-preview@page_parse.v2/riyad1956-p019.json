@@ -1,0 +1,303 @@
+{
+ "page_id": "riyad1956-p019",
+ "printed": 19,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 12611
+ },
+ "page_number_printed": "19",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٩ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى حمزةَ أنسِ بنِ مالكٍ الأنصاريِّ خادمِ رسولِ اللهِ صل الله عليه وسلم رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "Typo in printed text: 'صل الله' instead of 'صلى الله' in the first line. Transcribed exactly as printed."
+   ]
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« للهُ (١) أفرحُ بتوبةِ عبدهِ مِنْ أحدِكمْ سقطَ على بعيرهِ وقَدْ أضلَّهُ في أرضٍ فلاةٍ »",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه . وفى رواية لمسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« للهُ أشدُّ فرحاً بتوبةِ عبدهِ حينَ يتوبُ إليهِ مِنْ أحدِكمْ كان على رَاحِلَتِهِ بأرْضِ فلاةٍ فَانْفَلَتَتْ مِنْهُ وعليْها طعامُهُ وشرابُهُ فأيِسَ منها فَأَتَى شَجَرَةً فاضطجعَ (٢) فى ظِلِّها وقَدْ أيِسَ مِنْ رَاحِلَتِهِ فبينما هوَ كذلكَ إِذْ هوَ بها قائِمَةً عندهُ فأَخَذَ بخطامِها (٣) ثمَّ قال منْ شدَّةِ الفرح : اللهمَّ أنتَ عبدِي وأنا ربكَ ، أخطأَ (٤) مِنْ شدةِ الفرحِ » .",
+   "footnote_markers_in_text": [
+    "(٢)",
+    "(٣)",
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى موسى عبدِ اللهِ بنِ قيسٍ الأشعريِّ رضى الله عنه عن النبى صلى الله عليه وسلم قال",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ اللهَ تعالى يبسطُ (٥) يدهُ بالليلِ ليتوبَ مسيءُ النهارِ ويبسطُ يدهُ بالنهارِ ليتوبَ مسيءُ الليلِ حتى تطلعَ الشمسُ مِنْ مغربِها »",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه مسلم .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« مَنْ تابَ قبلَ أنْ تطلعَ الشمسُ منْ مغربِها تابَ اللهُ عليهِ »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه مسلم .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى عبد الرحمن عبدِ اللهِ بنِ عمرَ بنِ الخطاب رضى الله عنهما عن النبى صلى الله عليه وسلم قال",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ اللهَ عزَّ وجلَّ يقبلُ توبةَ العبدِ (٦) مالم يغرْغرْ (٧) »",
+   "footnote_markers_in_text": [
+    "(٦)",
+    "(٧)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه الترمذى وقال : حديث حسن .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) أشد قبولا للراجي",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) جلس يستريح في مفازة في أرض واسعة لا نبات بها ولا ماء",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) زمامها أى قبض على حبل ليف ليحفظها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) تجاوز الأعرابى الصواب والله تعالى قبل خطأه ـ انا ربك ـ سبحانه أنسى الحفظة تقييد كبوة عبده",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) يتجاوز عز شأنه ويوسع جوده ويعم فضله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) المذنب المكلف",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 21,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) تصل روحه حلقومه قال تعالى: وليست التوبة للذين يعملون السيئات حتى إذا حضر أحدهم الموت قال إنى تبت الآن",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Typo in printed text: 'صل الله' instead of 'صلى الله' in the first line."
+ ]
+}

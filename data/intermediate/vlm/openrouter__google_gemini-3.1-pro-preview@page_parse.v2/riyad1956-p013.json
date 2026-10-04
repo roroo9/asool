@@ -1,0 +1,316 @@
+{
+ "page_id": "riyad1956-p013",
+ "printed": 13,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 10922
+ },
+ "page_number_printed": "١٣",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٣ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أمِّ المؤمنين أم عبد الله عائشة رضى الله عنها قالت : قال رسولُ الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« يغزو جيشٌ الكعبةَ فإذا كانوا ببيداءَ(١) من الأرضِ يُخسف بأولهم (٢) وآخرهم . قالت قلتُ : يا رسولَ الله كيف يُخسف بأولهم وآخرهم وفيهم أسواقُهم ومنْ ليس منهم ؟ قال : يُخسف بأولهم وآخرهم ثم يُبعثونَ على نياتهم (٣) »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه . هذا لفظ البخارى .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن عائشة رضى الله عنها قالت : قال النبي صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« لا هجرةَ بعد الفتح ، ولكنْ جهادٌ ونيةٌ ، وإذا استُنفِرتُم فانفروا » (٤)",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه . - ومعناه : لا هجرةَ من مكةَ لأنها صارت دارَ إسلامٍ .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى عبد الله جابر بن عبد الله الأنصارى رضى الله عنهما قال : كُنَّا مع النبي صلى الله عليه وسلم في غزاةٍ (٥) فقال :",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ بالمدينةِ لرجالاً ما سرتمْ مسيراً ، ولا قطعتمْ وادياً إلا كانوا معكم (٦) حبسهمُ (٧) المرضُ »",
+   "footnote_markers_in_text": [
+    "(٦)",
+    "(٧)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وفي رواية :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إلا شركوكم في الأجرِ »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه مسلم . ورواه البخارى عن أنس رضى الله عنه قال: رجعنا من غزوةِ تبوكَ مع النبي صلى الله عليه وسلم فقال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ أقواماً خلفنا (٨) بالمدينة ما سلكنا شعباً ولا وادياً إلا وهمْ معنا ، حبسهمُ العذرُ » .",
+   "footnote_markers_in_text": [
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى يزيد معنِ بنِ يزيد بن الأخنس رضى الله عنهم ، وهو وأبوه وجدُّه صحابيون ، قال : كان أبى يزيد أخرجَ دنانير يتصدقُ بها فوضعها عند رجل",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(١) صحراء ومفازة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٢) تقبر جميع من رافقهم في صحبة الطريق",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "word 'صحبة' is slightly ambiguous, could be 'صحة' but context and faint dot suggest 'صحبة'"
+   ]
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٣) كل بقصده",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٤) طلبتم للخروج إلى الجهاد فلبوا. فيه التحذير من مصاحبة العصاة والتنبيه على صحبة الأخيار الأبرار وأن الأعمال بحسب نية العامل المخلص.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٥) غزوة تبوك",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٦) في الأجر وادراك الثواب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 21,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٧) منعهم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 22,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 4,
+   "text": "(٨) وراءنا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

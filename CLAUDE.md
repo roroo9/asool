@@ -524,7 +524,7 @@ These override anything above that conflicts with them.
 3. **Fast review screen** showing ONLY disagreements: cropped line image, the candidate readings, one-click choice, free-text fix, keyboard shortcuts, progress bar.
 4. **Random 5% spot-check** of auto-accepted words (weighted toward diacritized words); record the error rate in `data/gold/spotcheck.json` and report it on /proof.
 5. Built as the product's real **Review** feature following §7 UI/UX.
-6. Gold set size: 15 pages including the 3 bake-off pages (41, 30, 20). Reviewer: rowan (team member, native Arabic speaker).
+6. Gold set size: 15 pages including the 3 bake-off pages (41, 30, 20). Reviewer: rawan (team member, native Arabic speaker).
 7. **C6.** Document method, bias controls and spot-check results in the README. **Quality is the top priority.**
 8. Reader C for the 12 non-bake-off gold pages = **Surya OCR 2** (open-source, local). Mistral is not possible (free plan has no API keys). If Surya had been weak, Qari-OCR was next; paid options only if both failed. README states that Readers A and C are classical/open OCR, so more disagreements reach human review; auto-accept still requires all three readers to agree.
 
@@ -543,3 +543,11 @@ These override anything above that conflicts with them.
 6. **Main page parser:** chosen by measured results, independent of gold Readers B and C → Gemini 3.1 Pro via OpenRouter with prompt `page_parse.v2` (see `docs/MODEL_SELECTION.md`).
 7. **Embeddings for the deployed app:** must not depend on free-tier limits during judging → Gemini Embedding 2 via OpenRouter (paid, pennies), corpus vectors precomputed; if the embedding call fails at query time, search falls back to BM25 only and says so.
 8. **Spending:** tracked per provider in `docs/COSTS.md`; warn the owner at 80% of any budget (Anthropic $5, OpenRouter $10).
+
+### 12.E Owner decisions of Sun Oct 4, ~11:30
+1. Page parser approved: Gemini 3.1 Pro + `page_parse.v2`. Keep the held-out re-measurement (12 gold pages) in Phase 5.
+2. Hadith grading: dorar.net loads in the owner's browser. The owner enters gradings for the ~5 non-Sahihayn hadiths at `/review/hadith` (grading text + dorar result URL), using a prefilled dorar search link. HadeethEnc is shown beside each hadith as a second reference. No entered grading -> «الحكم غير متحقق في البيانات».
+3. Reviewer name: **rawan** everywhere.
+4. Gold consensus rule v2: a reader that outputs no tashkeel on a word whose letters match abstains on tashkeel only; the remaining reader decides; such words are spot-checked at 10%. Documented in the README.
+5. **Completeness check** (`pipeline/completeness.py`): every Tesseract text line (multi-column footnote rows split at markers) must be covered by the extracted blocks (fuzzy match, threshold 65; calibrated on 15 gold pages: 37/40 deleted paragraphs caught, 2/15 complete pages falsely flagged). Uncovered regions flag the page into the review queue; flagged pages are never silently indexed. Limit: gaps shorter than one printed line are not detectable this way. On the 30 corpus pages it flagged 4 pages; 2 were real Gemini errors (p39 footnote (٧) wrong text, p15 footnote (١) «المظاهر» for printed «الظاهر»). Gemini 3.1 Pro read page 28 completely (coverage 100%).
+6. Geometry: Tesseract text is too poor on ornate Quran type and small footnotes to align reliably, so each block's position comes from the VLM (`block_boxes.v1`, Gemini 3.8 Flash, box_2d) and is cross-checked against OCR word alignment. Agreement -> `bbox_source="fusion"` (precise per-line rects); otherwise `"vlm"` with a confidence cap of 0.85.

@@ -27,7 +27,7 @@ KFGQPC_SOURCE = "مجمع الملك فهد لطباعة المصحف الشري
 # Documented fallback: Quranpedia mushaf 1 (Hafs, matches the King Fahd print)
 QURAN_FILE = REF / "quran" / "qp_mushafs-1.json.gz"
 MINOR = 0.85
-MIN_WORDS = 4  # unmarked spans need >= 4 consecutive words hitting the 3-gram index
+MIN_WORDS = 6  # unmarked spans need >= 6 consecutive words hitting the 3-gram index
 MARKERS = re.compile(r"\(\s*[\d٠-٩]+\s*\)|[¹²³⁴⁵⁶⁷⁸⁹⁰]+")
 BRACKETS = re.compile(r"[﴿{]([^﴾}]+)[﴾}]")
 
@@ -37,7 +37,7 @@ class Ayah:
     surah: int
     ayah: int
     text: str  # display text, exactly as in the reference
-    words: list[str]  # normalized words
+    words: list[str]  # normalized words (imla'i spelling: used for matching)
 
 
 def _load_kfgqpc() -> list[Ayah]:
@@ -173,8 +173,6 @@ def verify(printed_text: str) -> QuranMatch | None:
     sim, s, e = best
     if sim < 0.6:
         return None
-    a0, _ = idx.pos[s]
-    a1, _ = idx.pos[e - 1]
     # Trim reference-only words at the window edges (a partial quote of a longer ayah).
     ops = _diff(words, idx.words[s:e])
     while ops and ops[0]["op"] == "insert" and ops[0]["at"] == 0:
@@ -184,6 +182,16 @@ def verify(printed_text: str) -> QuranMatch | None:
         e -= len(ops[-1]["reference"])
         ops = _diff(words, idx.words[s:e])
     sim = _sim(words, idx.words[s:e])
+    a0, _ = idx.pos[s]
+    a1, _ = idx.pos[e - 1]
+    if ops:
+        # The print may follow the Uthmani spelling (e.g. «أيه المؤمنون», 24:31) where the
+        # imla'i reference differs. If the printed words appear verbatim in the Uthmani text of
+        # the same ayahs, it is not a variant.
+        uth_text = " ".join(a.text for a in idx.ayahs[a0 : a1 + 1])
+        uth = [w for w in normalize(uth_text, "quran").split() if not w.isdigit()]
+        if f" {' '.join(words)} " in f" {' '.join(uth)} ":
+            ops, sim = [], 1.0
     mtype = classify(sim, ops)
     first, last = idx.ayahs[a0], idx.ayahs[a1]
     canonical = " ".join(a.text for a in idx.ayahs[a0 : a1 + 1])
@@ -216,7 +224,9 @@ def find_unmarked(text: str) -> list[QuranMatch]:
                 j += 1
             if j - i + 1 >= MIN_WORDS:
                 m = verify(" ".join(raw[i : j + 1]))
-                if m:
+                # Unmarked text is only reported when it is clearly Quran; a loose match on
+                # common phrases (رضي الله عنهم أن …) is not evidence of a quotation.
+                if m and m.match_type in ("exact", "minor_variant"):
                     out.append(m)
             i = j + 1
         else:

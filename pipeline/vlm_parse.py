@@ -29,7 +29,14 @@ def out_path(model: str, printed: int):
     return INTER / "vlm" / model_dir(model) / f"{page_id(printed)}.json"
 
 
-def parse_page(printed: int, model: str, force: bool = False, prompt: str = PROMPT_VERSION) -> dict:
+def parse_page(
+    printed: int,
+    model: str,
+    force: bool = False,
+    prompt: str = PROMPT_VERSION,
+    effort: str = "high",
+    max_tokens: int = 32000,
+) -> dict:
     system = (PROMPTS / f"{prompt}.md").read_text()
     out = out_path(model if prompt == "page_parse.v1" else f"{model}@{prompt}", printed)
     if out.exists() and not force:
@@ -49,7 +56,8 @@ def parse_page(printed: int, model: str, force: bool = False, prompt: str = PROM
             user=u,
             image=PAGES / f"{page_id(printed)}.png",
             schema=PAGE_SCHEMA,
-            effort="high",
+            effort=effort,
+            max_tokens=max_tokens,
             force=force,
         )
         try:

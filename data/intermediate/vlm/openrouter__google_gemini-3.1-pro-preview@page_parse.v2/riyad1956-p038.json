@@ -1,0 +1,215 @@
+{
+ "page_id": "riyad1956-p038",
+ "printed": 38,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 10972
+ },
+ "page_number_printed": "٣٨",
+ "running_header": "— ٣٨ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٨ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أنس رضى الله عنه قال : قال رسولُ الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« لا يتمنينَّ أحدكمُ الموتَ لضرٍّ أصابَهُ ، فإن كان لابدَّ (١) فاعلاً فليقُلْ : اللهمَّ أحينِي (٢) ما كانتِ الحياةُ خيْراً لى وتوفنِى إذا كانت الوفاةُ خيراً لى »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى عبدالله خبَّابِ بنِ الارتِّ رضى الله عنه قال : شكوْنا إلى رسولِ الله صلى الله عليه وسلم وهو مُتَوَسدٌ بُردةً (٣) لهُ فى ظِلِ الكعبةِ فقلنا : ألا تستنصرُ لنا ألا تدعُو لنا ؟ فقال :",
+   "footnote_markers_in_text": [
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "The word متوسد is printed without a shadda on the seen, unlike its second occurrence."
+   ]
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« قدْ كان منْ قبلكمْ يُؤخذُ الرجلُ فيحفَرُ لهُ فى الأرض فيجعلُ فيها ثمَّ يُؤتَى بالمنشارِ فيوضعُ على رأسِهِ فيجْعل نصفينِ ويمشطُ (٤) بأمشاطِ الحديدِ مادون لحمِهِ وعظمِهِ مايصدُّه ذلك عن دينِهِ ، والله ليتمنَّ اللهُ هذا الأمرَ حتى يسيرَ الراكبُ من صنعاء إلى حضرَموتَ لايخافُ إلَّا اللهَ والذئْبَ على غنمِهِ (٥) ، ولكنكمْ تستعجلون »",
+   "footnote_markers_in_text": [
+    "(٤)",
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه البخارى وفى رواية : وهو متوسِّدٌ بردةً وقد لقينا من المشركين شدَّةً .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن ابن مسعود رضى الله عنه قال . لمَّا كانَ يوْمُ حنينٍ آثر رسول الله صلى الله عليه وسلم ناساً فى القسمةِ : فأعطى الأقرعَ بنَ حابسٍ مائةً منَ الإبلِ ، وأعطَى عيينةَ بنَ حصن مثلَ ذلك ، وأعطى ناساً من أشرافِ (٦) العرَبِ وآثرهم يومئذٍ فى القسمةِ . فقال رجلٌ : والله إنَّ هذهِ قسمةٌ ماعُدِلَ فيها وما أريد فيها وجهُ الله فقلتُ : والله لأخبرنَّ رسول الله صلى الله عليه وسلم ، فأتيتُهُ فأخبرتُهُ بما قال ،",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.99,
+   "issues": [
+    "Punctuation after 'قال' is printed as a period instead of a colon."
+   ]
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(١) لافراق، لامحالة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٢) أدم لى الحياة بأن أوفق لمرضاتك وقد وقع ما أخبر به صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "The text of this footnote wraps to the far left of the next line in the printed layout."
+   ]
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٣) جاعلها تحت رأسه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٤) زيادة فى التعذيب .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) أى لايخاف من السارق أن يغير على ماله أو نعمه . أى يخشى المرء الله ويرجوه أن لا يفتنه وأن يقيه بوائق الحدثان والله المستعان .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٦) تألفا لضعفاء الإيمان .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnotes are arranged in a complex multi-column layout where some entries wrap across columns. They have been ordered numerically for logical reading."
+ ]
+}

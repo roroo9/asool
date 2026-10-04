@@ -1,0 +1,333 @@
+{
+ "page_id": "riyad1956-p015",
+ "printed": 15,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 14950
+ },
+ "page_number_printed": "١٥",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٥ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرةَ عبد الرحمن بن صخرٍ رضى الله عنه قال قال رسولُ الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ اللهَ لاَ يَنْظُرُ إلى أجسامِكمْ ، ولا إلى صورِكم ، (١) ولكنْ ينظرُ إلى قُلوبِكم »",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "(٢) رواه مسلمٌ .",
+   "footnote_markers_in_text": [
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [
+    "(٣)",
+    "(٤)",
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى بكرةَ نفيعِ بن الحارث الثَّقَفِىِّ رضى الله عنه أن النبى صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إذا التقى المسلمانِ بسيفَيهما فالقاتلُ (٧) والمقتولُ (٨) فى النارِ . قلتُ : يا رسولَ الله هذا القاتلُ فما بالُ المقتولِ ؟ قال : إنهُ كانَ حريصاً على قَتْلِ صاحبهِ »",
+   "footnote_markers_in_text": [
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« صلاةُ الرَّجلِ فى جماعةٍ (٩) تزيدُ على صلاته فى سُوقه وبيته بضعاً (١٠) وعشرينَ درجةً وذلك أنَّ أحدَهم إذا توضأَ فأحسنَ الوضوءَ (١١) ، ثم أتى المسجدَ لا يريدُ إلاَّ الصلاةَ ، لا ينهزُهُ إلا الصلاةُ ، لم يخطُ خُطوة إلا رفعَ لهُ بها درجةً ، وحُطَّ عنه بها خطيئةٌ حتى يدخلَ المسجدَ ، فإذا دخلَ المسجدَ كان فى الصلاةِ ما كانتْ",
+   "footnote_markers_in_text": [
+    "(٩)",
+    "(١٠)",
+    "(١١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "لا يثيبكم على المظاهر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "بتحقيق مقصد العمل لله وحده",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "إقداما على العدو بروية",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "أنفة وغيرة ومحاماة عن عشيرته",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "يرى الناس قتاله أو يسمع الناس",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "دين الإسلام",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "بسبب مباشرته قتل صاحبه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "لحرصه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 21,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "فى المسجد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 22,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "من ثلاثة إلى عشرة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٠)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 23,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "لا يريد إلا ثواب الله فى أدائها وإتمام وضوئه الكامل بالفروض والسنن .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnotes are printed in a continuous wrapping block rather than strict columns; they have been extracted sequentially."
+ ]
+}

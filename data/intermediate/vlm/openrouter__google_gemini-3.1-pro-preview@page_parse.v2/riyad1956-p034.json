@@ -1,0 +1,128 @@
+{
+ "page_id": "riyad1956-p034",
+ "printed": 34,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 11832
+ },
+ "page_number_printed": "٣٤",
+ "running_header": "— ٣٤ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٤ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فأتاهُ بهدايا كثيرة فقال : ما ههُنا لك أجمعُ إنْ أنتَ شفيتنى فقال : إنى لا أشفى\nأحداً إنما يشفى الله تعالى فإنْ آمنتَ بالله تعالى دعوتُ الله فشفاكَ ، فآمنَ بالله تعالى\nفشفاهُ الله تعالى فأتى الملكَ فجلس إليهِ كما كان يجلسُ . فقال له الملكُ : منْ ردَّ\nعليك بصركَ ؟ قال : ربى ، قال : أَوَلَكَ رَبٌّ غيرى ؟ قال : ربى وربك اللهُ . فأخذهُ\nفلمْ يزلْ يعذبهُ حتى دلَّ على الغلام فجىء بالغلام فقال له الملكُ : أىْ بنىَّ قدْ بلغ منْ\nسحركَ ما تبرئُ الأكمهَ والأبرصَ وتفعلُ وتفعلُ ! فقال : إنى لا أشفى أحداً إنما يشفى\nالله تعالى . فأخذهُ فلمْ يزلْ يعذبهُ حتى دلَّ على الراهبِ ؛ فجىء بالراهبِ فقيلَ له :\nارجعْ عن دينكَ فأبى فدعا بالمنشارِ فَوُضِعَ المنشارُ فى مفرقِ رأسهِ (١) فشقَّهُ حتى\nوقعَ شقَّاهُ ، ثمَّ جىءَ بجليسِ الملكِ فقيل له : ارجعْ عن دينكَ فأبى فوضعَ\nالمنشارُ فى مفرقِ رأسه فشقَّهُ به حتى وقع شقَّاهُ ، ثم جىء بالغلام فقيل له : ارجع عن\nدينكَ فأبى فدفعهُ إلى نفرٍ منْ أصحابه فقال : اذهبوا به إلى جبل كذا وكذا فاصعدوا\nبه الجبلَ فإذا بلغتمْ ذروته فإنْ رجعَ عن دينه وإلا فاطرحوهُ . فذهبوا به فصعِدوا\nبه الجبلَ فقال : اللهمَّ اكفنيهمْ بما شئتَ فرجفَ (٢) بهمُ الجبلُ فسقطوا وجاء\nيمشى إلى الملكِ فقال له الملكُ : ما فعلَ أصحابكَ ؟ فقال : كفانيهمُ الله تعالى ، فدفعهُ\nإلى نفرٍ منْ أصحابه فقال : اذهبوا به فاحملوهُ فى قُرقورٍ (٣) وتوسطوا به البحرَ فإنْ\nرجعَ عن دينهِ وإلا فاقذفوهُ (٤) فذهبوا به فقال : اللهمَّ اكفنيهمْ بما شئتَ ،\nفانكفأتْ (٥) بهمُ السفينةُ فغرقوا وجاء يمشى إلى الملكِ . فقال له الملكُ :\nما فعلَ أصحابكَ ؟ فقال : كفانيهمُ الله تعالى . فقال لِلملكِ : إنكَ لستَ بقاتلِي\nحتى تفعلَ ما آمركَ به . قال : ما هو ؟ قال : تجمعُ الناسَ فى صعيدٍ (٦) واحد",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) مكان فرق الشعر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) تحرك واضطرب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) سفينة عظيمة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) أرموه بقوة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "Footnote text wraps to the next line in the printed layout, appearing visually separated, but logically forms a single footnote."
+   ]
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) انقلبت بهم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) أرض مستوية",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

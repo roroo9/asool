@@ -1,0 +1,236 @@
+{
+ "page_id": "riyad1956-p017",
+ "printed": 17,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 14294
+ },
+ "page_number_printed": "١٧",
+ "running_header": "— ١٧ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٧ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "الفجرُ - والصِّبْيَة يتضاغَوْنَ(١) عند قدمَىَّ - فاستيقظا فشربا غبوقَهُما : اللهمَّ إن كنتُ فعلتُ ذلك ابتغاء وجهك(٢) ففرِّجْ عنا ما نحنُ فيه من هذه الصَّخْرةِ ، فانفرجت(٣) شيئاً لا يستطيعونَ الخروجَ منهُ . قال الآخر : اللهمَّ إنهُ كانت لى ابنةُ عمّ كانت أحبَّ الناسِ إلىَّ »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وفى رواية :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« كنتُ أحبها كأشدِّ ما يحبُّ الرجالُ النساءَ فأردتُها على نفسها فامتنعت منى حتى ألمَّت(٤) بها سنة من السنينَ فجاءتنى فأعطيتها عشرينَ ومائةَ دينارٍ على أنْ تخلِّىَ بينى وبينَ نفسها ففعلتْ ، حتى إذا قدرتُ عليها »",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وفى رواية :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« فلما قعدتُ بينَ رجليها(٥) قالت : اتقِ اللهَ ولا تفضَّ الخاتمَ (٦) إلا بحقه ، فانصرفتُ عنها وهىَ أحبُّ الناسِ إلىَّ وتركتُ الذهبَ الذى أعطيتُها : اللهمَّ إن كنتُ فعلتُ ذلك ابتغاء وجهكَ فافرُجْ عنا ما نحنُ فيه ، فانفرجتِ الصخرةُ غيرَ أنهم لا يستطيعونَ الخروجَ منها . وقال الثالثُ : اللهمَّ إنى استأجرتُ أجراء وأعطيتُهمْ أجرهم غير رجلٍ واحدٍ تركَ الذى له (٧) وذهبَ ، فثمَّرْتُ أجرَه حتى كثرتْ منهُ الأموالُ فجاءنى بعدَ حينٍ فقالَ : يا عبد الله أدِّ إلىَّ أجرى فقلتُ : كلُّ ما ترى منْ أجركَ : من الإبلِ والبقرِ والغنمِ والرَّقيقِ . فقال: ياعبدَ اللهِ لا تستهزىء بى ، فقلت : لا أستهزىُ بكَ، فأخذَهُ كلَّهُ فاستاقهُ(٨) فلمْ يتركْ منهُ شيئاً : اللهمَّ إن كنتُ فعلتُ ذلك ابتغاء وجهكَ فافرجْ عنَّا ما نحنُ فيه ، فانفرجتِ الصخرةُ فخرجوا يمشونَ »",
+   "footnote_markers_in_text": [
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "أستهزىُ is printed with a damma on the ya instead of a hamza"
+   ]
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "يصيحون",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "ذاتك",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "اتسعت",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "أى نزلت",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "جلست السيدة جلسة الجماع من الرجل",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "لا تزل البكارة إلا بالتزويج والنكاح الحلال",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "فى ذمة المستأجر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "أخذه وساقه إلى رحله ومنزله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "marginalia",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "(٢ - رياض)",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

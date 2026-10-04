@@ -34,14 +34,17 @@ cd web && npm install && npm run dev               # web at http://localhost:300
 ## Gold set: method, bias controls, spot-check
 The gold set is the human-verified reference used to measure extraction quality. It covers 15 of the 30 corpus pages (printed pp. 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 33, 35, 37, 39, 41).
 
+**Reviewer:** rawan (team member, native Arabic speaker).
+
 **Method (consensus-assisted human review).**
 1. Each gold page is read by three independent readers:
    - Reader A: Tesseract 5 `ara` (classical OCR, run locally).
    - Reader B: Claude Opus 5.5 (vision-language model).
    - Reader C: Claude Fable 5.1 on the 3 bake-off pages; **Surya OCR 2** (open-source, run locally) on the other 12 pages.
-2. A word is **auto-accepted only if all three readers agree** on its letters, and Readers B and C also agree on it exactly, diacritics included (Tesseract votes on letters only, because it does not read tashkeel reliably). Everything else goes to a human.
+2. A word is **auto-accepted only if all three readers agree** on its letters, and Readers B and C also agree on its tashkeel. Tesseract votes on letters only, because it does not read tashkeel reliably.
+   **Tashkeel abstention (rule v2, owner decision Oct 4):** when a reader outputs **no tashkeel at all** on a word whose letters match the others, it abstains on tashkeel only; this is not a disagreement. The tashkeel is then decided by the remaining reader. These words are auto-accepted but spot-checked at **10%** (twice the normal rate). Everything else goes to a human.
 3. The human reviewer sees only the disputed phrases, each with the printed line cropped from the original page and the disputed words highlighted, and chooses a reading or types a correction (`/review/gold`).
-4. A random 5% of auto-accepted words (weighted toward words with tashkeel) is shown to the reviewer as a spot-check.
+4. A random 5% of fully agreed words (weighted toward words with tashkeel) and 10% of tashkeel-abstention words are shown to the reviewer as a spot-check.
 5. The reviewer confirms the block types (body, hadith, Quran, footnote, editor commentary…) before the page is finalized.
 
 **Bias controls.**
@@ -55,6 +58,6 @@ The gold set is the human-verified reference used to measure extraction quality.
 | Pages | Words | Auto-accepted | Human decisions | Spot-checked | Spot-check errors |
 |---|---|---|---|---|---|
 | 41, 30, 20 (bake-off) | 942 | 425 | 237 | 21 | 0 |
-| 12 other pages | 3,541 | 1,221 | 992 (pending) | 61 (pending) | pending |
+| 12 other pages (rule v2) | 3,541 | 1,697 (476 by tashkeel abstention) | 912 (pending) | 109, of which 48 abstention words (pending) | pending |
 
 Shamela (book 2348, a different edition) is available to the reviewer as an independent text cross-check; page numbers differ, so it is never used as gold directly.

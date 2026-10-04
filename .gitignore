@@ -44,3 +44,9 @@ data/cache/llm/
 
 # King Fahd Complex Hafs data: downloaded by scripts/fetch_references.sh (redistribution terms not stated)
 data/reference/quran/kfgqpc/
+
+# HadeethEnc API cache (re-fetchable)
+data/reference/hadeethenc/
+
+# Debug overlays contain page images
+data/debug/

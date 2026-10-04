@@ -1,0 +1,204 @@
+{
+ "page_id": "riyad1956-p021",
+ "printed": 21,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 16118
+ },
+ "page_number_printed": "٢١",
+ "running_header": "— ٢١ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٢١ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فسألَ عنْ أعلمِ أهلِ الأرضِ فدلَّ على راهبٍ (١) فأتاه فقال : إنه قتلَ تسعةً وتسعينَ نفساً فهلْ له منْ توبةٍ ؟ فقال : لا ، فقتله فكملَ به مائة ، ثمَّ سألَ عنْ أعلمِ أهلِ الأرضِ فدلَّ على رجلٍ عالمٍ فقال: إنه قتلَ مائةَ نفسٍ فهلْ له منْ توبةٍ؟ فقال : نعم، ومنْ يحول بينهُ وبين التوبةِ ؟ انطلقْ إلى أرضِ كذا وكذا فإنَّ بها أناساً يعبدونَ الله تعالى فاعبدِ اللهَ معهم ولا ترجعْ إلى أرضكَ فإنها أرض سوء فانطلقَ حتى إذا نصفَ الطريقِ أتاه الموتُ فاختصمتْ فيهِ ملائكةُ الرحمةِ وملائكةُ العذابِ . فقالت ملائكةُ الرحمةِ : جاء تائباً مقبلا بقلبهِ إلى اللهِ تعالى ، وقالت ملائكةُ العذابِ : إنهُ لم يعملْ خيراً قطُّ ، فأتاهمْ ملكٌ فى صورةِ آدمىٍّ فجعلوه بينهمْ ـ أى حكماً ـ فقال : قيسوا ما بينَ الأرضينِ فإلى أيتهما كانَ أدنى (٢) فهو له ، فقاسوا فوجدوه أدنى إلى الأرضِ التى أرادَ فقبضتهُ ملائكةُ الرحمةِ »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه . وفى رواية فى الصحيح",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« فكانَ إلى القريةِ الصالحةِ بشبرٍ فجعلَ منْ أهلها »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وفى رواية فى الصحيح",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« فأوحى اللهُ تعالى إلى هذه أنْ تباعدى وإلى هذه أن تقربى وقال : قيسوا ما بينهما ، فوجدوهُ إلى هذه أقربَ بشبرٍ فغفرَ له »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": ". وفى رواية :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« فنأى بصدرهِ نحوها » .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن عبد الله بن كعب بن مالك وكان قائدَ كعب رضى الله عنه من بنيه حين عمىَ قال : سمعت كعب بن مالك رضى الله عنه يحدث بحديثهِ حين تخلفَ عن رسول الله صلى الله عليه وسلم فى غزوةِ تبوك(٣) . قال كعبٌ :",
+   "footnote_markers_in_text": [
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "لم أتخلفْ عن رسول الله صلى الله عليه وسلم فى غزوةٍ غزاها قطُّ إلا فى غزوةِ تبوكَ غيرَ أنى قدْ تخلفتُ فى غزوةِ بدر ولم يعاتبْ أحدٌ تخلفَ عنهُ ، إنما خرج رسول الله صلى الله عليه وسلم والمسلمونَ يريدون عيرَ قريشٍ حتى جمع الله تعالى بينهمْ وبينَ عدوِّهمْ على غيرِ(٤) ميعاد .",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) عابد من بنى إسرائيل",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) أقرب، ففي الحديث : فضل التوبة وفضل العلم وفضل العزلة عند وجود الفتن نسأل الله السلامة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) سنة تسع هـ",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) موعد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

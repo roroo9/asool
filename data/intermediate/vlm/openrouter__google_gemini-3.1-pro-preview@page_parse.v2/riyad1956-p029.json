@@ -1,0 +1,224 @@
+{
+ "page_id": "riyad1956-p029",
+ "printed": 29,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 12861
+ },
+ "page_number_printed": "٢٩",
+ "running_header": "— ٢٩ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٢٩ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "منهم رسول الله صلى الله عليه وسلم حين حلفوا (١) له فبايعهم واستغفر لهم وأرجأ رسول الله صلى الله عليه وسلم أمرنا حتى قضى الله تعالى فيه بذلك . قال الله تعالى :",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ وَعَلَى الثَّلَاثَةِ الَّذِينَ خُلِّفُوا ﴾",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وليس الذى ذَكَرَ مما خلفنا تخلفنا عن الغزو وإنما هو تخليفه إيانا وإرجاؤُهُ (٢) أمرنا عمن حلف له واعتذر إليه فقبل منه » متفق عليه . وفى رواية",
+   "footnote_markers_in_text": [
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "«أن النبى صلى الله عليه وسلم خرج فى غزوة تبوك يوم الخميس وكان يحبُّ أن يخرج يوم الخميس »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وفى رواية",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« وكان لا يقدم من سفر إلا نهاراً فى الضحى فإذا قدم بدأ بالمسجد فصلى فيه ركعتين ثم جلس فيه » .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى نجيدٍ ـ بضم النون وفتح الجيم ـ عمران بن الحصين الخزاعى رضى الله عنهما أنَّ امرأة من جهينة أتت رسول الله صلى الله عليه وسلم وهى حبلى من الزنا فقالت : يارسول الله أصبتُ (٣) حداً فأقمهُ علىَّ ، فدعا نبىُّ الله صلى الله عليه وسلم وليها فقال : أحسنْ إليها فإذا وضعتِ فأتنى ففعلَ فأمر بها نبىُّ الله صلى الله عليه وسلم فشدتْ عليها ثيابها (٤) ثمَّ أَمَرَ بها فرجمتْ ثمَّ صلَّى عليها . فقال له عمر : تصلِّى عليها يارسول الله وقد زنتْ ؟ قال : لقد تابتْ توبةً (٥) لو قُسِمَتْ بين سبعينَ من أهلِ المدينة لوسعتهمْ وهل وجدتَ أفضلَ من أنْ جادتْ بنفسها للهِ (٦) عزَّ وجلَّ » رواه مسلم :",
+   "footnote_markers_in_text": [
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "The closing quote » after 'عز وجل' has no corresponding opening quote in this paragraph, transcribed exactly as printed.",
+    "The paragraph ends with a colon ':' instead of a period, transcribed exactly as printed."
+   ]
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(١) أقسموا أنهم صادقون فيما اعتذروا به",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٢) تأخيره بيانه وإيضاحه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "The phrase 'تأخيره بيانه' appears to be a typographical error in the original print (likely meant to be 'تأخير بيانه'), transcribed exactly as printed."
+   ]
+  },
+  {
+   "order": 11,
+   "type": "editor_commentary",
+   "author_role": "editor",
+   "column": 0,
+   "text": "فى الحديث فضيلة أهل بدر والعقبة والتأسف على ما فات من خير ورد الغيبة وهجران أهل البدعة واستحباب صلاة القادم ودخول المسجد للاعتراف بشكر المعبود بحق سبحانه وتعالى وحده وتوجه الناس إليه عند قدومه والمبايعة مع الإمام وقبول المعاذير واستحباب البكاء على نفسه وفضيلة الصدق وإيثار طاعة الله ورسوله على القريب ومودته وخدمة المرأة لزوجها والاحتياط بمجانبة ما يخاف الوقوع فى منهى عنه واستحباب التبشير عند وجود نعمة واندفاع كربة والتصدق بشيء عند ارتفاع الحزن وإجازة البشير بخلعة وجواز العارية ومصافحة القادر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٣) فعلت ما يلزم به العقاب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٤) بأن تهيأ للرجم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٥) توبة نصوحا صحيحة رضى الله عنها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٦) أى لمرضاته",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

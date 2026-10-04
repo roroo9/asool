@@ -7,7 +7,7 @@ Configured in `api/settings.py` (`page_parser_model`, `page_parser_fallback_mode
 ## Task and data
 - Task: transcribe a scanned page of رياض الصالحين (1956 Cairo print) into typed blocks in reading order, with footnote markers and editor commentary separated.
 - Pages: printed pp. **41** (8 footnotes in two columns, split around the editor's commentary, a poetry line), **30** (start of باب الصبر, 6 Quran verses), **20** (densest page, 7 footnotes).
-- Gold: human-reviewed, consensus-assisted (see README "Gold set"). Reviewer recorded in the data as "rawan". 237 disputed phrases decided by the reviewer, 21 spot-checks.
+- Gold: human-reviewed, consensus-assisted (see README "Gold set"). Reviewer: rawan. 237 disputed phrases decided by the reviewer, 21 spot-checks.
 - Run: `uv run python -m eval.bakeoff` → `data/eval/results/bakeoff.json`.
 
 ## Metrics

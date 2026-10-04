@@ -38,7 +38,7 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
 - **Reader C on the 12 remaining gold pages = Surya OCR 2 (local).** Mistral was not possible.
 
 ## People
-- Gold set reviewer: rowan, team member, native Arabic speaker.
+- Gold set reviewer: rawan, team member, native Arabic speaker.
 
 ## Phase 1 results (GATE 1)
 - Gold review of pages 41, 30, 20 complete: 237 human decisions, 21 spot-checks, 0 errors (after fixing a review-screen bug that recorded unchanged confirmations as "wrong").
@@ -50,4 +50,3 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
 
 ## Known issues
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
-- Reviewer name in the saved data is "rawan"; the owner named the reviewer "rowan". To confirm.

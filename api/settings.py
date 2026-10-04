@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     answer_model: str = "openrouter:google/gemini-3.1-pro-preview"
     classifier_model: str = "openrouter:google/gemini-3.8-flash"
     embed_model: str = "openrouter:google/gemini-embedding-2"
+    box_model: str = "openrouter:google/gemini-3.8-flash"
     openrouter_budget_usd: float = 10.0
     anthropic_budget_usd: float = 5.0
 

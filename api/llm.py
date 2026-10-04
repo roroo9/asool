@@ -53,6 +53,14 @@ class LLMResult:
     cost_usd: float = 0.0
 
 
+class TruncatedError(RuntimeError):
+    """Output hit max_tokens. Carries the (billed) usage so it can still be logged."""
+
+    def __init__(self, msg: str, result: LLMResult):
+        super().__init__(msg)
+        self.result = result
+
+
 def split_model(model: str) -> tuple[str, str]:
     if ":" in model and model.split(":", 1)[0] in ("anthropic", "google", "openrouter"):
         p, m = model.split(":", 1)
@@ -140,12 +148,18 @@ def generate(
         _log_usage(stage, r)
         return r
     t0 = time.time()
-    if provider == "anthropic":
-        r = _claude(name, system, user, img, schema, effort, max_tokens)
-    elif provider == "google":
-        r = _gemini(name, system, user, img, schema, max_tokens)
-    else:
-        r = _openrouter(name, system, user, img, schema, effort, max_tokens)
+    try:
+        if provider == "anthropic":
+            r = _claude(name, system, user, img, schema, effort, max_tokens)
+        elif provider == "google":
+            r = _gemini(name, system, user, img, schema, max_tokens)
+        else:
+            r = _openrouter(name, system, user, img, schema, effort, max_tokens)
+    except TruncatedError as e:  # billed even though unusable: log it, then re-raise
+        e.result.model = canonical
+        e.result.seconds = time.time() - t0
+        _log_usage(stage + "/truncated", e.result)
+        raise
     r.model = canonical
     r.seconds = time.time() - t0
     if canonical in PRICES:
@@ -281,9 +295,13 @@ def _openrouter(model, system, user, img, schema, effort, max_tokens) -> LLMResu
     if "error" in d or r.status_code != 200:
         raise RuntimeError(f"openrouter {model}: {r.status_code} {d.get('error', d)}")
     ch = d["choices"][0]
-    if ch.get("finish_reason") == "length":
-        raise RuntimeError(f"{model} hit max_tokens")
     u = d.get("usage", {})
+    if ch.get("finish_reason") == "length":
+        raise TruncatedError(
+            f"{model} hit max_tokens",
+            LLMResult("", model, u.get("prompt_tokens", 0), u.get("completion_tokens", 0),
+                      False, 0.0, float(u.get("cost", 0.0))),
+        )
     return LLMResult(
         ch["message"]["content"] or "",
         model,

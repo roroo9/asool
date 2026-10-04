@@ -1,0 +1,200 @@
+{
+ "page_id": "riyad1956-p027",
+ "printed": 27,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 10384
+ },
+ "page_number_printed": "٢٧",
+ "running_header": "— ٢٧ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٢٧ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "يقولُ بأعلى صوته : يا كعبُ بنَ مالكٍ أبشرْ ، فخررتُ (١) ساجداً وعرفتُ أنه قد جاء فرجٌ . فآذنَ رسول الله صلى الله عليه وسلم النَّاسَ بتوبةِ اللهِ عزَّ وجلَّ علينا حينَ صلَّى صلاةَ الفجرِ فذهبَ الناسُ يبشِّروننا ، فذهب قِبلَ (٢) صاحبيَّ مبشِّرون (٣) وركضَ إلىَّ رجلٌ فرساً وسعى (٤) ساعٍ من أسلمَ قِبلي وأوفى (٥) على الجبلِ ، فكانَ الصَّوْتُ أسرعَ مِن الفرسِ ، فلما جاءنى الذى سمعت صوتهُ يبشرُني نزعتُ لهُ ثوبيَّ فكسوتهما إياه ببشراهُ والله ماأملكُ غيرَهُما يومئذٍ ، واستعرتُ ثوبينِ فلبستهُما وانطلقتُ أتأمَّمُ (٦) رسولَ الله صلى الله عليه وسلم يتلقاني (٧) الناس فوجاً فوجاً يهنئونى بالتوبةِ ويقولونَ لى : لتهنكْ توبةُ الله عليك حتى دخلتُ المسجدَ فإذا رسولُ الله صلى الله عليه وسلم جالسٌ حولهُ النَّاسُ ، فقام طلحة بن (٨) عبيدِ الله رضى الله عنه يهرولُ حتى صافحنى وهنأنى والله ماقامَ رجلٌ منَ المهاجرينَ غيرُه فكانَ كعبٌ لاينساها لطلحةَ . قال كعبٌ : فلما سلمتُ على رسولِ الله صلى الله عليه وسلم قال وهُوَ يبرُقُ (٩) وجهُه من السرور : أبشرْ بخيرِ يومٍ مرَّ عليكَ مذْ ولدتكَ أمك فقلتُ : أمنْ عندكَ يارسول الله أم منْ عندِ الله ؟ قال : لابل من عندِ الله عزَّ وجلَّ ، وكان رسول الله صلى الله عليه وسلم إذا سُرَّ استنارَ (١٠) وجهُه حتى كأنَّ وَجْهَهُ قطعةُ قمرٍ وكنا نعرف ذلك منهُ ، فلما جلستُ بين يديهِ قلتُ : يارسولَ اللهِ إنَّ منْ توبتي أنْ أنخلع (١١) منْ مالى صدقةً إلى اللهِ وإلى رسوله . فقال رسول الله صلى الله وسلم : أمسكْ عليكَ بعضَ مالكَ فهو خيرٌ",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)",
+    "(٩)",
+    "(١٠)",
+    "(١١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.99,
+   "issues": [
+    "Typo in printed text on the last line: 'صلى الله وسلم' is missing 'عليه'."
+   ]
+  },
+  {
+   "order": 3,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) شكرت لله فضله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) جهة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) أى أجرى الزبير بن العوام فارس النبي صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) حمزة بن عمرو الأسلمي",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) أشرف وطلع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) أقصد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) تقابلنى جماعة بعد جماعة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) أحد العشرة المبشرين بالجنة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) يتلألأ وجهه بالأنوار",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٠) زاد نورا على نور",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٠)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١١) أى أخرج.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnotes are laid out in a continuous inline flow with large spaces rather than strict columns, as evidenced by footnote 8 wrapping from the far left of one line to the far right of the next. They have been assigned column 0 and ordered numerically."
+ ]
+}

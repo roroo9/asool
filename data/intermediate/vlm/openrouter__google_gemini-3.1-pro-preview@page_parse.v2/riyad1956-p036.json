@@ -1,0 +1,189 @@
+{
+ "page_id": "riyad1956-p036",
+ "printed": 36,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 9623
+ },
+ "page_number_printed": "٣٦",
+ "running_header": "— ٣٦ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٦ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "الله عليه وسلم فلم تجدْ عنده بوَّابين فقالت لم أعرفك . فقال : إنما الصبرُ (١) عند الصدمةِ (٢) الأولى » متفق عليه . وفى رواية لمسلم « تبكى على صبىّ لها » .",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه أنَّ رسولَ الله صلى الله عليه وسلم قال : « يقولُ اللهُ تعالى : مالعبدى المؤمنِ عندى جزاء إذا قبضتُ صفيهُ (٣) منْ أهلِ الدُّنيا ثمَّ احتسبه (٤) إلَّا الجنَّةَ » رواه البخارى .",
+   "footnote_markers_in_text": [
+    "(٣)",
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن عائشة رضى الله عنها أنها سألت رسولَ الله صلى الله عليه وسلم عن الطاعون فأخبرها : « أنَّه كان عذاباً يبعثُهُ اللهُ تعالى على منْ يَشاء فجعلهُ اللهُ تعالى رحمةً للمؤمنينَ ، فليس منْ عبدٍ يقعُ فى الطاعون فيمكثُ فى بلده صابراً (٥) محتسباً يعلمُ أنهُ لا يصيبه إلَّا ما كتبَ اللهُ له إلَّا كان له مثلُ أجرِ الشَّهيدِ » رواه البخارى .",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "Hamza on للمؤمنين is very faint, transcribed as printed."
+   ]
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أنس رضى الله عنه قال : سمعتُ رسولَ الله صلى الله عليه وسلم يقولُ : « إنَّ اللهَ عزَّ وجلَّ قال : إذا ابتليتُ عبدى بحبيبتيهِ فصبرَ عوضتهُ منهُما الجنةَ » يريد عينيهِ ، رواه البخارى .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن عطاء بن أبى رباح قال : قال لى ابن عباس رضى الله عنهما ألا أريكَ أمرأة من أهلِ الجنة ؟ فقلتُ : بلى قال : هذه المرأةُ السوداء أتت النبى صلى الله عليه وسلم فقالت : إنِّى أصرَعُ وإنِّى أتكشَّفُ (٦) فادْعُ الله تعالى لى قال : « إنْ شئتِ صبَرْتِ ولكِ الجنةُ وإنْ شئتِ دعوتُ الله تعالى أنْ يُعافيكِ » فقالت : أصبرُ فقالت : إنِّى أتكشَّفُ فادعُ الله أنْ لا أتكشَّفُ فدَعا لها » متفق عليه .",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": [
+    "أمرأة printed with hamza on alif, transcribed exactly as printed."
+   ]
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(١) السكوت الذى يحمد فعله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٢) مفاجأة المصيبة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٣) حبيبه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 4,
+   "text": "(٤) ادخر ثوابه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "The word 'ثوابه' wraps to the next line and is placed on the far right, but logically belongs to footnote 4."
+   ]
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٥) راجيا الأجر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٦) يظهر بعض بدنى من الصرع، وطلبت أن الله يستر جسمها .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnote 4 text wraps to the next line and is placed on the far right column, which is a common typesetting quirk."
+ ]
+}

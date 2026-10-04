@@ -1,0 +1,168 @@
+{
+ "page_id": "riyad1956-p031",
+ "printed": 31,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 1900
+ },
+ "page_number_printed": "٣١",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣١ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبي مالك الحارث بن عاصم الأشعري رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« الطُّهور (١) شطر (٢) الإيمان والحمد لله تملأ الميزان ، وَسُبْحان الله والحمدُ لله تملآن ـ أو تملأ (٣) ـ ما بين السماوات والأرض (٤) ، والصلاة نور (٥) والصدقة برهان (٦) والصبر ضياء (٧) ، والقرآن (٨) حجة لك أو عليك (٩) . كل الناس يغدو (١٠) فبائع نفسه فمعتقها (١١) أو موبقها (١٢) »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)",
+    "(٩)",
+    "(١٠)",
+    "(١١)",
+    "(١٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه مسلم .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبي سعيد سعد بن مالك بن سنان الخدرى رضى الله عنهما « أن ناساً من الأنصار سألوا رسول الله صلى الله عليه وسلم فأعطاهم، ثم سألوه فأعطاهم حتى نفد (١٣) ماعنده فقال لهم حين أنفق كل شيء بيده :",
+   "footnote_markers_in_text": [
+    "(١٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "ما يكن من خير فلن أدخره (١٤) عنكم ، ومَنْ يستعفف يعفه الله ، ومَنْ يستغن يغنه (١٥) الله ، ومَنْ يتصبر (١٦) يصبره الله : وما أعطى أحد عطاء خيراً وأوسع من الصبر »",
+   "footnote_markers_in_text": [
+    "(١٤)",
+    "(١٥)",
+    "(١٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبي يحيى صهيب بن سنان رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« عجباً لأمر المؤمن (١٧) إن أمره كله له خير وليس ذلك لأحد إلا",
+   "footnote_markers_in_text": [
+    "(١٧)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) النظافة وفعل ما يترتب عليه إباحة (٢) نصف (٣) تملأ ثواب ذكرها بالثناء على الله تعالى وتنزيهه عن النقائص جل وعلا (٤) طبقاتهما (٥) تضيء للمصلى فى ظلمات الموقف بين يديه «يسعى نورهم بين أيديهم وبأيمانهم بشراكم اليوم جنات تجرى من تحتها الأنهار خالدين فيها ذلك هو الفوز العظيم» (٦) حجة على إيمان مؤديها ودليل حب الله ورسوله (٧) ينير الله لك الطريق المستقيم ويوضح لك سبيل الفوز حتى تنال النجاح فى أعمالك (٨) إن عملت بآدابه (٩) ان لم تمتثل أوامره (١٠) يبكر فى مصالحه (١١) مبعدها من العذاب (١٢) مهلكها بالطرد والحرمان من ساحة الرضوان والبعد من نعيم الجنة ـ نعوذ بالله من سخطه وأليم عقابه (١٣) فنى (١٤) لا أمنعكم إياه (١٥) يرزقه الله العفة فيصير عفيفا قنوعا ويجعله غنى النفس (١٦) يتجرع مرارة العيش ويتحمل مكاره الدنيا ولا يشكو لغير مولاه سبحانه وتعالى (١٧) العالم بالله الراضى أحكامه لا يتضجر ولا يتسخط.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": [
+    "Footnotes are printed continuously in a block, not separated by columns."
+   ]
+  }
+ ],
+ "page_level_issues": []
+}

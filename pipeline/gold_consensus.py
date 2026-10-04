@@ -38,6 +38,7 @@ def _reader_c(pid: str) -> tuple[str, dict]:
 
 MAX_SPAN = 4
 SPOTCHECK_RATE = 0.05
+SPOTCHECK_RATE_ABSTAIN = 0.10
 FURNITURE = {"page_number", "page_header"}
 
 DRAFT = GOLD / "draft"
@@ -95,19 +96,26 @@ def build_page(printed: int, seed: int = 7) -> dict:
     map_c = _map(kb, [t["key"] for t in tc])
     map_a = _map(kb, [t["key"] for t in ta])
 
-    status = []
+    # status: "agree" (all readers agree, tashkeel included), "abstain" (letters agree and a
+    # reader printed no tashkeel on this word, so it abstains on tashkeel only; the remaining
+    # reader(s) decide), or "" (disputed -> human review).
+    status: list[str] = []
     for i, t in enumerate(tb):
         c1, c2 = map_c[i]
         a1, a2 = map_a[i]
         c_raw = _span_text(tc, c1, c2)
         a_key = " ".join(x["key"] for x in ta[a1:a2])
-        vlm_agree = c2 - c1 == 1 and c_raw == t["raw"]
-        if vb["blocks"][t["block"]]["type"] in FURNITURE:
-            agree = vlm_agree  # page number/header: Tesseract often skips it; VLMs suffice
+        furniture = vb["blocks"][t["block"]]["type"] in FURNITURE
+        letters_c = c2 - c1 == 1 and _key(c_raw) == t["key"]
+        letters_a = furniture or (a2 - a1 == 1 and a_key == t["key"])
+        if not (letters_c and letters_a):
+            status.append("")
+        elif c_raw == t["raw"]:
+            status.append("agree")
+        elif not _DIAC.search(c_raw) and _DIAC.search(t["raw"]):
+            status.append("abstain")  # C printed no tashkeel: B's tashkeel stands
         else:
-            agree = vlm_agree and (a2 - a1 == 1 and a_key == t["key"])
-        status.append(agree)
-
+            status.append("")  # both printed tashkeel and it differs
     # Group consecutive disputed tokens (same block) into review items.
     items = []
     i = 0
@@ -157,13 +165,18 @@ def build_page(printed: int, seed: int = 7) -> dict:
         i = j + 1
 
     # 5% spot-check of auto-accepted words, weighted toward diacritized words.
+    # Spot-check: 5% of fully agreed words (weighted toward tashkeel) + 10% of words whose
+    # tashkeel was decided after a reader abstained.
     rng = random.Random(f"{seed}-{pid}")
-    accepted = [k for k, s in enumerate(status) if s]
-    n = max(1, round(len(accepted) * SPOTCHECK_RATE)) if accepted else 0
-    weights = [3 if _DIAC.search(tb[k]["raw"]) else 1 for k in accepted]
     picked: set[int] = set()
-    while len(picked) < n:
-        picked.add(rng.choices(accepted, weights)[0])
+    for kind, rate in (("agree", SPOTCHECK_RATE), ("abstain", SPOTCHECK_RATE_ABSTAIN)):
+        pool = [k for k, s in enumerate(status) if s == kind]
+        n = min(len(pool), max(1, round(len(pool) * rate))) if pool else 0
+        weights = [3 if _DIAC.search(tb[k]["raw"]) else 1 for k in pool]
+        chosen: set[int] = set()
+        while len(chosen) < n:
+            chosen.add(rng.choices(pool, weights)[0])
+        picked |= chosen
     spot = []
     for k in sorted(picked):
         a1, a2 = map_a[k]
@@ -174,6 +187,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
                 "text": tb[k]["raw"],
                 "word_boxes": [x["bbox"] for x in ta[a1:a2]],
                 "line_boxes": [ocr["lines"][ta[a1]["line"]]["bbox"]] if a2 > a1 else [],
+                "kind": status[k],  # agree | abstain
                 "verdict": None,  # "ok" | "wrong"
                 "fix": None,
             }
@@ -188,14 +202,18 @@ def build_page(printed: int, seed: int = 7) -> dict:
             "B": READER_B,
             "C": reader_c,
         },
-        "rule": "auto-accept iff letters agree across A,B,C and diacritics agree between B,C",
+        "rule": (
+            "auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; "
+            "a reader that prints no tashkeel on the word abstains on tashkeel only (v2)"
+        ),
         "blocks": [
             {k: b[k] for k in ("order", "type", "author_role", "column", "footnote_marker", "text")}
             | {"type_reader_c": None, "type_confirmed": None}
             for b in vb["blocks"]
         ],
         "tokens": [{"block": t["block"], "raw": t["raw"]} for t in tb],
-        "auto_accepted": sum(status),
+        "auto_accepted": sum(1 for s in status if s),
+        "auto_accepted_abstain": sum(1 for s in status if s == "abstain"),
         "total_tokens": len(tb),
         "review_items": items,
         "spotcheck": spot,

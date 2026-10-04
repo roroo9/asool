@@ -3,7 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api import gold_review
+from api import gold_review, hadith_review
 from api.settings import settings
 
 app = FastAPI(
@@ -17,7 +17,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins_list,
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "DELETE"],
     allow_headers=["*"],
 )
 
@@ -28,3 +28,4 @@ def health() -> dict:
 
 
 app.include_router(gold_review.router)
+app.include_router(hadith_review.router)
