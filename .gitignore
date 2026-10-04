@@ -32,3 +32,9 @@ web/out/
 # OS
 .DS_Store
 previews/
+
+# Challenge documents (not ours to publish)
+docs/challenge/
+
+# Shamela reference text (used only as a review aid; not redistributed)
+data/reference/shamela/*.jsonl
