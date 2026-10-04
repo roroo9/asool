@@ -1,0 +1,33 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Book files and page images: copyright of the 1956 footnotes is unverified.
+# Keep them OUT of the public repo. Images are served only from the deployment.
+data/raw/
+data/pages/
+*.pdf
+*.djvu
+*.jp2
+web/public/pages/
+
+# Cached model outputs that embed page text are fine to commit; page crops are not.
+data/intermediate/**/*.png
+data/intermediate/**/*.webp
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+web/.next/
+web/out/
+.vercel
+
+# OS
+.DS_Store

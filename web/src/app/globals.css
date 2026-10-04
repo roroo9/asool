@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #141a3a;
+  --paper: #f6f3ec;
+  --thread: #2fd4b5;
+  --insight: #6c5ce7;
+  --amber: #e0a43a;
+  --madder: #c8553d;
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1b2148;
+    --background: #11163a;
+    --foreground: #ece8df;
+  }
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-thread: var(--thread);
+  --color-insight: var(--insight);
+  --color-amber: var(--amber);
+  --color-madder: var(--madder);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ui), system-ui, sans-serif;
+  --font-source: var(--font-source), "Noto Naskh Arabic", serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-ui), system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--thread);
+  outline-offset: 2px;
+}

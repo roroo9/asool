@@ -1,0 +1,8 @@
+#!/bin/sh
+# Block commits that look like they contain API keys or book files.
+if git diff --cached -U0 | grep -E '^\+' | grep -qE '(AIza[0-9A-Za-z_-]{30,}|sk-ant-[0-9A-Za-z_-]{20,}|sk-[0-9A-Za-z]{32,}|gh[pousr]_[0-9A-Za-z]{30,})'; then
+  echo "pre-commit: possible API key in staged changes. Commit blocked." >&2; exit 1
+fi
+if git diff --cached --name-only | grep -qiE '\.(pdf|djvu|jp2)$|^data/(raw|pages)/|^web/public/pages/'; then
+  echo "pre-commit: book files or page images are staged. Commit blocked." >&2; exit 1
+fi
