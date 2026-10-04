@@ -9,7 +9,7 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 | 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Done ~11:00. At GATE 1 |
 | 2 Full ingestion (30 pages) + baseline | Sun 13:00–22:00 | Done 11:05. At GATE 2 |
 | 3 API | Mon Oct 5, 08:00–14:00 | Done Sun ~19:55. At GATE 3 |
-| 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | Started Sun ~20:30: API endpoints for Compare/Proof, page images, types, API client, i18n done. Screens not built yet |
+| 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | Screens done Mon 02:00 (local). Deployment waits for Vercel + Render accounts |
 | 5 Evaluation & hardening | Tue Oct 6, 08:00–14:00 | |
 | 6 Ship | Tue 14:00–18:00 | |
 | Buffer | Tue 18:00–23:59 | |
@@ -58,6 +58,11 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
 - Answer pipeline: cache (versioned) -> level classify -> quoted-verse check -> level D referral -> hybrid retrieval -> support gate -> grounded generation (answer.v2) -> verbatim quote verification -> response. Budget guard: daily cap on serving spend -> fallback model; hard stop -> passages only; per-IP rate limit.
 - Live demo (curl): answered with 3/3 verified quotes (conditions of tawbah), abstention (travel prayer, not in corpus), referral (personal marriage case), misquoted verse gently corrected (2/2 verified), nonexistent hadith request refused, consensus question answered with "no consensus reported in the passages".
 - Fixed during Phase 3: footnote markers inside passages broke verbatim verification (markers are now ignored on both sides); verse candidates for short misquotes.
+
+## Phase 4 results (GATE 4, local)
+- Screens: Home, Ask (answer card with source vs clarification zones, verification log, level badge, verse-correction card, abstention and referral states, Source Thread, mobile bottom sheet), Source Viewer (zoom, X-ray, footnote arcs, Quran diff chips, hadith grading, copy with citation, keyboard), Compare (draggable slider, page 41 default; query mode), Proof (measured bake-off, caught error, method, limits, re-run), Review (queue + links to gold and hadith review), Developers, How it works.
+- Light/dark themes, Arabic/English chrome, RTL. Screenshots: previews/gate4/ (gitignored, contain page images).
+- Page 39 footnote (٧) corrected via data/corrections.json (owner-confirmed); page 15 was a false flag (Tesseract misread). Page 20 hadith confirmation recorded.
 
 ## Known issues
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
