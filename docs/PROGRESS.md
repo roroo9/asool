@@ -66,3 +66,5 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
 
 ## Known issues
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
+
+- 2026-10-05: GATE 4 owner fixes applied (verbatim-only source section, hadith grading chips everywhere, formal Fusha pass, dev indicator hidden). Checkpoints: gate4-ui-v1 (before), gate4-ui-v2 (after). New production review token stored in .env as REVIEW_TOKEN_PROD. Deployment waits for owner go-ahead (Render Starter).
