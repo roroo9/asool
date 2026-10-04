@@ -23,7 +23,7 @@ Human tasks running in parallel: correct the gold set (Sun evening to Mon), veri
 - Book files downloaded. Edition check done.
 
 ## Decisions and findings
-- **Edition:** `rs-mohaqaq.pdf` is the 1956 دار إحياء الكتاب العربي edition (title page credits مصطفى محمد عمارة). `rs.pdf` is دار الريان 1987 and is not used.
+- **Edition:** `rs-mohaqaq.pdf` is the 1956 edition. Title page: editor مصطفى محمد عماره, القاهرة, press emblem مطبعة دار إحياء الكتب العربية (عيسى البابي الحلبي). The year 1956 is not printed in the scan; it comes from the archive.org description. `rs.pdf` is دار الريان 1987 and is not used.
 - **Page numbering:** PDF page N (1-based) shows printed page N. No offset.
 - **Corpus:** printed pages 12–41 (30 pages). باب الإخلاص starts p.12, باب التوبة p.18, باب الصبر p.30.
 - **archive.org text layer is unusable.** Both `rs-mohaqaq_text.pdf` and `rs-mohaqaq_djvu.txt` contain Latin junk (0% Arabic characters). archive.org ran OCR without Arabic. Decision: the baseline uses our own Tesseract 5 `ara` run (allowed by spec §5.1: "else Tesseract ara plain text"). The gold draft will come from Tesseract `ara` + a second VLM, then a human corrects it.
