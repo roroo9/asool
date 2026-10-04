@@ -1,0 +1,11 @@
+{"ts": 1791090153.0998259, "stage": "vlm_parse/claude-opus-5-5", "model": "claude-opus-5-5", "input_tokens": 6994, "output_tokens": 4839, "cached": false, "seconds": 41.45}
+{"ts": 1791090229.7681391, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 6060, "cached": false, "seconds": 54.55}
+{"ts": 1791090549.84592, "stage": "vlm_parse/claude-opus-5-5", "model": "claude-opus-5-5", "input_tokens": 6994, "output_tokens": 4510, "cached": false, "seconds": 39.1}
+{"ts": 1791090552.7040892, "stage": "vlm_parse/claude-opus-5-5", "model": "claude-opus-5-5", "input_tokens": 6994, "output_tokens": 5749, "cached": false, "seconds": 41.96}
+{"ts": 1791090575.150364, "stage": "vlm_parse/claude-fable-5-1", "model": "claude-fable-5-1", "input_tokens": 6994, "output_tokens": 5621, "cached": false, "seconds": 64.41}
+{"ts": 1791090577.566875, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 8281, "cached": false, "seconds": 24.77}
+{"ts": 1791090581.287952, "stage": "vlm_parse/claude-fable-5-1", "model": "claude-fable-5-1", "input_tokens": 6994, "output_tokens": 5893, "cached": false, "seconds": 70.54}
+{"ts": 1791090601.3474162, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 7927, "cached": false, "seconds": 26.1}
+{"ts": 1791090612.512925, "stage": "vlm_parse/claude-fable-5-1", "model": "claude-fable-5-1", "input_tokens": 6994, "output_tokens": 4363, "cached": false, "seconds": 62.52}
+{"ts": 1791090723.797157, "stage": "vlm_parse/gemini-3.8-flash", "model": "gemini-3.8-flash", "input_tokens": 2032, "output_tokens": 8368, "cached": false, "seconds": 122.36}
+{"ts": 1791090840.4760242, "stage": "vlm_parse/claude-opus-5-5", "model": "claude-opus-5-5", "input_tokens": 6994, "output_tokens": 3191, "cached": false, "seconds": 24.61}

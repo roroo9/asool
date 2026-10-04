@@ -38,3 +38,6 @@ docs/challenge/
 
 # Shamela reference text (used only as a review aid; not redistributed)
 data/reference/shamela/*.jsonl
+
+# Raw LLM response cache (local; results are saved under data/intermediate)
+data/cache/llm/

@@ -1,0 +1,5493 @@
+{
+ "page_id": "riyad1956-p030",
+ "printed": 30,
+ "readers": {
+  "A": "tesseract 5.5.3 ara psm4",
+  "B": "claude-opus-5-5",
+  "C": "claude-fable-5-1"
+ },
+ "rule": "auto-accept iff letters agree across A,B,C and diacritics agree between B,C",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "— ٣٠ —",
+   "type_reader_c": "page_number",
+   "type_confirmed": null
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وعن ابن عباس وأنس بن مالك رضى الله عنهم أنّ رسول الله صلى الله عليه وسلم قال:",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "«لوْ أنّ لابنِ آدم وادياً منْ ذهب أحبّ أنْ يكونَ له واديان ، ولنْ يملأَ فاه إلا التراب ويتوب اللهُ على منْ تابَ»",
+   "type_reader_c": "hadith",
+   "type_confirmed": null
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "متفق عليه .",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وعن أبى هريرة رضى الله عنه أنّ رسول الله صلى الله عليه وسلم قال :",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "« يضحكُ(١) اللهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمّ يتوب الله على القاتل فيسلم فيستشهد »",
+   "type_reader_c": "hadith",
+   "type_confirmed": null
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "متفق عليه .",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 8,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "باب الصبر",
+   "type_reader_c": "heading",
+   "type_confirmed": null
+  },
+  {
+   "order": 9,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "قال الله تعالى",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 10,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "﴿ يَاأَيُّهَا ٱلَّذِينَ آمَنُوا ٱصْبِرُوا (٢) وَصَابِرُوا (٣) وَرَابِطُوا (٤) ﴾",
+   "type_reader_c": "quran",
+   "type_confirmed": null
+  },
+  {
+   "order": 11,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وقال تعالى",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 12,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "﴿ وَلَنَبْلُوَنَّكُمْ (٥) بِشَىْءٍ مِنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِنَ ٱلْأَمْوَالِ وَٱلْأَنْفُسِ وَٱلثَّمَرَاتِ وَبَشِّرِ ٱلصَّابِرِينَ ﴾",
+   "type_reader_c": "quran",
+   "type_confirmed": null
+  },
+  {
+   "order": 13,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وقال تعالى",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 14,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦) ﴾",
+   "type_reader_c": "quran",
+   "type_confirmed": null
+  },
+  {
+   "order": 15,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وقال تعالى",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 16,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "﴿ وَلَمَنْ (٧) صَبَرَ وَغَفَرَ (٨) إِنَّ ذَٰلِكَ لَمِنْ عَزْمِ ٱلْأُمُورِ ﴾",
+   "type_reader_c": "quran",
+   "type_confirmed": null
+  },
+  {
+   "order": 17,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وقال تعالى",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 18,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ ٱلصَّابِرِينَ ﴾",
+   "type_reader_c": "quran",
+   "type_confirmed": null
+  },
+  {
+   "order": 19,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "وقال تعالى",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 20,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
+   "type_reader_c": "quran",
+   "type_confirmed": null
+  },
+  {
+   "order": 21,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "footnote_marker": "",
+   "text": "والآيات فى الأمر بالصبرِ و بيانِ فضلهِ كثيرةٌ معروفة .",
+   "type_reader_c": "body",
+   "type_confirmed": null
+  },
+  {
+   "order": 22,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(١)",
+   "text": "(١) يرضى بفعلهما",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 23,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٢)",
+   "text": "(٢) احبسوا النفس على طاعة الله وتحملوا المصائب وتباعدوا عن المعاصى",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 24,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٣)",
+   "text": "(٣) غالبوا الكفار",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 25,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٤)",
+   "text": "(٤) أقيموا على الجهاد",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 26,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٥)",
+   "text": "(٥) أى لنختبرنكم على الطاعات وما يبتلون به",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 27,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٦)",
+   "text": "(٦) بغير مكيال أو وزن . قال الكواشى كل صابر على ترك أهل ووطن وعلى كل مكروه يعرض له لأجل الله تعالى قال على كرم الله وجهه فانه يحثى الثواب لهم حثيا",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 28,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٧)",
+   "text": "(٧) لم ينتصر لنفسه بعد ظلمها",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 29,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٨)",
+   "text": "(٨) تجاوز عن ظالمه",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  },
+  {
+   "order": 30,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "footnote_marker": "(٩)",
+   "text": "(٩) اطلبوا المعونة على أمركم و نجاح مقصدكم .",
+   "type_reader_c": "footnote",
+   "type_confirmed": null
+  }
+ ],
+ "tokens": [
+  {
+   "block": 0,
+   "raw": "—"
+  },
+  {
+   "block": 0,
+   "raw": "٣٠"
+  },
+  {
+   "block": 0,
+   "raw": "—"
+  },
+  {
+   "block": 1,
+   "raw": "وعن"
+  },
+  {
+   "block": 1,
+   "raw": "ابن"
+  },
+  {
+   "block": 1,
+   "raw": "عباس"
+  },
+  {
+   "block": 1,
+   "raw": "وأنس"
+  },
+  {
+   "block": 1,
+   "raw": "بن"
+  },
+  {
+   "block": 1,
+   "raw": "مالك"
+  },
+  {
+   "block": 1,
+   "raw": "رضى"
+  },
+  {
+   "block": 1,
+   "raw": "الله"
+  },
+  {
+   "block": 1,
+   "raw": "عنهم"
+  },
+  {
+   "block": 1,
+   "raw": "أنّ"
+  },
+  {
+   "block": 1,
+   "raw": "رسول"
+  },
+  {
+   "block": 1,
+   "raw": "الله"
+  },
+  {
+   "block": 1,
+   "raw": "صلى"
+  },
+  {
+   "block": 1,
+   "raw": "الله"
+  },
+  {
+   "block": 1,
+   "raw": "عليه"
+  },
+  {
+   "block": 1,
+   "raw": "وسلم"
+  },
+  {
+   "block": 1,
+   "raw": "قال:"
+  },
+  {
+   "block": 2,
+   "raw": "«لوْ"
+  },
+  {
+   "block": 2,
+   "raw": "أنّ"
+  },
+  {
+   "block": 2,
+   "raw": "لابنِ"
+  },
+  {
+   "block": 2,
+   "raw": "آدم"
+  },
+  {
+   "block": 2,
+   "raw": "وادياً"
+  },
+  {
+   "block": 2,
+   "raw": "منْ"
+  },
+  {
+   "block": 2,
+   "raw": "ذهب"
+  },
+  {
+   "block": 2,
+   "raw": "أحبّ"
+  },
+  {
+   "block": 2,
+   "raw": "أنْ"
+  },
+  {
+   "block": 2,
+   "raw": "يكونَ"
+  },
+  {
+   "block": 2,
+   "raw": "له"
+  },
+  {
+   "block": 2,
+   "raw": "واديان"
+  },
+  {
+   "block": 2,
+   "raw": "،"
+  },
+  {
+   "block": 2,
+   "raw": "ولنْ"
+  },
+  {
+   "block": 2,
+   "raw": "يملأَ"
+  },
+  {
+   "block": 2,
+   "raw": "فاه"
+  },
+  {
+   "block": 2,
+   "raw": "إلا"
+  },
+  {
+   "block": 2,
+   "raw": "التراب"
+  },
+  {
+   "block": 2,
+   "raw": "ويتوب"
+  },
+  {
+   "block": 2,
+   "raw": "اللهُ"
+  },
+  {
+   "block": 2,
+   "raw": "على"
+  },
+  {
+   "block": 2,
+   "raw": "منْ"
+  },
+  {
+   "block": 2,
+   "raw": "تابَ»"
+  },
+  {
+   "block": 3,
+   "raw": "متفق"
+  },
+  {
+   "block": 3,
+   "raw": "عليه"
+  },
+  {
+   "block": 3,
+   "raw": "."
+  },
+  {
+   "block": 4,
+   "raw": "وعن"
+  },
+  {
+   "block": 4,
+   "raw": "أبى"
+  },
+  {
+   "block": 4,
+   "raw": "هريرة"
+  },
+  {
+   "block": 4,
+   "raw": "رضى"
+  },
+  {
+   "block": 4,
+   "raw": "الله"
+  },
+  {
+   "block": 4,
+   "raw": "عنه"
+  },
+  {
+   "block": 4,
+   "raw": "أنّ"
+  },
+  {
+   "block": 4,
+   "raw": "رسول"
+  },
+  {
+   "block": 4,
+   "raw": "الله"
+  },
+  {
+   "block": 4,
+   "raw": "صلى"
+  },
+  {
+   "block": 4,
+   "raw": "الله"
+  },
+  {
+   "block": 4,
+   "raw": "عليه"
+  },
+  {
+   "block": 4,
+   "raw": "وسلم"
+  },
+  {
+   "block": 4,
+   "raw": "قال"
+  },
+  {
+   "block": 4,
+   "raw": ":"
+  },
+  {
+   "block": 5,
+   "raw": "«"
+  },
+  {
+   "block": 5,
+   "raw": "يضحكُ(١)"
+  },
+  {
+   "block": 5,
+   "raw": "اللهُ"
+  },
+  {
+   "block": 5,
+   "raw": "سبحانه"
+  },
+  {
+   "block": 5,
+   "raw": "وتعالى"
+  },
+  {
+   "block": 5,
+   "raw": "إلى"
+  },
+  {
+   "block": 5,
+   "raw": "رجلين"
+  },
+  {
+   "block": 5,
+   "raw": "يقتلُ"
+  },
+  {
+   "block": 5,
+   "raw": "أحدهما"
+  },
+  {
+   "block": 5,
+   "raw": "الآخرَ"
+  },
+  {
+   "block": 5,
+   "raw": "يدخلانِ"
+  },
+  {
+   "block": 5,
+   "raw": "الجنةَ"
+  },
+  {
+   "block": 5,
+   "raw": "يقاتل"
+  },
+  {
+   "block": 5,
+   "raw": "هذا"
+  },
+  {
+   "block": 5,
+   "raw": "فى"
+  },
+  {
+   "block": 5,
+   "raw": "سبيل"
+  },
+  {
+   "block": 5,
+   "raw": "الله"
+  },
+  {
+   "block": 5,
+   "raw": "فيقتل"
+  },
+  {
+   "block": 5,
+   "raw": "ثمّ"
+  },
+  {
+   "block": 5,
+   "raw": "يتوب"
+  },
+  {
+   "block": 5,
+   "raw": "الله"
+  },
+  {
+   "block": 5,
+   "raw": "على"
+  },
+  {
+   "block": 5,
+   "raw": "القاتل"
+  },
+  {
+   "block": 5,
+   "raw": "فيسلم"
+  },
+  {
+   "block": 5,
+   "raw": "فيستشهد"
+  },
+  {
+   "block": 5,
+   "raw": "»"
+  },
+  {
+   "block": 6,
+   "raw": "متفق"
+  },
+  {
+   "block": 6,
+   "raw": "عليه"
+  },
+  {
+   "block": 6,
+   "raw": "."
+  },
+  {
+   "block": 7,
+   "raw": "باب"
+  },
+  {
+   "block": 7,
+   "raw": "الصبر"
+  },
+  {
+   "block": 8,
+   "raw": "قال"
+  },
+  {
+   "block": 8,
+   "raw": "الله"
+  },
+  {
+   "block": 8,
+   "raw": "تعالى"
+  },
+  {
+   "block": 9,
+   "raw": "﴿"
+  },
+  {
+   "block": 9,
+   "raw": "يَاأَيُّهَا"
+  },
+  {
+   "block": 9,
+   "raw": "ٱلَّذِينَ"
+  },
+  {
+   "block": 9,
+   "raw": "آمَنُوا"
+  },
+  {
+   "block": 9,
+   "raw": "ٱصْبِرُوا"
+  },
+  {
+   "block": 9,
+   "raw": "(٢)"
+  },
+  {
+   "block": 9,
+   "raw": "وَصَابِرُوا"
+  },
+  {
+   "block": 9,
+   "raw": "(٣)"
+  },
+  {
+   "block": 9,
+   "raw": "وَرَابِطُوا"
+  },
+  {
+   "block": 9,
+   "raw": "(٤)"
+  },
+  {
+   "block": 9,
+   "raw": "﴾"
+  },
+  {
+   "block": 10,
+   "raw": "وقال"
+  },
+  {
+   "block": 10,
+   "raw": "تعالى"
+  },
+  {
+   "block": 11,
+   "raw": "﴿"
+  },
+  {
+   "block": 11,
+   "raw": "وَلَنَبْلُوَنَّكُمْ"
+  },
+  {
+   "block": 11,
+   "raw": "(٥)"
+  },
+  {
+   "block": 11,
+   "raw": "بِشَىْءٍ"
+  },
+  {
+   "block": 11,
+   "raw": "مِنَ"
+  },
+  {
+   "block": 11,
+   "raw": "ٱلْخَوْفِ"
+  },
+  {
+   "block": 11,
+   "raw": "وَٱلْجُوعِ"
+  },
+  {
+   "block": 11,
+   "raw": "وَنَقْصٍ"
+  },
+  {
+   "block": 11,
+   "raw": "مِنَ"
+  },
+  {
+   "block": 11,
+   "raw": "ٱلْأَمْوَالِ"
+  },
+  {
+   "block": 11,
+   "raw": "وَٱلْأَنْفُسِ"
+  },
+  {
+   "block": 11,
+   "raw": "وَٱلثَّمَرَاتِ"
+  },
+  {
+   "block": 11,
+   "raw": "وَبَشِّرِ"
+  },
+  {
+   "block": 11,
+   "raw": "ٱلصَّابِرِينَ"
+  },
+  {
+   "block": 11,
+   "raw": "﴾"
+  },
+  {
+   "block": 12,
+   "raw": "وقال"
+  },
+  {
+   "block": 12,
+   "raw": "تعالى"
+  },
+  {
+   "block": 13,
+   "raw": "﴿"
+  },
+  {
+   "block": 13,
+   "raw": "إِنَّمَا"
+  },
+  {
+   "block": 13,
+   "raw": "يُوَفَّى"
+  },
+  {
+   "block": 13,
+   "raw": "ٱلصَّابِرُونَ"
+  },
+  {
+   "block": 13,
+   "raw": "أَجْرَهُمْ"
+  },
+  {
+   "block": 13,
+   "raw": "بِغَيْرِ"
+  },
+  {
+   "block": 13,
+   "raw": "حِسَابٍ"
+  },
+  {
+   "block": 13,
+   "raw": "(٦)"
+  },
+  {
+   "block": 13,
+   "raw": "﴾"
+  },
+  {
+   "block": 14,
+   "raw": "وقال"
+  },
+  {
+   "block": 14,
+   "raw": "تعالى"
+  },
+  {
+   "block": 15,
+   "raw": "﴿"
+  },
+  {
+   "block": 15,
+   "raw": "وَلَمَنْ"
+  },
+  {
+   "block": 15,
+   "raw": "(٧)"
+  },
+  {
+   "block": 15,
+   "raw": "صَبَرَ"
+  },
+  {
+   "block": 15,
+   "raw": "وَغَفَرَ"
+  },
+  {
+   "block": 15,
+   "raw": "(٨)"
+  },
+  {
+   "block": 15,
+   "raw": "إِنَّ"
+  },
+  {
+   "block": 15,
+   "raw": "ذَٰلِكَ"
+  },
+  {
+   "block": 15,
+   "raw": "لَمِنْ"
+  },
+  {
+   "block": 15,
+   "raw": "عَزْمِ"
+  },
+  {
+   "block": 15,
+   "raw": "ٱلْأُمُورِ"
+  },
+  {
+   "block": 15,
+   "raw": "﴾"
+  },
+  {
+   "block": 16,
+   "raw": "وقال"
+  },
+  {
+   "block": 16,
+   "raw": "تعالى"
+  },
+  {
+   "block": 17,
+   "raw": "﴿"
+  },
+  {
+   "block": 17,
+   "raw": "ٱسْتَعِينُوا"
+  },
+  {
+   "block": 17,
+   "raw": "(٩)"
+  },
+  {
+   "block": 17,
+   "raw": "بِٱلصَّبْرِ"
+  },
+  {
+   "block": 17,
+   "raw": "وَٱلصَّلَاةِ"
+  },
+  {
+   "block": 17,
+   "raw": "إِنَّ"
+  },
+  {
+   "block": 17,
+   "raw": "ٱللَّهَ"
+  },
+  {
+   "block": 17,
+   "raw": "مَعَ"
+  },
+  {
+   "block": 17,
+   "raw": "ٱلصَّابِرِينَ"
+  },
+  {
+   "block": 17,
+   "raw": "﴾"
+  },
+  {
+   "block": 18,
+   "raw": "وقال"
+  },
+  {
+   "block": 18,
+   "raw": "تعالى"
+  },
+  {
+   "block": 19,
+   "raw": "﴿"
+  },
+  {
+   "block": 19,
+   "raw": "وَلَنَبْلُوَنَّكُمْ"
+  },
+  {
+   "block": 19,
+   "raw": "حَتَّى"
+  },
+  {
+   "block": 19,
+   "raw": "نَعْلَمَ"
+  },
+  {
+   "block": 19,
+   "raw": "ٱلْمُجَاهِدِينَ"
+  },
+  {
+   "block": 19,
+   "raw": "مِنْكُمْ"
+  },
+  {
+   "block": 19,
+   "raw": "وَٱلصَّابِرِينَ"
+  },
+  {
+   "block": 19,
+   "raw": "﴾"
+  },
+  {
+   "block": 20,
+   "raw": "والآيات"
+  },
+  {
+   "block": 20,
+   "raw": "فى"
+  },
+  {
+   "block": 20,
+   "raw": "الأمر"
+  },
+  {
+   "block": 20,
+   "raw": "بالصبرِ"
+  },
+  {
+   "block": 20,
+   "raw": "و"
+  },
+  {
+   "block": 20,
+   "raw": "بيانِ"
+  },
+  {
+   "block": 20,
+   "raw": "فضلهِ"
+  },
+  {
+   "block": 20,
+   "raw": "كثيرةٌ"
+  },
+  {
+   "block": 20,
+   "raw": "معروفة"
+  },
+  {
+   "block": 20,
+   "raw": "."
+  },
+  {
+   "block": 21,
+   "raw": "(١)"
+  },
+  {
+   "block": 21,
+   "raw": "يرضى"
+  },
+  {
+   "block": 21,
+   "raw": "بفعلهما"
+  },
+  {
+   "block": 22,
+   "raw": "(٢)"
+  },
+  {
+   "block": 22,
+   "raw": "احبسوا"
+  },
+  {
+   "block": 22,
+   "raw": "النفس"
+  },
+  {
+   "block": 22,
+   "raw": "على"
+  },
+  {
+   "block": 22,
+   "raw": "طاعة"
+  },
+  {
+   "block": 22,
+   "raw": "الله"
+  },
+  {
+   "block": 22,
+   "raw": "وتحملوا"
+  },
+  {
+   "block": 22,
+   "raw": "المصائب"
+  },
+  {
+   "block": 22,
+   "raw": "وتباعدوا"
+  },
+  {
+   "block": 22,
+   "raw": "عن"
+  },
+  {
+   "block": 22,
+   "raw": "المعاصى"
+  },
+  {
+   "block": 23,
+   "raw": "(٣)"
+  },
+  {
+   "block": 23,
+   "raw": "غالبوا"
+  },
+  {
+   "block": 23,
+   "raw": "الكفار"
+  },
+  {
+   "block": 24,
+   "raw": "(٤)"
+  },
+  {
+   "block": 24,
+   "raw": "أقيموا"
+  },
+  {
+   "block": 24,
+   "raw": "على"
+  },
+  {
+   "block": 24,
+   "raw": "الجهاد"
+  },
+  {
+   "block": 25,
+   "raw": "(٥)"
+  },
+  {
+   "block": 25,
+   "raw": "أى"
+  },
+  {
+   "block": 25,
+   "raw": "لنختبرنكم"
+  },
+  {
+   "block": 25,
+   "raw": "على"
+  },
+  {
+   "block": 25,
+   "raw": "الطاعات"
+  },
+  {
+   "block": 25,
+   "raw": "وما"
+  },
+  {
+   "block": 25,
+   "raw": "يبتلون"
+  },
+  {
+   "block": 25,
+   "raw": "به"
+  },
+  {
+   "block": 26,
+   "raw": "(٦)"
+  },
+  {
+   "block": 26,
+   "raw": "بغير"
+  },
+  {
+   "block": 26,
+   "raw": "مكيال"
+  },
+  {
+   "block": 26,
+   "raw": "أو"
+  },
+  {
+   "block": 26,
+   "raw": "وزن"
+  },
+  {
+   "block": 26,
+   "raw": "."
+  },
+  {
+   "block": 26,
+   "raw": "قال"
+  },
+  {
+   "block": 26,
+   "raw": "الكواشى"
+  },
+  {
+   "block": 26,
+   "raw": "كل"
+  },
+  {
+   "block": 26,
+   "raw": "صابر"
+  },
+  {
+   "block": 26,
+   "raw": "على"
+  },
+  {
+   "block": 26,
+   "raw": "ترك"
+  },
+  {
+   "block": 26,
+   "raw": "أهل"
+  },
+  {
+   "block": 26,
+   "raw": "ووطن"
+  },
+  {
+   "block": 26,
+   "raw": "وعلى"
+  },
+  {
+   "block": 26,
+   "raw": "كل"
+  },
+  {
+   "block": 26,
+   "raw": "مكروه"
+  },
+  {
+   "block": 26,
+   "raw": "يعرض"
+  },
+  {
+   "block": 26,
+   "raw": "له"
+  },
+  {
+   "block": 26,
+   "raw": "لأجل"
+  },
+  {
+   "block": 26,
+   "raw": "الله"
+  },
+  {
+   "block": 26,
+   "raw": "تعالى"
+  },
+  {
+   "block": 26,
+   "raw": "قال"
+  },
+  {
+   "block": 26,
+   "raw": "على"
+  },
+  {
+   "block": 26,
+   "raw": "كرم"
+  },
+  {
+   "block": 26,
+   "raw": "الله"
+  },
+  {
+   "block": 26,
+   "raw": "وجهه"
+  },
+  {
+   "block": 26,
+   "raw": "فانه"
+  },
+  {
+   "block": 26,
+   "raw": "يحثى"
+  },
+  {
+   "block": 26,
+   "raw": "الثواب"
+  },
+  {
+   "block": 26,
+   "raw": "لهم"
+  },
+  {
+   "block": 26,
+   "raw": "حثيا"
+  },
+  {
+   "block": 27,
+   "raw": "(٧)"
+  },
+  {
+   "block": 27,
+   "raw": "لم"
+  },
+  {
+   "block": 27,
+   "raw": "ينتصر"
+  },
+  {
+   "block": 27,
+   "raw": "لنفسه"
+  },
+  {
+   "block": 27,
+   "raw": "بعد"
+  },
+  {
+   "block": 27,
+   "raw": "ظلمها"
+  },
+  {
+   "block": 28,
+   "raw": "(٨)"
+  },
+  {
+   "block": 28,
+   "raw": "تجاوز"
+  },
+  {
+   "block": 28,
+   "raw": "عن"
+  },
+  {
+   "block": 28,
+   "raw": "ظالمه"
+  },
+  {
+   "block": 29,
+   "raw": "(٩)"
+  },
+  {
+   "block": 29,
+   "raw": "اطلبوا"
+  },
+  {
+   "block": 29,
+   "raw": "المعونة"
+  },
+  {
+   "block": 29,
+   "raw": "على"
+  },
+  {
+   "block": 29,
+   "raw": "أمركم"
+  },
+  {
+   "block": 29,
+   "raw": "و"
+  },
+  {
+   "block": 29,
+   "raw": "نجاح"
+  },
+  {
+   "block": 29,
+   "raw": "مقصدكم"
+  },
+  {
+   "block": 29,
+   "raw": "."
+  }
+ ],
+ "auto_accepted": 110,
+ "total_tokens": 260,
+ "review_items": [
+  {
+   "id": "riyad1956-p030-r000",
+   "block": 1,
+   "tok_from": 12,
+   "tok_to": 13,
+   "candidates": [
+    {
+     "text": "أنّ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "أنَّ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "أن",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     862,
+     475,
+     903,
+     546
+    ]
+   ],
+   "line_boxes": [
+    [
+     433,
+     471,
+     1657,
+     570
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r001",
+   "block": 1,
+   "tok_from": 15,
+   "tok_to": 16,
+   "candidates": [
+    {
+     "text": "صلى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "صل",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     620,
+     471,
+     658,
+     570
+    ]
+   ],
+   "line_boxes": [
+    [
+     433,
+     471,
+     1657,
+     570
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r002",
+   "block": 1,
+   "tok_from": 17,
+   "tok_to": 20,
+   "candidates": [
+    {
+     "text": "عليه وسلم قال:",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "عليــه وسلم قال:",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "عليه وسإقال: «ل'",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     433,
+     475,
+     725,
+     553
+    ],
+    [
+     1611,
+     612,
+     1743,
+     689
+    ],
+    [
+     1536,
+     611,
+     1590,
+     663
+    ]
+   ],
+   "line_boxes": [
+    [
+     433,
+     471,
+     1657,
+     570
+    ],
+    [
+     430,
+     570,
+     1743,
+     689
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r003",
+   "block": 2,
+   "tok_from": 20,
+   "tok_to": 22,
+   "candidates": [
+    {
+     "text": "«لوْ أنّ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "«لوْ أنَّ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "وسإقال: «ل' أن\"",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1611,
+     612,
+     1743,
+     689
+    ],
+    [
+     1536,
+     611,
+     1590,
+     663
+    ],
+    [
+     1469,
+     586,
+     1522,
+     662
+    ]
+   ],
+   "line_boxes": [
+    [
+     430,
+     570,
+     1743,
+     689
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r004",
+   "block": 2,
+   "tok_from": 27,
+   "tok_to": 28,
+   "candidates": [
+    {
+     "text": "أحبّ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "أحبَّ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "أحب؟",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     936,
+     593,
+     1031,
+     664
+    ]
+   ],
+   "line_boxes": [
+    [
+     430,
+     570,
+     1743,
+     689
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r005",
+   "block": 2,
+   "tok_from": 32,
+   "tok_to": 35,
+   "candidates": [
+    {
+     "text": "، ولنْ يملأَ",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "» وان بملا",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     592,
+     619,
+     596,
+     643
+    ],
+    [
+     502,
+     588,
+     569,
+     659
+    ],
+    [
+     430,
+     570,
+     489,
+     661
+    ]
+   ],
+   "line_boxes": [
+    [
+     430,
+     570,
+     1743,
+     689
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r006",
+   "block": 2,
+   "tok_from": 39,
+   "tok_to": 40,
+   "candidates": [
+    {
+     "text": "اللهُ",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "أنه",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1336,
+     696,
+     1411,
+     779
+    ]
+   ],
+   "line_boxes": [
+    [
+     870,
+     696,
+     1744,
+     779
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r007",
+   "block": 2,
+   "tok_from": 42,
+   "tok_to": 43,
+   "candidates": [
+    {
+     "text": "تابَ»",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "تابَ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "تاب",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1120,
+     696,
+     1181,
+     779
+    ]
+   ],
+   "line_boxes": [
+    [
+     870,
+     696,
+     1744,
+     779
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r008",
+   "block": 4,
+   "tok_from": 48,
+   "tok_to": 49,
+   "candidates": [
+    {
+     "text": "هريرة",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "هيرة",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1402,
+     798,
+     1491,
+     899
+    ]
+   ],
+   "line_boxes": [
+    [
+     434,
+     798,
+     1712,
+     899
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r009",
+   "block": 4,
+   "tok_from": 51,
+   "tok_to": 53,
+   "candidates": [
+    {
+     "text": "عنه أنّ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "عنــه أنَّ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "عنه أن\"",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1162,
+     798,
+     1220,
+     899
+    ],
+    [
+     1086,
+     798,
+     1144,
+     899
+    ]
+   ],
+   "line_boxes": [
+    [
+     434,
+     798,
+     1712,
+     899
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r010",
+   "block": 4,
+   "tok_from": 55,
+   "tok_to": 56,
+   "candidates": [
+    {
+     "text": "صلى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "صل",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     840,
+     798,
+     879,
+     899
+    ]
+   ],
+   "line_boxes": [
+    [
+     434,
+     798,
+     1712,
+     899
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r011",
+   "block": 4,
+   "tok_from": 57,
+   "tok_to": 59,
+   "candidates": [
+    {
+     "text": "عليه وسلم",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "عليــه وسلم",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "علية وس",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     632,
+     802,
+     804,
+     871
+    ],
+    [
+     546,
+     820,
+     605,
+     895
+    ]
+   ],
+   "line_boxes": [
+    [
+     434,
+     798,
+     1712,
+     899
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r012",
+   "block": 4,
+   "tok_from": 60,
+   "tok_to": 61,
+   "candidates": [
+    {
+     "text": ":",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "د",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1720,
+     946,
+     1738,
+     975
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     900,
+     1738,
+     996
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r013",
+   "block": 5,
+   "tok_from": 61,
+   "tok_to": 64,
+   "candidates": [
+    {
+     "text": "« يضحكُ(١) اللهُ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "« يضحكُ (١) اللهُ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "بضحك” 0\" أنه",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1567,
+     916,
+     1702,
+     985
+    ],
+    [
+     1523,
+     916,
+     1559,
+     949
+    ],
+    [
+     1446,
+     916,
+     1494,
+     976
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     900,
+     1738,
+     996
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r014",
+   "block": 5,
+   "tok_from": 68,
+   "tok_to": 70,
+   "candidates": [
+    {
+     "text": "يقتلُ أحدهما",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "يتل\" أحدههما",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     937,
+     911,
+     1023,
+     988
+    ],
+    [
+     816,
+     913,
+     925,
+     967
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     900,
+     1738,
+     996
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r015",
+   "block": 5,
+   "tok_from": 72,
+   "tok_to": 74,
+   "candidates": [
+    {
+     "text": "الجنةَ يقاتل",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الجنــةَ يقاتل",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "الجبة يقائل",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     423,
+     900,
+     535,
+     980
+    ],
+    [
+     1659,
+     1043,
+     1748,
+     1101
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     900,
+     1738,
+     996
+    ],
+    [
+     432,
+     1015,
+     1748,
+     1118
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r016",
+   "block": 5,
+   "tok_from": 79,
+   "tok_to": 80,
+   "candidates": [
+    {
+     "text": "ثمّ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "ثمَّ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "ثم\"",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1232,
+     1015,
+     1278,
+     1118
+    ]
+   ],
+   "line_boxes": [
+    [
+     432,
+     1015,
+     1748,
+     1118
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r017",
+   "block": 5,
+   "tok_from": 81,
+   "tok_to": 84,
+   "candidates": [
+    {
+     "text": "الله على القاتل",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "اللعلى القائل",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1020,
+     1015,
+     1130,
+     1118
+    ],
+    [
+     917,
+     1015,
+     1000,
+     1118
+    ]
+   ],
+   "line_boxes": [
+    [
+     432,
+     1015,
+     1748,
+     1118
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r018",
+   "block": 5,
+   "tok_from": 85,
+   "tok_to": 86,
+   "candidates": [
+    {
+     "text": "فيستشهد",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "فيسنشهد",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     665,
+     1036,
+     804,
+     1089
+    ]
+   ],
+   "line_boxes": [
+    [
+     432,
+     1015,
+     1748,
+     1118
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r019",
+   "block": 7,
+   "tok_from": 91,
+   "tok_to": 92,
+   "candidates": [
+    {
+     "text": "الصبر",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الصــبر",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "العسسور",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     953,
+     1212,
+     1131,
+     1276
+    ]
+   ],
+   "line_boxes": [
+    [
+     953,
+     1212,
+     1212,
+     1282
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r020",
+   "block": 9,
+   "tok_from": 95,
+   "tok_to": 99,
+   "candidates": [
+    {
+     "text": "﴿ يَاأَيُّهَا ٱلَّذِينَ آمَنُوا",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "﴿ يَاأَيُّهَا الَّذِينَ آمَنُوا",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "ل( ياه ألذرين ١‏ مثوا أصيروا 7\" وَصا بروا وراسطا0»)",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1409,
+     1419,
+     1430,
+     1526
+    ],
+    [
+     1315,
+     1424,
+     1390,
+     1508
+    ],
+    [
+     1201,
+     1419,
+     1288,
+     1526
+    ],
+    [
+     1168,
+     1434,
+     1182,
+     1488
+    ],
+    [
+     1088,
+     1419,
+     1155,
+     1526
+    ],
+    [
+     972,
+     1429,
+     1077,
+     1519
+    ],
+    [
+     917,
+     1428,
+     955,
+     1462
+    ],
+    [
+     836,
+     1424,
+     899,
+     1523
+    ],
+    [
+     748,
+     1435,
+     816,
+     1500
+    ],
+    [
+     425,
+     1410,
+     668,
+     1547
+    ]
+   ],
+   "line_boxes": [
+    [
+     425,
+     1410,
+     1650,
+     1547
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r021",
+   "block": 9,
+   "tok_from": 99,
+   "tok_to": 103,
+   "candidates": [
+    {
+     "text": "ٱصْبِرُوا (٢) وَصَابِرُوا (٣)",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "اصْبِرُوا (٢) وَصَابِرُوا (٣)",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "ل( ياه ألذرين ١‏ مثوا أصيروا 7\" وَصا بروا وراسطا0»)",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1409,
+     1419,
+     1430,
+     1526
+    ],
+    [
+     1315,
+     1424,
+     1390,
+     1508
+    ],
+    [
+     1201,
+     1419,
+     1288,
+     1526
+    ],
+    [
+     1168,
+     1434,
+     1182,
+     1488
+    ],
+    [
+     1088,
+     1419,
+     1155,
+     1526
+    ],
+    [
+     972,
+     1429,
+     1077,
+     1519
+    ],
+    [
+     917,
+     1428,
+     955,
+     1462
+    ],
+    [
+     836,
+     1424,
+     899,
+     1523
+    ],
+    [
+     748,
+     1435,
+     816,
+     1500
+    ],
+    [
+     425,
+     1410,
+     668,
+     1547
+    ]
+   ],
+   "line_boxes": [
+    [
+     425,
+     1410,
+     1650,
+     1547
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r022",
+   "block": 9,
+   "tok_from": 103,
+   "tok_to": 106,
+   "candidates": [
+    {
+     "text": "وَرَابِطُوا (٤) ﴾",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "ل( ياه ألذرين ١‏ مثوا أصيروا 7\" وَصا بروا وراسطا0»)",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1409,
+     1419,
+     1430,
+     1526
+    ],
+    [
+     1315,
+     1424,
+     1390,
+     1508
+    ],
+    [
+     1201,
+     1419,
+     1288,
+     1526
+    ],
+    [
+     1168,
+     1434,
+     1182,
+     1488
+    ],
+    [
+     1088,
+     1419,
+     1155,
+     1526
+    ],
+    [
+     972,
+     1429,
+     1077,
+     1519
+    ],
+    [
+     917,
+     1428,
+     955,
+     1462
+    ],
+    [
+     836,
+     1424,
+     899,
+     1523
+    ],
+    [
+     748,
+     1435,
+     816,
+     1500
+    ],
+    [
+     425,
+     1410,
+     668,
+     1547
+    ]
+   ],
+   "line_boxes": [
+    [
+     425,
+     1410,
+     1650,
+     1547
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r023",
+   "block": 11,
+   "tok_from": 108,
+   "tok_to": 112,
+   "candidates": [
+    {
+     "text": "﴿ وَلَنَبْلُوَنَّكُمْ (٥) بِشَىْءٍ",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "(١‏ (ملسَونم] ىهم",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1527,
+     1534,
+     1549,
+     1620
+    ],
+    [
+     1307,
+     1528,
+     1554,
+     1663
+    ],
+    [
+     1096,
+     1536,
+     1228,
+     1626
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1512,
+     1733,
+     1663
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r024",
+   "block": 11,
+   "tok_from": 113,
+   "tok_to": 117,
+   "candidates": [
+    {
+     "text": "ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِنَ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الْخَوْفِ وَالْجُوعِ وَنَقْصٍ مِنَ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "أعلواف وافوع. تفص م ين لوال ره #6مم وَألا نفس وَألثيررَات",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     932,
+     1530,
+     1115,
+     1615
+    ],
+    [
+     779,
+     1529,
+     913,
+     1623
+    ],
+    [
+     677,
+     1528,
+     767,
+     1650
+    ],
+    [
+     616,
+     1602,
+     636,
+     1612
+    ],
+    [
+     588,
+     1512,
+     637,
+     1663
+    ],
+    [
+     423,
+     1512,
+     570,
+     1663
+    ],
+    [
+     1691,
+     1629,
+     1720,
+     1666
+    ],
+    [
+     1626,
+     1633,
+     1715,
+     1662
+    ],
+    [
+     1666,
+     1655,
+     1733,
+     1740
+    ],
+    [
+     1580,
+     1669,
+     1656,
+     1736
+    ],
+    [
+     1398,
+     1633,
+     1557,
+     1737
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1512,
+     1733,
+     1663
+    ],
+    [
+     1626,
+     1629,
+     1720,
+     1666
+    ],
+    [
+     423,
+     1627,
+     1733,
+     1740
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r025",
+   "block": 11,
+   "tok_from": 117,
+   "tok_to": 120,
+   "candidates": [
+    {
+     "text": "ٱلْأَمْوَالِ وَٱلْأَنْفُسِ وَٱلثَّمَرَاتِ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الْأَمْوَالِ وَالْأَنْفُسِ وَالثَّمَرَاتِ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "أعلواف وافوع. تفص م ين لوال ره #6مم وَألا نفس وَألثيررَات",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     932,
+     1530,
+     1115,
+     1615
+    ],
+    [
+     779,
+     1529,
+     913,
+     1623
+    ],
+    [
+     677,
+     1528,
+     767,
+     1650
+    ],
+    [
+     616,
+     1602,
+     636,
+     1612
+    ],
+    [
+     588,
+     1512,
+     637,
+     1663
+    ],
+    [
+     423,
+     1512,
+     570,
+     1663
+    ],
+    [
+     1691,
+     1629,
+     1720,
+     1666
+    ],
+    [
+     1626,
+     1633,
+     1715,
+     1662
+    ],
+    [
+     1666,
+     1655,
+     1733,
+     1740
+    ],
+    [
+     1580,
+     1669,
+     1656,
+     1736
+    ],
+    [
+     1398,
+     1633,
+     1557,
+     1737
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1512,
+     1733,
+     1663
+    ],
+    [
+     1626,
+     1629,
+     1720,
+     1666
+    ],
+    [
+     423,
+     1627,
+     1733,
+     1740
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r026",
+   "block": 11,
+   "tok_from": 121,
+   "tok_to": 123,
+   "candidates": [
+    {
+     "text": "ٱلصَّابِرِينَ ﴾",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الصَّابِرِينَ ﴾",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "ألضًا بين ) وقال تعالل ( إننا يوتى ألصّا يرون رم بير حِسَابِرٍ 9 )",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1178,
+     1648,
+     1249,
+     1702
+    ],
+    [
+     1090,
+     1651,
+     1163,
+     1731
+    ],
+    [
+     1054,
+     1654,
+     1068,
+     1720
+    ],
+    [
+     958,
+     1643,
+     1028,
+     1738
+    ],
+    [
+     863,
+     1627,
+     933,
+     1740
+    ],
+    [
+     820,
+     1651,
+     842,
+     1719
+    ],
+    [
+     743,
+     1627,
+     805,
+     1740
+    ],
+    [
+     627,
+     1631,
+     718,
+     1715
+    ],
+    [
+     529,
+     1642,
+     599,
+     1696
+    ],
+    [
+     423,
+     1638,
+     530,
+     1728
+    ],
+    [
+     1580,
+     1747,
+     1733,
+     1881
+    ],
+    [
+     1526,
+     1753,
+     1585,
+     1844
+    ],
+    [
+     1385,
+     1747,
+     1505,
+     1848
+    ],
+    [
+     1345,
+     1752,
+     1378,
+     1785
+    ],
+    [
+     1301,
+     1764,
+     1310,
+     1830
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1627,
+     1733,
+     1740
+    ],
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r027",
+   "block": 13,
+   "tok_from": 125,
+   "tok_to": 129,
+   "candidates": [
+    {
+     "text": "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "﴿ إِنَّمَا يُوَفَّى الصَّابِرُونَ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "( وَلَمَ 1",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1084,
+     1762,
+     1096,
+     1828
+    ],
+    [
+     989,
+     1745,
+     1074,
+     1834
+    ],
+    [
+     928,
+     1749,
+     948,
+     1781
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r028",
+   "block": 13,
+   "tok_from": 129,
+   "tok_to": 133,
+   "candidates": [
+    {
+     "text": "أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦)",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "( وَلَمَ 1",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1084,
+     1762,
+     1096,
+     1828
+    ],
+    [
+     989,
+     1745,
+     1074,
+     1834
+    ],
+    [
+     928,
+     1749,
+     948,
+     1781
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r029",
+   "block": 13,
+   "tok_from": 133,
+   "tok_to": 134,
+   "candidates": [
+    {
+     "text": "﴾",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "( وَلَمَ 1",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1084,
+     1762,
+     1096,
+     1828
+    ],
+    [
+     989,
+     1745,
+     1074,
+     1834
+    ],
+    [
+     928,
+     1749,
+     948,
+     1781
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r030",
+   "block": 14,
+   "tok_from": 134,
+   "tok_to": 136,
+   "candidates": [
+    {
+     "text": "وقال تعالى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "( وَلَمَ 1",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1084,
+     1762,
+     1096,
+     1828
+    ],
+    [
+     989,
+     1745,
+     1074,
+     1834
+    ],
+    [
+     928,
+     1749,
+     948,
+     1781
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r031",
+   "block": 15,
+   "tok_from": 136,
+   "tok_to": 139,
+   "candidates": [
+    {
+     "text": "﴿ وَلَمَنْ (٧)",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "( وَلَمَ 1",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1084,
+     1762,
+     1096,
+     1828
+    ],
+    [
+     989,
+     1745,
+     1074,
+     1834
+    ],
+    [
+     928,
+     1749,
+     948,
+     1781
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r032",
+   "block": 15,
+   "tok_from": 140,
+   "tok_to": 144,
+   "candidates": [
+    {
+     "text": "وَغَفَرَ (٨) إِنَّ ذَٰلِكَ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "وَغَفَرَ (٨) إِنَّ ذَلِكَ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "سو 2 عق 99 إِنَّذلِكَ ١‏",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     777,
+     1745,
+     883,
+     1817
+    ],
+    [
+     729,
+     1747,
+     789,
+     1778
+    ],
+    [
+     739,
+     1741,
+     802,
+     1832
+    ],
+    [
+     676,
+     1746,
+     706,
+     1780
+    ],
+    [
+     511,
+     1741,
+     654,
+     1832
+    ],
+    [
+     476,
+     1745,
+     494,
+     1756
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r033",
+   "block": 15,
+   "tok_from": 145,
+   "tok_to": 148,
+   "candidates": [
+    {
+     "text": "عَزْمِ ٱلْأُمُورِ ﴾",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "عَزْمِ الْأُمُورِ ﴾",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r034",
+   "block": 16,
+   "tok_from": 148,
+   "tok_to": 150,
+   "candidates": [
+    {
+     "text": "وقال تعالى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r035",
+   "block": 17,
+   "tok_from": 150,
+   "tok_to": 154,
+   "candidates": [
+    {
+     "text": "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "﴿ اسْتَعِينُوا (٩) بِالصَّبْرِ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r036",
+   "block": 17,
+   "tok_from": 154,
+   "tok_to": 158,
+   "candidates": [
+    {
+     "text": "وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "وَالصَّلَاةِ إِنَّ اللهَ مَعَ",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r037",
+   "block": 17,
+   "tok_from": 158,
+   "tok_to": 160,
+   "candidates": [
+    {
+     "text": "ٱلصَّابِرِينَ ﴾",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الصَّابِرِينَ ﴾",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r038",
+   "block": 18,
+   "tok_from": 160,
+   "tok_to": 162,
+   "candidates": [
+    {
+     "text": "وقال تعالى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r039",
+   "block": 19,
+   "tok_from": 162,
+   "tok_to": 166,
+   "candidates": [
+    {
+     "text": "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r040",
+   "block": 19,
+   "tok_from": 166,
+   "tok_to": 170,
+   "candidates": [
+    {
+     "text": "ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الْمُجَاهِدِينَ مِنْكُمْ وَالصَّابِرِينَ ﴾",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r041",
+   "block": 20,
+   "tok_from": 170,
+   "tok_to": 172,
+   "candidates": [
+    {
+     "text": "والآيات فى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1644,
+     1868,
+     1730,
+     1999
+    ],
+    [
+     1491,
+     1831,
+     1644,
+     2008
+    ],
+    [
+     1339,
+     1875,
+     1467,
+     2010
+    ],
+    [
+     1075,
+     1827,
+     1305,
+     2014
+    ],
+    [
+     601,
+     1808,
+     1062,
+     2040
+    ],
+    [
+     422,
+     1850,
+     624,
+     2000
+    ],
+    [
+     1134,
+     1966,
+     1197,
+     2023
+    ],
+    [
+     1037,
+     1958,
+     1111,
+     1992
+    ],
+    [
+     1699,
+     2095,
+     1731,
+     2152
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     1808,
+     1730,
+     2040
+    ],
+    [
+     1037,
+     1958,
+     1197,
+     2023
+    ],
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r042",
+   "block": 20,
+   "tok_from": 173,
+   "tok_to": 174,
+   "candidates": [
+    {
+     "text": "بالصبرِ",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "باصبر",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1489,
+     2049,
+     1592,
+     2170
+    ]
+   ],
+   "line_boxes": [
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r043",
+   "block": 20,
+   "tok_from": 175,
+   "tok_to": 178,
+   "candidates": [
+    {
+     "text": "بيانِ فضلهِ كثيرةٌ",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "5 فضله_حكثيرة”",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1375,
+     2029,
+     1448,
+     2166
+    ],
+    [
+     1118,
+     2070,
+     1361,
+     2158
+    ]
+   ],
+   "line_boxes": [
+    [
+     979,
+     2026,
+     1731,
+     2170
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r044",
+   "block": 21,
+   "tok_from": 181,
+   "tok_to": 183,
+   "candidates": [
+    {
+     "text": "يرضى بفعلهما",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "برضى بفعليما (؟) احدسوا النفى طيطاعة",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1523,
+     2266,
+     1606,
+     2316
+    ],
+    [
+     1401,
+     2261,
+     1501,
+     2315
+    ],
+    [
+     1267,
+     2258,
+     1327,
+     2316
+    ],
+    [
+     1144,
+     2260,
+     1246,
+     2308
+    ],
+    [
+     1031,
+     2257,
+     1117,
+     2308
+    ],
+    [
+     900,
+     2240,
+     1011,
+     2305
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     2240,
+     1687,
+     2320
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r045",
+   "block": 22,
+   "tok_from": 183,
+   "tok_to": 187,
+   "candidates": [
+    {
+     "text": "(٢) احبسوا النفس على",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "برضى بفعليما (؟) احدسوا النفى طيطاعة",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1523,
+     2266,
+     1606,
+     2316
+    ],
+    [
+     1401,
+     2261,
+     1501,
+     2315
+    ],
+    [
+     1267,
+     2258,
+     1327,
+     2316
+    ],
+    [
+     1144,
+     2260,
+     1246,
+     2308
+    ],
+    [
+     1031,
+     2257,
+     1117,
+     2308
+    ],
+    [
+     900,
+     2240,
+     1011,
+     2305
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     2240,
+     1687,
+     2320
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r046",
+   "block": 22,
+   "tok_from": 187,
+   "tok_to": 188,
+   "candidates": [
+    {
+     "text": "طاعة",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "برضى بفعليما (؟) احدسوا النفى طيطاعة",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1523,
+     2266,
+     1606,
+     2316
+    ],
+    [
+     1401,
+     2261,
+     1501,
+     2315
+    ],
+    [
+     1267,
+     2258,
+     1327,
+     2316
+    ],
+    [
+     1144,
+     2260,
+     1246,
+     2308
+    ],
+    [
+     1031,
+     2257,
+     1117,
+     2308
+    ],
+    [
+     900,
+     2240,
+     1011,
+     2305
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     2240,
+     1687,
+     2320
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r047",
+   "block": 22,
+   "tok_from": 189,
+   "tok_to": 191,
+   "candidates": [
+    {
+     "text": "وتحملوا المصائب",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "ونحملوا الصائب",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     707,
+     2244,
+     825,
+     2299
+    ],
+    [
+     580,
+     2252,
+     690,
+     2307
+    ]
+   ],
+   "line_boxes": [
+    [
+     422,
+     2240,
+     1687,
+     2320
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r048",
+   "block": 22,
+   "tok_from": 193,
+   "tok_to": 194,
+   "candidates": [
+    {
+     "text": "المعاصى",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "العاصى",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1561,
+     2343,
+     1664,
+     2392
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2326,
+     1731,
+     2401
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r049",
+   "block": 23,
+   "tok_from": 194,
+   "tok_to": 195,
+   "candidates": [
+    {
+     "text": "(٣)",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "(م)",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1431,
+     2341,
+     1491,
+     2398
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2326,
+     1731,
+     2401
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r050",
+   "block": 23,
+   "tok_from": 196,
+   "tok_to": 197,
+   "candidates": [
+    {
+     "text": "الكفار",
+     "readers": [
+      "B",
+      "A"
+     ]
+    },
+    {
+     "text": "الــكفار",
+     "readers": [
+      "C"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1197,
+     2331,
+     1312,
+     2383
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2326,
+     1731,
+     2401
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r051",
+   "block": 24,
+   "tok_from": 197,
+   "tok_to": 201,
+   "candidates": [
+    {
+     "text": "(٤) أقيموا على الجهاد",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "(4)أقيموا طل الجباد (ه) أىلنختير نيعي",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     966,
+     2327,
+     1125,
+     2395
+    ],
+    [
+     902,
+     2337,
+     943,
+     2385
+    ],
+    [
+     799,
+     2331,
+     886,
+     2389
+    ],
+    [
+     669,
+     2332,
+     728,
+     2389
+    ],
+    [
+     526,
+     2326,
+     657,
+     2386
+    ],
+    [
+     421,
+     2326,
+     521,
+     2401
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2326,
+     1731,
+     2401
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r052",
+   "block": 25,
+   "tok_from": 201,
+   "tok_to": 205,
+   "candidates": [
+    {
+     "text": "(٥) أى لنختبرنكم على",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "(٥) أى لنختبرنــكم على",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "(4)أقيموا طل الجباد (ه) أىلنختير نيعي",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     966,
+     2327,
+     1125,
+     2395
+    ],
+    [
+     902,
+     2337,
+     943,
+     2385
+    ],
+    [
+     799,
+     2331,
+     886,
+     2389
+    ],
+    [
+     669,
+     2332,
+     728,
+     2389
+    ],
+    [
+     526,
+     2326,
+     657,
+     2386
+    ],
+    [
+     421,
+     2326,
+     521,
+     2401
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2326,
+     1731,
+     2401
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r053",
+   "block": 26,
+   "tok_from": 209,
+   "tok_to": 210,
+   "candidates": [
+    {
+     "text": "(٦)",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "- (1)",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1346,
+     2430,
+     1352,
+     2434
+    ],
+    [
+     1267,
+     2400,
+     1324,
+     2481
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2400,
+     1729,
+     2481
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r054",
+   "block": 26,
+   "tok_from": 216,
+   "tok_to": 217,
+   "candidates": [
+    {
+     "text": "الكواشى",
+     "readers": [
+      "B",
+      "A"
+     ]
+    },
+    {
+     "text": "الــكواشى",
+     "readers": [
+      "C"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     696,
+     2404,
+     845,
+     2467
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2400,
+     1729,
+     2481
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r055",
+   "block": 26,
+   "tok_from": 220,
+   "tok_to": 221,
+   "candidates": [
+    {
+     "text": "ترك",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "ترلع",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     421,
+     2400,
+     483,
+     2481
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2400,
+     1729,
+     2481
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r056",
+   "block": 26,
+   "tok_from": 229,
+   "tok_to": 233,
+   "candidates": [
+    {
+     "text": "الله تعالى قال على",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "اله تغالىقالعلى كرماللهوجبه",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1016,
+     2478,
+     1071,
+     2558
+    ],
+    [
+     848,
+     2496,
+     1007,
+     2545
+    ],
+    [
+     649,
+     2482,
+     850,
+     2549
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2478,
+     1730,
+     2558
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r057",
+   "block": 26,
+   "tok_from": 233,
+   "tok_to": 236,
+   "candidates": [
+    {
+     "text": "كرم الله وجهه",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "اله تغالىقالعلى كرماللهوجبه",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1016,
+     2478,
+     1071,
+     2558
+    ],
+    [
+     848,
+     2496,
+     1007,
+     2545
+    ],
+    [
+     649,
+     2482,
+     850,
+     2549
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2478,
+     1730,
+     2558
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r058",
+   "block": 26,
+   "tok_from": 237,
+   "tok_to": 238,
+   "candidates": [
+    {
+     "text": "يحثى",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "يعنى",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "مث",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     546,
+     2478,
+     581,
+     2558
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2478,
+     1730,
+     2558
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r059",
+   "block": 26,
+   "tok_from": 239,
+   "tok_to": 240,
+   "candidates": [
+    {
+     "text": "لهم",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "للم",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1686,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r060",
+   "block": 27,
+   "tok_from": 241,
+   "tok_to": 242,
+   "candidates": [
+    {
+     "text": "(٧)",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "()",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1478,
+     2578,
+     1538,
+     2637
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r061",
+   "block": 27,
+   "tok_from": 246,
+   "tok_to": 247,
+   "candidates": [
+    {
+     "text": "ظلمها",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "ظامها",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1081,
+     2576,
+     1155,
+     2632
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r062",
+   "block": 28,
+   "tok_from": 247,
+   "tok_to": 249,
+   "candidates": [
+    {
+     "text": "(٨) تجاوز",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "(م) مجاوز",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     939,
+     2576,
+     996,
+     2634
+    ],
+    [
+     836,
+     2577,
+     925,
+     2623
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r063",
+   "block": 28,
+   "tok_from": 250,
+   "tok_to": 251,
+   "candidates": [
+    {
+     "text": "ظالمه",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "ظاله",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     690,
+     2572,
+     755,
+     2610
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r064",
+   "block": 29,
+   "tok_from": 251,
+   "tok_to": 254,
+   "candidates": [
+    {
+     "text": "(٩) اطلبوا المعونة",
+     "readers": [
+      "B",
+      "C"
+     ]
+    },
+    {
+     "text": "() اطابوا العونة",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     543,
+     2571,
+     603,
+     2632
+    ],
+    [
+     420,
+     2571,
+     513,
+     2623
+    ],
+    [
+     1636,
+     2648,
+     1725,
+     2726
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ],
+    [
+     1231,
+     2648,
+     1725,
+     2726
+    ]
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p030-r065",
+   "block": 29,
+   "tok_from": 255,
+   "tok_to": 259,
+   "candidates": [
+    {
+     "text": "أمركم و نجاح مقصدكم",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "أمركم ونجاح مقصدكم",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "أمرك ونجاح مقصدم",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "word_boxes": [
+    [
+     1500,
+     2648,
+     1568,
+     2726
+    ],
+    [
+     1384,
+     2648,
+     1476,
+     2726
+    ],
+    [
+     1266,
+     2648,
+     1364,
+     2726
+    ]
+   ],
+   "line_boxes": [
+    [
+     1231,
+     2648,
+     1725,
+     2726
+    ]
+   ],
+   "decision": null
+  }
+ ],
+ "spotcheck": [
+  {
+   "id": "riyad1956-p030-s000",
+   "tok": 22,
+   "text": "لابنِ",
+   "word_boxes": [
+    [
+     1377,
+     607,
+     1456,
+     682
+    ]
+   ],
+   "line_boxes": [
+    [
+     430,
+     570,
+     1743,
+     689
+    ]
+   ],
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p030-s001",
+   "tok": 120,
+   "text": "وَبَشِّرِ",
+   "word_boxes": [
+    [
+     1271,
+     1647,
+     1373,
+     1734
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1627,
+     1733,
+     1740
+    ]
+   ],
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p030-s002",
+   "tok": 144,
+   "text": "لَمِنْ",
+   "word_boxes": [
+    [
+     423,
+     1750,
+     483,
+     1837
+    ]
+   ],
+   "line_boxes": [
+    [
+     423,
+     1741,
+     1733,
+     1881
+    ]
+   ],
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p030-s003",
+   "tok": 208,
+   "text": "به",
+   "word_boxes": [
+    [
+     1391,
+     2429,
+     1413,
+     2472
+    ]
+   ],
+   "line_boxes": [
+    [
+     421,
+     2400,
+     1729,
+     2481
+    ]
+   ],
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p030-s004",
+   "tok": 244,
+   "text": "لنفسه",
+   "word_boxes": [
+    [
+     1235,
+     2578,
+     1314,
+     2614
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p030-s005",
+   "tok": 245,
+   "text": "بعد",
+   "word_boxes": [
+    [
+     1170,
+     2589,
+     1217,
+     2629
+    ]
+   ],
+   "line_boxes": [
+    [
+     420,
+     2567,
+     1729,
+     2662
+    ]
+   ],
+   "verdict": null,
+   "fix": null
+  }
+ ],
+ "structure_reviewed": false
+}

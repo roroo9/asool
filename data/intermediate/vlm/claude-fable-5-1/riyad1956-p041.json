@@ -1,0 +1,302 @@
+{
+ "page_id": "riyad1956-p041",
+ "printed": 41,
+ "model": "claude-fable-5-1",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 5893
+ },
+ "page_number_printed": "٤١",
+ "running_header": "— ٤١ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٤١ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وانطلقَ رسول الله صلى الله عليه وسلم . قال يقولُ أبوطلحة : إنكَ لتعلمُ ياربِّ أنهُ يعجبنى أنْ أخرجَ مع رسول الله صلى الله عليه وسلم إذا خرج وأدخل (١) معه إذا دخل وقد احتبستُ بما ترى تقولُ أمُّ سليم . ياأبا طلحة ما أجدُ الذى كنتُ (٢) أجدُ الطَّلْقَ ، فانطلقنا وضربها المخاضُ حين قدما (٣) فولدتْ غلاماً . فقالت لى أمى : يا أنسَ لا يرضعهُ أحدٌ حتى تغدوَ (٤) به على رسول الله صلى الله عليه وسلم ، فلمَّا أصبح احتملتهُ فانطلقتُ به إلى رسول الله صلى الله عليه وسلم »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": [
+    "tashkeel partially faint; some vowel marks may be missed"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وذكر تمام الحديث .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه أنّ رسول الله صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« ليسَ الشديدُ بالصرعةِ ، إنما الشديدُ الذى يملكُ نفسهُ عندَ الغضب »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« والصرعةُ » بضم الصاد وفتح الراء وأصله عند العرب منْ يصرعُ الناسَ كثيراً .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.93,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن سُليمانَ بن صرد رضى الله عنه قال : كُنتُ جالساً مع النبىِّ صلى الله عليه وسلم ورجلانِ (٥) يستبان ، وأحدهما قدِ احمرَّ وجهه ، وانتفختْ أوداجهُ (٦) . فقال رسول الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [
+    "(٥)",
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنى لأعلمُ كلمةً لو قالها لذهبَ عنهُ مايجدُ (٧) ، لو قال . أعوذُ بالله منَ الشيطانِ الرَّجيمِ (٨) ذهبَ عنهُ مايجدُ »",
+   "footnote_markers_in_text": [
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": ". فقالوا لهُ :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.93,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) المدينة .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) من ألم الوضع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) أم سليم وأبو طلحة يدخلان المدينة مع المصطفى صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": [
+    "footnotes flow across two loosely aligned columns; wrap of (٣) to next line start inferred"
+   ]
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) تعرضه فى الصباح رجاء تكثير بنيه الصالحين الأتقياء الفالحين :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "small type slightly blurred; 'تعرضه' reading somewhat uncertain"
+   ]
+  },
+  {
+   "order": 15,
+   "type": "poetry",
+   "author_role": "editor",
+   "column": 0,
+   "text": "نعم الإله على العباد كثيرة * وأحلاهن نجابة الأولاد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": [
+    "verse belongs to footnote (٤); word 'وأحلاهن' slightly smudged"
+   ]
+  },
+  {
+   "order": 16,
+   "type": "editor_commentary",
+   "author_role": "editor",
+   "column": 0,
+   "text": "ما نأخذه من هذا الحديث جواز الأخذ بالشدة وترك الرخصة والتسلية عن المصائب . والسيدة أم سليم تشهد الحرب وتداوى الجرحى واجتهادها فى عمل مصالح زوجها والترفيه عنه وتحمل المشاق فى سبيل راحته ، ومشروعية المعاريض بلا إبطال حق مسلم ، وإجابة دعوة رسول الله صلى الله عليه وسلم بلغها الله مناها وأصلح لها ذريتها ، وقوة ثبات قلب أم سليم تتحلى بالصبر وتتوج بالتسليم لأمر الله تعالى ، ومن ترك شيئا لله عوضه الله خيرا منه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": [
+    "small type; punctuation after 'مسلم' ambiguous (comma/period)"
+   ]
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) يسب كل منهما صاحبه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": [
+    "printed on same line as end of commentary"
+   ]
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) عروق عنقه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) شدة الغضب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) أعتصم بالله من المبعد من رحمة الله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnotes (١)-(٤) are set in a loose two-column arrangement with text wrapping between columns; treated as full-width flow",
+  "Footnotes (٥)-(٧) share the final line of the editor's commentary",
+  "Scan slightly faded; some tashkeel may be missed"
+ ]
+}

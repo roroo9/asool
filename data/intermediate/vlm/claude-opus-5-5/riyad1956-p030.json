@@ -1,0 +1,435 @@
+{
+ "page_id": "riyad1956-p030",
+ "printed": 30,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 5749
+ },
+ "page_number_printed": "٣٠",
+ "running_header": "— ٣٠ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٠ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن ابن عباس وأنس بن مالك رضى الله عنهم أنّ رسول الله صلى الله عليه وسلم قال:",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "«لوْ أنّ لابنِ آدم وادياً منْ ذهب أحبّ أنْ يكونَ له واديان ، ولنْ يملأَ فاه إلا التراب ويتوب اللهُ على منْ تابَ»",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "tashkeel partially uncertain"
+   ]
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه أنّ رسول الله صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« يضحكُ(١) اللهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمّ يتوب الله على القاتل فيسلم فيستشهد »",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "tashkeel partially uncertain"
+   ]
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "text": "باب الصبر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "heading letters stretched with kashida"
+   ]
+  },
+  {
+   "order": 9,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال الله تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ يَاأَيُّهَا ٱلَّذِينَ آمَنُوا ٱصْبِرُوا (٢) وَصَابِرُوا (٣) وَرَابِطُوا (٤) ﴾",
+   "footnote_markers_in_text": [
+    "(٢)",
+    "(٣)",
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "tashkeel partially uncertain"
+   ]
+  },
+  {
+   "order": 11,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ وَلَنَبْلُوَنَّكُمْ (٥) بِشَىْءٍ مِنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِنَ ٱلْأَمْوَالِ وَٱلْأَنْفُسِ وَٱلثَّمَرَاتِ وَبَشِّرِ ٱلصَّابِرِينَ ﴾",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "tashkeel partially uncertain"
+   ]
+  },
+  {
+   "order": 13,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦) ﴾",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ وَلَمَنْ (٧) صَبَرَ وَغَفَرَ (٨) إِنَّ ذَٰلِكَ لَمِنْ عَزْمِ ٱلْأُمُورِ ﴾",
+   "footnote_markers_in_text": [
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ ٱلصَّابِرِينَ ﴾",
+   "footnote_markers_in_text": [
+    "(٩)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 21,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "والآيات فى الأمر بالصبرِ و بيانِ فضلهِ كثيرةٌ معروفة .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 22,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) يرضى بفعلهما",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 23,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) احبسوا النفس على طاعة الله وتحملوا المصائب وتباعدوا عن المعاصى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 24,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) غالبوا الكفار",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 25,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) أقيموا على الجهاد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 26,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) أى لنختبرنكم على الطاعات وما يبتلون به",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 27,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) بغير مكيال أو وزن . قال الكواشى كل صابر على ترك أهل ووطن وعلى كل مكروه يعرض له لأجل الله تعالى قال على كرم الله وجهه فانه يحثى الثواب لهم حثيا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.8,
+   "issues": [
+    "dense small type; words run together"
+   ]
+  },
+  {
+   "order": 28,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) لم ينتصر لنفسه بعد ظلمها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 29,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) تجاوز عن ظالمه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 30,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) اطلبوا المعونة على أمركم و نجاح مقصدكم .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "footnotes run inline across full-width lines rather than distinct columns",
+  "Quranic tashkeel transcribed with best effort; alif wasla forms approximated"
+ ]
+}

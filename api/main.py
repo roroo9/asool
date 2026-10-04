@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from api import gold_review
 from api.settings import settings
 
 app = FastAPI(
@@ -24,3 +25,6 @@ app.add_middleware(
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok", "service": "asool-api", "version": app.version}
+
+
+app.include_router(gold_review.router)

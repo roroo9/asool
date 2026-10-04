@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     db_path: str = str(ROOT / "data" / "asool.db")
     daily_budget_usd: float = 3.0
     answer_rate_limit_per_hour: int = 20
+    review_token: str = ""
 
     @property
     def cors_origins_list(self) -> list[str]:

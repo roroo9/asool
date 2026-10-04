@@ -1,0 +1,304 @@
+{
+ "page_id": "riyad1956-p018",
+ "printed": 18,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 3191
+ },
+ "page_number_printed": "١٨",
+ "running_header": "— ١٨ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٨ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "text": "باب التـــــوبة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "first letter of باب faintly printed"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال العلماء : التوبةُ(١) واجبةٌ مِنْ كلِّ ذنبٍ فإن كانتِ المعصيةُ بينَ العبدِ وبين اللهِ تعالى لا تتعلقُ بحقِّ آدميٍّ فلها ثلاثةُ شروطٍ : أحدُها أن يُقلع(٢) عن المعصيةِ والثانى أن يندمَ على فعلها ، والثالثُ أن يعزمَ أن لا يعودَ إليها أبداً ، فإن فُقدَ أحدُ الثلاثةِ لم تصحَّ توبتهُ وإنْ كانتِ المعصيةُ تتعلقُ بآدميٍّ فشروطها أربعةٌ هذهِ الثلاثةُ وأنْ يبرأَ من حقِّ صاحبها(٣) . فإن كانتْ مالًا أو نحوهُ ردهُ إليهِ ، وإنْ كان حدَّ قذفٍ ونحوهُ مكنهُ منه أوْ طلبَ عفوهُ ، وإنْ كان غِيبة استحلهُ منها . ويجبُ أن يتوبَ من جميعِ الذنوبِ ، فإن تابَ من بعضها صحت توبتهُ عند أهلِ الحقِّ من ذلك الذنب وبقىَ عليه الباقى . وقد تظاهرتْ دلائلُ الكتاب ، والسنةِ وإجماعِ الأمةِ على وجوبِ التوبةِ .",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.8,
+   "issues": [
+    "some diacritics uncertain"
+   ]
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال الله تعالى :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ وتُوبُوا إلى اللهِ جميعاً أيُّهَ الْمُؤمِنُونَ لَعَلَّكُمْ تُفْلِحُونَ(٤) ﴾",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.8,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ اُسْتَغْفِرُوا رَبَّكُمْ ثُمَّ تُوبُوا إِلَيْهِ ﴾",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.8,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ يَا أَيُّهَا اُلَّذِينَ آمَنُوا تُوبُوا إِلَى اُللهِ تَوْبَةً نَصُوحاً ﴾(٥) .",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.8,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه قال : سمعتُ رسول الله صلى الله عليه وسلم يقولُ",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« واللهِ إنى لأستغفرُ اللهَ وأتوبُ إليهِ(٦) فى اليومِ أكثرَ من سبعينَ مرَّةً »",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه البخارى .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن الأغَرِّ بن يسار المزنىِّ رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« يأيُّها الناسُ تُوبُوا إلى اللهِ واستغفِرُوهُ فإنى أتوبُ فى اليوْم مائةَ مرةٍ »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه مسلم .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) القرب إلى الله بالطاعة والرجوع إليه بتجديد نية العمل الصالح",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) يكف",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) من استيفاء الحق منه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) تنجون",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) يتوب من الذنب لا يرجع إليه ولا يعود أبدا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 21,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) أطلب منه مغفرته وإحسانه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "footnotes (٢)–(٦) run inline across lines rather than in columns"
+ ]
+}
