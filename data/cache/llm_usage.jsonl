@@ -25,3 +25,4 @@
 {"ts": 1791090933.8689249, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 7943, "cached": false, "seconds": 25.16}
 {"ts": 1791090962.5359738, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 11756, "cached": false, "seconds": 36.7}
 {"ts": 1791090978.079395, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 10518, "cached": false, "seconds": 44.13}
+{"ts": 1791090995.6729758, "stage": "vlm_parse/gemini-3.5-flash", "model": "gemini-3.5-flash", "input_tokens": 2032, "output_tokens": 10141, "cached": false, "seconds": 33.05}

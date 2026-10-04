@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     gemini_api_key: str = ""
     anthropic_api_key: str = ""
     cohere_api_key: str = ""
+    mistral_api_key: str = ""
 
     cors_origins: str = "http://localhost:3000"
     db_path: str = str(ROOT / "data" / "asool.db")
