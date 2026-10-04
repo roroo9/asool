@@ -22,18 +22,28 @@ export function SourceThread({ from, to }: { from: HTMLElement | null; to: () =>
       const target = to();
       if (target) {
         const a = from.getBoundingClientRect();
-        const b = target.getBoundingClientRect();
-        const visible = b.width > 0 && b.bottom > 0 && b.top < window.innerHeight;
+        const raw = target.getBoundingClientRect();
+        // Clip the highlighted region to the visible part of the page pane.
+        const pane = target.closest("[data-pageviewer]")?.getBoundingClientRect();
+        const b = pane
+          ? {
+              left: Math.max(raw.left, pane.left),
+              right: Math.min(raw.right, pane.right),
+              top: Math.max(raw.top, pane.top),
+              bottom: Math.min(raw.bottom, pane.bottom),
+            }
+          : raw;
+        const visible = b.right > b.left && b.bottom > b.top && b.bottom > 0 && b.top < window.innerHeight;
         if (visible) {
           const rtl = document.documentElement.dir === "rtl";
           // start at the chip's inner edge (towards the page pane), end at the region's edge
           const x1 = rtl ? a.left : a.right;
           const y1 = a.top + a.height / 2;
           const x2 = rtl ? b.right : b.left;
-          const y2 = Math.min(Math.max(y1, b.top + 6), b.bottom - 6);
+          const y2 = (b.top + b.bottom) / 2;
           const mx = (x1 + x2) / 2;
           setD(`M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`);
-          setLen(Math.hypot(x2 - x1, y2 - y1) * 1.3);
+          setLen(Math.hypot(x2 - x1, y2 - y1) * 1.3 + 40);
         } else {
           setD(null);
         }

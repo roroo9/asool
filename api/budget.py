@@ -53,9 +53,34 @@ def today_start() -> float:
     return datetime(now.year, now.month, now.day, tzinfo=UTC).timestamp()
 
 
+_remote: dict = {"ts": 0.0, "usage": None}
+
+
+def _openrouter_usage() -> float | None:
+    """Authoritative total spend from OpenRouter (survives server restarts and redeploys,
+    unlike the local log on an ephemeral disk). Cached for 60 s; None if unreachable."""
+    import httpx
+
+    if time.time() - _remote["ts"] < 60:
+        return _remote["usage"]
+    try:
+        r = httpx.get(
+            "https://openrouter.ai/api/v1/key",
+            timeout=5,
+            headers={"Authorization": f"Bearer {settings.openrouter_api_key}"},
+        )
+        _remote["usage"] = float(r.json()["data"]["usage"]) if r.status_code == 200 else None
+    except Exception:
+        _remote["usage"] = None
+    _remote["ts"] = time.time()
+    return _remote["usage"]
+
+
 def status() -> dict:
     today = spend(today_start(), serving_only=True)  # the daily cap is for live answering
-    total = spend(0.0) + settings.openrouter_spend_offset_usd
+    local_total = spend(0.0) + settings.openrouter_spend_offset_usd
+    remote = _openrouter_usage() if settings.openrouter_api_key else None
+    total = max(local_total, remote) if remote is not None else local_total
     budget = settings.openrouter_budget_usd
     return {
         "today_usd": round(today, 4),
@@ -65,6 +90,7 @@ def status() -> dict:
         "used_pct": round(100 * total / budget, 1) if budget else None,
         "warning": total >= 0.8 * budget,
         "hard_stop": total >= settings.hard_budget_usd,
+        "source": "openrouter" if remote is not None else "local log",
     }
 
 

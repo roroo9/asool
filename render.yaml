@@ -1,0 +1,24 @@
+# Render Blueprint: the Asool API (FastAPI). Render: New + -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: asool-api
+    runtime: python
+    plan: free            # switch to "starter" for always-on during judging (Oct 7-22)
+    region: frankfurt
+    buildCommand: pip install uv && uv sync --frozen --no-dev && ./scripts/fetch_references.sh
+    startCommand: uv run --no-dev uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: OPENROUTER_API_KEY
+        sync: false        # paste in the Render dashboard; never committed
+      - key: REVIEW_TOKEN
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false        # e.g. https://asool.vercel.app
+      - key: DAILY_BUDGET_USD
+        value: "3"
+      - key: ANSWER_RATE_LIMIT_PER_HOUR
+        value: "20"

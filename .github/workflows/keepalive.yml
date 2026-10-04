@@ -1,0 +1,12 @@
+# Keeps the free Render instance warm during judging (pings /health every 10 minutes).
+name: keep-alive
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping API
+        run: curl -fsS --max-time 60 "${{ vars.ASOOL_API_URL }}/health" || echo "API not reachable"

@@ -88,7 +88,7 @@ export const PageViewer = forwardRef<PageViewerHandle, Props>(function PageViewe
     focusBlocks: () => {
       // zoom onto the highlight anchor (rendered for the current highlight)
       requestAnimationFrame(() => {
-        if (hlRef.current) tf.current?.zoomToElement(hlRef.current, 1.8, 450);
+        if (hlRef.current) tf.current?.zoomToElement(hlRef.current, 1.35, 450);
       });
     },
     reset: () => tf.current?.resetTransform(300),
@@ -119,7 +119,7 @@ export const PageViewer = forwardRef<PageViewerHandle, Props>(function PageViewe
     : [];
 
   return (
-    <div className={`relative overflow-hidden rounded-lg border border-line bg-white ${className}`}>
+    <div data-pageviewer className={`relative overflow-hidden rounded-lg border border-line bg-white ${className}`}>
       <TransformWrapper ref={tf} minScale={1} maxScale={5} limitToBounds centerOnInit wheel={{ step: 0.15 }} doubleClick={{ mode: "zoomIn" }}>
         <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }} contentStyle={{ width: "100%" }}>
           <div className="relative w-full" style={{ aspectRatio: `${W} / ${H}` }}>

@@ -1,0 +1,5 @@
+# Explicit list for `vercel deploy` from this folder. Page images in public/pages ARE
+# deployed (served only from the deployment; they are not in the public git repo).
+node_modules
+.next
+.env*

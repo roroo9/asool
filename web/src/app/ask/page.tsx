@@ -74,7 +74,7 @@ function Ask() {
   }, [q]);
 
   /** Show a passage (and optionally the block holding a quote) on the original page. */
-  const show = useCallback(async (p: Passage, quote?: string, el?: HTMLElement | null) => {
+  const show = useCallback(async (p: Passage, quote?: string, el?: HTMLElement | null, openSheet = false) => {
     const blocks = p.blocks ?? [];
     const target = quote ? blocksForQuote(blocks, quote) : blocks.map((b) => b.id);
     const pageId = (target.length ? blocks.find((b) => b.id === target[0])?.page_id : null) ?? p.pages[0]?.id;
@@ -83,7 +83,7 @@ function Ask() {
     setPage(pg);
     setHl(target.length ? target : blocks.filter((b) => b.page_id === pageId).map((b) => b.id));
     setThreadFrom(el ?? null);
-    if (window.matchMedia("(max-width: 1023px)").matches) setSheet(true);
+    if (openSheet && window.matchMedia("(max-width: 1023px)").matches) setSheet(true);
     setTimeout(() => viewer.current?.focusBlocks([]), 30);
   }, []);
 
@@ -111,7 +111,7 @@ function Ask() {
     return {
       onMouseEnter: (e: React.MouseEvent<HTMLElement>) => p && show(p, pt.quote, e.currentTarget),
       onFocus: (e: React.FocusEvent<HTMLElement>) => p && show(p, pt.quote, e.currentTarget),
-      onClick: (e: React.MouseEvent<HTMLElement>) => p && show(p, pt.quote, e.currentTarget),
+      onClick: (e: React.MouseEvent<HTMLElement>) => p && show(p, pt.quote, e.currentTarget, true),
       onMouseLeave: () => setThreadFrom(null),
       onBlur: () => setThreadFrom(null),
     };
@@ -272,7 +272,7 @@ function Ask() {
                 </h2>
                 <div className="grid gap-3">
                   {data.passages.map((p, i) => (
-                    <PassageCard key={p.id} p={p} tag={`P${i + 1}`} onShow={() => show(p)} />
+                    <PassageCard key={p.id} p={p} tag={`P${i + 1}`} onShow={() => show(p, undefined, null, true)} />
                   ))}
                 </div>
               </section>

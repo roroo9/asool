@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 };
 
 // Applies the saved theme and language before first paint (no flash).
-const bootScript = `try{var t=localStorage.getItem('asool.theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;var l=localStorage.getItem('asool.lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dir='ltr'}}catch(e){}`;
+const bootScript = `try{var u=new URLSearchParams(location.search).get('theme');var t=u||localStorage.getItem('asool.theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;var l=localStorage.getItem('asool.lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dir='ltr'}}catch(e){}`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
