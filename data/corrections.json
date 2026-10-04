@@ -1,0 +1,6 @@
+{
+  "note": "Human corrections of page-parser output, applied at ingestion. The original model output stays in data/intermediate and in data/eval/known_extraction_errors.json.",
+  "corrections": [
+    {"page": 39, "type": "footnote", "marker": "٧", "text": "(٧) الأذى فى تبعات ذنبه", "parser_text": "(٧) الأجر فى مقابلة البلاء", "by": "owner (rawan), checked against the page image", "at": "2026-10-05"}
+  ]
+}

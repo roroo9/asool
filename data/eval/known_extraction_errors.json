@@ -1,9 +1,12 @@
 {
-  "purpose": "Real page-parser errors caught automatically by the completeness check (Oct 4). Kept for the video and the Proof page.",
+  "purpose": "Real page-parser errors caught automatically by the completeness check. Kept for the video and the Proof page.",
   "parser": "openrouter:google/gemini-3.1-pro-preview, prompt page_parse.v2",
   "errors": [
-    {"page": 15, "block": "footnote (١)", "parser_text": "لا يثيبكم على المظاهر", "printed_text_proposed": "لا يثيبكم على الظاهر", "kind": "one inserted letter (م)", "caught_by": "completeness check (uncovered OCR line)", "owner_confirmation": "pending"},
-    {"page": 39, "block": "footnote (٧)", "parser_text": "الأجر فى مقابلة البلاء", "printed_text_proposed": "الأذى فى تبعات ذنبه", "kind": "wrong text for a footnote (plausible but not printed)", "caught_by": "completeness check (uncovered OCR line)", "owner_confirmation": "pending"}
+    {"page": 39, "block": "footnote (٧)", "parser_text": "الأجر فى مقابلة البلاء", "printed_text": "الأذى فى تبعات ذنبه", "kind": "plausible but not printed: the model wrote a footnote that is not on the page", "caught_by": "completeness check (uncovered OCR line)", "owner_confirmation": "confirmed against the page image (rawan, 2026-10-05)", "corrected_in_index": true}
   ],
-  "false_flags_resolved": ["page 30", "page 36"]
+  "false_flags_resolved": [
+    {"page": 15, "why": "Tesseract misread «المظاهر» as «الظاهر» and garbled «(١) لا يثيبكم»; the garbled OCR line failed the coverage match. Gemini's reading «لا يثيبكم على المظاهر» is correct (confirmed by rawan). The assistant's proposed correction «الظاهر» came from the Tesseract reading and was wrong; it was not applied."},
+    {"page": 30, "why": "multi-column footnote line; text present"},
+    {"page": 36, "why": "OCR noise line; text present"}
+  ]
 }

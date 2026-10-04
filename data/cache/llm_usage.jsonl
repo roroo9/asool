@@ -153,3 +153,4 @@
 {"ts": 1791133029.762393, "stage": "answer", "provider": "openrouter", "model": "openrouter:google/gemini-3.1-pro-preview", "input_tokens": 2809, "output_tokens": 1375, "cost_usd": 0.022118, "cached": false, "seconds": 11.24}
 {"ts": 1791133029.808667, "stage": "classify", "provider": "openrouter", "model": "openrouter:google/gemini-3.8-flash", "input_tokens": 723, "output_tokens": 119, "cost_usd": 0.0, "cached": true, "seconds": 0.0}
 {"ts": 1791133029.8142478, "stage": "answer", "provider": "openrouter", "model": "openrouter:google/gemini-3.1-pro-preview", "input_tokens": 2476, "output_tokens": 703, "cost_usd": 0.0, "cached": true, "seconds": 0.0}
+{"ts": 1791153912.15937, "stage": "embed/chunks", "provider": "openrouter", "model": "openrouter:google/gemini-embedding-2", "input_tokens": 296, "output_tokens": 0, "cost_usd": 6.5e-05, "cached": false, "seconds": 0.0}

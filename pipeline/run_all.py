@@ -68,6 +68,27 @@ CREATE TABLE meta(key PRIMARY KEY, value);
 """
 
 
+def _apply_corrections(printed: int, blocks: list[dict]) -> None:
+    """Human corrections (data/corrections.json) replace the parser's text for a block; the
+    original stays in the intermediate files and the block is marked as human-corrected."""
+    f = DATA / "corrections.json"
+    if not f.exists():
+        return
+    from pipeline.normalize import normalize_marker
+
+    for c in json.loads(f.read_text())["corrections"]:
+        if c["page"] != printed:
+            continue
+        for b in blocks:
+            if b["type"] == c["type"] and normalize_marker(b.get("footnote_marker") or "") == (
+                normalize_marker(c["marker"])
+            ):
+                b["parser_text"] = b["text"]
+                b["text"] = c["text"]
+                b["confidence"] = 1.0
+                b["human_corrected"] = c["by"]
+
+
 def _arabic_ratio(t: str) -> float:
     letters = [c for c in t if c.isalpha()]
     return len(AR.findall(t)) / len(letters) if letters else 1.0
@@ -91,6 +112,7 @@ def build(embed: bool = True) -> None:
         for b in blocks:
             b["id"] = f"{pid}-b{b['order']:02d}"
             b["page_id"] = pid
+        _apply_corrections(p, blocks)
         boxes = locate(p, blocks)
         blocks = fuse_two_lanes(blocks, ocr, boxes)
         blocks = footnotes.split_merged_footnotes(blocks)

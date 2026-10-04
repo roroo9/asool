@@ -1,4 +1,22 @@
 {
-  "riyad1956-p030|PAGE": {"by": "owner (rawan)", "note": "false flag: text present (multi-column footnote line)", "at": "2026-10-04"},
-  "riyad1956-p036|PAGE": {"by": "owner (rawan)", "note": "false flag: text present", "at": "2026-10-04"}
+ "riyad1956-p030|PAGE": {
+  "by": "owner (rawan)",
+  "note": "false flag: text present (multi-column footnote line)",
+  "at": "2026-10-04"
+ },
+ "riyad1956-p036|PAGE": {
+  "by": "owner (rawan)",
+  "note": "false flag: text present",
+  "at": "2026-10-04"
+ },
+ "riyad1956-p015|PAGE": {
+  "by": "owner (rawan)",
+  "note": "false flag: Gemini reading «المظاهر» is correct; Tesseract misread",
+  "at": "2026-10-05"
+ },
+ "riyad1956-p039|PAGE": {
+  "by": "owner (rawan)",
+  "note": "real error in footnote (٧); corrected via data/corrections.json",
+  "at": "2026-10-05"
+ }
 }
