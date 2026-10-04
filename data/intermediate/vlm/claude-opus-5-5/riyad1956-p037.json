@@ -1,0 +1,280 @@
+{
+ "page_id": "riyad1956-p037",
+ "printed": 37,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 4031
+ },
+ "page_number_printed": "٣٧",
+ "running_header": "— ٣٧ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٧ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى عبدالرحمن عبدالله بن مسعود رضى الله عنه قال : كأنِّى أنظرُ إلى رسولِ الله صلى الله عليه وسلم يحكِى نبيًّا من الأنبياء صلواتُ اللهِ وسلامهُ عليهِمْ ضربَهُ قومهُ فأدموْه وهوَ يمسحُ(١) الدَّمَ عن وجْهِهِ وهوَ يقولُ :",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "some tashkeel uncertain"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« اللهُمَّ اغفرْ لِقَوْمى فإنهم لايعلَمونَ »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى سعيد وأبى هريرة رضى الله عنهما عن النبى صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.93,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« مايصيبُ المسلِمَ من نصبٍ (٢) ولا وصبٍ ولا همٍّ ولا حزنٍ ولا أذًى ولا غمٍّ حتى الشوْكَة يشاكُها إلَّا كَفَّرَ الله بها منْ خَطاياهُ »",
+   "footnote_markers_in_text": [
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "some tashkeel uncertain"
+   ]
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه . و « الوصَبُ »: المرضُ .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن ابن مسعود رضى الله عنه قال : دخلتُ على النبى صلى الله عليه وسلموهو يوعكُ فقلتُ : يارسول الله إنكَ توعَكُ(٣) وعْكاً شديداً قال",
+   "footnote_markers_in_text": [
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": [
+    "'وسلموهو' printed without space"
+   ]
+  },
+  {
+   "order": 9,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« أجلْ إنِّى أوعَكُ كما يوعكُ رجلانِ منكُمْ »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قلتُ . ذلك أنَّ لك أجريْنِ ؟ قال",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« أجلْ ذلك كذلك مامنْ مسلمٍ يصيبهُ أذًى شوْكَةٌ فما فوْقها إلَّا كَفَّرَ الله بها سيئاتهِ ، وحُطتْ عنهُ ذنُوبه كما تحطُّ الشجرَةُ ورقها »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "some tashkeel uncertain"
+   ]
+  },
+  {
+   "order": 12,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه و « الوعْكُ » مغْثُ الحمى ، وقيل : الحمَّى .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى هريرة رضى الله عنه قال : قال رسولُ الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.93,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« منْ يردُ اللهُ بِهِ خَيْراً يُصِبْ(٤) منهُ »",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.87,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه البخارى. وضبطوا« يصِب » : بفتحِ الصاد وكسرها .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) يزيله، فقد شج رأسه وكسرت رباعيته وقد قابل صلى الله عليه وسلم جهلهم بفضله فدعا لهم بالغفران واعتذر عن فعلهم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "small type"
+   ]
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) تعب ووجع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) تمرض",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) يوجه اليه مصيبة فى ماله أو بدنه أو محبوبه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

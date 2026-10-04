@@ -1,0 +1,243 @@
+{
+ "page_id": "riyad1956-p014",
+ "printed": 14,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 4388
+ },
+ "page_number_printed": "١٤",
+ "running_header": "— ١٤ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٤ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فى المسجدِ فجئتُ فأخذتُها فأتيته بهـا . فقال : واللهِ ما إياكَ أردتُ ، فخاصمتُه إلى رسول الله صلى الله عليه وسلم فقال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« لكَ ما نويتَ (١) يا يزيدُ ، ولكَ ما أخذتَ (٢) يا معنُ »",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه البخارى .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى إسحاق سعد بن أبى وقاصٍ مالك بن أُهيب بن عبد مناف بن زُهرة ابن كِلاب بن مرةَ بن كعب بن لؤيِّ القرشىِّ الزهرىِّ رضى الله عنه ، أَحد العشرة المشهود لهم بالجنة ، رضى الله عنهم . قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "some tashkeel uncertain"
+   ]
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« جاءنى رسول الله صلى الله عليه وسلم يعودُنى عام حجّة الوداع من وجعٍ اشتدَّ بى فقلتُ : يا رسولَ الله إنى قد بلغَ بى من الوجع ما ترى وأنا ذُو مالٍ ولا يرثنى إلا ابنةٌ لى أفأتصدّقُ بثلثَى مالى ؟ قالَ : لا ، قلتُ : فالشطرُ (٣) يا رسولَ الله ؟ فقـالَ : لا ، قلتُ : فالثلثُ يا رسولَ الله؟ قال : الثلثُ والثلثُ كثيرٌ ــ أو كبيرٌ ــ إنك أن تذرَ (٤) ورثتكَ أغنياءَ خيرٌ من أن تذرهمْ عالةً (٥) يتكففونَ الناس ، وإنك لنْ تنفق نفقةً تبتغى بها وجهَ الله إلا أجرتَ عليهـا حتى ما تجعلُ فى فىّ امرأتكَ قال فقلتُ : يا رسولَ الله أُخلفُ (٦) بعدَ أصحابى ؟ قال : إنك لن تخلفَ (٧) فتعمل عملاً تبتغى به وجهَ الله إلا ازددتَ به درجةً ورفعةً ، ولعلك أن تُخلَّفَ حتى ينتفع بك أقوامٌ ويضرَّ بك آخرونَ . اللهمَّ أمضِ (٨) لأصحابى هجرتَهمْ ولا تردهمْ على أعقابهمْ ، لـكن البائسُ سعدُ بن خولةَ »",
+   "footnote_markers_in_text": [
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.82,
+   "issues": [
+    "tashkeel partially uncertain due to print quality"
+   ]
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "يرثى له (٩) رسولُ الله صلى الله عليه وسلم أن ماتَ بمكة . متفق عليه .",
+   "footnote_markers_in_text": [
+    "(٩)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) ثوابه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) قبضتها قبضا صحيحا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) النصف",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) تترك",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) فقراء يسألون ما فى أكف النـاس",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) أى أأخلف فى مكة بعد انصراف أصحابى معك",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "'أأخلف' printed with a gap between the two alifs"
+   ]
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) أى بأن يطول عمرك",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) بارك فى دينهم ودنياهم واقبل وأتمم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) يترحم له رسول الله صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.93,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "footnotes run inline across full-width lines rather than in distinct columns"
+ ]
+}

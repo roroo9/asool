@@ -5,8 +5,8 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 ## Time plan (Riyadh time)
 | Phase | Planned window | Status |
 |---|---|---|
-| 0 Setup | Sun Oct 4, 07:00–09:00 | Done, waiting for GATE 0 approval |
-| 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Needs API keys |
+| 0 Setup | Sun Oct 4, 07:00–09:00 | Done, approved |
+| 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Tooling done 08:30. Waiting on gold review of 3 pages + Gemini Pro access |
 | 2 Full ingestion (30 pages) + baseline | Sun 13:00–22:00 | |
 | 3 API | Mon Oct 5, 08:00–14:00 | |
 | 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | |
@@ -14,23 +14,32 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 | 6 Ship | Tue 14:00–18:00 | |
 | Buffer | Tue 18:00–23:59 | |
 
-Human tasks running in parallel: correct the gold set (Sun evening to Mon), verify eval questions (Mon).
+Human tasks in parallel: gold review by rowan (3 bake-off pages now, 12 more pages Sun evening), dorar.net gradings for the corpus hadiths (Mon), verify eval questions (Mon).
 
-## Phase 0: done
-- Repo skeleton, `uv` Python env (Python 3.13), FastAPI `/health`, Next.js 16 app (RTL Arabic, Amiri + IBM Plex Sans Arabic).
-- `pipeline/normalize.py` with unit tests.
-- `.env.example`, `.gitignore` (book PDFs and page images excluded).
-- Book files downloaded. Edition check done.
+## Done
+- Phase 0: repo skeleton, `uv` env, FastAPI, Next.js 16 (RTL Arabic), `normalize.py` + tests, public repo https://github.com/roroo9/asool.
+- Owner amendments A–C recorded in `CLAUDE.md` §12 (editor_commentary, hadith grading rule, Quran reference, official test cases, Shamela, terminology, consensus gold set).
+- Challenge documents read in full (`docs/challenge/`, gitignored). Track 04 success criterion, 12 official test cases, term glossary, judging weights captured in `CLAUDE.md` §12.0.
+- Corpus rendered: printed pages 12–41 at 300 DPI (PNG + WebP), gitignored.
+- Geometry lane: Tesseract 5.5.3 `ara` with word + line boxes on all 30 pages.
+- Quran reference: Quranpedia mushaf 1 (Hafs, King Fahd print), 6236 ayahs. See `data/reference/quran/SOURCE.md`.
+- Shamela book 2348 (تحقيق الفحل) pages 10–90 fetched as a review aid (gitignored).
+- LLM wrapper with disk cache and usage log; page parser prompt `page_parse.v1` with the editor-commentary, two-column footnote and poetry rules.
+- Consensus gold drafting + the Review screen `/review/gold` (disagreements only, line crops, one-key choice, edit, spot-check, structure step, progress bars).
 
 ## Decisions and findings
-- **Edition:** `rs-mohaqaq.pdf` is the 1956 edition. Title page: editor مصطفى محمد عماره, القاهرة, press emblem مطبعة دار إحياء الكتب العربية (عيسى البابي الحلبي). The year 1956 is not printed in the scan; it comes from the archive.org description. `rs.pdf` is دار الريان 1987 and is not used.
-- **Page numbering:** PDF page N (1-based) shows printed page N. No offset.
-- **Corpus:** printed pages 12–41 (30 pages). باب الإخلاص starts p.12, باب التوبة p.18, باب الصبر p.30.
-- **archive.org text layer is unusable.** Both `rs-mohaqaq_text.pdf` and `rs-mohaqaq_djvu.txt` contain Latin junk (0% Arabic characters). archive.org ran OCR without Arabic. Decision: the baseline uses our own Tesseract 5 `ara` run (allowed by spec §5.1: "else Tesseract ara plain text"). The gold draft will come from Tesseract `ara` + a second VLM, then a human corrects it.
-- **Bake-off pages (proposed):** p.41 (many footnotes, including a long commentary footnote), p.30 (start of باب الصبر, many Quran verses), p.20 (dense text).
+- **Edition:** `rs-mohaqaq.pdf` = 1956 (title page: editor مصطفى محمد عماره, القاهرة, emblem مطبعة دار إحياء الكتب العربية – عيسى البابي الحلبي). Year 1956 comes from the archive.org description, not the scan.
+- **Page numbering:** PDF page N = printed page N.
+- **Corpus:** printed pp. 12–41. Bake-off pages: 41 (footnotes + editor commentary), 30 (Quran), 20 (dense). Gold pages (15): 12 14 16 18 20 22 24 26 28 30 33 35 37 39 41.
+- **archive.org text layer is unusable** (0% Arabic). Baseline and Reader A use our own Tesseract `ara`.
+- **dorar.net blocks automated requests** (Cloudflare). Hadith gradings will be entered by a human from dorar.net with the URL.
+- **King Fahd Complex downloads contain no text** (the "AI" package is Adobe Illustrator artwork; the fonts site has fonts only). Quranpedia's King-Fahd-matching Hafs text is used, as the package allows.
+- **Gemini key is on the free tier**: Pro models have a quota of 0; Flash works (3.8 Flash often overloaded).
+- **Anthropic spend so far:** about $1.40, plus about $1.60 for Reader B on 12 pages. Reader C (Fable 5.1) on 12 more pages would exceed the $5 credit.
 
 ## People
 - Gold set reviewer: rowan, team member, native Arabic speaker.
 
 ## Known issues
-- None blocking yet.
+- Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
+- Owner's message with amendments was cut off at item C6 ("Document method, bias controls and…").

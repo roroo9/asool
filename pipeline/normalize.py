@@ -48,6 +48,7 @@ _DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890
 _NON_WORD_RE = re.compile(r"[^\w\s]", re.UNICODE)
 _WS_RE = re.compile(r"\s+")
 _HAMZA_ALONE = "ء"
+_VOCATIVE_RE = re.compile(r"(?<!\S)ياا")
 
 
 def strip_diacritics(text: str) -> str:
@@ -73,6 +74,8 @@ def normalize(text: str, level: str = "search") -> str:
     if level in {"search", "quran"}:
         t = t.replace("_", " ")
         t = _NON_WORD_RE.sub(" ", t)
+        # Old prints join the vocative: يأيها / ياأيها -> يا ايها (after alef unification).
+        t = _VOCATIVE_RE.sub("يا ا", t)
         t = t.replace(_HAMZA_ALONE, "")
     t = _WS_RE.sub(" ", t).strip()
     return t

@@ -1,0 +1,244 @@
+{
+ "page_id": "riyad1956-p016",
+ "printed": 16,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 4322
+ },
+ "page_number_printed": "١٦",
+ "running_header": "— ١٦ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٦ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "الصلاةُ هى تحبسهُ، والملائكةُ يصلونَ على أحدِكم ما دام فى مجلسه الذى صلى فيـه يقولونَ : اللهمَّ ارحمه ، اللهم اغفر لهُ ، اللهم تبْ عليـهِ ، مالم يؤذِ فيه ، مالم يحدثْ فيه »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه ، وهذا لفظ مسلم، وقوله صلى الله عليه وسلم : « ينهزُهُ » : هو بفتح الياء والهاء وبالزاى : أى يخرجهُ وينهضُهُ .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى العباس عبد الله بن عبـاس بن عبد المطلب رضى الله عنهما عن رسول الله صلى الله عليـه وسلم فيما يروى عن ربِّه تبارك وتعالى قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ اللهَ كتبَ الحسناتِ والسيِّئاتِ ثم بين ذلك : فَمنْ هم بحسنةٍ (١) فلم يعملها كتبها اللهُ تبارك وتعالى عنـدهُ حسنةً كاملة ، وإن هم بهـا فعملَها كتبها اللهُ عشرَ حسناتٍ إلى سبعمِائةِ ضعفٍ إلى أضعافٍ كثيرةٍ ، وإن هم بسيئةٍ فلم يعملها كتبها اللهُ تعـالى عندَهُ حسنةً كاملةً ، وإن هم بها فعملها كتبها اللهُ سيئةً واحدةً »",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "some diacritics uncertain"
+   ]
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبى عبد الرحمن عبد الله بن عمر بن الخطاب رضى الله عنهما قال : سمعتُ رسولَ الله صلى الله عليه وسلم يقول :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« انطلقَ ثلاثةُ نفرٍ (٢) ممن كانَ قبلكم حتى آواهمُ المبيتُ (٣) إلى غارٍ فدخلوهُ فانحدرَتْ صخرة منَ الجبـلِ فسدَّت عليهمُ الغارَ . (٤) فقالوا : إنهُ لا ينجيكمْ منْ هذه الصخرةِ إلا أن تدعوا الله تعالى بصالحِ أعمالـكم . قال رجلٌ منهم : اللهمَّ إنه كان لى أبوانِ شيخان كبيران وكنتُ لا أغْبِقُ (٥) قبلهما أهلاً ولا مالا فنأى (٦) بى طلبُ الشجر يوماً فلم أُرِح (٧) عليهما حتى ناما فحلبتُ لهما غبوقهما فوجدتُهما نائمين ، فكرهتُ أن أوقظهما وأنْ أغبق قبلهما أهلاً أومالاً ، فلبِثُ (٨) ـ والقدحُ على يدى ـ أنتظرُ استيقاظهما حتى برقَ",
+   "footnote_markers_in_text": [
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.83,
+   "issues": [
+    "some diacritics uncertain",
+    "فحلبتُ partially obscured by mark"
+   ]
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) أرادها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) من ثلاثة إلى عشرة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "words printed without spaces"
+   ]
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) البيتوتة إلى كهف: (بيت منقور فى جبل)",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "words printed tightly spaced"
+   ]
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) بابه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) لا أقدم فى الشرب قبلها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) بعـــد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) لم أرجع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) انتظرت",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "footnotes printed inline in rows; each output separately"
+ ]
+}

@@ -1,0 +1,204 @@
+"""Quran detection & verification (CLAUDE.md §4.3, §12.B2).
+
+Reference: Quranpedia mushaf 1 (Hafs, matching the King Fahd Complex print).
+The printed text is NEVER rewritten; we only report the best-matching reference window,
+a similarity, a classification and word-level diff ops.
+"""
+
+from __future__ import annotations
+
+import gzip
+import json
+import re
+from dataclasses import dataclass, field
+from difflib import SequenceMatcher
+from functools import lru_cache
+
+from rapidfuzz.distance import Levenshtein
+
+from pipeline.config import REF
+from pipeline.normalize import normalize
+
+QURAN_FILE = REF / "quran" / "qp_mushafs-1.json.gz"
+MINOR = 0.85
+MIN_WORDS = 4  # unmarked spans need >= 4 consecutive words hitting the 3-gram index
+MARKERS = re.compile(r"\(\s*[\d٠-٩]+\s*\)|[¹²³⁴⁵⁶⁷⁸⁹⁰]+")
+BRACKETS = re.compile(r"[﴿{]([^﴾}]+)[﴾}]")
+
+
+@dataclass
+class Ayah:
+    surah: int
+    ayah: int
+    text: str  # display text, exactly as in the reference
+    words: list[str]  # normalized words
+
+
+@dataclass
+class QuranIndex:
+    ayahs: list[Ayah]
+    words: list[str] = field(default_factory=list)  # all normalized words, mushaf order
+    pos: list[tuple[int, int]] = field(default_factory=list)  # word -> (ayah idx, word idx)
+    trigrams: dict[tuple[str, str, str], list[int]] = field(default_factory=dict)
+
+
+@lru_cache(maxsize=1)
+def load_index() -> QuranIndex:
+    data = json.loads(gzip.decompress(QURAN_FILE.read_bytes()))["data"]
+    ayahs = []
+    for s in data["surahs"]:
+        for a in s["ayahs"]:
+            text = a["text"].replace("﻿", "").strip()
+            words = normalize(text, "quran").split()
+            ayahs.append(Ayah(int(a["surah"]), int(a["number"]), text, words))
+    idx = QuranIndex(ayahs)
+    for ai, a in enumerate(ayahs):
+        for wi, w in enumerate(a.words):
+            idx.words.append(w)
+            idx.pos.append((ai, wi))
+    for i in range(len(idx.words) - 2):
+        idx.trigrams.setdefault(tuple(idx.words[i : i + 3]), []).append(i)
+    return idx
+
+
+@dataclass
+class QuranMatch:
+    printed_text: str
+    surah: int
+    ayah_start: int
+    ayah_end: int
+    canonical_text: str
+    similarity: float
+    match_type: str  # exact | minor_variant | mismatch
+    diff_ops: list[dict]
+
+    @property
+    def quranpedia_url(self) -> str:
+        return f"https://quranpedia.net/surah/{self.surah}/{self.ayah_start}"
+
+
+def _sim(a: list[str], b: list[str]) -> float:
+    """Character-level similarity of two word sequences (1 - normalized Levenshtein)."""
+    return 1.0 - Levenshtein.normalized_distance(" ".join(a), " ".join(b))
+
+
+def _candidates(idx: QuranIndex, words: list[str]) -> list[int]:
+    """Global word positions where a window could start, voted by shared 3-grams."""
+    votes: dict[int, int] = {}
+    for i in range(len(words) - 2):
+        for g in idx.trigrams.get(tuple(words[i : i + 3]), []):
+            start = g - i
+            votes[start] = votes.get(start, 0) + 1
+    if not votes and len(words) >= 2:  # very short or noisy span: fall back to bigrams
+        for gi in range(len(idx.words) - 1):
+            if idx.words[gi : gi + 2] == words[:2]:
+                votes[gi] = 1
+    return [s for s, _ in sorted(votes.items(), key=lambda kv: -kv[1])[:20]]
+
+
+def _best_window(idx: QuranIndex, words: list[str]) -> tuple[float, int, int] | None:
+    best = None
+    n = len(words)
+    for start in _candidates(idx, words):
+        for ln in range(max(1, n - 2), n + 3):  # allow small insertions/deletions
+            s, e = max(0, start), min(len(idx.words), start + ln)
+            if e <= s:
+                continue
+            sim = _sim(words, idx.words[s:e])
+            if best is None or sim > best[0]:
+                best = (sim, s, e)
+    return best
+
+
+def _diff(printed: list[str], ref: list[str]) -> list[dict]:
+    ops = []
+    for tag, i1, i2, j1, j2 in SequenceMatcher(None, printed, ref, autojunk=False).get_opcodes():
+        if tag != "equal":
+            ops.append({"op": tag, "printed": printed[i1:i2], "reference": ref[j1:j2], "at": i1})
+    return ops
+
+
+def classify(sim: float, ops: list[dict]) -> str:
+    """exact: no word differs (after normalization).
+    minor_variant: only 1-2 one-word replacements that look like the same word
+      (char similarity >= 0.6: an OCR slip or spelling variant). Shown with a diff.
+    mismatch: a different word, a missing/extra word, or low overall similarity:
+      a possible misquotation or extraction error -> review queue."""
+    if not ops:
+        return "exact"
+    if sim < MINOR:
+        return "mismatch"
+    small = all(
+        o["op"] == "replace"
+        and len(o["printed"]) == len(o["reference"]) == 1
+        and 1 - Levenshtein.normalized_distance(o["printed"][0], o["reference"][0]) >= 0.6
+        for o in ops
+    )
+    return "minor_variant" if small and len(ops) <= 2 else "mismatch"
+
+
+def verify(printed_text: str) -> QuranMatch | None:
+    """Match a printed span to the reference. None if nothing Quranic is found."""
+    idx = load_index()
+    words = normalize(MARKERS.sub(" ", printed_text), "quran").split()
+    if len(words) < 2:
+        return None
+    best = _best_window(idx, words)
+    if not best:
+        return None
+    sim, s, e = best
+    if sim < 0.6:
+        return None
+    a0, _ = idx.pos[s]
+    a1, _ = idx.pos[e - 1]
+    # Trim reference-only words at the window edges (a partial quote of a longer ayah).
+    ops = _diff(words, idx.words[s:e])
+    while ops and ops[0]["op"] == "insert" and ops[0]["at"] == 0:
+        s += len(ops[0]["reference"])
+        ops = _diff(words, idx.words[s:e])
+    while ops and ops[-1]["op"] == "insert" and ops[-1]["at"] == len(words):
+        e -= len(ops[-1]["reference"])
+        ops = _diff(words, idx.words[s:e])
+    sim = _sim(words, idx.words[s:e])
+    mtype = classify(sim, ops)
+    first, last = idx.ayahs[a0], idx.ayahs[a1]
+    canonical = " ".join(a.text for a in idx.ayahs[a0 : a1 + 1])
+    return QuranMatch(
+        printed_text=printed_text,
+        surah=first.surah,
+        ayah_start=first.ayah,
+        ayah_end=last.ayah if last.surah == first.surah else first.ayah,
+        canonical_text=canonical,
+        similarity=round(sim, 4),
+        match_type=mtype,
+        diff_ops=ops,
+    )
+
+
+def find_unmarked(text: str) -> list[QuranMatch]:
+    """Spans of >= MIN_WORDS consecutive words that hit the 3-gram index (unmarked quotes)."""
+    idx = load_index()
+    raw = text.split()
+    norm = [normalize(w, "quran") for w in raw]
+    hits = [False] * len(norm)
+    for i in range(len(norm) - 2):
+        if tuple(norm[i : i + 3]) in idx.trigrams:
+            hits[i] = hits[i + 1] = hits[i + 2] = True
+    out, i = [], 0
+    while i < len(hits):
+        if hits[i]:
+            j = i
+            while j + 1 < len(hits) and hits[j + 1]:
+                j += 1
+            if j - i + 1 >= MIN_WORDS:
+                m = verify(" ".join(raw[i : j + 1]))
+                if m:
+                    out.append(m)
+            i = j + 1
+        else:
+            i += 1
+    return out
+
+
+def bracketed_spans(text: str) -> list[str]:
+    return [m.group(1).strip() for m in BRACKETS.finditer(text)]

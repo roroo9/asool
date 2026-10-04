@@ -1,0 +1,201 @@
+{
+ "page_id": "riyad1956-p026",
+ "printed": 26,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 2604
+ },
+ "page_number_printed": "٢٦",
+ "running_header": "— ٢٦ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٢٦ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فالحقْ بنا نواسكَ (١) فقلتُ حين قرأتها : وهذه أيضاً منَ البلاء (٢) فتيممْتُ (٣) بها التنور فسجرتُها (٤) ، حتى إذا مضت أربعونَ من الخمسين واستلبَث (٥) الوحيُ إذا رسولُ رسولِ الله صلى الله عليه وسلم يأتينى فقال إن رسولَ الله صلى الله عليه وسلم يأمرُكَ أن تعتزلَ امرأتكَ ، فقلت : أطلقُها أمْ ماذا أفعلُ فقال لا بلْ اعتزلها (٦) فلا تقربْها وأرسلَ إلى صاحبيَّ بمثلِ ذلك : فقلتُ لامرأتِى : الحقِى بأهلكِ فكونى عندهمْ حتى يقضِيَ اللهُ فى هذا الأمر . فجاءتِ امرأةُ هلالِ بنِ أميةَ رسولَ الله صلى الله عليه وسلم فقالتْ لهُ : يارسولَ الله إنَّ هلالَ بنَ أميةَ شيخٌ ضائع (٧) ليس له خادمٌ فهلْ تكْرَهُ أنْ أخدمَه ؟ قال:لا،ولكنْ لايقربَنَّكِ . فقالتْ : إنهُ واللهُ مابه منْ حَرَكةٍ (٨) إلى شىْء ووالله مازالَ يبكى مُنذ كان منْ أمرِهِ ما كان إلى يومه هذا. فقال لى بعضُ أهلِى : لو استأذنْتَ رسولَ الله صلى الله عليه وسلم فى أمرأتِكَ (٩) فقدْ أذِنَ لامرأةِ هلالِ بنِ أميةَ ؟ أن تخدمهُ؟فقلتُ : لاأستأذِنُ فيها رسولَ الله صلى الله عليه وسلم وما يدرينِى ماذا يقولُ رسولُ الله صلى الله عليه وسلم إذا استأذنتهُ فيها وأنا رجلٌ شابٌّ فلبثتُ بذلكَ عشرَ ليالٍ فكملَ لنا خمسُون ليلةً منْ حين نهىَ عن كلامنا ثمَّ صليتُ صلاةَ الفَجْر صباحَ خمسينَ ليلةً على ظهرِ بيتٍ من بيوتِنا ، فبينْا أنا جالسٌ على الحالِ التى ذكرَ اللهُ تعالى منّا قدْ ضاقتْ عليَّ نفسِى وضاقتْ عَلَيَّ الأرضُ بما رحبتْ سمعتُ صوتَ صارخٍ (١٠) أوفى على (١١) سلعٍ",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)",
+    "(٩)",
+    "(١٠)",
+    "(١١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.8,
+   "issues": [
+    "dense diacritics; some tashkeel uncertain",
+    "spacing in 'يوم هذا' printed run-together"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) نقدم لك المواساة والمساعدة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) الاختبار",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) فقصدت",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) حرقتها أى فى التنور الذى يخبز فيه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) أبطأ",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) أمر بترك مخالطتها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) ذو سن كبيرة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) أى إلى الجماع لما فيه من الكرب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) فى خدمة زوجه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٠) هو أبو بكر رضى الله عنه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٠)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.88,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١١) صعد على جبل.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "footnotes run inline across full-width lines rather than distinct columns"
+ ]
+}

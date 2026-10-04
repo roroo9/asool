@@ -1,0 +1,283 @@
+{
+ "page_id": "riyad1956-p033",
+ "printed": 33,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 4576
+ },
+ "page_number_printed": "٣٣",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٣ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وأبيُّ بنُ كعبٍ ، وزيد بن ثابتٍ ورجالٌ رضى الله عنهم ، فرفعَ إلى رسول الله صلى الله عليـه وسلم الصبيُّ فأَقعدهُ (١) فى حجره ونفسهُ تقعقعُ ، ففاضت عيناهُ (٢) فقال سعدٌ : يارسول الله ما هذا ؟ فقال :",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "some tashkeel faint/uncertain"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« هٰذه رحمةٌ (٣) جعلها الله تعالى فى قلوب عباده »",
+   "footnote_markers_in_text": [
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وفى رواية :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« فى قلوبِ منْ شاءَ منْ عبـاده وإنما يرحمُ اللهُ منْ عبـاده الرحماءَ »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه . ومعنى « تَقَعْقَعُ » : تتحركُ وتضطربُ .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن صهيب رضى الله عنه أنّ رسول الله صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« كان ملكٌ فيمنْ كانَ قبلكمْ وكانَ له ساحرٌ فلمّـا كبر قال للملكِ : إنى قدْ كبرتُ فابعثْ (٤) إلىّ غلاماً أعلمْهُ السحرَ ؛ فبعثَ إليه غلاماً يعلمُهُ وكان فى طريقه إذا سلكَ راهبٌ (٥) فقعدَ إليه وسمعَ كلامهُ فأعجبهُ وكان إذا أتى الساحر مرَّ بالراهب وقعـد إليه ، فإذا أتى الساحرَ ضربهُ ، فشكا ذلك إلى الراهبِ فقال : إذا خشيتَ الساحرَ . فقلْ : حبسنِى أهلِى (٦) وإذا خشيتَ أهلكَ فقلْ : حبسنِى الساحرُ فبينما هوَ على ذلك إذ أتى على دابةٍ عظيمة (٧) قد حبستِ الناسَ فقال : اليومَ أعلمُ الساحرُ أفضلُ أم الراهبُ أفضل ؟ فأخـذَ حجراً فقال : اللهمّ إنْ كان أمْرُ الراهبِ أحبَّ إليك منْ أمرِ الساحرِ فاقتلْ هذه الدابةَ حتى يمضى الناسُ فرماها فقتلها ومضى الناسُ فأتى الراهبَ فأخبرهُ . فقال له الراهبُ : أىْ بُنَىَّ أنتَ اليومَ أفضـلُ منى قد بلغَ منْ أمركَ ما أرى وإنكَ ستبتلى (٨) فإن ابتليتَ فلاتدلَّ علىَّ : وكان الغلامُ يبرئُ الأكمه (٩) والأبرصَ (١٠) ويداوى الناسَ منْ سائر الأدواء . فسمع جليسٌ للمَلِكِ كان قد عمىَ",
+   "footnote_markers_in_text": [
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)",
+    "(٩)",
+    "(١٠)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.8,
+   "issues": [
+    "dense tashkeel, some marks uncertain"
+   ]
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) وضعه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) بالدموع من أثر الرحمة الإنسانية ويقول سعد أتبكى يارسول الله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) أى فيض الدموع .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) أرسل",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) متعبد من النصارى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) منعى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) يخاف الناس صولتها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) ستختبر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) من ولد أعمى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٠) من بجسمه بياض",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٠)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "other",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "( ٣ ـ رياض )",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": [
+    "printer's signature mark"
+   ]
+  }
+ ],
+ "page_level_issues": [
+  "footnotes run inline across full-width lines rather than separate columns"
+ ]
+}

@@ -61,3 +61,8 @@ def test_unknown_level():
 )
 def test_normalize_marker(marker, expected):
     assert normalize_marker(marker) == expected
+
+
+def test_joined_vocative_is_split():
+    assert normalize("يَاأَيُّهَا الَّذِينَ") == normalize("يَا أَيُّهَا الَّذِينَ") == "يا ايها الذين"
+    assert normalize("﴿يَاأَيُّهَا﴾") == "يا ايها"

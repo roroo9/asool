@@ -1,0 +1,159 @@
+{
+ "page_id": "riyad1956-p024",
+ "printed": 24,
+ "model": "claude-opus-5-5",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6994,
+  "output_tokens": 2289
+ },
+ "page_number_printed": "٢٤",
+ "running_header": "— ٢٤ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٢٤ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "منهمْ علانيتهمْ وبايعَهُمْ واستغفرَ لهمْ ووكلَ سرائرهمْ (١) إلى الله تعالى حتى جئتُ . فلما سلمتُ تَبَسَّمَ تبسُّمَ المغضبِ (٢) ثم قال : تعالى، فجئتُ أمشي حتى جلستُ بين يديهِ فقال لِي : ماخلفكَ ؟ ألم تكُن قد ابتعتَ ظهركَ (٣) قال قلت : يارسول الله إنى والله لو جلستُ عندَ غيركَ منْ أهلِ الدنيا لرأيتُ أنى سأخرجُ منْ سخطهِ بعذرٍ ؛ لقدْ أُعطيتُ جدلا (٤) ولـكني والله لقدْ علمتُ لئنْ حدثتكَ اليومَ حديثَ كذبٍ ترضى بهِ عني ليوشكنَّ اللهُ يسخطكَ عليَّ وإنْ حدثتكَ حديثَ صدقٍ تجدُ عليَّ فيه إنى لأرجو فيه عقبى (٥) الله عز وجل والله ما كانَ لى منْ عذر ، والله ما كنت قطُّ أقوى ولا أيسر منى حينَ تخلفت عنكَ قال: فقال رسول الله صلى الله عليه وسلم: أما هـذا فقدْ صدقَ فقمْ حتى يقضيَ الله فيكَ . وسارَ (٦) رجالٌ منْ بنى سلمةَ فاتبعونى فقالوا لِي: والله ماعلمناكَ أذنبتَ ذنباً قبلَ هـذا لقدْ عجزتَ فيأنْ لاتكونَ اعتذرْتَ إلى رسول الله صلى الله عليه وسلم بما اعتذرَ بهِ المخلفونَ ، فقد كانَ كافيكَ ذنبك استغفارُ رسول الله صلى الله عليه وسلم لكَ . قال : فوالله مازالوا يؤنبوننِي (٧) حتى أردتُ أنْ أرجعَ إلى رسول الله صلى الله عليه وسلم فأكذبَ نفسى ، ثم قلت لهم: هلْ لقيَ هذا معيَ منْ أحدٍ قالوا : نعمْ لقيهُ معكَ رجلانِ قالا مثلَ ماقلتَ وقيل لهما مثـلَ ما قيلَ لكَ ، قالَ : قلت : منْ هما ؟ قالوا : مرارة بن الربيـع العمريُّ ، وهـلال بن أميـةَ الواقفيُّ ، قال : فذكَروا لى رجلينِ صالحـينِ قد شهدا (٨) بدراً فيهما أسوةٌ قالَ : فمضيت حينَ ذَكَروهما لِي . ونهى رسول الله صـلى الله عليـه وسلم عن كلامنـا أيهـا الثلاثة من بـين من تخلف عنـه قال :",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": true,
+   "confidence": 0.8,
+   "issues": [
+    "some tashkeel uncertain due to print quality",
+    "«فيأنْ» printed without space"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(١) ما أخفوه من النفاق",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٢) الغضبان",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٣) اشتريت الإبل",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٤) فصاحة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٥) آمل العاقبة الحسنة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٦) وثب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 4,
+   "text": "(٧) يلوموننى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 5,
+   "text": "(٨) حضرا الغزوة الـكبرى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.85,
+   "issues": [
+    "footnote wraps to next line"
+   ]
+  }
+ ],
+ "page_level_issues": []
+}
