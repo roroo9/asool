@@ -45,9 +45,9 @@ CREATE TABLE footnote_links(id INTEGER PRIMARY KEY, page_id, marker, anchor_bloc
 CREATE TABLE quran_refs(id INTEGER PRIMARY KEY, block_id, surah INT, ayah_start INT,
   ayah_end INT, match_type, similarity REAL, canonical_text, printed_text, diff_ops JSON,
   detection, reference_source);
-CREATE TABLE hadith_marks(id TEXT PRIMARY KEY, block_ids JSON, wording, takhrij_text,
-  takhrij_kind, grading_status, grading, grading_source_url, graded_by, dorar_search_url,
-  hadeethenc JSON);
+CREATE TABLE hadith_marks(id TEXT PRIMARY KEY, block_ids JSON, wording, narrator,
+  takhrij_text, takhrij_kind, grading_status, grading, grading_source, grading_source_url,
+  graded_by, dorar_search_url, hadeethenc JSON, hadeethenc_check JSON, dorar_entry JSON);
 CREATE TABLE chunks(id TEXT PRIMARY KEY, book_id, kind, author_role, breadcrumb JSON, text,
   text_norm, text_for_embedding, block_ids JSON, page_ids JSON, footnote_ids JSON,
   quran_ref_ids JSON, hadith_ids JSON, commentary_on, token_count INT, min_confidence REAL);
@@ -158,16 +158,16 @@ def build(embed: bool = True) -> None:
         b["vlm_confidence"] = b.get("confidence")
 
     # Hadith units over the whole corpus in reading order
-    hunits = hadith.units(all_blocks)
-    try:
-        from pipeline import hadeethenc
+    def _he_match(wording: str) -> list[dict]:
+        try:
+            from pipeline import hadeethenc
 
-        for u in hunits:
-            u["hadeethenc"] = hadeethenc.match(u["wording"])[:1]
-    except Exception as e:  # second reference is optional; never block ingestion
-        print("hadeethenc unavailable:", e)
-        for u in hunits:
-            u["hadeethenc"] = []
+            return hadeethenc.match(wording)
+        except Exception as e:  # HadeethEnc is optional; never block ingestion
+            print("hadeethenc unavailable:", e)
+            return []
+
+    hunits = hadith.units(all_blocks, match_fn=_he_match)
 
     chunks = _chunks(all_blocks, links, qrefs, hunits)
     _write_db(pages, all_blocks, links, qrefs, hunits, chunks, bflags, page_flags)
@@ -385,19 +385,23 @@ def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -
         )
     for u in hunits:
         con.execute(
-            "INSERT INTO hadith_marks VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            "INSERT INTO hadith_marks VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (
                 u["id"],
                 j(u["block_ids"]),
                 u["wording"],
+                u["narrator"],
                 u["takhrij_text"],
                 u["takhrij_kind"],
                 u["grading_status"],
                 u["grading"],
+                u["grading_source"],
                 u["grading_source_url"],
                 u["graded_by"],
                 u["dorar_search_url"],
                 j(u.get("hadeethenc", []), ensure_ascii=False),
+                j(u.get("hadeethenc_check"), ensure_ascii=False),
+                j(u.get("dorar_entry"), ensure_ascii=False),
             ),
         )
     for c in chunks:

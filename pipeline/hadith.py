@@ -19,7 +19,7 @@ import re
 import urllib.parse
 
 from pipeline.config import DATA
-from pipeline.normalize import normalize
+from pipeline.normalize import normalize, strip_diacritics
 
 GRADINGS = DATA / "hadith_gradings.json"
 UNVERIFIED_AR = "الحكم غير متحقق في البيانات"
@@ -36,17 +36,111 @@ def classify_takhrij(takhrij: str | None) -> str:
     return "in_sahihayn" if SAHIHAYN_RE.search(normalize(takhrij, "cer_loose")) else "other"
 
 
+COMMON = set(
+    "قال قالت رسول الله صلى عليه وسلم ان إن انما إنما في فى من على علي عن ما لا ثم او أو "
+    "يا و ف ب ل ك هو هي هذا هذه الذي التي كان كانت عز وجل تعالى سبحانه وتعالى".split()
+)
+MARKER_RE = re.compile(r"\(\s*[\d٠-٩]{1,3}\s*\)|[¹²³⁴⁵⁶⁷⁸⁹⁰]+|\b\d+\b")
+JOINED = {"مالم": "ما لم", "مالا يعني": "ما لا يعني"}
+
+
+def search_phrase(hadith_text: str, n: int = 6) -> str:
+    """A short, distinctive phrase for a dorar.net search: no footnote markers, no tashkeel,
+    common joined forms split («مالم» -> «ما لم»), leading formulae skipped, 4-6 words."""
+    t = MARKER_RE.sub(" ", hadith_text)
+    t = strip_diacritics(t)  # keep the original letters (ة, ى, أ) for dorar's search
+    t = re.sub(r"[^\w\s]", " ", t)
+    for a, b in JOINED.items():
+        t = re.sub(rf"(?<!\S){a}(?!\S)", b, t)
+    words = t.split()
+    # start at the first window whose first word is distinctive (not a formula word)
+    plain = [normalize(w) for w in words]
+    common = {normalize(c) for c in COMMON}
+    start = next((i for i, w in enumerate(plain) if w not in common and len(w) > 2), 0)
+    window = words[start : start + n]
+    if len(window) < 4:
+        window = words[-n:]
+    return " ".join(window)
+
+
 def dorar_search_url(hadith_text: str) -> str:
-    words = normalize(hadith_text).split()[:10]
-    return "https://dorar.net/hadith/search?q=" + urllib.parse.quote(" ".join(words))
+    return "https://dorar.net/hadith/search?q=" + urllib.parse.quote(search_phrase(hadith_text))
+
+
+NARRATOR_RE = re.compile(r"(?:^|\s)(?:و?عن|وعن)\s+(.{3,90}?)\s+رض[يى]\s+الله\s+عن")
+NAME_STOP = {
+    "ابي",
+    "ابو",
+    "ابا",
+    "ابن",
+    "بن",
+    "بنت",
+    "ام",
+    "عبد",
+    "الله",
+    "امير",
+    "المومنين",
+    "المؤمنين",
+    "رسول",
+}
+
+
+def narrator(text: str) -> str | None:
+    m = NARRATOR_RE.search(normalize(text, "cer_loose"))
+    return m.group(1).strip() if m else None
+
+
+def _name_tokens(name: str) -> set[str]:
+    return {w for w in normalize(name).split() if w not in NAME_STOP and len(w) > 1}
+
+
+def same_narrator(a: str | None, b: str | None) -> bool | None:
+    """True/False if both names are known; None if one is missing. Names match when the
+    distinctive tokens of the shorter name all occur in the longer one (ابن عمر ~ عبد الله بن
+    عمر)."""
+    if not a or not b:
+        return None
+    ta, tb = _name_tokens(a), _name_tokens(b)
+    if not ta or not tb:
+        return None
+    small, big = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+    return small <= big
 
 
 def load_gradings() -> dict:
     return json.loads(GRADINGS.read_text()) if GRADINGS.exists() else {}
 
 
-def units(blocks: list[dict]) -> list[dict]:
-    """Group a document's matn blocks (reading order, all pages) into hadith units."""
+def hadeethenc_decision(book_narrator: str | None, wording: str, match: dict) -> dict:
+    """Is a HadeethEnc entry the same hadith? Same narrator AND core wording -> auto;
+    otherwise ask the owner to confirm."""
+    from rapidfuzz import fuzz
+
+    he = match.get("hadeeth") or ""
+    he_narr = narrator(he)
+    core = fuzz.token_set_ratio(normalize(MARKER_RE.sub(" ", wording)), normalize(he))
+    part = fuzz.partial_ratio(normalize(MARKER_RE.sub(" ", wording)), normalize(he))
+    narr_ok = same_narrator(book_narrator, he_narr)
+    wording_ok = max(core, part) >= 80
+    auto = bool(narr_ok) and wording_ok
+    return {
+        "auto": auto,
+        "narrator_book": book_narrator,
+        "narrator_hadeethenc": he_narr,
+        "narrator_match": narr_ok,
+        "wording_score": round(max(core, part), 1),
+    }
+
+
+def units(blocks: list[dict], match_fn=None) -> list[dict]:
+    """Group a document's matn blocks (reading order, all pages) into hadith units and apply
+    the grading rule (CLAUDE.md §12.F):
+      1. takhrij names al-Bukhari/Muslim                  -> in_sahihayn
+      2. else matched in HadeethEnc (same narrator + wording) -> hadeethenc (its grade + link)
+         uncertain match                                   -> hadeethenc_pending (owner confirms)
+      3. else a manual dorar.net entry by the owner        -> dorar_manual
+      4. nothing                                           -> unverified
+    `match_fn(wording) -> list[dict]` looks up HadeethEnc (None in unit tests)."""
     out: list[dict] = []
     cur: dict | None = None
     for b in blocks:
@@ -79,26 +173,64 @@ def units(blocks: list[dict]) -> list[dict]:
             continue  # narration without a quoted hadith (e.g. a companion's report)
         uid = f"h{i:03d}-{u['block_ids'][0]}"
         wording = " ".join(u["wording"]) or " ".join(u["narration"])
+        book_narr = narrator(" ".join(u["narration"][:1]))
         kind = classify_takhrij(u["takhrij"])
-        g = gradings.get(uid)
+        g = gradings.get(uid) or {}
+        rec = {
+            "id": uid,
+            "block_ids": u["block_ids"],
+            "wording": wording,
+            "narrator": book_narr,
+            "takhrij_text": u["takhrij"],
+            "takhrij_kind": kind,
+            "grading_status": "unverified",
+            "grading": None,
+            "grading_source": None,
+            "grading_source_url": None,
+            "graded_by": None,
+            "hadeethenc": [],
+            "hadeethenc_check": None,
+            "dorar_search_url": dorar_search_url(wording),
+            "dorar_entry": None,
+        }
         if kind == "in_sahihayn":
-            status, grading, url = "in_sahihayn", None, None
-        elif g and g.get("grading") and g.get("url"):
-            status, grading, url = "verified", g["grading"], g["url"]
-        else:
-            status, grading, url = "unverified", None, None
-        res.append(
-            {
-                "id": uid,
-                "block_ids": u["block_ids"],
-                "wording": wording,
-                "takhrij_text": u["takhrij"],
-                "takhrij_kind": kind,
-                "grading_status": status,
-                "grading": grading,
-                "grading_source_url": url,
-                "graded_by": (g or {}).get("by"),
-                "dorar_search_url": dorar_search_url(wording),
-            }
-        )
+            rec.update(
+                grading_status="in_sahihayn",
+                grading="في الصحيحين",
+                grading_source="تخريج الإمام النووي المطبوع",
+            )
+            res.append(rec)
+            continue
+        matches = match_fn(wording) if match_fn else []
+        rec["hadeethenc"] = matches[:1]
+        if matches:
+            chk = hadeethenc_decision(book_narr, wording, matches[0])
+            rec["hadeethenc_check"] = chk
+            confirmed = (
+                g.get("type") == "hadeethenc_confirmed" and g.get("he_id") == matches[0]["id"]
+            )
+            rejected = g.get("type") == "hadeethenc_rejected" and g.get("he_id") == matches[0]["id"]
+            if (chk["auto"] or confirmed) and not rejected:
+                rec.update(
+                    grading_status="hadeethenc",
+                    grading=matches[0].get("grade"),
+                    grading_source="موسوعة الأحاديث النبوية (HadeethEnc)",
+                    grading_source_url=matches[0].get("url"),
+                    graded_by="auto (same narrator + wording)" if chk["auto"] else g.get("by"),
+                )
+                res.append(rec)
+                continue
+            if not rejected:
+                rec["grading_status"] = "hadeethenc_pending"
+        if g.get("type") == "dorar" and g.get("grading") and g.get("url"):
+            rec.update(
+                grading_status="dorar_manual",
+                grading=g["grading"],
+                grading_source=f"الدرر السنية: {g.get('muhaddith', '')} — {g.get('source', '')} "
+                f"({g.get('number', '')})",
+                grading_source_url=g["url"],
+                graded_by=g.get("by"),
+                dorar_entry=g,
+            )
+        res.append(rec)
     return res
