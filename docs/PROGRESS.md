@@ -29,5 +29,8 @@ Human tasks running in parallel: correct the gold set (Sun evening to Mon), veri
 - **archive.org text layer is unusable.** Both `rs-mohaqaq_text.pdf` and `rs-mohaqaq_djvu.txt` contain Latin junk (0% Arabic characters). archive.org ran OCR without Arabic. Decision: the baseline uses our own Tesseract 5 `ara` run (allowed by spec §5.1: "else Tesseract ara plain text"). The gold draft will come from Tesseract `ara` + a second VLM, then a human corrects it.
 - **Bake-off pages (proposed):** p.41 (many footnotes, including a long commentary footnote), p.30 (start of باب الصبر, many Quran verses), p.20 (dense text).
 
+## People
+- Gold set reviewer: rowan, team member, native Arabic speaker.
+
 ## Known issues
 - None blocking yet.

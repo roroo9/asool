@@ -9,7 +9,8 @@ This file is kept honest: unknown or unverified status is written as such.
 | Field | Value |
 |---|---|
 | Author | الإمام يحيى بن شرف النووي (ت 676هـ) |
-| Edition used | دار إحياء الكتاب العربي، القاهرة، 1375هـ / 1956م |
+| Edition used | دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م |
+| Edition evidence | Title page: editor مصطفى محمد عماره, city القاهرة, and the press emblem "مطبعة دار إحياء الكتب العربية – عيسى البابي الحلبي". The emblem date (1336هـ/1918م) is the press founding year. **The printing year 1375هـ/1956م is not printed in the scan**; it comes from the archive.org item description. |
 | Word meanings explained by | مصطفى محمد عمارة |
 | Source page | https://archive.org/details/rsnawwy |
 | File used | `rs-mohaqaq.pdf` (scanned images), plus `rs-mohaqaq_text.pdf` (archive.org OCR text layer) |
