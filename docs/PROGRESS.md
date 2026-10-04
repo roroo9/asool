@@ -9,7 +9,7 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 | 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Done ~11:00. At GATE 1 |
 | 2 Full ingestion (30 pages) + baseline | Sun 13:00–22:00 | Done 11:05. At GATE 2 |
 | 3 API | Mon Oct 5, 08:00–14:00 | Done Sun ~19:55. At GATE 3 |
-| 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | |
+| 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | Started Sun ~20:30: API endpoints for Compare/Proof, page images, types, API client, i18n done. Screens not built yet |
 | 5 Evaluation & hardening | Tue Oct 6, 08:00–14:00 | |
 | 6 Ship | Tue 14:00–18:00 | |
 | Buffer | Tue 18:00–23:59 | |

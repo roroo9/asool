@@ -80,6 +80,36 @@ def page(page_id: str) -> dict:
     return p
 
 
+@app.get("/pages/{page_id}/naive")
+def page_naive(page_id: str) -> dict:
+    """What a typical pipeline gets from this page: Tesseract text in OCR line order, with
+    footnotes mixed into the body and no structure (the baseline's data preparation)."""
+    f = ROOT / "data" / "intermediate" / "ocr" / f"{page_id}.json"
+    if "/" in page_id or not f.exists():
+        raise HTTPException(404, "page not found")
+    o = json.loads(f.read_text())
+    return {
+        "page_id": page_id,
+        "engine": o["engine"],
+        "lines": [{"text": ln["text"], "bbox": ln["bbox"]} for ln in o["lines"]],
+    }
+
+
+@app.get("/eval/bakeoff")
+def eval_bakeoff() -> dict:
+    f = ROOT / "data" / "eval" / "results" / "bakeoff.json"
+    if not f.exists():
+        return {"available": False}
+    d = json.loads(f.read_text())
+    return {"available": True, "pages": d["pages"], "rows": d["rows"]}
+
+
+@app.get("/eval/known-errors")
+def eval_known_errors() -> dict:
+    f = ROOT / "data" / "eval" / "known_extraction_errors.json"
+    return json.loads(f.read_text()) if f.exists() else {"errors": []}
+
+
 @app.get("/passages/{passage_id}")
 def get_passage(passage_id: str) -> dict:
     p = P.baseline_passage(passage_id) if passage_id.startswith("base-") else P.passage(passage_id)
