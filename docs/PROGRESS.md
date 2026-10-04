@@ -14,7 +14,7 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 | 6 Ship | Tue 14:00–18:00 | |
 | Buffer | Tue 18:00–23:59 | |
 
-Human tasks in parallel: gold review by rowan (3 bake-off pages now, 12 more pages Sun evening), dorar.net gradings for the corpus hadiths (Mon), verify eval questions (Mon).
+Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith gradings for ~5 non-Sahihayn hadiths (route pending), verify eval questions (Mon).
 
 ## Done
 - Phase 0: repo skeleton, `uv` env, FastAPI, Next.js 16 (RTL Arabic), `normalize.py` + tests, public repo https://github.com/roroo9/asool.
@@ -32,10 +32,10 @@ Human tasks in parallel: gold review by rowan (3 bake-off pages now, 12 more pag
 - **Page numbering:** PDF page N = printed page N.
 - **Corpus:** printed pp. 12–41. Bake-off pages: 41 (footnotes + editor commentary), 30 (Quran), 20 (dense). Gold pages (15): 12 14 16 18 20 22 24 26 28 30 33 35 37 39 41.
 - **archive.org text layer is unusable** (0% Arabic). Baseline and Reader A use our own Tesseract `ara`.
-- **dorar.net blocks automated requests** (Cloudflare). Hadith gradings will be entered by a human from dorar.net with the URL.
-- **King Fahd Complex downloads contain no text** (the "AI" package is Adobe Illustrator artwork; the fonts site has fonts only). Quranpedia's King-Fahd-matching Hafs text is used, as the package allows.
-- **Gemini key is on the free tier**: Pro models have a quota of 0; Flash works (3.8 Flash often overloaded).
-- **Anthropic spend so far:** about $1.40, plus about $1.60 for Reader B on 12 pages. Reader C (Fable 5.1) on 12 more pages would exceed the $5 credit.
+- **dorar.net blocks this machine** (Cloudflare), including the API docs (article/389). Not circumvented. Route pending owner decision.
+- **King Fahd Complex developer data (qurancomplex.gov.sa/quran-dev, Hafs v3.0) is the primary Quran reference.** An earlier check wrongly concluded it had no text (the link search missed the developer files). Quranpedia is the fallback.
+- **Gemini billing is not possible in Saudi Arabia in time** (reseller CNTXT). Paid model calls go through OpenRouter ($10 limit).
+- **Reader C on the 12 remaining gold pages = Surya OCR 2 (local).** Mistral was not possible.
 
 ## People
 - Gold set reviewer: rowan, team member, native Arabic speaker.
@@ -50,4 +50,4 @@ Human tasks in parallel: gold review by rowan (3 bake-off pages now, 12 more pag
 
 ## Known issues
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
-- Owner's message with amendments was cut off at item C6 ("Document method, bias controls and…").
+- Reviewer name in the saved data is "rawan"; the owner named the reviewer "rowan". To confirm.
