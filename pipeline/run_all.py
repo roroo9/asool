@@ -17,7 +17,15 @@ from datetime import UTC, datetime
 import numpy as np
 
 from api.settings import settings
-from pipeline import baseline, completeness, footnotes, hadith, ocr_geometry, quran
+from pipeline import (
+    baseline,
+    completeness,
+    footnotes,
+    hadith,
+    ocr_geometry,
+    quran,
+    structure_checks,
+)
 from pipeline.config import BOOK, BOOK_ID, CORPUS_PAGES, DATA, INTER, PAGES, page_id
 from pipeline.fuse import fuse_two_lanes
 from pipeline.normalize import normalize
@@ -39,7 +47,7 @@ CREATE TABLE pages(id TEXT PRIMARY KEY, book_id, page_number_printed INT, page_i
 CREATE TABLE blocks(id TEXT PRIMARY KEY, page_id, ord INT, type, author_role, col INT,
   text_raw, text_norm, bbox JSON, rects JSON, bbox_source, lanes_agree INT, align_score REAL,
   footnote_marker, continues_from_prev INT, continues_to_next INT, vlm_confidence REAL,
-  confidence REAL, flags JSON, reviewed INT DEFAULT 0);
+  confidence REAL, flags JSON, attached_to, reviewed INT DEFAULT 0);
 CREATE TABLE footnote_links(id INTEGER PRIMARY KEY, page_id, marker, anchor_block_id,
   anchor_char_offset INT, footnote_block_id, confidence REAL, method);
 CREATE TABLE quran_refs(id INTEGER PRIMARY KEY, block_id, surah INT, ayah_start INT,
@@ -89,6 +97,9 @@ def build(embed: bool = True) -> None:
         for b in blocks:
             if b.get("split_from"):
                 b["id"] = f"{b['split_from']}-{b['sub']}"
+        blocks = structure_checks.tighten_boxes(blocks, ocr)
+        blocks = structure_checks.attach_colon_continuations(blocks)
+        flags += structure_checks.duplicate_runs(blocks)
         comp = completeness.check(p, blocks)
         if not comp["complete"]:
             page_flags.append(
@@ -206,7 +217,7 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
 
     for b in blocks:
         t = b["type"]
-        if t in ("page_number", "page_header", "footnote"):
+        if t in ("page_number", "page_header", "footnote") or b.get("attached_to"):
             continue
         if t == "heading":
             close()
@@ -252,7 +263,13 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
         bl = [byid[x] for x in c["block_ids"]]
         text = "\n".join(x["text"] for x in bl)
         fns = [f for x in c["block_ids"] for f in fn_by_anchor.get(x, [])]
-        fn_text = " ".join(byid[f]["text"] for f in fns if f in byid)
+        attached: dict[str, list[str]] = {}
+        for x in blocks:
+            if x.get("attached_to"):
+                attached.setdefault(x["attached_to"], []).append(x["text"])
+        fn_text = " ".join(
+            " ".join([byid[f]["text"], *attached.get(f, [])]) for f in fns if f in byid
+        )
         crumb = [BOOK["title_ar"], c["chapter"]] if c["chapter"] else [BOOK["title_ar"]]
         label = (
             "تعليق المحقق مصطفى محمد عمارة"
@@ -327,7 +344,7 @@ def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -
         )
     for b in blocks:
         con.execute(
-            "INSERT INTO blocks VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)",
+            "INSERT INTO blocks VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)",
             (
                 b["id"],
                 b["page_id"],
@@ -348,6 +365,7 @@ def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -
                 b.get("vlm_confidence"),
                 b["final_confidence"],
                 j(sorted(set(bflags.get(b["id"], []))), ensure_ascii=False),
+                b.get("attached_to"),
             ),
         )
     for ln in links:

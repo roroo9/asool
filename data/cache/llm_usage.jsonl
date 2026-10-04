@@ -116,3 +116,4 @@
 {"ts": 1791101103.9853408, "stage": "embed/query", "provider": "openrouter", "model": "openrouter:google/gemini-embedding-2", "input_tokens": 9, "output_tokens": 0, "cost_usd": 2e-06, "cached": false, "seconds": 0.0}
 {"ts": 1791101104.459342, "stage": "embed/query", "provider": "openrouter", "model": "openrouter:google/gemini-embedding-2", "input_tokens": 4, "output_tokens": 0, "cost_usd": 1e-06, "cached": false, "seconds": 0.0}
 {"ts": 1791101104.936844, "stage": "embed/query", "provider": "openrouter", "model": "openrouter:google/gemini-embedding-2", "input_tokens": 6, "output_tokens": 0, "cost_usd": 1e-06, "cached": false, "seconds": 0.0}
+{"ts": 1791132462.0930638, "stage": "embed/chunks", "provider": "openrouter", "model": "openrouter:google/gemini-embedding-2", "input_tokens": 1417, "output_tokens": 0, "cost_usd": 0.000283, "cached": false, "seconds": 0.0}
