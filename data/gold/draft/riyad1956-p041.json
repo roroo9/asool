@@ -1605,7 +1605,9 @@
    ],
    "decision": "عليه وسلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:52:30.679580+00:00"
+   "decided_at": "2026-10-04T05:52:30.679580+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r001",
@@ -1645,7 +1647,9 @@
    ],
    "decision": "أبوطلحة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:52:36.063911+00:00"
+   "decided_at": "2026-10-04T05:52:36.063911+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r002",
@@ -1690,18 +1694,6 @@
      469,
      583,
      523
-    ],
-    [
-     433,
-     460,
-     485,
-     512
-    ],
-    [
-     1648,
-     567,
-     1758,
-     637
     ]
    ],
    "line_boxes": [
@@ -1710,17 +1702,13 @@
      452,
      1763,
      547
-    ],
-    [
-     430,
-     542,
-     1758,
-     651
     ]
    ],
    "decision": "إنكَ لتعلمُ ياربِّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:00.812069+00:00"
+   "decided_at": "2026-10-04T05:53:00.812069+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r003",
@@ -1743,24 +1731,6 @@
     }
    ],
    "word_boxes": [
-    [
-     678,
-     466,
-     750,
-     525
-    ],
-    [
-     599,
-     467,
-     661,
-     523
-    ],
-    [
-     499,
-     469,
-     583,
-     523
-    ],
     [
      433,
      460,
@@ -1790,7 +1760,9 @@
    ],
    "decision": "أنهُ يعجبنى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:05.391392+00:00"
+   "decided_at": "2026-10-04T05:53:05.391392+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r004",
@@ -1848,7 +1820,9 @@
    ],
    "decision": "صلى الله عليه وسلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:10.683792+00:00"
+   "decided_at": "2026-10-04T05:53:10.683792+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r005",
@@ -1872,12 +1846,6 @@
    ],
    "word_boxes": [
     [
-     569,
-     553,
-     609,
-     584
-    ],
-    [
      496,
      584,
      544,
@@ -1894,7 +1862,9 @@
    ],
    "decision": "(١) معه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:12.831827+00:00"
+   "decided_at": "2026-10-04T05:53:12.831827+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r006",
@@ -1929,12 +1899,6 @@
      741
     ],
     [
-     1685,
-     684,
-     1710,
-     737
-    ],
-    [
      1610,
      661,
      1664,
@@ -1951,7 +1915,9 @@
    ],
    "decision": "دخلَ وقدْ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:21.096490+00:00"
+   "decided_at": "2026-10-04T05:53:21.096490+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r007",
@@ -1975,10 +1941,10 @@
    ],
    "word_boxes": [
     [
-     1362,
-     664,
-     1410,
-     731
+     1352,
+     648,
+     1427,
+     741
     ]
    ],
    "line_boxes": [
@@ -1991,7 +1957,9 @@
    ],
    "decision": "بما",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:23.953103+00:00"
+   "decided_at": "2026-10-04T05:53:23.953103+00:00",
+   "loc": "gap",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r008",
@@ -2021,12 +1989,6 @@
      735
     ],
     [
-     1042,
-     700,
-     1049,
-     709
-    ],
-    [
      976,
      650,
      1022,
@@ -2043,7 +2005,9 @@
    ],
    "decision": "أمُّ سليم . ياأبا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:32.698300+00:00"
+   "decided_at": "2026-10-04T05:53:32.698300+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r009",
@@ -2083,7 +2047,9 @@
    ],
    "decision": "طلحةَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:53:34.922310+00:00"
+   "decided_at": "2026-10-04T05:53:34.922310+00:00",
+   "loc": "word",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r010",
@@ -2122,18 +2088,6 @@
      648,
      660,
      726
-    ],
-    [
-     517,
-     652,
-     562,
-     682
-    ],
-    [
-     430,
-     649,
-     502,
-     720
     ]
    ],
    "line_boxes": [
@@ -2146,7 +2100,9 @@
    ],
    "decision": "أجدُ الذى كنتُ(٢) أجدُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:14.829708+00:00"
+   "decided_at": "2026-10-04T05:54:14.829708+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r011",
@@ -2174,12 +2130,6 @@
      754,
      1759,
      830
-    ],
-    [
-     1627,
-     793,
-     1637,
-     814
     ]
    ],
    "line_boxes": [
@@ -2192,7 +2142,9 @@
    ],
    "decision": "الطَّلْقَ ،",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:20.354876+00:00"
+   "decided_at": "2026-10-04T05:54:20.354876+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r012",
@@ -2238,7 +2190,9 @@
    ],
    "decision": "وضربها المخاضُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:24.928854+00:00"
+   "decided_at": "2026-10-04T05:54:24.928854+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r013",
@@ -2268,12 +2222,6 @@
      873
     ],
     [
-     911,
-     748,
-     986,
-     802
-    ],
-    [
      812,
      754,
      909,
@@ -2290,7 +2238,9 @@
    ],
    "decision": "قدما (٣) فولدتْ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:30.954682+00:00"
+   "decided_at": "2026-10-04T05:54:30.954682+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r014",
@@ -2314,10 +2264,10 @@
    ],
    "word_boxes": [
     [
-     570,
-     750,
-     686,
-     813
+     569,
+     725,
+     675,
+     881
     ]
    ],
    "line_boxes": [
@@ -2330,7 +2280,9 @@
    ],
    "decision": "فقالت",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:33.716188+00:00"
+   "decided_at": "2026-10-04T05:54:33.716188+00:00",
+   "loc": "gap",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r015",
@@ -2370,7 +2322,9 @@
    ],
    "decision": "أمى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:35.563881+00:00"
+   "decided_at": "2026-10-04T05:54:35.563881+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r016",
@@ -2398,12 +2352,6 @@
      840,
      1248,
      923
-    ],
-    [
-     1143,
-     846,
-     1157,
-     877
     ]
    ],
    "line_boxes": [
@@ -2416,7 +2364,9 @@
    ],
    "decision": "تغدوَ (٤)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:39.308170+00:00"
+   "decided_at": "2026-10-04T05:54:39.308170+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r017",
@@ -2456,7 +2406,9 @@
    ],
    "decision": "على",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:40.630865+00:00"
+   "decided_at": "2026-10-04T05:54:40.630865+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r018",
@@ -2480,16 +2432,16 @@
    ],
    "word_boxes": [
     [
-     765,
-     845,
-     867,
-     920
-    ],
-    [
      691,
      789,
      733,
      938
+    ],
+    [
+     765,
+     845,
+     867,
+     920
     ]
    ],
    "line_boxes": [
@@ -2502,7 +2454,9 @@
    ],
    "decision": "الله صلى الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:44.804918+00:00"
+   "decided_at": "2026-10-04T05:54:44.804918+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r019",
@@ -2530,12 +2484,6 @@
      865,
      598,
      934
-    ],
-    [
-     425,
-     793,
-     496,
-     898
     ]
    ],
    "line_boxes": [
@@ -2548,7 +2496,9 @@
    ],
    "decision": "وسلم ، فلمَّا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:47.686866+00:00"
+   "decided_at": "2026-10-04T05:54:47.686866+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r020",
@@ -2572,12 +2522,6 @@
    ],
    "word_boxes": [
     [
-     1487,
-     939,
-     1521,
-     1027
-    ],
-    [
      1327,
      952,
      1514,
@@ -2594,7 +2538,9 @@
    ],
    "decision": "فانطلقتُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:52.929278+00:00"
+   "decided_at": "2026-10-04T05:54:52.929278+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r021",
@@ -2634,7 +2580,9 @@
    ],
    "decision": "صلى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:56.464032+00:00"
+   "decided_at": "2026-10-04T05:54:56.464032+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r022",
@@ -2674,7 +2622,9 @@
    ],
    "decision": "وسلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:54:58.449819+00:00"
+   "decided_at": "2026-10-04T05:54:58.449819+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r023",
@@ -2702,18 +2652,6 @@
      1080,
      1574,
      1145
-    ],
-    [
-     1461,
-     1080,
-     1506,
-     1145
-    ],
-    [
-     1384,
-     1080,
-     1450,
-     1145
     ]
    ],
    "line_boxes": [
@@ -2726,7 +2664,9 @@
    ],
    "decision": "أبى هريرة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:00.906846+00:00"
+   "decided_at": "2026-10-04T05:55:00.906846+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r024",
@@ -2766,7 +2706,9 @@
    ],
    "decision": "الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:02.754373+00:00"
+   "decided_at": "2026-10-04T05:55:02.754373+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r025",
@@ -2806,7 +2748,9 @@
    ],
    "decision": "وسلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:04.679382+00:00"
+   "decided_at": "2026-10-04T05:55:04.679382+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r026",
@@ -2835,12 +2779,6 @@
    ],
    "word_boxes": [
     [
-     1433,
-     1196,
-     1444,
-     1216
-    ],
-    [
      1320,
      1171,
      1407,
@@ -2863,7 +2801,9 @@
    ],
    "decision": "، إنمـا الشديدُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:12.477327+00:00"
+   "decided_at": "2026-10-04T05:55:12.477327+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r027",
@@ -2903,7 +2843,9 @@
    ],
    "decision": "يملكُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:15.000206+00:00"
+   "decided_at": "2026-10-04T05:55:15.000206+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r028",
@@ -2954,7 +2896,9 @@
    ],
    "decision": "عنـدَ الغضب",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:21.117701+00:00"
+   "decided_at": "2026-10-04T05:55:21.117701+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r029",
@@ -2987,42 +2931,6 @@
      1174,
      541,
      1219
-    ],
-    [
-     1249,
-     1255,
-     1259,
-     1289
-    ],
-    [
-     1562,
-     1252,
-     1584,
-     1286
-    ],
-    [
-     1087,
-     1252,
-     1104,
-     1286
-    ],
-    [
-     789,
-     1259,
-     797,
-     1270
-    ],
-    [
-     466,
-     1249,
-     483,
-     1265
-    ],
-    [
-     1732,
-     1295,
-     1749,
-     1322
     ]
    ],
    "line_boxes": [
@@ -3031,23 +2939,13 @@
      1152,
      1753,
      1244
-    ],
-    [
-     466,
-     1249,
-     1584,
-     1289
-    ],
-    [
-     440,
-     1250,
-     1749,
-     1361
     ]
    ],
    "decision": "عليـه . «",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:30.296927+00:00"
+   "decided_at": "2026-10-04T05:55:30.296927+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r030",
@@ -3071,12 +2969,6 @@
    ],
    "word_boxes": [
     [
-     1517,
-     1287,
-     1540,
-     1326
-    ],
-    [
      1417,
      1278,
      1496,
@@ -3093,7 +2985,9 @@
    ],
    "decision": "» بضم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:40.322045+00:00"
+   "decided_at": "2026-10-04T05:55:40.322045+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r031",
@@ -3133,7 +3027,9 @@
    ],
    "decision": "وفتح",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:42.221894+00:00"
+   "decided_at": "2026-10-04T05:55:42.221894+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r032",
@@ -3196,7 +3092,9 @@
    ],
    "decision": "عند العربِ منْ يصرعُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:55:58.018220+00:00"
+   "decided_at": "2026-10-04T05:55:58.018220+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r033",
@@ -3236,7 +3134,9 @@
    ],
    "decision": "الناسَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:00.756868+00:00"
+   "decided_at": "2026-10-04T05:56:00.756868+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r034",
@@ -3260,9 +3160,9 @@
    ],
    "word_boxes": [
     [
-     1354,
-     1388,
-     1563,
+     1329,
+     1369,
+     1583,
      1505
     ]
    ],
@@ -3276,7 +3176,9 @@
    ],
    "decision": "سُليمانَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:05.028033+00:00"
+   "decided_at": "2026-10-04T05:56:05.028033+00:00",
+   "loc": "gap",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r035",
@@ -3322,7 +3224,9 @@
    ],
    "decision": "رضى الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:07.041595+00:00"
+   "decided_at": "2026-10-04T05:56:07.041595+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r036",
@@ -3346,10 +3250,10 @@
    ],
    "word_boxes": [
     [
-     895,
+     868,
      1369,
-     914,
-     1425
+     931,
+     1505
     ]
    ],
    "line_boxes": [
@@ -3362,7 +3266,9 @@
    ],
    "decision": ":",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:10.492029+00:00"
+   "decided_at": "2026-10-04T05:56:10.492029+00:00",
+   "loc": "gap",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r037",
@@ -3414,7 +3320,9 @@
    ],
    "decision": "جالساً مع النبىِّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:15.515541+00:00"
+   "decided_at": "2026-10-04T05:56:15.515541+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r038",
@@ -3454,7 +3362,9 @@
    ],
    "decision": "الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:17.353320+00:00"
+   "decided_at": "2026-10-04T05:56:17.353320+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r039",
@@ -3494,7 +3404,9 @@
    ],
    "decision": "وسلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:18.972370+00:00"
+   "decided_at": "2026-10-04T05:56:18.972370+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r040",
@@ -3523,18 +3435,6 @@
    ],
    "word_boxes": [
     [
-     1372,
-     1469,
-     1396,
-     1501
-    ],
-    [
-     1334,
-     1469,
-     1369,
-     1500
-    ],
-    [
      1198,
      1465,
      1314,
@@ -3557,7 +3457,9 @@
    ],
    "decision": "(٥) يستبان، وأحدهما",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:27.440423+00:00"
+   "decided_at": "2026-10-04T05:56:27.440423+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r041",
@@ -3593,40 +3495,10 @@
      1573
     ],
     [
-     798,
-     1473,
-     813,
-     1535
-    ],
-    [
      647,
      1480,
      783,
      1531
-    ],
-    [
-     640,
-     1469,
-     647,
-     1479
-    ],
-    [
-     514,
-     1465,
-     624,
-     1531
-    ],
-    [
-     483,
-     1460,
-     496,
-     1490
-    ],
-    [
-     423,
-     1460,
-     481,
-     1585
     ]
    ],
    "line_boxes": [
@@ -3639,7 +3511,9 @@
    ],
    "decision": "احمرَّ وجهه ، وانتفختْ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:31.662523+00:00"
+   "decided_at": "2026-10-04T05:56:31.662523+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r042",
@@ -3663,52 +3537,10 @@
    ],
    "word_boxes": [
     [
-     926,
-     1474,
-     995,
-     1542
-    ],
-    [
-     835,
-     1496,
-     920,
-     1573
-    ],
-    [
-     798,
-     1473,
-     813,
-     1535
-    ],
-    [
-     647,
-     1480,
-     783,
-     1531
-    ],
-    [
-     640,
-     1469,
-     647,
-     1479
-    ],
-    [
      514,
      1465,
      624,
      1531
-    ],
-    [
-     483,
-     1460,
-     496,
-     1490
-    ],
-    [
-     423,
-     1460,
-     481,
-     1585
     ]
    ],
    "line_boxes": [
@@ -3721,7 +3553,9 @@
    ],
    "decision": "أوداجهُ (٦) .",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:37.006423+00:00"
+   "decided_at": "2026-10-04T05:56:37.006423+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r043",
@@ -3772,7 +3606,9 @@
    ],
    "decision": "الله عليه وسلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:47.392446+00:00"
+   "decided_at": "2026-10-04T05:56:47.392446+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r044",
@@ -3807,18 +3643,6 @@
      1633
     ],
     [
-     932,
-     1552,
-     1053,
-     1702
-    ],
-    [
-     913,
-     1582,
-     944,
-     1618
-    ],
-    [
      866,
      1573,
      891,
@@ -3835,7 +3659,9 @@
    ],
    "decision": "«إنى لأَعلمُ كلمةً لو",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:56:56.186887+00:00"
+   "decided_at": "2026-10-04T05:56:56.186887+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r045",
@@ -3881,7 +3707,9 @@
    ],
    "decision": "قالها لذهبَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:57:00.330782+00:00"
+   "decided_at": "2026-10-04T05:57:00.330782+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r046",
@@ -3903,43 +3731,20 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     523,
-     1554,
-     615,
-     1635
-    ],
-    [
-     482,
-     1558,
-     496,
-     1587
-    ],
-    [
-     1653,
-     1696,
-     1747,
-     1747
-    ]
-   ],
-   "line_boxes": [
-    [
-     482,
-     1552,
-     1749,
-     1702
-    ],
-    [
-     418,
-     1665,
-     1747,
-     1771
-    ]
-   ],
-   "decision": "مايجدُ (٧) ، لو",
+   "word_boxes": [],
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:58:09.445591+00:00"
+   "decided_at": "2026-10-04T05:58:09.445591+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    1565,
+    2144,
+    1747
+   ],
+   "previous_decision": "مايجدُ (٧) ، لو",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r047",
@@ -3963,18 +3768,6 @@
    ],
    "word_boxes": [
     [
-     523,
-     1554,
-     615,
-     1635
-    ],
-    [
-     482,
-     1558,
-     496,
-     1587
-    ],
-    [
      1653,
      1696,
      1747,
@@ -3982,12 +3775,6 @@
     ]
    ],
    "line_boxes": [
-    [
-     482,
-     1552,
-     1749,
-     1702
-    ],
     [
      418,
      1665,
@@ -3997,7 +3784,9 @@
    ],
    "decision": "قال",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:58:11.893788+00:00"
+   "decided_at": "2026-10-04T05:58:11.893788+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r048",
@@ -4048,7 +3837,9 @@
    ],
    "decision": "أعوذُ بالله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:58:58.438002+00:00"
+   "decided_at": "2026-10-04T05:58:58.438002+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r049",
@@ -4072,9 +3863,9 @@
    ],
    "word_boxes": [
     [
-     982,
-     1672,
-     1135,
+     981,
+     1665,
+     1161,
      1771
     ]
    ],
@@ -4088,7 +3879,9 @@
    ],
    "decision": "الرَّجيمِ (٨)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:02.340529+00:00"
+   "decided_at": "2026-10-04T05:59:02.340529+00:00",
+   "loc": "gap",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r050",
@@ -4112,16 +3905,10 @@
    ],
    "word_boxes": [
     [
-     783,
-     1702,
-     831,
-     1726
-    ],
-    [
-     666,
-     1667,
-     750,
-     1741
+     652,
+     1665,
+     848,
+     1771
     ]
    ],
    "line_boxes": [
@@ -4134,7 +3921,9 @@
    ],
    "decision": "عنهُ مايجدُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:08.115710+00:00"
+   "decided_at": "2026-10-04T05:59:08.115710+00:00",
+   "loc": "gap",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r051",
@@ -4156,73 +3945,20 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     418,
-     1692,
-     426,
-     1717
-    ],
-    [
-     1637,
-     1837,
-     1699,
-     1894
-    ],
-    [
-     1518,
-     1837,
-     1607,
-     1884
-    ],
-    [
-     1405,
-     1867,
-     1411,
-     1872
-    ],
-    [
-     1258,
-     1831,
-     1315,
-     1890
-    ],
-    [
-     1194,
-     1845,
-     1238,
-     1884
-    ],
-    [
-     1152,
-     1822,
-     1178,
-     1888
-    ],
-    [
-     1047,
-     1830,
-     1133,
-     1888
-    ]
-   ],
-   "line_boxes": [
-    [
-     418,
-     1665,
-     1747,
-     1771
-    ],
-    [
-     412,
-     1802,
-     1699,
-     1916
-    ]
-   ],
-   "decision": ":",
+   "word_boxes": [],
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:10.741400+00:00"
+   "decided_at": "2026-10-04T05:59:10.741400+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    1667,
+    2144,
+    1916
+   ],
+   "previous_decision": ":",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r052",
@@ -4244,73 +3980,20 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     418,
-     1692,
-     426,
-     1717
-    ],
-    [
-     1637,
-     1837,
-     1699,
-     1894
-    ],
-    [
-     1518,
-     1837,
-     1607,
-     1884
-    ],
-    [
-     1405,
-     1867,
-     1411,
-     1872
-    ],
-    [
-     1258,
-     1831,
-     1315,
-     1890
-    ],
-    [
-     1194,
-     1845,
-     1238,
-     1884
-    ],
-    [
-     1152,
-     1822,
-     1178,
-     1888
-    ],
-    [
-     1047,
-     1830,
-     1133,
-     1888
-    ]
-   ],
-   "line_boxes": [
-    [
-     418,
-     1665,
-     1747,
-     1771
-    ],
-    [
-     412,
-     1802,
-     1699,
-     1916
-    ]
-   ],
-   "decision": "(١) المدينة",
+   "word_boxes": [],
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:13.289670+00:00"
+   "decided_at": "2026-10-04T05:59:13.289670+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    1667,
+    2144,
+    1916
+   ],
+   "previous_decision": "(١) المدينة",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r053",
@@ -4344,12 +4027,6 @@
      1817,
      810,
      1880
-    ],
-    [
-     631,
-     1813,
-     694,
-     1867
     ]
    ],
    "line_boxes": [
@@ -4362,7 +4039,9 @@
    ],
    "decision": "من ألم الوضع",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:23.070322+00:00"
+   "decided_at": "2026-10-04T05:59:23.070322+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r054",
@@ -4386,18 +4065,6 @@
    ],
    "word_boxes": [
     [
-     838,
-     1825,
-     896,
-     1881
-    ],
-    [
-     710,
-     1817,
-     810,
-     1880
-    ],
-    [
      631,
      1813,
      694,
@@ -4414,7 +4081,9 @@
    ],
    "decision": "(٣) أم سليم وأبو",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:28.056677+00:00"
+   "decided_at": "2026-10-04T05:59:28.056677+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r055",
@@ -4454,7 +4123,9 @@
    ],
    "decision": "المدينة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:31.559049+00:00"
+   "decided_at": "2026-10-04T05:59:31.559049+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r056",
@@ -4494,7 +4165,9 @@
    ],
    "decision": "المصطفى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:33.793192+00:00"
+   "decided_at": "2026-10-04T05:59:33.793192+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r057",
@@ -4545,7 +4218,9 @@
    ],
    "decision": "عليـه وسـلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:40.074874+00:00"
+   "decided_at": "2026-10-04T05:59:40.074874+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r058",
@@ -4569,12 +4244,6 @@
    ],
    "word_boxes": [
     [
-     880,
-     1906,
-     939,
-     1962
-    ],
-    [
      766,
      1908,
      856,
@@ -4591,7 +4260,9 @@
    ],
    "decision": "(٤) تعرضه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:42.718889+00:00"
+   "decided_at": "2026-10-04T05:59:42.718889+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r059",
@@ -4637,7 +4308,9 @@
    ],
    "decision": "رجاء تكثير",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:56.041714+00:00"
+   "decided_at": "2026-10-04T05:59:56.041714+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r060",
@@ -4682,7 +4355,9 @@
    ],
    "decision": "الأتقيـاء",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:01.048396+00:00"
+   "decided_at": "2026-10-04T06:00:01.048396+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r061",
@@ -4722,7 +4397,9 @@
    ],
    "decision": "نعم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:02.630858+00:00"
+   "decided_at": "2026-10-04T06:00:02.630858+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r062",
@@ -4757,22 +4434,10 @@
      2119
     ],
     [
-     1022,
-     2080,
-     1046,
-     2107
-    ],
-    [
      875,
      2057,
      995,
      2119
-    ],
-    [
-     785,
-     2056,
-     850,
-     2110
     ]
    ],
    "line_boxes": [
@@ -4785,7 +4450,9 @@
    ],
    "decision": "العباد كثيرة * وأجلهن",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:52.718099+00:00"
+   "decided_at": "2026-10-04T06:00:52.718099+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r063",
@@ -4809,24 +4476,6 @@
    ],
    "word_boxes": [
     [
-     1072,
-     2056,
-     1240,
-     2119
-    ],
-    [
-     1022,
-     2080,
-     1046,
-     2107
-    ],
-    [
-     875,
-     2057,
-     995,
-     2119
-    ],
-    [
      785,
      2056,
      850,
@@ -4843,7 +4492,9 @@
    ],
    "decision": "نجابة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:56.781810+00:00"
+   "decided_at": "2026-10-04T06:00:56.781810+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r064",
@@ -4883,7 +4534,9 @@
    ],
    "decision": "هذا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:59.978263+00:00"
+   "decided_at": "2026-10-04T06:00:59.978263+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r065",
@@ -4923,7 +4576,9 @@
    ],
    "decision": "الأخذ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:06.054295+00:00"
+   "decided_at": "2026-10-04T06:01:06.054295+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r066",
@@ -4963,7 +4618,9 @@
    ],
    "decision": "وترك",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:08.828644+00:00"
+   "decided_at": "2026-10-04T06:01:08.828644+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r067",
@@ -5003,7 +4660,9 @@
    ],
    "decision": "عن المصائب .",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:11.944571+00:00"
+   "decided_at": "2026-10-04T06:01:11.944571+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r068",
@@ -5049,7 +4708,9 @@
    ],
    "decision": "تشهد الحرب",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:15.499294+00:00"
+   "decided_at": "2026-10-04T06:01:15.499294+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r069",
@@ -5089,7 +4750,9 @@
    ],
    "decision": "واجتهادها",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:24.930611+00:00"
+   "decided_at": "2026-10-04T06:01:24.930611+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r070",
@@ -5129,7 +4792,9 @@
    ],
    "decision": "عمل",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:27.540160+00:00"
+   "decided_at": "2026-10-04T06:01:27.540160+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r071",
@@ -5169,7 +4834,9 @@
    ],
    "decision": "والترفيه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:30.404530+00:00"
+   "decided_at": "2026-10-04T06:01:30.404530+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r072",
@@ -5199,12 +4866,6 @@
      2363
     ],
     [
-     1361,
-     2318,
-     1384,
-     2349
-    ],
-    [
      1301,
      2316,
      1357,
@@ -5221,7 +4882,9 @@
    ],
    "decision": "وتحمل المشاق",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:34.336796+00:00"
+   "decided_at": "2026-10-04T06:01:34.336796+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r073",
@@ -5261,7 +4924,9 @@
    ],
    "decision": "سبيل",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:36.720620+00:00"
+   "decided_at": "2026-10-04T06:01:36.720620+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r074",
@@ -5285,12 +4950,6 @@
    ],
    "word_boxes": [
     [
-     1031,
-     2326,
-     1040,
-     2342
-    ],
-    [
      872,
      2305,
      1010,
@@ -5301,12 +4960,6 @@
      2299,
      846,
      2358
-    ],
-    [
-     673,
-     2302,
-     703,
-     2346
     ]
    ],
    "line_boxes": [
@@ -5319,7 +4972,9 @@
    ],
    "decision": "، ومشروعية المعاريض بلا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:48.538952+00:00"
+   "decided_at": "2026-10-04T06:01:48.538952+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r075",
@@ -5359,7 +5014,9 @@
    ],
    "decision": "إبطال",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:01:52.220353+00:00"
+   "decided_at": "2026-10-04T06:01:52.220353+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r076",
@@ -5416,7 +5073,9 @@
    ],
    "decision": "مسلم، وإجابة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:02.841472+00:00"
+   "decided_at": "2026-10-04T06:02:02.841472+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r077",
@@ -5456,7 +5115,9 @@
    ],
    "decision": "رسول",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:04.881938+00:00"
+   "decided_at": "2026-10-04T06:02:04.881938+00:00",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-r078",
@@ -5473,17 +5134,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "عليه وسلم بلغها الله",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:11.902851+00:00"
+   "decided_at": "2026-10-04T06:02:11.902851+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "عليه وسلم بلغها الله",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r079",
@@ -5500,17 +5163,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "مناها وأصلح لها ذريتها",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:19.933416+00:00"
+   "decided_at": "2026-10-04T06:02:19.933416+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "مناها وأصلح لها ذريتها",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r080",
@@ -5527,17 +5192,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "، وقوة ثبات قلب",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:29.432904+00:00"
+   "decided_at": "2026-10-04T06:02:29.432904+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "، وقوة ثبات قلب",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r081",
@@ -5554,17 +5221,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "أم سليم تتحلى بالصبر",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:32.356840+00:00"
+   "decided_at": "2026-10-04T06:02:32.356840+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "أم سليم تتحلى بالصبر",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r082",
@@ -5581,17 +5250,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "وتتوج بالتسليم لأمر الله",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:38.568453+00:00"
+   "decided_at": "2026-10-04T06:02:38.568453+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "وتتوج بالتسليم لأمر الله",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r083",
@@ -5608,17 +5279,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "تعالى ، ومن ترك",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:43.399756+00:00"
+   "decided_at": "2026-10-04T06:02:43.399756+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "تعالى ، ومن ترك",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r084",
@@ -5635,17 +5308,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "شيئا لله عوضه الله",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:45.887857+00:00"
+   "decided_at": "2026-10-04T06:02:45.887857+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "شيئا لله عوضه الله",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r085",
@@ -5662,17 +5337,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "خيرا منه",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:02:47.656341+00:00"
+   "decided_at": "2026-10-04T06:02:47.656341+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "خيرا منه",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r086",
@@ -5694,17 +5371,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "(٥) يسب كل منهما صاحبه",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:05.163405+00:00"
+   "decided_at": "2026-10-04T06:03:05.163405+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "(٥) يسب كل منهما صاحبه",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r087",
@@ -5721,17 +5400,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "(٦) عروق عنقه",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:09.161418+00:00"
+   "decided_at": "2026-10-04T06:03:09.161418+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "(٦) عروق عنقه",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r088",
@@ -5748,17 +5429,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "(٧) شدة الغضب",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:11.303090+00:00"
+   "decided_at": "2026-10-04T06:03:11.303090+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "(٧) شدة الغضب",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r089",
@@ -5775,17 +5458,19 @@
     }
    ],
    "word_boxes": [],
-   "line_boxes": [
-    [
-     1044,
-     2616,
-     1687,
-     2699
-    ]
-   ],
-   "decision": "(٨) أعتصم بالله",
+   "line_boxes": [],
+   "decision": null,
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:13.279037+00:00"
+   "decided_at": "2026-10-04T06:03:13.279037+00:00",
+   "loc": "uncertain",
+   "hint_box": [
+    0,
+    2624,
+    2144,
+    2689
+   ],
+   "previous_decision": "(٨) أعتصم بالله",
+   "requeued": "crop did not show the disputed words (bug fixed Oct 4)"
   },
   {
    "id": "riyad1956-p041-r090",
@@ -5825,7 +5510,9 @@
    ],
    "decision": "المبعد",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:17.392486+00:00"
+   "decided_at": "2026-10-04T06:03:17.392486+00:00",
+   "loc": "word",
+   "hint_box": null
   }
  ],
  "spotcheck": [
@@ -5852,7 +5539,9 @@
    "verdict": "ok",
    "fix": "أنسَ",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "word",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-s001",
@@ -5877,7 +5566,9 @@
    "verdict": "ok",
    "fix": "أنّ",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "word",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-s002",
@@ -5902,7 +5593,9 @@
    "verdict": "ok",
    "fix": "والصرعةُ",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-s003",
@@ -5927,7 +5620,9 @@
    "verdict": "ok",
    "fix": "ورجلانِ",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "approx",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-s004",
@@ -5952,7 +5647,9 @@
    "verdict": "ok",
    "fix": "منَ",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "word",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-s005",
@@ -5977,7 +5674,9 @@
    "verdict": "ok",
    "fix": "الصباح",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "word",
+   "hint_box": null
   },
   {
    "id": "riyad1956-p041-s006",
@@ -6002,8 +5701,11 @@
    "verdict": "ok",
    "fix": "الأولاد",
    "reviewer": "rawan",
-   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok",
+   "loc": "word",
+   "hint_box": null
   }
  ],
- "structure_reviewed": true
+ "structure_reviewed": false,
+ "locator": "gold_locate v2 (word-level, honest uncertainty)"
 }

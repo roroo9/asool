@@ -1,0 +1,386 @@
+{
+ "date": "2026-10-04T16:41:17.899084+00:00",
+ "reason": "review-screen bug: crops could show a neighbouring line or highlight a whole line; decisions whose crop did not contain the disputed words are re-queued",
+ "pages": {
+  "riyad1956-p041": {
+   "decided": 91,
+   "requeued": 15,
+   "items": [
+    {
+     "id": "riyad1956-p041-r046",
+     "previous_decision": "مايجدُ (٧) ، لو",
+     "candidates": [
+      "مايجدُ (٧) ، لو",
+      "“ماتحل 2 أوقال"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r051",
+     "previous_decision": ":",
+     "candidates": [
+      ":",
+      "؛ (0 الديغة ٠.2‏ () من ]| الوضع"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r052",
+     "previous_decision": "(١) المدينة",
+     "candidates": [
+      "(١) المدينة",
+      "؛ (0 الديغة ٠.2‏ () من ]| الوضع"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r078",
+     "previous_decision": "عليه وسلم بلغها الله",
+     "candidates": [
+      "عليه وسلم بلغها الله"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r079",
+     "previous_decision": "مناها وأصلح لها ذريتها",
+     "candidates": [
+      "مناها وأصلح لها ذريتها"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r080",
+     "previous_decision": "، وقوة ثبات قلب",
+     "candidates": [
+      "، وقوة ثبات قلب"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r081",
+     "previous_decision": "أم سليم تتحلى بالصبر",
+     "candidates": [
+      "أم سليم تتحلى بالصبر"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r082",
+     "previous_decision": "وتتوج بالتسليم لأمر الله",
+     "candidates": [
+      "وتتوج بالتسليم لأمر الله"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r083",
+     "previous_decision": "تعالى ، ومن ترك",
+     "candidates": [
+      "تعالى ، ومن ترك"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r084",
+     "previous_decision": "شيئا لله عوضه الله",
+     "candidates": [
+      "شيئا لله عوضه الله"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r085",
+     "previous_decision": "خيرا منه",
+     "candidates": [
+      "خيرا منه"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r086",
+     "previous_decision": "(٥) يسب كل منهما صاحبه",
+     "candidates": [
+      "(٥) يسب كلمنهما صاحبه",
+      "(٥) يسب كل منهما صاحبه"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r087",
+     "previous_decision": "(٦) عروق عنقه",
+     "candidates": [
+      "(٦) عروق عنقه"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r088",
+     "previous_decision": "(٧) شدة الغضب",
+     "candidates": [
+      "(٧) شدة الغضب"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p041-r089",
+     "previous_decision": "(٨) أعتصم بالله",
+     "candidates": [
+      "(٨) أعتصم بالله"
+     ],
+     "new_location": "uncertain"
+    }
+   ],
+   "spotcheck_requeued": 0
+  },
+  "riyad1956-p030": {
+   "decided": 66,
+   "requeued": 20,
+   "items": [
+    {
+     "id": "riyad1956-p030-r012",
+     "previous_decision": ":",
+     "candidates": [
+      ":",
+      "د"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r019",
+     "previous_decision": "الصــبر",
+     "candidates": [
+      "الصبر",
+      "الصــبر",
+      "العسسور"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r026",
+     "previous_decision": "ٱلصَّابِرِينَ ﴾",
+     "candidates": [
+      "ٱلصَّابِرِينَ ﴾",
+      "الصَّابِرِينَ ﴾",
+      "ألضًا بين ) وقال تعالل ( إننا يوتى ألصّا يرون رم بير حِسَابِرٍ 9 )"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r027",
+     "previous_decision": "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ",
+     "candidates": [
+      "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ",
+      "﴿ إِنَّمَا يُوَفَّى الصَّابِرُونَ",
+      "( وَلَمَ 1"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r028",
+     "previous_decision": "أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦)",
+     "candidates": [
+      "أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦)",
+      "( وَلَمَ 1"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r029",
+     "previous_decision": "﴾",
+     "candidates": [
+      "﴾",
+      "( وَلَمَ 1"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r030",
+     "previous_decision": "وقال تعالى",
+     "candidates": [
+      "وقال تعالى",
+      "( وَلَمَ 1"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r031",
+     "previous_decision": "﴿ وَلَمَنْ (٧)",
+     "candidates": [
+      "﴿ وَلَمَنْ (٧)",
+      "( وَلَمَ 1"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r033",
+     "previous_decision": "عَزْمِ ٱلْأُمُورِ ﴾",
+     "candidates": [
+      "عَزْمِ ٱلْأُمُورِ ﴾",
+      "عَزْمِ الْأُمُورِ ﴾",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r034",
+     "previous_decision": "وقال تعالى",
+     "candidates": [
+      "وقال تعالى",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r035",
+     "previous_decision": "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ",
+     "candidates": [
+      "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ",
+      "﴿ اسْتَعِينُوا (٩) بِالصَّبْرِ",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r036",
+     "previous_decision": "وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ",
+     "candidates": [
+      "وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ",
+      "وَالصَّلَاةِ إِنَّ اللهَ مَعَ",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r037",
+     "previous_decision": "ٱلصَّابِرِينَ ﴾",
+     "candidates": [
+      "ٱلصَّابِرِينَ ﴾",
+      "الصَّابِرِينَ ﴾",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r038",
+     "previous_decision": "وقال تعالى",
+     "candidates": [
+      "وقال تعالى",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r039",
+     "previous_decision": "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ",
+     "candidates": [
+      "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r040",
+     "previous_decision": "ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
+     "candidates": [
+      "ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
+      "الْمُجَاهِدِينَ مِنْكُمْ وَالصَّابِرِينَ ﴾",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r041",
+     "previous_decision": "والآيات في",
+     "candidates": [
+      "والآيات فى",
+      "در الأمرر) وتلل (اتيا”» ولي\" ألمايرين) 0 لمتكم ف"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r052",
+     "previous_decision": "(٥) أى لنختبرنــكم على",
+     "candidates": [
+      "(٥) أى لنختبرنكم على",
+      "(٥) أى لنختبرنــكم على",
+      "(4)أقيموا طل الجباد (ه) أىلنختير نيعي"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r057",
+     "previous_decision": "كرم الله وجهه",
+     "candidates": [
+      "كرم الله وجهه",
+      "اله تغالىقالعلى كرماللهوجبه"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p030-r058",
+     "previous_decision": "يحثى",
+     "candidates": [
+      "يحثى",
+      "يعنى",
+      "مث"
+     ],
+     "new_location": "uncertain"
+    }
+   ],
+   "spotcheck_requeued": 0
+  },
+  "riyad1956-p020": {
+   "decided": 80,
+   "requeued": 2,
+   "items": [
+    {
+     "id": "riyad1956-p020-r011",
+     "previous_decision": "(٢)",
+     "candidates": [
+      "(٢)",
+      "9"
+     ],
+     "new_location": "uncertain"
+    },
+    {
+     "id": "riyad1956-p020-r018",
+     "previous_decision": "نعمْ كانَ",
+     "candidates": [
+      "نعمْ كانَ",
+      "32"
+     ],
+     "new_location": "uncertain"
+    }
+   ],
+   "spotcheck_requeued": 0
+  },
+  "riyad1956-p012": {
+   "decided": 2,
+   "requeued": "all (page rebuilt under rule v3)",
+   "items": [
+    {
+     "id": "riyad1956-p012-r000",
+     "previous_decision": "—",
+     "candidates": [
+      "—",
+      "-",
+      "لد # ؤس"
+     ]
+    },
+    {
+     "id": "riyad1956-p012-r001",
+     "previous_decision": "—",
+     "candidates": [
+      "—",
+      "-",
+      "لد # ؤس"
+     ]
+    }
+   ]
+  }
+ },
+ "total_requeued_bakeoff": 37,
+ "locator": "gold_locate v2 (strict)",
+ "total_spotcheck_requeued": 0
+}

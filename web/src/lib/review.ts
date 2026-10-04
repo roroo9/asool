@@ -1,22 +1,27 @@
 "use client";
 
 export type Candidate = { text: string; readers: string[] };
-export type ReviewItem = {
+export type Loc = "word" | "approx" | "gap" | "uncertain";
+export type Located = {
+  loc: Loc;
+  word_boxes: number[][];
+  line_boxes: number[][];
+  hint_box: number[] | null;
+};
+export type ReviewItem = Located & {
   id: string;
   block: number;
   tok_from: number;
   tok_to: number;
   candidates: Candidate[];
-  word_boxes: number[][];
-  line_boxes: number[][];
   decision: string | null;
+  previous_decision?: string;
+  requeued?: string;
 };
-export type SpotItem = {
+export type SpotItem = Located & {
   id: string;
   tok: number;
   text: string;
-  word_boxes: number[][];
-  line_boxes: number[][];
   verdict: "ok" | "wrong" | null;
   fix: string | null;
 };
@@ -104,23 +109,30 @@ export async function api<T>(path: string, body?: unknown): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export function cropUrl(pid: string, lineBoxes: number[][], wordBoxes: number[][]) {
-  const boxes = lineBoxes.length ? lineBoxes : wordBoxes;
-  if (!boxes.length) return null;
-  const x0 = Math.min(...boxes.map((b) => b[0]));
-  const y0 = Math.min(...boxes.map((b) => b[1]));
-  const x1 = Math.max(...boxes.map((b) => b[2]));
-  const y1 = Math.max(...boxes.map((b) => b[3]));
-  const hl = wordBoxes.map((b) => b.join(",")).join(";");
+const boxParam = (bs: number[][]) => bs.map((b) => b.join(",")).join(";");
+
+/** Crop of the full printed line(s) containing the disputed words (null if not located). */
+export function cropUrl(pid: string, x: Located): string | null {
+  if (x.loc === "uncertain" || !x.line_boxes.length) return null;
+  const y0 = Math.min(...x.line_boxes.map((b) => b[1]), ...x.word_boxes.map((b) => b[1]));
+  const y1 = Math.max(...x.line_boxes.map((b) => b[3]), ...x.word_boxes.map((b) => b[3]));
   const q = new URLSearchParams({
-    x0: String(x0),
     y0: String(y0),
-    x1: String(x1),
     y1: String(y1),
-    hl,
+    hl: boxParam(x.word_boxes),
     t: getToken(),
   });
   return `/api/review/gold/${pid}/crop?${q}`;
+}
+
+/** Whole page with the disputed words (or the uncertain area) marked. */
+export function pageUrl(pid: string, x: Located): string {
+  const q = new URLSearchParams({
+    hl: boxParam(x.word_boxes),
+    hint: x.hint_box ? x.hint_box.join(",") : "",
+    t: getToken(),
+  });
+  return `/api/review/gold/${pid}/page?${q}`;
 }
 
 export const BLOCK_TYPES: Record<string, string> = {

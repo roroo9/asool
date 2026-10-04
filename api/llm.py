@@ -299,8 +299,15 @@ def _openrouter(model, system, user, img, schema, effort, max_tokens) -> LLMResu
     if ch.get("finish_reason") == "length":
         raise TruncatedError(
             f"{model} hit max_tokens",
-            LLMResult("", model, u.get("prompt_tokens", 0), u.get("completion_tokens", 0),
-                      False, 0.0, float(u.get("cost", 0.0))),
+            LLMResult(
+                "",
+                model,
+                u.get("prompt_tokens", 0),
+                u.get("completion_tokens", 0),
+                False,
+                0.0,
+                float(u.get("cost", 0.0)),
+            ),
         )
     return LLMResult(
         ch["message"]["content"] or "",

@@ -7,9 +7,11 @@ import {
   api,
   BLOCK_TYPES,
   cropUrl,
+  pageUrl,
   getReviewer,
   toArabicDigits,
   type Draft,
+  type Located,
   type Progress,
 } from "@/lib/review";
 
@@ -38,9 +40,21 @@ export default function GoldPage() {
     api<Draft>(`/${page}`)
       .then((x) => {
         setD(x);
-        const [m, i] = firstOpen(x);
-        setMode(m);
-        setIdx(i);
+        // ?item=<id> opens a specific dispute or spot-check (useful for re-checks).
+        const want = new URLSearchParams(window.location.search).get("item");
+        const ri = want ? x.review_items.findIndex((it) => it.id === want) : -1;
+        const si = want ? x.spotcheck.findIndex((it) => it.id === want) : -1;
+        if (ri >= 0) {
+          setMode("items");
+          setIdx(ri);
+        } else if (si >= 0) {
+          setMode("spot");
+          setIdx(si);
+        } else {
+          const [m, i] = firstOpen(x);
+          setMode(m);
+          setIdx(i);
+        }
       })
       .catch((e: Error) => setError(e.message));
   }, [page]);
@@ -241,8 +255,15 @@ export default function GoldPage() {
             الموضع {toArabicDigits(idx + 1)} من {toArabicDigits(d.review_items.length)} ·{" "}
             {BLOCK_TYPES[d.blocks[item.block]?.type] ?? ""}
             {item.decision !== null && <span className="text-thread"> · تمت مراجعته</span>}
+            {item.requeued && item.decision === null && (
+              <span className="text-amber">
+                {" "}
+                · أعيد للمراجعة لأن الصورة السابقة لم تكن تعرض الموضع (اختيارك السابق: «
+                {item.previous_decision}»)
+              </span>
+            )}
           </p>
-          <Crop pid={d.page_id} lines={item.line_boxes} words={item.word_boxes} />
+          <Crop key={item.id} pid={d.page_id} x={item} />
           {context && (
             <p className="mt-3 font-source text-xl leading-loose">
               <span className="opacity-50">{context.before} </span>
@@ -292,7 +313,7 @@ export default function GoldPage() {
             {toArabicDigits(d.spotcheck.length)}). هل الكلمة مطابقة للمطبوع، بما في ذلك
             التشكيل؟
           </p>
-          <Crop pid={d.page_id} lines={spot.line_boxes} words={spot.word_boxes} />
+          <Crop key={spot.id} pid={d.page_id} x={spot} />
           <p className="mt-4 font-source text-4xl">{spot.text}</p>
           <div className="mt-4 flex gap-3">
             <button className="rounded bg-thread px-4 py-2 text-ink" onClick={() => judge("ok")}>
@@ -325,16 +346,58 @@ export default function GoldPage() {
   );
 }
 
-function Crop({ pid, lines, words }: { pid: string; lines: number[][]; words: number[][] }) {
-  const src = cropUrl(pid, lines, words);
-  if (!src) return <p className="mt-3 text-amber">لا تتوفر صورة لهذا الموضع؛ راجع الصفحة كاملة.</p>;
+function Crop({ pid, x }: { pid: string; x: Located }) {
+  // Keyed by item id: a new dispute always mounts a new image, so the previous crop can never
+  // stay on screen while the next one loads.
+  const crop = cropUrl(pid, x);
+  const [full, setFull] = useState(crop === null);
+  const [loaded, setLoaded] = useState(false);
+  const src = full ? pageUrl(pid, x) : crop!;
+  const label =
+    x.loc === "uncertain"
+      ? "الموقع غير مؤكد: المنطقة المرجّحة مظللة بالكهرماني"
+      : x.loc === "word"
+        ? "الكلمات المختلف فيها مظللة باللون البنفسجي"
+        : "الموقع تقريبي: الكلمات المرجّحة مظللة باللون البنفسجي";
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt="سطر من الصفحة الأصلية، والكلمات المختلف فيها مظللة"
-      className="mt-3 w-full rounded border border-ink/15 bg-white"
-    />
+    <div className="mt-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+        <span className={x.loc === "word" ? "" : "font-medium text-amber"}>
+          {x.loc === "word" ? "" : "⚠ "}
+          {label}
+        </span>
+        {crop !== null && (
+          <button
+            className="rounded border border-ink/30 px-3 py-1"
+            onClick={() => {
+              setLoaded(false);
+              setFull((f) => !f);
+            }}
+          >
+            {full ? "عرض السطر فقط" : "عرض الصفحة كاملة"}
+          </button>
+        )}
+      </div>
+      <div className="relative mt-2 min-h-24 rounded border border-ink/15 bg-white">
+        {!loaded && (
+          <p className="absolute inset-0 grid place-items-center text-sm opacity-60">
+            جارٍ تحميل الصورة…
+          </p>
+        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          key={src}
+          src={src}
+          onLoad={() => setLoaded(true)}
+          alt={
+            full
+              ? "الصفحة الأصلية كاملة مع تظليل موضع الخلاف"
+              : "السطر من الصفحة الأصلية مع تظليل الكلمات المختلف فيها"
+          }
+          className={`w-full rounded ${loaded ? "" : "invisible"}`}
+        />
+      </div>
+    </div>
   );
 }
 

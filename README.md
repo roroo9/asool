@@ -41,10 +41,12 @@ The gold set is the human-verified reference used to measure extraction quality.
    - Reader A: Tesseract 5 `ara` (classical OCR, run locally).
    - Reader B: Claude Opus 5.5 (vision-language model).
    - Reader C: Claude Fable 5.1 on the 3 bake-off pages; **Surya OCR 2** (open-source, run locally) on the other 12 pages.
-2. A word is **auto-accepted only if all three readers agree** on its letters, and Readers B and C also agree on its tashkeel. Tesseract votes on letters only, because it does not read tashkeel reliably.
-   **Tashkeel abstention (rule v2, owner decision Oct 4):** when a reader outputs **no tashkeel at all** on a word whose letters match the others, it abstains on tashkeel only; this is not a disagreement. The tashkeel is then decided by the remaining reader. These words are auto-accepted but spot-checked at **10%** (twice the normal rate). Everything else goes to a human.
-3. The human reviewer sees only the disputed phrases, each with the printed line cropped from the original page and the disputed words highlighted, and chooses a reading or types a correction (`/review/gold`).
-4. A random 5% of fully agreed words (weighted toward words with tashkeel) and 10% of tashkeel-abstention words are shown to the reviewer as a spot-check.
+2. A word is **auto-accepted only if all three readers agree** on its letters, and Readers B and C also agree on its tashkeel. Tesseract votes on letters only, because it does not read tashkeel reliably. Two abstention rules (owner decisions, Oct 4):
+   - **Tashkeel abstention:** a reader that outputs **no tashkeel at all** on a word whose letters match the others abstains on tashkeel only; the remaining reader decides the tashkeel.
+   - **Tesseract abstention:** when Tesseract reads a word with **less than 60% confidence** (or not at all), it abstains, and the remaining independent readers B and C must then agree **exactly**, tashkeel included.
+   Words accepted under either abstention rule are spot-checked at **10%** (twice the normal rate). Everything else goes to a human.
+3. The human reviewer sees only the disputed phrases, each with the full printed line from the original page and **only the disputed words** highlighted, and chooses a reading or types a correction (`/review/gold`). If the words cannot be located reliably, the screen says «الموقع غير مؤكد» and shows the full page with the likely area marked; a «عرض الصفحة كاملة» button is always available.
+4. A random 5% of fully agreed words (weighted toward words with tashkeel) and 10% of words accepted by abstention are shown to the reviewer as a spot-check.
 5. The reviewer confirms the block types (body, hadith, Quran, footnote, editor commentary…) before the page is finalized.
 
 **Bias controls.**
@@ -58,6 +60,8 @@ The gold set is the human-verified reference used to measure extraction quality.
 | Pages | Words | Auto-accepted | Human decisions | Spot-checked | Spot-check errors |
 |---|---|---|---|---|---|
 | 41, 30, 20 (bake-off) | 942 | 425 | 237 | 21 | 0 |
-| 12 other pages (rule v2) | 3,541 | 1,697 (476 by tashkeel abstention) | 912 (pending) | 109, of which 48 abstention words (pending) | pending |
+| 12 other pages (rule v3) | 3,541 | 2,375 (476 tashkeel abstention, 678 Tesseract abstention) | 755 (pending) | 176 (pending) | pending |
+
+**Review-screen bug and audit (Oct 4).** The first version of the review screen could show a neighbouring line when a disputed phrase was not found by OCR, highlighted whole lines instead of the disputed words, and could keep the previous image visible while the next one loaded. Fixed: word-level location with honest "uncertain" labels, one image per dispute, full-page view. All decisions made with the old screen were audited against the new locator: **37 of 237 bake-off decisions** (and both decisions made on page 12) were put back in the review queue because their crop did not show the disputed words. No spot-check answer was affected. Audit file: `data/gold/audit_2026-10-04_crops.json`.
 
 Shamela (book 2348, a different edition) is available to the reviewer as an independent text cross-check; page numbers differ, so it is never used as gold directly.

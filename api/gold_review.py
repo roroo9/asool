@@ -172,26 +172,48 @@ def finalize(pid: str, body: Finalize) -> dict:
     return _progress(d)
 
 
+HL_FILL = (108, 92, 231, 70)  # insight violet, translucent
+HL_LINE = (108, 92, 231, 255)
+HINT = (224, 164, 58, 90)  # amber band for "location uncertain"
+
+
+def _boxes(s: str) -> list[list[int]]:
+    return [list(map(int, part.split(","))) for part in s.split(";") if part]
+
+
 @router.get("/{pid}/crop")
-def crop(pid: str, x0: int, y0: int, x1: int, y1: int, hl: str = "") -> Response:
-    """Line crop (with margin) of the 300-DPI page; `hl` = 'x0,y0,x1,y1;...' boxes to mark."""
+def crop(pid: str, y0: int, y1: int, hl: str = "", x0: int = 0, x1: int = 0) -> Response:
+    """The full printed line(s) y0..y1 at full page width; `hl` word boxes drawn in a strong
+    color with a thick outline (only the disputed words, never the whole line)."""
     im = Image.open(PAGES / f"{pid}.png").convert("RGB")
-    pad_y = 28
-    # Full page width gives the reviewer the whole printed line as context.
+    pad_y = 30
     box = (0, max(0, y0 - pad_y), im.width, min(im.height, y1 + pad_y))
     c = im.crop(box)
-    if hl:
-        dr = ImageDraw.Draw(c, "RGBA")
-        for part in hl.split(";"):
-            a, b, cc, dd = map(int, part.split(","))
-            dr.rectangle(
-                (a - box[0] - 3, b - box[1] - 3, cc - box[0] + 3, dd - box[1] + 3),
-                fill=(47, 212, 181, 50),
-                outline=(47, 212, 181, 255),
-                width=3,
-            )
+    dr = ImageDraw.Draw(c, "RGBA")
+    for a, b, cc, dd in _boxes(hl):
+        dr.rectangle(
+            (a - box[0] - 4, b - box[1] - 4, cc - box[0] + 4, dd - box[1] + 4),
+            fill=HL_FILL,
+            outline=HL_LINE,
+            width=5,
+        )
     buf = io.BytesIO()
     c.save(buf, "WEBP", quality=85)
-    return Response(
-        buf.getvalue(), media_type="image/webp", headers={"Cache-Control": "private, max-age=3600"}
-    )
+    return Response(buf.getvalue(), media_type="image/webp", headers={"Cache-Control": "no-store"})
+
+
+@router.get("/{pid}/page")
+def full_page(pid: str, hl: str = "", hint: str = "") -> Response:
+    """Whole page (downscaled) with the disputed words marked, or an amber band when the
+    location is uncertain."""
+    im = Image.open(PAGES / f"{pid}.png").convert("RGB")
+    dr = ImageDraw.Draw(im, "RGBA")
+    for a, b, c, d in _boxes(hint):
+        dr.rectangle((a, b, c, d), fill=HINT, outline=(224, 164, 58, 255), width=6)
+    for a, b, c, d in _boxes(hl):
+        dr.rectangle((a - 5, b - 5, c + 5, d + 5), fill=HL_FILL, outline=HL_LINE, width=8)
+    w = 1100
+    im = im.resize((w, round(im.height * w / im.width)))
+    buf = io.BytesIO()
+    im.save(buf, "WEBP", quality=80)
+    return Response(buf.getvalue(), media_type="image/webp", headers={"Cache-Control": "no-store"})

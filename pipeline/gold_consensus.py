@@ -22,6 +22,7 @@ import re
 from difflib import SequenceMatcher
 
 from pipeline.config import GOLD, INTER, page_id
+from pipeline.gold_locate import locate_span, ocr_words, token_locations
 from pipeline.normalize import normalize, strip_diacritics
 
 READER_B = "claude-opus-5-5"
@@ -39,6 +40,7 @@ def _reader_c(pid: str) -> tuple[str, dict]:
 MAX_SPAN = 4
 SPOTCHECK_RATE = 0.05
 SPOTCHECK_RATE_ABSTAIN = 0.10
+TESS_MIN_CONF = 60.0
 FURNITURE = {"page_number", "page_header"}
 
 DRAFT = GOLD / "draft"
@@ -88,7 +90,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
     tb = _flat_tokens(vb["blocks"])
     tc = _flat_tokens(vc["blocks"])
     ta = [
-        {"raw": w["text"], "key": _key(w["text"]), "bbox": w["bbox"], "line": li}
+        {"raw": w["text"], "key": _key(w["text"]), "bbox": w["bbox"], "line": li, "conf": w["conf"]}
         for li, ln in enumerate(ocr["lines"])
         for w in ln["words"]
     ]
@@ -108,14 +110,23 @@ def build_page(printed: int, seed: int = 7) -> dict:
         furniture = vb["blocks"][t["block"]]["type"] in FURNITURE
         letters_c = c2 - c1 == 1 and _key(c_raw) == t["key"]
         letters_a = furniture or (a2 - a1 == 1 and a_key == t["key"])
-        if not (letters_c and letters_a):
+        # Rule v3 (owner, Oct 4): Tesseract abstains on a word it read with < 60% confidence
+        # (or did not read at all); B and C must then agree exactly, tashkeel included.
+        a_conf = min([x["conf"] for x in ta[a1:a2]] or [0.0])
+        a_abstains = not letters_a and a_conf < TESS_MIN_CONF
+        if not letters_c:
             status.append("")
-        elif c_raw == t["raw"]:
+        elif letters_a and c_raw == t["raw"]:
             status.append("agree")
-        elif not _DIAC.search(c_raw) and _DIAC.search(t["raw"]):
+        elif letters_a and not _DIAC.search(c_raw) and _DIAC.search(t["raw"]):
             status.append("abstain")  # C printed no tashkeel: B's tashkeel stands
+        elif a_abstains and c_raw == t["raw"]:
+            status.append("abstain_a")  # Tesseract unsure; B and C agree exactly
         else:
-            status.append("")  # both printed tashkeel and it differs
+            status.append("")
+    # Word-level locations for crops (gold_locate: never borrow a neighbouring line).
+    ow = ocr_words(ocr)
+    locs = token_locations([x["raw"] for x in tb], ow)
     # Group consecutive disputed tokens (same block) into review items.
     items = []
     i = 0
@@ -133,15 +144,6 @@ def build_page(printed: int, seed: int = 7) -> dict:
             j += 1
         c1, c2 = map_c[i][0], map_c[j][1]
         a1, a2 = map_a[i][0], map_a[j][1]
-        boxes = [x["bbox"] for x in ta[a1:a2]]
-        lines = sorted({x["line"] for x in ta[a1:a2]})
-        if not boxes:  # nothing aligned in Tesseract: use neighbors' line for the crop
-            for k in list(range(i - 1, -1, -1)) + list(range(j + 1, len(tb))):
-                n1, n2 = map_a[k]
-                if n2 > n1:
-                    lines = [ta[n1]["line"]]
-                    break
-        line_boxes = [ocr["lines"][li]["bbox"] for li in lines]
         b_text = " ".join(t["raw"] for t in tb[i : j + 1])
         cands = []
         readings = (("B", b_text), ("C", _span_text(tc, c1, c2)), ("A", _span_text(ta, a1, a2)))
@@ -157,8 +159,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
                 "tok_from": i,
                 "tok_to": j + 1,
                 "candidates": cands,
-                "word_boxes": boxes,
-                "line_boxes": line_boxes,
+                **locate_span(i, j, locs, ow, ocr),
                 "decision": None,  # filled by reviewer: chosen/edited text ('' = delete)
             }
         )
@@ -169,7 +170,11 @@ def build_page(printed: int, seed: int = 7) -> dict:
     # tashkeel was decided after a reader abstained.
     rng = random.Random(f"{seed}-{pid}")
     picked: set[int] = set()
-    for kind, rate in (("agree", SPOTCHECK_RATE), ("abstain", SPOTCHECK_RATE_ABSTAIN)):
+    for kind, rate in (
+        ("agree", SPOTCHECK_RATE),
+        ("abstain", SPOTCHECK_RATE_ABSTAIN),
+        ("abstain_a", SPOTCHECK_RATE_ABSTAIN),
+    ):
         pool = [k for k, s in enumerate(status) if s == kind]
         n = min(len(pool), max(1, round(len(pool) * rate))) if pool else 0
         weights = [3 if _DIAC.search(tb[k]["raw"]) else 1 for k in pool]
@@ -179,15 +184,13 @@ def build_page(printed: int, seed: int = 7) -> dict:
         picked |= chosen
     spot = []
     for k in sorted(picked):
-        a1, a2 = map_a[k]
         spot.append(
             {
                 "id": f"{pid}-s{len(spot):03d}",
                 "tok": k,
                 "text": tb[k]["raw"],
-                "word_boxes": [x["bbox"] for x in ta[a1:a2]],
-                "line_boxes": [ocr["lines"][ta[a1]["line"]]["bbox"]] if a2 > a1 else [],
-                "kind": status[k],  # agree | abstain
+                **locate_span(k, k, locs, ow, ocr),
+                "kind": status[k],  # agree | abstain | abstain_a
                 "verdict": None,  # "ok" | "wrong"
                 "fix": None,
             }
@@ -203,9 +206,11 @@ def build_page(printed: int, seed: int = 7) -> dict:
             "C": reader_c,
         },
         "rule": (
-            "auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; "
-            "a reader that prints no tashkeel on the word abstains on tashkeel only (v2)"
+            "v3: auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; "
+            "C printing no tashkeel abstains on tashkeel only; Tesseract below 60% confidence "
+            "abstains and then B and C must agree exactly"
         ),
+        "locator": "gold_locate v2 (word-level, honest uncertainty)",
         "blocks": [
             {k: b[k] for k in ("order", "type", "author_role", "column", "footnote_marker", "text")}
             | {"type_reader_c": None, "type_confirmed": None}
@@ -214,6 +219,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
         "tokens": [{"block": t["block"], "raw": t["raw"]} for t in tb],
         "auto_accepted": sum(1 for s in status if s),
         "auto_accepted_abstain": sum(1 for s in status if s == "abstain"),
+        "auto_accepted_tesseract_abstain": sum(1 for s in status if s == "abstain_a"),
         "total_tokens": len(tb),
         "review_items": items,
         "spotcheck": spot,

@@ -6,7 +6,8 @@
   "B": "claude-opus-5-5",
   "C": "surya-ocr-2"
  },
- "rule": "auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; a reader that prints no tashkeel on the word abstains on tashkeel only (v2)",
+ "rule": "v3: auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; C printing no tashkeel abstains on tashkeel only; Tesseract below 60% confidence abstains and then B and C must agree exactly",
+ "locator": "gold_locate v2 (word-level, honest uncertainty)",
  "blocks": [
   {
    "order": 1,
@@ -1395,8 +1396,9 @@
    "raw": "انتظرت"
   }
  ],
- "auto_accepted": 161,
+ "auto_accepted": 215,
  "auto_accepted_abstain": 35,
+ "auto_accepted_tesseract_abstain": 54,
  "total_tokens": 306,
  "review_items": [
   {
@@ -1424,45 +1426,14 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     1041,
-     373,
-     1216,
-     409
-    ],
-    [
-     1667,
-     502,
-     1776,
-     564
-    ],
-    [
-     1470,
-     504,
-     1652,
-     575
-    ],
-    [
-     1302,
-     489,
-     1451,
-     568
-    ]
-   ],
-   "line_boxes": [
-    [
-     1041,
-     373,
-     1216,
-     409
-    ],
-    [
-     466,
-     485,
-     1776,
-     595
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    0,
+    2144,
+    564
    ],
    "decision": null
   },
@@ -1491,45 +1462,14 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     1041,
-     373,
-     1216,
-     409
-    ],
-    [
-     1667,
-     502,
-     1776,
-     564
-    ],
-    [
-     1470,
-     504,
-     1652,
-     575
-    ],
-    [
-     1302,
-     489,
-     1451,
-     568
-    ]
-   ],
-   "line_boxes": [
-    [
-     1041,
-     373,
-     1216,
-     409
-    ],
-    [
-     466,
-     485,
-     1776,
-     595
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    0,
+    2144,
+    564
    ],
    "decision": null
   },
@@ -1558,13 +1498,8 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     1041,
-     373,
-     1216,
-     409
-    ],
     [
      1667,
      502,
@@ -1586,18 +1521,13 @@
    ],
    "line_boxes": [
     [
-     1041,
-     373,
-     1216,
-     409
-    ],
-    [
      466,
      485,
      1776,
      595
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
@@ -1625,6 +1555,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      990,
@@ -1641,46 +1572,71 @@
      595
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
    "id": "riyad1956-p016-r004",
    "block": 1,
    "tok_from": 12,
-   "tok_to": 15,
+   "tok_to": 13,
    "candidates": [
     {
-     "text": "فى مجلسه الذى",
+     "text": "فى",
      "readers": [
-      "B"
+      "B",
+      "A"
      ]
     },
     {
-     "text": "في مجلسه الذي",
+     "text": "في",
      "readers": [
       "C"
      ]
-    },
-    {
-     "text": "فى تجلسه الذى",
-     "readers": [
-      "A"
-     ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      833,
      485,
      875,
      595
-    ],
+    ]
+   ],
+   "line_boxes": [
     [
-     731,
-     510,
-     867,
-     563
-    ],
+     466,
+     485,
+     1776,
+     595
+    ]
+   ],
+   "hint_box": null,
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p016-r005",
+   "block": 1,
+   "tok_from": 14,
+   "tok_to": 15,
+   "candidates": [
+    {
+     "text": "الذى",
+     "readers": [
+      "B",
+      "A"
+     ]
+    },
+    {
+     "text": "الذي",
+     "readers": [
+      "C"
+     ]
+    }
+   ],
+   "loc": "word",
+   "word_boxes": [
     [
      639,
      508,
@@ -1696,10 +1652,11 @@
      595
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r005",
+   "id": "riyad1956-p016-r006",
    "block": 1,
    "tok_from": 16,
    "tok_to": 17,
@@ -1718,6 +1675,7 @@
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      466,
@@ -1734,10 +1692,11 @@
      595
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r006",
+   "id": "riyad1956-p016-r007",
    "block": 1,
    "tok_from": 19,
    "tok_to": 20,
@@ -1761,6 +1720,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1553,
@@ -1777,44 +1737,7 @@
      689
     ]
    ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r007",
-   "block": 1,
-   "tok_from": 21,
-   "tok_to": 22,
-   "candidates": [
-    {
-     "text": "،",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "»",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     1429,
-     631,
-     1432,
-     653
-    ]
-   ],
-   "line_boxes": [
-    [
-     466,
-     597,
-     1781,
-     689
-    ]
-   ],
+   "hint_box": null,
    "decision": null
   },
   {
@@ -1837,12 +1760,13 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     1185,
-     631,
-     1193,
-     653
+     1163,
+     597,
+     1216,
+     689
     ]
    ],
    "line_boxes": [
@@ -1853,48 +1777,11 @@
      689
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
    "id": "riyad1956-p016-r009",
-   "block": 1,
-   "tok_from": 29,
-   "tok_to": 30,
-   "candidates": [
-    {
-     "text": "،",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "ء",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     884,
-     628,
-     886,
-     652
-    ]
-   ],
-   "line_boxes": [
-    [
-     466,
-     597,
-     1781,
-     689
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r010",
    "block": 1,
    "tok_from": 33,
    "tok_to": 34,
@@ -1913,12 +1800,13 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     656,
-     625,
-     661,
-     648
+     642,
+     597,
+     682,
+     689
     ]
    ],
    "line_boxes": [
@@ -1929,10 +1817,11 @@
      689
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r011",
+   "id": "riyad1956-p016-r010",
    "block": 1,
    "tok_from": 35,
    "tok_to": 36,
@@ -1956,6 +1845,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      466,
@@ -1972,10 +1862,11 @@
      689
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r012",
+   "id": "riyad1956-p016-r011",
    "block": 2,
    "tok_from": 40,
    "tok_to": 41,
@@ -1994,12 +1885,13 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     1503,
-     741,
-     1510,
-     764
+     1486,
+     699,
+     1527,
+     804
     ]
    ],
    "line_boxes": [
@@ -2010,10 +1902,11 @@
      804
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r013",
+   "id": "riyad1956-p016-r012",
    "block": 2,
    "tok_from": 42,
    "tok_to": 44,
@@ -2037,6 +1930,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1346,
@@ -2059,48 +1953,11 @@
      804
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r014",
-   "block": 2,
-   "tok_from": 48,
-   "tok_to": 49,
-   "candidates": [
-    {
-     "text": "وسلم",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "وس",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     867,
-     721,
-     914,
-     797
-    ]
-   ],
-   "line_boxes": [
-    [
-     438,
-     699,
-     1773,
-     804
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r015",
+   "id": "riyad1956-p016-r013",
    "block": 2,
    "tok_from": 51,
    "tok_to": 54,
@@ -2124,24 +1981,13 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      683,
      699,
      776,
      804
-    ],
-    [
-     644,
-     727,
-     658,
-     756
-    ],
-    [
-     611,
-     716,
-     621,
-     755
     ]
    ],
    "line_boxes": [
@@ -2152,40 +1998,31 @@
      804
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r016",
+   "id": "riyad1956-p016-r014",
    "block": 2,
-   "tok_from": 57,
+   "tok_from": 58,
    "tok_to": 59,
    "candidates": [
     {
-     "text": "والهاء وبالزاى",
+     "text": "وبالزاى",
      "readers": [
-      "B"
+      "B",
+      "A"
      ]
     },
     {
-     "text": "والهاء وبالزاي",
+     "text": "وبالزاي",
      "readers": [
       "C"
      ]
-    },
-    {
-     "text": "والماء وبالزاى",
-     "readers": [
-      "A"
-     ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
-    [
-     1619,
-     829,
-     1695,
-     883
-    ],
     [
      1499,
      829,
@@ -2201,10 +2038,11 @@
      888
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r017",
+   "id": "riyad1956-p016-r015",
    "block": 2,
    "tok_from": 60,
    "tok_to": 62,
@@ -2228,6 +2066,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1407,
@@ -2250,10 +2089,11 @@
      888
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r018",
+   "id": "riyad1956-p016-r016",
    "block": 3,
    "tok_from": 65,
    "tok_to": 66,
@@ -2277,6 +2117,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1563,
@@ -2293,10 +2134,11 @@
      1019
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r019",
+   "id": "riyad1956-p016-r017",
    "block": 3,
    "tok_from": 70,
    "tok_to": 71,
@@ -2315,6 +2157,7 @@
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      1142,
@@ -2331,10 +2174,11 @@
      1019
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r020",
+   "id": "riyad1956-p016-r018",
    "block": 3,
    "tok_from": 73,
    "tok_to": 75,
@@ -2358,6 +2202,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      895,
@@ -2380,33 +2225,35 @@
      1019
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r021",
+   "id": "riyad1956-p016-r019",
    "block": 3,
-   "tok_from": 80,
-   "tok_to": 81,
+   "tok_from": 82,
+   "tok_to": 83,
    "candidates": [
     {
-     "text": "صلى",
+     "text": "عليـه",
      "readers": [
-      "B",
-      "C"
+      "B"
      ]
     },
     {
-     "text": "صل",
+     "text": "عليه",
      "readers": [
+      "C",
       "A"
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
-     1655,
+     1481,
      1026,
-     1697,
+     1552,
      1137
     ]
    ],
@@ -2418,46 +2265,36 @@
      1137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r022",
+   "id": "riyad1956-p016-r020",
    "block": 3,
-   "tok_from": 82,
+   "tok_from": 84,
    "tok_to": 86,
    "candidates": [
     {
-     "text": "عليـه وسلم فيما يروى",
+     "text": "فيما يروى",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "عليه وسلم فيما يروي",
+     "text": "فيما يروي",
      "readers": [
       "C"
      ]
     },
     {
-     "text": "عليه وسل فيا يروى",
+     "text": "فيا يروى",
      "readers": [
       "A"
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     1481,
-     1026,
-     1552,
-     1137
-    ],
-    [
-     1405,
-     1026,
-     1458,
-     1137
-    ],
     [
      1343,
      1026,
@@ -2479,10 +2316,11 @@
      1137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r023",
+   "id": "riyad1956-p016-r021",
    "block": 3,
    "tok_from": 87,
    "tok_to": 88,
@@ -2506,6 +2344,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1097,
@@ -2522,10 +2361,11 @@
      1137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r024",
+   "id": "riyad1956-p016-r022",
    "block": 4,
    "tok_from": 95,
    "tok_to": 98,
@@ -2549,6 +2389,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      459,
@@ -2561,12 +2402,6 @@
      1160,
      1763,
      1204
-    ],
-    [
-     1621,
-     1216,
-     1639,
-     1225
     ],
     [
      1459,
@@ -2589,10 +2424,11 @@
      1284
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r025",
+   "id": "riyad1956-p016-r023",
    "block": 4,
    "tok_from": 102,
    "tok_to": 103,
@@ -2616,6 +2452,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1127,
@@ -2632,22 +2469,23 @@
      1284
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r026",
+   "id": "riyad1956-p016-r024",
    "block": 4,
    "tok_from": 104,
-   "tok_to": 108,
+   "tok_to": 105,
    "candidates": [
     {
-     "text": "بحسنةٍ (١) فلم يعملها",
+     "text": "بحسنةٍ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "محسنة (١) فلم يعملها",
+     "text": "محسنة",
      "readers": [
       "C"
      ]
@@ -2659,25 +2497,44 @@
      ]
     }
    ],
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1131,
+    2144,
+    1195
+   ],
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p016-r025",
+   "block": 4,
+   "tok_from": 109,
+   "tok_to": 110,
+   "candidates": [
+    {
+     "text": "اللهُ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "الله",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "مستت ني سماكدا. النّهُ",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     969,
-     1131,
-     1056,
-     1235
-    ],
-    [
-     849,
-     1139,
-     947,
-     1234
-    ],
-    [
-     626,
-     1125,
-     821,
-     1284
-    ],
     [
      569,
      1135,
@@ -2692,250 +2549,168 @@
      1763,
      1284
     ]
+   ],
+   "hint_box": null,
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p016-r026",
+   "block": 4,
+   "tok_from": 118,
+   "tok_to": 120,
+   "candidates": [
+    {
+     "text": "بهـا فعملَها",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "بها فعملها",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "بسيثق فل",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1352,
+    2144,
+    1422
    ],
    "decision": null
   },
   {
    "id": "riyad1956-p016-r027",
    "block": 4,
-   "tok_from": 108,
-   "tok_to": 110,
+   "tok_from": 121,
+   "tok_to": 124,
    "candidates": [
     {
-     "text": "كتبها اللهُ",
+     "text": "اللهُ عشرَ حسناتٍ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "كتبها الله",
+     "text": "الله عشر حسنات",
      "readers": [
       "C"
      ]
     },
     {
-     "text": "مستت ني سماكدا. النّهُ",
+     "text": "بسيثق فل",
      "readers": [
       "A"
      ]
     }
    ],
-   "word_boxes": [
-    [
-     969,
-     1131,
-     1056,
-     1235
-    ],
-    [
-     849,
-     1139,
-     947,
-     1234
-    ],
-    [
-     626,
-     1125,
-     821,
-     1284
-    ],
-    [
-     569,
-     1135,
-     616,
-     1195
-    ]
-   ],
-   "line_boxes": [
-    [
-     460,
-     1125,
-     1763,
-     1284
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1352,
+    2144,
+    1422
    ],
    "decision": null
   },
   {
    "id": "riyad1956-p016-r028",
    "block": 4,
-   "tok_from": 111,
-   "tok_to": 112,
+   "tok_from": 125,
+   "tok_to": 127,
    "candidates": [
     {
-     "text": "وتعالى",
+     "text": "سبعمِائةِ ضعفٍ",
      "readers": [
-      "B",
+      "B"
+     ]
+    },
+    {
+     "text": "سبعياته ضعف",
+     "readers": [
       "C"
      ]
     },
     {
-     "text": "وتعال",
+     "text": "بسيثق فل",
      "readers": [
       "A"
      ]
     }
    ],
-   "word_boxes": [
-    [
-     1671,
-     1268,
-     1762,
-     1322
-    ]
-   ],
-   "line_boxes": [
-    [
-     457,
-     1241,
-     1762,
-     1364
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1352,
+    2144,
+    1422
    ],
    "decision": null
   },
   {
    "id": "riyad1956-p016-r029",
    "block": 4,
-   "tok_from": 115,
-   "tok_to": 116,
+   "tok_from": 128,
+   "tok_to": 130,
    "candidates": [
     {
-     "text": "،",
+     "text": "أضعافٍ كثيرةٍ",
      "readers": [
-      "B",
+      "B"
+     ]
+    },
+    {
+     "text": "أضعاف كثيرة",
+     "readers": [
       "C"
      ]
     },
     {
-     "text": "» و إن مم بها فسسلها كتبها لله عش حسنات إلى سبعيائة ضمف«لى أضعاف_كثيرة »",
+     "text": "بسيثق فل",
      "readers": [
       "A"
      ]
     }
    ],
-   "word_boxes": [
-    [
-     1300,
-     1285,
-     1311,
-     1308
-    ],
-    [
-     1257,
-     1289,
-     1273,
-     1318
-    ],
-    [
-     1211,
-     1270,
-     1247,
-     1330
-    ],
-    [
-     1158,
-     1244,
-     1193,
-     1347
-    ],
-    [
-     1084,
-     1242,
-     1135,
-     1364
-    ],
-    [
-     962,
-     1242,
-     1058,
-     1364
-    ],
-    [
-     856,
-     1242,
-     940,
-     1364
-    ],
-    [
-     788,
-     1245,
-     835,
-     1305
-    ],
-    [
-     694,
-     1241,
-     750,
-     1340
-    ],
-    [
-     526,
-     1259,
-     765,
-     1324
-    ],
-    [
-     457,
-     1257,
-     505,
-     1313
-    ],
-    [
-     1628,
-     1376,
-     1761,
-     1442
-    ],
-    [
-     1456,
-     1375,
-     1649,
-     1430
-    ],
-    [
-     1196,
-     1353,
-     1433,
-     1440
-    ],
-    [
-     1167,
-     1392,
-     1178,
-     1414
-    ]
-   ],
-   "line_boxes": [
-    [
-     457,
-     1241,
-     1762,
-     1364
-    ],
-    [
-     458,
-     1342,
-     1761,
-     1447
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1352,
+    2144,
+    1422
    ],
    "decision": null
   },
   {
    "id": "riyad1956-p016-r030",
    "block": 4,
-   "tok_from": 118,
-   "tok_to": 122,
+   "tok_from": 133,
+   "tok_to": 134,
    "candidates": [
     {
-     "text": "بهـا فعملَها كتبها اللهُ",
+     "text": "بسيئةٍ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "بها فعملها كتبها الله",
+     "text": "بسيئة",
      "readers": [
       "C"
      ]
@@ -2947,223 +2722,19 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     914,
-     1371,
-     999,
-     1447
-    ],
-    [
-     868,
-     1372,
-     899,
-     1447
-    ]
-   ],
-   "line_boxes": [
-    [
-     458,
-     1342,
-     1761,
-     1447
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1352,
+    2144,
+    1422
    ],
    "decision": null
   },
   {
    "id": "riyad1956-p016-r031",
-   "block": 4,
-   "tok_from": 122,
-   "tok_to": 126,
-   "candidates": [
-    {
-     "text": "عشرَ حسناتٍ إلى سبعمِائةِ",
-     "readers": [
-      "B"
-     ]
-    },
-    {
-     "text": "عشر حسنات إلى سبعياته",
-     "readers": [
-      "C"
-     ]
-    },
-    {
-     "text": "بسيثق فل",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     914,
-     1371,
-     999,
-     1447
-    ],
-    [
-     868,
-     1372,
-     899,
-     1447
-    ]
-   ],
-   "line_boxes": [
-    [
-     458,
-     1342,
-     1761,
-     1447
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r032",
-   "block": 4,
-   "tok_from": 126,
-   "tok_to": 130,
-   "candidates": [
-    {
-     "text": "ضعفٍ إلى أضعافٍ كثيرةٍ",
-     "readers": [
-      "B"
-     ]
-    },
-    {
-     "text": "ضعف إلى أضعاف كثيرة",
-     "readers": [
-      "C"
-     ]
-    },
-    {
-     "text": "بسيثق فل",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     914,
-     1371,
-     999,
-     1447
-    ],
-    [
-     868,
-     1372,
-     899,
-     1447
-    ]
-   ],
-   "line_boxes": [
-    [
-     458,
-     1342,
-     1761,
-     1447
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r033",
-   "block": 4,
-   "tok_from": 130,
-   "tok_to": 134,
-   "candidates": [
-    {
-     "text": "، وإن هم بسيئةٍ",
-     "readers": [
-      "B"
-     ]
-    },
-    {
-     "text": "، وإن هم بسيئة",
-     "readers": [
-      "C"
-     ]
-    },
-    {
-     "text": "بسيثق فل",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     914,
-     1371,
-     999,
-     1447
-    ],
-    [
-     868,
-     1372,
-     899,
-     1447
-    ]
-   ],
-   "line_boxes": [
-    [
-     458,
-     1342,
-     1761,
-     1447
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r034",
-   "block": 4,
-   "tok_from": 134,
-   "tok_to": 135,
-   "candidates": [
-    {
-     "text": "فلم",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "بسيثق فل",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     914,
-     1371,
-     999,
-     1447
-    ],
-    [
-     868,
-     1372,
-     899,
-     1447
-    ]
-   ],
-   "line_boxes": [
-    [
-     458,
-     1342,
-     1761,
-     1447
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r035",
    "block": 4,
    "tok_from": 137,
    "tok_to": 140,
@@ -3187,6 +2758,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      578,
@@ -3221,10 +2793,11 @@
      1556
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r036",
+   "id": "riyad1956-p016-r032",
    "block": 4,
    "tok_from": 142,
    "tok_to": 143,
@@ -3243,12 +2816,13 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     1423,
-     1502,
-     1434,
-     1525
+     1403,
+     1449,
+     1449,
+     1556
     ]
    ],
    "line_boxes": [
@@ -3259,10 +2833,11 @@
      1556
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r037",
+   "id": "riyad1956-p016-r033",
    "block": 4,
    "tok_from": 144,
    "tok_to": 145,
@@ -3281,6 +2856,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1300,
@@ -3297,48 +2873,11 @@
      1556
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r038",
-   "block": 4,
-   "tok_from": 146,
-   "tok_to": 147,
-   "candidates": [
-    {
-     "text": "فعملها",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "فسملها",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     1133,
-     1449,
-     1221,
-     1556
-    ]
-   ],
-   "line_boxes": [
-    [
-     522,
-     1449,
-     1761,
-     1556
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r039",
+   "id": "riyad1956-p016-r034",
    "block": 6,
    "tok_from": 156,
    "tok_to": 157,
@@ -3357,6 +2896,7 @@
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      1550,
@@ -3373,10 +2913,11 @@
      1664
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r040",
+   "id": "riyad1956-p016-r035",
    "block": 6,
    "tok_from": 165,
    "tok_to": 166,
@@ -3395,6 +2936,7 @@
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      857,
@@ -3411,10 +2953,11 @@
      1664
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r041",
+   "id": "riyad1956-p016-r036",
    "block": 6,
    "tok_from": 167,
    "tok_to": 168,
@@ -3433,6 +2976,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      675,
@@ -3449,10 +2993,11 @@
      1664
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r042",
+   "id": "riyad1956-p016-r037",
    "block": 6,
    "tok_from": 173,
    "tok_to": 174,
@@ -3471,6 +3016,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1538,
@@ -3487,60 +3033,23 @@
      1813
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r043",
-   "block": 6,
-   "tok_from": 176,
-   "tok_to": 177,
-   "candidates": [
-    {
-     "text": "وسلم",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "وس",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     1313,
-     1725,
-     1365,
-     1808
-    ]
-   ],
-   "line_boxes": [
-    [
-     451,
-     1697,
-     1760,
-     1813
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r044",
+   "id": "riyad1956-p016-r038",
    "block": 7,
    "tok_from": 182,
-   "tok_to": 186,
+   "tok_to": 183,
    "candidates": [
     {
-     "text": "نفرٍ (٢) ممن كانَ",
+     "text": "نفرٍ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "نفر (٢) ممن كان",
+     "text": "نفر",
      "readers": [
       "C"
      ]
@@ -3552,19 +3061,53 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      849,
      1697,
      901,
      1813
-    ],
+    ]
+   ],
+   "line_boxes": [
     [
-     799,
+     451,
      1697,
-     821,
+     1760,
      1813
-    ],
+    ]
+   ],
+   "hint_box": null,
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p016-r039",
+   "block": 7,
+   "tok_from": 185,
+   "tok_to": 186,
+   "candidates": [
+    {
+     "text": "كانَ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "كان",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "نر 9\" ركان\"",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "loc": "approx",
+   "word_boxes": [
     [
      641,
      1708,
@@ -3580,33 +3123,35 @@
      1813
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r045",
+   "id": "riyad1956-p016-r040",
    "block": 7,
    "tok_from": 188,
-   "tok_to": 191,
+   "tok_to": 190,
    "candidates": [
     {
-     "text": "آواهمُ المبيتُ (٣)",
+     "text": "آواهمُ المبيتُ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "آواهم الميت (٣)",
+     "text": "آواهم الميت",
      "readers": [
       "C"
      ]
     },
     {
-     "text": "آوام” البيت” 7",
+     "text": "آوام” البيت”",
      "readers": [
       "A"
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1676,
@@ -3619,12 +3164,6 @@
      1823,
      1662,
      1893
-    ],
-    [
-     1528,
-     1823,
-     1548,
-     1856
     ]
    ],
    "line_boxes": [
@@ -3635,10 +3174,11 @@
      1916
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r046",
+   "id": "riyad1956-p016-r041",
    "block": 7,
    "tok_from": 194,
    "tok_to": 195,
@@ -3662,6 +3202,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1056,
@@ -3678,10 +3219,11 @@
      1916
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r047",
+   "id": "riyad1956-p016-r042",
    "block": 7,
    "tok_from": 198,
    "tok_to": 199,
@@ -3705,11 +3247,12 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     585,
+     618,
      1812,
-     691,
+     708,
      1916
     ]
    ],
@@ -3721,10 +3264,11 @@
      1916
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r048",
+   "id": "riyad1956-p016-r043",
    "block": 7,
    "tok_from": 200,
    "tok_to": 201,
@@ -3748,6 +3292,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1680,
@@ -3764,35 +3309,31 @@
      2056
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r049",
+   "id": "riyad1956-p016-r044",
    "block": 7,
-   "tok_from": 202,
+   "tok_from": 203,
    "tok_to": 204,
    "candidates": [
     {
-     "text": "(٤) فقالوا",
+     "text": "فقالوا",
      "readers": [
       "B",
       "C"
      ]
     },
     {
-     "text": "27 ققالوا",
+     "text": "ققالوا",
      "readers": [
       "A"
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     1590,
-     1930,
-     1639,
-     1962
-    ],
     [
      1502,
      1915,
@@ -3808,22 +3349,23 @@
      2056
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r050",
+   "id": "riyad1956-p016-r045",
    "block": 7,
    "tok_from": 205,
-   "tok_to": 208,
+   "tok_to": 206,
    "candidates": [
     {
-     "text": "إنهُ لا ينجيكمْ",
+     "text": "إنهُ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "إنه لا ينجيكم",
+     "text": "إنه",
      "readers": [
       "C"
      ]
@@ -3835,17 +3377,57 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1413,
      1948,
      1458,
      2001
-    ],
+    ]
+   ],
+   "line_boxes": [
     [
-     1235,
+     452,
      1899,
-     1458,
+     1756,
+     2056
+    ]
+   ],
+   "hint_box": null,
+   "decision": null
+  },
+  {
+   "id": "riyad1956-p016-r046",
+   "block": 7,
+   "tok_from": 207,
+   "tok_to": 208,
+   "candidates": [
+    {
+     "text": "ينجيكمْ",
+     "readers": [
+      "B"
+     ]
+    },
+    {
+     "text": "ينجيكم",
+     "readers": [
+      "C"
+     ]
+    },
+    {
+     "text": "إن الاسم",
+     "readers": [
+      "A"
+     ]
+    }
+   ],
+   "loc": "gap",
+   "word_boxes": [
+    [
+     1219,
+     1899,
+     1411,
      2056
     ]
    ],
@@ -3857,10 +3439,11 @@
      2056
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r051",
+   "id": "riyad1956-p016-r047",
    "block": 7,
    "tok_from": 216,
    "tok_to": 218,
@@ -3884,6 +3467,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      452,
@@ -3912,10 +3496,11 @@
      2137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r052",
+   "id": "riyad1956-p016-r048",
    "block": 7,
    "tok_from": 220,
    "tok_to": 221,
@@ -3939,6 +3524,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1408,
@@ -3955,10 +3541,11 @@
      2137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r053",
+   "id": "riyad1956-p016-r049",
    "block": 7,
    "tok_from": 224,
    "tok_to": 226,
@@ -3977,6 +3564,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1072,
@@ -3993,40 +3581,31 @@
      2137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r054",
+   "id": "riyad1956-p016-r050",
    "block": 7,
-   "tok_from": 228,
+   "tok_from": 229,
    "tok_to": 230,
    "candidates": [
     {
-     "text": "شيخان كبيران",
+     "text": "كبيران",
      "readers": [
-      "B"
+      "B",
+      "A"
      ]
     },
     {
-     "text": "شيخان كيران",
+     "text": "كيران",
      "readers": [
       "C"
      ]
-    },
-    {
-     "text": "شيئخان كبيران",
-     "readers": [
-      "A"
-     ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
-    [
-     777,
-     2028,
-     886,
-     2116
-    ],
     [
      645,
      2028,
@@ -4042,57 +3621,41 @@
      2137
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r055",
+   "id": "riyad1956-p016-r051",
    "block": 7,
    "tok_from": 232,
-   "tok_to": 236,
+   "tok_to": 233,
    "candidates": [
     {
-     "text": "أغْبِقُ (٥) قبلهما أهلاً",
+     "text": "أغْبِقُ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "أغبق (٥) قبلهما أهلاً",
+     "text": "أغبق",
      "readers": [
       "C"
      ]
     },
     {
-     "text": "أغ امي تله علا",
+     "text": "أغ",
      "readers": [
       "A"
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1723,
      2142,
      1756,
      2203
-    ],
-    [
-     1649,
-     2087,
-     1754,
-     2239
-    ],
-    [
-     1516,
-     2160,
-     1588,
-     2219
-    ],
-    [
-     1416,
-     2139,
-     1488,
-     2206
     ]
    ],
    "line_boxes": [
@@ -4103,10 +3666,11 @@
      2239
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r056",
+   "id": "riyad1956-p016-r052",
    "block": 7,
    "tok_from": 237,
    "tok_to": 238,
@@ -4125,6 +3689,7 @@
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      1274,
@@ -4141,10 +3706,11 @@
      2239
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r057",
+   "id": "riyad1956-p016-r053",
    "block": 7,
    "tok_from": 239,
    "tok_to": 240,
@@ -4163,12 +3729,13 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     1129,
-     2138,
-     1169,
-     2171
+     1107,
+     2087,
+     1189,
+     2239
     ]
    ],
    "line_boxes": [
@@ -4179,10 +3746,11 @@
      2239
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r058",
+   "id": "riyad1956-p016-r054",
    "block": 7,
    "tok_from": 245,
    "tok_to": 246,
@@ -4206,18 +3774,13 @@
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     663,
-     2129,
-     706,
-     2224
-    ],
-    [
-     629,
-     2176,
-     660,
-     2222
+     607,
+     2087,
+     726,
+     2239
     ]
    ],
    "line_boxes": [
@@ -4228,60 +3791,68 @@
      2239
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r059",
+   "id": "riyad1956-p016-r055",
    "block": 7,
-   "tok_from": 247,
-   "tok_to": 248,
+   "tok_from": 250,
+   "tok_to": 252,
    "candidates": [
     {
-     "text": "عليهما",
+     "text": "فحلبتُ لهما",
      "readers": [
-      "B",
+      "B"
+     ]
+    },
+    {
+     "text": "فحلبت لها",
+     "readers": [
       "C"
      ]
     },
     {
-     "text": "عليهيا",
+     "text": "خليئت لا غبوقينا فوجد هما نين » مكهت",
      "readers": [
       "A"
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
-     445,
-     2124,
-     554,
-     2226
+     1153,
+     2233,
+     1206,
+     2337
     ]
    ],
    "line_boxes": [
     [
-     445,
-     2087,
+     449,
+     2218,
      1756,
-     2239
+     2343
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r060",
+   "id": "riyad1956-p016-r056",
    "block": 7,
-   "tok_from": 250,
+   "tok_from": 253,
    "tok_to": 254,
    "candidates": [
     {
-     "text": "فحلبتُ لهما غبوقهما فوجدتُهما",
+     "text": "فوجدتُهما",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "فحلبت لها غبوقهما فوجدتهما",
+     "text": "فوجدتهما",
      "readers": [
       "C"
      ]
@@ -4293,54 +3864,13 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     1521,
-     2218,
-     1600,
-     2343
-    ],
-    [
-     1454,
-     2218,
-     1506,
-     2343
-    ],
-    [
-     1326,
-     2218,
-     1436,
-     2343
-    ],
     [
      1200,
      2237,
      1307,
      2322
-    ],
-    [
-     1153,
-     2233,
-     1206,
-     2337
-    ],
-    [
-     1049,
-     2233,
-     1134,
-     2337
-    ],
-    [
-     1017,
-     2233,
-     1030,
-     2337
-    ],
-    [
-     849,
-     2245,
-     1122,
-     2320
     ]
    ],
    "line_boxes": [
@@ -4351,22 +3881,23 @@
      2343
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r061",
+   "id": "riyad1956-p016-r057",
    "block": 7,
-   "tok_from": 254,
+   "tok_from": 256,
    "tok_to": 257,
    "candidates": [
     {
-     "text": "نائمين ، فكرهتُ",
+     "text": "فكرهتُ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "نائمين ، فكرهت",
+     "text": "فكرهت",
      "readers": [
       "C"
      ]
@@ -4378,49 +3909,8 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     1521,
-     2218,
-     1600,
-     2343
-    ],
-    [
-     1454,
-     2218,
-     1506,
-     2343
-    ],
-    [
-     1326,
-     2218,
-     1436,
-     2343
-    ],
-    [
-     1200,
-     2237,
-     1307,
-     2322
-    ],
-    [
-     1153,
-     2233,
-     1206,
-     2337
-    ],
-    [
-     1049,
-     2233,
-     1134,
-     2337
-    ],
-    [
-     1017,
-     2233,
-     1030,
-     2337
-    ],
     [
      849,
      2245,
@@ -4436,48 +3926,11 @@
      2343
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r062",
-   "block": 7,
-   "tok_from": 261,
-   "tok_to": 262,
-   "candidates": [
-    {
-     "text": "قبلهما",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "قبليما",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     1671,
-     2355,
-     1754,
-     2430
-    ]
-   ],
-   "line_boxes": [
-    [
-     447,
-     2351,
-     1754,
-     2450
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r063",
+   "id": "riyad1956-p016-r058",
    "block": 7,
    "tok_from": 263,
    "tok_to": 265,
@@ -4501,18 +3954,13 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      1473,
      2355,
      1569,
      2426
-    ],
-    [
-     1445,
-     2392,
-     1456,
-     2415
     ]
    ],
    "line_boxes": [
@@ -4523,45 +3971,41 @@
      2450
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r064",
+   "id": "riyad1956-p016-r059",
    "block": 7,
-   "tok_from": 266,
+   "tok_from": 267,
    "tok_to": 268,
    "candidates": [
     {
-     "text": "(٨) ـ",
+     "text": "ـ",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "(٨) -",
+     "text": "-",
      "readers": [
       "C"
      ]
     },
     {
-     "text": "”9 ب",
+     "text": "ب",
      "readers": [
       "A"
      ]
     }
    ],
+   "loc": "gap",
    "word_boxes": [
     [
-     1296,
-     2356,
-     1333,
-     2389
-    ],
-    [
-     1260,
-     2405,
-     1269,
-     2413
+     1230,
+     2351,
+     1356,
+     2450
     ]
    ],
    "line_boxes": [
@@ -4572,10 +4016,11 @@
      2450
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r065",
+   "id": "riyad1956-p016-r060",
    "block": 7,
    "tok_from": 270,
    "tok_to": 273,
@@ -4599,6 +4044,7 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
     [
      931,
@@ -4621,125 +4067,36 @@
      2450
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r066",
+   "id": "riyad1956-p016-r061",
    "block": 9,
-   "tok_from": 278,
-   "tok_to": 279,
+   "tok_from": 281,
+   "tok_to": 282,
    "candidates": [
     {
-     "text": "(٢)",
+     "text": "إلى",
      "readers": [
       "B",
-      "C"
-     ]
-    },
-    {
-     "text": "()",
-     "readers": [
       "A"
      ]
-    }
-   ],
-   "word_boxes": [
-    [
-     1470,
-     2515,
-     1522,
-     2572
-    ]
-   ],
-   "line_boxes": [
-    [
-     448,
-     2491,
-     1733,
-     2580
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r067",
-   "block": 9,
-   "tok_from": 280,
-   "tok_to": 283,
-   "candidates": [
-    {
-     "text": "ثلاثة إلى عشرة",
-     "readers": [
-      "B"
-     ]
     },
     {
-     "text": "ثلاثة الى عشرة",
+     "text": "الى",
      "readers": [
       "C"
      ]
-    },
-    {
-     "text": "ثلاثةالىعشيرة (م) البينو نة إلى كبف: (ستمنقور فىجبل) (:)",
-     "readers": [
-      "A"
-     ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     1189,
-     2514,
-     1387,
-     2562
-    ],
-    [
-     1057,
-     2510,
-     1116,
-     2568
-    ],
-    [
-     963,
-     2512,
-     1039,
-     2576
-    ],
-    [
-     934,
-     2511,
-     959,
-     2544
-    ],
     [
      872,
      2491,
      916,
      2567
-    ],
-    [
-     772,
-     2495,
-     917,
-     2563
-    ],
-    [
-     582,
-     2508,
-     754,
-     2565
-    ],
-    [
-     448,
-     2505,
-     567,
-     2563
-    ],
-    [
-     1655,
-     2595,
-     1705,
-     2655
     ]
    ],
    "line_boxes": [
@@ -4748,30 +4105,25 @@
      2491,
      1733,
      2580
-    ],
-    [
-     484,
-     2574,
-     1705,
-     2659
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r068",
+   "id": "riyad1956-p016-r062",
    "block": 10,
-   "tok_from": 283,
+   "tok_from": 286,
    "tok_to": 287,
    "candidates": [
     {
-     "text": "(٣) البيتوتة إلى كهف:",
+     "text": "كهف:",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "(٣) البيتوتة إلى كهف",
+     "text": "كهف",
      "readers": [
       "C"
      ]
@@ -4783,62 +4135,31 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     772,
-     2495,
-     917,
-     2563
-    ],
-    [
-     582,
-     2508,
-     754,
-     2565
-    ],
-    [
-     448,
-     2505,
-     567,
-     2563
-    ],
-    [
-     1655,
-     2595,
-     1705,
-     2655
-    ]
-   ],
-   "line_boxes": [
-    [
-     448,
-     2491,
-     1733,
-     2580
-    ],
-    [
-     484,
-     2574,
-     1705,
-     2659
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    2491,
+    2144,
+    2659
    ],
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r069",
+   "id": "riyad1956-p016-r063",
    "block": 10,
-   "tok_from": 287,
-   "tok_to": 291,
+   "tok_from": 289,
+   "tok_to": 290,
    "candidates": [
     {
-     "text": "(بيت منقور فى جبل)",
+     "text": "فى",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "(بيت منقور في جبل)",
+     "text": "في",
      "readers": [
       "C"
      ]
@@ -4850,150 +4171,19 @@
      ]
     }
    ],
-   "word_boxes": [
-    [
-     772,
-     2495,
-     917,
-     2563
-    ],
-    [
-     582,
-     2508,
-     754,
-     2565
-    ],
-    [
-     448,
-     2505,
-     567,
-     2563
-    ],
-    [
-     1655,
-     2595,
-     1705,
-     2655
-    ]
-   ],
-   "line_boxes": [
-    [
-     448,
-     2491,
-     1733,
-     2580
-    ],
-    [
-     484,
-     2574,
-     1705,
-     2659
-    ]
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    2491,
+    2144,
+    2659
    ],
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r070",
-   "block": 11,
-   "tok_from": 291,
-   "tok_to": 292,
-   "candidates": [
-    {
-     "text": "(٤)",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "كبف: (ستمنقور فىجبل) (:)",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     772,
-     2495,
-     917,
-     2563
-    ],
-    [
-     582,
-     2508,
-     754,
-     2565
-    ],
-    [
-     448,
-     2505,
-     567,
-     2563
-    ],
-    [
-     1655,
-     2595,
-     1705,
-     2655
-    ]
-   ],
-   "line_boxes": [
-    [
-     448,
-     2491,
-     1733,
-     2580
-    ],
-    [
-     484,
-     2574,
-     1705,
-     2659
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r071",
-   "block": 12,
-   "tok_from": 293,
-   "tok_to": 294,
-   "candidates": [
-    {
-     "text": "(٥)",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "(0)",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     1443,
-     2593,
-     1494,
-     2652
-    ]
-   ],
-   "line_boxes": [
-    [
-     484,
-     2574,
-     1705,
-     2659
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r072",
+   "id": "riyad1956-p016-r064",
    "block": 12,
    "tok_from": 296,
    "tok_to": 297,
@@ -5012,6 +4202,7 @@
      ]
     }
    ],
+   "loc": "word",
    "word_boxes": [
     [
      1274,
@@ -5028,22 +4219,23 @@
      2659
     ]
    ],
+   "hint_box": null,
    "decision": null
   },
   {
-   "id": "riyad1956-p016-r073",
+   "id": "riyad1956-p016-r065",
    "block": 13,
-   "tok_from": 299,
+   "tok_from": 300,
    "tok_to": 301,
    "candidates": [
     {
-     "text": "(٦) بعـــد",
+     "text": "بعـــد",
      "readers": [
       "B"
      ]
     },
     {
-     "text": "(٦) بمد",
+     "text": "بمد",
      "readers": [
       "C"
      ]
@@ -5055,36 +4247,13 @@
      ]
     }
    ],
+   "loc": "approx",
    "word_boxes": [
-    [
-     915,
-     2574,
-     993,
-     2656
-    ],
     [
      789,
      2588,
      974,
      2647
-    ],
-    [
-     484,
-     2578,
-     689,
-     2647
-    ],
-    [
-     1649,
-     2675,
-     1705,
-     2734
-    ],
-    [
-     1504,
-     2674,
-     1619,
-     2720
     ]
    ],
    "line_boxes": [
@@ -5093,158 +4262,70 @@
      2574,
      1705,
      2659
-    ],
-    [
-     1504,
-     2674,
-     1705,
-     2734
     ]
    ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r074",
-   "block": 14,
-   "tok_from": 301,
-   "tok_to": 304,
-   "candidates": [
-    {
-     "text": "(٧) لم أرجع",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "(5) بمد (0لمأرجم (4) اتظرت",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     915,
-     2574,
-     993,
-     2656
-    ],
-    [
-     789,
-     2588,
-     974,
-     2647
-    ],
-    [
-     484,
-     2578,
-     689,
-     2647
-    ],
-    [
-     1649,
-     2675,
-     1705,
-     2734
-    ],
-    [
-     1504,
-     2674,
-     1619,
-     2720
-    ]
-   ],
-   "line_boxes": [
-    [
-     484,
-     2574,
-     1705,
-     2659
-    ],
-    [
-     1504,
-     2674,
-     1705,
-     2734
-    ]
-   ],
-   "decision": null
-  },
-  {
-   "id": "riyad1956-p016-r075",
-   "block": 15,
-   "tok_from": 304,
-   "tok_to": 306,
-   "candidates": [
-    {
-     "text": "(٨) انتظرت",
-     "readers": [
-      "B",
-      "C"
-     ]
-    },
-    {
-     "text": "(5) بمد (0لمأرجم (4) اتظرت",
-     "readers": [
-      "A"
-     ]
-    }
-   ],
-   "word_boxes": [
-    [
-     915,
-     2574,
-     993,
-     2656
-    ],
-    [
-     789,
-     2588,
-     974,
-     2647
-    ],
-    [
-     484,
-     2578,
-     689,
-     2647
-    ],
-    [
-     1649,
-     2675,
-     1705,
-     2734
-    ],
-    [
-     1504,
-     2674,
-     1619,
-     2720
-    ]
-   ],
-   "line_boxes": [
-    [
-     484,
-     2574,
-     1705,
-     2659
-    ],
-    [
-     1504,
-     2674,
-     1705,
-     2734
-    ]
-   ],
+   "hint_box": null,
    "decision": null
   }
  ],
  "spotcheck": [
   {
    "id": "riyad1956-p016-s000",
+   "tok": 13,
+   "text": "مجلسه",
+   "loc": "approx",
+   "word_boxes": [
+    [
+     731,
+     510,
+     867,
+     563
+    ]
+   ],
+   "line_boxes": [
+    [
+     466,
+     485,
+     1776,
+     595
+    ]
+   ],
+   "hint_box": null,
+   "kind": "abstain_a",
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p016-s001",
+   "tok": 21,
+   "text": "،",
+   "loc": "gap",
+   "word_boxes": [
+    [
+     1416,
+     597,
+     1455,
+     689
+    ]
+   ],
+   "line_boxes": [
+    [
+     466,
+     597,
+     1781,
+     689
+    ]
+   ],
+   "hint_box": null,
+   "kind": "abstain_a",
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p016-s002",
    "tok": 78,
    "text": "رسول",
+   "loc": "word",
    "word_boxes": [
     [
      460,
@@ -5261,14 +4342,16 @@
      1019
     ]
    ],
+   "hint_box": null,
    "kind": "agree",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s001",
+   "id": "riyad1956-p016-s003",
    "tok": 89,
    "text": "وتعالى",
+   "loc": "word",
    "word_boxes": [
     [
      870,
@@ -5285,14 +4368,50 @@
      1137
     ]
    ],
+   "hint_box": null,
    "kind": "agree",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s002",
+   "id": "riyad1956-p016-s004",
+   "tok": 105,
+   "text": "(١)",
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1131,
+    2144,
+    1195
+   ],
+   "kind": "abstain_a",
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p016-s005",
+   "tok": 124,
+   "text": "إلى",
+   "loc": "uncertain",
+   "word_boxes": [],
+   "line_boxes": [],
+   "hint_box": [
+    0,
+    1352,
+    2144,
+    1422
+   ],
+   "kind": "abstain_a",
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p016-s006",
    "tok": 143,
    "text": "وإن",
+   "loc": "approx",
    "word_boxes": [
     [
      1347,
@@ -5309,14 +4428,16 @@
      1556
     ]
    ],
+   "hint_box": null,
    "kind": "agree",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s003",
+   "id": "riyad1956-p016-s007",
    "tok": 180,
    "text": "انطلقَ",
+   "loc": "word",
    "word_boxes": [
     [
      1019,
@@ -5333,14 +4454,16 @@
      1813
     ]
    ],
+   "hint_box": null,
    "kind": "abstain",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s004",
+   "id": "riyad1956-p016-s008",
    "tok": 196,
    "text": "منَ",
+   "loc": "word",
    "word_boxes": [
     [
      858,
@@ -5357,14 +4480,16 @@
      1916
     ]
    ],
+   "hint_box": null,
    "kind": "abstain",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s005",
+   "id": "riyad1956-p016-s009",
    "tok": 199,
    "text": "عليهمُ",
+   "loc": "approx",
    "word_boxes": [
     [
      453,
@@ -5381,14 +4506,16 @@
      1916
     ]
    ],
+   "hint_box": null,
    "kind": "abstain",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s006",
+   "id": "riyad1956-p016-s010",
    "tok": 209,
    "text": "هذه",
+   "loc": "word",
    "word_boxes": [
     [
      1091,
@@ -5405,14 +4532,16 @@
      2056
     ]
    ],
+   "hint_box": null,
    "kind": "agree",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s007",
+   "id": "riyad1956-p016-s011",
    "tok": 210,
    "text": "الصخرةِ",
+   "loc": "word",
    "word_boxes": [
     [
      948,
@@ -5429,14 +4558,16 @@
      2056
     ]
    ],
+   "hint_box": null,
    "kind": "abstain",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s008",
+   "id": "riyad1956-p016-s012",
    "tok": 248,
    "text": "حتى",
+   "loc": "word",
    "word_boxes": [
     [
      1701,
@@ -5453,14 +4584,42 @@
      2343
     ]
    ],
+   "hint_box": null,
    "kind": "agree",
    "verdict": null,
    "fix": null
   },
   {
-   "id": "riyad1956-p016-s009",
+   "id": "riyad1956-p016-s013",
+   "tok": 293,
+   "text": "(٥)",
+   "loc": "gap",
+   "word_boxes": [
+    [
+     1436,
+     2574,
+     1578,
+     2659
+    ]
+   ],
+   "line_boxes": [
+    [
+     484,
+     2574,
+     1705,
+     2659
+    ]
+   ],
+   "hint_box": null,
+   "kind": "abstain_a",
+   "verdict": null,
+   "fix": null
+  },
+  {
+   "id": "riyad1956-p016-s014",
    "tok": 298,
    "text": "قبلها",
+   "loc": "word",
    "word_boxes": [
     [
      1060,
@@ -5477,6 +4636,7 @@
      2659
     ]
    ],
+   "hint_box": null,
    "kind": "agree",
    "verdict": null,
    "fix": null
