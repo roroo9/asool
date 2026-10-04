@@ -1,0 +1,67 @@
+{
+ "page_id": "riyad1956-p020",
+ "printed": 20,
+ "model": "openrouter:qwen/qwen3-vl-32b-instruct",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 3456,
+  "output_tokens": 1034
+ },
+ "page_number_printed": "20",
+ "running_header": "— ٢٠ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن زر بن مُحَمَّشٍ قال : أثبت صدوان بن عسال رضى الله عنه أسأله عن المسح على الخفين فقال : ما جاء بك (١) يازر ؟ قلت : ابتداء العلم فقال : « إن اللائكة تضع أجمعها لطالب العلم رضاء بما يطلب فقلت : إنه قد حك (٢) في صدرى المسح على الخفين بعد الغائط والبول وكنت أمرءا من أصحاب النبي صلى الله عليه وسلم فجئت أسألك هل سمعته يذكر في ذلك شيئا ؟ قال : نعم كان يأمرنا إذا كنا سفرا - أو مسافرين - أن لا نزرع خفافنا ثلاثة أيام وبليابين إلا من جنابة ، لكن من غائط وبول ونوم . قلت : هل سمعته يذكر في الموى شيئا ؟ قال : نعم كنا مع رسول الله صلى الله عليه وسلم في سفرٍ فبينا نحن عنده إذ ناداه أعرابي بصوت جهوري (٣) يامحمد ، فأجابه رسول الله صلى الله عليه وسلم نحواً من صوته هاؤم (٤) فقلت له : وبحك أغمض (٥) من صوتك فإنك عند النبي صلى الله عليه وسلم وقد بيهيت عن هذا ! فقال : والله لا أغمض . قال الأعرابي : المرء يحب القوم وأنا يلحق (٦) بهم ؟ قال النبي صلى الله عليه وسلم : المرء مع من أحب يوم القيامة ، فما زال يحدثن حتى ذكر آباً من العرب ، مسيرة عرضه أو يسير الراكب في عرضه أربعين أو سبعين عاماً . قال سفيان أحد الرواة : قبل الشام خلقه الله تعالى يوم خلق السموات والأرض مفتوحا للتوبيّة لا ينقل حتى تطلع الشمس منه » رواه الترمذي وغيره وقال : حديث حسن صحيح . وعن أبي سعيد سعد بن مالك بن سنان الخدري رضى الله عنه أن نبي الله صلى الله عليه وسلم قال : كان فيمن كان قبلكم رجل قتل تسعة وتسعين نفسا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) ما الذى حملك على المجيء ؟ (٢) أثر (٣) مرتفع (٤) خذدوا (٥) اخفض (٦) أى إلى الآن يلحق بهم في الأعمال وطرق الكمال – أى لم يعمل . في الحديث فضل حب الله وحب رسول الله صلى الله عليه وسلم وحب الأخيار أحياء وأمواتا بامتثال أوامر الله والزمام الآداب الشرعية (٧) من المغرب",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)"
+   ],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "light ink in footnote section, especially lines 2-3"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "page_number",
+   "author_role": "editor",
+   "column": 0,
+   "text": "— ٢٠ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.97,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "minor smudging on the left margin near bottom of main text block",
+  "faint horizontal line below last line of matn text may be a rule or bleed-through"
+ ]
+}

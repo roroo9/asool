@@ -1,0 +1,112 @@
+{
+ "page_id": "riyad1956-p030",
+ "printed": 30,
+ "model": "openrouter:qwen/qwen3-vl-32b-instruct",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 3456,
+  "output_tokens": 1512
+ },
+ "page_number_printed": "٣٠",
+ "running_header": "— ٣٠ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن ابن عباس وأنس بن مالك رضي الله عنهم أن رسول الله صلى الله عليه وسلم قال: «لو أن لابن آدم واديًا من ذهب أحب أن يكون له واديان، ولن يملأ هاه إلا التراب ويتوب الله على من تاب» متفق عليه.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال: «يضحك الله سبحانه وتعالى إلى رجلين يقتل أحدهما الآخر بداخلان الجنة يقاتل هذا في سبيل الله فيقتل ثم يتوب الله على القاتل فيسلم فيتشهد» متفق عليه.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.97,
+   "issues": [
+    "light smudge on line 2"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "text": "باب الصبر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال الله تعالى ﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَبِّرُوا وَرَابِطُوا﴾ (١) وقال تعالى ﴿وَتَبْتَلُونَكُمْ بِشَيْءٍ مِّنَ الْحَرْبِ وَالْجُحْدِ وَقَصِي مِنَ الْأَمْوَالِ وَالْأَنْفُسِ وَالْمَرَّاتِ وَبَشِيرٍ الْمُصَبِّرِينَ﴾ وقال تعالى ﴿إِنَّا يُرْضَى الْمُصَبِّرُونَ أَجْرَهُمْ بَيْنَ جَنَّاتٍ﴾ (٢) وقال تعالى ﴿وَلَنَمْ صَبْرٌ وَغَفْرَ﴾ (٣) إن ذلك لين عَزْمُ الْأَمُورِ﴾ وقال تعالى ﴿اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ إِنَّ اللَّهَ مَعَ الْمُصَبِّرِينَ﴾ (٤) وقال تعالى ﴿وَتَبْتَلُونَكُمْ حَتَّى تَمَنَّ الْمُجَاهِدِينَ مِنكُمْ وَالْمُصَبِّرِينَ﴾ والآيات في الأمر بالصبر وبين فضل صبر كثيرة معروفة.",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.96,
+   "issues": [
+    "some diacritics slightly faded in middle lines"
+   ]
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) يرضى بفعلهما (٢) احبسوا النفس على طاعة الله وتحملوا المصائب وتابعدوا عن المعاصى (٣) غالبوا الكفار (٤) أقيموا على الجهاد (٥) أى لتخبركم على الطاعات وما يتناول به (٦) بغير مكيال أو وزن . قال الكواشى كل ما بر على ترك أهل ووطن وعلى كل مكرود يعرض له لأجل الله تعالى قال على كرم الله وجهه فانه يحيى الثواب لهم حيا (٧) لم ينتصر لنفسه بعد ظلمها (٨) تجاوز عن ظالمه (٩) المونة على أمركم ونجاح مقصدكم.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "handwritten annotation near top of footnote block, but not part of printed text"
+   ]
+  },
+  {
+   "order": 6,
+   "type": "page_number",
+   "author_role": "matn",
+   "column": 0,
+   "text": "— ٣٠ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Page number '— ٣٠ —' is centered at top, as expected.",
+  "Footnote (١) to (٩) are grouped together under a horizontal rule below the main hadith text; no column separation needed as they are single-column.",
+  "All diacritics and punctuation marks are preserved as printed."
+ ]
+}

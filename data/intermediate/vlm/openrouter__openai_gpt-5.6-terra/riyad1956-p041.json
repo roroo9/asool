@@ -1,0 +1,281 @@
+{
+ "page_id": "riyad1956-p041",
+ "printed": 41,
+ "model": "openrouter:openai/gpt-5.6-terra",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6807,
+  "output_tokens": 10959
+ },
+ "page_number_printed": "٤١",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٤١ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وانطلق رسول الله صلى الله عليه وسلم . قال يقول أبو طلحة : إنك لتعلم يا رب أنه يعجبني أن أخرج مع رسول الله صلى الله عليه وسلم إذا خرج وأدخل (١) معه ، إذا دخل وقد احتبست بما ترى أم سليم . يا أبا طلحة ما أجد الذي كنت أجد (٢) الطلق ، فانطلقنا وضربها المخاض حين قدمنا (٣) فولدت غلاما . فقالت لي أمي : يا أنس لا يرضعه أحد حتى تغدوه (٤) به على رسول الله صلى الله عليه وسلم ، قال : فأصبح أنس يحتمله فانطلقت به إلى رسول الله صلى الله عليه وسلم « وذكر تمام الحديث .",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)",
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": [
+    "علامة الاقتباس قبل «وذكر تمام الحديث» غير واضحة الاتجاه قليلا."
+   ]
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« ليس الشديد بالصرعة ، إنما الشديد الذى يملك نفسه عند الغضب »",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه .\n\n« والصرعة » بضم الصاد وفتح الراء وأصله عند العرب من يصرع الناس كثيرا .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.97,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن سليمان بن صرد رضي الله عنه قال : كنت جالسا مع النبي صلى الله عليه وسلم ورجلان (٥) يستبان ، وأحدهما قد احمر وجهه ، وانتفخت أوداجه (٦) . فقال رسول الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [
+    "(٥)",
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.97,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إني لأعلم كلمة لو قالها لذهب عنه ما يجد (٧) ، لو قال : أعوذ بالله من الشيطان الرجيم (٨) لذهب عنه ما يجد »",
+   "footnote_markers_in_text": [
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.97,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فقالوا له :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "المدينة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "من ألم الوضع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.96,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "أم سليم وأبو طلحة يدخلان المدينة مع المصطفى صلى الله عليه وسلم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.94,
+   "issues": [
+    "يمتد النص إلى السطر التالي ضمن صف الحواشي."
+   ]
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "أرضعه فى الصباح رضاعة كثيرة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.94,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "editor_commentary",
+   "author_role": "editor",
+   "column": 0,
+   "text": "تنبيه الصالحين الأتقياء الفالحين :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "poetry",
+   "author_role": "editor",
+   "column": 0,
+   "text": "نعم الإله على العباد كثيرة * وأحسن بجملة الأولاد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.96,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "editor_commentary",
+   "author_role": "editor",
+   "column": 0,
+   "text": "ما نأخذه من هذا الحديث جواز الأخذ بالشدة وترك الرخصة والتسلية عن المصائب .\nوالسيدة أم سليم تضمد الجرح وتداوى الجرحى واجتهادها فى عمل مصالح زوجها والترفيه عنه وتحمل الشقاق فى سبيل راحته ، ومشروعية المداراة بلا إبطال حق مسلم وإجابة دعوة رسول الله صلى الله عليه وسلم ببركته وأصلح الله لها ذريتها ، وقوة ثبات قلب أم سليم تتحلى بالصبر وترجع بالتسليم لأمر الله تعالى ، ومن ترك شيئا لله عوضه الله خيرا منه .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.8,
+   "issues": [
+    "بعض ألفاظ السطرين الأخيرين من التعليق الصغير أقل وضوحا، ولا سيما «ببركته» و«وترجع بالتسليم»."
+   ]
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "يسب كل منهما صاحبه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "عروق عنقه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "شدة الغضب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "أعتصم بالله من الشيطان الرجيم",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": [
+    "الحروف الوسطى من «الشيطان» دقيقة قليلا."
+   ]
+  }
+ ],
+ "page_level_issues": []
+}

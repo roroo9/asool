@@ -12,6 +12,16 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     cohere_api_key: str = ""
     mistral_api_key: str = ""
+    openrouter_api_key: str = ""
+
+    # Model roles (provider:model). Change here or via env, never in code.
+    page_parser_model: str = "openrouter:google/gemini-3.1-pro-preview"
+    page_parser_fallback_model: str = "google:gemini-3.5-flash"
+    answer_model: str = "openrouter:google/gemini-3.1-pro-preview"
+    classifier_model: str = "openrouter:google/gemini-3.8-flash"
+    embed_model: str = "openrouter:google/gemini-embedding-2"
+    openrouter_budget_usd: float = 10.0
+    anthropic_budget_usd: float = 5.0
 
     cors_origins: str = "http://localhost:3000"
     db_path: str = str(ROOT / "data" / "asool.db")

@@ -25,7 +25,17 @@ from pipeline.config import GOLD, INTER, page_id
 from pipeline.normalize import normalize, strip_diacritics
 
 READER_B = "claude-opus-5-5"
-READER_C = "claude-fable-5-1"
+READER_C = "claude-fable-5-1"  # bake-off pages 41, 30, 20
+READER_C_OTHER = "surya-ocr-2"  # the other 12 gold pages (open-source, local; owner decision)
+
+
+def _reader_c(pid: str) -> tuple[str, dict]:
+    p = INTER / "vlm" / READER_C / f"{pid}.json"
+    if p.exists():
+        return READER_C, json.loads(p.read_text())
+    return READER_C_OTHER, json.loads((INTER / "surya" / f"{pid}.json").read_text())
+
+
 MAX_SPAN = 4
 SPOTCHECK_RATE = 0.05
 FURNITURE = {"page_number", "page_header"}
@@ -72,7 +82,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
     pid = page_id(printed)
     ocr = json.loads((INTER / "ocr" / f"{pid}.json").read_text())
     vb = json.loads((INTER / "vlm" / READER_B / f"{pid}.json").read_text())
-    vc = json.loads((INTER / "vlm" / READER_C / f"{pid}.json").read_text())
+    reader_c, vc = _reader_c(pid)
 
     tb = _flat_tokens(vb["blocks"])
     tc = _flat_tokens(vc["blocks"])
@@ -176,7 +186,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
         "readers": {
             "A": ocr["engine"],
             "B": READER_B,
-            "C": READER_C,
+            "C": reader_c,
         },
         "rule": "auto-accept iff letters agree across A,B,C and diacritics agree between B,C",
         "blocks": [

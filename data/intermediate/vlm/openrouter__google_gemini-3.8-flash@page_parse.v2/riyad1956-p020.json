@@ -1,0 +1,193 @@
+{
+ "page_id": "riyad1956-p020",
+ "printed": 20,
+ "model": "openrouter:google/gemini-3.8-flash",
+ "prompt_version": "page_parse.v2",
+ "usage": {
+  "input_tokens": 2757,
+  "output_tokens": 16232
+ },
+ "page_number_printed": "٢٠",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "matn",
+   "column": 0,
+   "text": "— ٢٠ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن زرِّ بن حُبَيْشٍ قال : أتيتُ صفوانَ بنِ عسالٍ رضى الله عنه أسألهُ عن المسح على الخفين فقال : ما جاء بكَ (١) يازِرُّ ؟ فقلتُ : ابتغاءَ العلم فقال :",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنّ الملائكة تضعُ أجنحتها لطالبِ العلمِ رضاءً بما يطلبُ فقلتُ : إنهُ قد حك (٢) في صدري المسحُ على الخفين بعدَ الغائط والبول وكنتَ امرءا من أصحابِ النبيِّ صلى الله عليه وسلم فجئتُ أسألكَ هل سمعتهُ يذكرُ في ذلك شيئاً ؟ قال : نعم كانَ يأمرنا إذا كنَّا سفراً ـ أو مسافرين ـ أن لا ننزعَ خفافنا ثلاثة أيام ولياليهنَّ إلا من جنابة ، لكن من غائط و بول ونوم . فقلتُ : هل سمعتهُ يذكرُ في الهوى شيئاً ؟ قال : نعم كنَّا مع رسولِ الله صلى الله عليه وسلم في سفرٍ فبينا نحنُ عندهُ إذْ ناداه أعرابي بصوت جَهْوَري (٣) يامحمد ، فأجابه رسول الله صلى الله عليه وسلم نحواً من صوته هاؤُم (٤) فقلت له : ويحكَ اغضضْ (٥) من صوتكَ فإنك عندَ النبي صلى الله عليه وسلم وقدْ نهيتَ عن هذا ! فقال : واللهِ لا أغضض . قال الأعرابيُّ : المرء يحبُّ القوم ولَمَّا يلحق (٦) بهم ؟ قال النبيُّ صلى الله عليه وسلم : المرء مع منْ أحبَّ يومَ القيامةِ ، فما زالَ يحدثنا حتى ذكر باباً منَ المغربِ ، مسيرة عرضه أو يسير الراكب في عرضه أربعين أو سبعين عاماً . قال سفيان أحد الرواة : قِبل الشام خلقه الله تعالى يومَ خلق السمواتِ والأرضَ مفتوحا للتوبةِ لا يغلق حتى تطلع (٧) الشمس منه »",
+   "footnote_markers_in_text": [
+    "(٢)",
+    "(٣)",
+    "(٤)",
+    "(٥)",
+    "(٦)",
+    "(٧)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه الترمذي وغيره وقال : حديث حسنٌ صحيح.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أبي سعيد سعد بن مالك بن سنانٍ الخدرىّ رضى الله عنه أنّ نبيَّ الله صلى الله عليه وسلم قال :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "كانَ فيمنْ كان قبلكمْ رجلٌ قتلَ تسعة وتسعين نفساً",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) ما الذى حملك على المجيء ؟",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) أثر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) مرتفع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) خذوا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) اخفض",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) أى إلى الآن لم يلحق بهم فى الأعمال وطرق الكمال ـــ أى لم يعمل . فى الحديث فضل حب الله وحب رسول الله صلى الله عليه وسلم وحب الأخيار أحياء وأمواتا بامتثال أوامر الله والتزام الآداب الشرعية",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) من المغرب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

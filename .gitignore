@@ -41,3 +41,6 @@ data/reference/shamela/*.jsonl
 
 # Raw LLM response cache (local; results are saved under data/intermediate)
 data/cache/llm/
+
+# King Fahd Complex Hafs data: downloaded by scripts/fetch_references.sh (redistribution terms not stated)
+data/reference/quran/kfgqpc/

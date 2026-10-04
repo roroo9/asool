@@ -525,4 +525,21 @@ These override anything above that conflicts with them.
 4. **Random 5% spot-check** of auto-accepted words (weighted toward diacritized words); record the error rate in `data/gold/spotcheck.json` and report it on /proof.
 5. Built as the product's real **Review** feature following §7 UI/UX.
 6. Gold set size: 15 pages including the 3 bake-off pages (41, 30, 20). Reviewer: rowan (team member, native Arabic speaker).
-7. *(Owner's message was cut off at "6. Document method, bias controls and…". Remaining items to be added when received.)*
+7. **C6.** Document method, bias controls and spot-check results in the README. **Quality is the top priority.**
+8. Reader C for the 12 non-bake-off gold pages = **Surya OCR 2** (open-source, local). Mistral is not possible (free plan has no API keys). If Surya had been weak, Qari-OCR was next; paid options only if both failed. README states that Readers A and C are classical/open OCR, so more disagreements reach human review; auto-accept still requires all three readers to agree.
+
+
+### 12.D Updates of Sun Oct 4, ~10:00 (owner + updated scientific package, 15 pages)
+1. **Updated package** (`docs/challenge/scientific_package.pdf`, 15 pages; the old 8-page version is kept as `scientific_package_v1_8pages.pdf`). New content: the association «خدمة المحتوى الإسلامي باللغات» and its platforms (quranenc, hadeethenc, byenah, islamhouse, islamenc, terminologyenc, icadb; MCP server mcp.islamiccontent.org), Haramain «رسالة الحرمين», Quran sites (tafsir.net, mp3quran.net), fiqh references (Kuwaiti encyclopedia, islamqa, binbaz, binothaimeen), KSAA Arabic dictionaries, **King Fahd Complex developer data** (qurancomplex.gov.sa/quran-dev, JSON/XML with ayah-level IDs), **dorar.net hadith search API** (dorar.net/article/389), Shamela full database download.
+2. **Quran reference (final):** PRIMARY = King Fahd Complex developer data, Hafs v3.0 (`kfgqpc_hafs_v30.json`: `aya_text_unicode` for display, `aya_text_emlaey` for matching), downloaded by `scripts/fetch_references.sh` (not committed). FALLBACK = Quranpedia mushaf 1.
+3. **Hadith grading (final rule):**
+   - Takhrij «متفق عليه» / «رواه البخاري» / «رواه مسلم» (incl. «رواه إماما المحدثين: البخاري ومسلم») → `grading_status="in_sahihayn"`, source = the printed takhrij.
+   - Other hadiths → grading from the dorar.net API, result URL saved, cached, politely rate-limited.
+   - No verified match → «الحكم غير متحقق في البيانات». Never an LLM-generated grading. Uncertain matches → review queue.
+   - **Status Oct 4:** dorar.net (including article/389) returns a Cloudflare block page to this machine. We do not circumvent it. In the 15 parsed gold pages only 2 hadiths are outside the Sahihayn (both رواه الترمذي). Fallback route under discussion with the owner.
+   - HadeethEnc API (hadeethenc.com/api/v1) works and returns `attribution` + `grade`: usable as the second hadith reference.
+4. **Use only where it adds value:** hadeethenc (second hadith reference), terminologyenc + Jamhara (English terms), Shamela (text cross-check), mp3quran.net (OPTIONAL «listen to verse», real human recitation only, never synthetic voice, only after all GATEs).
+5. **Providers:** Gemini billing is not possible in Saudi Arabia in time (Google Cloud billing goes through the reseller CNTXT). All paid model calls for Asool go through **OpenRouter** ($10 key limit). The LLM layer is provider-agnostic (`provider:model` names, roles in `api/settings.py`).
+6. **Main page parser:** chosen by measured results, independent of gold Readers B and C → Gemini 3.1 Pro via OpenRouter with prompt `page_parse.v2` (see `docs/MODEL_SELECTION.md`).
+7. **Embeddings for the deployed app:** must not depend on free-tier limits during judging → Gemini Embedding 2 via OpenRouter (paid, pennies), corpus vectors precomputed; if the embedding call fails at query time, search falls back to BM25 only and says so.
+8. **Spending:** tracked per provider in `docs/COSTS.md`; warn the owner at 80% of any budget (Anthropic $5, OpenRouter $10).

@@ -1,0 +1,775 @@
+{
+ "pages": [
+  41,
+  30,
+  20
+ ],
+ "rows": [
+  {
+   "system": "tesseract-ara",
+   "role": "Reader A / baseline",
+   "cer_strict": 0.2989994520055391,
+   "cer_loose": 0.23880761689713356,
+   "wer_loose": 0.584131470816615,
+   "per_page_cer_strict": {
+    "41": 0.3158803222094361,
+    "30": 0.3595505617977528,
+    "20": 0.2215674720094284
+   },
+   "footnote_f1": 0.0,
+   "type_acc": 0.0,
+   "usd_per_page": null
+  },
+  {
+   "system": "claude-opus-5-5",
+   "role": "Reader B (gold reader, not eligible)",
+   "cer_strict": 0.009504760195324686,
+   "cer_loose": 0.002330693942565277,
+   "wer_loose": 0.01590606385460688,
+   "per_page_cer_strict": {
+    "41": 0.004027617951668585,
+    "30": 0.013879709187045605,
+    "20": 0.01060695344725987
+   },
+   "footnote_f1": 0.9583333333333334,
+   "type_acc": 1.0,
+   "usd_per_page": 0.11027333333333333
+  },
+  {
+   "system": "claude-fable-5-1",
+   "role": "Reader C on bake-off pages (gold reader, not eligible)",
+   "cer_strict": 0.017253059573740712,
+   "cer_loose": 0.008798774154351546,
+   "wer_loose": 0.07222790440117807,
+   "per_page_cer_strict": {
+    "41": 0.01093210586881473,
+    "30": 0.01784534038334435,
+    "20": 0.022981732469063054
+   },
+   "footnote_f1": 1.0,
+   "type_acc": 0.898316523205642,
+   "usd_per_page": 0.33455666666666667
+  },
+  {
+   "system": "surya-ocr-2",
+   "role": "Reader C on other gold pages (not eligible)",
+   "cer_strict": 0.10769308686806059,
+   "cer_loose": 0.028710595369236813,
+   "wer_loose": 0.12351257919969034,
+   "per_page_cer_strict": {
+    "41": 0.07422324510932106,
+    "30": 0.15928618638466624,
+    "20": 0.08956982911019445
+   },
+   "footnote_f1": 0.5994397759103641,
+   "type_acc": 0.3294296183034771,
+   "usd_per_page": null
+  },
+  {
+   "system": "gemini-3.5-flash",
+   "role": "candidate",
+   "cer_strict": 0.07752653569393289,
+   "cer_loose": 0.016145802206284452,
+   "wer_loose": 0.0455911234409549,
+   "per_page_cer_strict": {
+    "41": 0.0903337169159954,
+    "30": 0.04560475875743556,
+    "20": 0.0966411314083677
+   },
+   "footnote_f1": 0.9583333333333334,
+   "type_acc": 0.9277728801473791,
+   "usd_per_page": 0.0
+  },
+  {
+   "system": "openrouter:google/gemini-3.8-flash",
+   "role": "candidate",
+   "cer_strict": 0.045322390734580394,
+   "cer_loose": 0.0051484873980284646,
+   "wer_loose": 0.038970903286962316,
+   "per_page_cer_strict": {
+    "41": 0.037399309551208286,
+    "30": 0.0449438202247191,
+    "20": 0.05362404242781379
+   },
+   "footnote_f1": 1.0,
+   "type_acc": 1.0,
+   "usd_per_page": 0.089787
+  },
+  {
+   "system": "openrouter:google/gemini-3.1-pro-preview",
+   "role": "candidate",
+   "cer_strict": 0.04296957463819475,
+   "cer_loose": 0.0035433075107265954,
+   "wer_loose": 0.030133202692820785,
+   "per_page_cer_strict": {
+    "41": 0.0523590333716916,
+    "30": 0.04296100462656973,
+    "20": 0.03358868591632292
+   },
+   "footnote_f1": 1.0,
+   "type_acc": 1.0,
+   "usd_per_page": 0.138486
+  },
+  {
+   "system": "openrouter:openai/gpt-5.6-terra",
+   "role": "candidate",
+   "cer_strict": 0.16283365540865094,
+   "cer_loose": 0.06202427232153163,
+   "wer_loose": 0.1529320439856613,
+   "per_page_cer_strict": {
+    "41": 0.12715765247410818,
+    "30": 0.2293456708526107,
+    "20": 0.13199764289923394
+   },
+   "footnote_f1": 0.7890211640211641,
+   "type_acc": 0.7571006514761032,
+   "usd_per_page": 0.1161164
+  },
+  {
+   "system": "openrouter:qwen/qwen3-vl-32b-instruct",
+   "role": "candidate",
+   "cer_strict": 0.24662663568215265,
+   "cer_loose": 0.08134379712965398,
+   "wer_loose": 0.2133479261663232,
+   "per_page_cer_strict": {
+    "41": 0.4407364787111623,
+    "30": 0.16655651024454726,
+    "20": 0.13258691809074838
+   },
+   "footnote_f1": 0.1388888888888889,
+   "type_acc": 0.23221756520438575,
+   "usd_per_page": 0.0010702293333333334
+  },
+  {
+   "system": "openrouter:google/gemini-3.1-pro-preview@page_parse.v2",
+   "role": "candidate, prompt v2",
+   "cer_strict": 0.02330842224742617,
+   "cer_loose": 0.0038043359628278746,
+   "wer_loose": 0.03272723641525918,
+   "per_page_cer_strict": {
+    "41": 0.01380897583429229,
+    "30": 0.028420356906807668,
+    "20": 0.02769593400117855
+   },
+   "footnote_f1": 1.0,
+   "type_acc": 1.0,
+   "usd_per_page": 0.13866
+  }
+ ],
+ "raw": {
+  "41": {
+   "tesseract-ara": {
+    "strict": {
+     "cer": 0.3158803222094361,
+     "wer": 0.7067448680351907,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.28036253776435044,
+     "wer": 0.6451612903225806,
+     "ref_chars": 1655
+    },
+    "type_acc": 0.0,
+    "footnote_links": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "gold": 8
+    }
+   },
+   "surya-ocr-2": {
+    "strict": {
+     "cer": 0.07422324510932106,
+     "wer": 0.3196480938416422,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.019939577039274924,
+     "wer": 0.11730205278592376,
+     "ref_chars": 1655
+    },
+    "type_acc": 0.4262508122157245,
+    "footnote_links": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "gold": 8
+    }
+   },
+   "claude-opus-5-5": {
+    "strict": {
+     "cer": 0.004027617951668585,
+     "wer": 0.02932551319648094,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.002416918429003021,
+     "wer": 0.020527859237536656,
+     "ref_chars": 1655
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 0.875,
+     "r": 0.875,
+     "f1": 0.875,
+     "gold": 8
+    }
+   },
+   "claude-fable-5-1": {
+    "strict": {
+     "cer": 0.01093210586881473,
+     "wer": 0.06158357771260997,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.004833836858006042,
+     "wer": 0.02932551319648094,
+     "ref_chars": 1655
+    },
+    "type_acc": 0.7251461988304093,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 8
+    }
+   },
+   "gemini-3.5-flash": {
+    "strict": {
+     "cer": 0.0903337169159954,
+     "wer": 0.2785923753665689,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.04229607250755287,
+     "wer": 0.08797653958944282,
+     "ref_chars": 1655
+    },
+    "type_acc": 0.8135152696556205,
+    "footnote_links": {
+     "p": 0.875,
+     "r": 0.875,
+     "f1": 0.875,
+     "gold": 8
+    }
+   },
+   "openrouter:google/gemini-3.8-flash": {
+    "strict": {
+     "cer": 0.037399309551208286,
+     "wer": 0.16422287390029325,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.006042296072507553,
+     "wer": 0.0469208211143695,
+     "ref_chars": 1655
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 8
+    }
+   },
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "strict": {
+     "cer": 0.0523590333716916,
+     "wer": 0.23460410557184752,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.004229607250755287,
+     "wer": 0.03812316715542522,
+     "ref_chars": 1655
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 8
+    }
+   },
+   "openrouter:openai/gpt-5.6-terra": {
+    "strict": {
+     "cer": 0.12715765247410818,
+     "wer": 0.36363636363636365,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.07794561933534744,
+     "wer": 0.16715542521994134,
+     "ref_chars": 1655
+    },
+    "type_acc": 0.9623131903833658,
+    "footnote_links": {
+     "p": 0.875,
+     "r": 0.875,
+     "f1": 0.875,
+     "gold": 8
+    }
+   },
+   "openrouter:qwen/qwen3-vl-32b-instruct": {
+    "strict": {
+     "cer": 0.4407364787111623,
+     "wer": 0.718475073313783,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.10876132930513595,
+     "wer": 0.2316715542521994,
+     "ref_chars": 1655
+    },
+    "type_acc": 0.3762183235867446,
+    "footnote_links": {
+     "p": 0.25,
+     "r": 0.125,
+     "f1": 0.16666666666666666,
+     "gold": 8
+    }
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
+    "strict": {
+     "cer": 0.01380897583429229,
+     "wer": 0.07917888563049853,
+     "ref_chars": 1738
+    },
+    "loose": {
+     "cer": 0.004229607250755287,
+     "wer": 0.03812316715542522,
+     "ref_chars": 1655
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 8
+    }
+   }
+  },
+  "30": {
+   "tesseract-ara": {
+    "strict": {
+     "cer": 0.3595505617977528,
+     "wer": 0.6575875486381323,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.2615505090054816,
+     "wer": 0.6147859922178989,
+     "ref_chars": 1277
+    },
+    "type_acc": 0.0,
+    "footnote_links": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "gold": 9
+    }
+   },
+   "surya-ocr-2": {
+    "strict": {
+     "cer": 0.15928618638466624,
+     "wer": 0.4046692607003891,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.052466718872357085,
+     "wer": 0.1867704280155642,
+     "ref_chars": 1277
+    },
+    "type_acc": 0.39349871685201027,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 0.8888888888888888,
+     "f1": 0.9411764705882353,
+     "gold": 9
+    }
+   },
+   "claude-opus-5-5": {
+    "strict": {
+     "cer": 0.013879709187045605,
+     "wer": 0.054474708171206226,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.0,
+     "wer": 0.0,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   },
+   "claude-fable-5-1": {
+    "strict": {
+     "cer": 0.01784534038334435,
+     "wer": 0.10116731517509728,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.003915426781519186,
+     "wer": 0.027237354085603113,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   },
+   "gemini-3.5-flash": {
+    "strict": {
+     "cer": 0.04560475875743556,
+     "wer": 0.22568093385214008,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.0015661707126076742,
+     "wer": 0.01556420233463035,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   },
+   "openrouter:google/gemini-3.8-flash": {
+    "strict": {
+     "cer": 0.0449438202247191,
+     "wer": 0.2140077821011673,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.00548159749412686,
+     "wer": 0.042801556420233464,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   },
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "strict": {
+     "cer": 0.04296100462656973,
+     "wer": 0.2178988326848249,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.0031323414252153485,
+     "wer": 0.0311284046692607,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   },
+   "openrouter:openai/gpt-5.6-terra": {
+    "strict": {
+     "cer": 0.2293456708526107,
+     "wer": 0.48249027237354086,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.06891151135473766,
+     "wer": 0.1828793774319066,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 0.7777777777777778,
+     "r": 0.7777777777777778,
+     "f1": 0.7777777777777778,
+     "gold": 9
+    }
+   },
+   "openrouter:qwen/qwen3-vl-32b-instruct": {
+    "strict": {
+     "cer": 0.16655651024454726,
+     "wer": 0.4785992217898833,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.09866875489428348,
+     "wer": 0.29961089494163423,
+     "ref_chars": 1277
+    },
+    "type_acc": 0.19332763045337895,
+    "footnote_links": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "gold": 9
+    }
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
+    "strict": {
+     "cer": 0.028420356906807668,
+     "wer": 0.14785992217898833,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.003915426781519186,
+     "wer": 0.038910505836575876,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   },
+   "openrouter:google/gemini-3.8-flash@page_parse.v2": {
+    "strict": {
+     "cer": 0.034368803701255786,
+     "wer": 0.16342412451361868,
+     "ref_chars": 1513
+    },
+    "loose": {
+     "cer": 0.003915426781519186,
+     "wer": 0.027237354085603113,
+     "ref_chars": 1277
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 9
+    }
+   }
+  },
+  "20": {
+   "tesseract-ara": {
+    "strict": {
+     "cer": 0.2215674720094284,
+     "wer": 0.6167664670658682,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.17450980392156862,
+     "wer": 0.49244712990936557,
+     "ref_chars": 1530
+    },
+    "type_acc": 0.0,
+    "footnote_links": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "gold": 7
+    }
+   },
+   "surya-ocr-2": {
+    "strict": {
+     "cer": 0.08956982911019445,
+     "wer": 0.38023952095808383,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.013725490196078431,
+     "wer": 0.06646525679758308,
+     "ref_chars": 1530
+    },
+    "type_acc": 0.16853932584269662,
+    "footnote_links": {
+     "p": 0.8571428571428571,
+     "r": 0.8571428571428571,
+     "f1": 0.8571428571428571,
+     "gold": 7
+    }
+   },
+   "claude-opus-5-5": {
+    "strict": {
+     "cer": 0.01060695344725987,
+     "wer": 0.05089820359281437,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.004575163398692811,
+     "wer": 0.027190332326283987,
+     "ref_chars": 1530
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   },
+   "claude-fable-5-1": {
+    "strict": {
+     "cer": 0.022981732469063054,
+     "wer": 0.18562874251497005,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.01764705882352941,
+     "wer": 0.16012084592145015,
+     "ref_chars": 1530
+    },
+    "type_acc": 0.9698033707865169,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   },
+   "gemini-3.5-flash": {
+    "strict": {
+     "cer": 0.0966411314083677,
+     "wer": 0.39820359281437123,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.004575163398692811,
+     "wer": 0.03323262839879154,
+     "ref_chars": 1530
+    },
+    "type_acc": 0.9698033707865169,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   },
+   "openrouter:google/gemini-3.8-flash": {
+    "strict": {
+     "cer": 0.05362404242781379,
+     "wer": 0.24251497005988024,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.00392156862745098,
+     "wer": 0.027190332326283987,
+     "ref_chars": 1530
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   },
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "strict": {
+     "cer": 0.03358868591632292,
+     "wer": 0.15568862275449102,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.0032679738562091504,
+     "wer": 0.021148036253776436,
+     "ref_chars": 1530
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   },
+   "openrouter:openai/gpt-5.6-terra": {
+    "strict": {
+     "cer": 0.13199764289923394,
+     "wer": 0.47904191616766467,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.0392156862745098,
+     "wer": 0.10876132930513595,
+     "ref_chars": 1530
+    },
+    "type_acc": 0.3089887640449438,
+    "footnote_links": {
+     "p": 0.7142857142857143,
+     "r": 0.7142857142857143,
+     "f1": 0.7142857142857143,
+     "gold": 7
+    }
+   },
+   "openrouter:qwen/qwen3-vl-32b-instruct": {
+    "strict": {
+     "cer": 0.13258691809074838,
+     "wer": 0.45209580838323354,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.036601307189542485,
+     "wer": 0.10876132930513595,
+     "ref_chars": 1530
+    },
+    "type_acc": 0.1271067415730337,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 0.14285714285714285,
+     "f1": 0.25,
+     "gold": 7
+    }
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
+    "strict": {
+     "cer": 0.02769593400117855,
+     "wer": 0.12874251497005987,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.0032679738562091504,
+     "wer": 0.021148036253776436,
+     "ref_chars": 1530
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   },
+   "openrouter:google/gemini-3.8-flash@page_parse.v2": {
+    "strict": {
+     "cer": 0.054213317619328225,
+     "wer": 0.25748502994011974,
+     "ref_chars": 1697
+    },
+    "loose": {
+     "cer": 0.00392156862745098,
+     "wer": 0.027190332326283987,
+     "ref_chars": 1530
+    },
+    "type_acc": 1.0,
+    "footnote_links": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "gold": 7
+    }
+   }
+  }
+ }
+}

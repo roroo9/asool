@@ -16,7 +16,7 @@
    "footnote_marker": "",
    "text": "— ٣٠ —",
    "type_reader_c": "page_number",
-   "type_confirmed": null
+   "type_confirmed": "page_number"
   },
   {
    "order": 2,
@@ -26,7 +26,7 @@
    "footnote_marker": "",
    "text": "وعن ابن عباس وأنس بن مالك رضى الله عنهم أنّ رسول الله صلى الله عليه وسلم قال:",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 3,
@@ -36,7 +36,7 @@
    "footnote_marker": "",
    "text": "«لوْ أنّ لابنِ آدم وادياً منْ ذهب أحبّ أنْ يكونَ له واديان ، ولنْ يملأَ فاه إلا التراب ويتوب اللهُ على منْ تابَ»",
    "type_reader_c": "hadith",
-   "type_confirmed": null
+   "type_confirmed": "hadith"
   },
   {
    "order": 4,
@@ -46,7 +46,7 @@
    "footnote_marker": "",
    "text": "متفق عليه .",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 5,
@@ -56,7 +56,7 @@
    "footnote_marker": "",
    "text": "وعن أبى هريرة رضى الله عنه أنّ رسول الله صلى الله عليه وسلم قال :",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 6,
@@ -66,7 +66,7 @@
    "footnote_marker": "",
    "text": "« يضحكُ(١) اللهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمّ يتوب الله على القاتل فيسلم فيستشهد »",
    "type_reader_c": "hadith",
-   "type_confirmed": null
+   "type_confirmed": "hadith"
   },
   {
    "order": 7,
@@ -76,7 +76,7 @@
    "footnote_marker": "",
    "text": "متفق عليه .",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 8,
@@ -86,7 +86,7 @@
    "footnote_marker": "",
    "text": "باب الصبر",
    "type_reader_c": "heading",
-   "type_confirmed": null
+   "type_confirmed": "heading"
   },
   {
    "order": 9,
@@ -96,7 +96,7 @@
    "footnote_marker": "",
    "text": "قال الله تعالى",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 10,
@@ -106,7 +106,7 @@
    "footnote_marker": "",
    "text": "﴿ يَاأَيُّهَا ٱلَّذِينَ آمَنُوا ٱصْبِرُوا (٢) وَصَابِرُوا (٣) وَرَابِطُوا (٤) ﴾",
    "type_reader_c": "quran",
-   "type_confirmed": null
+   "type_confirmed": "quran"
   },
   {
    "order": 11,
@@ -116,7 +116,7 @@
    "footnote_marker": "",
    "text": "وقال تعالى",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 12,
@@ -126,7 +126,7 @@
    "footnote_marker": "",
    "text": "﴿ وَلَنَبْلُوَنَّكُمْ (٥) بِشَىْءٍ مِنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِنَ ٱلْأَمْوَالِ وَٱلْأَنْفُسِ وَٱلثَّمَرَاتِ وَبَشِّرِ ٱلصَّابِرِينَ ﴾",
    "type_reader_c": "quran",
-   "type_confirmed": null
+   "type_confirmed": "quran"
   },
   {
    "order": 13,
@@ -136,7 +136,7 @@
    "footnote_marker": "",
    "text": "وقال تعالى",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 14,
@@ -146,7 +146,7 @@
    "footnote_marker": "",
    "text": "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦) ﴾",
    "type_reader_c": "quran",
-   "type_confirmed": null
+   "type_confirmed": "quran"
   },
   {
    "order": 15,
@@ -156,7 +156,7 @@
    "footnote_marker": "",
    "text": "وقال تعالى",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 16,
@@ -166,7 +166,7 @@
    "footnote_marker": "",
    "text": "﴿ وَلَمَنْ (٧) صَبَرَ وَغَفَرَ (٨) إِنَّ ذَٰلِكَ لَمِنْ عَزْمِ ٱلْأُمُورِ ﴾",
    "type_reader_c": "quran",
-   "type_confirmed": null
+   "type_confirmed": "quran"
   },
   {
    "order": 17,
@@ -176,7 +176,7 @@
    "footnote_marker": "",
    "text": "وقال تعالى",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 18,
@@ -186,7 +186,7 @@
    "footnote_marker": "",
    "text": "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ ٱلصَّابِرِينَ ﴾",
    "type_reader_c": "quran",
-   "type_confirmed": null
+   "type_confirmed": "quran"
   },
   {
    "order": 19,
@@ -196,7 +196,7 @@
    "footnote_marker": "",
    "text": "وقال تعالى",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 20,
@@ -206,7 +206,7 @@
    "footnote_marker": "",
    "text": "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
    "type_reader_c": "quran",
-   "type_confirmed": null
+   "type_confirmed": "quran"
   },
   {
    "order": 21,
@@ -216,7 +216,7 @@
    "footnote_marker": "",
    "text": "والآيات فى الأمر بالصبرِ و بيانِ فضلهِ كثيرةٌ معروفة .",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 22,
@@ -226,7 +226,7 @@
    "footnote_marker": "(١)",
    "text": "(١) يرضى بفعلهما",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 23,
@@ -236,7 +236,7 @@
    "footnote_marker": "(٢)",
    "text": "(٢) احبسوا النفس على طاعة الله وتحملوا المصائب وتباعدوا عن المعاصى",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 24,
@@ -246,7 +246,7 @@
    "footnote_marker": "(٣)",
    "text": "(٣) غالبوا الكفار",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 25,
@@ -256,7 +256,7 @@
    "footnote_marker": "(٤)",
    "text": "(٤) أقيموا على الجهاد",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 26,
@@ -266,7 +266,7 @@
    "footnote_marker": "(٥)",
    "text": "(٥) أى لنختبرنكم على الطاعات وما يبتلون به",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 27,
@@ -276,7 +276,7 @@
    "footnote_marker": "(٦)",
    "text": "(٦) بغير مكيال أو وزن . قال الكواشى كل صابر على ترك أهل ووطن وعلى كل مكروه يعرض له لأجل الله تعالى قال على كرم الله وجهه فانه يحثى الثواب لهم حثيا",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 28,
@@ -286,7 +286,7 @@
    "footnote_marker": "(٧)",
    "text": "(٧) لم ينتصر لنفسه بعد ظلمها",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 29,
@@ -296,7 +296,7 @@
    "footnote_marker": "(٨)",
    "text": "(٨) تجاوز عن ظالمه",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 30,
@@ -306,7 +306,7 @@
    "footnote_marker": "(٩)",
    "text": "(٩) اطلبوا المعونة على أمركم و نجاح مقصدكم .",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   }
  ],
  "tokens": [
@@ -1395,7 +1395,9 @@
      570
     ]
    ],
-   "decision": null
+   "decision": "أنَّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:19.640137+00:00"
   },
   {
    "id": "riyad1956-p030-r001",
@@ -1433,7 +1435,9 @@
      570
     ]
    ],
-   "decision": null
+   "decision": "صلى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:21.761972+00:00"
   },
   {
    "id": "riyad1956-p030-r002",
@@ -1494,7 +1498,9 @@
      689
     ]
    ],
-   "decision": null
+   "decision": "عليه وسلم قال:",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:34.035935+00:00"
   },
   {
    "id": "riyad1956-p030-r003",
@@ -1549,7 +1555,9 @@
      689
     ]
    ],
-   "decision": null
+   "decision": "«لوْ أنَّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:41.211355+00:00"
   },
   {
    "id": "riyad1956-p030-r004",
@@ -1592,7 +1600,9 @@
      689
     ]
    ],
-   "decision": null
+   "decision": "أحبَّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:43.772277+00:00"
   },
   {
    "id": "riyad1956-p030-r005",
@@ -1642,7 +1652,9 @@
      689
     ]
    ],
-   "decision": null
+   "decision": "، ولنْ يملأَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:53.209554+00:00"
   },
   {
    "id": "riyad1956-p030-r006",
@@ -1680,7 +1692,9 @@
      779
     ]
    ],
-   "decision": null
+   "decision": "اللهُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:54.980972+00:00"
   },
   {
    "id": "riyad1956-p030-r007",
@@ -1723,7 +1737,9 @@
      779
     ]
    ],
-   "decision": null
+   "decision": "تابَ»",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:40:57.308710+00:00"
   },
   {
    "id": "riyad1956-p030-r008",
@@ -1761,7 +1777,9 @@
      899
     ]
    ],
-   "decision": null
+   "decision": "هريرة",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:41:00.933504+00:00"
   },
   {
    "id": "riyad1956-p030-r009",
@@ -1810,7 +1828,9 @@
      899
     ]
    ],
-   "decision": null
+   "decision": "عنــه أنَّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:41:04.635110+00:00"
   },
   {
    "id": "riyad1956-p030-r010",
@@ -1848,7 +1868,9 @@
      899
     ]
    ],
-   "decision": null
+   "decision": "صلى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:41:06.238263+00:00"
   },
   {
    "id": "riyad1956-p030-r011",
@@ -1897,7 +1919,9 @@
      899
     ]
    ],
-   "decision": null
+   "decision": "عليــه وسلم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:41:13.394027+00:00"
   },
   {
    "id": "riyad1956-p030-r012",
@@ -1935,7 +1959,9 @@
      996
     ]
    ],
-   "decision": null
+   "decision": ":",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:41:32.653454+00:00"
   },
   {
    "id": "riyad1956-p030-r013",
@@ -1990,7 +2016,9 @@
      996
     ]
    ],
-   "decision": null
+   "decision": "« يضحكُ(١) اللهُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:41:57.430732+00:00"
   },
   {
    "id": "riyad1956-p030-r014",
@@ -2034,7 +2062,9 @@
      996
     ]
    ],
-   "decision": null
+   "decision": "يقتلُ أحدهما",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:02.892986+00:00"
   },
   {
    "id": "riyad1956-p030-r015",
@@ -2089,7 +2119,9 @@
      1118
     ]
    ],
-   "decision": null
+   "decision": "الجنــةَ يقاتل",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:09.236942+00:00"
   },
   {
    "id": "riyad1956-p030-r016",
@@ -2132,7 +2164,9 @@
      1118
     ]
    ],
-   "decision": null
+   "decision": "ثمَّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:14.523322+00:00"
   },
   {
    "id": "riyad1956-p030-r017",
@@ -2176,7 +2210,9 @@
      1118
     ]
    ],
-   "decision": null
+   "decision": "الله على القاتل",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:19.755857+00:00"
   },
   {
    "id": "riyad1956-p030-r018",
@@ -2214,7 +2250,9 @@
      1118
     ]
    ],
-   "decision": null
+   "decision": "فيستشهد",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:23.876278+00:00"
   },
   {
    "id": "riyad1956-p030-r019",
@@ -2257,7 +2295,9 @@
      1282
     ]
    ],
-   "decision": null
+   "decision": "الصــبر",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:41.674050+00:00"
   },
   {
    "id": "riyad1956-p030-r020",
@@ -2354,7 +2394,9 @@
      1547
     ]
    ],
-   "decision": null
+   "decision": "﴿ يَاأَيُّهَا ٱلَّذِينَ آمَنُوا",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:42:57.783100+00:00"
   },
   {
    "id": "riyad1956-p030-r021",
@@ -2451,7 +2493,9 @@
      1547
     ]
    ],
-   "decision": null
+   "decision": "ٱصْبِرُوا (٢) وَصَابِرُوا (٣)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:43:13.519751+00:00"
   },
   {
    "id": "riyad1956-p030-r022",
@@ -2543,7 +2587,9 @@
      1547
     ]
    ],
-   "decision": null
+   "decision": "وَرَابِطُوا (٤) ﴾",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:43:21.386562+00:00"
   },
   {
    "id": "riyad1956-p030-r023",
@@ -2593,7 +2639,9 @@
      1663
     ]
    ],
-   "decision": null
+   "decision": "﴿ وَلَنَبْلُوَنَّكُمْ (٥) بِشَىْءٍ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:43:25.859135+00:00"
   },
   {
    "id": "riyad1956-p030-r024",
@@ -2708,7 +2756,9 @@
      1740
     ]
    ],
-   "decision": null
+   "decision": "ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِنَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:44:05.407389+00:00"
   },
   {
    "id": "riyad1956-p030-r025",
@@ -2823,7 +2873,9 @@
      1740
     ]
    ],
-   "decision": null
+   "decision": "ٱلْأَمْوَالِ وَٱلْأَنْفُسِ وَٱلثَّمَرَاتِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:44:20.847822+00:00"
   },
   {
    "id": "riyad1956-p030-r026",
@@ -2956,7 +3008,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "ٱلصَّابِرِينَ ﴾",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:44:46.296151+00:00"
   },
   {
    "id": "riyad1956-p030-r027",
@@ -3011,7 +3065,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "﴿ إِنَّمَا يُوَفَّى ٱلصَّابِرُونَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:45:38.349459+00:00"
   },
   {
    "id": "riyad1956-p030-r028",
@@ -3061,7 +3117,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "أَجْرَهُمْ بِغَيْرِ حِسَابٍ (٦)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:45:52.935699+00:00"
   },
   {
    "id": "riyad1956-p030-r029",
@@ -3111,7 +3169,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "﴾",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:45:55.653159+00:00"
   },
   {
    "id": "riyad1956-p030-r030",
@@ -3161,7 +3221,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "وقال تعالى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:46:03.283915+00:00"
   },
   {
    "id": "riyad1956-p030-r031",
@@ -3211,7 +3273,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "﴿ وَلَمَنْ (٧)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:46:10.126182+00:00"
   },
   {
    "id": "riyad1956-p030-r032",
@@ -3284,7 +3348,9 @@
      1881
     ]
    ],
-   "decision": null
+   "decision": "وَغَفَرَ (٨) إِنَّ ذَلِكَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:46:30.479021+00:00"
   },
   {
    "id": "riyad1956-p030-r033",
@@ -3387,7 +3453,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "عَزْمِ ٱلْأُمُورِ ﴾",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:46:51.801592+00:00"
   },
   {
    "id": "riyad1956-p030-r034",
@@ -3485,7 +3553,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "وقال تعالى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:46:59.438104+00:00"
   },
   {
    "id": "riyad1956-p030-r035",
@@ -3588,7 +3658,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "﴿ ٱسْتَعِينُوا (٩) بِٱلصَّبْرِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:47:17.062957+00:00"
   },
   {
    "id": "riyad1956-p030-r036",
@@ -3691,7 +3763,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "وَٱلصَّلَاةِ إِنَّ ٱللَّهَ مَعَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:47:27.375345+00:00"
   },
   {
    "id": "riyad1956-p030-r037",
@@ -3794,7 +3868,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "ٱلصَّابِرِينَ ﴾",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:47:33.908735+00:00"
   },
   {
    "id": "riyad1956-p030-r038",
@@ -3892,7 +3968,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "وقال تعالى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:47:37.604072+00:00"
   },
   {
    "id": "riyad1956-p030-r039",
@@ -3990,7 +4068,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "﴿ وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:47:54.233046+00:00"
   },
   {
    "id": "riyad1956-p030-r040",
@@ -4093,7 +4173,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "ٱلْمُجَاهِدِينَ مِنْكُمْ وَٱلصَّابِرِينَ ﴾",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:10.043342+00:00"
   },
   {
    "id": "riyad1956-p030-r041",
@@ -4191,7 +4273,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "والآيات في",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:27.562808+00:00"
   },
   {
    "id": "riyad1956-p030-r042",
@@ -4229,7 +4313,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "بالصبرِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:30.769756+00:00"
   },
   {
    "id": "riyad1956-p030-r043",
@@ -4273,7 +4359,9 @@
      2170
     ]
    ],
-   "decision": null
+   "decision": "بيانِ فضلهِ كثيرةٌ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:37.793083+00:00"
   },
   {
    "id": "riyad1956-p030-r044",
@@ -4341,7 +4429,9 @@
      2320
     ]
    ],
-   "decision": null
+   "decision": "يرضى بفعلهما",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:43.204830+00:00"
   },
   {
    "id": "riyad1956-p030-r045",
@@ -4409,7 +4499,9 @@
      2320
     ]
    ],
-   "decision": null
+   "decision": "(٢) احبسوا النفس على",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:49.407542+00:00"
   },
   {
    "id": "riyad1956-p030-r046",
@@ -4477,7 +4569,9 @@
      2320
     ]
    ],
-   "decision": null
+   "decision": "طاعة",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:53.046184+00:00"
   },
   {
    "id": "riyad1956-p030-r047",
@@ -4521,7 +4615,9 @@
      2320
     ]
    ],
-   "decision": null
+   "decision": "وتحملوا المصائب",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:48:57.475921+00:00"
   },
   {
    "id": "riyad1956-p030-r048",
@@ -4559,7 +4655,9 @@
      2401
     ]
    ],
-   "decision": null
+   "decision": "المعاصى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:49:01.538083+00:00"
   },
   {
    "id": "riyad1956-p030-r049",
@@ -4597,7 +4695,9 @@
      2401
     ]
    ],
-   "decision": null
+   "decision": "(٣)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:49:03.670189+00:00"
   },
   {
    "id": "riyad1956-p030-r050",
@@ -4635,7 +4735,9 @@
      2401
     ]
    ],
-   "decision": null
+   "decision": "الــكفار",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:49:13.356717+00:00"
   },
   {
    "id": "riyad1956-p030-r051",
@@ -4703,7 +4805,9 @@
      2401
     ]
    ],
-   "decision": null
+   "decision": "(٤) أقيموا على الجهاد",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:49:23.798695+00:00"
   },
   {
    "id": "riyad1956-p030-r052",
@@ -4776,7 +4880,9 @@
      2401
     ]
    ],
-   "decision": null
+   "decision": "(٥) أى لنختبرنــكم على",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:49:46.254195+00:00"
   },
   {
    "id": "riyad1956-p030-r053",
@@ -4820,7 +4926,9 @@
      2481
     ]
    ],
-   "decision": null
+   "decision": "(٦)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:49:48.520763+00:00"
   },
   {
    "id": "riyad1956-p030-r054",
@@ -4858,7 +4966,9 @@
      2481
     ]
    ],
-   "decision": null
+   "decision": "الــكواشى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:03.175601+00:00"
   },
   {
    "id": "riyad1956-p030-r055",
@@ -4896,7 +5006,9 @@
      2481
     ]
    ],
-   "decision": null
+   "decision": "ترك",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:05.918043+00:00"
   },
   {
    "id": "riyad1956-p030-r056",
@@ -4946,7 +5058,9 @@
      2558
     ]
    ],
-   "decision": null
+   "decision": "الله تعالى قال على",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:17.243543+00:00"
   },
   {
    "id": "riyad1956-p030-r057",
@@ -4996,7 +5110,9 @@
      2558
     ]
    ],
-   "decision": null
+   "decision": "كرم الله وجهه",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:21.726221+00:00"
   },
   {
    "id": "riyad1956-p030-r058",
@@ -5039,7 +5155,9 @@
      2558
     ]
    ],
-   "decision": null
+   "decision": "يحثى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:31.206608+00:00"
   },
   {
    "id": "riyad1956-p030-r059",
@@ -5077,7 +5195,9 @@
      2662
     ]
    ],
-   "decision": null
+   "decision": "لهم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:34.370801+00:00"
   },
   {
    "id": "riyad1956-p030-r060",
@@ -5115,7 +5235,9 @@
      2662
     ]
    ],
-   "decision": null
+   "decision": "(٧)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:35.830834+00:00"
   },
   {
    "id": "riyad1956-p030-r061",
@@ -5153,7 +5275,9 @@
      2662
     ]
    ],
-   "decision": null
+   "decision": "ظلمها",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:38.148776+00:00"
   },
   {
    "id": "riyad1956-p030-r062",
@@ -5197,7 +5321,9 @@
      2662
     ]
    ],
-   "decision": null
+   "decision": "(٨) تجاوز",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:45.566582+00:00"
   },
   {
    "id": "riyad1956-p030-r063",
@@ -5235,7 +5361,9 @@
      2662
     ]
    ],
-   "decision": null
+   "decision": "ظالمه",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:49.226444+00:00"
   },
   {
    "id": "riyad1956-p030-r064",
@@ -5291,7 +5419,9 @@
      2726
     ]
    ],
-   "decision": null
+   "decision": "(٩) اطلبوا المعونة",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:50:57.075678+00:00"
   },
   {
    "id": "riyad1956-p030-r065",
@@ -5346,7 +5476,9 @@
      2726
     ]
    ],
-   "decision": null
+   "decision": "أمركم و نجاح مقصدكم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-04T05:51:31.070933+00:00"
   }
  ],
  "spotcheck": [
@@ -5370,8 +5502,10 @@
      689
     ]
    ],
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": "لابنِ",
+   "reviewer": "rawan",
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
   },
   {
    "id": "riyad1956-p030-s001",
@@ -5393,8 +5527,10 @@
      1740
     ]
    ],
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": "وَبَشِّرِ",
+   "reviewer": "rawan",
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
   },
   {
    "id": "riyad1956-p030-s002",
@@ -5416,8 +5552,10 @@
      1881
     ]
    ],
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": "لَمِنْ",
+   "reviewer": "rawan",
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
   },
   {
    "id": "riyad1956-p030-s003",
@@ -5439,8 +5577,10 @@
      2481
     ]
    ],
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": "به",
+   "reviewer": "rawan",
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
   },
   {
    "id": "riyad1956-p030-s004",
@@ -5462,8 +5602,10 @@
      2662
     ]
    ],
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": "لنفسه",
+   "reviewer": "rawan",
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
   },
   {
    "id": "riyad1956-p030-s005",
@@ -5485,9 +5627,11 @@
      2662
     ]
    ],
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": "بعد",
+   "reviewer": "rawan",
+   "correction_note": "UI bug 2026-10-04: save button recorded \"wrong\" although the reviewer left the word unchanged; reclassified as ok"
   }
  ],
- "structure_reviewed": false
+ "structure_reviewed": true
 }

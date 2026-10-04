@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import unicodedata
 from difflib import SequenceMatcher
 
 import jiwer
@@ -26,7 +27,9 @@ def page_text(blocks: list[dict]) -> str:
 
 def _clean(s: str, level: str) -> str:
     if level == "strict":
-        return re.sub(r"\s+", " ", s).strip()
+        # NFC puts combining marks in canonical order (e.g. shadda+fatha), so the same
+        # printed marks typed in a different order are not counted as an error.
+        return unicodedata.normalize("NFC", re.sub(r"\s+", " ", s).strip())
     return normalize(s, "cer_loose")
 
 

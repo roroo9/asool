@@ -1,0 +1,430 @@
+{
+ "page_id": "riyad1956-p030",
+ "printed": 30,
+ "model": "openrouter:openai/gpt-5.6-terra",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 6807,
+  "output_tokens": 8808
+ },
+ "page_number_printed": "٣٠",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٠ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن ابن عباس وأنس بن مالك رضي الله عنهم أن رسول الله صلى الله عليه وسلم قال:",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "«لو أن لابن آدم واديا من ذهب أحب أن يكون له واديان، ولن يملأ فاه إلا التراب ويتوب الله على من تاب»",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "- وعن أبي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال:",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "«يضحك (١) الله سبحانه وتعالى إلى رجلين يقتل أحدهما الآخر يدخلان الجنة يقاتل هذا في سبيل الله فيقتل ثم يتوب الله على القاتل فيسلم فيستشهد»",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق عليه.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "text": "باب الصبر",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال الله تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ يا أيها الذين آمنوا اصبروا (٢) وصابروا (٣) ورابطوا (٤) ﴾",
+   "footnote_markers_in_text": [
+    "(٢)",
+    "(٣)",
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ ولنبلونكم (٥) بشىء من الخوف والجوع ونقص من الأموال والأنفس والثمرات وبشر الصابرين ﴾",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ إنما يوفى الصابرون أجرهم بغير حساب (٦) ﴾",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ ولمن صبر (٧) وغفر (٨) إن ذلك لمن عزم الأمور ﴾",
+   "footnote_markers_in_text": [
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ استعينوا (٩) بالصبر والصلاة إن الله مع الصابرين ﴾",
+   "footnote_markers_in_text": [
+    "(٩)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ ولنبلونكم حتى نعلم المجاهدين منكم والصابرين ﴾",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 21,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "والآيات في الأمر بالصبر وبيان فضله كثيرة معروفة.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 22,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) يرضى بفعلهما",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.91,
+   "issues": [
+    "The final letters of بفعلهما are slightly blurred."
+   ]
+  },
+  {
+   "order": 23,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) احبسوا النفس على طاعة الله وتحملوا المصائب وتباعدوا عن المعاصى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.9,
+   "issues": [
+    "The word before عن المعاصى is slightly blurred."
+   ]
+  },
+  {
+   "order": 24,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) غالبوا الكفار",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 25,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) أقيموا على الجهاد",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 26,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) أي لنختبرنكم بالبلاء وما ينالكم به",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.72,
+   "issues": [
+    "Middle wording is blurred in the printed footnote."
+   ]
+  },
+  {
+   "order": 27,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) بغير مكيل أو وزن. قال الكرمانى كل صابر على طاعته أو بلية أو مكروه يمر به لأجل الله تعالى فله في كريم الثواب حظ حافل.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.68,
+   "issues": [
+    "Several words in the quoted explanation after قال الكرمانى are blurred."
+   ]
+  },
+  {
+   "order": 28,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) لم ينتصر لنفسه بعد ظلمها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 29,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) تجاوز عن ظالمه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 30,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) اطلبوا المعونة على أمركم وتمام مقصدكم.",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnotes (٥) and (٦) are less sharply printed than the main text."
+ ]
+}

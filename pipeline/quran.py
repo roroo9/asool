@@ -19,6 +19,12 @@ from rapidfuzz.distance import Levenshtein
 from pipeline.config import REF
 from pipeline.normalize import normalize
 
+# Primary: King Fahd Complex official developer data (Hafs, v3.0), qurancomplex.gov.sa/quran-dev
+KFGQPC_FILE = (
+    REF / "quran" / "kfgqpc" / "hafs_v30" / "kfgqpc_hafs_v30-data" / "kfgqpc_hafs_v30.json"
+)
+KFGQPC_SOURCE = "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0"
+# Documented fallback: Quranpedia mushaf 1 (Hafs, matches the King Fahd print)
 QURAN_FILE = REF / "quran" / "qp_mushafs-1.json.gz"
 MINOR = 0.85
 MIN_WORDS = 4  # unmarked spans need >= 4 consecutive words hitting the 3-gram index
@@ -34,6 +40,30 @@ class Ayah:
     words: list[str]  # normalized words
 
 
+def _load_kfgqpc() -> list[Ayah]:
+    rows = json.loads(KFGQPC_FILE.read_text(encoding="utf-8-sig"))
+    out = []
+    for r in rows:
+        words = normalize(r["aya_text_emlaey"], "quran").split()  # imla'i text: for matching
+        out.append(Ayah(int(r["sura_no"]), int(r["aya_no"]), r["aya_text_unicode"].strip(), words))
+    return out
+
+
+def _load_quranpedia() -> list[Ayah]:
+    data = json.loads(gzip.decompress(QURAN_FILE.read_bytes()))["data"]
+    out = []
+    for s in data["surahs"]:
+        for a in s["ayahs"]:
+            text = a["text"].replace("\ufeff", "").strip()
+            words = normalize(text, "quran").split()
+            out.append(Ayah(int(a["surah"]), int(a["number"]), text, words))
+    return out
+
+
+def reference_source() -> str:
+    return KFGQPC_SOURCE if KFGQPC_FILE.exists() else "Quranpedia mushaf 1 (fallback)"
+
+
 @dataclass
 class QuranIndex:
     ayahs: list[Ayah]
@@ -44,13 +74,7 @@ class QuranIndex:
 
 @lru_cache(maxsize=1)
 def load_index() -> QuranIndex:
-    data = json.loads(gzip.decompress(QURAN_FILE.read_bytes()))["data"]
-    ayahs = []
-    for s in data["surahs"]:
-        for a in s["ayahs"]:
-            text = a["text"].replace("﻿", "").strip()
-            words = normalize(text, "quran").split()
-            ayahs.append(Ayah(int(a["surah"]), int(a["number"]), text, words))
+    ayahs = _load_kfgqpc() if KFGQPC_FILE.exists() else _load_quranpedia()
     idx = QuranIndex(ayahs)
     for ai, a in enumerate(ayahs):
         for wi, w in enumerate(a.words):

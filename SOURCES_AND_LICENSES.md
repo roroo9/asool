@@ -24,14 +24,18 @@ This file is kept honest: unknown or unverified status is written as such.
 - **Consequence:** the PDF files and rendered page images are **excluded from the public GitHub repository** (see `.gitignore`). Page images are served only from the live deployment, for the purpose of showing citations. Extracted text snippets in the repo are limited to what the evaluation and index need.
 - **archive.org text layer:** we inspected it and found it unusable (Arabic was decoded as Latin characters, 0% Arabic). So the baseline uses our own Tesseract `ara` run instead. See `docs/PROGRESS.md`.
 
-Shamela: not used (different edition, page numbers would not match).
+Shamela: used only as an independent text cross-check during gold review (different edition; page numbers do not match). See Reference data.
 
 ## Reference data
-| Item | License | Use |
+| Item | License / terms | Use |
 |---|---|---|
-| Tanzil Quran text (Uthmani, Simple-Clean) | Tanzil license: free to copy with attribution, text must not be modified | Quran verse verification. To be added in Phase 2. |
-| quranpedia.net | Outbound links only | Surah/ayah reference links |
-| dorar.net | Outbound search links only, no scraping | "Check this hadith" link |
+| King Fahd Glorious Quran Printing Complex, developer data, Hafs v3.0 (qurancomplex.gov.sa/quran-dev, `kfgqpc_hafs_v30.zip`) | Published by the Complex for developers; redistribution terms not stated, so the file is downloaded at build time and not committed | **Primary** Quran reference: display text (Uthmani) + matching text (imla'i) |
+| Quranpedia.net dump, mushaf 1 (Hafs, matching the King Fahd print), version 2026-09-30 | Free in apps; republishing the data requires credit + link + version | Documented fallback Quran reference |
+| quranpedia.net | Outbound links | Surah/ayah link for every verified verse |
+| Shamela (shamela.ws), book 2348 «رياض الصالحين» ت. ماهر الفحل، دار ابن كثير 1428هـ (the editor made it free) | Text fetched for review only (pages 10–90, 1 req/s), not redistributed | Independent text cross-check during gold review |
+| dorar.net hadith search API (dorar.net/article/389) | Official public API | Hadith grading for non-Sahihayn hadiths. Blocked from our machine on Oct 4 (Cloudflare); see CLAUDE.md §12.D |
+| HadeethEnc API (hadeethenc.com/api/v1) | Official public API | Second hadith reference (attribution + grade) |
+| Jamhara (islamic-content.com/dictionary), terminologyenc.com | Public reference | English equivalents of Islamic terms |
 
 ## Fonts (all SIL Open Font License 1.1)
 | Font | Use |
@@ -52,5 +56,15 @@ Shamela: not used (different edition, page numbers would not match).
 | Next.js, React | MIT | Web app |
 | Tailwind CSS | MIT | Styling |
 
-## AI models (filled in after Phase 1 bake-off)
-To be recorded with exact model IDs and the date of each provider's pricing page.
+## AI models and OCR engines
+| Model / engine | Provider / license | Role |
+|---|---|---|
+| Gemini 3.1 Pro (preview), `google/gemini-3.1-pro-preview` | Google, via OpenRouter (paid) | Asool page parser (prompt `page_parse.v2`) |
+| Gemini 3.8 Flash, Gemini 3.5 Flash | Google, via OpenRouter / Google AI Studio free tier | Parser fallbacks; bake-off candidates |
+| Gemini Embedding 2, `google/gemini-embedding-2` | Google, via OpenRouter (paid) | Dense retrieval embeddings |
+| Claude Opus 5.5, Claude Fable 5.1 | Anthropic API (paid) | Independent gold-set readers B and C (not used in the product) |
+| Surya OCR 2 (`surya-ocr` 0.22.1, model `datalab-to/surya-ocr-2`) | Open source (code GPL-3.0; model weights under Datalab's model license), run locally via llama.cpp | Gold-set Reader C on 12 pages |
+| Tesseract 5.5.3 + `ara` traineddata | Apache 2.0 | Gold Reader A, geometry lane (word/line boxes), baseline OCR |
+| GPT-5.6 Terra, Qwen3-VL 32B | via OpenRouter | Bake-off candidates only |
+
+Pricing used for cost reports: OpenRouter per-call reported cost; Anthropic model table dated 2026-09-25.

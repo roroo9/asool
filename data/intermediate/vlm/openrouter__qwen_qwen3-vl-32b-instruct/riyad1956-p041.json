@@ -1,0 +1,161 @@
+{
+ "page_id": "riyad1956-p041",
+ "printed": 41,
+ "model": "openrouter:qwen/qwen3-vl-32b-instruct",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 3456,
+  "output_tokens": 2580
+ },
+ "page_number_printed": "41",
+ "running_header": "— ٤١ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وَانْطَلَقَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ . قَالَ يَقُولُ أَبُو طَلْحَةَ : إِنَّكَ لَتَعْلَمُ يَا رَبُّ أَنَّهُ يُمْجِنُ أَنْ أَخْرَجَ مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا خَرَجَ وَأَدْخَلَ إِذَا دَخَلَ وَقَدْ اخْتَبَسْتُ بِمَا تَرَى تَقُولُ أُمُّ سَلَيْمٍ . يَا أَبَا طَلْحَةَ مَا أَجَدُ الَّذِى كَنْتَ أَجِدُ الطَّائِفَ ، فَانْطَلَقْنَا وَضَرَبَهَا الْخَلْضُ حَيْنَ قَدْمَا فَوَلَدْتُ غَلاَمًا . فَقَالَتْ لِى أُمِّى : يَا أُنَسُ لاَ يَرْضَعُهُ أَحَدٌ حَتَّى تَغْدَوَ (١) بِهِ عَلَى رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ، فَإِنَّكَ أَصْبَحْتَ أَحْتَلَثَهُ فَانْطَلَقْتُ بِهِ إِلَى رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ « وَذَكَرَ تَمَامَ الْحَدِيثِ . وَعَنْ أَبِى هُرَيْرَةَ رَضِىَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ : » لَيْسَ الشَّدِيدُ بِالصُّرْعَةِ ، إِنَّمَا الشَّدِيدُ الَّذِى يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ « مَنْقَطِعٌ عَلَيْهِ . » وَالصُّرْعَةُ « بَضْعُ الصَّادِ وَفَتْحِ الرَّاءِ وَأَصْلُهُ عِنْدَ الْعَرَبِ مِنْ بِصْرِعُ النَّاسِ كَبِيرًا . وَعَنْ سُلَيْمَانَ بْنِ صَرْدٍ رَضِىَ اللَّهُ عَنْهُ قَالَ : كُنْتُ جَالِسًا مَعَ النَّبِىِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَرَجُلَانِ (٥) يَسْتَبَانُ ، وَأَحَدُهُمَا قَدْ أَحْرَزَ وَجْهَهُ ، وَانْتَخَبْتُ أُودَاجَهُ (٦) . فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ : إِنَّ الْأَعْمَى كَلَّةً لَوْ قَالَهَا لَذَهَبَ عَنْهُ مَأْجِذٌ (٧) ، لَوْ قَالَ . أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ (٨) ذَهَبَ عَنْهُ مَأْجِذٌ « . فَقَالَوا لَهُ :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "المدينة (١) من أم الوضع",
+   "footnote_markers_in_text": [
+    "(١)"
+   ],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.97,
+   "issues": [
+    "light smudging on line starting with 'المدينة'",
+    "slight bleed-through from reverse side at bottom of column"
+   ]
+  },
+  {
+   "order": 3,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "المدينة مع الصطفى صلى الله عليه وسلم",
+   "footnote_markers_in_text": [
+    "(٢)"
+   ],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.96,
+   "issues": [
+    "faint ink in 'الصباح'"
+   ]
+  },
+  {
+   "order": 4,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "بين الصالحين الأتقياء الفالحين : نعم الإله على العباد كثيرة * وأهلمن نجابة الأولاد",
+   "footnote_markers_in_text": [
+    "(٣)"
+   ],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "small dot above 'أ' in 'أولاد' possibly a typo or diacritic"
+   ]
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "ما نأخذه من هذا الحديث جواز الأخذ بالشدة وترك الرخصة والتسليبة عن الصائب . والسيدة أم سليم تشهد الحرب وتداوى الجرحى واحتادها في عمل مصالح زوجها والترفيه عنه وتحمل المشاق في سبيل راحته، ومشروعية المعارض بلا إطال حق مسلم، وإجابة دعوة رسول الله صلى الله عليه وسلم بلغها الله مناها وأصلح لها ذريتها، وقوة ثبات قلب أم سليم تتجلّى بالصبر وتتوج بالتسلّيم لأمر الله تعالى، ومن ترك شيئاً له عوضه الله خيراً منه",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.94,
+   "issues": [
+    "word 'تكثير' slightly faded"
+   ]
+  },
+  {
+   "order": 6,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "أَنَّ خَيْرًا مِنْهُ (٥) يَبْسُ كُلَّ مَنْهُمَا صَاحِبَهُ",
+   "footnote_markers_in_text": [
+    "(٥)"
+   ],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.93,
+   "issues": [
+    "'يبس كل منهما صاحبه' — possible typo, but transcribed as printed"
+   ]
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "شدة الغضب (٧) عروق عتقه (٦)",
+   "footnote_markers_in_text": [
+    "(٦)"
+   ],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.92,
+   "issues": [
+    "'عروق عتقه' — unclear if 'عقوق' or 'عروق'; kept as printed"
+   ]
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "أَعْتَصِمْ بِاللَّهِ مِنَ الْبَعْدِ مِنْ رَحْمَةِ اللَّهِ",
+   "footnote_markers_in_text": [
+    "(٨)"
+   ],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.91,
+   "issues": [
+    "last line has slight paper curl artifact"
+   ]
+  },
+  {
+   "order": 9,
+   "type": "page_number",
+   "author_role": "editor",
+   "column": 0,
+   "text": "— ٤١ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

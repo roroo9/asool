@@ -106,7 +106,10 @@ def spot(pid: str, spot_id: str, body: Spot) -> dict:
         s = next((x for x in d["spotcheck"] if x["id"] == spot_id), None)
         if not s:
             raise HTTPException(404, "spot item not found")
-        s.update(verdict=body.verdict, fix=body.fix, reviewer=body.reviewer)
+        verdict = body.verdict
+        if verdict == "wrong" and (body.fix or "").strip() == s["text"]:
+            verdict = "ok"  # an unchanged "correction" is a confirmation, not an error
+        s.update(verdict=verdict, fix=body.fix, reviewer=body.reviewer)
         _save(d)
     return _progress(d)
 

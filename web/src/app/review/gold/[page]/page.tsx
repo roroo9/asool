@@ -309,7 +309,9 @@ export default function GoldPage() {
             ref={editRef}
             value={edit}
             onChange={setEdit}
-            onSave={() => judge("wrong", edit.trim())}
+            onSave={() =>
+              edit.trim() === spot.text ? judge("ok") : judge("wrong", edit.trim())
+            }
             saveLabel="حفظ التصحيح"
           />
         </section>
