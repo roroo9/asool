@@ -1,0 +1,20 @@
+{
+  "source": "Challenge scientific package, p.7 (sample of the Jamhara dictionary, islamic-content.com/dictionary)",
+  "terms": {
+    "الإسلام": "Islam",
+    "التوحيد": "Tawhid / Oneness of God",
+    "العبادة": "Worship",
+    "النبوة": "Prophethood",
+    "الوحي": "Revelation",
+    "الشريعة": "Sharia / Islamic law and guidance",
+    "الحديث": "Hadith",
+    "السنة": "Sunnah",
+    "الفتوى": "Fatwa",
+    "الدعوة": "Da'wah / Invitation to Islam",
+    "التوبة": "Repentance (tawbah)",
+    "الصبر": "Patience (sabr)",
+    "الإخلاص": "Sincerity (ikhlas)",
+    "النية": "Intention (niyyah)"
+  },
+  "note": "The last four entries are not in the package sample; they follow common usage and are marked for verification against Jamhara/terminologyenc."
+}

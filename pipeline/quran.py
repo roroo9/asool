@@ -236,3 +236,67 @@ def find_unmarked(text: str) -> list[QuranMatch]:
 
 def bracketed_spans(text: str) -> list[str]:
     return [m.group(1).strip() for m in BRACKETS.finditer(text)]
+
+
+@lru_cache(maxsize=1)
+def _bigrams() -> dict[tuple[str, str], list[int]]:
+    idx = load_index()
+    bg: dict[tuple[str, str], list[int]] = {}
+    for i in range(len(idx.words) - 1):
+        bg.setdefault((idx.words[i], idx.words[i + 1]), []).append(i)
+    return bg
+
+
+def _word_variants(w: str) -> set[str]:
+    out = {w}
+    if w.startswith("و") and len(w) > 3:
+        out.add(w[1:])
+    else:
+        out.add("و" + w)
+    return out
+
+
+def candidates(printed_text: str, top: int = 3) -> list[QuranMatch]:
+    """Several plausible verses for a short or altered quotation (a 4-word misquote can be
+    close to more than one verse). Votes from shared word pairs (with and without the
+    conjunction «و»), ranked by character similarity. Distinct ayahs, best first."""
+    idx = load_index()
+    words = normalize(MARKERS.sub(" ", printed_text), "quran").split()
+    if len(words) < 2:
+        return []
+    bg = _bigrams()
+    starts: set[int] = set(_candidates(idx, words))
+    for i in range(len(words) - 1):
+        for a in _word_variants(words[i]):
+            for b in _word_variants(words[i + 1]):
+                for pos in bg.get((a, b), [])[:200]:
+                    starts.add(pos - i)
+    scored = []
+    for start in starts:
+        for ln in range(max(1, len(words) - 1), len(words) + 2):
+            s, e = max(0, start), min(len(idx.words), start + ln)
+            if e > s:
+                scored.append((_sim(words, idx.words[s:e]), s, e))
+    seen: set[int] = set()
+    out: list[QuranMatch] = []
+    for sim, s, e in sorted(scored, reverse=True):
+        a0 = idx.pos[s][0]
+        if a0 in seen or sim < 0.6:
+            continue
+        seen.add(a0)
+        ayah = idx.ayahs[a0]
+        out.append(
+            QuranMatch(
+                printed_text=printed_text,
+                surah=ayah.surah,
+                ayah_start=ayah.ayah,
+                ayah_end=ayah.ayah,
+                canonical_text=ayah.text,
+                similarity=round(sim, 4),
+                match_type="exact" if sim >= 0.999 else "candidate",
+                diff_ops=_diff(words, idx.words[s:e]),
+            )
+        )
+        if len(out) >= top:
+            break
+    return out
