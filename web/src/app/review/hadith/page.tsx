@@ -99,7 +99,7 @@ function HadithCard({ n, row, onSaved }: { n: number; row: HadithRow; onSaved: (
           {verified ? "✓ حكم موثق" : "⚠ الحكم غير متحقق في البيانات"}
         </span>
       </div>
-      <p className="mt-3 font-source text-xl leading-loose">«{row.wording}»</p>
+      <p className="mt-3 font-source text-xl leading-loose">{row.wording}</p>
       <p className="mt-2 text-sm">
         تخريج المصنف كما طُبع: <strong>{row.takhrij_text ?? "لم يُعثر على تخريج"}</strong>
       </p>

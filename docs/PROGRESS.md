@@ -7,7 +7,7 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 |---|---|---|
 | 0 Setup | Sun Oct 4, 07:00–09:00 | Done, approved |
 | 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Done ~11:00. At GATE 1 |
-| 2 Full ingestion (30 pages) + baseline | Sun 13:00–22:00 | |
+| 2 Full ingestion (30 pages) + baseline | Sun 13:00–22:00 | Done 11:05. At GATE 2 |
 | 3 API | Mon Oct 5, 08:00–14:00 | |
 | 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | |
 | 5 Evaluation & hardening | Tue Oct 6, 08:00–14:00 | |
@@ -47,6 +47,11 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
 - Drafts ready for the 12 remaining gold pages (Surya as Reader C): 992 disputed phrases.
 - OpenRouter test: Gemini 3.1 Pro OK, $0.0012. Spend: Anthropic $2.66/$5, OpenRouter $1.62/$10.
 - Blocker: dorar.net blocks this machine (Cloudflare), including the API docs page.
+
+## Phase 2 results (GATE 2)
+- Index: 30 pages, 535 blocks, 273 footnotes (all linked by exact marker), 17 Quran verses (all exact vs King Fahd text), 45 hadith units (41 in Sahihayn, 3 al-Tirmidhi needing a grading, 1 whose takhrij is on p.42 outside the corpus), 56 chunks (53 matn, 3 editor commentary), 90 baseline chunks, embeddings (Gemini Embedding 2).
+- Review queue: 8 block items (4 Quran-mismatch false flags were removed by fixing detection) + 4 page-level completeness flags (2 real Gemini errors: p39 footnote 7, p15 footnote 1).
+- Gold disputes for 12 pages after rule v2: 912.
 
 ## Known issues
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.

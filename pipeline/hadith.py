@@ -25,7 +25,7 @@ GRADINGS = DATA / "hadith_gradings.json"
 UNVERIFIED_AR = "الحكم غير متحقق في البيانات"
 
 _D = r"[ً-ْٰ]*"  # optional tashkeel between letters
-TAKHRIJ_RE = re.compile(r"(متفق\s*عل[يى]ه|رواه\s+[^.،:\n«»]{2,60}|أخرجه\s+[^.،:\n«»]{2,60})")
+TAKHRIJ_RE = re.compile(r"(متفق\s*عل[يى]ه|(?:رواه|أخرجه)\s+[^.«»\n]{2,90})")
 SAHIHAYN_RE = re.compile(r"متفق|البخار|مسلم|إماما المحدثين|اماما المحدثين")
 START_RE = re.compile(r"^\s*(و?عن|و?روينا)\s")  # «وفى رواية» = variant of the same unit
 
