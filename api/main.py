@@ -168,14 +168,27 @@ class Resolve(BaseModel):
 @app.post("/review/{item_id}/resolve", dependencies=[Depends(gold_review._auth)])
 def resolve(item_id: int, body: Resolve) -> dict:
     con = _con()
-    cur = con.execute(
+    now = datetime.now(UTC).isoformat()
+    row = con.execute(
+        "SELECT page_id, block_id FROM review_items WHERE id=?", (item_id,)
+    ).fetchone()
+    if not row:
+        con.close()
+        raise HTTPException(404, "review item not found")
+    con.execute(
         "UPDATE review_items SET resolved=1, resolved_by=?, resolved_at=? WHERE id=?",
-        (f"{body.reviewer}: {body.note}".strip(": "), datetime.now(UTC).isoformat(), item_id),
+        (f"{body.reviewer}: {body.note}".strip(": "), now, item_id),
     )
     con.commit()
     con.close()
-    if cur.rowcount == 0:
-        raise HTTPException(404, "review item not found")
+    f = ROOT / "data" / "review_resolutions.json"
+    res = json.loads(f.read_text()) if f.exists() else {}
+    res[f"{row['page_id']}|{row['block_id'] or 'PAGE'}"] = {
+        "by": body.reviewer,
+        "note": body.note,
+        "at": now,
+    }
+    f.write_text(json.dumps(res, ensure_ascii=False, indent=1))
     return {"ok": True}
 
 

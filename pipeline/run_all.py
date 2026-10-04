@@ -465,6 +465,16 @@ def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -
             "VALUES (NULL,?,?,NULL,?)",
             (pid, reason, now),
         )
+    # Re-apply human review resolutions (versioned file) so a rebuild never loses them.
+    res_file = DATA / "review_resolutions.json"
+    if res_file.exists():
+        for key, r in json.loads(res_file.read_text()).items():
+            pid, bid = key.split("|")
+            con.execute(
+                "UPDATE review_items SET resolved=1, resolved_by=?, resolved_at=? "
+                "WHERE page_id=? AND coalesce(block_id,'PAGE')=?",
+                (f"{r['by']}: {r.get('note', '')}", r.get("at"), pid, bid),
+            )
     con.execute("INSERT INTO meta VALUES ('built_at', ?)", (now,))
     con.execute(
         "INSERT INTO meta VALUES ('page_parser', ?)",

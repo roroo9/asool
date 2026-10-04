@@ -35,3 +35,11 @@ def test_span_across_two_ayahs():
 def test_non_quran_sentence_with_common_words_does_not_match():
     text = "قال رسول الله صلى الله عليه وسلم إن الله يحب العبد التقي الغني الخفي"
     assert find_unmarked(text) == []
+
+
+def test_misquote_lists_all_close_verses_owner_case():
+    from pipeline.quran import candidates
+
+    got = [(c.surah, c.ayah_start) for c in candidates("إن الله يحب الصابرين", top=4)]
+    assert got[0] == (3, 146)  # «والله يحب الصابرين»: most information shared
+    assert (2, 153) in got and (8, 46) in got  # «إن الله مع الصابرين»

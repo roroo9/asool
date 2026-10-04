@@ -1,0 +1,9 @@
+{
+  "purpose": "Real page-parser errors caught automatically by the completeness check (Oct 4). Kept for the video and the Proof page.",
+  "parser": "openrouter:google/gemini-3.1-pro-preview, prompt page_parse.v2",
+  "errors": [
+    {"page": 15, "block": "footnote (١)", "parser_text": "لا يثيبكم على المظاهر", "printed_text_proposed": "لا يثيبكم على الظاهر", "kind": "one inserted letter (م)", "caught_by": "completeness check (uncovered OCR line)", "owner_confirmation": "pending"},
+    {"page": 39, "block": "footnote (٧)", "parser_text": "الأجر فى مقابلة البلاء", "printed_text_proposed": "الأذى فى تبعات ذنبه", "kind": "wrong text for a footnote (plausible but not printed)", "caught_by": "completeness check (uncovered OCR line)", "owner_confirmation": "pending"}
+  ],
+  "false_flags_resolved": ["page 30", "page 36"]
+}

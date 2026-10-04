@@ -38,6 +38,7 @@ class Ayah:
     ayah: int
     text: str  # display text, exactly as in the reference
     words: list[str]  # normalized words (imla'i spelling: used for matching)
+    surah_name: str = ""
 
 
 def _load_kfgqpc() -> list[Ayah]:
@@ -45,7 +46,10 @@ def _load_kfgqpc() -> list[Ayah]:
     out = []
     for r in rows:
         words = normalize(r["aya_text_emlaey"], "quran").split()  # imla'i text: for matching
-        out.append(Ayah(int(r["sura_no"]), int(r["aya_no"]), r["aya_text_unicode"].strip(), words))
+        out.append(
+            Ayah(int(r["sura_no"]), int(r["aya_no"]), r["aya_text_unicode"].strip(), words,
+                 r.get("sura_name_ar", "").strip())
+        )
     return out
 
 
@@ -256,6 +260,30 @@ def _word_variants(w: str) -> set[str]:
     return out
 
 
+@lru_cache(maxsize=1)
+def _idf() -> dict[str, float]:
+    import math
+    from collections import Counter
+
+    idx = load_index()
+    df = Counter()
+    for a in idx.ayahs:
+        df.update(set(a.words))
+    n = len(idx.ayahs)
+    return {w: math.log(n / c) for w, c in df.items()}
+
+
+def _weighted_overlap(words: list[str], ref: list[str]) -> float:
+    """Share of the quote's information (IDF-weighted words) found in the reference window;
+    tolerant of the conjunction «و». Rare, content-bearing words (الصابرين) count more than
+    frequent ones (الله، إن)."""
+    idf = _idf()
+    refset = set(ref) | {w[1:] for w in ref if w.startswith("و")}
+    total = sum(idf.get(w, 8.0) for w in words) or 1.0
+    got = sum(idf.get(w, 8.0) for w in words if w in refset or ("و" + w) in refset)
+    return got / total
+
+
 def candidates(printed_text: str, top: int = 3) -> list[QuranMatch]:
     """Several plausible verses for a short or altered quotation (a 4-word misquote can be
     close to more than one verse). Votes from shared word pairs (with and without the
@@ -270,33 +298,39 @@ def candidates(printed_text: str, top: int = 3) -> list[QuranMatch]:
         for a in _word_variants(words[i]):
             for b in _word_variants(words[i + 1]):
                 for pos in bg.get((a, b), [])[:200]:
-                    starts.add(pos - i)
+                    # tolerate one extra/missing word before the pair (e.g. «إن الله» vs «والله»)
+                    starts.update((pos - i - 1, pos - i, pos - i + 1))
     scored = []
     for start in starts:
         for ln in range(max(1, len(words) - 1), len(words) + 2):
             s, e = max(0, start), min(len(idx.words), start + ln)
             if e > s:
                 scored.append((_sim(words, idx.words[s:e]), s, e))
-    seen: set[int] = set()
-    out: list[QuranMatch] = []
-    for sim, s, e in sorted(scored, reverse=True):
-        a0 = idx.pos[s][0]
-        if a0 in seen or sim < 0.6:
+    # Best window per ayah, then rank by (information overlap, character similarity).
+    best: dict[int, tuple[float, float, int, int]] = {}
+    for sim, s, e in scored:
+        if sim < 0.6:
             continue
-        seen.add(a0)
+        a0 = idx.pos[s][0]
+        wo = _weighted_overlap(words, idx.words[s:e])
+        if a0 not in best or (wo, sim) > best[a0][:2]:
+            best[a0] = (wo, sim, s, e)
+    ranked = sorted(best.items(), key=lambda kv: kv[1][:2], reverse=True)
+    out: list[QuranMatch] = []
+    for a0, (wo, sim, s, e) in ranked[:top]:
         ayah = idx.ayahs[a0]
-        out.append(
-            QuranMatch(
-                printed_text=printed_text,
-                surah=ayah.surah,
-                ayah_start=ayah.ayah,
-                ayah_end=ayah.ayah,
-                canonical_text=ayah.text,
-                similarity=round(sim, 4),
-                match_type="exact" if sim >= 0.999 else "candidate",
-                diff_ops=_diff(words, idx.words[s:e]),
-            )
+        m = QuranMatch(
+            printed_text=printed_text,
+            surah=ayah.surah,
+            ayah_start=ayah.ayah,
+            ayah_end=ayah.ayah,
+            canonical_text=ayah.text,
+            similarity=round(sim, 4),
+            match_type="exact" if sim >= 0.999 else "candidate",
+            diff_ops=_diff(words, idx.words[s:e]),
         )
-        if len(out) >= top:
-            break
+        m.overlap = round(wo, 3)  # type: ignore[attr-defined]
+        m.surah_name = ayah.surah_name  # type: ignore[attr-defined]
+        m.matched_words = idx.words[s:e]  # type: ignore[attr-defined]
+        out.append(m)
     return out

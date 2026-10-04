@@ -107,7 +107,7 @@ ANSWER_SCHEMA = {
 }
 
 
-CACHE_VERSION = "4"  # bump when the answer pipeline changes, so stale answers are not served
+CACHE_VERSION = "5"  # bump when the answer pipeline changes, so stale answers are not served
 
 
 def cache_key(question: str) -> str:
@@ -149,42 +149,98 @@ def classify(question: str, model: str) -> dict:
     return json.loads(r.text)
 
 
+def _ar_num(n: int) -> str:
+    return str(n).translate(str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩"))
+
+
+def _in_corpus(surah: int, ayah: int) -> list[int]:
+    """Printed pages of our corpus where this ayah is quoted (empty = outside the corpus)."""
+    import sqlite3
+
+    con = sqlite3.connect(ROOT / "data" / "asool.db")
+    rows = con.execute(
+        "SELECT DISTINCT p.page_number_printed FROM quran_refs q JOIN blocks b ON b.id=q.block_id "
+        "JOIN pages p ON p.id=b.page_id WHERE q.surah=? AND ? BETWEEN q.ayah_start AND q.ayah_end",
+        (surah, ayah),
+    ).fetchall()
+    con.close()
+    return [r[0] for r in rows]
+
+
 def check_quoted_verse(question: str, quoted: str) -> dict | None:
-    """Official test case 11: a question that quotes a verse wrongly -> show the correct text
-    with surah and ayah; never build on the altered text. A short quote can resemble several
-    verses, so up to 3 candidates are returned unless one matches exactly."""
+    """Official test case 11. Any quoted verse is checked against the FULL King Fahd Mushaf
+    text (not only our 30 pages). Exact -> confirmed. Not exact -> every close verse is shown
+    (exact Mushaf text + surah:ayah), the correct wording is stated gently, and no single verse
+    is chosen silently when several are close."""
     spans = [s for s in [quoted, *quran.bracketed_spans(question)] if s and len(s.split()) >= 3]
     for s in spans:
         m = quran.verify(s)
         if not m:
             continue
-        if m.match_type == "exact":
+        exact = m.match_type == "exact"
+        if exact:
             cands = [m]
+            m.surah_name = next(  # type: ignore[attr-defined]
+                a.surah_name
+                for a in quran.load_index().ayahs
+                if (a.surah, a.ayah) == (m.surah, m.ayah_start)
+            )
         else:
-            cands = quran.candidates(s, top=4) or [m]
-        return {
-            "printed_in_question": s,
-            "match_type": m.match_type,
-            "exact": m.match_type == "exact",
-            "candidates": [
+            ranked = quran.candidates(s, top=6)
+            if not ranked:
+                continue
+            best = ranked[0].overlap
+            cands = [c for c in ranked if c.overlap >= max(0.6, best - 0.3)][:4] or ranked[:1]
+        items = []
+        for c in cands:
+            pages = _in_corpus(c.surah, c.ayah_start)
+            items.append(
                 {
                     "surah": c.surah,
+                    "surah_name": getattr(c, "surah_name", ""),
                     "ayah_start": c.ayah_start,
                     "ayah_end": c.ayah_end,
                     "canonical_text": c.canonical_text,
                     "similarity": c.similarity,
                     "diff_ops": c.diff_ops,
                     "quranpedia_url": c.quranpedia_url,
+                    "in_corpus_pages": pages,
                 }
-                for c in cands
-            ],
+            )
+        if exact:
+            note = "النص كما ورد في السؤال مطابق لنص المصحف."
+        else:
+            refs = "، و".join(
+                f"﴿{i['canonical_text']}﴾ [{i['surah_name']}: {_ar_num(i['ayah_start'])}]"
+                for i in items
+            )
+            several = len(items) > 1
+            note = (
+                f"النص كما ورد في السؤال «{s}» لا يطابق لفظ المصحف. "
+                + ("وأقرب الآيات إليه: " if several else "وأقرب آية إليه: ")
+                + refs
+                + ". "
+                + (
+                    "ولا يمكن الجزم بأيّها المقصود، فيُرجى الرجوع إلى النص الصحيح وعدم البناء على "
+                    "الصيغة الواردة في السؤال."
+                    if several
+                    else "يُرجى الرجوع إلى النص الصحيح وعدم البناء على الصيغة الواردة في السؤال."
+                )
+            )
+            outside = [i for i in items if not i["in_corpus_pages"]]
+            if outside:
+                note += (
+                    " ("
+                    + "، ".join(f"{i['surah_name']}: {_ar_num(i['ayah_start'])}" for i in outside)
+                    + ": ليست في صفحات الكتاب المفهرسة، ونصها منقول من مصحف مجمع الملك فهد.)"
+                )
+        return {
+            "printed_in_question": s,
+            "match_type": m.match_type,
+            "exact": exact,
+            "candidates": items,
             "reference_source": quran.reference_source(),
-            "note_ar": (
-                "النص كما ورد في السؤال مطابق للمصحف."
-                if m.match_type == "exact"
-                else "النص كما ورد في السؤال لا يطابق المصحف حرفيًا. هذه أقرب الآيات إليه؛ "
-                "يُرجى الرجوع إلى النص الصحيح وعدم البناء على الصيغة المحرفة."
-            ),
+            "note_ar": note,
         }
     return None
 
@@ -331,13 +387,12 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
             else ""
         )
         + (
-            "verse_check: the question quotes a verse that does NOT match the Mushaf ("
-            + "; ".join(
-                f"{c['surah']}:{c['ayah_start']} «{c['canonical_text']}»"
-                for c in verse["candidates"]
-            )
-            + "). Gently point out that the quoted wording is not the Quranic text, mention the "
-            "correct text if a passage contains it, and do not build on the altered wording.\n"
+            "verse_check: the quoted verse does NOT match the Mushaf. A verified correction card "
+            "listing the closest verses is shown to the user separately: "
+            + "; ".join(f"{c['surah']}:{c['ayah_start']}" for c in verse["candidates"])
+            + ". In your explanation, gently say the quoted wording is not the Quranic text and "
+            "refer to the verses shown; do NOT choose one of them as the intended verse, and do "
+            "not build on the altered wording.\n"
             if verse and not verse["exact"]
             else ""
         )
