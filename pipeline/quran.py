@@ -47,8 +47,13 @@ def _load_kfgqpc() -> list[Ayah]:
     for r in rows:
         words = normalize(r["aya_text_emlaey"], "quran").split()  # imla'i text: for matching
         out.append(
-            Ayah(int(r["sura_no"]), int(r["aya_no"]), r["aya_text_unicode"].strip(), words,
-                 r.get("sura_name_ar", "").strip())
+            Ayah(
+                int(r["sura_no"]),
+                int(r["aya_no"]),
+                r["aya_text_unicode"].strip(),
+                words,
+                r.get("sura_name_ar", "").strip(),
+            )
         )
     return out
 
@@ -319,12 +324,16 @@ def candidates(printed_text: str, top: int = 3) -> list[QuranMatch]:
     out: list[QuranMatch] = []
     for a0, (wo, sim, s, e) in ranked[:top]:
         ayah = idx.ayahs[a0]
+        a1 = idx.pos[e - 1][0]
+        last = idx.ayahs[a1] if idx.ayahs[a1].surah == ayah.surah else ayah
         m = QuranMatch(
             printed_text=printed_text,
             surah=ayah.surah,
             ayah_start=ayah.ayah,
-            ayah_end=ayah.ayah,
-            canonical_text=ayah.text,
+            ayah_end=last.ayah,
+            canonical_text=" ".join(x.text for x in idx.ayahs[a0 : a1 + 1])
+            if last is not ayah
+            else ayah.text,
             similarity=round(sim, 4),
             match_type="exact" if sim >= 0.999 else "candidate",
             diff_ops=_diff(words, idx.words[s:e]),
