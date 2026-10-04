@@ -154,3 +154,7 @@
 {"ts": 1791133029.808667, "stage": "classify", "provider": "openrouter", "model": "openrouter:google/gemini-3.8-flash", "input_tokens": 723, "output_tokens": 119, "cost_usd": 0.0, "cached": true, "seconds": 0.0}
 {"ts": 1791133029.8142478, "stage": "answer", "provider": "openrouter", "model": "openrouter:google/gemini-3.1-pro-preview", "input_tokens": 2476, "output_tokens": 703, "cost_usd": 0.0, "cached": true, "seconds": 0.0}
 {"ts": 1791153912.15937, "stage": "embed/chunks", "provider": "openrouter", "model": "openrouter:google/gemini-embedding-2", "input_tokens": 296, "output_tokens": 0, "cost_usd": 6.5e-05, "cached": false, "seconds": 0.0}
+{"ts": 1791154188.948986, "stage": "classify", "provider": "openrouter", "model": "openrouter:google/gemini-3.8-flash", "input_tokens": 700, "output_tokens": 121, "cost_usd": 0.0, "cached": true, "seconds": 0.0}
+{"ts": 1791154188.9504619, "stage": "classify", "provider": "openrouter", "model": "openrouter:google/gemini-3.8-flash", "input_tokens": 700, "output_tokens": 121, "cost_usd": 0.0, "cached": true, "seconds": 0.0}
+{"ts": 1791154204.3113432, "stage": "answer", "provider": "openrouter", "model": "openrouter:google/gemini-3.1-pro-preview", "input_tokens": 2717, "output_tokens": 1980, "cost_usd": 0.029194, "cached": false, "seconds": 15.35}
+{"ts": 1791154204.398349, "stage": "answer", "provider": "openrouter", "model": "openrouter:google/gemini-3.1-pro-preview", "input_tokens": 2717, "output_tokens": 1980, "cost_usd": 0.029194, "cached": false, "seconds": 15.43}

@@ -1,35 +1,72 @@
 @import "tailwindcss";
 
+/* "The reader's lamp" tokens (CLAUDE.md §7.2). Light is the base; dark is a first-class theme. */
 :root {
   --ink: #141a3a;
   --paper: #f6f3ec;
+  --surface: #fbf9f4;
   --thread: #2fd4b5;
+  --thread-strong: #0f8f78;
   --insight: #6c5ce7;
   --amber: #e0a43a;
+  --amber-ink: #8a5a00;
   --madder: #c8553d;
+  --muted: #5b6080;
+  --line: rgb(20 26 58 / 0.14);
   --background: var(--paper);
   --foreground: var(--ink);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    --ink: #ece8df;
     --paper: #1b2148;
+    --surface: #222a58;
+    --thread-strong: #2fd4b5;
+    --insight: #a29bfe;
+    --amber-ink: #f0c26a;
+    --madder: #e88a75;
+    --muted: #b6b9d3;
+    --line: rgb(236 232 223 / 0.16);
     --background: #11163a;
     --foreground: #ece8df;
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --ink: #ece8df;
+  --paper: #1b2148;
+  --surface: #222a58;
+  --thread-strong: #2fd4b5;
+  --insight: #a29bfe;
+  --amber-ink: #f0c26a;
+  --madder: #e88a75;
+  --muted: #b6b9d3;
+  --line: rgb(236 232 223 / 0.16);
+  --background: #11163a;
+  --foreground: #ece8df;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-ink: var(--ink);
   --color-paper: var(--paper);
+  --color-surface: var(--surface);
   --color-thread: var(--thread);
+  --color-thread-strong: var(--thread-strong);
   --color-insight: var(--insight);
   --color-amber: var(--amber);
+  --color-amber-ink: var(--amber-ink);
   --color-madder: var(--madder);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-ui), system-ui, sans-serif;
   --font-source: var(--font-source), "Noto Naskh Arabic", serif;
+  --font-quran: var(--font-quran), var(--font-source), serif;
 }
 
 body {
@@ -41,4 +78,39 @@ body {
 :focus-visible {
   outline: 2px solid var(--thread);
   outline-offset: 2px;
+}
+
+.source-text {
+  font-family: var(--font-source), "Noto Naskh Arabic", serif;
+  line-height: 2;
+}
+
+.quran-text {
+  font-family: var(--font-quran), var(--font-source), serif;
+  line-height: 2.2;
+}
+
+@keyframes draw-thread {
+  from {
+    stroke-dashoffset: var(--len, 2000);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.thread-path {
+  stroke-dasharray: var(--len, 2000);
+  animation: draw-thread 0.55s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thread-path {
+    animation: none;
+    stroke-dasharray: none;
+  }
+  * {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
 }
