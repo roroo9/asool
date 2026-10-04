@@ -59,6 +59,9 @@ def hadith_view(r: dict) -> dict:
         "grading_source": r["grading_source"],
         "grading_source_url": r["grading_source_url"],
         "dorar_search_url": r["dorar_search_url"],
+        "block_ids": json.loads(r["block_ids"])
+        if isinstance(r["block_ids"], str)
+        else r["block_ids"],
     }
 
 

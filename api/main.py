@@ -145,7 +145,7 @@ def ask(body: AskBody, req: Request) -> dict:
         return {
             "question": body.question,
             "status": "unavailable",
-            "message": "تعذّر توليد إجابة الآن، وهذه أقرب النصوص من الكتاب.",
+            "message": "تعذّر توليد إجابة حاليًا، وفيما يلي أقرب النصوص من الكتاب.",
             "passages": [P.passage(h.id, r["terms"]) for h in r["hits"]],
             "error": type(e).__name__,
         }

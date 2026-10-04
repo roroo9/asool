@@ -67,7 +67,7 @@ export default function ReviewPage() {
       headers: { "content-type": "application/json", "x-review-token": getToken() },
       body: JSON.stringify({ reviewer: getReviewer() || "reviewer", note: "مراجَع" }),
     });
-    setMsg(r.ok ? "تم وضع علامة المراجعة." : "يلزم رمز المراجعة (من صفحة مراجعة مجموعة المرجع).");
+    setMsg(r.ok ? "وُضعت علامة المراجعة." : "يلزم رمز المراجعة (من صفحة مراجعة مجموعة المرجع).");
     load();
   };
 

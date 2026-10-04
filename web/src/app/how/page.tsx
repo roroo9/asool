@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { GradeChip } from "@/components/Bits";
 import { TYPE_COLORS, TYPE_LABELS } from "@/components/PageViewer";
 import { ar, getJSON, imageUrl } from "@/lib/api";
 import type { PageData } from "@/lib/types";
@@ -10,11 +11,11 @@ const PID = "riyad1956-p041";
 
 const STEPS = [
   { t: "صورة الصفحة", d: "صفحة ٤١ من طبعة ١٩٥٦ كما صُوّرت: متن، حديث، حواشٍ في عمودين، بيت شعر، وتعليق المحقق." },
-  { t: "مسار الهندسة: أسطر OCR", d: "Tesseract يحدد مواضع الأسطر والكلمات بدقة، لكنه يقرأ النص العربي بأخطاء كثيرة." },
+  { t: "مسار الهندسة: أسطر OCR", d: "يحدِّد Tesseract مواضع الأسطر والكلمات بدقة، غير أن قراءته للنص العربي كثيرة الأخطاء." },
   { t: "مسار الفهم: كتل مصنفة", d: "نموذج بصري لغوي يقرأ الصفحة ويصنف كل كتلة: متن، حديث، حاشية، شعر، تعليق المحقق." },
   { t: "الدمج والروابط", d: "تُطابق الكتل مع أسطر OCR لتحديد مواضعها، وتُربط كل علامة حاشية بحاشيتها." },
   { t: "التحقق", d: "الآيات تُطابق مع مصحف مجمع الملك فهد، والأحاديث تُربط بتخريج المصنف وحكمها، والصفحة تُفحص للاكتمال." },
-  { t: "وحدات البحث", d: "وحدات كاملة (حديث مع رواته وتخريجه وحواشيه) بدل مقاطع مقطوعة، وتعليق المحقق في وحدة مستقلة." },
+  { t: "وحدات البحث", d: "وحدات كاملة (حديث مع رواته وتخريجه وحواشيه) بدلًا من مقاطع مبتورة، وتعليق المحقق في وحدة مستقلة." },
 ];
 
 export default function How() {
@@ -41,7 +42,7 @@ export default function How() {
     <main className="mx-auto grid w-full max-w-6xl flex-1 gap-6 px-4 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <section>
         <h1 className="text-3xl font-semibold">كيف يعمل أصول</h1>
-        <p className="mt-2 text-muted">إعادة تشغيل لرحلة صفحة حقيقية عبر المراحل، من بيانات المشروع الفعلية.</p>
+        <p className="mt-2 text-muted">عرضٌ لمسار صفحة حقيقية عبر مراحل المعالجة، مستمَدٌّ من بيانات المشروع الفعلية.</p>
         <ol className="mt-6 grid gap-2">
           {STEPS.map((s, i) => (
             <li key={s.t}>
@@ -67,12 +68,13 @@ export default function How() {
         {step >= 4 && page && (
           <div className="mt-4 rounded-lg border border-line bg-surface p-3 text-sm">
             <p>
-              {ar(page.footnote_links.length)} رابط حاشية بالعلامة المطابقة · {ar(page.hadith.length)} حديث مع تخريجه وحكمه · تغطية الأسطر{" "}
+              روابط الحواشي بعلاماتها: {ar(page.footnote_links.length)} · الأحاديث مع تخريجها وحكمها: {ar(page.hadith.length)} · تغطية الأسطر:{" "}
               {ar(Math.round(page.coverage * 100))}٪
             </p>
             {page.hadith.map((h) => (
-              <p key={h.id} className="mt-1 text-muted">
-                «{h.takhrij_printed ?? "تخريج في صفحة تالية"}» ← {h.grading}
+              <p key={h.id} className="mt-1 flex flex-wrap items-center gap-2 text-muted">
+                <span>تخريج الإمام النووي: «{h.takhrij_printed ?? "في صفحة تالية"}»</span>
+                <GradeChip h={h} />
               </p>
             ))}
           </div>

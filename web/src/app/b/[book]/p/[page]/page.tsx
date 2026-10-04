@@ -34,7 +34,7 @@ function SourceViewer() {
   useEffect(() => {
     getJSON<PageData>(`/pages/${pid(printed)}`)
       .then(setData)
-      .catch(() => setError("تعذّر تحميل الصفحة. تأكد أن رقم الصفحة بين ١٢ و٤١."));
+      .catch(() => setError("تعذّر تحميل الصفحة. يُرجى التأكد من أن رقم الصفحة بين ١٢ و٤١."));
   }, [printed]);
 
   useEffect(() => {
@@ -61,7 +61,10 @@ function SourceViewer() {
   }, [data]);
   const hadithBy = useMemo(() => {
     const m: Record<string, PageData["hadith"][number]> = {};
-    data?.hadith.forEach((h) => h.block_ids?.forEach((b) => (m[b] = h)));
+    data?.hadith.forEach((h) => {
+      const last = h.block_ids?.[h.block_ids.length - 1];
+      if (last) m[last] = h;
+    });
     return m;
   }, [data]);
 
@@ -124,12 +127,12 @@ function SourceViewer() {
                   </div>
                   <p
                     className={`mt-2 text-lg ${b.type === "quran" ? "quran-text" : "source-text"} ${low ? "underline decoration-amber decoration-dotted decoration-2 underline-offset-8" : ""}`}
-                    title={low ? "ثقة منخفضة أو تنبيه: راجع الصفحة الأصلية" : undefined}
+                    title={low ? "ثقة منخفضة أو تنبيه: يُرجى الرجوع إلى الصفحة الأصلية" : undefined}
                   >
                     {b.text}
                   </p>
                   {quranBy[b.id]?.map((q, i) => <div key={i} className="mt-2"><QuranCheck q={q} /></div>)}
-                  {b.type === "hadith" && hadithBy[b.id] && (
+                  {hadithBy[b.id] && (
                     <div className="mt-2">
                       <HadithGrade h={hadithBy[b.id]} />
                     </div>

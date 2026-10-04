@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
-import { LevelBadge } from "@/components/Bits";
+import { HadithBadge, LevelBadge } from "@/components/Bits";
 import { PageViewer, type PageViewerHandle } from "@/components/PageViewer";
 import { PassageCard } from "@/components/PassageCard";
 import { SearchBox } from "@/components/SearchBox";
@@ -67,7 +67,7 @@ function Ask() {
     let alive = true;
     postJSON<AnswerRes>("/answer", { question: q })
       .then((d) => alive && setRes({ q, data: d }))
-      .catch(() => alive && setErr({ q, msg: "تعذّر الاتصال بالخادم الآن. حاول مرة أخرى بعد قليل." }));
+      .catch(() => alive && setErr({ q, msg: "تعذّر الاتصال بالخادم حاليًا. يُرجى المحاولة بعد قليل." }));
     return () => {
       alive = false;
     };
@@ -115,6 +115,12 @@ function Ask() {
       onMouseLeave: () => setThreadFrom(null),
       onBlur: () => setThreadFrom(null),
     };
+  };
+  const hadithFor = (pt: SourcePoint) => {
+    const p = byTag(pt.passage);
+    if (!p?.hadith?.length) return null;
+    const ids = blocksForQuote(p.blocks ?? [], pt.quote);
+    return p.hadith.find((h) => h.block_ids?.some((b) => ids.includes(b))) ?? null;
   };
   const pageFor = (pt: SourcePoint) => {
     const p = byTag(pt.passage);
@@ -190,34 +196,44 @@ function Ask() {
                 <ul className="mt-3 grid gap-3">
                   {data.answer.source_points.map((pt, i) => {
                     const pg = pageFor(pt);
+                    const h = hadithFor(pt);
                     return (
                       <li key={i}>
                         <button
                           ref={i === 0 ? firstPoint : undefined}
                           {...pointHandlers(pt)}
                           className="group w-full rounded-lg p-2 text-start hover:bg-thread/10 focus:bg-thread/10"
-                          aria-label={`عرض موضع الاقتباس في الصفحة ${pg ? ar(pg.printed) : ""}`}
+                          aria-label={`عرض موضع النص في الصفحة ${pg ? ar(pg.printed) : ""}`}
                         >
-                          <span className="block">{pt.text}</span>
-                          <span className="source-text mt-1 block text-lg">
+                          <span className="source-text block text-lg">
                             «{pt.quote}»{" "}
-                            <span className="rounded border border-thread/60 px-1.5 py-0.5 align-middle font-sans text-xs text-thread-strong">
+                            <span className="inline-block whitespace-nowrap rounded border border-thread/60 px-1.5 py-0.5 align-middle font-sans text-xs text-thread-strong">
                               {t("page")} {pg ? ar(pg.printed) : ""} ✓
                             </span>
                           </span>
                         </button>
+                        {h && (
+                          <div className="ps-2">
+                            <HadithBadge h={h} />
+                          </div>
+                        )}
                       </li>
                     );
                   })}
                 </ul>
-                {data.answer.explanation && (
-                  <div className="mt-4 border-t border-line pt-3">
-                    <h3 className="text-sm font-medium text-muted">
-                      {t("clarification")} · <span className="text-xs">{t("ai_generated")}</span>
-                    </h3>
-                    <p className="mt-1 leading-loose text-foreground/85">{data.answer.explanation.replace(/\s*\[P\d+\]/g, "")}</p>
-                  </div>
-                )}
+                <div className="mt-4 border-t border-line pt-3">
+                  <h3 className="text-sm font-medium text-muted">{t("clarification")}</h3>
+                  <ul className="mt-1 list-disc space-y-1 ps-5 leading-loose text-foreground/85">
+                    {data.answer.source_points.map((pt, i) => (
+                      <li key={i}>{pt.text}</li>
+                    ))}
+                  </ul>
+                  {data.answer.explanation && (
+                    <p className="mt-2 leading-loose text-foreground/85">
+                      {data.answer.explanation.replace(/\s*\[P\d+\]/g, "")}
+                    </p>
+                  )}
+                </div>
                 {data.answer.disagreement_noted && (
                   <p className="mt-2 text-sm text-amber-ink">في المسألة خلاف نقلته النصوص؛ عُرضت الأقوال دون ترجيح.</p>
                 )}
@@ -243,10 +259,10 @@ function Ask() {
 
             {data.status === "abstained" && (
               <section className="rounded-xl border border-line bg-surface p-5" aria-label="لا توجد إجابة كافية">
-                <h2 className="text-lg font-semibold">لم أجد ما يكفي في المصادر</h2>
+                <h2 className="text-lg font-semibold">لم يُعثَر في المصادر على ما يكفي للإجابة</h2>
                 <p className="mt-2 leading-loose">{data.message}</p>
                 <p className="mt-2 text-sm text-muted">
-                  هذه الأداة تجيب من صفحات الكتاب المفهرسة فقط ولا تؤلف إجابة من خارجها. هذه أقرب النصوص؛ ويمكنك سؤال
+                  تُجيب هذه الأداة من صفحات الكتاب المفهرسة وحدها، ولا تؤلِّف إجابة من خارجها. وفيما يلي أقرب النصوص؛ وللاستزادة يُرجى سؤال
                   أهل العلم للتوسع.
                 </p>
               </section>
@@ -254,7 +270,7 @@ function Ask() {
 
             {data.status === "referral" && (
               <section className="rounded-xl border border-insight/40 bg-insight/5 p-5" aria-label="إحالة إلى أهل العلم">
-                <h2 className="text-lg font-semibold">سؤالك يحتاج إلى عالم مؤهل</h2>
+                <h2 className="text-lg font-semibold">هذا السؤال يستلزم الرجوع إلى عالِم مؤهَّل</h2>
                 <p className="mt-2 leading-loose">{data.message}</p>
               </section>
             )}

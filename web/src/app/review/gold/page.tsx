@@ -81,7 +81,7 @@ export default function GoldIndex() {
 
       {error && (
         <p role="alert" className="mt-4 text-madder">
-          {error}. تأكد من رمز الدخول ثم اضغط «حفظ».
+          {error}. يُرجى التأكد من رمز الدخول ثم الضغط على «حفظ».
         </p>
       )}
 
@@ -115,8 +115,8 @@ export default function GoldIndex() {
                       صفحة {toArabicDigits(p.printed)}
                     </Link>
                     <p className="text-sm opacity-70">
-                      قُبل تلقائيًا {toArabicDigits(p.auto_accepted)} من{" "}
-                      {toArabicDigits(p.total_tokens)} كلمة
+                      الكلمات المقبولة تلقائيًا: {toArabicDigits(p.auto_accepted)} من{" "}
+                      {toArabicDigits(p.total_tokens)}
                     </p>
                   </div>
                   <span className="text-sm">

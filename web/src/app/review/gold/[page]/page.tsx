@@ -522,7 +522,7 @@ function Structure({
         >
           اعتماد الصفحة
         </button>
-        {pending > 0 && <span className="text-sm">بقي {toArabicDigits(pending)} موضع خلاف قبل الاعتماد.</span>}
+        {pending > 0 && <span className="text-sm">مواضع الخلاف المتبقية قبل الاعتماد: {toArabicDigits(pending)}.</span>}
         {msg && <span role="status">{msg}</span>}
       </div>
     </section>

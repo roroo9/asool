@@ -57,7 +57,7 @@ function Slider({ page, naive }: { page: PageData; naive: Naive }) {
         <div className="absolute inset-y-0 w-0.5 bg-ink" style={{ left: `${pos}%` }}>
           <button
             role="slider"
-            aria-label="شريط المقارنة: يسار = الاستخراج التقليدي، يمين = أصول"
+            aria-label="شريط المقارنة: الاستخراج التقليدي على اليسار، وأصول على اليمين"
             aria-valuemin={0}
             aria-valuemax={100}
             aria-valuenow={Math.round(pos)}
@@ -110,13 +110,15 @@ function PageMode() {
           <div className="grid gap-4 sm:grid-cols-2">
             <section className="rounded-lg border border-line bg-surface p-3">
               <h2 className="font-semibold">الاستخراج التقليدي</h2>
-              <p className="text-xs text-muted">{naive.engine}: نص مسطح بترتيب الأسطر، الحواشي مختلطة بالمتن، بلا أنواع ولا روابط</p>
+              <p className="text-xs text-muted">{naive.engine}: نص مسطَّح بترتيب الأسطر، تختلط فيه الحواشي بالمتن، بلا تصنيف للكتل ولا روابط</p>
               <p className="source-text mt-2 max-h-[70vh] overflow-auto whitespace-pre-line text-sm">{naive.lines.map((l) => l.text).join("\n")}</p>
             </section>
             <section className="rounded-lg border border-thread/50 bg-surface p-3">
               <h2 className="font-semibold">أصول</h2>
               <p className="text-xs text-muted">
-                {ar(page.blocks.length)} كتلة مصنفة · {ar(fnCount)} حاشية مربوطة بعلاماتها · {ar(page.quran.length)} آية متحقق منها
+                الكتل المصنفة: {ar(page.blocks.length)} · الحواشي المربوطة بعلاماتها: {ar(fnCount)}
+                {page.quran.length > 0 && <> · الآيات المتحقَّق منها: {ar(page.quran.length)}</>}
+                {page.hadith.length > 0 && <> · الأحاديث مع تخريجها وحكمها: {ar(page.hadith.length)}</>}
               </p>
               <ol className="mt-2 grid max-h-[70vh] gap-2 overflow-auto">
                 {page.blocks
@@ -167,7 +169,7 @@ function QueryMode() {
         <input value={q} onChange={(e) => setQ(e.target.value)} className="min-w-0 flex-1 rounded-lg border border-line bg-surface px-3 py-2" aria-label="سؤال المقارنة" />
         <button className="rounded-lg bg-ink px-4 text-paper">قارن</button>
       </form>
-      <p className="mt-2 text-xs text-muted">الطريقتان تستخدمان نفس التضمين ونفس البحث الهجين؛ الفرق الوحيد هو تجهيز البيانات.</p>
+      <p className="mt-2 text-xs text-muted">تستخدم الطريقتان التضمينَ نفسه والبحثَ الهجين نفسه، ولا تختلفان إلا في تجهيز البيانات.</p>
       {res && res.q === run && (
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <section>
@@ -203,7 +205,7 @@ export default function ComparePage() {
   return (
     <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6">
       <h1 className="text-2xl font-semibold">المقارنة: الطريقة التقليدية مقابل أصول</h1>
-      <p className="mt-1 text-muted">نفس الصفحة ونفس السؤال؛ اسحب الشريط لترى الفرق.</p>
+      <p className="mt-1 text-muted">الصفحة نفسها والسؤال نفسه؛ اسحب الشريط لمعاينة الفرق.</p>
       <div className="mt-4 flex gap-2" role="tablist">
         {(
           [

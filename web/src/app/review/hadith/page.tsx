@@ -163,7 +163,7 @@ function HadithCard({ n, row, onSaved }: { n: number; row: HadithRow; onSaved: (
           {chk && (
             <p className="mt-1 opacity-80">
               فحص المطابقة: الراوي{" "}
-              {chk.narrator_match === true ? "متطابق ✓" : chk.narrator_match === false ? "مختلف ✗" : "لم يمكن مقارنته"}{" "}
+              {chk.narrator_match === true ? "متطابق ✓" : chk.narrator_match === false ? "مختلف ✗" : "تعذّرت المقارنة"}{" "}
               ({chk.narrator_hadeethenc ?? "غير ظاهر في نص الموسوعة"}) · تطابق النص{" "}
               {toArabicDigits(Math.round(chk.wording_score))}٪
             </p>
@@ -187,7 +187,7 @@ function HadithCard({ n, row, onSaved }: { n: number; row: HadithRow; onSaved: (
                   onSaved();
                 }}
               >
-                ليس هو
+                ليس هو نفسه
               </button>
             </div>
           )}

@@ -33,11 +33,12 @@ CLASSIFY_V = "level_classify.v1"
 ANSWER_V = "answer.v2"
 GLOSSARY = json.loads((ROOT / "data" / "reference" / "glossary.json").read_text())["terms"]
 
-ABSTAIN_AR = "لم أجد في المصادر المتاحة ما يكفي للإجابة عن هذا السؤال."
+ABSTAIN_AR = "لم يُعثَر في المصادر المتاحة على ما يكفي للإجابة عن هذا السؤال."
 ABSTAIN_EN = "I could not find enough in the available sources to answer this question."
 NO_EVIDENCE_AR = (
-    "لم أجد في المصادر المتاحة حديثًا أو نصًا يدل على ذلك. ولا يصح أن يُنسب إلى النبي ﷺ "
-    "كلام لم يثبت، فلن أُنشئ حديثًا أو أصوغه. هذه أقرب النصوص الموجودة في الكتاب."
+    "لم يُعثَر في المصادر المتاحة على حديث أو نص يدل على ذلك. ولا يصح أن يُنسب إلى النبي ﷺ "
+    "كلام لم يثبت، ولذلك لا تُنشئ هذه الأداة حديثًا ولا تصوغه. "
+    "وفيما يلي أقرب النصوص الواردة في الكتاب."
 )
 NO_EVIDENCE_EN = (
     "I found no hadith or text in the available sources that states this. Words must not be "
@@ -45,7 +46,7 @@ NO_EVIDENCE_EN = (
     "passages in the book."
 )
 REFER_AR = (
-    "سؤالك يتعلق بحالة شخصية تحتاج إلى فتوى، والفتوى تتطلب معرفة تفاصيل الواقعة وتقديرًا شرعيًا "
+    "يتعلق هذا السؤال بحالة شخصية تستلزم فتوى، والفتوى تتطلب معرفة تفاصيل الواقعة وتقديرًا شرعيًا "
     "متخصصًا. هذه الأداة لا تُصدر أحكامًا على الحالات الشخصية. يُرجى سؤال عالم مؤهل أو جهة "
     "إفتاء رسمية في بلدك. وفيما يلي نصوص عامة ذات صلة من الكتاب للاطلاع فقط."
 )
@@ -55,7 +56,13 @@ REFER_EN = (
     "cases. Please ask a qualified scholar or an official fatwa authority in your country. Below "
     "are general passages from the book, for reference only."
 )
-UNAVAILABLE_AR = "تعذّر توليد إجابة الآن، وهذه أقرب النصوص من الكتاب مع مواضعها في الصفحات الأصلية."
+AI_NOTICE_AR = (
+    "أداة بحث مدعومة بالذكاء الاصطناعي؛ نصوص المصدر منقولة حرفيًا من الكتاب ومتحقَّق منها، "
+    "والإيضاح مولَّد آليًا."
+)
+UNAVAILABLE_AR = (
+    "تعذّر توليد إجابة حاليًا، وفيما يلي أقرب النصوص من الكتاب مع مواضعها في الصفحات الأصلية."
+)
 
 CLASSIFY_SCHEMA = {
     "type": "object",
@@ -126,6 +133,23 @@ def _vnorm(s: str) -> str:
 def _cached(question: str) -> dict | None:
     p = CACHE / f"{cache_key(question)}.json"
     return json.loads(p.read_text()) if p.exists() else None
+
+
+def _refresh(c: dict) -> dict:
+    """Serve a cached answer with current wording and current hadith gradings (no regeneration)."""
+    msgs = {"abstained": ABSTAIN_AR, "referral": REFER_AR}
+    if c.get("language") == "ar":
+        c["ai_notice"] = AI_NOTICE_AR
+        m = c.get("message") or ""
+        if m.startswith(NO_EVIDENCE_AR[:8]) or "حديثًا أو نصًا" in m:
+            c["message"] = NO_EVIDENCE_AR
+        elif c.get("status") in msgs:
+            c["message"] = msgs[c["status"]]
+    for p in c.get("passages", []):
+        fresh = passage(p["id"])
+        if fresh is not None:
+            p["hadith"] = fresh.get("hadith", [])
+    return c
 
 
 def _store(question: str, res: dict) -> None:
@@ -319,7 +343,7 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
     t0 = time.time()
     question = question.strip()[:1000]
     if use_cache and (c := _cached(question)):
-        return c | {"cached": True}
+        return _refresh(c) | {"cached": True}
     stages = []
     model = budget.answer_model()
     lang = "ar"
@@ -346,8 +370,7 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
         "classification": cls,
         "quoted_verse_check": verse,
         "passages": passages,
-        "ai_notice": "أداة بحث مدعومة بالذكاء الاصطناعي؛ النصوص المقتبسة منقولة حرفيًا من الكتاب "
-        "ومتحقق منها، والتوضيح من توليد النموذج.",
+        "ai_notice": AI_NOTICE_AR,
         "cached": False,
     }
 
