@@ -6,7 +6,7 @@ Deadline: **Tue Oct 6, 2026, 23:59 Riyadh time**. Target submission-ready: **Tue
 | Phase | Planned window | Status |
 |---|---|---|
 | 0 Setup | Sun Oct 4, 07:00–09:00 | Done, approved |
-| 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Tooling done 08:30. Waiting on gold review of 3 pages + Gemini Pro access |
+| 1 Model bake-off (3 pages) | Sun 09:00–13:00 | Done ~11:00. At GATE 1 |
 | 2 Full ingestion (30 pages) + baseline | Sun 13:00–22:00 | |
 | 3 API | Mon Oct 5, 08:00–14:00 | |
 | 4 Frontend + preview deploy | Mon 14:00 – Tue 08:00 | |
@@ -39,6 +39,14 @@ Human tasks in parallel: gold review by rowan (3 bake-off pages now, 12 more pag
 
 ## People
 - Gold set reviewer: rowan, team member, native Arabic speaker.
+
+## Phase 1 results (GATE 1)
+- Gold review of pages 41, 30, 20 complete: 237 human decisions, 21 spot-checks, 0 errors (after fixing a review-screen bug that recorded unchanged confirmations as "wrong").
+- Bake-off: Gemini 3.1 Pro + prompt v2 chosen (strict CER 2.3%, loose 0.4%, footnote-link F1 1.00, block types 100%, $0.139/page). See docs/MODEL_SELECTION.md.
+- King Fahd developer data (Hafs v3.0) is now the primary Quran reference; all page-30 verses verify as exact.
+- Drafts ready for the 12 remaining gold pages (Surya as Reader C): 992 disputed phrases.
+- OpenRouter test: Gemini 3.1 Pro OK, $0.0012. Spend: Anthropic $2.66/$5, OpenRouter $1.62/$10.
+- Blocker: dorar.net blocks this machine (Cloudflare), including the API docs page.
 
 ## Known issues
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
