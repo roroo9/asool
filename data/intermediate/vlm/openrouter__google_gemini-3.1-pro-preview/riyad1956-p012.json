@@ -1,0 +1,260 @@
+{
+ "page_id": "riyad1956-p012",
+ "printed": 12,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 2641,
+  "output_tokens": 9225
+ },
+ "page_number_printed": "١٢",
+ "running_header": "",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ١٢ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "text": "( بسم الله الرحمن الرحيم )",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "heading",
+   "author_role": "matn",
+   "column": 0,
+   "text": "باب الإخلاص وإحضار النية في جميع الأعمال والأقوال والأحوال البارزة والخفية",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال الله تعالى :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ وَمَا أُمِرُوا إِلاَّ لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ (١) حُنَفَاءَ (٢) وَيُقِيمُوا الصَّلَاةَ ، وَيُؤْتُوا الزَّكَاةَ ، وَذَلِكَ دِينُ الْقَيِّمَةِ ﴾ (٣)",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَكِنْ يَنَالُهُ التَّقْوَى مِنْكُمْ ﴾ (٤)",
+   "footnote_markers_in_text": [
+    "(٤)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال تعالى :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "quran",
+   "author_role": "matn",
+   "column": 0,
+   "text": "﴿ قُلْ إِنْ تُخْفُوا مَا فِي صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ اللَّهُ ﴾ .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أمير المؤمنين أبي حفص عمر بن الخطاب بن نُفيل بن عبد العُزَّى بن رِياح بن عبد الله بن قرط بن رزاح بن عدي بن كعب بن لؤىّ بن غالب القرشىّ العدوىّ رضى الله عنه قال سمعت رسول الله صلى الله عليه وسلم يقول :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنما الأعمال (٥) بالنِّيَّاتِ ، وإنما لكلِّ امرئٍ مَا نَوَى : فمَنْ كانت هجرته إلى الله ورسوله ، فهجرته إلى الله ورسوله ومَن كانت هجرته لدنيا يصيبها ، أو امرأة ينكحها (٦) فهجرته إلى ما هاجر إليه »",
+   "footnote_markers_in_text": [
+    "(٥)",
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "متفق على صحته . رواه إماما المحدثين : أبو عبد الله محمد بن إسماعيل بن إبراهيم بن المغيرة بن بَرْدِزْبَهْ الْجُعْفِيّ البخاري ، وأبو الحسين مسلم بن الحجاج بن مسلم الْقُشَيْرِي النيسابوري رضى الله عنهما في كتابيهما اللذين هما أصحُّ الكتب المصنفة .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) موحدين",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) مائلين إلى الإسلام",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) الجماعة المستقيمة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) ما أريد به وجه الله تعالى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": [
+    "Footnote text wraps to the next line in the print, starting from the right margin."
+   ]
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) حركات البدن لا يعتد بها إلا بنية التوجه إلى الله تعالى بقصد ونية",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) يتزوجها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

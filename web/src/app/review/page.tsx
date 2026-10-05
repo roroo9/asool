@@ -95,6 +95,10 @@ export default function ReviewPage() {
           <h2 className="font-semibold">أحكام الأحاديث</h2>
           <p className="mt-1 text-sm text-muted">ما خرّجه المصنف من غير الصحيحين: مطابقة الموسوعة الحديثية أو إدخال الحكم من الدرر السنية.</p>
         </Link>
+        <Link href="/review/questions" className="rounded-xl border border-line bg-surface p-4 hover:border-insight">
+          <h2 className="font-semibold">أسئلة التقييم</h2>
+          <p className="mt-1 text-sm text-muted">أسئلة صاغها الوكيل الآلي، ومنها الحالات الاثنتا عشرة من الحزمة العلمية: اعتماد أو تعديل أو حذف.</p>
+        </Link>
       </section>
 
       <section className="mt-8">

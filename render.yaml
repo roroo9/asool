@@ -3,9 +3,9 @@ services:
   - type: web
     name: asool-api
     runtime: python
-    plan: free            # switch to "starter" for always-on during judging (Oct 7-22)
+    plan: starter         # always on during judging (owner decision, Oct 5)
     region: frankfurt
-    buildCommand: pip install uv && uv sync --frozen --no-dev && ./scripts/fetch_references.sh
+    buildCommand: pip install uv && uv sync --frozen --no-dev && (./scripts/fetch_references.sh || echo "KFGQPC download failed: Quranpedia fallback in use")
     startCommand: uv run --no-dev uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     autoDeploy: true
@@ -15,9 +15,9 @@ services:
       - key: OPENROUTER_API_KEY
         sync: false        # paste in the Render dashboard; never committed
       - key: REVIEW_TOKEN
-        sync: false
+        sync: false        # the PRODUCTION code (REVIEW_TOKEN_PROD in .env), not the local one
       - key: CORS_ORIGINS
-        sync: false        # e.g. https://asool.vercel.app
+        sync: false        # the Vercel site URL, e.g. https://asool.vercel.app
       - key: DAILY_BUDGET_USD
         value: "3"
       - key: ANSWER_RATE_LIMIT_PER_HOUR

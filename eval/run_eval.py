@@ -26,6 +26,7 @@ from pathlib import Path
 
 from api.answer import _vnorm, answer, verify_quotes
 from api.passages import baseline_passage, passage
+from api.question_review import reviewed_questions
 from api.search import hybrid
 from pipeline.normalize import normalize
 
@@ -37,7 +38,8 @@ K = 5
 
 
 def load_questions(only: str | None = None) -> list[dict]:
-    rows = [json.loads(x) for x in QUESTIONS.read_text(encoding="utf-8").splitlines() if x]
+    """Agent drafts with the human reviewer's approvals, edits and removals applied."""
+    rows = reviewed_questions()
     if only:
         rows = [r for r in rows if r["id"].startswith(only) or r["type"] == only]
     return rows

@@ -1,0 +1,235 @@
+{
+ "page_id": "riyad1956-p024",
+ "printed": 24,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 2641,
+  "output_tokens": 13826
+ },
+ "page_number_printed": "٢٤",
+ "running_header": "— ٢٤ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٢٤ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "مِنْهُمْ عَلانِيَتَهُمْ وبايَعَهُمْ واسْتَغْفَرَ لَهُمْ ووَكَلَ سَرائِرَهُمْ (١) إلى الله تعالى حتى جِئْتُ . فلما سلمتُ تَبَسَّمَ تَبَسُّمَ المغضب (٢) ثم قال :",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "تعالى ،",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فجئتُ أمشى حتى جلستُ بين يديه فقال لى :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "ماخلفك ؟ ألم تكن قد ابتعتَ ظهرك (٣)",
+   "footnote_markers_in_text": [
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "قال قلت : يارسول الله إنى والله لو جلستُ عندَ غيركَ من أهلِ الدنيا لرأيتُ أنى سأخرجُ منْ سخطهِ بعذرٍ ؛ لقدْ أعطيتُ جدلا (٤) ولكنى والله لقدْ علمتُ لئنْ حدثتكَ اليومَ حديثَ كذب ترضى به عنى ليوشكنَّ اللهُ يسخطكَ علىَّ وإنْ حدثتكَ حديثَ صدق تجدُ علىَّ فيه إنى لأرجو فيه عقبى (٥) الله عز وجل والله ما كانَ لى منْ عذر ، والله ما كنت قطُّ أقوى ولا أيسر منى حينَ تخلفت عنك قال: فقال رسول الله صلى الله عليه وسلم:",
+   "footnote_markers_in_text": [
+    "(٤)",
+    "(٥)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "أما هذا فقدْ صدقَ فقمْ حتى يقضىَ الله فيكَ .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وسارَ (٦) رجالٌ منْ بنى سلمة فاتبعونى فقالوا لى : والله ماعلمناكَ أذنبتَ ذنباً قبلَ هذا لقدْ عجزتَ فى أنْ لا تكونَ اعتذرتَ إلى رسول الله صلى الله عليه وسلم بما اعتذرَ به المخلفون ، فقد كانَ كافيكَ ذنبك استغفارُ رسول الله صلى الله عليه وسلم لكَ . قال : فوالله مازالوا يؤنبوننى (٧) حتى أردتُ أنْ أرجعَ إلى رسول الله صلى الله عليه وسلم فأكذبَ نفسى ، ثم قلت لهم : هلْ لقىَ هذا معىَ منْ أحد قالوا : نعمْ لقيهُ معك رجلان قالا مثلَ ماقلتَ وقيل لهما مثلُ ما قيلَ لكَ ، قال : قلت : منْ هما ؟ قالوا : مرارة بن الربيع العمريُّ ، وهلال بن أمية الواقفىُّ ، قال : فذكروا لى رجلين صالحين قد شهدا (٨) بدراً فيهما أسوةٌ قال : فمضيت حينَ ذكروهما لى . ونهى رسول الله صلى الله عليه وسلم عنْ كلامنا أيها الثلاثة من بين من تخلف عنه قال :",
+   "footnote_markers_in_text": [
+    "(٦)",
+    "(٧)",
+    "(٨)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(١) ما أخفوه من النفاق",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 1,
+   "text": "(٤) فصاحة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٢) الغضبان",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 2,
+   "text": "(٥) آمل العاقبة الحسنة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٣) اشتريت الإبل",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 3,
+   "text": "(٦) وثب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 4,
+   "text": "(٧) يلوموننى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 5,
+   "text": "(٨) حضرا الغزوة الكبرى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.99,
+   "issues": []
+  }
+ ],
+ "page_level_issues": []
+}

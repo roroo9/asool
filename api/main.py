@@ -15,11 +15,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from api import budget, gold_review, hadith_review
+from api import budget, gold_review, hadith_review, question_review
 from api import passages as P
 from api.answer import answer as run_answer
 from api.search import hybrid
 from api.settings import ROOT, settings
+from pipeline import quran
 
 app = FastAPI(
     title="Asool API",
@@ -37,6 +38,7 @@ app.add_middleware(
 )
 app.include_router(gold_review.router)
 app.include_router(hadith_review.router)
+app.include_router(question_review.router)
 
 PAGES_DIR = ROOT / "data" / "pages"
 EVAL = ROOT / "data" / "eval" / "results" / "summary.json"
@@ -54,6 +56,7 @@ def health() -> dict:
         "service": "asool-api",
         "version": app.version,
         "budget": budget.status(),
+        "quran_reference": quran.reference_source(),
     }
 
 
