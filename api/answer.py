@@ -31,7 +31,25 @@ PROMPTS = Path(__file__).parent / "prompts"
 CACHE = ROOT / "data" / "answers"  # committed: precomputed answers survive redeploys
 CLASSIFY_V = "level_classify.v1"
 ANSWER_V = "answer.v3"
-GLOSSARY = json.loads((ROOT / "data" / "reference" / "glossary.json").read_text())["terms"]
+_GLOSSARY_FILE = json.loads((ROOT / "data" / "reference" / "glossary.json").read_text())
+GLOSSARY = _GLOSSARY_FILE["terms"]
+# The first ten entries are the package's own sample of the Jamhara dictionary (p.8).
+PACKAGE_TERMS = set(list(GLOSSARY)[:10])
+_TRANSLATE = re.compile(r"ترجم|ترجمة|بالإنجليزي|بالانجليزي|بالإنكليزي|in english|translat", re.I)
+
+
+def glossary_request(question: str) -> tuple[str, str] | None:
+    """A request to translate a term that is in the approved glossary -> (term, equivalent).
+    Answered from the dictionary itself, never generated (package rule: approved equivalents)."""
+    if not _TRANSLATE.search(question):
+        return None
+    qn = f" {normalize(question)} "
+    for ar, en in GLOSSARY.items():
+        k = normalize(ar)
+        if f" {k} " in qn or f" {k.removeprefix('ال')} " in qn:
+            return ar, en
+    return None
+
 
 ABSTAIN_AR = "لم يُعثَر في المصادر المتاحة على ما يكفي للإجابة عن هذا السؤال."
 ABSTAIN_EN = "I could not find enough in the available sources to answer this question."
@@ -114,7 +132,7 @@ ANSWER_SCHEMA = {
 }
 
 
-CACHE_VERSION = "5"  # bump when the answer pipeline changes, so stale answers are not served
+CACHE_VERSION = "7"  # bump when the answer pipeline changes, so stale answers are not served
 
 
 def cache_key(question: str) -> str:
@@ -159,9 +177,9 @@ def _store(question: str, res: dict) -> None:
     )
 
 
-def classify(question: str, model: str) -> dict:
+def classify(question: str, model: str, stage_prefix: str = "") -> dict:
     r = generate(
-        stage="classify",
+        stage=f"{stage_prefix}classify",
         prompt_version=CLASSIFY_V,
         model=model,
         system=(PROMPTS / f"{CLASSIFY_V}.md").read_text(),
@@ -191,6 +209,11 @@ def _in_corpus(surah: int, ayah: int) -> list[int]:
     return [r[0] for r in rows]
 
 
+def _ayahs(i: dict) -> str:
+    s, e = i["ayah_start"], i["ayah_end"]
+    return _ar_num(s) if s == e else f"{_ar_num(s)}–{_ar_num(e)}"
+
+
 def check_quoted_verse(question: str, quoted: str) -> dict | None:
     """Official test case 11. Any quoted verse is checked against the FULL King Fahd Mushaf
     text (not only our 30 pages). Exact -> confirmed. Not exact -> every close verse is shown
@@ -215,9 +238,25 @@ def check_quoted_verse(question: str, quoted: str) -> dict | None:
                 continue
             best = ranked[0].overlap
             cands = [c for c in ranked if c.overlap >= max(0.6, best - 0.3)][:4] or ranked[:1]
+            # A multi-ayah window that merely contains a closer single candidate is not a
+            # separate choice (2:154-155 around 2:155): drop it.
+            cands = [
+                c
+                for c in cands
+                if not any(
+                    d is not c
+                    and d.surah == c.surah
+                    and c.ayah_start <= d.ayah_start
+                    and d.ayah_end <= c.ayah_end
+                    and d.similarity >= c.similarity
+                    for d in cands
+                )
+            ]
         items = []
         for c in cands:
-            pages = _in_corpus(c.surah, c.ayah_start)
+            pages = sorted(
+                {p for a in range(c.ayah_start, c.ayah_end + 1) for p in _in_corpus(c.surah, a)}
+            )
             items.append(
                 {
                     "surah": c.surah,
@@ -235,8 +274,7 @@ def check_quoted_verse(question: str, quoted: str) -> dict | None:
             note = "النص كما ورد في السؤال مطابق لنص المصحف."
         else:
             refs = "، و".join(
-                f"﴿{i['canonical_text']}﴾ [{i['surah_name']}: {_ar_num(i['ayah_start'])}]"
-                for i in items
+                f"﴿{i['canonical_text']}﴾ [{i['surah_name']}: {_ayahs(i)}]" for i in items
             )
             several = len(items) > 1
             note = (
@@ -255,7 +293,7 @@ def check_quoted_verse(question: str, quoted: str) -> dict | None:
             if outside:
                 note += (
                     " ("
-                    + "، ".join(f"{i['surah_name']}: {_ar_num(i['ayah_start'])}" for i in outside)
+                    + "، ".join(f"{i['surah_name']}: {_ayahs(i)}" for i in outside)
                     + ": ليست في صفحات الكتاب المفهرسة، ونصها منقول من مصحف مجمع الملك فهد.)"
                 )
         return {
@@ -378,16 +416,55 @@ def _context(passages: list[dict]) -> str:
     return "\n\n".join(parts)
 
 
-def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
+def answer(
+    question: str, *, ip: str = "local", use_cache: bool = True, offline_run: int | None = None
+) -> dict:
+    """offline_run (evaluation / precomputing, never from the web): no per-IP limit, always the
+    main model (consistent runs), and LLM calls are logged as "eval/..." stages so they do not
+    use the live daily cap. Each run number has its own LLM cache, so repeated runs are real."""
     t0 = time.time()
     question = question.strip()[:1000]
     if use_cache and (c := _cached(question)):
         return _refresh(c) | {"cached": True}
     stages = []
-    model = budget.answer_model()
+    if g := glossary_request(question):
+        ar_term, en = g
+        ret = hybrid(question, k=3)
+        verified = ar_term in PACKAGE_TERMS
+        res = {
+            "question": question,
+            "language": "ar",
+            "level": "A",
+            "classification": None,
+            "quoted_verse_check": None,
+            "passages": _passages_for(ret["hits"], ret["terms"]),
+            "ai_notice": AI_NOTICE_AR,
+            "cached": False,
+            "status": "glossary",
+            "glossary": {
+                "term_ar": ar_term,
+                "term_en": en,
+                "source": "معجم جمهرة للمصطلحات الإسلامية (islamic-content.com/dictionary)، "
+                "كما ورد في الحزمة العلمية للتحدي"
+                if verified
+                else "مقابل شائع لم يُتحقق منه بعد في معجم جمهرة",
+                "verified": verified,
+            },
+            "message": f"المقابل المعتمد لمصطلح «{ar_term}» بالإنجليزية: {en}.",
+            "stages": [{"stage": "glossary", "term": ar_term}],
+            "seconds": round(time.time() - t0, 2),
+        }
+        _store(question, res)
+        return res
+    offline = offline_run is not None
+    prefix = (f"eval/r{offline_run}/" if offline_run else "eval/") if offline else ""
+    if offline:
+        model = None if budget.status()["hard_stop"] else settings.answer_model
+    else:
+        model = budget.answer_model()
     lang = "ar"
     try:
-        cls = classify(question, settings.classifier_model) if model else None
+        cls = classify(question, settings.classifier_model, prefix) if model else None
     except Exception as e:  # classifier down: be conservative, still retrieve
         cls = None
         stages.append({"stage": "classify", "error": str(e)[:200]})
@@ -434,7 +511,7 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
         return done(
             base | {"status": "referral", "message": REFER_AR if lang == "ar" else REFER_EN}
         )
-    if model is None or not budget.allow(ip):
+    if model is None or (not offline and not budget.allow(ip)):
         return base | {"status": "unavailable", "message": UNAVAILABLE_AR, "stages": stages}
 
     # Support gate: weak retrieval -> abstain without generating.
@@ -459,11 +536,10 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
         )
         + (
             "verse_check: the quoted verse does NOT match the Mushaf. A verified correction card "
-            "listing the closest verses is shown to the user separately: "
-            + "; ".join(f"{c['surah']}:{c['ayah_start']}" for c in verse["candidates"])
-            + ". In your explanation, gently say the quoted wording is not the Quranic text and "
-            "refer to the verses shown; do NOT choose one of them as the intended verse, and do "
-            "not build on the altered wording.\n"
+            "with the exact Mushaf text and the surah and ayah numbers is shown to the user "
+            "separately. In your explanation, gently say the quoted wording is not the Quranic "
+            "text and refer to «الآية الصحيحة المعروضة» without writing any surah or ayah "
+            "number; do NOT choose a verse yourself, and do not build on the altered wording.\n"
             if verse and not verse["exact"]
             else ""
         )
@@ -473,7 +549,7 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
     for m in dict.fromkeys([model, settings.answer_fallback_model]):
         try:
             r = generate(
-                stage="answer",
+                stage=f"{prefix}answer",
                 prompt_version=ANSWER_V,
                 model=m,
                 system=system,

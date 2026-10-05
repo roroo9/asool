@@ -47,7 +47,8 @@ The gold set is the human-verified reference used to measure extraction quality.
    Words accepted under either abstention rule are spot-checked at **10%** (twice the normal rate). Everything else goes to a human.
 3. The human reviewer sees only the disputed phrases, each with the full printed line from the original page and **only the disputed words** highlighted, and chooses a reading or types a correction (`/review/gold`). If the words cannot be located reliably, the screen says «الموقع غير مؤكد» and shows the full page with the likely area marked; a «عرض الصفحة كاملة» button is always available.
 4. A random 5% of fully agreed words (weighted toward words with tashkeel) and 10% of words accepted by abstention are shown to the reviewer as a spot-check.
-5. The reviewer confirms the block types (body, hadith, Quran, footnote, editor commentary…) before the page is finalized.
+5. **Equivalent readings are not disputes (owner rule, Oct 5).** Readings that differ only in Unicode (combining-mark order such as shadda + fatha, fixed by NFC) or in whitespace just inside brackets, around footnote markers or before punctuation («الرحيم )» = «الرحيم)», «﴿ قُلْ» = «﴿قُلْ», «شهدا (٨)» = «شهدا(٨)») are the same printed text. Such a dispute is auto-accepted when Readers B and C are identical after this canonicalization and Tesseract agrees on the letters or gave no reading. Spaces *between words* («يارسول» / «يا رسول») are a real difference in the print and stay with the human. Strict CER applies the same canonicalization to both sides. This removed **28** of 792 open disputes; **764** remain (522 tashkeel differences between B and C, 120 letter differences, 108 where Tesseract confidently reads other letters, 13 word-spacing differences, 1 with no Reader C).
+6. The reviewer confirms the block types (body, hadith, Quran, footnote, editor commentary…) before the page is finalized.
 
 **Bias controls.**
 - **Asool's own page parser (Gemini) is never one of the gold readers**, so the gold set does not come from the model it evaluates.
@@ -59,8 +60,8 @@ The gold set is the human-verified reference used to measure extraction quality.
 
 | Pages | Words | Auto-accepted | Human decisions | Spot-checked | Spot-check errors |
 |---|---|---|---|---|---|
-| 41, 30, 20 (bake-off) | 942 | 425 | 237 | 21 | 0 |
-| 12 other pages (rule v3) | 3,541 | 2,375 (476 tashkeel abstention, 678 Tesseract abstention) | 755 (pending) | 176 (pending) | pending |
+| 41, 30, 20 (bake-off) | 942 | 425 + 11 equivalent readings | 237 (26 re-queued still open) | 21 | 0 |
+| 12 other pages (rule v3) | 3,541 | 2,375 (476 tashkeel abstention, 678 Tesseract abstention) + 17 equivalent readings | 738 (pending) | 176 (pending) | pending |
 
 **Review-screen bug and audit (Oct 4).** The first version of the review screen could show a neighbouring line when a disputed phrase was not found by OCR, highlighted whole lines instead of the disputed words, and could keep the previous image visible while the next one loaded. Fixed: word-level location with honest "uncertain" labels, one image per dispute, full-page view. All decisions made with the old screen were audited against the new locator: **37 of 237 bake-off decisions** (and both decisions made on page 12) were put back in the review queue because their crop did not show the disputed words. No spot-check answer was affected. Audit file: `data/gold/audit_2026-10-04_crops.json`.
 
@@ -74,6 +75,29 @@ No hadith is shown without its source and a grading from approved data; a gradin
 4. Nothing verified → **«الحكم غير متحقق في البيانات»**.
 Al-Nawawi's printed takhrij is always shown beside the grading.
 
-In the 30-page corpus: 41 hadiths are in the Sahihayn by al-Nawawi's takhrij, 3 are graded from HadeethEnc automatically, 1 waits for the owner's confirmation, 0 need manual dorar entry.
+In the 30-page corpus: 41 hadiths are in the Sahihayn by al-Nawawi's takhrij (24 «متفق عليه», 8 al-Bukhari, 8 Muslim, 1 «رواه إماما المحدثين» naming both), and 4 are graded from HadeethEnc (3 automatically, 1 confirmed by the owner). None needs manual dorar entry.
 
 **Why search results are never used for grading automatically (dorar lesson, Oct 4).** For the hadith «إن الله يقبل توبة العبد ما لم يغرغر» (p.19), the first dorar.net result for «ما لم يغرغر» was a *different*, fabricated hadith graded «كذب». Taking the top search result would have attached a "fabricated" verdict to an authentic hadith. That is why the grading is taken only after checking narrator and wording, or confirmed by a person. The prefilled dorar search uses a short distinctive phrase with footnote markers and tashkeel removed and joined words split («مالم» → «ما لم»).
+
+## Evaluation (Phase 5)
+Everything on `/proof` is computed by these scripts; nothing is typed by hand.
+
+```bash
+uv run python -m eval.run_eval retrieval          # Asool vs. baseline, free (cached embeddings)
+uv run python -m eval.run_eval answers --runs 3   # real /answer pipeline, ~$0.03 per question per run
+uv run python -m eval.heldout_eval                # extraction on the 12 held-out gold pages
+uv run python -m eval.report                      # -> data/eval/results/summary.json -> /proof
+```
+
+**Question set** (`data/eval/questions.jsonl`, 66 questions, drafted by the agent, each marked `human_verified` until the owner checks it): 33 answerable questions (direct, needs-footnote, cross-page, multi-condition, Quran, editor commentary, English), 1 owner case (`completeness-01`), 10 unanswerable from this corpus, 5 personal cases needing a fatwa (level D), 3 hostile phrasings, 2 misquoted verses, and the **12 official test cases** of the scientific package (p.6) adapted to this corpus. Questions outside the 30 pages are expected to end in abstention or referral, never in an answer from general knowledge.
+
+**Fair baseline.** Same embeddings, same hybrid search code (BM25 + dense + RRF), same k=5 and same answer model; only the data preparation differs (Tesseract plain text in fixed 500-character pieces). Retrieval is measured with the raw question for both systems.
+
+**Metrics.** Recall@5 and MRR by gold page; context completeness (a top-5 unit from the gold page also carries the footnote the question depends on); behaviour (answer / abstain / refer / correct the verse); quotes re-verified independently (fabricated quotes shown must be 0); traceability (every shown quote resolves to a stored block with a page and a box); multi-condition answers must cite every required unit; consistency across 3 repeated runs.
+
+**Changes made after looking at evaluation results (disclosed).**
+- `completeness-01` (owner, GATE 4): answers now add same-chapter, same-page neighbouring units and prompt `answer.v3` requires every condition/limit to be cited.
+- `ans-16`: a quotation from the book inside «…» in the question is now a third ranked list in the fusion (exact phrase match, footnote markers ignored), applied identically to the baseline. Before: Asool Recall@5 95.3%; after: 97.7% (baseline unchanged, 81.4%).
+- `ans-21`: editor commentary printed among the footnotes was linked to the *next* hadith (p.29, p.41). It is now linked to the hadith whose footnote is printed just before it, and its search text names that hadith's opening. Asool Recall@5: 97.7% → 100%.
+- `official-08`: a request to translate a term from the approved glossary is now answered from the dictionary itself (status `glossary`), never generated; terms outside the package's sample are labeled as not yet verified against Jamhara.
+- `official-11` / `official-12`: prompt rules: the explanation never writes surah/ayah numbers itself (the verified verse card does), and loaded terms are explained in the passages' own context without adopting the asker's framing.

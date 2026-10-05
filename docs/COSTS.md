@@ -26,3 +26,29 @@ OpenRouter breakdown (logged calls): parsing 30 pages + bake-off with Gemini 3.1
 Ingestion is done. Remaining spend is answers (Phase 3), evaluation runs (Phase 5) and live use during judging (Oct 7–22). With $2.93 left on OpenRouter this is **not enough** for answers with Gemini 3.1 Pro plus 3 evaluation runs. See the GATE 2 decision.
 
 Per-1,000-page ingestion cost (projection from measured unit cost): ≈ $165 with Gemini 3.1 Pro + boxes.
+
+## Update: Mon Oct 5, evening (Riyadh)
+
+| Provider | Budget | Spent | Used | Warn at 80% |
+|---|---|---|---|---|
+| **OpenRouter** | $25.00 (limit raised at GATE 2) | **$12.15** (OpenRouter's own usage figure) | **49%** | $20.00 |
+| Anthropic | $5.00 | $2.66 | 53% | $4.00 |
+
+The new spend since GATE 3 is mostly evaluation:
+
+| Item | Spend |
+|---|---|
+| Evaluation answer passes, 3 full passes of 66 questions while fixing issues | $4.63 |
+| Live and test answers | $0.44 |
+
+**Measured unit costs (online)**
+
+| Item | Cost |
+|---|---|
+| Answer with Gemini 3.1 Pro (`answer.v3`), including classification | ≈ $0.031 per question |
+| Abstention or referral | ≈ $0.001 (classification only, no generation) |
+| Answer served from the cache | $0 |
+
+**Remaining plan**
+- Two more evaluation runs, needed for consistency: about $4.
+- Live use during judging, capped at $3 per day: about $0.03 per new question.

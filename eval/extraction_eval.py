@@ -10,12 +10,12 @@ from __future__ import annotations
 import json
 import re
 import sys
-import unicodedata
 from difflib import SequenceMatcher
 
 import jiwer
 
 from pipeline.config import GOLD, INTER, page_id
+from pipeline.gold_consensus import canon
 from pipeline.normalize import normalize, normalize_marker
 
 SKIP = {"page_number", "page_header"}
@@ -29,7 +29,9 @@ def _clean(s: str, level: str) -> str:
     if level == "strict":
         # NFC puts combining marks in canonical order (e.g. shadda+fatha), so the same
         # printed marks typed in a different order are not counted as an error.
-        return unicodedata.normalize("NFC", re.sub(r"\s+", " ", s).strip())
+        # canon(): NFC (canonical mark order) + no whitespace just inside brackets/markers,
+        # the same equivalence the gold review applies (owner rule, GATE 4 r2).
+        return canon(s)
     return normalize(s, "cer_loose")
 
 

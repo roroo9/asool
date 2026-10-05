@@ -79,6 +79,28 @@ def _bm25(con: sqlite3.Connection, table: str, terms: list[str], n: int) -> list
     return [r[0] for r in rows]
 
 
+_QUOTED = re.compile(r"[«\"“]([^»\"”]{4,200})[»\"”]")
+
+
+def _phrase_hits(table: str, q: str, n: int = 10) -> list[str]:
+    """Ids of units whose normalized text contains a phrase quoted in the question."""
+    phrases = [normalize(m.group(1)) for m in _QUOTED.finditer(q)]
+    phrases = [p for p in phrases if len(p.split()) >= 2]
+    if not phrases:
+        return []
+    con = db()
+    try:
+        rows = con.execute(f"SELECT id, text_norm FROM {table}").fetchall()
+    finally:
+        con.close()
+    out: list[str] = []
+    for cid, text in rows:  # footnote markers are digits in text_norm: not words of the text
+        hay = " " + " ".join(re.sub(r"\b\d+\b", " ", text or "").split()) + " "
+        if any(f" {p} " in hay for p in phrases):
+            out.append(cid)
+    return out[:n]
+
+
 def _dense(name: str, qvec: np.ndarray | None, n: int) -> list[tuple[str, float]]:
     if qvec is None:
         return []
@@ -117,7 +139,14 @@ def hybrid(
         bm = _bm25(con, table, terms, n)
     con.close()
     dn = _dense(vname, qvec, n)
+    ph = _phrase_hits(table.replace("_fts", "_chunks" if mode != "asool" else ""), q)
     scores: dict[str, Hit] = {}
+    # Third ranked list: units that contain a phrase the user quoted from the book («…»).
+    # A verbatim quotation is strong evidence even when the unit is long and its embedding
+    # is dominated by other content (found on eval question ans-16, «لا أغبق قبلهما»).
+    for r, cid in enumerate(ph):
+        h = scores.setdefault(cid, Hit(cid, 0.0, None, None, None))
+        h.score += 1 / (RRF_K + r + 1)
     for r, cid in enumerate(bm):
         h = scores.setdefault(cid, Hit(cid, 0.0, None, None, None))
         h.score += 1 / (RRF_K + r + 1)

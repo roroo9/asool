@@ -19,7 +19,7 @@ type KnownErrors = { errors: { page: number; block: string; parser_text: string;
 type Summary = {
   available: boolean;
   generated_at?: string;
-  metrics?: Record<string, { asool: number; baseline?: number; n?: number; note?: string }>;
+  metrics?: Record<string, { asool: number; baseline?: number | null; n?: number; note?: string; fmt?: string }>;
   official_cases?: { id: string; question: string; expected: string; status: string; pass: boolean; note?: string }[];
   limits?: string[];
 };
@@ -38,6 +38,7 @@ const NAMES: Record<string, string> = {
   "claude-fable-5-1": "Claude Fable 5.1 (قارئ المرجع)",
 };
 const pct = (x: number) => `${ar((x * 100).toFixed(1))}٪`;
+const fmt = (x: number, f?: string) => (f === "decimal" ? ar(x.toFixed(2)) : pct(x));
 
 function Bars({ rows }: { rows: Row[] }) {
   const max = Math.max(...rows.map((r) => r.cer_strict));
@@ -164,9 +165,13 @@ export default function ProofPage() {
               <tbody>
                 {Object.entries(sum.metrics).map(([k, v]) => (
                   <tr key={k} className="border-b border-line/60">
-                    <td className="py-1">{k}</td>
-                    <td className="text-center tabular-nums">{pct(v.asool)}</td>
-                    <td className="text-center tabular-nums">{v.baseline == null ? "—" : pct(v.baseline)}</td>
+                    <td className="py-1">
+                      {k}
+                      {v.n != null && <span className="text-xs text-muted"> (ن = {ar(v.n)})</span>}
+                      {v.note && <span className="block text-xs text-muted">{v.note}</span>}
+                    </td>
+                    <td className="text-center tabular-nums">{fmt(v.asool, v.fmt)}</td>
+                    <td className="text-center tabular-nums">{v.baseline == null ? "—" : fmt(v.baseline, v.fmt)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -216,6 +221,10 @@ export default function ProofPage() {
 {`git clone https://github.com/roroo9/asool && cd asool
 uv sync && ./scripts/fetch_references.sh
 uv run python -m eval.bakeoff        # page reading (needs the book PDF + keys)
+uv run python -m eval.run_eval retrieval      # Asool vs baseline (free)
+uv run python -m eval.run_eval answers --runs 3  # ~$0.03 per question per run
+uv run python -m eval.heldout_eval           # 12 held-out gold pages
+uv run python -m eval.report                 # -> summary.json -> this page
 uv run pytest                        # unit tests`}
         </pre>
       </section>

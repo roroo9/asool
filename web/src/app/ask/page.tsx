@@ -283,8 +283,26 @@ function Ask() {
                 <p className="mt-2 leading-loose">{data.message}</p>
                 <p className="mt-2 text-sm text-muted">
                   تُجيب هذه الأداة من صفحات الكتاب المفهرسة وحدها، ولا تؤلِّف إجابة من خارجها. وفيما يلي أقرب النصوص؛ وللاستزادة يُرجى سؤال
-                  أهل العلم للتوسع.
+                  أهل العلم.
                 </p>
+              </section>
+            )}
+
+            {data.status === "glossary" && data.glossary && (
+              <section className="rounded-xl border border-line bg-surface p-5" aria-label="المقابل المعتمد للمصطلح">
+                <h2 className="text-lg font-semibold">المقابل المعتمد للمصطلح</h2>
+                <p className="mt-3 flex flex-wrap items-baseline gap-3">
+                  <span className="source-text text-2xl">{data.glossary.term_ar}</span>
+                  <span aria-hidden>←</span>
+                  <span dir="ltr" lang="en" className="text-xl font-medium">
+                    {data.glossary.term_en}
+                  </span>
+                </p>
+                <p className={`mt-2 text-sm ${data.glossary.verified ? "text-thread-strong" : "text-amber-ink"}`}>
+                  {data.glossary.verified ? "✓ " : "⚠ "}
+                  {data.glossary.source}
+                </p>
+                <p className="mt-2 text-xs text-muted">مأخوذ من المعجم مباشرة، وليس من توليد النموذج.</p>
               </section>
             )}
 

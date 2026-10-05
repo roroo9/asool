@@ -107,7 +107,8 @@ export type SourcePoint = { text: string; passage: string; quote: string; verifi
 
 export type AnswerRes = {
   question: string;
-  status: "answered" | "abstained" | "referral" | "unavailable";
+  status: "answered" | "abstained" | "referral" | "unavailable" | "glossary";
+  glossary?: { term_ar: string; term_en: string; source: string; verified: boolean };
   language: string;
   level: string | null;
   message?: string;

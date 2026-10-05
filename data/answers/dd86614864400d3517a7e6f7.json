@@ -9,8 +9,8 @@
   "language": "ar",
   "quoted_verse": "",
   "asks_for_evidence_text": false,
-  "search_query_ar": "قبول التوبة في آخر العمر عند الموت والغرغرة",
-  "reason": "السؤال يتناول حكماً عقدياً وأصلاً شرعياً ثابتاً في قبول التوبة وشروطها العامة."
+  "search_query_ar": "قبول التوبة عند الموت آخر العمر شروط التوبة والغرغرة",
+  "reason": "السؤال يتناول حكماً عقدياً وأصلاً إسلامياً ثابتاً حول قبول التوبة وأجلها."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -273,7 +273,7 @@
     "rrf": 0.03279,
     "bm25_rank": 1,
     "dense_rank": 1,
-    "dense_sim": 0.7619128823280334
+    "dense_sim": 0.773989737033844
    }
   },
   {
@@ -785,10 +785,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03226,
-    "bm25_rank": 2,
-    "dense_rank": 2,
-    "dense_sim": 0.6788092851638794
+    "rrf": 0.03175,
+    "bm25_rank": 3,
+    "dense_rank": 3,
+    "dense_sim": 0.6767003536224365
    }
   },
   {
@@ -805,6 +805,10 @@
     [
      82,
      87
+    ],
+    [
+     129,
+     134
     ],
     [
      568,
@@ -1356,10 +1360,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03058,
-    "bm25_rank": 3,
-    "dense_rank": 8,
-    "dense_sim": 0.6431753039360046
+    "rrf": 0.03128,
+    "bm25_rank": 2,
+    "dense_rank": 6,
+    "dense_sim": 0.6606194972991943
    }
   },
   {
@@ -1674,10 +1678,10 @@
    "commentary_on": null,
    "min_confidence": 0.98,
    "retrieval": {
-    "rrf": 0.02951,
+    "rrf": 0.02971,
     "bm25_rank": 4,
-    "dense_rank": 12,
-    "dense_sim": 0.6297692060470581
+    "dense_rank": 11,
+    "dense_sim": 0.6332537531852722
    }
   },
   {
@@ -2070,7 +2074,7 @@
     "rrf": 0.02942,
     "bm25_rank": 7,
     "dense_rank": 9,
-    "dense_sim": 0.6388621926307678
+    "dense_sim": 0.6396360993385315
    }
   },
   {
@@ -3067,7 +3071,7 @@
   {
    "stage": "classify",
    "level": "A",
-   "reason": "السؤال يتناول حكماً عقدياً وأصلاً شرعياً ثابتاً في قبول التوبة وشروطها العامة."
+   "reason": "السؤال يتناول حكماً عقدياً وأصلاً إسلامياً ثابتاً حول قبول التوبة وأجلها."
   },
   {
    "stage": "retrieve",
@@ -3077,7 +3081,7 @@
   },
   {
    "stage": "support_gate",
-   "best_sim": 0.762,
+   "best_sim": 0.774,
    "threshold": 0.55
   },
   {
@@ -3091,5 +3095,5 @@
    "removed": 0
   }
  ],
- "seconds": 18.66
+ "seconds": 21.43
 }

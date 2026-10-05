@@ -1,0 +1,2720 @@
+{
+ "question": "لماذا يحاسب الإسلام الناس على نواياهم لا على أفعالهم فقط؟",
+ "language": "ar",
+ "level": "B",
+ "classification": {
+  "level": "B",
+  "is_personal_case": false,
+  "is_hostile": false,
+  "language": "ar",
+  "quoted_verse": "",
+  "asks_for_evidence_text": false,
+  "search_query_ar": "مكانة النية في الإسلام والمحاسبة عليها ومقاصد الشريعة",
+  "reason": "السؤال يبحث في حكمة ومفهوم شرعي عام حول المحاسبة على النوايا."
+ },
+ "quoted_verse_check": null,
+ "passages": [
+  {
+   "id": "riyad1956-c003",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن عائشة رضى الله عنها قالت : قال النبي صلى الله عليه وسلم :\n« لا هجرةَ بعد الفتح ، ولكنْ جهادٌ ونيةٌ ، وإذا استُنفِرتُم فانفروا » (٤)\nمتفق عليه . - ومعناه : لا هجرةَ من مكةَ لأنها صارت دارَ إسلامٍ .",
+   "highlights": [
+    [
+     64,
+     66
+    ],
+    [
+     97,
+     102
+    ],
+    [
+     159,
+     161
+    ],
+    [
+     192,
+     198
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p013",
+     "printed": 13,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 13"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p013-b05",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن عائشة رضى الله عنها قالت : قال النبي صلى الله عليه وسلم :",
+     "bbox": [
+      745,
+      1051,
+      1658,
+      1222
+     ],
+     "rects": [
+      [
+       745,
+       1051,
+       1658,
+       1222
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b06",
+     "page_id": "riyad1956-p013",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« لا هجرةَ بعد الفتح ، ولكنْ جهادٌ ونيةٌ ، وإذا استُنفِرتُم فانفروا » (٤)",
+     "bbox": [
+      450,
+      1070,
+      1747,
+      1261
+     ],
+     "rects": [
+      [
+       450,
+       1070,
+       1747,
+       1261
+      ]
+     ],
+     "bbox_source": "vlm",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b07",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه . - ومعناه : لا هجرةَ من مكةَ لأنها صارت دارَ إسلامٍ .",
+     "bbox": [
+      951,
+      1215,
+      1750,
+      1388
+     ],
+     "rects": [
+      [
+       951,
+       1215,
+       1750,
+       1388
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p013-b18",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٤) طلبتم للخروج إلى الجهاد فلبوا. فيه التحذير من مصاحبة العصاة والتنبيه على صحبة الأخيار الأبرار وأن الأعمال بحسب نية العامل المخلص.",
+     "bbox": [
+      474,
+      2454,
+      1765,
+      2617
+     ],
+     "rects": [
+      [
+       474,
+       2454,
+       1465,
+       2537
+      ],
+      [
+       582,
+       2545,
+       1765,
+       2617
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٤)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 10,
+       "page_id": "riyad1956-p013",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p013-b06",
+       "anchor_char_offset": 70,
+       "footnote_block_id": "riyad1956-p013-b18",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h002-riyad1956-p013-b05",
+     "narrator": "عايشه",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%87%D8%AC%D8%B1%D8%A9%20%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D9%81%D8%AA%D8%AD%20%D9%88%D9%84%D9%83%D9%86%20%D8%AC%D9%87%D8%A7%D8%AF%20%D9%88%D9%86%D9%8A%D8%A9",
+     "block_ids": [
+      "riyad1956-p013-b05",
+      "riyad1956-p013-b06",
+      "riyad1956-p013-b07"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.0311,
+    "bm25_rank": 1,
+    "dense_rank": 8,
+    "dense_sim": 0.6530601978302002
+   }
+  },
+  {
+   "id": "riyad1956-c000",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "قال الله تعالى :\n﴿ وَمَا أُمِرُوا إِلاَّ لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ (١) حُنَفَاءَ (٢) وَيُقِيمُوا الصَّلَاةَ ، وَيُؤْتُوا الزَّكَاةَ ، وَذَلِكَ دِينُ الْقَيِّمَةِ ﴾ (٣)\nوقال تعالى :\n﴿ لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَكِنْ يَنَالُهُ التَّقْوَى مِنْكُمْ ﴾ (٤)\nوقال تعالى :\n﴿ قُلْ إِنْ تُخْفُوا مَا فِي صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ اللَّهُ ﴾ .",
+   "highlights": [
+    [
+     336,
+     339
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p012",
+     "printed": 12,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 12"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p012-b05",
+     "page_id": "riyad1956-p012",
+     "type": "body",
+     "author_role": "matn",
+     "text": "قال الله تعالى :",
+     "bbox": [
+      1396,
+      917,
+      1615,
+      1014
+     ],
+     "rects": [
+      [
+       1396,
+       917,
+       1615,
+       1014
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p012-b06",
+     "page_id": "riyad1956-p012",
+     "type": "quran",
+     "author_role": "matn",
+     "text": "﴿ وَمَا أُمِرُوا إِلاَّ لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ (١) حُنَفَاءَ (٢) وَيُقِيمُوا الصَّلَاةَ ، وَيُؤْتُوا الزَّكَاةَ ، وَذَلِكَ دِينُ الْقَيِّمَةِ ﴾ (٣)",
+     "bbox": [
+      589,
+      911,
+      1713,
+      1126
+     ],
+     "rects": [
+      [
+       589,
+       911,
+       1713,
+       1126
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p012-b07",
+     "page_id": "riyad1956-p012",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وقال تعالى :",
+     "bbox": [
+      489,
+      1026,
+      678,
+      1120
+     ],
+     "rects": [
+      [
+       489,
+       1026,
+       678,
+       1120
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p012-b08",
+     "page_id": "riyad1956-p012",
+     "type": "quran",
+     "author_role": "matn",
+     "text": "﴿ لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَكِنْ يَنَالُهُ التَّقْوَى مِنْكُمْ ﴾ (٤)",
+     "bbox": [
+      381,
+      1020,
+      1714,
+      1266
+     ],
+     "rects": [
+      [
+       381,
+       1020,
+       1714,
+       1266
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p012-b09",
+     "page_id": "riyad1956-p012",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وقال تعالى :",
+     "bbox": [
+      415,
+      1154,
+      593,
+      1220
+     ],
+     "rects": [
+      [
+       415,
+       1154,
+       593,
+       1220
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p012-b10",
+     "page_id": "riyad1956-p012",
+     "type": "quran",
+     "author_role": "matn",
+     "text": "﴿ قُلْ إِنْ تُخْفُوا مَا فِي صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ اللَّهُ ﴾ .",
+     "bbox": [
+      1025,
+      1226,
+      1593,
+      1350
+     ],
+     "rects": [
+      [
+       1025,
+       1226,
+       1593,
+       1350
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p012-b14",
+     "page_id": "riyad1956-p012",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(١) موحدين",
+     "bbox": [
+      1477,
+      2435,
+      1679,
+      2520
+     ],
+     "rects": [
+      [
+       1477,
+       2435,
+       1679,
+       2520
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 1,
+       "page_id": "riyad1956-p012",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p012-b06",
+       "anchor_char_offset": 71,
+       "footnote_block_id": "riyad1956-p012-b14",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p012-b16",
+     "page_id": "riyad1956-p012",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٢) مائلين إلى الإسلام",
+     "bbox": [
+      1051,
+      2435,
+      1327,
+      2520
+     ],
+     "rects": [
+      [
+       1051,
+       2435,
+       1327,
+       2520
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٢)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 2,
+       "page_id": "riyad1956-p012",
+       "marker": "(٢)",
+       "anchor_block_id": "riyad1956-p012-b06",
+       "anchor_char_offset": 85,
+       "footnote_block_id": "riyad1956-p012-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p012-b18",
+     "page_id": "riyad1956-p012",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٣) الجماعة المستقيمة",
+     "bbox": [
+      672,
+      2433,
+      914,
+      2508
+     ],
+     "rects": [
+      [
+       672,
+       2433,
+       914,
+       2508
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٣)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 3,
+       "page_id": "riyad1956-p012",
+       "marker": "(٣)",
+       "anchor_block_id": "riyad1956-p012-b06",
+       "anchor_char_offset": 168,
+       "footnote_block_id": "riyad1956-p012-b18",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p012-b19",
+     "page_id": "riyad1956-p012",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٤) ما أريد به وجه الله تعالى",
+     "bbox": [
+      408,
+      2435,
+      1724,
+      2597
+     ],
+     "rects": [
+      [
+       408,
+       2435,
+       636,
+       2520
+      ],
+      [
+       1506,
+       2517,
+       1724,
+       2597
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٤)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 4,
+       "page_id": "riyad1956-p012",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p012-b08",
+       "anchor_char_offset": 92,
+       "footnote_block_id": "riyad1956-p012-b19",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [
+    {
+     "block_id": "riyad1956-p012-b06",
+     "surah": 98,
+     "ayah_start": 5,
+     "ayah_end": 5,
+     "match_type": "exact",
+     "similarity": 1.0,
+     "printed_text": "﴿ وَمَا أُمِرُوا إِلاَّ لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ (١) حُنَفَاءَ (٢) وَيُقِيمُوا الصَّلَاةَ ، وَيُؤْتُوا الزَّكَاةَ ، وَذَلِكَ دِينُ الْقَيِّمَةِ ﴾ (٣)",
+     "canonical_text": "وَمَآ أُمِرُوٓاْ إِلَّا لِيَعۡبُدُواْ ٱللَّهَ مُخۡلِصِينَ لَهُ ٱلدِّينَ حُنَفَآءَ وَيُقِيمُواْ ٱلصَّلَوٰةَ وَيُؤۡتُواْ ٱلزَّكَوٰةَۚ وَذَٰلِكَ دِينُ ٱلۡقَيِّمَةِ ۝٥",
+     "diff_ops": [],
+     "reference_source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+     "quranpedia_url": "https://quranpedia.net/surah/98/5"
+    },
+    {
+     "block_id": "riyad1956-p012-b08",
+     "surah": 22,
+     "ayah_start": 37,
+     "ayah_end": 37,
+     "match_type": "exact",
+     "similarity": 1.0,
+     "printed_text": "﴿ لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَكِنْ يَنَالُهُ التَّقْوَى مِنْكُمْ ﴾ (٤)",
+     "canonical_text": "لَن يَنَالَ ٱللَّهَ لُحُومُهَا وَلَا دِمَآؤُهَا وَلَٰكِن يَنَالُهُ ٱلتَّقۡوَىٰ مِنكُمۡۚ كَذَٰلِكَ سَخَّرَهَا لَكُمۡ لِتُكَبِّرُواْ ٱللَّهَ عَلَىٰ مَا هَدَىٰكُمۡۗ وَبَشِّرِ ٱلۡمُحۡسِنِينَ ۝٣٧",
+     "diff_ops": [],
+     "reference_source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+     "quranpedia_url": "https://quranpedia.net/surah/22/37"
+    },
+    {
+     "block_id": "riyad1956-p012-b10",
+     "surah": 3,
+     "ayah_start": 29,
+     "ayah_end": 29,
+     "match_type": "exact",
+     "similarity": 1.0,
+     "printed_text": "﴿ قُلْ إِنْ تُخْفُوا مَا فِي صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ اللَّهُ ﴾ .",
+     "canonical_text": "قُلۡ إِن تُخۡفُواْ مَا فِي صُدُورِكُمۡ أَوۡ تُبۡدُوهُ يَعۡلَمۡهُ ٱللَّهُۗ وَيَعۡلَمُ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ وَٱللَّهُ عَلَىٰ كُلِّ شَيۡءࣲ قَدِيرࣱ ۝٢٩",
+     "diff_ops": [],
+     "reference_source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+     "quranpedia_url": "https://quranpedia.net/surah/3/29"
+    }
+   ],
+   "hadith": [],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.03101,
+    "bm25_rank": 5,
+    "dense_rank": 4,
+    "dense_sim": 0.670689046382904
+   }
+  },
+  {
+   "id": "riyad1956-c008",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :\n« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »\nمتفق عليه .",
+   "highlights": [
+    [
+     172,
+     174
+    ],
+    [
+     275,
+     277
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p015",
+     "printed": 15,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 15"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p015-b05",
+     "page_id": "riyad1956-p015",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :",
+     "bbox": [
+      464,
+      852,
+      1752,
+      1170
+     ],
+     "rects": [
+      [
+       465,
+       852,
+       1667,
+       959
+      ],
+      [
+       464,
+       957,
+       1750,
+       1065
+      ],
+      [
+       677,
+       1069,
+       1752,
+       1170
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p015-b06",
+     "page_id": "riyad1956-p015",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »",
+     "bbox": [
+      461,
+      1069,
+      1748,
+      1274
+     ],
+     "rects": [
+      [
+       461,
+       1069,
+       654,
+       1170
+      ],
+      [
+       1003,
+       1170,
+       1748,
+       1274
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p015-b07",
+     "page_id": "riyad1956-p015",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه .",
+     "bbox": [
+      806,
+      1170,
+      984,
+      1274
+     ],
+     "rects": [
+      [
+       806,
+       1170,
+       984,
+       1274
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p015-b15",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "إقداما على العدو بروية",
+     "bbox": [
+      449,
+      2364,
+      1745,
+      2522
+     ],
+     "rects": [
+      [
+       449,
+       2364,
+       1745,
+       2522
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٣)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 26,
+       "page_id": "riyad1956-p015",
+       "marker": "(٣)",
+       "anchor_block_id": "riyad1956-p015-b05",
+       "anchor_char_offset": 123,
+       "footnote_block_id": "riyad1956-p015-b15",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b16",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "أنفة وغيرة ومحاماة عن عشيرته",
+     "bbox": [
+      966,
+      2443,
+      1423,
+      2518
+     ],
+     "rects": [
+      [
+       966,
+       2443,
+       1423,
+       2518
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٤)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 27,
+       "page_id": "riyad1956-p015",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p015-b05",
+       "anchor_char_offset": 141,
+       "footnote_block_id": "riyad1956-p015-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b17",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "يرى الناس قتاله أو يسمع الناس",
+     "bbox": [
+      451,
+      2443,
+      1738,
+      2611
+     ],
+     "rects": [
+      [
+       451,
+       2443,
+       742,
+       2518
+      ],
+      [
+       1656,
+       2524,
+       1738,
+       2611
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٥)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 28,
+       "page_id": "riyad1956-p015",
+       "marker": "(٥)",
+       "anchor_block_id": "riyad1956-p015-b05",
+       "anchor_char_offset": 159,
+       "footnote_block_id": "riyad1956-p015-b17",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b18",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "دين الإسلام",
+     "bbox": [
+      1328,
+      2524,
+      1503,
+      2611
+     ],
+     "rects": [
+      [
+       1328,
+       2524,
+       1503,
+       2611
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٦)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 29,
+       "page_id": "riyad1956-p015",
+       "marker": "(٦)",
+       "anchor_block_id": "riyad1956-p015-b06",
+       "anchor_char_offset": 32,
+       "footnote_block_id": "riyad1956-p015-b18",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h007-riyad1956-p015-b05",
+     "narrator": "ابي موسي عبد الله بن قيس الاشعري",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%82%D8%A7%D8%AA%D9%84%20%D9%84%D8%AA%D9%83%D9%88%D9%86%20%D9%83%D9%84%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%87%D9%89%20%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D8%A7",
+     "block_ids": [
+      "riyad1956-p015-b05",
+      "riyad1956-p015-b06",
+      "riyad1956-p015-b07"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 1.0,
+   "retrieval": {
+    "rrf": 0.03062,
+    "bm25_rank": 2,
+    "dense_rank": 9,
+    "dense_sim": 0.6502408981323242
+   }
+  },
+  {
+   "id": "riyad1956-c006",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أبى إسحاق سعد بن أبى وقاص مالك بن أهيب بن عبد مناف بن زُهرة ابنِ كِلاب بن مرةَ بن كعب بن لؤيٍ القرشيِّ الزهريِّ رضى الله عنه ، أحد العشرة المشهود لهم بالجنة ، رضى الله عنهم . قال :\n« جاءنى رسولُ الله صلى الله عليه وسلم يعودُنى عام حجةِ الوداع من وجعٍ اشتدَّ بى فقلتُ : يارسولَ الله إنى قد بلغَ بى من الوجعِ ما ترى وأنا ذُو مالٍ ولا يرثنى إلا ابنةٌ لى أفأتصدقُ بثلثى مالى ؟ قال : لا ، قلتُ : فالشطرُ (٣) يا رسولَ الله ؟ فقال : لا ، قلتُ : فالثلثُ يا رسولَ الله ؟ قال : الثلثُ والثلثُ كثيرٌ ـ أو كبيرٌ ـ إنك أن تذرَ (٤) ورثتَك أغنياءَ خيرٌ من أن تذرهمْ عالةً (٥) يتكففون الناس ، وإنك لنْ تنفق نفقةً تبتغى بها وجهَ الله إلا أجرتَ عليها حتى ما تجعلُ فى فىَّ امرأتِك قال فقلتُ : يارسولَ الله أُخلفُ (٦) بعدَ أصحابى ؟ قال : إنك لن تخلفَ (٧) فتعمل عملاً تبتغى به وجهَ الله إلا ازددتَ به درجةً ورفعةً ، ولعلك أن تُخَلَّفَ حتى ينتفع بك أقوامٌ ويضرَّ بك آخرون . اللهمَّ أمضِ (٨) لأصحابى هجرتهمْ ولا تردهمْ على أعقابهمْ ، لكن البائسُ سعدُ بن خولة »\nيرثى له (٩) رسولُ الله صلى الله عليه وسلم أنْ ماتَ بمكة .\nمتفق عليه .",
+   "highlights": [
+    [
+     383,
+     385
+    ],
+    [
+     430,
+     432
+    ],
+    [
+     573,
+     578
+    ],
+    [
+     631,
+     636
+    ],
+    [
+     650,
+     652
+    ],
+    [
+     653,
+     657
+    ],
+    [
+     900,
+     903
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p014",
+     "printed": 14,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 14"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p014-b05",
+     "page_id": "riyad1956-p014",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى إسحاق سعد بن أبى وقاص مالك بن أهيب بن عبد مناف بن زُهرة ابنِ كِلاب بن مرةَ بن كعب بن لؤيٍ القرشيِّ الزهريِّ رضى الله عنه ، أحد العشرة المشهود لهم بالجنة ، رضى الله عنهم . قال :",
+     "bbox": [
+      419,
+      824,
+      1726,
+      1172
+     ],
+     "rects": [
+      [
+       422,
+       824,
+       1641,
+       937
+      ],
+      [
+       419,
+       936,
+       1726,
+       1043
+      ],
+      [
+       1083,
+       1044,
+       1725,
+       1172
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.98,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p014-b06",
+     "page_id": "riyad1956-p014",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« جاءنى رسولُ الله صلى الله عليه وسلم يعودُنى عام حجةِ الوداع من وجعٍ اشتدَّ بى فقلتُ : يارسولَ الله إنى قد بلغَ بى من الوجعِ ما ترى وأنا ذُو مالٍ ولا يرثنى إلا ابنةٌ لى أفأتصدقُ بثلثى مالى ؟ قال : لا ، قلتُ : فالشطرُ (٣) يا رسولَ الله ؟ فقال : لا ، قلتُ : فالثلثُ يا رسولَ الله ؟ قال : الثلثُ والثلثُ كثيرٌ ـ أو كبيرٌ ـ إنك أن تذرَ (٤) ورثتَك أغنياءَ خيرٌ من أن تذرهمْ عالةً (٥) يتكففون الناس ، وإنك لنْ تنفق نفقةً تبتغى بها وجهَ الله إلا أجرتَ عليها حتى ما تجعلُ فى فىَّ امرأتِك قال فقلتُ : يارسولَ الله أُخلفُ (٦) بعدَ أصحابى ؟ قال : إنك لن تخلفَ (٧) فتعمل عملاً تبتغى به وجهَ الله إلا ازددتَ به درجةً ورفعةً ، ولعلك أن تُخَلَّفَ حتى ينتفع بك أقوامٌ ويضرَّ بك آخرون . اللهمَّ أمضِ (٨) لأصحابى هجرتهمْ ولا تردهمْ على أعقابهمْ ، لكن البائسُ سعدُ بن خولة »",
+     "bbox": [
+      383,
+      936,
+      1729,
+      2209
+     ],
+     "rects": [
+      [
+       419,
+       936,
+       790,
+       1043
+      ],
+      [
+       383,
+       1044,
+       1725,
+       1172
+      ],
+      [
+       420,
+       1155,
+       1723,
+       1255
+      ],
+      [
+       422,
+       1247,
+       1729,
+       1366
+      ],
+      [
+       417,
+       1369,
+       1725,
+       1455
+      ],
+      [
+       412,
+       1467,
+       1725,
+       1609
+      ],
+      [
+       418,
+       1571,
+       1726,
+       1678
+      ],
+      [
+       420,
+       1681,
+       1722,
+       1779
+      ],
+      [
+       418,
+       1783,
+       1721,
+       1878
+      ],
+      [
+       419,
+       1891,
+       1721,
+       1994
+      ],
+      [
+       419,
+       2002,
+       1728,
+       2102
+      ],
+      [
+       1331,
+       2100,
+       1716,
+       2209
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p014-b07",
+     "page_id": "riyad1956-p014",
+     "type": "body",
+     "author_role": "matn",
+     "text": "يرثى له (٩) رسولُ الله صلى الله عليه وسلم أنْ ماتَ بمكة .",
+     "bbox": [
+      423,
+      2100,
+      1131,
+      2209
+     ],
+     "rects": [
+      [
+       423,
+       2100,
+       1131,
+       2209
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p014-b08",
+     "page_id": "riyad1956-p014",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه .",
+     "bbox": [
+      1533,
+      2247,
+      1724,
+      2304
+     ],
+     "rects": [
+      [
+       1533,
+       2247,
+       1724,
+       2304
+      ]
+     ],
+     "bbox_source": "vlm",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p014-b11",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٣) النصف",
+     "bbox": [
+      806,
+      2381,
+      1001,
+      2452
+     ],
+     "rects": [
+      [
+       806,
+       2381,
+       1001,
+       2452
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٣)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 17,
+       "page_id": "riyad1956-p014",
+       "marker": "(٣)",
+       "anchor_block_id": "riyad1956-p014-b06",
+       "anchor_char_offset": 218,
+       "footnote_block_id": "riyad1956-p014-b11",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b12",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٤) تترك",
+     "bbox": [
+      525,
+      2373,
+      675,
+      2446
+     ],
+     "rects": [
+      [
+       525,
+       2373,
+       675,
+       2446
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٤)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 18,
+       "page_id": "riyad1956-p014",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p014-b06",
+       "anchor_char_offset": 333,
+       "footnote_block_id": "riyad1956-p014-b12",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b13",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٥) فقراء يسألون ما فى أكف الناس",
+     "bbox": [
+      1058,
+      2462,
+      1394,
+      2544
+     ],
+     "rects": [
+      [
+       1058,
+       2462,
+       1394,
+       2544
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٥)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 19,
+       "page_id": "riyad1956-p014",
+       "marker": "(٥)",
+       "anchor_block_id": "riyad1956-p014-b06",
+       "anchor_char_offset": 376,
+       "footnote_block_id": "riyad1956-p014-b13",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b14",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٦) أى أ أخلف فى مكة بعد انصراف أصحابى معك",
+     "bbox": [
+      418,
+      2462,
+      1718,
+      2657
+     ],
+     "rects": [
+      [
+       418,
+       2462,
+       917,
+       2544
+      ],
+      [
+       1524,
+       2545,
+       1718,
+       2657
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.98,
+     "flags": [],
+     "footnote_marker": "(٦)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 20,
+       "page_id": "riyad1956-p014",
+       "marker": "(٦)",
+       "anchor_block_id": "riyad1956-p014-b06",
+       "anchor_char_offset": 513,
+       "footnote_block_id": "riyad1956-p014-b14",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b15",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٧) أى بأن يطول عمرك",
+     "bbox": [
+      1067,
+      2545,
+      1379,
+      2657
+     ],
+     "rects": [
+      [
+       1067,
+       2545,
+       1379,
+       2657
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٧)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 21,
+       "page_id": "riyad1956-p014",
+       "marker": "(٧)",
+       "anchor_block_id": "riyad1956-p014-b06",
+       "anchor_char_offset": 550,
+       "footnote_block_id": "riyad1956-p014-b15",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b16",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٨) بارك فى دينهم ودنياهم واقبل وأتمم /",
+     "bbox": [
+      407,
+      2539,
+      810,
+      2663
+     ],
+     "rects": [
+      [
+       407,
+       2539,
+       810,
+       2663
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٨)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 22,
+       "page_id": "riyad1956-p014",
+       "marker": "(٨)",
+       "anchor_block_id": "riyad1956-p014-b06",
+       "anchor_char_offset": 684,
+       "footnote_block_id": "riyad1956-p014-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b17",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٩) يترحم له رسول الله صلى الله عليه وسلم",
+     "bbox": [
+      1092,
+      2634,
+      1593,
+      2726
+     ],
+     "rects": [
+      [
+       1092,
+       2634,
+       1593,
+       2726
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٩)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 23,
+       "page_id": "riyad1956-p014",
+       "marker": "(٩)",
+       "anchor_block_id": "riyad1956-p014-b07",
+       "anchor_char_offset": 8,
+       "footnote_block_id": "riyad1956-p014-b17",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h005-riyad1956-p014-b05",
+     "narrator": null,
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D8%AC%D8%A7%D8%A1%D9%86%D9%89%20%D8%B1%D8%B3%D9%88%D9%84%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B5%D9%84%D9%89%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%84%D9%8A%D9%87",
+     "block_ids": [
+      "riyad1956-p014-b05",
+      "riyad1956-p014-b06",
+      "riyad1956-p014-b07",
+      "riyad1956-p014-b08"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.02971,
+    "bm25_rank": 4,
+    "dense_rank": 11,
+    "dense_sim": 0.6182339787483215
+   }
+  },
+  {
+   "id": "riyad1956-c007",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أبى هريرةَ عبد الرحمن بن صخرٍ رضى الله عنه قال قال رسولُ الله صلى الله عليه وسلم :\n« إنَّ اللهَ لاَ يَنْظُرُ إلى أجسامِكمْ ، ولا إلى صورِكم ، (١) ولكنْ ينظرُ إلى قُلوبِكم »\n(٢) رواه مسلمٌ .",
+   "highlights": [
+    [
+     100,
+     103
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p015",
+     "printed": 15,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 15"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p015-b02",
+     "page_id": "riyad1956-p015",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى هريرةَ عبد الرحمن بن صخرٍ رضى الله عنه قال قال رسولُ الله صلى الله عليه وسلم :",
+     "bbox": [
+      547,
+      505,
+      1766,
+      720
+     ],
+     "rects": [
+      [
+       547,
+       505,
+       1766,
+       720
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p015-b03",
+     "page_id": "riyad1956-p015",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إنَّ اللهَ لاَ يَنْظُرُ إلى أجسامِكمْ ، ولا إلى صورِكم ، (١) ولكنْ ينظرُ إلى قُلوبِكم »",
+     "bbox": [
+      459,
+      611,
+      1766,
+      813
+     ],
+     "rects": [
+      [
+       459,
+       611,
+       1766,
+       813
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p015-b04",
+     "page_id": "riyad1956-p015",
+     "type": "body",
+     "author_role": "matn",
+     "text": "(٢) رواه مسلمٌ .",
+     "bbox": [
+      1402,
+      744,
+      1480,
+      810
+     ],
+     "rects": [
+      [
+       1402,
+       744,
+       1480,
+       810
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p015-b13",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "لا يثيبكم على المظاهر",
+     "bbox": [
+      1317,
+      2370,
+      1622,
+      2431
+     ],
+     "rects": [
+      [
+       1317,
+       2370,
+       1622,
+       2431
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 24,
+       "page_id": "riyad1956-p015",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p015-b03",
+       "anchor_char_offset": 59,
+       "footnote_block_id": "riyad1956-p015-b13",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b14",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "بتحقيق مقصد العمل لله وحده",
+     "bbox": [
+      744,
+      2360,
+      1171,
+      2444
+     ],
+     "rects": [
+      [
+       744,
+       2360,
+       1171,
+       2444
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٢)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 25,
+       "page_id": "riyad1956-p015",
+       "marker": "(٢)",
+       "anchor_block_id": "riyad1956-p015-b04",
+       "anchor_char_offset": 0,
+       "footnote_block_id": "riyad1956-p015-b14",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h006-riyad1956-p015-b02",
+     "narrator": "ابي هريره عبد الرحمن بن صخر",
+     "takhrij_printed": "رواه مسلمٌ",
+     "grading_status": "in_sahihayn",
+     "grading": "في صحيح مسلم",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D9%86%D8%B8%D8%B1%20%D8%A5%D9%84%D9%89%20%D8%A3%D8%AC%D8%B3%D8%A7%D9%85%D9%83%D9%85%20%D9%88%D9%84%D8%A7%20%D8%A5%D9%84%D9%89%20%D8%B5%D9%88%D8%B1%D9%83%D9%85",
+     "block_ids": [
+      "riyad1956-p015-b02",
+      "riyad1956-p015-b03",
+      "riyad1956-p015-b04"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.02869,
+    "bm25_rank": 18,
+    "dense_rank": 3,
+    "dense_sim": 0.6774054765701294
+   }
+  },
+  {
+   "id": "riyad1956-c002",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أمِّ المؤمنين أم عبد الله عائشة رضى الله عنها قالت : قال رسولُ الله صلى الله عليه وسلم :\n« يغزو جيشٌ الكعبةَ فإذا كانوا ببيداءَ(١) من الأرضِ يُخسف بأولهم (٢) وآخرهم . قالت قلتُ : يا رسولَ الله كيف يُخسف بأولهم وآخرهم وفيهم أسواقُهم ومنْ ليس منهم ؟ قال : يُخسف بأولهم وآخرهم ثم يُبعثونَ على نياتهم (٣) »\nمتفق عليه . هذا لفظ البخارى .",
+   "highlights": [
+    [
+     290,
+     293
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p013",
+     "printed": 13,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 13"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p013-b02",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أمِّ المؤمنين أم عبد الله عائشة رضى الله عنها قالت : قال رسولُ الله صلى الله عليه وسلم :",
+     "bbox": [
+      445,
+      447,
+      1741,
+      680
+     ],
+     "rects": [
+      [
+       445,
+       447,
+       1741,
+       680
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b03",
+     "page_id": "riyad1956-p013",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« يغزو جيشٌ الكعبةَ فإذا كانوا ببيداءَ(١) من الأرضِ يُخسف بأولهم (٢) وآخرهم . قالت قلتُ : يا رسولَ الله كيف يُخسف بأولهم وآخرهم وفيهم أسواقُهم ومنْ ليس منهم ؟ قال : يُخسف بأولهم وآخرهم ثم يُبعثونَ على نياتهم (٣) »",
+     "bbox": [
+      450,
+      556,
+      1740,
+      909
+     ],
+     "rects": [
+      [
+       450,
+       556,
+       1454,
+       683
+      ],
+      [
+       451,
+       681,
+       1738,
+       871
+      ],
+      [
+       683,
+       780,
+       1740,
+       909
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b04",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه . هذا لفظ البخارى .",
+     "bbox": [
+      1271,
+      919,
+      1751,
+      1007
+     ],
+     "rects": [
+      [
+       1271,
+       919,
+       1751,
+       1007
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p013-b15",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(١) صحراء ومفازة",
+     "bbox": [
+      1393,
+      2386,
+      1629,
+      2458
+     ],
+     "rects": [
+      [
+       1393,
+       2386,
+       1629,
+       2458
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 7,
+       "page_id": "riyad1956-p013",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p013-b03",
+       "anchor_char_offset": 38,
+       "footnote_block_id": "riyad1956-p013-b15",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p013-b16",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٢) تقبر جميع من رافقهم في صحبة الطريق",
+     "bbox": [
+      623,
+      2386,
+      1037,
+      2458
+     ],
+     "rects": [
+      [
+       623,
+       2386,
+       1037,
+       2458
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.95,
+     "flags": [],
+     "footnote_marker": "(٢)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 8,
+       "page_id": "riyad1956-p013",
+       "marker": "(٢)",
+       "anchor_block_id": "riyad1956-p013-b03",
+       "anchor_char_offset": 65,
+       "footnote_block_id": "riyad1956-p013-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p013-b17",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٣) كل بقصده",
+     "bbox": [
+      1537,
+      2454,
+      1695,
+      2537
+     ],
+     "rects": [
+      [
+       1537,
+       2454,
+       1695,
+       2537
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٣)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 9,
+       "page_id": "riyad1956-p013",
+       "marker": "(٣)",
+       "anchor_block_id": "riyad1956-p013-b03",
+       "anchor_char_offset": 208,
+       "footnote_block_id": "riyad1956-p013-b17",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h001-riyad1956-p013-b02",
+     "narrator": "ام المومنين ام عبد الله عايشه",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%BA%D8%B2%D9%88%20%D8%AC%D9%8A%D8%B4%20%D8%A7%D9%84%D9%83%D8%B9%D8%A8%D8%A9%20%D9%81%D8%A5%D8%B0%D8%A7%20%D9%83%D8%A7%D9%86%D9%88%D8%A7%20%D8%A8%D8%A8%D9%8A%D8%AF%D8%A7%D8%A1",
+     "block_ids": [
+      "riyad1956-p013-b02",
+      "riyad1956-p013-b03",
+      "riyad1956-p013-b04"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": null,
+    "bm25_rank": null,
+    "dense_rank": null,
+    "dense_sim": null,
+    "neighbor_of": "riyad1956-c003"
+   }
+  },
+  {
+   "id": "riyad1956-c004",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أبى عبد الله جابر بن عبد الله الأنصارى رضى الله عنهما قال : كُنَّا مع النبي صلى الله عليه وسلم في غزاةٍ (٥) فقال :\n« إنَّ بالمدينةِ لرجالاً ما سرتمْ مسيراً ، ولا قطعتمْ وادياً إلا كانوا معكم (٦) حبسهمُ (٧) المرضُ »\nوفي رواية :\n« إلا شركوكم في الأجرِ »\nرواه مسلم . ورواه البخارى عن أنس رضى الله عنه قال: رجعنا من غزوةِ تبوكَ مع النبي صلى الله عليه وسلم فقال :\n« إنَّ أقواماً خلفنا (٨) بالمدينة ما سلكنا شعباً ولا وادياً إلا وهمْ معنا ، حبسهمُ العذرُ » .",
+   "highlights": [
+    [
+     99,
+     101
+    ],
+    [
+     244,
+     246
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p013",
+     "printed": 13,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 13"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p013-b08",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى عبد الله جابر بن عبد الله الأنصارى رضى الله عنهما قال : كُنَّا مع النبي صلى الله عليه وسلم في غزاةٍ (٥) فقال :",
+     "bbox": [
+      448,
+      1405,
+      1757,
+      1625
+     ],
+     "rects": [
+      [
+       448,
+       1405,
+       1757,
+       1625
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b09",
+     "page_id": "riyad1956-p013",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إنَّ بالمدينةِ لرجالاً ما سرتمْ مسيراً ، ولا قطعتمْ وادياً إلا كانوا معكم (٦) حبسهمُ (٧) المرضُ »",
+     "bbox": [
+      458,
+      1505,
+      1750,
+      1737
+     ],
+     "rects": [
+      [
+       458,
+       1505,
+       1101,
+       1619
+      ],
+      [
+       1406,
+       1632,
+       1750,
+       1737
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b10",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وفي رواية :",
+     "bbox": [
+      720,
+      1653,
+      873,
+      1719
+     ],
+     "rects": [
+      [
+       720,
+       1653,
+       873,
+       1719
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b11",
+     "page_id": "riyad1956-p013",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إلا شركوكم في الأجرِ »",
+     "bbox": [
+      538,
+      1626,
+      1708,
+      1889
+     ],
+     "rects": [
+      [
+       538,
+       1626,
+       1708,
+       1889
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b12",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "رواه مسلم . ورواه البخارى عن أنس رضى الله عنه قال: رجعنا من غزوةِ تبوكَ مع النبي صلى الله عليه وسلم فقال :",
+     "bbox": [
+      452,
+      1735,
+      1755,
+      1952
+     ],
+     "rects": [
+      [
+       452,
+       1735,
+       845,
+       1883
+      ],
+      [
+       1138,
+       1846,
+       1755,
+       1952
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p013-b13",
+     "page_id": "riyad1956-p013",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إنَّ أقواماً خلفنا (٨) بالمدينة ما سلكنا شعباً ولا وادياً إلا وهمْ معنا ، حبسهمُ العذرُ » .",
+     "bbox": [
+      456,
+      1847,
+      1761,
+      2065
+     ],
+     "rects": [
+      [
+       456,
+       1847,
+       1761,
+       2065
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p013-b19",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٥) غزوة تبوك",
+     "bbox": [
+      1522,
+      2629,
+      1701,
+      2694
+     ],
+     "rects": [
+      [
+       1522,
+       2629,
+       1701,
+       2694
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٥)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 11,
+       "page_id": "riyad1956-p013",
+       "marker": "(٥)",
+       "anchor_block_id": "riyad1956-p013-b08",
+       "anchor_char_offset": 108,
+       "footnote_block_id": "riyad1956-p013-b19",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p013-b20",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٦) في الأجر وادراك الثواب",
+     "bbox": [
+      997,
+      2606,
+      1365,
+      2727
+     ],
+     "rects": [
+      [
+       997,
+       2606,
+       1365,
+       2727
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٦)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 12,
+       "page_id": "riyad1956-p013",
+       "marker": "(٦)",
+       "anchor_block_id": "riyad1956-p013-b09",
+       "anchor_char_offset": 76,
+       "footnote_block_id": "riyad1956-p013-b20",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p013-b21",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٧) منعهم",
+     "bbox": [
+      740,
+      2647,
+      829,
+      2710
+     ],
+     "rects": [
+      [
+       740,
+       2647,
+       829,
+       2710
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٧)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 13,
+       "page_id": "riyad1956-p013",
+       "marker": "(٧)",
+       "anchor_block_id": "riyad1956-p013-b09",
+       "anchor_char_offset": 87,
+       "footnote_block_id": "riyad1956-p013-b21",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p013-b22",
+     "page_id": "riyad1956-p013",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٨) وراءنا",
+     "bbox": [
+      471,
+      2641,
+      585,
+      2696
+     ],
+     "rects": [
+      [
+       471,
+       2641,
+       585,
+       2696
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٨)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 14,
+       "page_id": "riyad1956-p013",
+       "marker": "(٨)",
+       "anchor_block_id": "riyad1956-p013-b13",
+       "anchor_char_offset": 21,
+       "footnote_block_id": "riyad1956-p013-b22",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h003-riyad1956-p013-b08",
+     "narrator": "ابي عبد الله جابر بن عبد الله الانصاري",
+     "takhrij_printed": "رواه مسلم",
+     "grading_status": "in_sahihayn",
+     "grading": "في صحيح مسلم",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D8%A8%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D8%A7%20%D9%85%D8%A7%20%D8%B3%D8%B1%D8%AA%D9%85%20%D9%85%D8%B3%D9%8A%D8%B1%D8%A7%20%D9%88%D9%84%D8%A7",
+     "block_ids": [
+      "riyad1956-p013-b08",
+      "riyad1956-p013-b09",
+      "riyad1956-p013-b10",
+      "riyad1956-p013-b11",
+      "riyad1956-p013-b12",
+      "riyad1956-p013-b13"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": null,
+    "bm25_rank": null,
+    "dense_rank": null,
+    "dense_sim": null,
+    "neighbor_of": "riyad1956-c003"
+   }
+  },
+  {
+   "id": "riyad1956-c005",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أبى يزيد معنِ بنِ يزيد بن الأخنس رضى الله عنهم ، وهو وأبوه وجدُّه صحابيون ، قال : كان أبى يزيد أخرجَ دنانير يتصدقُ بها فوضعها عند رجل\nفى المسجدِ فجئتُ فأخذتُها فأتيته بها . فقال : واللهِ ما إياكَ أردتُ ، فخاصمتهُ إلى رسول الله صلى الله عليه وسلم فقال :\n« لكَ ما نويتَ (١) يا يزيدُ ، ولك ما أخذتَ (٢) يا معنُ »\nرواه البخارى .",
+   "highlights": [
+    [
+     138,
+     140
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p013",
+     "printed": 13,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 13"
+    },
+    {
+     "id": "riyad1956-p014",
+     "printed": 14,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 14"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p013-b14",
+     "page_id": "riyad1956-p013",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى يزيد معنِ بنِ يزيد بن الأخنس رضى الله عنهم ، وهو وأبوه وجدُّه صحابيون ، قال : كان أبى يزيد أخرجَ دنانير يتصدقُ بها فوضعها عند رجل",
+     "bbox": [
+      471,
+      2208,
+      1564,
+      2315
+     ],
+     "rects": [
+      [
+       471,
+       2208,
+       1564,
+       2315
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p014-b02",
+     "page_id": "riyad1956-p014",
+     "type": "body",
+     "author_role": "matn",
+     "text": "فى المسجدِ فجئتُ فأخذتُها فأتيته بها . فقال : واللهِ ما إياكَ أردتُ ، فخاصمتهُ إلى رسول الله صلى الله عليه وسلم فقال :",
+     "bbox": [
+      425,
+      475,
+      1734,
+      576
+     ],
+     "rects": [
+      [
+       425,
+       475,
+       1734,
+       576
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p014-b03",
+     "page_id": "riyad1956-p014",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« لكَ ما نويتَ (١) يا يزيدُ ، ولك ما أخذتَ (٢) يا معنُ »",
+     "bbox": [
+      649,
+      577,
+      1736,
+      795
+     ],
+     "rects": [
+      [
+       649,
+       577,
+       1736,
+       795
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p014-b04",
+     "page_id": "riyad1956-p014",
+     "type": "body",
+     "author_role": "matn",
+     "text": "رواه البخارى .",
+     "bbox": [
+      1325,
+      706,
+      1555,
+      789
+     ],
+     "rects": [
+      [
+       1325,
+       706,
+       1555,
+       789
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p014-b09",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(١) ثوابه",
+     "bbox": [
+      1525,
+      2375,
+      1671,
+      2468
+     ],
+     "rects": [
+      [
+       1525,
+       2375,
+       1671,
+       2468
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 15,
+       "page_id": "riyad1956-p014",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p014-b03",
+       "anchor_char_offset": 15,
+       "footnote_block_id": "riyad1956-p014-b09",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p014-b10",
+     "page_id": "riyad1956-p014",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٢) قبضتها قبضا صحيحا",
+     "bbox": [
+      1066,
+      2380,
+      1432,
+      2449
+     ],
+     "rects": [
+      [
+       1066,
+       2380,
+       1432,
+       2449
+      ]
+     ],
+     "bbox_source": "vlm",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٢)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 16,
+       "page_id": "riyad1956-p014",
+       "marker": "(٢)",
+       "anchor_block_id": "riyad1956-p014-b03",
+       "anchor_char_offset": 43,
+       "footnote_block_id": "riyad1956-p014-b10",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h004-riyad1956-p013-b14",
+     "narrator": "ابي يزيد معن بن يزيد بن الاخنس",
+     "takhrij_printed": "رواه البخارى",
+     "grading_status": "in_sahihayn",
+     "grading": "في صحيح البخاري",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%86%D9%88%D9%8A%D8%AA%20%D9%8A%D8%A7%20%D9%8A%D8%B2%D9%8A%D8%AF%20%D9%88%D9%84%D9%83%20%D9%85%D8%A7%20%D8%A3%D8%AE%D8%B0%D8%AA",
+     "block_ids": [
+      "riyad1956-p013-b14",
+      "riyad1956-p014-b02",
+      "riyad1956-p014-b03",
+      "riyad1956-p014-b04"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": null,
+    "bm25_rank": null,
+    "dense_rank": null,
+    "dense_sim": null,
+    "neighbor_of": "riyad1956-c003"
+   }
+  }
+ ],
+ "ai_notice": "أداة بحث مدعومة بالذكاء الاصطناعي؛ نصوص المصدر منقولة حرفيًا من الكتاب ومتحقَّق منها، والإيضاح مولَّد آليًا.",
+ "cached": false,
+ "status": "answered",
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "answer": {
+  "source_points": [
+   {
+    "text": "الله سبحانه وتعالى لا يحاسب الناس على أشكالهم الظاهرة بل ينظر إلى ما في قلوبهم.",
+    "passage": "P5",
+    "quote": "« إنَّ اللهَ لاَ يَنْظُرُ إلى أجسامِكمْ ، ولا إلى صورِكم ، ولكنْ ينظرُ إلى قُلوبِكم »",
+    "verified": true,
+    "passage_id": "riyad1956-c007"
+   },
+   {
+    "text": "الله عز وجل يعلم كل ما يخفيه الإنسان في صدره وما يظهره.",
+    "passage": "P2",
+    "quote": "﴿ قُلْ إِنْ تُخْفُوا مَا فِي صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ اللَّهُ ﴾",
+    "verified": true,
+    "passage_id": "riyad1956-c000"
+   },
+   {
+    "text": "الإنسان يُؤجر على نفقاته وأعماله فقط إذا كان يبتغي بها وجه الله.",
+    "passage": "P4",
+    "quote": "« وإنك لنْ تنفق نفقةً تبتغى بها وجهَ الله إلا أجرتَ عليها »",
+    "verified": true,
+    "passage_id": "riyad1956-c006"
+   },
+   {
+    "text": "النية الصادقة تجعل الإنسان شريكا في الأجر مع العاملين حتى لو منعه المرض أو العذر عن العمل.",
+    "passage": "P7",
+    "quote": "« إنَّ بالمدينةِ لرجالاً ما سرتمْ مسيراً ، ولا قطعتمْ وادياً إلا كانوا معكم حبسهمُ المرضُ »",
+    "verified": true,
+    "passage_id": "riyad1956-c004"
+   },
+   {
+    "text": "الناس يُبعثون يوم القيامة ويُحاسبون بناءً على نياتهم ومقاصدهم.",
+    "passage": "P6",
+    "quote": "« يُخسف بأولهم وآخرهم ثم يُبعثونَ على نياتهم »",
+    "verified": true,
+    "passage_id": "riyad1956-c002"
+   },
+   {
+    "text": "العمل الواحد كالقتال يختلف حكمه بحسب النية، ولا يكون في سبيل الله إلا بنية إعلاء كلمة الله.",
+    "passage": "P3",
+    "quote": "« مَنْ قاتلَ لتكونَ كلمةُ اللهِ هى العليا فهو فى سبيلِ الله »",
+    "verified": true,
+    "passage_id": "riyad1956-c008"
+   },
+   {
+    "text": "المتصدق ينال أجر صدقته بحسب نيته، حتى لو وقعت الصدقة في يد من لم يقصده.",
+    "passage": "P8",
+    "quote": "« لكَ ما نويتَ يا يزيدُ ، ولك ما أخذتَ يا معنُ »",
+    "verified": true,
+    "passage_id": "riyad1956-c005"
+   },
+   {
+    "text": "وفي تعليق المحقق، تم التأكيد على أن تقييم الأعمال مرتبط بنية الشخص.",
+    "passage": "P1",
+    "quote": "وأن الأعمال بحسب نية العامل المخلص",
+    "verified": true,
+    "passage_id": "riyad1956-c003"
+   }
+  ],
+  "explanation": "يبين الإسلام أن النية هي أساس قبول الأعمال ومناط الحساب، لأن الله تعالى مطلع على السرائر وينظر إلى القلوب لا إلى مجرد الأشكال والمظاهر [P2, P5]. وبناءً على ذلك، فإن الإنسان يُؤجر على أعماله ونفقاته، بل وحتى ينال أجر الأعمال التي منعه العذر من القيام بها، متى ما كانت نيته خالصة لوجه الله [P4, P7]. كما أن الأعمال التي تبدو متشابهة في الظاهر يختلف حكمها باختلاف القصد منها [P3]، وفي النهاية يُبعث الناس يوم القيامة ويُحاسبون على نياتهم [P6].",
+  "disagreement_noted": false
+ },
+ "verification": {
+  "total": 8,
+  "verified": 8,
+  "removed": []
+ },
+ "stages": [
+  {
+   "stage": "classify",
+   "level": "B",
+   "reason": "السؤال يبحث في حكمة ومفهوم شرعي عام حول المحاسبة على النوايا."
+  },
+  {
+   "stage": "retrieve",
+   "n": 8,
+   "neighbors": 3,
+   "dense": true
+  },
+  {
+   "stage": "support_gate",
+   "best_sim": 0.677,
+   "threshold": 0.55
+  },
+  {
+   "stage": "generate",
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "supported": true
+  },
+  {
+   "stage": "verify_quotes",
+   "kept": 8,
+   "removed": 0
+  }
+ ],
+ "seconds": 21.34
+}

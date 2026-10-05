@@ -68,3 +68,15 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
 - Claude Opus marks two-column footnotes as `column: 0`; order is still correct. Column geometry will come from the fusion step.
 
 - 2026-10-05: GATE 4 owner fixes applied (verbatim-only source section, hadith grading chips everywhere, formal Fusha pass, dev indicator hidden). Checkpoints: gate4-ui-v1 (before), gate4-ui-v2 (after). New production review token stored in .env as REVIEW_TOKEN_PROD. Deployment waits for owner go-ahead (Render Starter).
+- 2026-10-05 (GATE 4 round 2, tag gate4-ui-v3):
+  - Exact Sahihayn source per takhrij.
+  - Quote origin labels on the Ask page.
+  - Unmarked-verse detection in all blocks (2 found, both in the editor's footnotes: 4:18 p.19, 57:12 p.31).
+  - Same-page neighbour units plus answer.v3 completeness rule.
+  - Gold equivalence rule (28 disputes auto-resolved; 764 remain).
+- 2026-10-05 Phase 5 prep:
+  - eval/run_eval.py (retrieval, context, answers, safety, traceability, repeated runs).
+  - eval/heldout_eval.py (waits for finalized gold).
+  - eval/report.py (summary.json for /proof).
+  - eval/precompute.py (demo answers).
+  - 66-question set including the 12 official cases; drafts await owner verification.

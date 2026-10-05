@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { CopyCitation, HadithGrade, QuranCheck } from "@/components/Bits";
+import { CopyCitation, HadithGrade, QuranCheck, VerseChip } from "@/components/Bits";
 import { PageViewer, TYPE_COLORS, TYPE_LABELS, type PageViewerHandle } from "@/components/PageViewer";
 import { ar, getJSON } from "@/lib/api";
 import { useT } from "@/lib/i18n";
@@ -143,7 +143,19 @@ function SourceViewer() {
                         {t("footnotes")} ({ar(notesFor(b).length)})
                       </summary>
                       <ul className="mt-1 grid gap-1">
-                        {notesFor(b).map((f) => f && <li key={f.id} className="source-text">{f.text}</li>)}
+                        {notesFor(b).map(
+                          (f) =>
+                            f && (
+                              <li key={f.id}>
+                                <span className="source-text">{f.text}</span>
+                                {quranBy[f.id]?.map((q, i) => (
+                                  <span key={i} className="ms-2">
+                                    <VerseChip q={q} />
+                                  </span>
+                                ))}
+                              </li>
+                            ),
+                        )}
                       </ul>
                     </details>
                   )}

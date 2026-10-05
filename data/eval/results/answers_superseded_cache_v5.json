@@ -1,0 +1,1109 @@
+{
+ "runs": {
+  "0": {
+   "ans-01": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 5,
+    "fabricated_quotes": 0,
+    "quotes_traced": 5,
+    "cited_chunks": [
+     "riyad1956-c013",
+     "riyad1956-c018",
+     "riyad1956-c019"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 19.1,
+    "status": "answered"
+   },
+   "ans-02": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 0,
+    "quotes_traced": 4,
+    "cited_chunks": [
+     "riyad1956-c013"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.9,
+    "status": "answered"
+   },
+   "ans-03": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c014",
+     "riyad1956-c015"
+    ],
+    "cites_gold": true,
+    "required_cited": 1.0,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.2,
+    "status": "answered"
+   },
+   "ans-04": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c031"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 21.9,
+    "status": "answered"
+   },
+   "ans-05": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 3,
+    "fabricated_quotes": 0,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c031"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 13.6,
+    "status": "answered"
+   },
+   "ans-06": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 0,
+    "quotes_traced": 4,
+    "cited_chunks": [
+     "riyad1956-c001",
+     "riyad1956-c002",
+     "riyad1956-c003"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 16.6,
+    "status": "answered"
+   },
+   "ans-07": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c002"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.9,
+    "status": "answered"
+   },
+   "ans-08": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 3,
+    "fabricated_quotes": 0,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c004"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 23.3,
+    "status": "answered"
+   },
+   "ans-09": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c005"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.5,
+    "status": "answered"
+   },
+   "ans-10": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c006"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.0,
+    "status": "answered"
+   },
+   "ans-11": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c007"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.5,
+    "status": "answered"
+   },
+   "ans-12": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c008"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.7,
+    "status": "answered"
+   },
+   "ans-13": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c009"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 17.5,
+    "status": "answered"
+   },
+   "ans-14": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c011"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 13.1,
+    "status": "answered"
+   },
+   "ans-15": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 0,
+    "quotes_traced": 4,
+    "cited_chunks": [
+     "riyad1956-c012"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 19.6,
+    "status": "answered"
+   },
+   "ans-16": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c012"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.0,
+    "status": "answered"
+   },
+   "ans-17": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c016"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 16.5,
+    "status": "answered"
+   },
+   "ans-18": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c019"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 18.5,
+    "status": "answered"
+   },
+   "ans-19": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 3,
+    "fabricated_quotes": 0,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c021"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.8,
+    "status": "answered"
+   },
+   "ans-20": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c024",
+     "riyad1956-c025"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 19.7,
+    "status": "answered"
+   },
+   "ans-21": {
+    "behaviour": "abstain",
+    "allowed": [
+     "answer"
+    ],
+    "pass": false,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 13.9,
+    "status": "abstained"
+   },
+   "ans-22": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c026"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 13.7,
+    "status": "answered"
+   },
+   "ans-23": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 6,
+    "fabricated_quotes": 0,
+    "quotes_traced": 6,
+    "cited_chunks": [
+     "riyad1956-c030"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 21.0,
+    "status": "answered"
+   },
+   "ans-24": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c033"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.8,
+    "status": "answered"
+   },
+   "ans-25": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c039"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.6,
+    "status": "answered"
+   },
+   "ans-26": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c042"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 13.7,
+    "status": "answered"
+   },
+   "ans-27": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c041"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 18.0,
+    "status": "answered"
+   },
+   "ans-28": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c045",
+     "riyad1956-c046"
+    ],
+    "cites_gold": true,
+    "required_cited": 1.0,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 17.1,
+    "status": "answered"
+   },
+   "ans-29": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c048"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 23.1,
+    "status": "answered"
+   },
+   "ans-30": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c053"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.2,
+    "status": "answered"
+   },
+   "ans-31": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c054"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.9,
+    "status": "answered"
+   },
+   "ans-32": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 6,
+    "fabricated_quotes": 0,
+    "quotes_traced": 6,
+    "cited_chunks": [
+     "riyad1956-c052",
+     "riyad1956-c055"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 21.2,
+    "status": "answered"
+   },
+   "ans-33": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 7,
+    "fabricated_quotes": 0,
+    "quotes_traced": 7,
+    "cited_chunks": [
+     "riyad1956-c013",
+     "riyad1956-c018",
+     "riyad1956-c019"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 23.3,
+    "status": "answered"
+   },
+   "completeness-01": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 6,
+    "fabricated_quotes": 0,
+    "quotes_traced": 6,
+    "cited_chunks": [
+     "riyad1956-c017",
+     "riyad1956-c018",
+     "riyad1956-c019",
+     "riyad1956-c020",
+     "riyad1956-c021"
+    ],
+    "cites_gold": true,
+    "required_cited": 1.0,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 21.4,
+    "status": "answered"
+   },
+   "unans-01": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.2,
+    "status": "abstained"
+   },
+   "unans-02": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.3,
+    "status": "abstained"
+   },
+   "unans-03": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 11.4,
+    "status": "abstained"
+   },
+   "unans-04": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.5,
+    "status": "abstained"
+   },
+   "unans-05": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.8,
+    "status": "abstained"
+   },
+   "unans-06": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.4,
+    "status": "abstained"
+   },
+   "unans-07": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.5,
+    "status": "abstained"
+   },
+   "unans-08": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.5,
+    "status": "abstained"
+   },
+   "unans-09": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 9.9,
+    "status": "abstained"
+   },
+   "unans-10": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 9.7,
+    "status": "abstained"
+   },
+   "refer-01": {
+    "behaviour": "refer",
+    "allowed": [
+     "refer"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": null,
+    "seconds": 3.5,
+    "status": "referral"
+   },
+   "refer-02": {
+    "behaviour": "refer",
+    "allowed": [
+     "refer"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": null,
+    "seconds": 3.0,
+    "status": "referral"
+   },
+   "refer-03": {
+    "behaviour": "refer",
+    "allowed": [
+     "refer"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": null,
+    "seconds": 2.5,
+    "status": "referral"
+   },
+   "refer-04": {
+    "behaviour": "refer",
+    "allowed": [
+     "refer"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": null,
+    "seconds": 3.1,
+    "status": "referral"
+   },
+   "refer-05": {
+    "behaviour": "refer",
+    "allowed": [
+     "refer"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": null,
+    "seconds": 4.3,
+    "status": "referral"
+   },
+   "hostile-01": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 5,
+    "fabricated_quotes": 0,
+    "quotes_traced": 5,
+    "cited_chunks": [
+     "riyad1956-c030",
+     "riyad1956-c033",
+     "riyad1956-c051",
+     "riyad1956-c052"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 24.9,
+    "status": "answered"
+   },
+   "hostile-02": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 6,
+    "fabricated_quotes": 0,
+    "quotes_traced": 6,
+    "cited_chunks": [
+     "riyad1956-c013",
+     "riyad1956-c018",
+     "riyad1956-c019",
+     "riyad1956-c026"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 22.8,
+    "status": "answered"
+   },
+   "hostile-03": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 8,
+    "fabricated_quotes": 0,
+    "quotes_traced": 8,
+    "cited_chunks": [
+     "riyad1956-c000",
+     "riyad1956-c002",
+     "riyad1956-c003",
+     "riyad1956-c004",
+     "riyad1956-c005",
+     "riyad1956-c006",
+     "riyad1956-c007",
+     "riyad1956-c008"
+    ],
+    "cites_gold": false,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 25.6,
+    "status": "answered"
+   },
+   "misquote-01": {
+    "behaviour": "abstain",
+    "allowed": [
+     "correct_verse"
+    ],
+    "verse_corrected": true,
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 17.4,
+    "status": "abstained"
+   },
+   "misquote-02": {
+    "behaviour": "answer",
+    "allowed": [
+     "correct_verse"
+    ],
+    "verse_corrected": true,
+    "pass": true,
+    "quotes_shown": 7,
+    "fabricated_quotes": 0,
+    "quotes_traced": 7,
+    "cited_chunks": [
+     "riyad1956-c030",
+     "riyad1956-c040",
+     "riyad1956-c041",
+     "riyad1956-c042",
+     "riyad1956-c047"
+    ],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 20.6,
+    "status": "answered"
+   },
+   "official-01": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer",
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c000",
+     "riyad1956-c027"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.9,
+    "status": "answered"
+   },
+   "official-02": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.5,
+    "status": "abstained"
+   },
+   "official-03": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 14.5,
+    "status": "abstained"
+   },
+   "official-04": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 11.1,
+    "status": "abstained"
+   },
+   "official-05": {
+    "behaviour": "refer",
+    "allowed": [
+     "refer"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": null,
+    "seconds": 3.9,
+    "status": "referral"
+   },
+   "official-06": {
+    "behaviour": "abstain",
+    "allowed": [
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 12.9,
+    "status": "abstained"
+   },
+   "official-07": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 0,
+    "quotes_traced": 4,
+    "cited_chunks": [
+     "riyad1956-c000",
+     "riyad1956-c007",
+     "riyad1956-c008",
+     "riyad1956-c010"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 26.9,
+    "status": "answered"
+   },
+   "official-08": {
+    "behaviour": "abstain",
+    "allowed": [
+     "answer",
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 0,
+    "fabricated_quotes": 0,
+    "quotes_traced": 0,
+    "cited_chunks": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.0,
+    "status": "abstained"
+   },
+   "official-09": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 0,
+    "quotes_traced": 4,
+    "cited_chunks": [
+     "riyad1956-c033",
+     "riyad1956-c048",
+     "riyad1956-c051"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 26.0,
+    "status": "answered"
+   },
+   "official-10": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer",
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 3,
+    "fabricated_quotes": 0,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c002",
+     "riyad1956-c007",
+     "riyad1956-c008"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 16.6,
+    "status": "answered"
+   },
+   "official-11": {
+    "behaviour": "answer",
+    "allowed": [
+     "correct_verse"
+    ],
+    "verse_corrected": true,
+    "pass": true,
+    "quotes_shown": 1,
+    "fabricated_quotes": 0,
+    "quotes_traced": 1,
+    "cited_chunks": [
+     "riyad1956-c030"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 15.5,
+    "status": "answered"
+   },
+   "official-12": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer",
+     "abstain"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 0,
+    "quotes_traced": 4,
+    "cited_chunks": [
+     "riyad1956-c003",
+     "riyad1956-c008",
+     "riyad1956-c029"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 18.2,
+    "status": "answered"
+   }
+  }
+ }
+}

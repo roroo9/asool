@@ -329,7 +329,55 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
     for c in out:
         if c["commentary_on"] and c["commentary_on"] not in ids:
             c["commentary_on"] = None
+    _attach_commentary(out, blocks, links, hunits)
     return out
+
+
+def _attach_commentary(chunks, blocks, links, hunits) -> None:
+    """Editor commentary printed in the footnote area belongs to the hadith whose footnote is
+    printed just before it (p.29: after Ka'b's notes (١)-(٢), before the next hadith's (٣)-(٦);
+    p.41: after Umm Sulaym's notes, before the next hadith's). Fallback: the preceding matn unit.
+    The commentary's search text names that hadith's opening so it can be found by it."""
+    anchor_of = {ln["footnote_block_id"]: ln["anchor_block_id"] for ln in links}
+    chunk_of = {bid: c["id"] for c in chunks if c["kind"] == "matn" for bid in c["block_ids"]}
+    unit_of = {bid: u for u in hunits for bid in u["block_ids"]}
+    byid = {b["id"]: b for b in blocks}
+    order = [b["id"] for b in blocks]
+    for c in chunks:
+        if c["kind"] != "editor_commentary":
+            continue
+        first = byid[c["block_ids"][0]]
+        i = order.index(first["id"])
+        anchor = None
+        for j in range(i - 1, -1, -1):
+            b = byid[order[j]]
+            if b["page_id"] != first["page_id"]:
+                break
+            if b["type"] == "footnote" and anchor_of.get(b["id"]):
+                anchor = anchor_of[b["id"]]
+                break
+            notes_area = b["type"] in ("footnote", "page_number", "page_header", "poetry")
+            if not notes_area and b.get("author_role") != "editor":
+                break  # commentary placed in the main text: keep the preceding unit
+        if anchor and anchor in chunk_of:
+            c["commentary_on"] = chunk_of[anchor]
+        target = c["commentary_on"]
+        unit = None
+        if anchor in unit_of:
+            unit = unit_of[anchor]
+        elif target:
+            tb = next(x for x in chunks if x["id"] == target)["block_ids"]
+            unit = next((unit_of[x] for x in tb if x in unit_of), None)
+        opening = ""
+        if unit:
+            opening = " ".join(byid[unit["block_ids"][0]]["text"].split()[:14])
+        elif target:
+            opening = " ".join(next(x for x in chunks if x["id"] == target)["text"].split()[:14])
+        if opening:
+            c["commentary_about"] = opening
+            head, _, rest = c["text_for_embedding"].partition("\n")
+            c["text_for_embedding"] = f"{head} على حديث: {opening}\n{rest}"
+            c["text_norm"] = normalize(opening + " " + c["text"])
 
 
 def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -> None:

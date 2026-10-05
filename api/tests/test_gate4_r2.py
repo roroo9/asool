@@ -58,3 +58,22 @@ def test_neighbors_add_same_page_units():
     ids = [x["id"] for x in _neighbors([p], [])]
     assert "riyad1956-c018" in ids and "riyad1956-c017" in ids
     assert "riyad1956-c020" not in ids  # different printed page
+
+
+def test_glossary_translation_comes_from_the_dictionary():
+    from api.answer import glossary_request
+
+    assert glossary_request("ترجم كلمة التوحيد إلى الإنجليزية") == (
+        "التوحيد",
+        "Tawhid / Oneness of God",
+    )
+    assert glossary_request("ما معنى التوحيد؟") is None  # not a translation request
+
+
+def test_editor_commentary_attached_to_the_hadith_it_explains():
+    import sqlite3
+
+    con = sqlite3.connect("data/asool.db")
+    on = dict(con.execute("SELECT id, commentary_on FROM chunks WHERE kind='editor_commentary'"))
+    assert on["riyad1956-c027"] == "riyad1956-c025"  # p.29: Ka'b ibn Malik, not the next hadith
+    assert on["riyad1956-c055"] == "riyad1956-c052"  # p.41: Umm Sulaym, not Sulayman ibn Surad
