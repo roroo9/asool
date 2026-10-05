@@ -3733,9 +3733,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": null,
+   "decision": "مايجدُ (٧) ، لو",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:58:09.445591+00:00",
+   "decided_at": "2026-10-05T05:17:40.598484+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -3784,7 +3784,7 @@
    ],
    "decision": "قال",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:58:11.893788+00:00",
+   "decided_at": "2026-10-05T05:17:45.931325+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3837,7 +3837,7 @@
    ],
    "decision": "أعوذُ بالله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:58:58.438002+00:00",
+   "decided_at": "2026-10-05T05:18:10.083111+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3879,7 +3879,7 @@
    ],
    "decision": "الرَّجيمِ (٨)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:02.340529+00:00",
+   "decided_at": "2026-10-05T05:18:16.536827+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -3921,7 +3921,7 @@
    ],
    "decision": "عنهُ مايجدُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:08.115710+00:00",
+   "decided_at": "2026-10-05T05:18:21.391020+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -3947,9 +3947,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": null,
+   "decision": ":",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:10.741400+00:00",
+   "decided_at": "2026-10-05T05:18:29.668954+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -3982,9 +3982,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": null,
+   "decision": "(١) المدينة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:13.289670+00:00",
+   "decided_at": "2026-10-05T05:18:34.734724+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -4039,7 +4039,7 @@
    ],
    "decision": "من ألم الوضع",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:23.070322+00:00",
+   "decided_at": "2026-10-05T05:18:42.493570+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4081,7 +4081,7 @@
    ],
    "decision": "(٣) أم سليم وأبو",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:28.056677+00:00",
+   "decided_at": "2026-10-05T05:18:47.309207+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4123,7 +4123,7 @@
    ],
    "decision": "المدينة",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:31.559049+00:00",
+   "decided_at": "2026-10-05T05:18:52.087924+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4165,7 +4165,7 @@
    ],
    "decision": "المصطفى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:33.793192+00:00",
+   "decided_at": "2026-10-05T05:18:54.958775+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4218,7 +4218,7 @@
    ],
    "decision": "عليـه وسـلم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:40.074874+00:00",
+   "decided_at": "2026-10-05T05:18:57.112804+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4260,7 +4260,7 @@
    ],
    "decision": "(٤) تعرضه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:42.718889+00:00",
+   "decided_at": "2026-10-05T05:19:06.545145+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4308,7 +4308,7 @@
    ],
    "decision": "رجاء تكثير",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:59:56.041714+00:00",
+   "decided_at": "2026-10-05T05:19:10.855048+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4355,7 +4355,7 @@
    ],
    "decision": "الأتقيـاء",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:01.048396+00:00",
+   "decided_at": "2026-10-05T05:19:19.947387+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4397,7 +4397,7 @@
    ],
    "decision": "نعم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:02.630858+00:00",
+   "decided_at": "2026-10-05T05:19:22.012781+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4450,7 +4450,7 @@
    ],
    "decision": "العباد كثيرة * وأجلهن",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:00:52.718099+00:00",
+   "decided_at": "2026-10-05T05:19:44.604865+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5285,9 +5285,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": "تعالى، ومن ترك",
-   "reviewer": "auto (equivalent readings)",
-   "decided_at": "2026-10-05T03:39:02.224421+00:00",
+   "decision": "تعالى ، ومن ترك",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T05:20:28.780872+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -5316,8 +5316,8 @@
    "word_boxes": [],
    "line_boxes": [],
    "decision": "شيئا لله عوضه الله",
-   "reviewer": "auto (equivalent readings)",
-   "decided_at": "2026-10-05T03:39:02.224426+00:00",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T05:20:38.605782+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -5346,8 +5346,8 @@
    "word_boxes": [],
    "line_boxes": [],
    "decision": "خيرا منه",
-   "reviewer": "auto (equivalent readings)",
-   "decided_at": "2026-10-05T03:39:02.224431+00:00",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T05:20:40.827635+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -5380,9 +5380,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": null,
+   "decision": "(٥) يسب كل منهما صاحبه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:05.163405+00:00",
+   "decided_at": "2026-10-05T05:20:52.835343+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -5410,8 +5410,8 @@
    "word_boxes": [],
    "line_boxes": [],
    "decision": "(٦) عروق عنقه",
-   "reviewer": "auto (equivalent readings)",
-   "decided_at": "2026-10-05T03:39:02.224440+00:00",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T05:20:58.601263+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -5521,7 +5521,7 @@
    ],
    "decision": "المبعد",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T06:03:17.392486+00:00",
+   "decided_at": "2026-10-05T05:21:31.579971+00:00",
    "loc": "word",
    "hint_box": null
   }
@@ -5717,7 +5717,7 @@
    "hint_box": null
   }
  ],
- "structure_reviewed": false,
+ "structure_reviewed": true,
  "locator": "gold_locate v2 (word-level, honest uncertainty)",
  "auto_resolved_equivalent": 11
 }

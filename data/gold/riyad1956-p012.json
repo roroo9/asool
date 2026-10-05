@@ -1,0 +1,150 @@
+{
+ "page_id": "riyad1956-p012",
+ "printed": 12,
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "footnote_marker": "",
+   "text": "— ١٢ —"
+  },
+  {
+   "order": 2,
+   "type": "heading",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "( بسم الله الرحمن الرحيم )"
+  },
+  {
+   "order": 3,
+   "type": "heading",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "باب الإخلاص وإحضار النية فى جميع الأعمال والأقوال والأحوال البارزة والخفية"
+  },
+  {
+   "order": 4,
+   "type": "body",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "قال الله تعالى :"
+  },
+  {
+   "order": 5,
+   "type": "quran",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "﴿ وَمَا أُمِرُوا إِلاَّ لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ(١) حُنَفَاءَ(٢) وَيُقِيمُوا الصَّلاَةَ ، وَيُؤْتُوا الزَّكَاةَ ، وَذَلِكَ دِينُ الْقَيِّمَةِ ﴾ (٣)"
+  },
+  {
+   "order": 6,
+   "type": "body",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "وقال تعالى :"
+  },
+  {
+   "order": 7,
+   "type": "quran",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "﴿ لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَكِنْ يَنَالُهُ التَّقْوَى مِنْكُمْ ﴾ (٤)"
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "وقال تعالى :"
+  },
+  {
+   "order": 9,
+   "type": "quran",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "﴿ قُلْ إِنْ تُخْفُوا مَا فِي صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ اللَّهُ ﴾ ."
+  },
+  {
+   "order": 10,
+   "type": "body",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "وعن أمير المؤمنين أبى حفصٍ عمرَ بن الخطاب بن نُفيلِ بن عبدِ العُزَّى بن رِياح بن عبد الله بن قرطِ بن رزاح بن عدىٍّ بن كعبِ بن لؤىٍّ بنَ غالب القرشىِّ العدوىِّ رضى الله عنه قال سمعت رسول الله صلى الله عليه وسلم يقول :"
+  },
+  {
+   "order": 11,
+   "type": "hadith",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "« إنما الأعمالُ(٥) بالنيَّاتِ ، و إنما لكلِّ امرئٍ ما نوَى : فمَنْ كانت هجرتُه إلى اللهِ ورسولهِ ، فهجرَتُهُ إلى اللهِ ورسولهِ ومَن كانت هجرتُه لدُنيا يصيبُها ، أو امرأةٍ ينكحُها (٦) فهجرتُه إلى ما هاجرَ إليه »"
+  },
+  {
+   "order": 12,
+   "type": "body",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "متفق على صحتهِ . رواه إمامَا المحدِّثين : أبو عبدِ الله محمد بن إسماعيل بن إبراهيم بن المُغيرة بن بَرْدِزْبَهْ الْجُعْفِيّ البخارى ، وأبو الحسيْن مسلم بن الحجاج بن مسلمٍ الْقُشَيْرِى النَّيسابورى رضى الله عنهما فى كتابيهِما اللذين هما أصحُّ الكتبِ المصنَّفة ."
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(١)",
+   "text": "(١) موحدين"
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٢)",
+   "text": "(٢) مائلين إلى الإسلام"
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٣)",
+   "text": "(٣) الجماعة المستقيمة"
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٤)",
+   "text": "(٤) ما أريد به وجه الله تعالى"
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٥)",
+   "text": "(٥) حركات البدن لا يعتد بها إلا بنية التوجه إلى الله تعالى بقصد ونية"
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٦)",
+   "text": "(٦) يتزوجها"
+  }
+ ],
+ "provenance": {
+  "method": "consensus-assisted (CLAUDE.md §12.C)",
+  "readers": {
+   "A": "tesseract 5.5.3 ara psm4",
+   "B": "claude-opus-5-5",
+   "C": "surya-ocr-2"
+  },
+  "rule": "v3: auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; C printing no tashkeel abstains on tashkeel only; Tesseract below 60% confidence abstains and then B and C must agree exactly",
+  "auto_accepted_tokens": 154,
+  "total_tokens": 233,
+  "human_decisions": 52,
+  "spotcheck": {
+   "checked": 11,
+   "wrong": 1
+  },
+  "reviewer": "rawan",
+  "finalized_at": "2026-10-05T05:09:56.922492+00:00"
+ }
+}

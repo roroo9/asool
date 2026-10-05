@@ -1,0 +1,94 @@
+{
+ "page_id": "riyad1956-p024",
+ "printed": 24,
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "footnote_marker": "",
+   "text": "— ٢٤ —"
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "footnote_marker": "",
+   "text": "منهمْ علانيتهمْ وبايعَهُمْ واستغفرَ لهمْ ووكلَ سرائرهمْ (١) إلى الله تعالى حتى جئتُ . فلما سلمتُ تَبَسَّمَ تبسُّمَ المغضبِ (٢) ثم قال : تعالى ، فجئت أمشى حتى جلستُ بين يديهِ فقال لِي : ماخلفكَ ؟ ألم تكُن قد ابتعتَ ظهركَ (٣) قال قلت : يارسول الله إنى والله لو جلستُ عندَ غيركَ منْ أهلِ الدنيا لرأيتُ أنى سأخرجُ منْ سخطهِ بعذرٍ ؛ لقدْ أعطيتُ جدلا (٤) ولـكنِى والله لقدْ علمتُ لئنْ حدثتكَ اليومَ حديثَ كذبٍ ترضى بهِ عني ليوشكنَّ اللهُ يسخطكَ عليَّ وإنْ حدثتكَ حديثَ صدقٍ تجدُ عليَّ فيه إنى لأرجو فيه عقبى (٥) الله عز وجل والله ما كانَ لى منْ عذر ، والله ما كنت قطُّ أقوى ولا أيسر منى حينَ تخلفت عنكَ قال: فقال رسول الله صلى الله عليه وسلم: أما هـذا فقدْ صدقَ فقمْ حتى يقضى الله فيكَ . وسارَ (٦) رجالٌ منْ بنى سلمةَ فاتبعونى فقالوا لِي: والله ماعلمناكَ أذنبتَ ذنباً قبلَ هـذا لقدْ عجزتَ في أنْ لاتكونَ اعتذرْتَ إلى رسول الله صلى الله عليه وسلم بما اعتذرَ بهِ المخلفونَ ، فقد كانَ كافيكَ ذنبك استغفارُ رسول الله صلى الله عليه وسلم لكَ . قال : فوالله مازالوا يؤنبوننِي (٧) حتى أردتُ أنْ أرجعَ إلى رسول الله صلى الله عليه وسلم فأكذبَ نفسى ، ثم قلت لهم: هلْ لقىَ هذا معيَ منْ أحدٍ قالوا : نعمْ لقيهُ معكَ رجلانِ قالا مثلَ ماقلتَ وقيل لهما مثـلَ ما قيلَ لكَ ، قالَ : قلت : منْ هما ؟ قالوا : مرارة بن الربِيـع العمريُّ ، وهـلال بن أميـةَ الواقفيُّ ، قال : فذكَروا لى رجلينِ صالحـينِ قد شهدا (٨) بدراً فيهما أسوةٌ قالَ : فمضيت حينَ ذَكَروهما لِي . ونهى رسول الله صـلى الله عليـه وسلم عن كلامنـا أيهـا الثلاثة من بـين من تخلف عنـه قال :"
+  },
+  {
+   "order": 3,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(١)",
+   "text": "(١) ما أخفوه من النفاق"
+  },
+  {
+   "order": 4,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٢)",
+   "text": "(٢) الغضبان"
+  },
+  {
+   "order": 5,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٣)",
+   "text": "(٣) اشتريت الإبل"
+  },
+  {
+   "order": 6,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٤)",
+   "text": "(٤) فصاحة"
+  },
+  {
+   "order": 7,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٥)",
+   "text": "(٥) آمل العاقبة الحسنة"
+  },
+  {
+   "order": 8,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٦)",
+   "text": "(٦) وثب"
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٧)",
+   "text": "(٧) يلوموننى"
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "footnote_marker": "(٨)",
+   "text": "(٨) حضرا الغزوة الـكبرى"
+  }
+ ],
+ "provenance": {
+  "method": "consensus-assisted (CLAUDE.md §12.C)",
+  "readers": {
+   "A": "tesseract 5.5.3 ara psm4",
+   "B": "claude-opus-5-5",
+   "C": "surya-ocr-2"
+  },
+  "rule": "v3: auto-accept iff letters agree across A,B,C and tashkeel agrees between B,C; C printing no tashkeel abstains on tashkeel only; Tesseract below 60% confidence abstains and then B and C must agree exactly",
+  "auto_accepted_tokens": 193,
+  "total_tokens": 306,
+  "human_decisions": 74,
+  "spotcheck": {
+   "checked": 15,
+   "wrong": 0
+  },
+  "reviewer": "rawan",
+  "finalized_at": "2026-10-05T06:42:19.576945+00:00"
+ }
+}

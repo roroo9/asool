@@ -2107,9 +2107,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": null,
+   "decision": "(٢)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:28:03.675764+00:00",
+   "decided_at": "2026-10-05T05:10:16.979444+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -2158,7 +2158,7 @@
    ],
    "decision": "المسحُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:28:06.877485+00:00",
+   "decided_at": "2026-10-05T05:10:22.920934+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2205,7 +2205,7 @@
    ],
    "decision": "الخفينِ بعـدَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:28:11.311029+00:00",
+   "decided_at": "2026-10-05T05:10:29.420177+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2247,7 +2247,7 @@
    ],
    "decision": "وكنتَ امرءًا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:28:17.929148+00:00",
+   "decided_at": "2026-10-05T05:10:34.957865+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2312,7 +2312,7 @@
    ],
    "decision": "أصحابِ النبيِّ صلى الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:28:43.471389+00:00",
+   "decided_at": "2026-10-05T05:10:42.996485+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2360,7 +2360,7 @@
    ],
    "decision": "وسلم فجئتُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:28:50.262349+00:00",
+   "decided_at": "2026-10-05T05:10:46.361316+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2419,7 +2419,7 @@
    ],
    "decision": "شيئاً ؟ قال :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:29:30.069029+00:00",
+   "decided_at": "2026-10-05T05:10:56.544919+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2445,9 +2445,9 @@
    ],
    "word_boxes": [],
    "line_boxes": [],
-   "decision": null,
+   "decision": "نعمْ كانَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:29:36.392668+00:00",
+   "decided_at": "2026-10-05T05:11:03.422508+00:00",
    "loc": "uncertain",
    "hint_box": [
     0,
@@ -2501,7 +2501,7 @@
    ],
    "decision": "ــ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:29:48.158638+00:00",
+   "decided_at": "2026-10-05T05:11:08.823887+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -2548,7 +2548,7 @@
    ],
    "decision": "ــ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:29:49.497258+00:00",
+   "decided_at": "2026-10-05T05:11:10.180783+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -2595,7 +2595,7 @@
    ],
    "decision": "لا ننزِعَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:30:03.853446+00:00",
+   "decided_at": "2026-10-05T05:11:22.498192+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2643,7 +2643,7 @@
    ],
    "decision": "أيامٍ ولياليهنَّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:30:13.782933+00:00",
+   "decided_at": "2026-10-05T05:11:28.332085+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2696,7 +2696,7 @@
    ],
    "decision": "جنابةٍ ، لـكنْ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:30:32.127886+00:00",
+   "decided_at": "2026-10-05T05:11:40.694997+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2761,7 +2761,7 @@
    ],
    "decision": "وبول ونومٍ.",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:30:46.148947+00:00",
+   "decided_at": "2026-10-05T05:11:55.688998+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2814,7 +2814,7 @@
    ],
    "decision": "فقلتُ :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:30:50.803293+00:00",
+   "decided_at": "2026-10-05T05:12:03.335880+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2883,9 +2883,9 @@
      1339
     ]
    ],
-   "decision": "الهوى شيئاً ؟ قال",
+   "decision": "الهوى شيئاً ؟ قال :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:31:40.778477+00:00",
+   "decided_at": "2026-10-05T05:12:21.821237+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2950,7 +2950,7 @@
    ],
    "decision": ": نعمْ كُنَّا معَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:31:49.983424+00:00",
+   "decided_at": "2026-10-05T05:12:34.682056+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -2992,7 +2992,7 @@
    ],
    "decision": "صلى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:31:53.714792+00:00",
+   "decided_at": "2026-10-05T05:12:36.703026+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3034,7 +3034,7 @@
    ],
    "decision": "نحنُ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:31:56.227529+00:00",
+   "decided_at": "2026-10-05T05:12:38.708210+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -3076,7 +3076,7 @@
    ],
    "decision": "أعرابى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:08.794711+00:00",
+   "decided_at": "2026-10-05T05:12:43.274827+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3129,7 +3129,7 @@
    ],
    "decision": "جهْوَرى (٣) يامحمد ،",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:21.057296+00:00",
+   "decided_at": "2026-10-05T05:12:48.667279+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3169,9 +3169,9 @@
      1436
     ]
    ],
-   "decision": "فأجابه",
+   "decision": "فأَجابه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:29.549174+00:00",
+   "decided_at": "2026-10-05T05:13:03.945535+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -3213,7 +3213,7 @@
    ],
    "decision": "صلى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:31.221298+00:00",
+   "decided_at": "2026-10-05T05:13:05.676999+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3255,7 +3255,7 @@
    ],
    "decision": "نحواً",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:45.485022+00:00",
+   "decided_at": "2026-10-05T05:13:08.048639+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3303,7 +3303,7 @@
    ],
    "decision": "صوته هاؤُم (٤)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:53.266140+00:00",
+   "decided_at": "2026-10-05T05:13:14.334977+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3356,7 +3356,7 @@
    ],
    "decision": "له :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:55.709408+00:00",
+   "decided_at": "2026-10-05T05:13:17.733752+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3398,7 +3398,7 @@
    ],
    "decision": "(٥)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:32:57.775561+00:00",
+   "decided_at": "2026-10-05T05:13:19.086654+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -3446,7 +3446,7 @@
    ],
    "decision": "النبى صلى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:33:00.518200+00:00",
+   "decided_at": "2026-10-05T05:13:26.595342+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3491,9 +3491,9 @@
      1636
     ]
    ],
-   "decision": "عليـه",
+   "decision": "عليــه",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:33:02.451319+00:00",
+   "decided_at": "2026-10-05T05:13:34.230400+00:00",
    "loc": "word",
    "hint_box": null
   },
@@ -3535,7 +3535,7 @@
    ],
    "decision": "نهيتَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:33:04.966331+00:00",
+   "decided_at": "2026-10-05T05:13:36.407544+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3600,7 +3600,7 @@
    ],
    "decision": "هـذا ! فقالَ :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:33:11.178584+00:00",
+   "decided_at": "2026-10-05T05:13:41.144390+00:00",
    "loc": "word",
    "hint_box": null
   },
@@ -3648,7 +3648,7 @@
    ],
    "decision": "أغضض .",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:33:48.063142+00:00",
+   "decided_at": "2026-10-05T05:13:49.060886+00:00",
    "loc": "word",
    "hint_box": null
   },
@@ -3693,9 +3693,9 @@
      1775
     ]
    ],
-   "decision": "الأعرابىُّ : المرء يحبُّ",
+   "decision": "الأعرابىُّ : المرءُ يحبُّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:05.359732+00:00",
+   "decided_at": "2026-10-05T05:14:07.052905+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3740,9 +3740,9 @@
      1775
     ]
    ],
-   "decision": "القومَ ولمَّــا يلحقْ (٦)",
+   "decision": "القومَ ولمَّـا يلحقْ (٦)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:23.975625+00:00",
+   "decided_at": "2026-10-05T05:14:23.573580+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3790,7 +3790,7 @@
    ],
    "decision": "بهم ؟",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:35.080408+00:00",
+   "decided_at": "2026-10-05T05:14:27.209096+00:00",
    "loc": "word",
    "hint_box": null
   },
@@ -3832,7 +3832,7 @@
    ],
    "decision": "النبىُّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:37.195789+00:00",
+   "decided_at": "2026-10-05T05:14:29.164785+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3885,7 +3885,7 @@
    ],
    "decision": "وسلم : المرء",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:43.260323+00:00",
+   "decided_at": "2026-10-05T05:14:33.855481+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3938,7 +3938,7 @@
    ],
    "decision": "القيامةِ ، فمـا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:52.678993+00:00",
+   "decided_at": "2026-10-05T05:14:37.722766+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -3992,7 +3992,7 @@
    ],
    "decision": "يحدثنا حتى ذكرَ باباً",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:34:58.662325+00:00",
+   "decided_at": "2026-10-05T05:14:45.315973+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4039,7 +4039,7 @@
    ],
    "decision": "المغربِ ،",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:01.832558+00:00",
+   "decided_at": "2026-10-05T05:14:47.460542+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4081,7 +4081,7 @@
    ],
    "decision": "يسير",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:05.277561+00:00",
+   "decided_at": "2026-10-05T05:14:49.824314+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4123,7 +4123,7 @@
    ],
    "decision": "أربعينَ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:08.175888+00:00",
+   "decided_at": "2026-10-05T05:14:51.814161+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4176,7 +4176,7 @@
    ],
    "decision": "عاماً .",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:15.277172+00:00",
+   "decided_at": "2026-10-05T05:14:53.434532+00:00",
    "loc": "word",
    "hint_box": null
   },
@@ -4241,7 +4241,7 @@
    ],
    "decision": "أحـد الرواةِ :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:22.213180+00:00",
+   "decided_at": "2026-10-05T05:14:58.218834+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4283,7 +4283,7 @@
    ],
    "decision": "لايغلق حتى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:27.537797+00:00",
+   "decided_at": "2026-10-05T05:15:02.358638+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4336,7 +4336,7 @@
    ],
    "decision": "رواه الترمذى وغيره وقال",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:35.842599+00:00",
+   "decided_at": "2026-10-05T05:15:16.632790+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4393,9 +4393,9 @@
      2125
     ]
    ],
-   "decision": "حديث حسنٌ صحيح.",
+   "decision": ": حديثٌ حسنٌ صحيح.",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:51.849047+00:00",
+   "decided_at": "2026-10-05T05:15:30.468906+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4437,7 +4437,7 @@
    ],
    "decision": "أبى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:35:58.362543+00:00",
+   "decided_at": "2026-10-05T05:15:32.617387+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4485,7 +4485,7 @@
    ],
    "decision": "سِنانٍ الخدرىِّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:04.526122+00:00",
+   "decided_at": "2026-10-05T05:15:38.560124+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4527,7 +4527,7 @@
    ],
    "decision": "الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:06.370052+00:00",
+   "decided_at": "2026-10-05T05:15:39.991802+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -4569,7 +4569,7 @@
    ],
    "decision": "نبىَّ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:08.191426+00:00",
+   "decided_at": "2026-10-05T05:15:42.830424+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4611,7 +4611,7 @@
    ],
    "decision": "صلى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:09.949474+00:00",
+   "decided_at": "2026-10-05T05:15:43.892193+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4658,7 +4658,7 @@
    ],
    "decision": "قال :",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:17.900021+00:00",
+   "decided_at": "2026-10-05T05:15:45.484214+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4705,7 +4705,7 @@
    ],
    "decision": "قبلـكمْ",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:36.749392+00:00",
+   "decided_at": "2026-10-05T05:15:51.206405+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4762,9 +4762,9 @@
      2349
     ]
    ],
-   "decision": "تسعة وتسعــين نفساً",
+   "decision": "تسعة وتسعـين نفسًا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:48.407310+00:00",
+   "decided_at": "2026-10-05T05:15:58.076850+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4806,7 +4806,7 @@
    ],
    "decision": "ما الذى",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:36:52.182526+00:00",
+   "decided_at": "2026-10-05T05:16:02.496438+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4859,7 +4859,7 @@
    ],
    "decision": "المجىء ؟",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:01.184545+00:00",
+   "decided_at": "2026-10-05T05:16:20.860928+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4901,7 +4901,7 @@
    ],
    "decision": "(٢)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:02.959184+00:00",
+   "decided_at": "2026-10-05T05:16:24.688273+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -4943,7 +4943,7 @@
    ],
    "decision": "(٣) مرتفع",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:05.406311+00:00",
+   "decided_at": "2026-10-05T05:16:27.066523+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -4990,7 +4990,7 @@
    ],
    "decision": "خـذوا",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:21.641982+00:00",
+   "decided_at": "2026-10-05T05:16:30.639530+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5032,7 +5032,7 @@
    ],
    "decision": "(٥) اخفض",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:25.379906+00:00",
+   "decided_at": "2026-10-05T05:16:32.700114+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5074,7 +5074,7 @@
    ],
    "decision": "(٦) أى إلى الآن",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:35.303736+00:00",
+   "decided_at": "2026-10-05T05:16:38.397428+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5116,7 +5116,7 @@
    ],
    "decision": "لم يلحق",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:38.099371+00:00",
+   "decided_at": "2026-10-05T05:16:44.819511+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5169,7 +5169,7 @@
    ],
    "decision": "الـكمال ــ أى لم",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:50.054186+00:00",
+   "decided_at": "2026-10-05T05:16:53.783240+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5217,7 +5217,7 @@
    ],
    "decision": "يعمل .",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:37:59.027771+00:00",
+   "decided_at": "2026-10-05T05:16:56.663457+00:00",
    "loc": "word",
    "hint_box": null
   },
@@ -5259,7 +5259,7 @@
    ],
    "decision": "أحياء",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:38:02.306979+00:00",
+   "decided_at": "2026-10-05T05:17:00.061621+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5301,7 +5301,7 @@
    ],
    "decision": "الله",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:38:05.356356+00:00",
+   "decided_at": "2026-10-05T05:17:01.454868+00:00",
    "loc": "approx",
    "hint_box": null
   },
@@ -5343,7 +5343,7 @@
    ],
    "decision": "(٧)",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:38:06.920230+00:00",
+   "decided_at": "2026-10-05T05:17:03.240207+00:00",
    "loc": "gap",
    "hint_box": null
   },
@@ -5385,7 +5385,7 @@
    ],
    "decision": "المغرب",
    "reviewer": "rawan",
-   "decided_at": "2026-10-04T05:38:11.273559+00:00",
+   "decided_at": "2026-10-05T05:17:10.426096+00:00",
    "loc": "approx",
    "hint_box": null
   }
@@ -5608,7 +5608,7 @@
    "hint_box": null
   }
  ],
- "structure_reviewed": false,
+ "structure_reviewed": true,
  "locator": "gold_locate v2 (word-level, honest uncertainty)",
  "auto_resolved_equivalent": 0
 }

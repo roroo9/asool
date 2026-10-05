@@ -17,7 +17,7 @@
    "footnote_marker": "",
    "text": "— ٣٩ —",
    "type_reader_c": "page_number",
-   "type_confirmed": null
+   "type_confirmed": "page_number"
   },
   {
    "order": 1,
@@ -27,7 +27,7 @@
    "footnote_marker": "",
    "text": "فتغيَّرَ وجهُهُ حتى كانَ كالصِّرْفِ . ثم قال : فمنْ يعدِلُ إذا لم يعدلِ اللهُ ورسولهُ ؟ ثم قال (١) يرحَمُ اللهُ موسٰى قدْ أوذِيَ بأكثرَ منْ هذا فصبَرَ . فقلتُ لاجرَمَ(٢) لا أرفعُ إليه بعدها حديثاً (٣) »",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "hadith"
   },
   {
    "order": 2,
@@ -37,7 +37,7 @@
    "footnote_marker": "",
    "text": "متفق عليه . وقوله « كالصِّرْفِ » هو بكسر الصاد المهملة : وهو صِبْغ أحمرُ .",
    "type_reader_c": null,
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 3,
@@ -47,7 +47,7 @@
    "footnote_marker": "",
    "text": "وعن أنس رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم :",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 4,
@@ -57,7 +57,7 @@
    "footnote_marker": "",
    "text": "« إذا أراد الله بعبدِهِ الخيرَ عجَّلَ له العقُوبةَ فى الدنْيا (٤) ، وإذا أراد اللهُ بعبدِهِ الشرَّ أمسكَ عنه بذَنْبه(٥) حتى يوَافِيَ بِه(٦) يومَ القيامَةِ »",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "hadith"
   },
   {
    "order": 5,
@@ -67,7 +67,7 @@
    "footnote_marker": "",
    "text": "وقال النبى صلى الله عليه وسلم ،",
    "type_reader_c": null,
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 6,
@@ -77,7 +77,7 @@
    "footnote_marker": "",
    "text": "« إنَّ عِظَمِ الجزاء مع عِظَمِ البلاء(٧)، وإنَّ الله تعالى إذا أحبَّ قوماً ابتلاهم ، فمنْ رضِيَ (٨) فلهُ الرضا ومنْ سَخطَ (٩) فلهُ السخط »",
    "type_reader_c": null,
-   "type_confirmed": null
+   "type_confirmed": "hadith"
   },
   {
    "order": 7,
@@ -87,7 +87,7 @@
    "footnote_marker": "",
    "text": "رواه الترمذى وقال : حديث حسن .",
    "type_reader_c": null,
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 8,
@@ -97,7 +97,7 @@
    "footnote_marker": "",
    "text": "وعن أنس رضى الله عنه قال : كانَ ابنٌ لأبى طلحةَ رعى الله عنه يشتكى ؛ فخرج أبو طلحة فقبضَ (١٠) الصبيُّ ، فلمَّا رجع أبو طلحة (١١) قال : ما فعلَ ابْنِي ؟ قالتْ أمُّ سليمٍ وهِيَ أمُّ الصبيِّ : هوَ أسكَنُ (١٢) ما كان فقربتْ لهُ العشاء (١٣) فتعشى ثم أصاب منها (١٤) فلمَّا فرغ (١٥) قالتْ : وارُوا الصبيَّ فلمَّا أصبحَ أبو طلحة أتى رسول الله صلى الله عليه وسلم فأخبرهُ (١٦) . فقال أعرستُمُ الليلةَ ؟ قال : نعم . قال : اللهمَّ باركْ لهما ، فولدتْ (١٧) غلاماً فقال لى أبو طلحةَ",
    "type_reader_c": "body",
-   "type_confirmed": null
+   "type_confirmed": "body"
   },
   {
    "order": 9,
@@ -107,7 +107,7 @@
    "footnote_marker": "(١)",
    "text": "(١) مبينا أن الصفح عن عثرات اللئام سنة الأنبياء والمرسلين صلوات الله عليهم أجمعين",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 10,
@@ -117,7 +117,7 @@
    "footnote_marker": "(٢)",
    "text": "(٢) حقا أولا محالة",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 11,
@@ -127,7 +127,7 @@
    "footnote_marker": "(٣)",
    "text": "(٣) رأى أثر غضبه ﷺ",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 12,
@@ -137,7 +137,7 @@
    "footnote_marker": "(٤)",
    "text": "(٤) جزاء سيئاته",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 13,
@@ -147,7 +147,7 @@
    "footnote_marker": "(٥)",
    "text": "(٥) ليثاب فى الآخرة",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 14,
@@ -157,7 +157,7 @@
    "footnote_marker": "(٦)",
    "text": "(٦) فيجازى به",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 15,
@@ -167,7 +167,7 @@
    "footnote_marker": "(٧)",
    "text": "(٧) الأذى فى تبعات ذنبه",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 16,
@@ -177,7 +177,7 @@
    "footnote_marker": "(٨)",
    "text": "(٨) لم يتبرم بقضاء الله جل وعلا منقادا للرجوع الى الله مولاه",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 17,
@@ -187,7 +187,7 @@
    "footnote_marker": "(٩)",
    "text": "(٩) كره فللساخط الانتقام لأنه لم يرض عن فعل ربه جل وعلا",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 18,
@@ -197,7 +197,7 @@
    "footnote_marker": "(١٠)",
    "text": "(١٠) توفى",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 19,
@@ -207,7 +207,7 @@
    "footnote_marker": "(١١)",
    "text": "(١١) الى بيته",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 20,
@@ -217,7 +217,7 @@
    "footnote_marker": "(١٢)",
    "text": "(١٢) هدأ وزال اضطرابه وقلقه وظن أنه أسكن من الألم لحصول العافية توجيه البلاغة وحسن الأدب",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 21,
@@ -227,7 +227,7 @@
    "footnote_marker": "(١٣)",
    "text": "(١٣) الطعام",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 22,
@@ -237,7 +237,7 @@
    "footnote_marker": "(١٤)",
    "text": "(١٤) جامعها",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 23,
@@ -247,7 +247,7 @@
    "footnote_marker": "(١٥)",
    "text": "(١٥) من حاجته، رضى الله عنها من زوجة صالحة تثق بالله وفضل الله وتزيل الألم عن زوجها ليأتى حرمه",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 24,
@@ -257,7 +257,7 @@
    "footnote_marker": "(١٦)",
    "text": "(١٦) بما حدث عدا الجماع",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   },
   {
    "order": 25,
@@ -267,7 +267,7 @@
    "footnote_marker": "(١٧)",
    "text": "(١٧) عبدالله",
    "type_reader_c": "footnote",
-   "type_confirmed": null
+   "type_confirmed": "footnote"
   }
  ],
  "tokens": [
@@ -1711,7 +1711,9 @@
     2144,
     545
    ],
-   "decision": null
+   "decision": "—",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:27:52.438790+00:00"
   },
   {
    "id": "riyad1956-p039-r001",
@@ -1747,7 +1749,9 @@
     2144,
     545
    ],
-   "decision": null
+   "decision": "—",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:27:53.101045+00:00"
   },
   {
    "id": "riyad1956-p039-r002",
@@ -1798,7 +1802,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فتغيَّرَ وجهُهُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:27:56.605472+00:00"
   },
   {
    "id": "riyad1956-p039-r003",
@@ -1843,7 +1849,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "كالصِّرْفِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:01.576810+00:00"
   },
   {
    "id": "riyad1956-p039-r004",
@@ -1888,7 +1896,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فمنْ يعدِلُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:03.694932+00:00"
   },
   {
    "id": "riyad1956-p039-r005",
@@ -1939,7 +1949,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "يرحَمُ اللهُ موسٰى قدْ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:11.391870+00:00"
   },
   {
    "id": "riyad1956-p039-r006",
@@ -1984,7 +1996,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "بأكثرَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:13.975954+00:00"
   },
   {
    "id": "riyad1956-p039-r007",
@@ -2029,7 +2043,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فصبَرَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:18.150925+00:00"
   },
   {
    "id": "riyad1956-p039-r008",
@@ -2074,7 +2090,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "لاجرَمَ(٢)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:21.398144+00:00"
   },
   {
    "id": "riyad1956-p039-r009",
@@ -2119,7 +2137,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "أرفعُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:24.715563+00:00"
   },
   {
    "id": "riyad1956-p039-r010",
@@ -2170,7 +2190,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "حديثاً (٣) »",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:27.600490+00:00"
   },
   {
    "id": "riyad1956-p039-r011",
@@ -2215,7 +2237,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "كالصِّرْفِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:30.215801+00:00"
   },
   {
    "id": "riyad1956-p039-r012",
@@ -2255,7 +2279,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "المهملة",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:32.709363+00:00"
   },
   {
    "id": "riyad1956-p039-r013",
@@ -2300,7 +2326,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "أحمرُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:35.824340+00:00"
   },
   {
    "id": "riyad1956-p039-r014",
@@ -2340,7 +2368,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "عليه وسلم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:28:37.617025+00:00"
   },
   {
    "id": "riyad1956-p039-r015",
@@ -2397,7 +2427,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "بعبدِهِ الخْيرَ عجَّلَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:03.929585+00:00"
   },
   {
    "id": "riyad1956-p039-r016",
@@ -2454,7 +2486,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "العقُوبةَ فى الدنْيا",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:09.772307+00:00"
   },
   {
    "id": "riyad1956-p039-r017",
@@ -2505,7 +2539,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "اللهُ بعبدِهِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:12.270383+00:00"
   },
   {
    "id": "riyad1956-p039-r018",
@@ -2550,7 +2586,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "بذَنْبِه(٥)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:27.848179+00:00"
   },
   {
    "id": "riyad1956-p039-r019",
@@ -2601,7 +2639,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "يوَافِيَ بِه(٦)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:32.736374+00:00"
   },
   {
    "id": "riyad1956-p039-r020",
@@ -2646,7 +2686,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "القيامَةِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:36.863805+00:00"
   },
   {
    "id": "riyad1956-p039-r021",
@@ -2691,7 +2733,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "النبى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:38.219289+00:00"
   },
   {
    "id": "riyad1956-p039-r022",
@@ -2731,7 +2775,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "وسلم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:39.670975+00:00"
   },
   {
    "id": "riyad1956-p039-r023",
@@ -2767,7 +2813,9 @@
     2144,
     1219
    ],
-   "decision": null
+   "decision": "عِظَمِ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:51.254794+00:00"
   },
   {
    "id": "riyad1956-p039-r024",
@@ -2812,7 +2860,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "عِظَمِ البلاء(٧)، وإنَّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:29:59.622803+00:00"
   },
   {
    "id": "riyad1956-p039-r025",
@@ -2863,7 +2913,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "، فمنْ رضِىَ (٨)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:15.198701+00:00"
   },
   {
    "id": "riyad1956-p039-r026",
@@ -2908,7 +2960,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "سَخطَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:20.595676+00:00"
   },
   {
    "id": "riyad1956-p039-r027",
@@ -2948,7 +3002,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "الترمذى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:23.800041+00:00"
   },
   {
    "id": "riyad1956-p039-r028",
@@ -2980,8 +3036,8 @@
     1433
    ],
    "decision": ":",
-   "reviewer": "auto (equivalent readings)",
-   "decided_at": "2026-10-05T03:39:02.223603+00:00",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:32.366060+00:00",
    "auto_equivalence": true
   },
   {
@@ -3039,7 +3095,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "كانَ ابنٌ لأَبى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:42.804944+00:00"
   },
   {
    "id": "riyad1956-p039-r030",
@@ -3090,7 +3148,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "رضى الله",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:54.218561+00:00"
   },
   {
    "id": "riyad1956-p039-r031",
@@ -3130,7 +3190,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فخرج",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:30:58.681956+00:00"
   },
   {
    "id": "riyad1956-p039-r032",
@@ -3175,7 +3237,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فقبضَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:01.413663+00:00"
   },
   {
    "id": "riyad1956-p039-r033",
@@ -3220,7 +3284,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "الصبيُّ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:04.998388+00:00"
   },
   {
    "id": "riyad1956-p039-r034",
@@ -3265,7 +3331,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فلمَّا",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:06.278500+00:00"
   },
   {
    "id": "riyad1956-p039-r035",
@@ -3316,7 +3384,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فعلَ ابْنِي",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:10.982291+00:00"
   },
   {
    "id": "riyad1956-p039-r036",
@@ -3367,7 +3437,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "أمُّ سليمٍ وهِيَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:14.525000+00:00"
   },
   {
    "id": "riyad1956-p039-r037",
@@ -3412,7 +3484,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "أسكَنُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:17.458682+00:00"
   },
   {
    "id": "riyad1956-p039-r038",
@@ -3442,7 +3516,9 @@
     2144,
     1826
    ],
-   "decision": null
+   "decision": "فقربتْ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:23.621836+00:00"
   },
   {
    "id": "riyad1956-p039-r039",
@@ -3482,7 +3558,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "العشاء",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:37.379099+00:00"
   },
   {
    "id": "riyad1956-p039-r040",
@@ -3527,7 +3605,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فلمَّا",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:39.690023+00:00"
   },
   {
    "id": "riyad1956-p039-r041",
@@ -3578,7 +3658,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فلمَّا أصبحَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:42.261035+00:00"
   },
   {
    "id": "riyad1956-p039-r042",
@@ -3623,7 +3705,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فأخبرهُ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:31:44.187887+00:00"
   },
   {
    "id": "riyad1956-p039-r043",
@@ -3680,7 +3764,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "أعرستمُ الليلةَ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:06.435101+00:00"
   },
   {
    "id": "riyad1956-p039-r044",
@@ -3720,7 +3806,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "نعم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:11.614773+00:00"
   },
   {
    "id": "riyad1956-p039-r045",
@@ -3765,7 +3853,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فولدتْ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:13.688092+00:00"
   },
   {
    "id": "riyad1956-p039-r046",
@@ -3816,7 +3906,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "عن عثرات اللئام",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:44.077131+00:00"
   },
   {
    "id": "riyad1956-p039-r047",
@@ -3856,7 +3948,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "(٢) حقا",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:46.713419+00:00"
   },
   {
    "id": "riyad1956-p039-r048",
@@ -3901,7 +3995,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "ﷺ",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:48.706056+00:00"
   },
   {
    "id": "riyad1956-p039-r049",
@@ -3937,7 +4033,9 @@
     2144,
     2249
    ],
-   "decision": null
+   "decision": "فى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:56.912474+00:00"
   },
   {
    "id": "riyad1956-p039-r050",
@@ -3977,7 +4075,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فيجازى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:32:58.745660+00:00"
   },
   {
    "id": "riyad1956-p039-r051",
@@ -4017,7 +4117,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "(٧)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:00.203815+00:00"
   },
   {
    "id": "riyad1956-p039-r052",
@@ -4057,7 +4159,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "فى",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:01.768019+00:00"
   },
   {
    "id": "riyad1956-p039-r053",
@@ -4097,7 +4201,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "(٨)",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:03.088795+00:00"
   },
   {
    "id": "riyad1956-p039-r054",
@@ -4137,7 +4243,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "يتبرم",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:05.540369+00:00"
   },
   {
    "id": "riyad1956-p039-r055",
@@ -4177,7 +4285,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "مولاه",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:06.753624+00:00"
   },
   {
    "id": "riyad1956-p039-r056",
@@ -4217,7 +4327,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "يرض",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:11.389998+00:00"
   },
   {
    "id": "riyad1956-p039-r057",
@@ -4257,7 +4369,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "بيته",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:13.061950+00:00"
   },
   {
    "id": "riyad1956-p039-r058",
@@ -4297,7 +4411,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "العافية",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:14.822633+00:00"
   },
   {
    "id": "riyad1956-p039-r059",
@@ -4342,7 +4458,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "حاجته،",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:16.357681+00:00"
   },
   {
    "id": "riyad1956-p039-r060",
@@ -4393,7 +4511,9 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "(١٧) عبدالله",
+   "reviewer": "rawan",
+   "decided_at": "2026-10-05T07:33:18.574447+00:00"
   }
  ],
  "spotcheck": [
@@ -4420,8 +4540,9 @@
    ],
    "hint_box": null,
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s001",
@@ -4446,8 +4567,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s002",
@@ -4472,8 +4594,9 @@
    ],
    "hint_box": null,
    "kind": "abstain",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s003",
@@ -4489,8 +4612,9 @@
     1219
    ],
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s004",
@@ -4515,8 +4639,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s005",
@@ -4541,8 +4666,9 @@
    ],
    "hint_box": null,
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s006",
@@ -4567,8 +4693,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s007",
@@ -4593,8 +4720,9 @@
    ],
    "hint_box": null,
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s008",
@@ -4619,8 +4747,9 @@
    ],
    "hint_box": null,
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s009",
@@ -4645,8 +4774,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s010",
@@ -4671,8 +4801,9 @@
    ],
    "hint_box": null,
    "kind": "abstain",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s011",
@@ -4697,8 +4828,9 @@
    ],
    "hint_box": null,
    "kind": "abstain",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s012",
@@ -4723,8 +4855,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s013",
@@ -4749,8 +4882,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s014",
@@ -4775,8 +4909,9 @@
    ],
    "hint_box": null,
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s015",
@@ -4801,8 +4936,9 @@
    ],
    "hint_box": null,
    "kind": "abstain_a",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s016",
@@ -4827,8 +4963,9 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   },
   {
    "id": "riyad1956-p039-s017",
@@ -4853,10 +4990,11 @@
    ],
    "hint_box": null,
    "kind": "agree",
-   "verdict": null,
-   "fix": null
+   "verdict": "ok",
+   "fix": null,
+   "reviewer": "rawan"
   }
  ],
- "structure_reviewed": false,
+ "structure_reviewed": true,
  "auto_resolved_equivalent": 1
 }
