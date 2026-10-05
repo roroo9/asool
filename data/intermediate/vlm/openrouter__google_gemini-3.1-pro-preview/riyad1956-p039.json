@@ -1,0 +1,369 @@
+{
+ "page_id": "riyad1956-p039",
+ "printed": 39,
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "prompt_version": "page_parse.v1",
+ "usage": {
+  "input_tokens": 2641,
+  "output_tokens": 19276
+ },
+ "page_number_printed": "٣٩",
+ "running_header": "— ٣٩ —",
+ "blocks": [
+  {
+   "order": 1,
+   "type": "page_number",
+   "author_role": "unknown",
+   "column": 0,
+   "text": "— ٣٩ —",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 2,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "فتغيَّر وجهه حتى كان كالصِّرْف . ثم قال : فمن يعدل إذا لم يعدل الله ورسوله ؟\nثم قال (١) يرحم الله موسى قد أوذى بأكثر من هذا فصبر . فقلت لاجَرَمَ (٢)\nلا أرفع إليه بعدها حديثاً (٣) » متفق عليه . وقوله « كالصِّرْفِ » هو بكسر\nالصاد المهملة : وهو صبغ أحمرُ .",
+   "footnote_markers_in_text": [
+    "(١)",
+    "(٢)",
+    "(٣)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": true,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 3,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أنس رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم :",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 4,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إذا أراد الله بعبده الخير عجَّل له العقوبة فى الدنيا (٤) ، وإذا أراد الله بعبده الشرَّ\nأمسك عنه بذنبه (٥) حتى يوافى به (٦) يوم القيامة »",
+   "footnote_markers_in_text": [
+    "(٤)",
+    "(٥)",
+    "(٦)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 5,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وقال النبي صلى الله عليه وسلم ،",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 6,
+   "type": "hadith",
+   "author_role": "matn",
+   "column": 0,
+   "text": "« إنَّ عِظَم الجزاء مع عِظَم البلاء (٧)، وإنَّ الله تعالى إذا أحبَّ قوماً ابتلاهم ،\nفمن رضى (٨) فله الرضا ومن سخط (٩) فله السخط »",
+   "footnote_markers_in_text": [
+    "(٧)",
+    "(٨)",
+    "(٩)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 7,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "رواه الترمذى وقال :\nحديث حسن .",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 8,
+   "type": "body",
+   "author_role": "matn",
+   "column": 0,
+   "text": "وعن أنس رضى الله عنه قال : كان ابنٌ لأبى طلحة رضى الله عنه\nيشتكى ؛ فخرج أبو طلحة فقبض (١٠) الصبى ، فلما رجع أبو طلحة (١١) قال :\nما فعل ابنى ؟ قالت أم سليم وهى أم الصبى : هو أسكن (١٢) ما كان فقربت\nله العشاء (١٣) فتعشى ثم أصاب منها (١٤) فلما فرغ (١٥) قالت : واروا الصبى\nفلما أصبح أبو طلحة أتى رسول الله صلى الله عليه وسلم فأخبره (١٦) . فقال أعرسْتُم\nالليلة ؟ قال : نعم . قال : اللهم بارك لهما ، فولدت (١٧) غلاماً فقال لى أبو طلحة",
+   "footnote_markers_in_text": [
+    "(١٠)",
+    "(١١)",
+    "(١٢)",
+    "(١٣)",
+    "(١٤)",
+    "(١٥)",
+    "(١٦)",
+    "(١٧)"
+   ],
+   "footnote_marker": "",
+   "continues_from_prev": false,
+   "continues_to_next": true,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 9,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١) مبينا أن الصفح عن عثرات اللئام سنة الأنبياء والمرسلين صلوات الله عليهم أجمعين",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 10,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٢) حقا أولا محالة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 11,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٣) رأى أثر غضبه ﷺ",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 12,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٤) جزاء سيئاته",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 13,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٥) ليعاقب في الآخرة",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "word 'ليعاقب' is slightly ambiguous but context and shape support it"
+   ]
+  },
+  {
+   "order": 14,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٦) فيجازى به",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 15,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٧) الأجر في مقابلة البلاء",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": []
+  },
+  {
+   "order": 16,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٨) لم يتبرم بقضاء الله جل وعلا منقادا للرجوع الى الله مولاه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٨)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 17,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(٩) كره فللساخط الانتقام لأنه لم يرض عن فعل ربه جل وعلا",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(٩)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.98,
+   "issues": []
+  },
+  {
+   "order": 18,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٠) توفى",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٠)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 19,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١١) الى بيته",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١١)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 20,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٢) هدأ وزال اضطرابه وقلقه وظن أنه أسكن من الألم لحصول العافية وفيه تلطف وحسن الأدب",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٢)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "words 'وفيه تلطف' are slightly ambiguous but context supports them"
+   ]
+  },
+  {
+   "order": 21,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٣) الطعام",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٣)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 22,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٤) جامعها",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٤)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 23,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٥) من حاجته ، رضى الله عنها من زوجة صالحة تثق بالله وبقضائه وتزيل الألم عن زوجها ليأخذ حظه",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٥)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 0.95,
+   "issues": [
+    "words 'وبقضائه' and 'ليأخذ حظه' are slightly ambiguous but context supports them"
+   ]
+  },
+  {
+   "order": 24,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٦) بما حدث عدا الجماع",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٦)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  },
+  {
+   "order": 25,
+   "type": "footnote",
+   "author_role": "editor",
+   "column": 0,
+   "text": "(١٧) عبدالله",
+   "footnote_markers_in_text": [],
+   "footnote_marker": "(١٧)",
+   "continues_from_prev": false,
+   "continues_to_next": false,
+   "confidence": 1.0,
+   "issues": []
+  }
+ ],
+ "page_level_issues": [
+  "Footnotes are laid out in a flowing text format rather than strict columns, so they are output as full-width blocks in numerical order."
+ ]
+}

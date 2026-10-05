@@ -79,3 +79,40 @@ def tighten_boxes(blocks: list[dict], ocr: dict) -> list[dict]:
             b["rects"] = [nb]
             b["bbox_source"] = "vlm+ocr_snap"
     return blocks
+
+
+def _marker_num(b: dict) -> int | None:
+    m = MARK.search(b.get("footnote_marker") or "") or (
+        MARK.match(b["text"].lstrip()) if b.get("text") else None
+    )
+    if not m:
+        return None
+    d = re.sub(r"\D", "", m.group(0).translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")))
+    return int(d) if d else None
+
+
+def order_footnote_runs(blocks: list[dict]) -> list[dict]:
+    """Two-column footnotes come out of the parser row by row ((١)(٥)(٢)(٦)…) on some pages;
+    the print reads the right column, then the left. Within each contiguous run of numbered
+    footnotes, put them in marker order. Runs separated by other content (p.41: notes (١)-(٤),
+    commentary, notes (٥)-(٨)) stay separate; unnumbered continuations keep their place.
+    Sets b["seq"], the stored reading order (ids are not changed)."""
+    out: list[dict] = []
+    i = 0
+    while i < len(blocks):
+        if blocks[i]["type"] == "footnote" and _marker_num(blocks[i]) is not None:
+            j = i
+            while (
+                j < len(blocks)
+                and blocks[j]["type"] == "footnote"
+                and _marker_num(blocks[j]) is not None
+            ):
+                j += 1
+            out += sorted(blocks[i:j], key=_marker_num)
+            i = j
+        else:
+            out.append(blocks[i])
+            i += 1
+    for k, b in enumerate(out, 1):
+        b["seq"] = k
+    return out

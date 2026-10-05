@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T07:34:58",
+ "generated_at": "2026-10-05T10:51:02",
  "metrics": {
   "الاسترجاع: الصفحة الصحيحة ضمن أول ٥ نتائج (Recall@5)": {
    "asool": 1.0,
@@ -53,6 +53,21 @@
   "إمكانية التتبع: اقتباس مرتبط بصفحة وموضع على الصورة": {
    "asool": 1.0,
    "n": 136
+  },
+  "الاستخراج: خطأ الحروف مع التشكيل، ١٢ صفحة محجوزة (الأقل أفضل)": {
+   "asool": 0.034656480137441666,
+   "baseline": 0.2789088788753961,
+   "n": 12
+  },
+  "الاستخراج: خطأ الحروف دون التشكيل، ١٢ صفحة محجوزة (الأقل أفضل)": {
+   "asool": 0.004094174557873421,
+   "baseline": 0.20837110346311655,
+   "n": 12
+  },
+  "الاستخراج: ربط الحواشي بعلاماتها، ١٢ صفحة محجوزة (F1)": {
+   "asool": 0.9615963557140028,
+   "baseline": 0.0,
+   "n": 12
   }
  },
  "official_cases": [
@@ -165,12 +180,92 @@
    "note": "Culturally loaded term in a non-Arabic question; corpus: «من قاتل لتكون كلمة الله هي العليا» (p.15), «لا هجرة بعد الفتح ولكن جهاد ونية» (p.13)."
   }
  ],
+ "heldout": {
+  "pages": 12,
+  "rows": [
+   {
+    "system": "Gemini 3.1 Pro + prompt v2 (Asool's parser)",
+    "as_output_strict": 0.06507266732190424,
+    "as_output_loose": 0.03935789134575366,
+    "normalized_strict": 0.03529788530815412,
+    "normalized_loose": 0.004756763752572707,
+    "footnotes_in_order": 0.5833333333333334,
+    "bakeoff_normalized_strict": 0.022336756079430982
+   },
+   {
+    "system": "Gemini 3.1 Pro + prompt v1",
+    "as_output_strict": 0.07253980067831563,
+    "as_output_loose": 0.02694420152594433,
+    "normalized_strict": 0.05586373552129443,
+    "normalized_loose": 0.007513268070801593,
+    "footnotes_in_order": 0.75,
+    "bakeoff_normalized_strict": 0.04258477176898111
+   },
+   {
+    "system": "Gemini 3.5 Flash (free tier)",
+    "as_output_strict": 0.08651971686543365,
+    "as_output_loose": 0.017047911013912547,
+    "normalized_strict": 0.07707119252933768,
+    "normalized_loose": 0.006605122922473932,
+    "footnotes_in_order": 0.8333333333333334,
+    "bakeoff_normalized_strict": 0.09947684311888243
+   },
+   {
+    "system": "Asool final index (after fusion, splits, corrections)",
+    "as_output_strict": 0.043699119092594066,
+    "as_output_loose": 0.016888044939879034,
+    "normalized_strict": 0.034656480137441666,
+    "normalized_loose": 0.004094174557873421,
+    "footnotes_in_order": 1.0,
+    "bakeoff_normalized_strict": 0.022336756079430982
+   },
+   {
+    "system": "Tesseract ara (baseline)",
+    "as_output_strict": 0.2789088788753961,
+    "as_output_loose": 0.20837110346311655,
+    "normalized_strict": 0.27968304388313775,
+    "normalized_loose": 0.2092513851532574,
+    "footnotes_in_order": null,
+    "bakeoff_normalized_strict": 0.35069583048227565
+   }
+  ]
+ },
+ "gold": {
+  "pages": 15,
+  "finalized": 15,
+  "words": 4483,
+  "auto_accepted": 2800,
+  "human_decisions": 964,
+  "typed_corrections": 56,
+  "auto_equivalent": 28,
+  "reviewers": [
+   "rawan"
+  ],
+  "spotcheck": {
+   "agree": {
+    "checked": 82,
+    "wrong": 0
+   },
+   "abstain_a": {
+    "checked": 67,
+    "wrong": 1
+   },
+   "abstain": {
+    "checked": 48,
+    "wrong": 1
+   }
+  },
+  "bakeoff_pages": [
+   41,
+   30,
+   20
+  ]
+ },
  "limits": [
   "مدونة صغيرة: ٣٠ صفحة من كتاب واحد (رياض الصالحين، طبعة ١٩٥٦).",
   "أسئلة التقييم صاغها الوكيل وتنتظر مراجعة بشرية (human_verified=false) إلا ما ذُكر.",
   "الاسترجاع يُقاس بالسؤال الخام للطريقتين، دون إعادة صياغة السؤال بالنموذج.",
-  "السلوك المتوقع يُحكم آليًا (إجابة/امتناع/إحالة/تصحيح آية)؛ جودة الأسلوب تحتاج مراجعة بشرية.",
-  "قياس الاستخراج على ١٢ صفحة محجوزة ينتظر انتهاء مراجعة مجموعة المرجع."
+  "السلوك المتوقع يُحكم آليًا (إجابة/امتناع/إحالة/تصحيح آية)؛ جودة الأسلوب تحتاج مراجعة بشرية."
  ],
  "command": "uv run python -m eval.run_eval retrieval && uv run python -m eval.run_eval answers --runs 3 && uv run python -m eval.report"
 }

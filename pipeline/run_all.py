@@ -121,6 +121,7 @@ def build(embed: bool = True) -> None:
                 b["id"] = f"{b['split_from']}-{b['sub']}"
         blocks = structure_checks.tighten_boxes(blocks, ocr)
         blocks = structure_checks.attach_colon_continuations(blocks)
+        blocks = structure_checks.order_footnote_runs(blocks)
         flags += structure_checks.duplicate_runs(blocks)
         comp = completeness.check(p, blocks)
         if not comp["complete"]:
@@ -424,7 +425,7 @@ def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -
             (
                 b["id"],
                 b["page_id"],
-                b["order"],
+                b.get("seq", b["order"]),
                 b["type"],
                 b.get("author_role"),
                 b.get("column"),

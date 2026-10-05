@@ -31,6 +31,48 @@ def _ratio(xs: list[bool]) -> float | None:
     return sum(xs) / len(xs) if xs else None
 
 
+def gold_stats() -> dict:
+    """Gold-set review numbers, computed from the review files (data/gold/draft)."""
+    from pipeline.config import BAKEOFF_PAGES
+    from pipeline.gold_consensus import DRAFT
+
+    out = {
+        "pages": 0,
+        "finalized": 0,
+        "words": 0,
+        "auto_accepted": 0,
+        "human_decisions": 0,
+        "typed_corrections": 0,
+        "auto_equivalent": 0,
+        "reviewers": [],
+        "spotcheck": {},
+    }
+    reviewers: set[str] = set()
+    for f in sorted(DRAFT.glob("*.json")):
+        d = json.loads(f.read_text())
+        out["pages"] += 1
+        out["finalized"] += (DRAFT.parent / f"{d['page_id']}.json").exists()
+        out["words"] += d["total_tokens"]
+        out["auto_accepted"] += d["auto_accepted"]
+        for it in d["review_items"]:
+            if it.get("auto_equivalence"):
+                out["auto_equivalent"] += 1
+                continue
+            out["human_decisions"] += 1
+            if it["decision"] not in [c["text"] for c in it["candidates"]]:
+                out["typed_corrections"] += 1
+            if it.get("reviewer"):
+                reviewers.add(it["reviewer"])
+        for s in d["spotcheck"]:
+            kind = s.get("kind") or "agree"
+            k = out["spotcheck"].setdefault(kind, {"checked": 0, "wrong": 0})
+            k["checked"] += 1
+            k["wrong"] += s["verdict"] == "wrong"
+    out["reviewers"] = sorted(reviewers)
+    out["bakeoff_pages"] = BAKEOFF_PAGES
+    return out
+
+
 def build() -> dict:
     qs = {q["id"]: q for q in load_questions()}
     metrics: dict[str, dict] = {}
@@ -141,12 +183,14 @@ def build() -> dict:
                 )
         official.sort(key=lambda c: c["no"])
 
+    heldout = None
     hp = RESULTS / "heldout.json"
     if hp.exists():
         h = json.loads(hp.read_text())
         for key, label in (
-            ("cer_strict", "خطأ الحروف مع التشكيل على الصفحات المحجوزة (الأقل أفضل)"),
-            ("footnote_f1", "ربط الحواشي على الصفحات المحجوزة (F1)"),
+            ("cer_strict", "الاستخراج: خطأ الحروف مع التشكيل، ١٢ صفحة محجوزة (الأقل أفضل)"),
+            ("cer_loose", "الاستخراج: خطأ الحروف دون التشكيل، ١٢ صفحة محجوزة (الأقل أفضل)"),
+            ("footnote_f1", "الاستخراج: ربط الحواشي بعلاماتها، ١٢ صفحة محجوزة (F1)"),
         ):
             if key in h.get("asool", {}):
                 metrics[label] = {
@@ -154,6 +198,23 @@ def build() -> dict:
                     "baseline": h.get("baseline", {}).get(key),
                     "n": h["pages"],
                 }
+        heldout = {
+            "pages": h["pages"],
+            "rows": [
+                {
+                    "system": v["label"],
+                    "as_output_strict": v["as_output"]["cer_strict"],
+                    "as_output_loose": v["as_output"]["cer_loose"],
+                    "normalized_strict": v["layout_normalized"]["cer_strict"],
+                    "normalized_loose": v["layout_normalized"]["cer_loose"],
+                    "footnotes_in_order": v.get("footnotes_in_reading_order"),
+                    "bakeoff_normalized_strict": (v.get("bakeoff_layout_normalized") or {}).get(
+                        "cer_strict"
+                    ),
+                }
+                for v in h["systems"].values()
+            ],
+        }
     else:
         limits.append("قياس الاستخراج على ١٢ صفحة محجوزة ينتظر انتهاء مراجعة مجموعة المرجع.")
 
@@ -161,6 +222,8 @@ def build() -> dict:
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "metrics": metrics,
         "official_cases": official,
+        "heldout": heldout,
+        "gold": gold_stats(),
         "limits": limits,
         "command": "uv run python -m eval.run_eval retrieval && "
         "uv run python -m eval.run_eval answers --runs 3 && uv run python -m eval.report",

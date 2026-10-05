@@ -47,7 +47,7 @@ The gold set is the human-verified reference used to measure extraction quality.
    Words accepted under either abstention rule are spot-checked at **10%** (twice the normal rate). Everything else goes to a human.
 3. The human reviewer sees only the disputed phrases, each with the full printed line from the original page and **only the disputed words** highlighted, and chooses a reading or types a correction (`/review/gold`). If the words cannot be located reliably, the screen says «الموقع غير مؤكد» and shows the full page with the likely area marked; a «عرض الصفحة كاملة» button is always available.
 4. A random 5% of fully agreed words (weighted toward words with tashkeel) and 10% of words accepted by abstention are shown to the reviewer as a spot-check.
-5. **Equivalent readings are not disputes (owner rule, Oct 5).** Readings that differ only in Unicode (combining-mark order such as shadda + fatha, fixed by NFC) or in whitespace just inside brackets, around footnote markers or before punctuation («الرحيم )» = «الرحيم)», «﴿ قُلْ» = «﴿قُلْ», «شهدا (٨)» = «شهدا(٨)») are the same printed text. Such a dispute is auto-accepted when Readers B and C are identical after this canonicalization and Tesseract agrees on the letters or gave no reading. Spaces *between words* («يارسول» / «يا رسول») are a real difference in the print and stay with the human. Strict CER applies the same canonicalization to both sides. This removed **28** of 792 open disputes; **764** remain (522 tashkeel differences between B and C, 120 letter differences, 108 where Tesseract confidently reads other letters, 13 word-spacing differences, 1 with no Reader C).
+5. **Equivalent readings are not disputes (owner rule, Oct 5).** Readings that differ only in Unicode (combining-mark order such as shadda + fatha, fixed by NFC) or in whitespace just inside brackets, around footnote markers or before punctuation («الرحيم )» = «الرحيم)», «﴿ قُلْ» = «﴿قُلْ», «شهدا (٨)» = «شهدا(٨)») are the same printed text. Such a dispute is auto-accepted when Readers B and C are identical after this canonicalization and Tesseract agrees on the letters or gave no reading. Spaces *between words* («يارسول» / «يا رسول») are a real difference in the print and stay with the human. Strict CER applies the same canonicalization to both sides. This removed **28** of 792 open disputes; the remaining 764 (522 tashkeel differences between B and C, 120 letter differences, 108 where Tesseract confidently reads other letters, 13 word-spacing differences, 1 with no Reader C) were all decided by the reviewer.
 6. The reviewer confirms the block types (body, hadith, Quran, footnote, editor commentary…) before the page is finalized.
 
 **Bias controls.**
@@ -56,12 +56,23 @@ The gold set is the human-verified reference used to measure extraction quality.
 - Readers A and C are classical/open OCR engines with weaker tashkeel than the vision-language models, so **more disagreements reach human review**; auto-accept still requires all three readers to agree.
 - Known limitation: Reader B (Claude) was the pivot reading and the reviewer's default option, so Claude scores are inflated against this gold set and Claude is not eligible as Asool's parser. Diacritic conventions may lean toward Claude's style.
 
-**Spot-check results (bake-off pages).** 21 auto-accepted words checked, **0 wrong** (error rate 0%). A review-screen bug recorded these 21 confirmations as "wrong" although the reviewer left every word unchanged. The bug is fixed and the 21 records are reclassified with a note in the data (`correction_note`).
+**Final review (completed Oct 5).** All 15 gold pages are finalized by **rawan**; nothing is left in the queue. Every finalized gold file was re-derived from the recorded decisions and matches them exactly. The print writes final yaa without dots («فى»، «على»); the gold keeps the text exactly as printed (search normalization handles ى/ي).
 
-| Pages | Words | Auto-accepted | Human decisions | Spot-checked | Spot-check errors |
+| Pages | Words | Auto-accepted (3 readers agree) | Equivalent readings (auto) | Human decisions | of which typed corrections |
 |---|---|---|---|---|---|
-| 41, 30, 20 (bake-off) | 942 | 425 + 11 equivalent readings | 237 (26 re-queued still open) | 21 | 0 |
-| 12 other pages (rule v3) | 3,541 | 2,375 (476 tashkeel abstention, 678 Tesseract abstention) + 17 equivalent readings | 738 (pending) | 176 (pending) | pending |
+| 41, 30, 20 (bake-off) | 942 | 425 | 11 | 226 | 3 |
+| 12 held-out pages | 3,541 | 2,375 | 17 | 738 | 53 |
+| **Total** | **4,483** | **2,800** | **28** | **964** | **56** |
+
+**Spot-check results** (random auto-accepted words shown back to the reviewer):
+
+| Kind of auto-accepted word | Checked | Wrong | Error rate |
+|---|---|---|---|
+| All three readers agreed | 82 | 0 | 0% |
+| Tashkeel decided after a reader abstained | 48 | 1 | 2.1% |
+| Decided after Tesseract abstained (< 60% confidence) | 67 | 1 | 1.5% |
+
+Both errors were tashkeel only (p.12 «فهجرتُه» → «فهجرَتُهُ», p.26 «وهذه» → «وهذِه») and were corrected in the gold. The bake-off spot-check records affected by the early review-screen bug were reclassified (`correction_note`).
 
 **Review-screen bug and audit (Oct 4).** The first version of the review screen could show a neighbouring line when a disputed phrase was not found by OCR, highlighted whole lines instead of the disputed words, and could keep the previous image visible while the next one loaded. Fixed: word-level location with honest "uncertain" labels, one image per dispute, full-page view. All decisions made with the old screen were audited against the new locator: **37 of 237 bake-off decisions** (and both decisions made on page 12) were put back in the review queue because their crop did not show the disputed words. No spot-check answer was affected. Audit file: `data/gold/audit_2026-10-04_crops.json`.
 
@@ -79,6 +90,27 @@ In the 30-page corpus: 41 hadiths are in the Sahihayn by al-Nawawi's takhrij (24
 
 **Why search results are never used for grading automatically (dorar lesson, Oct 4).** For the hadith «إن الله يقبل توبة العبد ما لم يغرغر» (p.19), the first dorar.net result for «ما لم يغرغر» was a *different*, fabricated hadith graded «كذب». Taking the top search result would have attached a "fabricated" verdict to an authentic hadith. That is why the grading is taken only after checking narrator and wording, or confirmed by a person. The prefilled dorar search uses a short distinctive phrase with footnote markers and tashkeel removed and joined words split («مالم» → «ما لم»).
 
+## Extraction results (final gold)
+**Bake-off, re-scored on the corrected gold (pages 41, 30, 20).** Gemini 3.1 Pro with prompt v2 remains the best eligible parser: strict CER (with tashkeel) 2.2%, loose 0.4%, footnote-link F1 1.00, block types 100%; Gemini 3.1 Pro with v1 4.3%; Gemini 3.8 Flash 4.5%; Tesseract 30.4%. (Claude Opus 1.0% and Fable 1.2% are gold readers and not eligible.) Before the gold corrections v2 scored 2.3%.
+
+**Held-out re-measurement (12 pages never used to choose the model or tune the prompt)**, `uv run python -m eval.heldout_eval`:
+
+| System | Strict CER as output | Loose CER as output | Strict CER, footnote order normalized | Loose CER, normalized | Footnotes in reading order |
+|---|---|---|---|---|---|
+| Gemini 3.1 Pro + v2 (parser) | 6.5% | 3.9% | **3.5%** | 0.5% | 58% of pages |
+| Gemini 3.1 Pro + v1 | 7.3% | 2.7% | 5.6% | 0.8% | 75% |
+| Gemini 3.5 Flash | 8.7% | 1.7% | 7.7% | 0.7% | 83% |
+| **Asool final index** | **4.4%** | **1.7%** | **3.5%** | **0.4%** | **100%** |
+| Tesseract (baseline) | 27.9% | 20.8% | — | — | — |
+
+"As output" scores the text in the order the system produced it (as in the bake-off). "Normalized" puts footnotes in marker order after the main text, for the gold and every structured system alike, so it measures reading accuracy only.
+
+**What the held-out check shows.**
+- The prompt v2 gain in **reading accuracy generalizes**: 3.5% vs. 5.6% strict CER on unseen pages (bake-off: 2.2% vs. 4.3%).
+- The v2 instruction on **two-column footnote order did not generalize**: v2 put footnotes in reading order on only 58% of held-out pages (v1: 75%). The parser lists them row by row across the two columns ((١)(٥)(٢)(٦)…).
+- Fix (disclosed, made after this measurement): the index now orders each contiguous run of numbered footnotes by marker (`structure_checks.order_footnote_runs`); groups separated by other content (p.41) stay separate. Final index: footnotes in reading order on 100% of held-out pages; strict CER as stored 6.4% → 4.4%. Retrieval and answers are unaffected (footnotes attach to text by marker link).
+- Asool's index vs. the Tesseract baseline on held-out pages: **3.5% vs. 27.9% strict CER, 0.4% vs. 20.8% loose CER, footnote-link F1 0.96 vs. 0.00**.
+
 ## Evaluation (Phase 5)
 Everything on `/proof` is computed by these scripts; nothing is typed by hand.
 
@@ -89,7 +121,7 @@ uv run python -m eval.heldout_eval                # extraction on the 12 held-ou
 uv run python -m eval.report                      # -> data/eval/results/summary.json -> /proof
 ```
 
-**Question set** (`data/eval/questions.jsonl`, 66 questions, drafted by the agent, each marked `human_verified` until the owner checks it): 33 answerable questions (direct, needs-footnote, cross-page, multi-condition, Quran, editor commentary, English), 1 owner case (`completeness-01`), 10 unanswerable from this corpus, 5 personal cases needing a fatwa (level D), 3 hostile phrasings, 2 misquoted verses, and the **12 official test cases** of the scientific package (p.6) adapted to this corpus. Questions outside the 30 pages are expected to end in abstention or referral, never in an answer from general knowledge.
+**Question set** (`data/eval/questions.jsonl`, 66 questions). **The questions were drafted by the AI agent and are approved, edited or removed by a human reviewer (rawan) in `/review/questions`**; decisions are stored in `data/eval/question_reviews.json` and applied on top of the drafts, so every change is attributable. Review status: _pending (filled in from the review file when it is complete)_. Contents: 33 answerable questions (direct, needs-footnote, cross-page, multi-condition, Quran, editor commentary, English), 1 owner case (`completeness-01`), 10 unanswerable from this corpus, 5 personal cases needing a fatwa (level D), 3 hostile phrasings, 2 misquoted verses, and the **12 official test cases** of the scientific package (p.6) adapted to this corpus. Questions outside the 30 pages are expected to end in abstention or referral, never in an answer from general knowledge.
 
 **Fair baseline.** Same embeddings, same hybrid search code (BM25 + dense + RRF), same k=5 and same answer model; only the data preparation differs (Tesseract plain text in fixed 500-character pieces). Retrieval is measured with the raw question for both systems.
 

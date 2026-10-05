@@ -45,3 +45,8 @@ Per page, strict CER of the chosen system: p41 1.4%, p30 2.8%, p20 2.8%.
 - **Claude's scores are inflated** and not comparable: the gold drafts used Claude Opus as the pivot reading, auto-accepted words required Claude Opus and Claude Fable to agree on diacritics, and the reviewer saw Claude's reading as the first option. This is exactly why Claude is excluded from selection.
 - **Diacritic style bias:** for the same reason, the gold set may lean toward Claude's diacritic conventions. The human reviewer checked every disputed word against the page image, and the 5% spot-check of auto-accepted words found 0 errors in 21 words.
 - OpenRouter routes to Google's own endpoint for Gemini (`provider: Google` in the test response); results may differ slightly from Google AI Studio.
+
+## Re-check after the final gold (Oct 5)
+- **Bake-off re-scored on the corrected gold.** Gemini 3.1 Pro with prompt v2 is still the best eligible parser at 2.2% strict CER (it was 2.3%). The next best are v1 at 4.3% and Gemini 3.8 Flash at 4.5%. **Decision unchanged.**
+- **Held-out pages.** On the 12 pages never used for the choice, reading accuracy holds: strict CER 3.5% for v2 against 5.6% for v1, with footnote order normalized.
+- **Footnote order did not generalize.** The v2 instruction on two-column footnote order put footnotes in reading order on only 58% of held-out pages. This is now fixed deterministically in the index by ordering each run by marker. See the README section "Extraction results".

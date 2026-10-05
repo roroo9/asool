@@ -87,8 +87,10 @@ def type_accuracy(gold: list[dict], pred: list[dict]) -> float:
     return ok / tot if tot else 0.0
 
 
-def evaluate(printed: int, systems: dict[str, list[dict]]) -> dict:
+def evaluate(printed: int, systems: dict[str, list[dict]], gold_transform=None) -> dict:
     gold = json.loads((GOLD / f"{page_id(printed)}.json").read_text())["blocks"]
+    if gold_transform:  # e.g. the same layout normalization applied to the systems
+        gold = gold_transform(gold)
     gt = page_text(gold)
     gl = footnote_links(gold)
     res = {}

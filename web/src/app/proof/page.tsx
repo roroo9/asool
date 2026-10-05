@@ -22,6 +22,42 @@ type Summary = {
   metrics?: Record<string, { asool: number; baseline?: number | null; n?: number; note?: string; fmt?: string }>;
   official_cases?: { id: string; question: string; expected: string; status: string; pass: boolean; note?: string }[];
   limits?: string[];
+  heldout?: {
+    pages: number;
+    rows: {
+      system: string;
+      as_output_strict: number;
+      as_output_loose: number;
+      normalized_strict: number;
+      normalized_loose: number;
+      footnotes_in_order: number | null;
+      bakeoff_normalized_strict: number | null;
+    }[];
+  } | null;
+  gold?: {
+    pages: number;
+    finalized: number;
+    words: number;
+    auto_accepted: number;
+    human_decisions: number;
+    typed_corrections: number;
+    auto_equivalent: number;
+    reviewers: string[];
+    spotcheck: Record<string, { checked: number; wrong: number }>;
+  };
+};
+
+const HELD_AR: Record<string, string> = {
+  "Gemini 3.1 Pro + prompt v2 (Asool's parser)": "Gemini 3.1 Pro + التعليمات v2 (محلل أصول)",
+  "Gemini 3.1 Pro + prompt v1": "Gemini 3.1 Pro + التعليمات v1",
+  "Gemini 3.5 Flash (free tier)": "Gemini 3.5 Flash",
+  "Asool final index (after fusion, splits, corrections)": "فهرس أصول النهائي (بعد الدمج والتصحيح وترتيب الحواشي)",
+  "Tesseract ara (baseline)": "Tesseract (الأساس)",
+};
+const SPOT_AR: Record<string, string> = {
+  agree: "كلمات اتفقت عليها القراءات الثلاث",
+  abstain: "كلمات حُسم تشكيلها بعد امتناع قارئ",
+  abstain_a: "كلمات حُسمت بعد امتناع Tesseract",
 };
 
 const NAMES: Record<string, string> = {
@@ -124,6 +160,74 @@ export default function ProofPage() {
         )}
       </section>
 
+      {sum?.gold && (
+        <section className="mt-10">
+          <h2 className="text-xl font-semibold">مجموعة المرجع: المراجعة البشرية</h2>
+          <p className="mt-1 text-sm text-muted">
+            {ar(sum.gold.finalized)} صفحة معتمدة من {ar(sum.gold.pages)}، المراجِعة: {sum.gold.reviewers.join("، ")}. الكلمات: {ar(sum.gold.words)}؛ المقبولة تلقائيًا باتفاق القراءات: {ar(sum.gold.auto_accepted)}؛ قرارات بشرية: {ar(sum.gold.human_decisions)} (منها {ar(sum.gold.typed_corrections)} تصحيحًا كُتب يدويًا)؛ قراءات متكافئة قُبلت آليًا (فرق مسافات أو ترتيب علامات فقط): {ar(sum.gold.auto_equivalent)}.
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-line">
+                  <th className="py-1 text-start">عينة التحقق العشوائية</th>
+                  <th>فُحص</th>
+                  <th>خطأ</th>
+                  <th>نسبة الخطأ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(sum.gold.spotcheck).map(([k, v]) => (
+                  <tr key={k} className="border-b border-line/60">
+                    <td className="py-1">{SPOT_AR[k] ?? k}</td>
+                    <td className="text-center tabular-nums">{ar(v.checked)}</td>
+                    <td className="text-center tabular-nums">{ar(v.wrong)}</td>
+                    <td className="text-center tabular-nums">{pct(v.checked ? v.wrong / v.checked : 0)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {sum?.heldout && (
+        <section className="mt-10">
+          <h2 className="text-xl font-semibold">١ب. إعادة القياس على {ar(sum.heldout.pages)} صفحة محجوزة لم يُختر عليها النموذج</h2>
+          <p className="mt-1 text-sm text-muted">
+            نسبة خطأ الحروف (الأقل أفضل). «كما أخرجه النظام»: بترتيب النص الذي أخرجه، كما في جدول اختيار النموذج. «بعد توحيد ترتيب الحواشي»: الحواشي بترتيب أرقامها في المرجع وفي كل نظام، فيقيس دقة القراءة وحدها. Tesseract نص مسطح لا يمكن ترتيبه.
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-line">
+                  <th className="py-1 text-start">النظام</th>
+                  <th>كما أخرجه: مع التشكيل</th>
+                  <th>كما أخرجه: بلا تشكيل</th>
+                  <th>بعد التوحيد: مع التشكيل</th>
+                  <th>بعد التوحيد: بلا تشكيل</th>
+                  <th>الحواشي بترتيب القراءة</th>
+                  <th>صفحات الاختيار الثلاث (بعد التوحيد)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sum.heldout.rows.map((r) => (
+                  <tr key={r.system} className="border-b border-line/60">
+                    <td className="py-1">{HELD_AR[r.system] ?? r.system}</td>
+                    <td className="text-center tabular-nums">{pct(r.as_output_strict)}</td>
+                    <td className="text-center tabular-nums">{pct(r.as_output_loose)}</td>
+                    <td className="text-center tabular-nums">{pct(r.normalized_strict)}</td>
+                    <td className="text-center tabular-nums">{pct(r.normalized_loose)}</td>
+                    <td className="text-center tabular-nums">{r.footnotes_in_order == null ? "—" : pct(r.footnotes_in_order)}</td>
+                    <td className="text-center tabular-nums">{r.bakeoff_normalized_strict == null ? "—" : pct(r.bakeoff_normalized_strict)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
       <section className="mt-10">
         <h2 className="text-xl font-semibold">٢. أخطاء حقيقية اكتشفها النظام بنفسه</h2>
         <p className="mt-1 text-sm text-muted">
@@ -208,7 +312,7 @@ export default function ProofPage() {
           <h2 className="text-xl font-semibold">الحدود</h2>
           <ul className="mt-2 list-disc space-y-1 ps-5 text-sm leading-relaxed">
             <li>مدونة صغيرة (٣٠ صفحة) وكتاب واحد في نوع واحد.</li>
-            <li>اختير النموذج بناءً على ٣ صفحات، وقِيس تحسين التعليمات على الصفحات نفسها، ويُعاد قياسه على ١٢ صفحة محجوزة.</li>
+            <li>اختير النموذج وحُسّنت التعليمات على ٣ صفحات؛ وأُعيد القياس على ١٢ صفحة محجوزة: تحسّن دقة القراءة ثبت، أما ترتيب الحواشي ذات العمودين فلم يثبت، فصار يُرتَّب آليًا بأرقام الحواشي.</li>
             <li>درجات Claude منحازة لأنه كان القراءة المحورية في مجموعة المرجع.</li>
             <li>فحص الاكتمال لا يكشف نقصًا أقصر من سطر مطبوع.</li>
           </ul>

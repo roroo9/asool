@@ -15,139 +15,522 @@
   39
  ],
  "pending": [],
+ "note": "as_output = text in the order the system produced it (order-sensitive, like the bake-off); layout_normalized = footnotes in marker order after the main text, for the gold and every structured system alike (reading accuracy only). Tesseract is plain text and cannot be reordered.",
+ "systems": {
+  "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
+   "label": "Gemini 3.1 Pro + prompt v2 (Asool's parser)",
+   "pages": 12,
+   "as_output": {
+    "cer_strict": 0.06507266732190424,
+    "cer_loose": 0.03935789134575366,
+    "wer_loose": 0.06625181239058239,
+    "footnote_f1": 0.9566943949296891
+   },
+   "layout_normalized": {
+    "cer_strict": 0.03529788530815412,
+    "cer_loose": 0.004756763752572707,
+    "wer_loose": 0.027778887153689626,
+    "footnote_f1": 0.9566943949296891
+   },
+   "footnotes_in_reading_order": 0.5833333333333334,
+   "type_acc": 0.9864661123588031,
+   "bakeoff_layout_normalized": {
+    "cer_strict": 0.022336756079430982,
+    "cer_loose": 0.003801495481423086,
+    "wer_loose": 0.032684898004340705,
+    "footnote_f1": 1.0
+   }
+  },
+  "openrouter:google/gemini-3.1-pro-preview": {
+   "label": "Gemini 3.1 Pro + prompt v1",
+   "pages": 12,
+   "as_output": {
+    "cer_strict": 0.07253980067831563,
+    "cer_loose": 0.02694420152594433,
+    "wer_loose": 0.05457406437559871,
+    "footnote_f1": 0.9650277282630224
+   },
+   "layout_normalized": {
+    "cer_strict": 0.05586373552129443,
+    "cer_loose": 0.007513268070801593,
+    "wer_loose": 0.03159657943948307,
+    "footnote_f1": 0.9650277282630224
+   },
+   "footnotes_in_reading_order": 0.75,
+   "type_acc": 0.9298931424553392,
+   "bakeoff_layout_normalized": {
+    "cer_strict": 0.04258477176898111,
+    "cer_loose": 0.003540467029321807,
+    "wer_loose": 0.030090864281902316,
+    "footnote_f1": 1.0
+   }
+  },
+  "gemini-3.5-flash": {
+   "label": "Gemini 3.5 Flash (free tier)",
+   "pages": 12,
+   "as_output": {
+    "cer_strict": 0.08651971686543365,
+    "cer_loose": 0.017047911013912547,
+    "wer_loose": 0.05125809087118181,
+    "footnote_f1": 0.9407630223806694
+   },
+   "layout_normalized": {
+    "cer_strict": 0.07707119252933768,
+    "cer_loose": 0.006605122922473932,
+    "wer_loose": 0.039245820580765825,
+    "footnote_f1": 0.9407630223806694
+   },
+   "footnotes_in_reading_order": 0.8333333333333334,
+   "type_acc": 0.7722678034698718,
+   "bakeoff_layout_normalized": {
+    "cer_strict": 0.09947684311888243,
+    "cer_loose": 0.036081402571592674,
+    "wer_loose": 0.06214238246370793,
+    "footnote_f1": 0.9583333333333334
+   }
+  },
+  "asool-index": {
+   "label": "Asool final index (after fusion, splits, corrections)",
+   "pages": 12,
+   "as_output": {
+    "cer_strict": 0.043699119092594066,
+    "cer_loose": 0.016888044939879034,
+    "wer_loose": 0.041672444068559356,
+    "footnote_f1": 0.9615963557140028
+   },
+   "layout_normalized": {
+    "cer_strict": 0.034656480137441666,
+    "cer_loose": 0.004094174557873421,
+    "wer_loose": 0.027064601439403913,
+    "footnote_f1": 0.9615963557140028
+   },
+   "footnotes_in_reading_order": 1.0,
+   "type_acc": 0.9864661123588031,
+   "bakeoff_layout_normalized": {
+    "cer_strict": 0.022336756079430982,
+    "cer_loose": 0.003801495481423086,
+    "wer_loose": 0.032684898004340705,
+    "footnote_f1": 1.0
+   }
+  },
+  "tesseract-ara": {
+   "label": "Tesseract ara (baseline)",
+   "pages": 12,
+   "as_output": {
+    "cer_strict": 0.2789088788753961,
+    "cer_loose": 0.20837110346311655,
+    "wer_loose": 0.5449393715314466,
+    "footnote_f1": 0.0
+   },
+   "layout_normalized": {
+    "cer_strict": 0.27968304388313775,
+    "cer_loose": 0.2092513851532574,
+    "wer_loose": 0.5457510598431349,
+    "footnote_f1": 0.0
+   },
+   "bakeoff_layout_normalized": {
+    "cer_strict": 0.35069583048227565,
+    "cer_loose": 0.2845138375076443,
+    "wer_loose": 0.6163576884048831,
+    "footnote_f1": 0.0
+   }
+  }
+ },
  "asool": {
-  "cer_strict": 0.06443126215119178,
-  "cer_loose": 0.03869530215105438,
-  "wer_loose": 0.06553752667629668,
-  "footnote_f1": 0.9615963557140028,
-  "type_acc": 0.9864661123588031
+  "cer_strict": 0.034656480137441666,
+  "cer_loose": 0.004094174557873421,
+  "wer_loose": 0.027064601439403913,
+  "footnote_f1": 0.9615963557140028
  },
  "baseline": {
   "cer_strict": 0.2789088788753961,
   "cer_loose": 0.20837110346311655,
   "wer_loose": 0.5449393715314466,
-  "footnote_f1": 0.0,
-  "type_acc": null
+  "footnote_f1": 0.0
  },
  "per_page": {
   "12": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.3267175572519084,
+    "cer_loose": 0.22338568935427575,
+    "cer_strict_normalized": 0.3267175572519084,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.11526717557251909,
+    "cer_loose": 0.0881326352530541,
+    "cer_strict_normalized": 0.04122137404580153,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.3267175572519084,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.042748091603053436,
+    "cer_loose": 0.0034904013961605585,
+    "cer_strict_normalized": 0.042748091603053436,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.05801526717557252,
+    "cer_loose": 0.006980802792321117,
+    "cer_strict_normalized": 0.05801526717557252,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.04122137404580153,
+    "cer_loose": 0.0034904013961605585,
+    "cer_strict_normalized": 0.04122137404580153,
+    "f1": 1.0
    }
   },
   "14": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.22230164403145103,
+    "cer_loose": 0.1682872101720269,
+    "cer_strict_normalized": 0.22230164403145103,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.032880629020729094,
+    "cer_loose": 0.004487658937920718,
+    "cer_strict_normalized": 0.032880629020729094,
     "f1": 0.8888888888888888
    },
-   "baseline": {
-    "cer_strict": 0.22230164403145103,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.11579699785561115,
+    "cer_loose": 0.055347793567688854,
+    "cer_strict_normalized": 0.09649749821300929,
+    "f1": 0.8888888888888888
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.09220872051465333,
+    "cer_loose": 0.0037397157816005983,
+    "cer_strict_normalized": 0.09220872051465333,
+    "f1": 0.8888888888888888
+   },
+   "asool-index": {
+    "cer_strict": 0.032880629020729094,
+    "cer_loose": 0.004487658937920718,
+    "cer_strict_normalized": 0.032880629020729094,
+    "f1": 0.8888888888888888
    }
   },
   "16": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.20939597315436242,
+    "cer_loose": 0.1562280084447572,
+    "cer_strict_normalized": 0.20939597315436242,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.07651006711409396,
+    "cer_loose": 0.06544686840253343,
+    "cer_strict_normalized": 0.018120805369127517,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.20939597315436242,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.07718120805369127,
+    "cer_loose": 0.06474313863476425,
+    "cer_strict_normalized": 0.018120805369127517,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.09328859060402685,
+    "cer_loose": 0.06052076002814919,
+    "cer_strict_normalized": 0.042281879194630875,
+    "f1": 0.75
+   },
+   "asool-index": {
+    "cer_strict": 0.03422818791946309,
+    "cer_loose": 0.02674173117522871,
+    "cer_strict_normalized": 0.018120805369127517,
+    "f1": 1.0
    }
   },
   "18": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.30726256983240224,
+    "cer_loose": 0.21979734996102884,
+    "cer_strict_normalized": 0.30726256983240224,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.034217877094972066,
+    "cer_loose": 0.019485580670303974,
+    "cer_strict_normalized": 0.02164804469273743,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.30726256983240224,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.04259776536312849,
+    "cer_loose": 0.02338269680436477,
+    "cer_strict_normalized": 0.030027932960893854,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.037011173184357544,
+    "cer_loose": 0.005455962587685113,
+    "cer_strict_normalized": 0.037011173184357544,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.034217877094972066,
+    "cer_loose": 0.019485580670303974,
+    "cer_strict_normalized": 0.02164804469273743,
+    "f1": 1.0
    }
   },
   "22": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.22209631728045326,
+    "cer_loose": 0.19253554502369669,
+    "cer_strict_normalized": 0.22209631728045326,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.04985835694050991,
+    "cer_loose": 0.032582938388625596,
+    "cer_strict_normalized": 0.027762039660056657,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.22209631728045326,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.054957507082152975,
+    "cer_loose": 0.035545023696682464,
+    "cer_strict_normalized": 0.03286118980169972,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.04815864022662889,
+    "cer_loose": 0.00533175355450237,
+    "cer_strict_normalized": 0.04815864022662889,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.04985835694050991,
+    "cer_loose": 0.032582938388625596,
+    "cer_strict_normalized": 0.027762039660056657,
+    "f1": 1.0
    }
   },
   "24": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.2726072607260726,
+    "cer_loose": 0.21078779276082327,
+    "cer_strict_normalized": 0.2726072607260726,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.06072607260726073,
+    "cer_loose": 0.032647267565649396,
+    "cer_strict_normalized": 0.033003300330033,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.2726072607260726,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.08448844884488449,
+    "cer_loose": 0.0319375443577005,
+    "cer_strict_normalized": 0.05676567656765676,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.1042904290429043,
+    "cer_loose": 0.0042583392476933995,
+    "cer_strict_normalized": 0.1042904290429043,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.033003300330033,
+    "cer_loose": 0.0028388928317956,
+    "cer_strict_normalized": 0.033003300330033,
+    "f1": 1.0
    }
   },
   "26": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.3175765645805593,
+    "cer_loose": 0.26021505376344084,
+    "cer_strict_normalized": 0.3175765645805593,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.061917443408788284,
+    "cer_loose": 0.03942652329749104,
+    "cer_strict_normalized": 0.03861517976031957,
     "f1": 0.9090909090909091
    },
-   "baseline": {
-    "cer_strict": 0.3175765645805593,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.041944074567243674,
+    "cer_loose": 0.0064516129032258064,
+    "cer_strict_normalized": 0.041944074567243674,
+    "f1": 0.9090909090909091
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.10252996005326231,
+    "cer_loose": 0.00931899641577061,
+    "cer_strict_normalized": 0.10252996005326231,
+    "f1": 0.9090909090909091
+   },
+   "asool-index": {
+    "cer_strict": 0.061917443408788284,
+    "cer_loose": 0.03942652329749104,
+    "cer_strict_normalized": 0.03861517976031957,
+    "f1": 0.9090909090909091
    }
   },
   "28": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.39209332469215813,
+    "cer_loose": 0.28045977011494255,
+    "cer_strict_normalized": 0.39209332469215813,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.049902786779001944,
+    "cer_loose": 0.006130268199233717,
+    "cer_strict_normalized": 0.049902786779001944,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.39209332469215813,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.084899546338302,
+    "cer_loose": 0.0053639846743295016,
+    "cer_strict_normalized": 0.084899546338302,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.09462086843810759,
+    "cer_loose": 0.016091954022988506,
+    "cer_strict_normalized": 0.09462086843810759,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.049902786779001944,
+    "cer_loose": 0.006130268199233717,
+    "cer_strict_normalized": 0.049902786779001944,
+    "f1": 1.0
    }
   },
   "33": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.23025879230258792,
+    "cer_loose": 0.16338028169014085,
+    "cer_strict_normalized": 0.23954877239548772,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.08891838088918382,
+    "cer_loose": 0.07464788732394366,
+    "cer_strict_normalized": 0.025879230258792303,
     "f1": 0.8000000000000002
    },
-   "baseline": {
-    "cer_strict": 0.23025879230258792,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.0325149303251493,
+    "cer_loose": 0.0028169014084507044,
+    "cer_strict_normalized": 0.0325149303251493,
+    "f1": 0.9
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.11877903118779032,
+    "cer_loose": 0.07323943661971831,
+    "cer_strict_normalized": 0.05640345056403451,
+    "f1": 0.8000000000000002
+   },
+   "asool-index": {
+    "cer_strict": 0.025879230258792303,
+    "cer_loose": 0.0035211267605633804,
+    "cer_strict_normalized": 0.025879230258792303,
+    "f1": 0.8000000000000002
    }
   },
   "35": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.3017667844522968,
+    "cer_loose": 0.21450381679389313,
+    "cer_strict_normalized": 0.3017667844522968,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.111660777385159,
+    "cer_loose": 0.0732824427480916,
+    "cer_strict_normalized": 0.045229681978798585,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.3017667844522968,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.14487632508833923,
+    "cer_loose": 0.0648854961832061,
+    "cer_strict_normalized": 0.08551236749116607,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.11731448763250883,
+    "cer_loose": 0.006870229007633588,
+    "cer_strict_normalized": 0.11731448763250883,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.06996466431095406,
+    "cer_loose": 0.03587786259541985,
+    "cer_strict_normalized": 0.045229681978798585,
+    "f1": 1.0
    }
   },
   "37": {
-   "asool": {
+   "tesseract-ara": {
+    "cer_strict": 0.3080032336297494,
+    "cer_loose": 0.22922134733158356,
+    "cer_strict_normalized": 0.3080032336297494,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
     "cer_strict": 0.0646725949878739,
+    "cer_loose": 0.020122484689413824,
+    "cer_strict_normalized": 0.0549717057396928,
     "f1": 1.0
    },
-   "baseline": {
-    "cer_strict": 0.3080032336297494,
-    "f1": 0.0
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.06143896523848019,
+    "cer_loose": 0.006124234470691163,
+    "cer_strict_normalized": 0.06143896523848019,
+    "f1": 1.0
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.12287793047696038,
+    "cer_loose": 0.007874015748031496,
+    "cer_strict_normalized": 0.12287793047696038,
+    "f1": 1.0
+   },
+   "asool-index": {
+    "cer_strict": 0.0646725949878739,
+    "cer_loose": 0.020122484689413824,
+    "cer_strict_normalized": 0.0549717057396928,
+    "f1": 1.0
    }
   },
   "39": {
-   "asool": {
-    "cer_strict": 0.02664298401420959,
+   "tesseract-ara": {
+    "cer_strict": 0.23682652457075193,
+    "cer_loose": 0.181651376146789,
+    "cer_strict_normalized": 0.23682652457075193,
+    "f1": 0.0
+   },
+   "openrouter:google/gemini-3.1-pro-preview@page_parse.v2": {
+    "cer_strict": 0.03433984606275903,
+    "cer_loose": 0.015902140672782873,
+    "cer_strict_normalized": 0.03433984606275903,
+    "f1": 0.8823529411764706
+   },
+   "openrouter:google/gemini-3.1-pro-preview": {
+    "cer_strict": 0.08703374777975133,
+    "cer_loose": 0.023241590214067277,
+    "cer_strict_normalized": 0.08703374777975133,
+    "f1": 0.8823529411764706
+   },
+   "gemini-3.5-flash": {
+    "cer_strict": 0.04914150384843102,
+    "cer_loose": 0.004892966360856269,
+    "cer_strict_normalized": 0.04914150384843102,
     "f1": 0.9411764705882353
    },
-   "baseline": {
-    "cer_strict": 0.23682652457075193,
-    "f1": 0.0
+   "asool-index": {
+    "cer_strict": 0.02664298401420959,
+    "cer_loose": 0.007951070336391437,
+    "cer_strict_normalized": 0.02664298401420959,
+    "f1": 0.9411764705882353
    }
   }
  }
