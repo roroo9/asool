@@ -30,6 +30,19 @@ SAHIHAYN_RE = re.compile(r"متفق|البخار|مسلم|إماما المحد�
 START_RE = re.compile(r"^\s*(و?عن|و?روينا)\s")  # «وفى رواية» = variant of the same unit
 
 
+def sahihayn_label(takhrij: str | None) -> str:
+    """Exact Sahihayn source from al-Nawawi's printed takhrij (owner rule, GATE 4 round 2)."""
+    n = normalize(takhrij or "", "cer_loose")
+    if "متفق" in n:
+        return "في الصحيحين (متفق عليه)"
+    bukhari, muslim = "البخار" in n, "مسلم" in n
+    if bukhari and muslim or "اماما المحدثين" in n:
+        return "في الصحيحين (رواه البخاري ومسلم)"
+    if bukhari:
+        return "في صحيح البخاري"
+    return "في صحيح مسلم"
+
+
 def classify_takhrij(takhrij: str | None) -> str:
     if not takhrij:
         return "unknown"
@@ -196,7 +209,7 @@ def units(blocks: list[dict], match_fn=None) -> list[dict]:
         if kind == "in_sahihayn":
             rec.update(
                 grading_status="in_sahihayn",
-                grading="في الصحيحين",
+                grading=sahihayn_label(u["takhrij"]),
                 grading_source="تخريج الإمام النووي المطبوع",
             )
             res.append(rec)

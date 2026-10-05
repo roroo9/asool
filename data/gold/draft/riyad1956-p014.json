@@ -3153,7 +3153,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "، وإنك",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.213267+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p014-r040",
@@ -4699,5 +4702,6 @@
    "fix": null
   }
  ],
- "structure_reviewed": false
+ "structure_reviewed": false,
+ "auto_resolved_equivalent": 1
 }

@@ -29,7 +29,7 @@ _lock = threading.Lock()
 DB = DATA / "asool.db"
 
 STATUS_AR = {
-    "in_sahihayn": "في الصحيحين",
+    "in_sahihayn": "في الصحيحين أو أحدهما (بحسب تخريج المصنف)",
     "hadeethenc": "حكم موسوعة الأحاديث النبوية",
     "hadeethenc_pending": "مطابقة غير مؤكدة: تحتاج تأكيدك",
     "dorar_manual": "حكم من الدرر السنية (إدخال يدوي)",

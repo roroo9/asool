@@ -5,6 +5,23 @@ import { ar } from "@/lib/api";
 import { useT } from "@/lib/i18n";
 import type { Hadith, QuranRef } from "@/lib/types";
 
+/** Compact verse badge: surah:ayah + verification status, linking to Quranpedia. */
+export function VerseChip({ q }: { q: QuranRef }) {
+  const exact = q.match_type === "exact";
+  const url = q.quranpedia_url ?? `https://quranpedia.net/surah/${q.surah}/${q.ayah_start}`;
+  const range = q.ayah_end !== q.ayah_start ? `${ar(q.ayah_start)}–${ar(q.ayah_end)}` : ar(q.ayah_start);
+  const cls = exact
+    ? "bg-thread/20 text-thread-strong"
+    : q.match_type === "minor_variant"
+      ? "bg-amber/25 text-amber-ink"
+      : "bg-madder/15 text-madder";
+  return (
+    <a href={url} target="_blank" rel="noreferrer" className={`inline-block whitespace-nowrap rounded px-2 py-0.5 text-xs font-medium ${cls}`}>
+      آية · سورة {ar(q.surah)}: {range} · {exact ? "✓ مطابقة للمصحف" : q.match_type === "minor_variant" ? "⚠ فرق يسير" : "✗ لا تطابق المصحف"} ↗
+    </a>
+  );
+}
+
 export function QuranCheck({ q }: { q: QuranRef }) {
   const exact = q.match_type === "exact";
   const url = q.quranpedia_url ?? `https://quranpedia.net/surah/${q.surah}/${q.ayah_start}`;

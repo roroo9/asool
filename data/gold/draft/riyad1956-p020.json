@@ -5609,5 +5609,6 @@
   }
  ],
  "structure_reviewed": false,
- "locator": "gold_locate v2 (word-level, honest uncertainty)"
+ "locator": "gold_locate v2 (word-level, honest uncertainty)",
+ "auto_resolved_equivalent": 0
 }

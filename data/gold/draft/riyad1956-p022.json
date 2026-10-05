@@ -2496,7 +2496,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "،",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.217381+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p022-r023",
@@ -3181,7 +3184,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "،",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.217426+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p022-r038",
@@ -4963,5 +4969,6 @@
    "fix": null
   }
  ],
- "structure_reviewed": false
+ "structure_reviewed": false,
+ "auto_resolved_equivalent": 2
 }

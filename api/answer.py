@@ -30,7 +30,7 @@ from pipeline.normalize import normalize
 PROMPTS = Path(__file__).parent / "prompts"
 CACHE = ROOT / "data" / "answers"  # committed: precomputed answers survive redeploys
 CLASSIFY_V = "level_classify.v1"
-ANSWER_V = "answer.v2"
+ANSWER_V = "answer.v3"
 GLOSSARY = json.loads((ROOT / "data" / "reference" / "glossary.json").read_text())["terms"]
 
 ABSTAIN_AR = "لم يُعثَر في المصادر المتاحة على ما يكفي للإجابة عن هذا السؤال."
@@ -324,6 +324,45 @@ def _passages_for(hits, terms) -> list[dict]:
     return out
 
 
+NEIGHBOR_TOP, NEIGHBOR_WINDOW, NEIGHBOR_MAX = 2, 2, 3
+
+
+def _neighbors(passages: list[dict], terms) -> list[dict]:
+    """Add the neighbouring units of the best hits: same chapter, same printed page, within
+    two units. Several conditions or limits for one ruling are often stated in consecutive
+    hadiths (p.19: «ما لم يغرغر», then «قبل أن تطلع الشمس من مغربها») that share no words
+    with the question, so retrieval alone misses them."""
+    have = {p["id"] for p in passages}
+    out: list[dict] = []
+    for p in passages[:NEIGHBOR_TOP]:
+        m = re.search(r"-c(\d+)$", p["id"])
+        if not m or p["kind"] == "baseline":
+            continue
+        n, width = int(m.group(1)), len(m.group(1))
+        pages = {x["id"] for x in p["pages"]}
+        for d in sorted(range(-NEIGHBOR_WINDOW, NEIGHBOR_WINDOW + 1), key=abs):
+            cid = f"{p['id'][: m.start(1)]}{n + d:0{width}d}"
+            if d == 0 or cid in have or len(out) >= NEIGHBOR_MAX:
+                continue
+            q = passage(cid, terms)
+            if (
+                q
+                and q.get("breadcrumb") == p.get("breadcrumb")
+                and q["kind"] == p["kind"]
+                and pages & {x["id"] for x in q["pages"]}
+            ):
+                q["retrieval"] = {
+                    "rrf": None,
+                    "bm25_rank": None,
+                    "dense_rank": None,
+                    "dense_sim": None,
+                    "neighbor_of": p["id"],
+                }
+                out.append(q)
+                have.add(cid)
+    return out
+
+
 def _context(passages: list[dict]) -> str:
     parts = []
     for i, p in enumerate(passages, 1):
@@ -362,7 +401,16 @@ def answer(question: str, *, ip: str = "local", use_cache: bool = True) -> dict:
     qvec = embed_query(question if not cls else f"{question}\n{cls['search_query_ar']}")
     ret = hybrid(question, extra_query=cls["search_query_ar"] if cls else None, qvec=qvec, k=5)
     passages = _passages_for(ret["hits"], ret["terms"])
-    stages.append({"stage": "retrieve", "n": len(passages), "dense": ret["dense_available"]})
+    extra = _neighbors(passages, ret["terms"])
+    passages += extra
+    stages.append(
+        {
+            "stage": "retrieve",
+            "n": len(passages),
+            "neighbors": len(extra),
+            "dense": ret["dense_available"],
+        }
+    )
     base = {
         "question": question,
         "language": lang,

@@ -1778,7 +1778,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "،",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.214264+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p016-r009",
@@ -1818,7 +1821,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "،",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.214272+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p016-r010",
@@ -1903,7 +1909,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "،",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.214280+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p016-r012",
@@ -2834,7 +2843,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "،",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.214338+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p016-r033",
@@ -3582,7 +3594,10 @@
     ]
    ],
    "hint_box": null,
-   "decision": null
+   "decision": "إنه كان",
+   "reviewer": "auto (equivalent readings)",
+   "decided_at": "2026-10-05T03:39:02.214391+00:00",
+   "auto_equivalence": true
   },
   {
    "id": "riyad1956-p016-r050",
@@ -4642,5 +4657,6 @@
    "fix": null
   }
  ],
- "structure_reviewed": false
+ "structure_reviewed": false,
+ "auto_resolved_equivalent": 5
 }

@@ -138,10 +138,16 @@ def build(embed: bool = True) -> None:
             spans = []
             if b["type"] == "quran":
                 spans = [(b["text"], "typed_quran")]
-            elif b.get("author_role") != "editor" and b["type"] in ("body", "hadith"):
-                spans = [(s, "brackets") for s in quran.bracketed_spans(b["text"])]
+            elif b["type"] not in ("page_number", "page_header"):
+                # All text blocks, footnotes and editor commentary included (owner, GATE 4 r2):
+                # verses are often quoted without ﴿ ﴾, especially in the editor's notes.
+                bracketed = quran.bracketed_spans(b["text"])
+                spans = [(s, "brackets") for s in bracketed]
+                inside = " ".join(normalize(s, "quran") for s in bracketed)
                 spans += [
-                    (m.printed_text, "unmarked_3gram") for m in quran.find_unmarked(b["text"])
+                    (m.printed_text, "unmarked_3gram")
+                    for m in quran.find_unmarked(b["text"])
+                    if normalize(m.printed_text, "quran") not in inside
                 ]
             for s, how in spans:
                 m = quran.verify(s)

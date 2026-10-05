@@ -19,6 +19,8 @@ from __future__ import annotations
 import json
 import random
 import re
+import unicodedata
+from datetime import UTC, datetime
 from difflib import SequenceMatcher
 
 from pipeline.config import GOLD, INTER, page_id
@@ -233,6 +235,7 @@ def build_page(printed: int, seed: int = 7) -> dict:
             if r > best_r:
                 best, best_r = tcx, r
         b["type_reader_c"] = best if best_r > 0.5 else None
+    draft["auto_resolved_equivalent"] = auto_resolve_equivalent(draft)
     DRAFT.mkdir(parents=True, exist_ok=True)
     out = DRAFT / f"{pid}.json"
     if out.exists():  # never overwrite human decisions
@@ -241,6 +244,50 @@ def build_page(printed: int, seed: int = 7) -> dict:
             return old
     out.write_text(json.dumps(draft, ensure_ascii=False, indent=1))
     return draft
+
+
+_SP_OPEN = re.compile(r"([(﴿«\[{])\s+")
+_SP_CLOSE = re.compile(r"\s+([)﴾»\]}،؛.:,])")
+_MARK_BEFORE = re.compile(r"\s+(\([\d٠-٩]{1,3}\))")
+_MARK_AFTER = re.compile(r"(\([\d٠-٩]{1,3}\))(?=[^\s)،؛.:,])")
+
+
+def canon(s: str) -> str:
+    """Same printed text, written differently in Unicode: NFC (which also puts combining
+    marks such as shadda + fatha in canonical order) and no whitespace just inside brackets,
+    footnote markers or before punctuation. Spaces between words are kept: «يارسول» vs
+    «يا رسول» is a real difference in the print and stays a human decision."""
+    s = re.sub(r"\s+", " ", unicodedata.normalize("NFC", s)).strip()
+    s = _SP_CLOSE.sub(r"\1", _SP_OPEN.sub(r"\1", s))
+    s = _MARK_BEFORE.sub(r"\1", s)  # «شهدا (٨)» = «شهدا(٨)»
+    return _MARK_AFTER.sub(r"\1 ", s)  # one space after a marker
+
+
+def _letters(s: str) -> str:
+    return re.sub(r"\s", "", normalize(s, "search"))
+
+
+def auto_resolve_equivalent(draft: dict) -> int:
+    """Owner rule (GATE 4 r2): a dispute whose readings differ only by Unicode mark order or
+    whitespace around brackets/markers is not a real dispute. Auto-accept it when B and C are
+    canonically identical and Tesseract either agrees on the letters or gave no reading
+    (rule v3: an absent Tesseract reading abstains). Human decisions are never touched."""
+    n = 0
+    for it in draft["review_items"]:
+        if it["decision"] is not None:
+            continue
+        by = {r: c["text"] for c in it["candidates"] for r in c["readers"]}
+        b, c, a = by.get("B"), by.get("C"), by.get("A")
+        if not b or not c or canon(b) != canon(c):
+            continue
+        if a and _letters(a) != _letters(b):
+            continue
+        it["decision"] = canon(b)
+        it["reviewer"] = "auto (equivalent readings)"
+        it["decided_at"] = datetime.now(UTC).isoformat()
+        it["auto_equivalence"] = True
+        n += 1
+    return n
 
 
 def gold_text(draft: dict) -> list[dict]:

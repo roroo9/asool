@@ -2,14 +2,17 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
-import { HadithBadge, LevelBadge } from "@/components/Bits";
+import { HadithBadge, LevelBadge, VerseChip } from "@/components/Bits";
 import { PageViewer, type PageViewerHandle } from "@/components/PageViewer";
 import { PassageCard } from "@/components/PassageCard";
 import { SearchBox } from "@/components/SearchBox";
 import { SourceThread } from "@/components/SourceThread";
 import { ar, getJSON, postJSON } from "@/lib/api";
 import { useT } from "@/lib/i18n";
-import { blocksForQuote } from "@/lib/norm";
+import { blocksForQuote, norm } from "@/lib/norm";
+
+/** Main-text blocks plus the footnotes attached to a passage (quotes may come from either). */
+const allBlocks = (p: Passage) => [...(p.blocks ?? []), ...(p.footnotes ?? [])];
 import type { AnswerRes, PageData, Passage, SourcePoint } from "@/lib/types";
 
 export default function AskPage() {
@@ -75,8 +78,8 @@ function Ask() {
 
   /** Show a passage (and optionally the block holding a quote) on the original page. */
   const show = useCallback(async (p: Passage, quote?: string, el?: HTMLElement | null, openSheet = false) => {
-    const blocks = p.blocks ?? [];
-    const target = quote ? blocksForQuote(blocks, quote) : blocks.map((b) => b.id);
+    const blocks = allBlocks(p);
+    const target = quote ? blocksForQuote(blocks, quote) : (p.blocks ?? []).map((b) => b.id);
     const pageId = (target.length ? blocks.find((b) => b.id === target[0])?.page_id : null) ?? p.pages[0]?.id;
     if (!pageId) return;
     const pg = await loadPage(pageId);
@@ -116,18 +119,31 @@ function Ask() {
       onBlur: () => setThreadFrom(null),
     };
   };
-  const hadithFor = (pt: SourcePoint) => {
-    const p = byTag(pt.passage);
-    if (!p?.hadith?.length) return null;
-    const ids = blocksForQuote(p.blocks ?? [], pt.quote);
-    return p.hadith.find((h) => h.block_ids?.some((b) => ids.includes(b))) ?? null;
-  };
-  const pageFor = (pt: SourcePoint) => {
+  /** Where a quote comes from: its block(s), page, author, hadith grading and verses. */
+  const quoteInfo = (pt: SourcePoint) => {
     const p = byTag(pt.passage);
     if (!p) return null;
-    const ids = blocksForQuote(p.blocks ?? [], pt.quote);
-    const b = (p.blocks ?? []).find((x) => x.id === ids[0]);
-    return p.pages.find((x) => x.id === b?.page_id) ?? p.pages[0];
+    const all = allBlocks(p);
+    const ids = blocksForQuote(all, pt.quote);
+    const b = all.find((x) => x.id === ids[0]);
+    const origin = !b
+      ? null
+      : b.type === "footnote"
+        ? "حاشية المحقق"
+        : b.type === "editor_commentary" || b.author_role === "editor"
+          ? "تعليق المحقق"
+          : "متن الإمام النووي";
+    const qn = norm(pt.quote);
+    return {
+      page: p.pages.find((x) => x.id === b?.page_id) ?? p.pages[0],
+      origin,
+      hadith: p.hadith?.find((h) => h.block_ids?.some((x) => ids.includes(x))) ?? null,
+      verses: (p.quran ?? []).filter((v) => {
+        if (!ids.includes(v.block_id)) return false;
+        const vn = norm(v.printed_text);
+        return qn.includes(vn) || vn.includes(qn) || vn.split(" ").filter((w) => qn.split(" ").includes(w)).length >= 3;
+      }),
+    };
   };
 
   const pagePane = page && (
@@ -195,8 +211,9 @@ function Ask() {
                 </div>
                 <ul className="mt-3 grid gap-3">
                   {data.answer.source_points.map((pt, i) => {
-                    const pg = pageFor(pt);
-                    const h = hadithFor(pt);
+                    const info = quoteInfo(pt);
+                    const pg = info?.page;
+                    const h = info?.hadith;
                     return (
                       <li key={i}>
                         <button
@@ -205,6 +222,11 @@ function Ask() {
                           className="group w-full rounded-lg p-2 text-start hover:bg-thread/10 focus:bg-thread/10"
                           aria-label={`عرض موضع النص في الصفحة ${pg ? ar(pg.printed) : ""}`}
                         >
+                          {info?.origin && (
+                            <span className={`mb-1 inline-block rounded px-1.5 py-0.5 text-xs ${info.origin === "متن الإمام النووي" ? "bg-thread/10 text-thread-strong" : "border border-line text-muted"}`}>
+                              {info.origin}
+                            </span>
+                          )}
                           <span className="source-text block text-lg">
                             «{pt.quote}»{" "}
                             <span className="inline-block whitespace-nowrap rounded border border-thread/60 px-1.5 py-0.5 align-middle font-sans text-xs text-thread-strong">
@@ -217,22 +239,20 @@ function Ask() {
                             <HadithBadge h={h} />
                           </div>
                         )}
+                        {info?.verses.map((v, k) => (
+                          <div key={k} className="ps-2 pt-1">
+                            <VerseChip q={v} />
+                          </div>
+                        ))}
                       </li>
                     );
                   })}
                 </ul>
                 <div className="mt-4 border-t border-line pt-3">
                   <h3 className="text-sm font-medium text-muted">{t("clarification")}</h3>
-                  <ul className="mt-1 list-disc space-y-1 ps-5 leading-loose text-foreground/85">
-                    {data.answer.source_points.map((pt, i) => (
-                      <li key={i}>{pt.text}</li>
-                    ))}
-                  </ul>
-                  {data.answer.explanation && (
-                    <p className="mt-2 leading-loose text-foreground/85">
-                      {data.answer.explanation.replace(/\s*\[P\d+\]/g, "")}
-                    </p>
-                  )}
+                  <p className="mt-1 leading-loose text-foreground/85">
+                    {(data.answer.explanation || data.answer.source_points.map((pt) => pt.text).join(" ")).replace(/\s*\[P\d+(?:\s*[,،]\s*P\d+)*\]/g, "")}
+                  </p>
                 </div>
                 {data.answer.disagreement_noted && (
                   <p className="mt-2 text-sm text-amber-ink">في المسألة خلاف نقلته النصوص؛ عُرضت الأقوال دون ترجيح.</p>

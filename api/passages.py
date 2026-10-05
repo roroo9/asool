@@ -91,9 +91,10 @@ def passage(
         )
         links = [dict(r) for r in con.execute(q, block_ids)]
     qrefs = []
-    if block_ids:
-        q = f"SELECT * FROM quran_refs WHERE block_id IN ({','.join('?' * len(block_ids))})"
-        for r in con.execute(q, block_ids):
+    q_ids = block_ids + fn_ids  # verses quoted inside footnotes count too (often unmarked)
+    if q_ids:
+        q = f"SELECT * FROM quran_refs WHERE block_id IN ({','.join('?' * len(q_ids))})"
+        for r in con.execute(q, q_ids):
             qrefs.append(
                 {
                     "block_id": r["block_id"],
