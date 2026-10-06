@@ -2,7 +2,7 @@
 
 **Verifiable answers from trusted Islamic books, traced to the exact line on the printed page.**
 
-Asool turns scanned pages of a classical Islamic book into structured, searchable knowledge. A researcher, teacher or person presenting Islam asks a question in Arabic or English. Asool answers **only with word-for-word quotations from the book**. Each quotation is linked to its highlighted lines on the original page image, with the editor's footnotes attached, Quranic verses checked against the King Fahd Complex Mushaf, and hadith gradings taken only from approved sources. When the book does not answer, Asool says so. When a question needs a mufti, it refers the user to one.
+Asool is a B2B2C platform that turns scanned pages of a classical Islamic book into structured, searchable knowledge. A researcher, teacher or person presenting Islam asks a question in Arabic or English. Asool answers **only with word-for-word quotations from the book**. Each quotation is linked to its highlighted lines on the original page image, with the editor's footnotes attached, Quranic verses checked against the King Fahd Complex Mushaf, and hadith gradings taken only from approved sources. When the book does not answer, Asool says so. When a question needs a mufti, it refers the user to one.
 
 - **Live demo:** https://asool-tawny.vercel.app
 - **API:** https://asool-api-production.up.railway.app (OpenAPI at [`/docs`](https://asool-api-production.up.railway.app/docs))
