@@ -9,264 +9,21 @@
   "language": "ar",
   "quoted_verse": "",
   "asks_for_evidence_text": false,
-  "search_query_ar": "قصص التائبين التوبة النصوح الصادقة في السنة والسير",
+  "search_query_ar": "قصص التائبين وفضل التوبة النصوح الصادقة في السنة",
   "foundational": true,
-  "referral_topic": "concept",
-  "mushaf_query_ar": "قبول التوبة من العباد والتوبة النصوح",
-  "key_terms_ar": [
-   "التوبة"
+  "referral_topics": [
+   "history",
+   "concept"
   ],
-  "reason": "السؤال يطلب قصة عن التوبة الصادقة وهو من الموضوعات الأخلاقية والتربوية الثابتة في الإسلام."
+  "mushaf_query_ar": "فضل التوبة وقبول توبة التائبين الصادقين",
+  "key_terms_ar": [
+   "التوبة",
+   "المغفرة"
+  ],
+  "reason": "السؤال يطلب قصة مشهورة وثابتة عن التوبة الصادقة لترسيخ هذا الخلق الإيماني."
  },
  "quoted_verse_check": null,
  "passages": [
-  {
-   "id": "riyad1956-c019",
-   "kind": "matn",
-   "author_role": "matn",
-   "author_label": "متن الإمام النووي",
-   "breadcrumb": [
-    "رياض الصالحين",
-    "باب التوبة"
-   ],
-   "text": "وعن أبى عبد الرحمن عبدِ اللهِ بنِ عمرَ بنِ الخطاب رضى الله عنهما عن النبى صلى الله عليه وسلم قال\n« إنَّ اللهَ عزَّ وجلَّ يقبلُ توبةَ العبدِ (٦) مالم يغرْغرْ (٧) »\nرواه الترمذى وقال : حديث حسن .",
-   "highlights": [
-    [
-     4,
-     7
-    ],
-    [
-     127,
-     132
-    ]
-   ],
-   "pages": [
-    {
-     "id": "riyad1956-p019",
-     "printed": 19,
-     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 19"
-    }
-   ],
-   "blocks": [
-    {
-     "id": "riyad1956-p019-b12",
-     "page_id": "riyad1956-p019",
-     "type": "body",
-     "author_role": "matn",
-     "text": "وعن أبى عبد الرحمن عبدِ اللهِ بنِ عمرَ بنِ الخطاب رضى الله عنهما عن النبى صلى الله عليه وسلم قال",
-     "bbox": [
-      421,
-      1863,
-      1715,
-      2065
-     ],
-     "rects": [
-      [
-       421,
-       1863,
-       1625,
-       1982
-      ],
-      [
-       1373,
-       1954,
-       1715,
-       2065
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p019-b13",
-     "page_id": "riyad1956-p019",
-     "type": "hadith",
-     "author_role": "matn",
-     "text": "« إنَّ اللهَ عزَّ وجلَّ يقبلُ توبةَ العبدِ (٦) مالم يغرْغرْ (٧) »",
-     "bbox": [
-      562,
-      1954,
-      1197,
-      2065
-     ],
-     "rects": [
-      [
-       562,
-       1954,
-       1197,
-       2065
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 0.99,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p019-b14",
-     "page_id": "riyad1956-p019",
-     "type": "body",
-     "author_role": "matn",
-     "text": "رواه الترمذى وقال : حديث حسن .",
-     "bbox": [
-      1145,
-      2080,
-      1715,
-      2159
-     ],
-     "rects": [
-      [
-       1145,
-       2080,
-       1715,
-       2159
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    }
-   ],
-   "footnotes": [
-    {
-     "id": "riyad1956-p019-b20",
-     "page_id": "riyad1956-p019",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٦) المذنب المكلف",
-     "bbox": [
-      890,
-      2530,
-      1131,
-      2617
-     ],
-     "rects": [
-      [
-       890,
-       2530,
-       1131,
-       2617
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(٦)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 62,
-       "page_id": "riyad1956-p019",
-       "marker": "(٦)",
-       "anchor_block_id": "riyad1956-p019-b13",
-       "anchor_char_offset": 43,
-       "footnote_block_id": "riyad1956-p019-b20",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p019-b21",
-     "page_id": "riyad1956-p019",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٧) تصل روحه حلقومه قال تعالى: وليست التوبة للذين يعملون السيئات حتى إذا حضر أحدهم الموت قال إنى تبت الآن",
-     "bbox": [
-      427,
-      2522,
-      1721,
-      2698
-     ],
-     "rects": [
-      [
-       427,
-       2522,
-       855,
-       2611
-      ],
-      [
-       428,
-       2610,
-       1721,
-       2698
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "(٧)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 63,
-       "page_id": "riyad1956-p019",
-       "marker": "(٧)",
-       "anchor_block_id": "riyad1956-p019-b13",
-       "anchor_char_offset": 60,
-       "footnote_block_id": "riyad1956-p019-b21",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    }
-   ],
-   "quran": [
-    {
-     "block_id": "riyad1956-p019-b21",
-     "surah": 4,
-     "ayah_start": 18,
-     "ayah_end": 18,
-     "match_type": "exact",
-     "similarity": 1.0,
-     "printed_text": "وليست التوبة للذين يعملون السيئات حتى إذا حضر أحدهم الموت قال إنى تبت الآن",
-     "canonical_text": "وَلَيۡسَتِ ٱلتَّوۡبَةُ لِلَّذِينَ يَعۡمَلُونَ ٱلسَّيِّـَٔاتِ حَتَّىٰٓ إِذَا حَضَرَ أَحَدَهُمُ ٱلۡمَوۡتُ قَالَ إِنِّي تُبۡتُ ٱلۡـَٰٔنَ وَلَا ٱلَّذِينَ يَمُوتُونَ وَهُمۡ كُفَّارٌۚ أُوْلَٰٓئِكَ أَعۡتَدۡنَا لَهُمۡ عَذَابًا أَلِيمࣰا ۝١٨",
-     "diff_ops": [],
-     "reference_source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-     "quranpedia_url": "https://quranpedia.net/surah/4/18",
-     "tafsir": {
-      "text": "وليس قَبول التوبة للذين يُصِرُّون على ارتكاب المعاصي، ولا يرجعون إلى ربهم إلى أن تأتيهم سكرات الموت، فيقول أحدهم: إني تبت الآن، كما لا تُقبل توبة الذين يموتون وهم جاحدون، منكرون لوحدانية الله ورسالة رسوله محمد صلى الله عليه وسلم. أولئك المصرُّون على المعاصي إلى أن ماتوا، والجاحدون الذين يموتون وهم كفار، أعتدنا لهم عذابًا موجعًا.",
-      "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-      "url": "https://quranenc.com/ar/browse/arabic_moyassar/4#18"
-     }
-    }
-   ],
-   "hadith": [
-    {
-     "id": "h017-riyad1956-p019-b12",
-     "narrator": "ابي عبد الرحمن عبد الله بن عمر بن الخطاب",
-     "takhrij_printed": "رواه الترمذى وقال : حديث حسن",
-     "grading_status": "hadeethenc",
-     "grading": "حسن",
-     "grading_source": "موسوعة الأحاديث النبوية (HadeethEnc)",
-     "grading_source_url": "https://hadeethenc.com/ar/browse/hadith/4315",
-     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D9%82%D8%A8%D9%84%20%D8%AA%D9%88%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A8%D8%AF%20%D9%85%D8%A7%20%D9%84%D9%85%20%D9%8A%D8%BA%D8%B1%D8%BA%D8%B1",
-     "block_ids": [
-      "riyad1956-p019-b12",
-      "riyad1956-p019-b13",
-      "riyad1956-p019-b14"
-     ]
-    }
-   ],
-   "commentary_on": null,
-   "min_confidence": 0.99,
-   "retrieval": {
-    "rrf": 0.03175,
-    "bm25_rank": 2,
-    "dense_rank": 4,
-    "dense_sim": 0.7158381342887878
-   }
-  },
   {
    "id": "riyad1956-c021",
    "kind": "matn",
@@ -748,10 +505,257 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03175,
-    "bm25_rank": 4,
+    "rrf": 0.03226,
+    "bm25_rank": 2,
     "dense_rank": 2,
-    "dense_sim": 0.7231147885322571
+    "dense_sim": 0.718258798122406
+   }
+  },
+  {
+   "id": "riyad1956-c019",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب التوبة"
+   ],
+   "text": "وعن أبى عبد الرحمن عبدِ اللهِ بنِ عمرَ بنِ الخطاب رضى الله عنهما عن النبى صلى الله عليه وسلم قال\n« إنَّ اللهَ عزَّ وجلَّ يقبلُ توبةَ العبدِ (٦) مالم يغرْغرْ (٧) »\nرواه الترمذى وقال : حديث حسن .",
+   "highlights": [
+    [
+     4,
+     7
+    ],
+    [
+     127,
+     132
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p019",
+     "printed": 19,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 19"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p019-b12",
+     "page_id": "riyad1956-p019",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى عبد الرحمن عبدِ اللهِ بنِ عمرَ بنِ الخطاب رضى الله عنهما عن النبى صلى الله عليه وسلم قال",
+     "bbox": [
+      421,
+      1863,
+      1715,
+      2065
+     ],
+     "rects": [
+      [
+       421,
+       1863,
+       1625,
+       1982
+      ],
+      [
+       1373,
+       1954,
+       1715,
+       2065
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p019-b13",
+     "page_id": "riyad1956-p019",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إنَّ اللهَ عزَّ وجلَّ يقبلُ توبةَ العبدِ (٦) مالم يغرْغرْ (٧) »",
+     "bbox": [
+      562,
+      1954,
+      1197,
+      2065
+     ],
+     "rects": [
+      [
+       562,
+       1954,
+       1197,
+       2065
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p019-b14",
+     "page_id": "riyad1956-p019",
+     "type": "body",
+     "author_role": "matn",
+     "text": "رواه الترمذى وقال : حديث حسن .",
+     "bbox": [
+      1145,
+      2080,
+      1715,
+      2159
+     ],
+     "rects": [
+      [
+       1145,
+       2080,
+       1715,
+       2159
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p019-b20",
+     "page_id": "riyad1956-p019",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٦) المذنب المكلف",
+     "bbox": [
+      890,
+      2530,
+      1131,
+      2617
+     ],
+     "rects": [
+      [
+       890,
+       2530,
+       1131,
+       2617
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٦)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 62,
+       "page_id": "riyad1956-p019",
+       "marker": "(٦)",
+       "anchor_block_id": "riyad1956-p019-b13",
+       "anchor_char_offset": 43,
+       "footnote_block_id": "riyad1956-p019-b20",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p019-b21",
+     "page_id": "riyad1956-p019",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٧) تصل روحه حلقومه قال تعالى: وليست التوبة للذين يعملون السيئات حتى إذا حضر أحدهم الموت قال إنى تبت الآن",
+     "bbox": [
+      427,
+      2522,
+      1721,
+      2698
+     ],
+     "rects": [
+      [
+       427,
+       2522,
+       855,
+       2611
+      ],
+      [
+       428,
+       2610,
+       1721,
+       2698
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٧)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 63,
+       "page_id": "riyad1956-p019",
+       "marker": "(٧)",
+       "anchor_block_id": "riyad1956-p019-b13",
+       "anchor_char_offset": 60,
+       "footnote_block_id": "riyad1956-p019-b21",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [
+    {
+     "block_id": "riyad1956-p019-b21",
+     "surah": 4,
+     "ayah_start": 18,
+     "ayah_end": 18,
+     "match_type": "exact",
+     "similarity": 1.0,
+     "printed_text": "وليست التوبة للذين يعملون السيئات حتى إذا حضر أحدهم الموت قال إنى تبت الآن",
+     "canonical_text": "وَلَيۡسَتِ ٱلتَّوۡبَةُ لِلَّذِينَ يَعۡمَلُونَ ٱلسَّيِّـَٔاتِ حَتَّىٰٓ إِذَا حَضَرَ أَحَدَهُمُ ٱلۡمَوۡتُ قَالَ إِنِّي تُبۡتُ ٱلۡـَٰٔنَ وَلَا ٱلَّذِينَ يَمُوتُونَ وَهُمۡ كُفَّارٌۚ أُوْلَٰٓئِكَ أَعۡتَدۡنَا لَهُمۡ عَذَابًا أَلِيمࣰا ۝١٨",
+     "diff_ops": [],
+     "reference_source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+     "quranpedia_url": "https://quranpedia.net/surah/4/18",
+     "tafsir": {
+      "text": "وليس قَبول التوبة للذين يُصِرُّون على ارتكاب المعاصي، ولا يرجعون إلى ربهم إلى أن تأتيهم سكرات الموت، فيقول أحدهم: إني تبت الآن، كما لا تُقبل توبة الذين يموتون وهم جاحدون، منكرون لوحدانية الله ورسالة رسوله محمد صلى الله عليه وسلم. أولئك المصرُّون على المعاصي إلى أن ماتوا، والجاحدون الذين يموتون وهم كفار، أعتدنا لهم عذابًا موجعًا.",
+      "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
+      "url": "https://quranenc.com/ar/browse/arabic_moyassar/4#18"
+     }
+    }
+   ],
+   "hadith": [
+    {
+     "id": "h017-riyad1956-p019-b12",
+     "narrator": "ابي عبد الرحمن عبد الله بن عمر بن الخطاب",
+     "takhrij_printed": "رواه الترمذى وقال : حديث حسن",
+     "grading_status": "hadeethenc",
+     "grading": "حسن",
+     "grading_source": "موسوعة الأحاديث النبوية (HadeethEnc)",
+     "grading_source_url": "https://hadeethenc.com/ar/browse/hadith/4315",
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D9%82%D8%A8%D9%84%20%D8%AA%D9%88%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A8%D8%AF%20%D9%85%D8%A7%20%D9%84%D9%85%20%D9%8A%D8%BA%D8%B1%D8%BA%D8%B1",
+     "block_ids": [
+      "riyad1956-p019-b12",
+      "riyad1956-p019-b13",
+      "riyad1956-p019-b14"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.99,
+   "retrieval": {
+    "rrf": 0.0315,
+    "bm25_rank": 3,
+    "dense_rank": 4,
+    "dense_sim": 0.7047783136367798
    }
   },
   {
@@ -1333,7 +1337,7 @@
     "rrf": 0.03132,
     "bm25_rank": 1,
     "dense_rank": 7,
-    "dense_sim": 0.7004066109657288
+    "dense_sim": 0.6911722421646118
    }
   },
   {
@@ -4585,10 +4589,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03089,
-    "bm25_rank": 9,
+    "rrf": 0.03068,
+    "bm25_rank": 10,
     "dense_rank": 1,
-    "dense_sim": 0.7312768697738647
+    "dense_sim": 0.7224323749542236
    }
   },
   {
@@ -4731,189 +4735,7 @@
     "rrf": 0.03054,
     "bm25_rank": 6,
     "dense_rank": 5,
-    "dense_sim": 0.7049753665924072
-   }
-  },
-  {
-   "id": "riyad1956-c017",
-   "kind": "matn",
-   "author_role": "matn",
-   "author_label": "متن الإمام النووي",
-   "breadcrumb": [
-    "رياض الصالحين",
-    "باب التوبة"
-   ],
-   "text": "وعن أبى موسى عبدِ اللهِ بنِ قيسٍ الأشعريِّ رضى الله عنه عن النبى صلى الله عليه وسلم قال\n« إنَّ اللهَ تعالى يبسطُ (٥) يدهُ بالليلِ ليتوبَ مسيءُ النهارِ ويبسطُ يدهُ بالنهارِ ليتوبَ مسيءُ الليلِ حتى تطلعَ الشمسُ مِنْ مغربِها »\nرواه مسلم .",
-   "highlights": [
-    [
-     4,
-     7
-    ]
-   ],
-   "pages": [
-    {
-     "id": "riyad1956-p019",
-     "printed": 19,
-     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 19"
-    }
-   ],
-   "blocks": [
-    {
-     "id": "riyad1956-p019-b06",
-     "page_id": "riyad1956-p019",
-     "type": "body",
-     "author_role": "matn",
-     "text": "وعن أبى موسى عبدِ اللهِ بنِ قيسٍ الأشعريِّ رضى الله عنه عن النبى صلى الله عليه وسلم قال",
-     "bbox": [
-      412,
-      1301,
-      1707,
-      1510
-     ],
-     "rects": [
-      [
-       412,
-       1301,
-       1619,
-       1405
-      ],
-      [
-       1502,
-       1403,
-       1707,
-       1510
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p019-b07",
-     "page_id": "riyad1956-p019",
-     "type": "hadith",
-     "author_role": "matn",
-     "text": "« إنَّ اللهَ تعالى يبسطُ (٥) يدهُ بالليلِ ليتوبَ مسيءُ النهارِ ويبسطُ يدهُ بالنهارِ ليتوبَ مسيءُ الليلِ حتى تطلعَ الشمسُ مِنْ مغربِها »",
-     "bbox": [
-      412,
-      1397,
-      1716,
-      1624
-     ],
-     "rects": [
-      [
-       412,
-       1397,
-       1716,
-       1624
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p019-b08",
-     "page_id": "riyad1956-p019",
-     "type": "body",
-     "author_role": "matn",
-     "text": "رواه مسلم .",
-     "bbox": [
-      510,
-      1513,
-      677,
-      1618
-     ],
-     "rects": [
-      [
-       510,
-       1513,
-       677,
-       1618
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    }
-   ],
-   "footnotes": [
-    {
-     "id": "riyad1956-p019-b19",
-     "page_id": "riyad1956-p019",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٥) يتجاوز عز شأنه ويوسع جوده ويعم فضله",
-     "bbox": [
-      420,
-      2439,
-      1726,
-      2612
-     ],
-     "rects": [
-      [
-       420,
-       2439,
-       1726,
-       2612
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(٥)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 61,
-       "page_id": "riyad1956-p019",
-       "marker": "(٥)",
-       "anchor_block_id": "riyad1956-p019-b07",
-       "anchor_char_offset": 25,
-       "footnote_block_id": "riyad1956-p019-b19",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    }
-   ],
-   "quran": [],
-   "hadith": [
-    {
-     "id": "h015-riyad1956-p019-b06",
-     "narrator": "ابي موسي عبد الله بن قيس الاشعري",
-     "takhrij_printed": "رواه مسلم",
-     "grading_status": "in_sahihayn",
-     "grading": "في صحيح مسلم",
-     "grading_source": "تخريج الإمام النووي المطبوع",
-     "grading_source_url": null,
-     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%A8%D8%B3%D8%B7%20%D9%8A%D8%AF%D9%87%20%D8%A8%D8%A7%D9%84%D9%84%D9%8A%D9%84%20%D9%84%D9%8A%D8%AA%D9%88%D8%A8%20%D9%85%D8%B3%D9%8A%D8%A1%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%B1",
-     "block_ids": [
-      "riyad1956-p019-b06",
-      "riyad1956-p019-b07",
-      "riyad1956-p019-b08"
-     ]
-    }
-   ],
-   "commentary_on": null,
-   "min_confidence": 0.85,
-   "retrieval": {
-    "rrf": null,
-    "bm25_rank": null,
-    "dense_rank": null,
-    "dense_sim": null,
-    "neighbor_of": "riyad1956-c019"
+    "dense_sim": 0.6971588730812073
    }
   },
   {
@@ -4950,10 +4772,6 @@
     [
      869,
      879
-    ],
-    [
-     1056,
-     1060
     ],
     [
      1068,
@@ -6734,54 +6552,194 @@
     "dense_sim": null,
     "neighbor_of": "riyad1956-c021"
    }
+  },
+  {
+   "id": "riyad1956-c017",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب التوبة"
+   ],
+   "text": "وعن أبى موسى عبدِ اللهِ بنِ قيسٍ الأشعريِّ رضى الله عنه عن النبى صلى الله عليه وسلم قال\n« إنَّ اللهَ تعالى يبسطُ (٥) يدهُ بالليلِ ليتوبَ مسيءُ النهارِ ويبسطُ يدهُ بالنهارِ ليتوبَ مسيءُ الليلِ حتى تطلعَ الشمسُ مِنْ مغربِها »\nرواه مسلم .",
+   "highlights": [
+    [
+     4,
+     7
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p019",
+     "printed": 19,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 19"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p019-b06",
+     "page_id": "riyad1956-p019",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى موسى عبدِ اللهِ بنِ قيسٍ الأشعريِّ رضى الله عنه عن النبى صلى الله عليه وسلم قال",
+     "bbox": [
+      412,
+      1301,
+      1707,
+      1510
+     ],
+     "rects": [
+      [
+       412,
+       1301,
+       1619,
+       1405
+      ],
+      [
+       1502,
+       1403,
+       1707,
+       1510
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p019-b07",
+     "page_id": "riyad1956-p019",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إنَّ اللهَ تعالى يبسطُ (٥) يدهُ بالليلِ ليتوبَ مسيءُ النهارِ ويبسطُ يدهُ بالنهارِ ليتوبَ مسيءُ الليلِ حتى تطلعَ الشمسُ مِنْ مغربِها »",
+     "bbox": [
+      412,
+      1397,
+      1716,
+      1624
+     ],
+     "rects": [
+      [
+       412,
+       1397,
+       1716,
+       1624
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p019-b08",
+     "page_id": "riyad1956-p019",
+     "type": "body",
+     "author_role": "matn",
+     "text": "رواه مسلم .",
+     "bbox": [
+      510,
+      1513,
+      677,
+      1618
+     ],
+     "rects": [
+      [
+       510,
+       1513,
+       677,
+       1618
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p019-b19",
+     "page_id": "riyad1956-p019",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٥) يتجاوز عز شأنه ويوسع جوده ويعم فضله",
+     "bbox": [
+      420,
+      2439,
+      1726,
+      2612
+     ],
+     "rects": [
+      [
+       420,
+       2439,
+       1726,
+       2612
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٥)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 61,
+       "page_id": "riyad1956-p019",
+       "marker": "(٥)",
+       "anchor_block_id": "riyad1956-p019-b07",
+       "anchor_char_offset": 25,
+       "footnote_block_id": "riyad1956-p019-b19",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h015-riyad1956-p019-b06",
+     "narrator": "ابي موسي عبد الله بن قيس الاشعري",
+     "takhrij_printed": "رواه مسلم",
+     "grading_status": "in_sahihayn",
+     "grading": "في صحيح مسلم",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%A8%D8%B3%D8%B7%20%D9%8A%D8%AF%D9%87%20%D8%A8%D8%A7%D9%84%D9%84%D9%8A%D9%84%20%D9%84%D9%8A%D8%AA%D9%88%D8%A8%20%D9%85%D8%B3%D9%8A%D8%A1%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%B1",
+     "block_ids": [
+      "riyad1956-p019-b06",
+      "riyad1956-p019-b07",
+      "riyad1956-p019-b08"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": null,
+    "bm25_rank": null,
+    "dense_rank": null,
+    "dense_sim": null,
+    "neighbor_of": "riyad1956-c019"
+   }
   }
  ],
  "ai_notice": "أداة بحث مدعومة بالذكاء الاصطناعي؛ نصوص المصدر منقولة حرفيًا من الكتاب ومتحقَّق منها، والإيضاح مولَّد آليًا.",
  "cached": false,
  "external": {
   "items": {
-   "Q1": {
-    "kind": "quran",
-    "surah": 4,
-    "surah_name": "النِّسَاءِ",
-    "ayah": 17,
-    "text": "إِنَّمَا ٱلتَّوۡبَةُ عَلَى ٱللَّهِ لِلَّذِينَ يَعۡمَلُونَ ٱلسُّوٓءَ بِجَهَٰلَةࣲ ثُمَّ يَتُوبُونَ مِن قَرِيبࣲ فَأُوْلَٰٓئِكَ يَتُوبُ ٱللَّهُ عَلَيۡهِمۡۗ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمࣰا ۝١٧",
-    "tafsir": {
-     "text": "إنَّما يقبل الله التوبة من الذين يرتكبون المعاصي والذنوب بجهل منهم لعاقبتها، وإيجابها لسخط الله -فكل عاص لله مخطئًا أو متعمِّدًا فهو جاهل بهذا الاعتبار، وإن كان عالمًا بالتحريم- ثم يرجعون إلى ربهم بالإنابة والطاعة قبل معاينة الموت، فأولئك يقبل الله توبتهم. وكان الله عليمًا بخلقه، حكيمًا في تدبيره وتقديره.",
-     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-     "url": "https://quranenc.com/ar/browse/arabic_moyassar/4#17"
-    },
-    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-    "url": "https://quranpedia.net/surah/4/17"
-   },
-   "Q2": {
-    "kind": "quran",
-    "surah": 9,
-    "surah_name": "التَّوۡبَةِ",
-    "ayah": 117,
-    "text": "لَّقَد تَّابَ ٱللَّهُ عَلَى ٱلنَّبِيِّ وَٱلۡمُهَٰجِرِينَ وَٱلۡأَنصَارِ ٱلَّذِينَ ٱتَّبَعُوهُ فِي سَاعَةِ ٱلۡعُسۡرَةِ مِنۢ بَعۡدِ مَا كَادَ يَزِيغُ قُلُوبُ فَرِيقࣲ مِّنۡهُمۡ ثُمَّ تَابَ عَلَيۡهِمۡۚ إِنَّهُۥ بِهِمۡ رَءُوفࣱ رَّحِيمࣱ ۝١١٧",
-    "tafsir": {
-     "text": "لقد وفَّق الله نبيه محمدا صلى الله عليه وسلم إلى الإنابة إليه وطاعته، وتاب الله على المهاجرين الذين هجروا ديارهم وعشيرتهم إلى دار الإسلام، وتاب على أنصار رسول الله صلى الله عليه وسلم الذين خرجوا معه لقتال الأعداء في غزوة (تبوك) في حرٍّ شديد، وضيق من الزاد والظَّهْر، لقد تاب الله عليهم من بعد ما كاد يَميل قلوب بعضهم عن الحق، فيميلون إلى الدَّعة والسكون، لكن الله ثبتهم وقوَّاهم وتاب عليهم، إنه بهم رؤوف رحيم. ومن رحمته بهم أنْ مَنَّ عليهم بالتوبة، وقَبِلَها منهم، وثبَّتهم عليها.",
-     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-     "url": "https://quranenc.com/ar/browse/arabic_moyassar/9#117"
-    },
-    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-    "url": "https://quranpedia.net/surah/9/117"
-   },
-   "Q3": {
-    "kind": "quran",
-    "surah": 9,
-    "surah_name": "التَّوۡبَةِ",
-    "ayah": 104,
-    "text": "أَلَمۡ يَعۡلَمُوٓاْ أَنَّ ٱللَّهَ هُوَ يَقۡبَلُ ٱلتَّوۡبَةَ عَنۡ عِبَادِهِۦ وَيَأۡخُذُ ٱلصَّدَقَٰتِ وَأَنَّ ٱللَّهَ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ ۝١٠٤",
-    "tafsir": {
-     "text": "ألم يعلم هؤلاء المتخلفون عن الجهاد وغيرهم أن الله وحده هو الذي يقبل توبة عباده، ويأخذ الصدقات ويثيب عليها، وأن الله هو التواب لعباده إذا رجعوا إلى طاعته، الرحيم بهم إذا أنابوا إلى رضاه؟",
-     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-     "url": "https://quranenc.com/ar/browse/arabic_moyassar/9#104"
-    },
-    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-    "url": "https://quranpedia.net/surah/9/104"
-   },
    "T1": {
     "kind": "term",
     "term": "التوبة",
@@ -6799,6 +6757,10 @@
     "url": "https://dawa.center/file/7937"
    },
    {
+    "title": "الدرر السنية: الموسوعة التاريخية",
+    "url": "https://dorar.net/history"
+   },
+   {
     "title": "موسوعة المصطلحات الإسلامية المترجمة",
     "url": "https://terminologyenc.com"
    }
@@ -6810,61 +6772,47 @@
  "answer": {
   "source_points": [
    {
-    "text": "توجد قصة لرجل من الأمم السابقة قتل تسعة وتسعين شخصا.",
-    "passage": "P2",
-    "quote": "كانَ فيمنْ كانَ قبلكمْ رجلٌ قتلَ تسعة وتسعين نفساً",
+    "text": "يذكر الكتاب قصة رجل من الأمم السابقة أسرف على نفسه بالقتل، ثم سأل عالماً عن إمكانية توبته فأجابه بالموافقة.",
+    "passage": "P1",
+    "quote": "فقال : إنه قتلَ مائةَ نفسٍ فهلْ له منْ توبةٍ؟ فقال : نعم، ومنْ يحول بينهُ وبين التوبةِ ؟",
     "verified": true,
     "passage_id": "riyad1956-c021"
    },
    {
-    "text": "أكمل الرجل مائة قتيل، ثم سأل عالما عن إمكانية التوبة، فأجابه بالإيجاب ونصحه بالذهاب إلى أرض يعبد أهلها الله.",
-    "passage": "P2",
-    "quote": "فقال : نعم، ومنْ يحول بينهُ وبين التوبةِ ؟ انطلقْ إلى أرضِ كذا وكذا",
+    "text": "توجه هذا الرجل التائب إلى أرض صالحة ليعبد الله فيها، ومات في منتصف الطريق فغفر الله له.",
+    "passage": "P1",
+    "quote": "فوجدوهُ إلى هذه أقربَ بشبرٍ فغفرَ له",
     "verified": true,
     "passage_id": "riyad1956-c021"
    },
    {
-    "text": "مات الرجل في منتصف الطريق، ولأنه كان أقرب إلى الأرض الصالحة التي قصدها تائبا، تولت أمره ملائكة الرحمة وغفر له.",
-    "passage": "P2",
-    "quote": "فقاسوا فوجدوه أدنى إلى الأرضِ التى أرادَ فقبضتهُ ملائكةُ الرحمةِ",
-    "verified": true,
-    "passage_id": "riyad1956-c021"
-   },
-   {
-    "text": "وهناك قصة الصحابي كعب بن مالك الذي تخلف عن غزوة تبوك، واختار أن يصدق النبي صلى الله عليه وسلم ولا يختلق عذرا كاذبا.",
+    "text": "كما يذكر الكتاب قصة الصحابي كعب بن مالك الذي تخلف عن غزوة تبوك، واختار أن يصدق النبي صلى الله عليه وسلم ولا يختلق أعذاراً كاذبة.",
     "passage": "P4",
-    "quote": "والله ما كانَ لى منْ عذر ، والله ما كنت قطُّ أقوى ولا أيسر منى حينَ تخلفت عنك",
+    "quote": "وإنْ حدثتكَ حديثَ صدقٍ تجدُ علىَّ فيه إنى لأرجو فيه عقبى الله عز وجل والله ما كانَ لى منْ عذر",
     "verified": true,
     "passage_id": "riyad1956-c023"
    },
    {
-    "text": "قاطع المسلمون كعبا وصاحبيه بأمر من النبي صلى الله عليه وسلم لمدة خمسين ليلة ابتلوا فيها بشدة.",
-    "passage": "P4",
-    "quote": "فلبثْنَا على ذلك خمسينَ ليلةً",
-    "verified": true,
-    "passage_id": "riyad1956-c023"
-   },
-   {
-    "text": "بعد صبره وصدقه، أنزل الله توبته وبشره النبي صلى الله عليه وسلم والمسلمون بذلك.",
+    "text": "بعد أن قاطع المسلمون كعباً وصاحبيه خمسين ليلة امتحاناً لصدقهم، أنزل الله توبتهم وبشرهم النبي صلى الله عليه وسلم.",
     "passage": "P4",
     "quote": "فآذنَ رسول الله صلى الله عليه وسلم النَّاسَ بتوبةِ اللهِ عزَّ وجلَّ علينا حينَ صلَّى صلاةَ الفجرِ",
     "verified": true,
     "passage_id": "riyad1956-c023"
    }
   ],
-  "explanation": "تذكر النصوص قصتين عظيمتين عن التوبة الصادقة. القصة الأولى لرجل من الأمم السابقة أسرف في القتل حتى بلغ مائة نفس، لكنه صدق في طلب التوبة وسعى للانتقال إلى بيئة صالحة، فمات في الطريق وقبضته ملائكة الرحمة لصدق نيته [P2]. والقصة الثانية للصحابي كعب بن مالك الذي تخلف عن غزوة تبوك، فآثر الصدق مع رسول الله صلى الله عليه وسلم ولم يختلق عذرا كاذبا [P4]. وقد قاطعه المسلمون خمسين ليلة تحمل فيها البلاء ورفض إغراءات الملوك، حتى أنزل الله توبته وبشره النبي صلى الله عليه وسلم [P4].",
+  "explanation": "تورد النصوص المذكورة أمثلة واضحة لقصص التوبة الصادقة. القصة الأولى لرجل من الأمم السابقة قتل مائة نفس، لكنه ندم وبحث عن التوبة بصدق، فدله عالم على طريقها ومات وهو مقبل على طاعة الله فغفر له [P1]. والقصة الثانية للصحابي كعب بن مالك وصاحبيه الذين تخلفوا عن غزوة تبوك، فآثروا الصدق وتحملوا مقاطعة الناس لهم خمسين ليلة، حتى قبل الله توبتهم وأنزل فيها قرآناً [P4].",
   "disagreement_noted": false
  },
  "verification": {
-  "total": 6,
-  "verified": 6,
+  "total": 4,
+  "verified": 4,
   "removed": []
  },
  "stages": [
   {
    "stage": "classify",
    "level": "A",
-   "reason": "السؤال يطلب قصة عن التوبة الصادقة وهو من الموضوعات الأخلاقية والتربوية الثابتة في الإسلام."
+   "reason": "السؤال يطلب قصة مشهورة وثابتة عن التوبة الصادقة لترسيخ هذا الخلق الإيماني."
   },
   {
    "stage": "retrieve",
@@ -6875,15 +6823,12 @@
   {
    "stage": "approved_sources",
    "items": [
-    "Q1",
-    "Q2",
-    "Q3",
     "T1"
    ]
   },
   {
    "stage": "support_gate",
-   "best_sim": 0.731,
+   "best_sim": 0.722,
    "threshold": 0.55
   },
   {
@@ -6893,9 +6838,9 @@
   },
   {
    "stage": "verify_quotes",
-   "kept": 6,
+   "kept": 4,
    "removed": 0
   }
  ],
- "seconds": 32.96
+ "seconds": 23.87
 }

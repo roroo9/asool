@@ -76,3 +76,9 @@ Re-scoring the runs with the fixed scorer cost $0, because every call was served
 **Risk.** The hard stop is at $23, which leaves about $0.60 for new live questions during judging. The 81 evaluation questions and the demo questions are served from cache for free. Above the hard stop, the site shows search passages only, so a page never breaks.
 
 **Recommendation.** Add about $10 of OpenRouter credit before judging (Oct 7). Then raise `OPENROUTER_BUDGET_USD` and `HARD_BUDGET_USD` in the Render settings. About $2.40 of that would fund a clean full re-run of the evaluation on the final pipeline.
+
+## Update: Tue Oct 6, after the clean re-run (owner chose option A)
+- OpenRouter key limit $40 (owner added $15). Spent **$24.86**.
+- The clean full re-run of 81 questions cost about $2.40.
+- Live answers stop at $38, so **about $13.10 remains for judging**. The owner accepted the reserve dipping below $15 to fund the clean re-run.
+- All 81 evaluation answers and the demo answers are cached and cost $0 to serve.

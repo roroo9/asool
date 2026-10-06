@@ -160,3 +160,21 @@ All numbers come from `data/eval/results/summary.json` (shown on `/proof`). Thre
 | Quotes verified word for word | 62, 0 fabricated | — |
 
 With everyday wording, retrieval alone loses its advantage over the baseline. The two misses are colloquial: «أبكي» (crying at a death) and «عصبت» (anger). The full pipeline still answers 14 of 15 correctly, because the classifier rewrites the question into the book's vocabulary before searching. `nat-01` («أنا أذنبت كثير…») gave the time limits but not the conditions of repentance.
+
+## Final clean run (Oct 6, after all fixes)
+One fresh run of all 81 questions on the final pipeline: classifier v3, Mushaf verses only when the book's match is weak, and the corrected scorer. The earlier three runs are kept in `data/eval/results/answers_superseded_pre_v3_classifier.json`.
+
+| Human-reviewed set (66) | Final clean run |
+|---|---|
+| Correct behaviour with all requirements | **63/66 (95%)** |
+| Official package cases | 11/12 (case 10 fails) |
+| Abstains when there is no source | 11/11 |
+| Refers personal cases | 6/6 |
+| Corrects misquoted verses | 3/3 |
+| Reviewer requirements met | 19/20 |
+| Multi-condition answers citing every required unit | 5/7 |
+| Quotes shown, verified word for word | 172, **0 fabricated** (151 book, 21 outside sources) |
+| Book quotes traced to page and box | 151/151 |
+
+Remaining failures: `ans-13`, `hostile-03` and `official-10`, all on citation completeness. Natural-phrasing set (agent-drafted, not reviewed): 14/15; `nat-05` did not quote the explanatory footnotes.
+

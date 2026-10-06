@@ -39,16 +39,17 @@ Measured against a human-verified gold set of 15 pages. **12 of those pages were
 | Rank of the first correct result (MRR) | **0.93** | 0.77 |
 | The footnote the question depends on arrives with the text | **8 of 9** | 2 of 9 |
 
-### Answering safely (full pipeline, three runs)
+### Answering safely (full pipeline, final clean run)
 66 questions drafted by the AI agent and **reviewed by a human** (58 approved, 8 edited, 20 notes turned into machine-checked requirements). They include the **12 official test cases** of the challenge's scientific package.
 
 | | Result |
 |---|---|
-| Correct behaviour, with every reviewer requirement met | **61 of 66 (92%)**; the three runs passed 92%, 91% and 89% |
-| Same behaviour across three runs | 98% |
-| Quotations shown to users that are not word for word in their source | **0 of 183** |
-| Book quotations traced to a page and a box on the image | **157 of 157** |
-| Abstains when the book has no answer | 10 of 11 |
+| Correct behaviour, with every reviewer requirement met | **63 of 66 (95%)** |
+| The 12 official test cases of the scientific package | **11 of 12** |
+| Quotations shown to users that are not word for word in their source | **0 of 172** (151 from the book, 21 from approved sources outside it) |
+| Book quotations traced to a page and a box on the image | **151 of 151** |
+| Abstains when the book has no answer | 11 of 11 |
+| Consistency (three earlier runs, before the final fixes) | Same behaviour in 98% of questions; the runs passed 92%, 91% and 89% |
 | Refers personal fatwa questions to a scholar | 6 of 6 |
 | Corrects misquoted verses, with surah and ayah | 3 of 3 |
 
@@ -233,11 +234,12 @@ Details in [`SOURCES_AND_LICENSES.md`](SOURCES_AND_LICENSES.md).
 ## Limits stated plainly
 - **Small corpus:** 30 pages of one book in one genre. The gold set has 15 pages and one reviewer.
 - **Reviewer bias:** gold Reader B (Claude) was the reviewer's default option, so Claude's extraction scores are inflated, and Claude was excluded as the parser.
-- **Answer failures in the reviewed set:** five in the reported run.
-  - Two are citation completeness: a required hadith was not retrieved (`hostile-03`), and only one of three required texts was cited (`official-10`).
-  - One is a missed second footnote (`ans-13`).
-  - Two were scope bugs, fixed afterwards and re-checked separately: a fiqh ruling answered from a verse, and a missing history referral.
-- **Colloquial wording:** with natural, colloquial phrasing, retrieval alone loses its advantage over the baseline (85% against 85%). The full pipeline still answered 14 of 15 correctly, because the question is rewritten into the book's vocabulary first. This set was drafted by the AI agent and not human-reviewed.
+- **Answer failures in the reviewed set:** three of 66 in the final clean run, all about citation completeness.
+  - `hostile-03`: a required hadith (Ibn ʿAbbās, p.16) was never retrieved for this wording.
+  - `official-10`: two of three required texts were not retrieved, so only one was cited.
+  - `ans-13`: one of two explanatory footnotes was quoted.
+  - Passing more passages to the model (10 instead of 5) does not fix the first two; it needs better query expansion.
+- **Colloquial wording:** with natural, colloquial phrasing, retrieval alone loses its advantage over the baseline (85% against 85%). The full pipeline still answered 14 of 15 correctly, because the question is rewritten into the book's vocabulary first. The one failure, `nat-05`, cited the right hadith but not its explanatory footnotes. This set was drafted by the AI agent and not human-reviewed.
 - **Completeness check:** it cannot detect gaps shorter than one printed line.
 - **Style:** behaviour and requirements are scored automatically. Tone and gentleness need human reading.
 - **Proposed, not built:** multi-book ingestion, publisher accounts, more languages, and a broader human-reviewed question set.
