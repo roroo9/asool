@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sqlite3
 import time
 from pathlib import Path
@@ -37,9 +38,35 @@ DB = ROOT / "data" / "asool.db"
 K = 5
 
 
-def load_questions(only: str | None = None) -> list[dict]:
-    """Agent drafts with the human reviewer's approvals, edits and removals applied."""
-    rows = reviewed_questions()
+REQUIREMENTS = ROOT / "data" / "eval" / "question_requirements.json"
+NATURAL = ROOT / "data" / "eval" / "questions_natural.jsonl"
+
+
+def _pages_of(blocks: list[str]) -> list[str]:
+    return sorted({b.rsplit("-b", 1)[0] for b in blocks})
+
+
+def load_questions(only: str | None = None, natural: bool = True) -> list[dict]:
+    """The 66 human-reviewed questions (agent drafts + reviewer decisions + the reviewer's notes
+    as structured requirements), then the agent-drafted natural-phrasing set (not reviewed)."""
+    from api.question_review import resolve
+
+    reqs = json.loads(REQUIREMENTS.read_text(encoding="utf-8")) if REQUIREMENTS.exists() else {}
+    rows = []
+    for q in reviewed_questions():
+        r = reqs.get(q["id"])
+        if r:
+            r = dict(r)
+            if "required_anchor_blocks" in r:
+                q = resolve(q | {"required_anchor_blocks": r.pop("required_anchor_blocks")})
+            q = q | {"requirements": r}
+        rows.append(q)
+    if natural and NATURAL.exists():
+        for x in NATURAL.read_text(encoding="utf-8").splitlines():
+            if x:
+                q = resolve(json.loads(x))
+                q.setdefault("gold_page_ids", _pages_of(q.get("gold_anchor_blocks", [])))
+                rows.append(q)
     if only:
         rows = [r for r in rows if r["id"].startswith(only) or r["type"] == only]
     return rows
@@ -56,12 +83,35 @@ def _unit_text(p: dict) -> str:
     return f"{p['text']} {fns}"
 
 
+def _footnote_needs(q: dict) -> list[str]:
+    """Footnote text(s) a question depends on (any one suffices)."""
+    if q.get("footnote_must_contain"):
+        return [normalize(q["footnote_must_contain"], "search")]
+    req = q.get("requirements") or {}
+    ids = req.get("footnotes_all") or req.get("footnotes_any") or []
+    if not ids:
+        return []
+    con = sqlite3.connect(DB)
+    out = []
+    for b in ids:
+        r = con.execute("SELECT text_raw FROM blocks WHERE id=?", (b,)).fetchone()
+        if r:
+            out.append(normalize(re.sub(r"^\s*\(\s*[\d٠-٩]+\s*\)", "", r[0]), "search"))
+    con.close()
+    return out
+
+
 def retrieval() -> dict:
     out = []
     for q in load_questions():
         if not q.get("gold_page_ids") or q["expected_behavior"] not in ("answer",):
             continue
-        row = {"id": q["id"], "type": q["type"], "needs_footnote": q["needs_footnote"]}
+        row = {
+            "id": q["id"],
+            "type": q["type"],
+            "source": q["source"],
+            "needs_footnote": q["needs_footnote"],
+        }
         for mode in ("asool", "baseline"):
             hits = hybrid(q["question"], mode=mode, k=K)["hits"]
             units = [passage(h.id) if mode == "asool" else baseline_passage(h.id) for h in hits]
@@ -76,12 +126,12 @@ def retrieval() -> dict:
             r["mrr"] = 1 / rank if rank else 0.0
             if mode == "asool" and q.get("gold_chunk_ids"):
                 r["chunk_hit"] = bool(set(q["gold_chunk_ids"]) & set(r["ids"]))
-            if q["needs_footnote"]:
-                need = normalize(q["footnote_must_contain"], "search")
+            needs = _footnote_needs(q)
+            if needs:
                 # context complete = a top-5 unit from a gold page also carries the footnote
                 r["context_complete"] = any(
                     gold & {p["id"] for p in u["pages"]}
-                    and need in normalize(_unit_text(u), "search")
+                    and any(n in normalize(_unit_text(u), "search") for n in needs)
                     for u in units
                 )
             row[mode] = r
@@ -167,8 +217,106 @@ def score(q: dict, res: dict, con: sqlite3.Connection) -> dict:
         txt = json.dumps([ans, res.get("glossary")], ensure_ascii=False).lower()
         s["term_ok"] = any(t.lower() in txt for t in q["must_contain_any"])
         s["pass"] = s["pass"] and s["term_ok"]
+    fails = _requirements(q.get("requirements") or {}, res, con)
+    if q.get("requirements"):
+        s["requirements_failed"] = fails
+        s["pass"] = s["pass"] and not fails
     s["model"] = res.get("model")
     return s
+
+
+def _shown_verses(res: dict) -> set[str]:
+    """Verses the reader sees: the verse-check card, cited Mushaf items, and the verse badges
+    next to quoted book text."""
+    out: set[str] = set()
+    for c in (res.get("quoted_verse_check") or {}).get("candidates", []):
+        out |= {f"{c['surah']}:{a}" for a in range(c["ayah_start"], c["ayah_end"] + 1)}
+    items = (res.get("external") or {}).get("items", {})
+    pts = (res.get("answer") or {}).get("source_points", [])
+    for pt in pts:
+        it = items.get(pt.get("passage")) if pt.get("external") == "quran" else None
+        if it:
+            out.add(f"{it['surah']}:{it['ayah']}")
+    by_tag = {f"P{i}": p for i, p in enumerate(res.get("passages", []), 1)}
+    for pt in pts:
+        p = by_tag.get(pt.get("passage"))
+        if not p:
+            continue
+        qn = _vnorm(pt["quote"])
+        quoted = {
+            b["id"]
+            for b in p.get("blocks", []) + p.get("footnotes", [])
+            if qn and (qn in _vnorm(b["text"]) or _vnorm(b["text"]) in qn)
+        }
+        for v in p.get("quran", []):
+            if v["block_id"] in quoted:
+                out |= {f"{v['surah']}:{a}" for a in range(v["ayah_start"], v["ayah_end"] + 1)}
+    return out
+
+
+def _requirements(req: dict, res: dict, con: sqlite3.Connection) -> list[str]:
+    """Reviewer notes as checks. Returns the list of unmet requirements (empty = all met)."""
+    if not req:
+        return []
+    ans = res.get("answer") or {}
+    pts = ans.get("source_points", [])
+    quotes = [_vnorm(p["quote"]) for p in pts]
+    fails = []
+
+    def fn_text(bid: str) -> str:
+        r = con.execute("SELECT text_raw FROM blocks WHERE id=?", (bid,)).fetchone()
+        return _vnorm(r[0]) if r else ""
+
+    def fn_quoted(bid: str) -> bool:
+        f = fn_text(bid)
+        return bool(f) and any(q and (q in f or f in q) for q in quotes)
+
+    for b in req.get("footnotes_all", []):
+        if not fn_quoted(b):
+            fails.append(f"footnote not quoted: {b}")
+    if req.get("footnotes_any") and not any(fn_quoted(b) for b in req["footnotes_any"]):
+        fails.append(f"none of the footnotes quoted: {req['footnotes_any']}")
+    for ph in req.get("quotes_all", []):
+        if not any(_vnorm(ph) in q for q in quotes):
+            fails.append(f"missing quote: {ph}")
+    shown = _shown_verses(res)
+    for v in req.get("verses_shown_all", []):
+        if v not in shown:
+            fails.append(f"verse not shown: {v}")
+    if req.get("closest_verse"):
+        c = [
+            f"{x['surah']}:{x['ayah_start']}"
+            for x in (res.get("quoted_verse_check") or {}).get("candidates", [])
+            if x.get("closest")
+        ]
+        if c != [req["closest_verse"]]:
+            fails.append(f"closest verse not marked: {req['closest_verse']} (got {c})")
+    items = (res.get("external") or {}).get("items", {})
+    if req.get("external_quran") and not any(p.get("external") == "quran" for p in pts):
+        fails.append("no verse from the Mushaf cited")
+    for term in req.get("terms_cited_all", []):
+        if not any(
+            p.get("external") == "term" and items.get(p["passage"], {}).get("term") == term
+            for p in pts
+        ):
+            fails.append(f"term definition not cited: {term}")
+    used_ext = any(p.get("external") for p in pts)
+    urls = {r["url"] for r in (res.get("external") or {}).get("referrals", [])}
+    for u in req.get("referrals_all", []):
+        if not (used_ext and u in urls):
+            fails.append(f"referral not shown: {u}")
+    if req.get("language") == "en":
+        txt = ans.get("explanation", "")
+        latin = sum(c.isascii() and c.isalpha() for c in txt)
+        if latin < 0.5 * max(1, sum(c.isalpha() for c in txt)):
+            fails.append("explanation not in English")
+    blob = json.dumps(ans, ensure_ascii=False).lower()
+    for term in req.get("terms_en_all", []):
+        if term.lower() not in blob:
+            fails.append(f"English term missing: {term}")
+    if req.get("glossary_explanation") and not (res.get("glossary") or {}).get("explanation"):
+        fails.append("no brief explanation from the approved dictionary")
+    return fails
 
 
 def answers(runs: int, only: str | None, start_run: int = 0) -> dict:

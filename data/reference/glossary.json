@@ -11,10 +11,13 @@
     "السنة": "Sunnah",
     "الفتوى": "Fatwa",
     "الدعوة": "Da'wah / Invitation to Islam",
-    "التوبة": "Repentance (tawbah)",
-    "الصبر": "Patience (sabr)",
-    "الإخلاص": "Sincerity (ikhlas)",
-    "النية": "Intention (niyyah)"
+    "التوبة": "Tawbah (repentance)",
+    "الصبر": "Sabr (patience)",
+    "الإخلاص": "Ikhlas (sincerity)",
+    "النية": "Niyyah (intention)",
+    "الجهاد": "Jihad",
+    "الاجتهاد": "Ijtihad (independent reasoning)",
+    "القبلة": "Qiblah (prayer direction)"
   },
-  "note": "The last four entries are not in the package sample; they follow common usage and are marked for verification against Jamhara/terminologyenc."
+  "note": "The first ten entries are the package's sample of the Jamhara dictionary (p.8). The others follow the English entries of the Encyclopedia of Translated Islamic Terminology (terminologyenc.com, data/reference/terminologyenc/terms.json), with the Arabic term transliterated as the owner requested (e.g. Tawbah)."
 }

@@ -72,11 +72,11 @@ def _bm25(con: sqlite3.Connection, table: str, terms: list[str], n: int) -> list
     try:
         rows = con.execute(
             f"SELECT id FROM {table} WHERE {table} MATCH ? ORDER BY bm25({table}) LIMIT ?",
-            (expr, n),
+            (expr, n * 3),
         ).fetchall()
     except sqlite3.OperationalError:
         return []
-    return [r[0] for r in rows]
+    return list(dict.fromkeys(r[0] for r in rows))[:n]  # a long unit has several windows
 
 
 _QUOTED = re.compile(r"[«\"“]([^»\"”]{4,200})[»\"”]")
@@ -106,8 +106,12 @@ def _dense(name: str, qvec: np.ndarray | None, n: int) -> list[tuple[str, float]
         return []
     mat, ids = _vectors(name)
     sims = mat @ qvec
-    top = np.argsort(-sims)[:n]
-    return [(ids[i], float(sims[i])) for i in top]
+    best: dict[str, float] = {}
+    for i in np.argsort(-sims):  # windows of one unit -> the unit's best window
+        best.setdefault(ids[i], float(sims[i]))
+        if len(best) >= n:
+            break
+    return list(best.items())
 
 
 def embed_query(q: str) -> np.ndarray | None:
@@ -160,10 +164,12 @@ def hybrid(
     # dense similarity for hits that only came from BM25 (used by the support gate)
     if qvec is not None:
         mat, ids = _vectors(vname)
-        pos = {cid: i for i, cid in enumerate(ids)}
+        best: dict[str, float] = {}
+        for cid, s in zip(ids, mat @ qvec, strict=True):
+            best[cid] = max(best.get(cid, -1.0), float(s))
         for h in hits:
-            if h.dense_sim is None and h.id in pos:
-                h.dense_sim = float(mat[pos[h.id]] @ qvec)
+            if h.dense_sim is None and h.id in best:
+                h.dense_sim = best[h.id]
     return {"hits": hits, "dense_available": qvec is not None, "terms": terms}
 
 

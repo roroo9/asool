@@ -8,4 +8,5 @@ if [ ! -f "$D/hafs_v30/kfgqpc_hafs_v30-data/kfgqpc_hafs_v30.json" ]; then
   curl -sSL -o "$D/hafs.zip" https://download.qurancomplex.gov.sa/resources_dev/kfgqpc_hafs_v30.zip
   unzip -o -q "$D/hafs.zip" -d "$D/hafs_v30" && rm "$D/hafs.zip"
 fi
+python3 scripts/fetch_tafsir.py || echo "QuranEnc tafsir download failed: verse meanings will link to quranenc.com instead"
 echo "references ready"

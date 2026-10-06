@@ -20,7 +20,25 @@ type Summary = {
   available: boolean;
   generated_at?: string;
   metrics?: Record<string, { asool: number; baseline?: number | null; n?: number; note?: string; fmt?: string }>;
-  official_cases?: { id: string; question: string; expected: string; status: string; pass: boolean; note?: string }[];
+  official_cases?: {
+    id: string;
+    no: number;
+    question: string;
+    package_case?: string;
+    expected: string;
+    status: string;
+    pass: boolean;
+    requirements_failed?: string[];
+    note?: string;
+  }[];
+  failures?: { id: string; question: string; behaviour: string; requirements_failed: string[] }[];
+  question_review?: { total: number; reviewed: number; approved: number; edited: number; removed: number; with_notes: number; reviewer: string[] };
+  natural_phrasing?: {
+    label_ar: string;
+    questions: number;
+    metrics: Record<string, { asool: number; baseline?: number | null; n?: number; note?: string; fmt?: string }>;
+    failures: { id: string; question: string; behaviour: string; requirements_failed: string[] }[];
+  } | null;
   limits?: string[];
   heldout?: {
     pages: number;
@@ -290,13 +308,83 @@ export default function ProofPage() {
           <ul className="mt-4 grid gap-2">
             {sum.official_cases.map((c) => (
               <li key={c.id} className="rounded-lg border border-line bg-surface p-3 text-sm">
-                <span className={c.pass ? "text-thread-strong" : "text-madder"}>{c.pass ? "✓" : "✗"}</span> {c.question}
-                <span className="block text-muted">المتوقع: {c.expected} · الناتج: {c.status}</span>
+                <span className={c.pass ? "text-thread-strong" : "text-madder"}>{c.pass ? "✓" : "✗"}</span> الحالة {ar(c.no)}: {c.question}
+                {c.package_case && <span className="block text-xs text-muted">حالة الحزمة: {c.package_case}</span>}
+                <span className="block text-muted">ما تطلبه الحزمة (ص ٦): «{c.expected}» · الناتج: {c.status}</span>
+                {c.requirements_failed?.length ? <span className="block text-madder">لم يتحقق: {c.requirements_failed.join("؛ ")}</span> : null}
               </li>
             ))}
           </ul>
         )}
+        {sum?.question_review && (
+          <p className="mt-4 text-sm text-muted">
+            الأسئلة ({ar(sum.question_review.total)}) صاغها الوكيل الآلي وراجعتها المراجِعة {sum.question_review.reviewer.join("، ")}: اعتُمد {ar(sum.question_review.approved)}، وعُدِّل {ar(sum.question_review.edited)}، وحُذف {ar(sum.question_review.removed)}؛ وحُوِّلت ملاحظاتها ({ar(sum.question_review.with_notes)}) إلى متطلبات تُفحص آليًا.
+          </p>
+        )}
+        {sum?.failures && (
+          <div className="mt-4">
+            <h3 className="font-semibold">الإخفاقات ({ar(sum.failures.length)})</h3>
+            {sum.failures.length === 0 ? (
+              <p className="text-sm text-muted">لا توجد إخفاقات في هذا التشغيل.</p>
+            ) : (
+              <ul className="mt-1 grid gap-1 text-sm">
+                {sum.failures.map((f) => (
+                  <li key={f.id} className="rounded border border-madder/30 p-2">
+                    <span className="text-madder">✗</span> {f.question} <span className="text-muted">· الناتج: {f.behaviour}</span>
+                    {f.requirements_failed.length > 0 && <span className="block text-xs text-muted">{f.requirements_failed.join("؛ ")}</span>}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
       </section>
+
+      {sum?.natural_phrasing && (
+        <section className="mt-10 rounded-xl border border-dashed border-amber/60 p-4">
+          <h2 className="text-xl font-semibold">أسئلة بصياغة طبيعية (فئة منفصلة)</h2>
+          <p className="mt-1 text-sm font-medium text-amber-ink">
+            {sum.natural_phrasing.label_ar}. لا تدخل في الأرقام المراجَعة أعلاه.
+          </p>
+          <p className="mt-1 text-sm text-muted">
+            {ar(sum.natural_phrasing.questions)} سؤالًا على الموضوعات نفسها بلغة المستخدم العادي، بعضها بالعامية، دون نسخ ألفاظ الكتاب، لاختبار ما إذا كان نسخ الألفاظ يبالغ في تقدير الجودة.
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-line">
+                  <th className="py-1 text-start">المقياس</th>
+                  <th>أصول</th>
+                  <th>الطريقة التقليدية</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(sum.natural_phrasing.metrics).map(([k, v]) => (
+                  <tr key={k} className="border-b border-line/60">
+                    <td className="py-1">
+                      {k}
+                      {v.n != null && <span className="text-xs text-muted"> (ن = {ar(v.n)})</span>}
+                      {v.note && <span className="block text-xs text-muted">{v.note}</span>}
+                    </td>
+                    <td className="text-center tabular-nums">{fmt(v.asool, v.fmt)}</td>
+                    <td className="text-center tabular-nums">{v.baseline == null ? "—" : fmt(v.baseline, v.fmt)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {sum.natural_phrasing.failures.length > 0 && (
+            <ul className="mt-3 grid gap-1 text-sm">
+              {sum.natural_phrasing.failures.map((f) => (
+                <li key={f.id}>
+                  <span className="text-madder">✗</span> {f.question} <span className="text-muted">· {f.behaviour}</span>
+                  {f.requirements_failed.length > 0 && <span className="block text-xs text-muted">{f.requirements_failed.join("؛ ")}</span>}
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
 
       <section className="mt-10 grid gap-6 md:grid-cols-2">
         <div>

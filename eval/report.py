@@ -73,101 +73,149 @@ def gold_stats() -> dict:
     return out
 
 
+def review_counts() -> dict:
+    from api.question_review import REVIEWS, _drafts
+
+    reviews = json.loads(REVIEWS.read_text(encoding="utf-8")) if REVIEWS.exists() else {}
+    drafts = _drafts()
+    acts = [reviews[q["id"]]["action"] for q in drafts if q["id"] in reviews]
+    return {
+        "drafted_by": "AI agent",
+        "reviewer": sorted({r["reviewer"] for r in reviews.values()}),
+        "total": len(drafts),
+        "reviewed": len(acts),
+        "approved": acts.count("approve"),
+        "edited": acts.count("edit"),
+        "removed": acts.count("remove"),
+        "with_notes": sum(1 for r in reviews.values() if r.get("note")),
+    }
+
+
+def _retrieval_metrics(rows: list[dict]) -> dict:
+    m: dict[str, dict] = {}
+    if not rows:
+        return m
+    for key, label in (
+        ("recall_at_5", "الاسترجاع: الصفحة الصحيحة ضمن أول ٥ نتائج (Recall@5)"),
+        ("mrr", "الاسترجاع: ترتيب أول نتيجة صحيحة (MRR)"),
+    ):
+        m[label] = {
+            "asool": _mean([float(r["asool"][key]) for r in rows]),
+            "baseline": _mean([float(r["baseline"][key]) for r in rows]),
+            "n": len(rows),
+        } | ({"fmt": "decimal"} if key == "mrr" else {})
+    fn = [r for r in rows if "context_complete" in r["asool"]]
+    if fn:
+        m["اكتمال السياق: الحاشية المطلوبة تصل مع النص"] = {
+            "asool": _ratio([r["asool"]["context_complete"] for r in fn]),
+            "baseline": _ratio([r["baseline"]["context_complete"] for r in fn]),
+            "n": len(fn),
+        }
+    return m
+
+
+def _answer_metrics(runs: dict, qs: dict, include) -> tuple[dict, list[dict]]:
+    m: dict[str, dict] = {}
+    run0 = {i: s for i, s in runs.get("0", {}).items() if i in qs and include(qs[i])}
+
+    def rows(pred) -> list[dict]:
+        return [s for i, s in run0.items() if pred(qs[i])]
+
+    def add(label: str, rs: list[dict], key: str = "pass") -> None:
+        vals = [bool(r.get(key)) for r in rs if key in r]
+        if vals:
+            m[label] = {"asool": _ratio(vals), "n": len(vals)}
+
+    add("السلوك الصحيح مع كل المتطلبات (كل الأسئلة)", rows(lambda q: True))
+    add(
+        "الإجابة عن الأسئلة التي في المدونة",
+        rows(lambda q: q["source"] != "official_package" and q["expected_behavior"] == "answer"),
+    )
+    add(
+        "الإجابة تستشهد بالمقطع الصحيح",
+        rows(lambda q: q["expected_behavior"] == "answer"),
+        "cites_gold",
+    )
+    add("الامتناع حين لا يوجد مصدر كافٍ", rows(lambda q: q["expected_behavior"] == "abstain"))
+    add("الإحالة في الحالات الشخصية (المستوى د)", rows(lambda q: q["expected_behavior"] == "refer"))
+    add("تصحيح الآيات المحرفة في السؤال", rows(lambda q: q["expected_behavior"] == "correct_verse"))
+    add(
+        "الأسئلة متعددة الشروط: الاستشهاد بكل الأدلة",
+        rows(lambda q: bool(q.get("required_chunk_ids"))),
+    )
+    req = [s for i, s in run0.items() if qs[i].get("requirements")]
+    if req:
+        m["متطلبات المراجِعة (حواشٍ وآيات واقتباسات ومصادر معتمدة)"] = {
+            "asool": _ratio([not s.get("requirements_failed") for s in req]),
+            "n": len(req),
+        }
+    shown = sum(s["quotes_shown"] for s in run0.values())
+    if shown:
+        fab = sum(s["fabricated_quotes"] for s in run0.values())
+        traced = sum(s["quotes_traced"] for s in run0.values())
+        m["الاقتباسات المعروضة المتحقق منها حرفيًا"] = {
+            "asool": 1 - fab / shown,
+            "n": shown,
+            "note": f"اقتباسات مختلقة معروضة: {fab}",
+        }
+        m["إمكانية التتبع: اقتباس مرتبط بصفحة وموضع على الصورة"] = {
+            "asool": traced / shown,
+            "n": shown,
+            "note": "اقتباسات المصحف والموسوعة من خارج الكتاب لا تُحسب صفحةً من الكتاب",
+        }
+    if len(runs) > 1:
+        same, per_run = [], []
+        for qid in run0:
+            behs = [runs[r][qid]["behaviour"] for r in runs if qid in runs[r]]
+            if len(behs) > 1:
+                same.append(len(set(behs)) == 1)
+        for r in sorted(runs):
+            vals = [s["pass"] for i, s in runs[r].items() if i in run0]
+            if vals:
+                per_run.append(sum(vals) / len(vals))
+        if same:
+            m["ثبات السلوك عبر التشغيلات المتكررة"] = {
+                "asool": _ratio(same),
+                "n": len(same),
+                "note": "نسبة النجاح لكل تشغيل: " + "، ".join(f"{p:.0%}" for p in per_run),
+            }
+    failures = [
+        {
+            "id": i,
+            "question": qs[i]["question"],
+            "behaviour": BEH_AR.get(s["behaviour"], s["behaviour"]),
+            "requirements_failed": s.get("requirements_failed") or [],
+        }
+        for i, s in run0.items()
+        if not s["pass"]
+    ]
+    return m, failures
+
+
 def build() -> dict:
     qs = {q["id"]: q for q in load_questions()}
+    human = lambda q: q["source"] != "agent_natural"  # noqa: E731
+    natural = lambda q: q["source"] == "agent_natural"  # noqa: E731
     metrics: dict[str, dict] = {}
+    rc = review_counts()
     limits = [
         "مدونة صغيرة: ٣٠ صفحة من كتاب واحد (رياض الصالحين، طبعة ١٩٥٦).",
-        "أسئلة التقييم صاغها الوكيل وتنتظر مراجعة بشرية (human_verified=false) إلا ما ذُكر.",
+        f"أسئلة التقييم ({rc['total']}) صاغها الوكيل الآلي وراجعتها مراجِعة بشرية: اعتُمد "
+        f"{rc['approved']} وعُدِّل {rc['edited']} وحُذف {rc['removed']}.",
+        "أسئلة «الصياغة الطبيعية» صاغها الوكيل الآلي ولم تُراجَع بشريًا، ونتائجها معروضة منفصلة.",
         "الاسترجاع يُقاس بالسؤال الخام للطريقتين، دون إعادة صياغة السؤال بالنموذج.",
-        "السلوك المتوقع يُحكم آليًا (إجابة/امتناع/إحالة/تصحيح آية)؛ جودة الأسلوب تحتاج مراجعة بشرية.",
+        "السلوك ومتطلبات المراجِعة تُحكم آليًا؛ جودة الأسلوب واللطف تحتاج قراءة بشرية.",
     ]
-
     rp = RESULTS / "retrieval.json"
-    if rp.exists():
-        rows = json.loads(rp.read_text())["questions"]
-        n = len(rows)
-        for key, label in (
-            ("recall_at_5", "الاسترجاع: الصفحة الصحيحة ضمن أول ٥ نتائج (Recall@5)"),
-            ("mrr", "الاسترجاع: ترتيب أول نتيجة صحيحة (MRR)"),
-        ):
-            metrics[label] = {
-                "asool": _mean([float(r["asool"][key]) for r in rows]),
-                "baseline": _mean([float(r["baseline"][key]) for r in rows]),
-                "n": n,
-            } | ({"fmt": "decimal"} if key == "mrr" else {})
-        fn = [r for r in rows if r["needs_footnote"]]
-        if fn:
-            metrics["اكتمال السياق: الحاشية المطلوبة تصل مع النص"] = {
-                "asool": _ratio([r["asool"]["context_complete"] for r in fn]),
-                "baseline": _ratio([r["baseline"]["context_complete"] for r in fn]),
-                "n": len(fn),
-            }
-
-    official = []
+    rrows = json.loads(rp.read_text())["questions"] if rp.exists() else []
+    metrics |= _retrieval_metrics([r for r in rrows if r.get("source") != "agent_natural"])
+    official, failures, nat = [], [], None
     ap = RESULTS / "answers.json"
     if ap.exists():
         runs = json.loads(ap.read_text())["runs"]
-        run0 = runs.get("0", {})
-
-        def per_type(pred) -> list[dict]:
-            return [s | {"q": qs[i]} for i, s in run0.items() if i in qs and pred(qs[i])]
-
-        def add(label: str, rows: list[dict], key: str = "pass") -> None:
-            vals = [bool(r.get(key)) for r in rows if key in r]
-            if vals:
-                metrics[label] = {"asool": _ratio(vals), "n": len(vals)}
-
-        add("السلوك الصحيح في كل الأسئلة", per_type(lambda q: True))
-        add(
-            "الإجابة عن الأسئلة التي في المدونة",
-            per_type(
-                lambda q: q["source"] != "official_package" and q["expected_behavior"] == "answer"
-            ),
-        )
-        add(
-            "الإجابة تستشهد بالمقطع الصحيح",
-            per_type(lambda q: q["expected_behavior"] == "answer"),
-            "cites_gold",
-        )
-        add("الامتناع حين لا يوجد مصدر كافٍ", per_type(lambda q: q["type"] == "unanswerable"))
-        add(
-            "الإحالة في الحالات الشخصية (المستوى د)",
-            per_type(lambda q: q["type"] == "personal_case"),
-        )
-        add("تصحيح الآيات المحرفة في السؤال", per_type(lambda q: q["type"] == "misquoted_verse"))
-        add(
-            "الأسئلة متعددة الشروط: الاستشهاد بكل الأدلة",
-            per_type(lambda q: bool(q.get("required_chunk_ids"))),
-        )
-        shown = sum(s["quotes_shown"] for s in run0.values())
-        if shown:
-            fab = sum(s["fabricated_quotes"] for s in run0.values())
-            traced = sum(s["quotes_traced"] for s in run0.values())
-            metrics["الاقتباسات المعروضة المتحقق منها حرفيًا"] = {
-                "asool": 1 - fab / shown,
-                "n": shown,
-                "note": f"اقتباسات مختلقة معروضة: {fab}",
-            }
-            metrics["إمكانية التتبع: اقتباس مرتبط بصفحة وموضع على الصورة"] = {
-                "asool": traced / shown,
-                "n": shown,
-            }
-        if len(runs) > 1:
-            same = []
-            for qid in run0:
-                behs = [runs[r][qid]["behaviour"] for r in runs if qid in runs[r]]
-                if len(behs) > 1:
-                    same.append(len(set(behs)) == 1)
-            passes = [
-                _ratio([s["pass"] for s in runs[r].values()]) for r in sorted(runs) if runs[r]
-            ]
-            metrics["ثبات السلوك عبر التشغيلات المتكررة"] = {
-                "asool": _ratio(same),
-                "n": len(same),
-                "note": f"نسبة النجاح لكل تشغيل: {', '.join(f'{p:.0%}' for p in passes)}",
-            }
-        for qid, s in run0.items():
+        am, failures = _answer_metrics(runs, qs, human)
+        metrics |= am
+        for qid, s in runs.get("0", {}).items():
             q = qs.get(qid)
             if q and q["source"] == "official_package":
                 official.append(
@@ -175,13 +223,24 @@ def build() -> dict:
                         "id": qid,
                         "no": q["official_no"],
                         "question": q["question"],
+                        "package_case": q.get("package_case"),
                         "expected": q["expected_ar"],
                         "status": BEH_AR.get(s["behaviour"], s["behaviour"]),
                         "pass": s["pass"],
+                        "requirements_failed": s.get("requirements_failed") or [],
                         "note": q.get("notes"),
                     }
                 )
         official.sort(key=lambda c: c["no"])
+        nm, nf = _answer_metrics(runs, qs, natural)
+        nat = {
+            "label": "drafted by the AI agent, not human-reviewed",
+            "label_ar": "صاغها الوكيل الآلي، ولم تُراجَع بشريًا",
+            "questions": sum(1 for q in qs.values() if natural(q)),
+            "metrics": _retrieval_metrics([r for r in rrows if r.get("source") == "agent_natural"])
+            | nm,
+            "failures": nf,
+        }
 
     heldout = None
     hp = RESULTS / "heldout.json"
@@ -222,6 +281,9 @@ def build() -> dict:
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "metrics": metrics,
         "official_cases": official,
+        "failures": failures,
+        "natural_phrasing": nat,
+        "question_review": rc,
         "heldout": heldout,
         "gold": gold_stats(),
         "limits": limits,

@@ -13,6 +13,7 @@ import re
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from functools import lru_cache
+from pathlib import Path
 
 from rapidfuzz.distance import Levenshtein
 
@@ -343,3 +344,33 @@ def candidates(printed_text: str, top: int = 3) -> list[QuranMatch]:
         m.matched_words = idx.words[s:e]  # type: ignore[attr-defined]
         out.append(m)
     return out
+
+
+TAFSIR_SOURCE = (
+    "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)"
+)
+
+
+@lru_cache(maxsize=1)
+def _tafsir() -> dict[str, str]:
+    p = (
+        Path(__file__).resolve().parents[1]
+        / "data"
+        / "reference"
+        / "quranenc"
+        / "arabic_moyassar.json"
+    )
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
+def tafsir(surah: int, ayah_start: int, ayah_end: int | None = None) -> dict:
+    """Meaning of a verse from «التفسير الميسر» (King Fahd Complex) via QuranEnc, an approved
+    platform of the scientific package. Never generated. If the file is missing, only a link."""
+    ayah_end = ayah_end or ayah_start
+    t = _tafsir()
+    parts = [t[f"{surah}:{a}"] for a in range(ayah_start, ayah_end + 1) if f"{surah}:{a}" in t]
+    return {
+        "text": " ".join(parts) or None,
+        "source": TAFSIR_SOURCE,
+        "url": f"https://quranenc.com/ar/browse/arabic_moyassar/{surah}#{ayah_start}",
+    }

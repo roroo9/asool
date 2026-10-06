@@ -3,7 +3,29 @@
 import { useState } from "react";
 import { ar } from "@/lib/api";
 import { useT } from "@/lib/i18n";
-import type { Hadith, QuranRef } from "@/lib/types";
+import type { Hadith, QuranRef, Tafsir } from "@/lib/types";
+
+/** Meaning of a verse from an approved tafsir (never generated), with its source. */
+export function VerseMeaning({ t, open = false }: { t?: Tafsir; open?: boolean }) {
+  if (!t) return null;
+  return (
+    <details className="mt-2 text-sm" open={open}>
+      <summary className="cursor-pointer text-muted">المعنى من تفسير معتمد</summary>
+      {t.text ? (
+        <p className="mt-1 leading-loose">{t.text}</p>
+      ) : (
+        <p className="mt-1 text-muted">النص غير متاح محليًا؛ يُرجى فتح المصدر.</p>
+      )}
+      <p className="mt-1 text-xs text-muted">
+        المصدر: {t.source}{" "}
+        <a href={t.url} target="_blank" rel="noreferrer" className="text-insight underline">
+          افتح ↗
+        </a>
+        {" · "}ليس من توليد النموذج.
+      </p>
+    </details>
+  );
+}
 
 /** Compact verse badge: surah:ayah + verification status, linking to Quranpedia. */
 export function VerseChip({ q }: { q: QuranRef }) {
@@ -48,6 +70,7 @@ export function QuranCheck({ q }: { q: QuranRef }) {
           ))}
         </ul>
       )}
+      <VerseMeaning t={q.tafsir} />
       <details className="mt-2">
         <summary className="cursor-pointer text-muted">نص المصحف (رواية حفص، مجمع الملك فهد)</summary>
         <p className="quran-text mt-1 text-lg">{q.canonical_text}</p>

@@ -54,10 +54,13 @@ def test_unmarked_verse_in_editor_footnote():
 
 
 def test_neighbors_add_same_page_units():
-    p = passage("riyad1956-c019")
+    from api.question_review import _block_chunk
+
+    bc = _block_chunk()
+    p = passage(bc["riyad1956-p019-b13"])  # Ibn Umar «ما لم يغرغر»
     ids = [x["id"] for x in _neighbors([p], [])]
-    assert "riyad1956-c018" in ids and "riyad1956-c017" in ids
-    assert "riyad1956-c020" not in ids  # different printed page
+    assert bc["riyad1956-p019-b10"] in ids and bc["riyad1956-p019-b07"] in ids
+    assert bc["riyad1956-p020-b03"] not in ids  # different printed page
 
 
 def test_glossary_translation_comes_from_the_dictionary():
@@ -75,5 +78,22 @@ def test_editor_commentary_attached_to_the_hadith_it_explains():
 
     con = sqlite3.connect("data/asool.db")
     on = dict(con.execute("SELECT id, commentary_on FROM chunks WHERE kind='editor_commentary'"))
-    assert on["riyad1956-c027"] == "riyad1956-c025"  # p.29: Ka'b ibn Malik, not the next hadith
-    assert on["riyad1956-c055"] == "riyad1956-c052"  # p.41: Umm Sulaym, not Sulayman ibn Surad
+    from api.question_review import _block_chunk
+
+    bc = _block_chunk()
+    # p.29: Ka'b ibn Malik, not the next hadith; p.41: Umm Sulaym, not Sulayman ibn Surad
+    assert on[bc["riyad1956-p029-b11"]] == bc["riyad1956-p029-b04"]
+    assert on[bc["riyad1956-p041-b15"]] == bc["riyad1956-p041-b02"]
+
+
+def test_no_unit_starts_mid_sentence_across_pages():
+    import json
+    import sqlite3
+
+    con = sqlite3.connect("data/asool.db")
+    for (bids,) in con.execute("SELECT block_ids FROM chunks"):
+        first = json.loads(bids)[0]
+        (cont,) = con.execute(
+            "SELECT continues_from_prev FROM blocks WHERE id=?", (first,)
+        ).fetchone()
+        assert not cont, first

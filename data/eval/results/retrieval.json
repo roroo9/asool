@@ -1,18 +1,19 @@
 {
  "k": 5,
- "generated_at": "2026-10-05T10:50:44",
+ "generated_at": "2026-10-06T03:27:41",
  "questions": [
   {
    "id": "ans-01",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c013",
      "riyad1956-c019",
-     "riyad1956-c027",
+     "riyad1956-c026",
      "riyad1956-c021",
-     "riyad1956-c026"
+     "riyad1956-c025"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -35,14 +36,15 @@
   {
    "id": "ans-02",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c013",
      "riyad1956-c019",
-     "riyad1956-c027",
+     "riyad1956-c026",
      "riyad1956-c021",
-     "riyad1956-c026"
+     "riyad1956-c025"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -65,14 +67,15 @@
   {
    "id": "ans-03",
    "type": "multi_condition",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c014",
      "riyad1956-c015",
-     "riyad1956-c028",
-     "riyad1956-c026",
-     "riyad1956-c016"
+     "riyad1956-c027",
+     "riyad1956-c025",
+     "riyad1956-c020"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -95,13 +98,14 @@
   {
    "id": "ans-04",
    "type": "needs_footnote",
+   "source": "agent_draft",
    "needs_footnote": true,
    "asool": {
     "ids": [
-     "riyad1956-c031",
+     "riyad1956-c030",
      "riyad1956-c010",
      "riyad1956-c000",
-     "riyad1956-c033",
+     "riyad1956-c032",
      "riyad1956-c001"
     ],
     "first_gold_rank": 1,
@@ -127,14 +131,15 @@
   {
    "id": "ans-05",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c031",
+     "riyad1956-c030",
      "riyad1956-c020",
-     "riyad1956-c041",
-     "riyad1956-c053",
-     "riyad1956-c055"
+     "riyad1956-c038",
+     "riyad1956-c050",
+     "riyad1956-c032"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -157,13 +162,14 @@
   {
    "id": "ans-06",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c001",
      "riyad1956-c002",
      "riyad1956-c003",
-     "riyad1956-c031",
+     "riyad1956-c030",
      "riyad1956-c019"
     ],
     "first_gold_rank": 1,
@@ -187,14 +193,15 @@
   {
    "id": "ans-07",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c002",
-     "riyad1956-c049",
-     "riyad1956-c041",
-     "riyad1956-c044",
-     "riyad1956-c047"
+     "riyad1956-c038",
+     "riyad1956-c046",
+     "riyad1956-c023",
+     "riyad1956-c041"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -217,14 +224,15 @@
   {
    "id": "ans-08",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c004",
-     "riyad1956-c041",
+     "riyad1956-c023",
+     "riyad1956-c038",
      "riyad1956-c008",
-     "riyad1956-c045",
-     "riyad1956-c020"
+     "riyad1956-c042"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -247,14 +255,15 @@
   {
    "id": "ans-09",
    "type": "cross_page",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c005",
+     "riyad1956-c023",
      "riyad1956-c006",
-     "riyad1956-c028",
-     "riyad1956-c050",
-     "riyad1956-c055"
+     "riyad1956-c027",
+     "riyad1956-c047"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -277,13 +286,14 @@
   {
    "id": "ans-10",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c006",
      "riyad1956-c005",
-     "riyad1956-c047",
-     "riyad1956-c045",
+     "riyad1956-c044",
+     "riyad1956-c042",
      "riyad1956-c021"
     ],
     "first_gold_rank": 1,
@@ -307,6 +317,7 @@
   {
    "id": "ans-11",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
@@ -337,14 +348,15 @@
   {
    "id": "ans-12",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c008",
-     "riyad1956-c029",
-     "riyad1956-c053",
-     "riyad1956-c031",
-     "riyad1956-c055"
+     "riyad1956-c028",
+     "riyad1956-c050",
+     "riyad1956-c030",
+     "riyad1956-c052"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -367,19 +379,21 @@
   {
    "id": "ans-13",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c009",
      "riyad1956-c021",
-     "riyad1956-c048",
-     "riyad1956-c050",
-     "riyad1956-c042"
+     "riyad1956-c045",
+     "riyad1956-c039",
+     "riyad1956-c037"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
     "mrr": 1.0,
-    "chunk_hit": true
+    "chunk_hit": true,
+    "context_complete": true
    },
    "baseline": {
     "ids": [
@@ -391,20 +405,22 @@
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
-    "mrr": 1.0
+    "mrr": 1.0,
+    "context_complete": true
    }
   },
   {
    "id": "ans-14",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c011",
-     "riyad1956-c045",
+     "riyad1956-c042",
+     "riyad1956-c048",
      "riyad1956-c008",
-     "riyad1956-c051",
-     "riyad1956-c047"
+     "riyad1956-c023"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -427,14 +443,15 @@
   {
    "id": "ans-15",
    "type": "cross_page",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c012",
-     "riyad1956-c044",
-     "riyad1956-c020",
-     "riyad1956-c010",
-     "riyad1956-c013"
+     "riyad1956-c023",
+     "riyad1956-c024",
+     "riyad1956-c041",
+     "riyad1956-c010"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -457,14 +474,15 @@
   {
    "id": "ans-16",
    "type": "needs_footnote",
+   "source": "agent_draft",
    "needs_footnote": true,
    "asool": {
     "ids": [
      "riyad1956-c012",
-     "riyad1956-c045",
-     "riyad1956-c032",
-     "riyad1956-c006",
-     "riyad1956-c004"
+     "riyad1956-c023",
+     "riyad1956-c042",
+     "riyad1956-c004",
+     "riyad1956-c031"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -489,13 +507,14 @@
   {
    "id": "ans-17",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c016",
      "riyad1956-c019",
-     "riyad1956-c026",
      "riyad1956-c021",
+     "riyad1956-c025",
      "riyad1956-c017"
     ],
     "first_gold_rank": 1,
@@ -519,6 +538,7 @@
   {
    "id": "ans-18",
    "type": "needs_footnote",
+   "source": "agent_draft",
    "needs_footnote": true,
    "asool": {
     "ids": [
@@ -526,7 +546,7 @@
      "riyad1956-c021",
      "riyad1956-c013",
      "riyad1956-c016",
-     "riyad1956-c026"
+     "riyad1956-c025"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -551,14 +571,15 @@
   {
    "id": "ans-19",
    "type": "cross_page",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c021",
      "riyad1956-c015",
-     "riyad1956-c020",
-     "riyad1956-c009",
-     "riyad1956-c019"
+     "riyad1956-c019",
+     "riyad1956-c023",
+     "riyad1956-c009"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -581,18 +602,19 @@
   {
    "id": "ans-20",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c024",
      "riyad1956-c027",
-     "riyad1956-c028",
-     "riyad1956-c025",
-     "riyad1956-c018"
+     "riyad1956-c026",
+     "riyad1956-c023",
+     "riyad1956-c018",
+     "riyad1956-c024"
     ],
-    "first_gold_rank": 4,
+    "first_gold_rank": 2,
     "recall_at_5": true,
-    "mrr": 0.25,
+    "mrr": 0.5,
     "chunk_hit": true
    },
    "baseline": {
@@ -603,22 +625,23 @@
      "base-0042",
      "base-0053"
     ],
-    "first_gold_rank": null,
-    "recall_at_5": false,
-    "mrr": 0.0
+    "first_gold_rank": 5,
+    "recall_at_5": true,
+    "mrr": 0.2
    }
   },
   {
    "id": "ans-21",
    "type": "editor_commentary",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c027",
+     "riyad1956-c026",
+     "riyad1956-c023",
      "riyad1956-c024",
      "riyad1956-c019",
-     "riyad1956-c016",
-     "riyad1956-c020"
+     "riyad1956-c016"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -641,14 +664,15 @@
   {
    "id": "ans-22",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
+     "riyad1956-c025",
+     "riyad1956-c040",
+     "riyad1956-c033",
      "riyad1956-c026",
-     "riyad1956-c043",
-     "riyad1956-c034",
-     "riyad1956-c027",
-     "riyad1956-c036"
+     "riyad1956-c035"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -671,13 +695,14 @@
   {
    "id": "ans-23",
    "type": "quran",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c039",
-     "riyad1956-c030",
-     "riyad1956-c033",
+     "riyad1956-c036",
+     "riyad1956-c029",
      "riyad1956-c032",
+     "riyad1956-c031",
      "riyad1956-c001"
     ],
     "first_gold_rank": 2,
@@ -701,14 +726,15 @@
   {
    "id": "ans-24",
    "type": "cross_page",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c033",
-     "riyad1956-c048",
-     "riyad1956-c040",
-     "riyad1956-c055",
-     "riyad1956-c047"
+     "riyad1956-c032",
+     "riyad1956-c045",
+     "riyad1956-c037",
+     "riyad1956-c044",
+     "riyad1956-c052"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -731,14 +757,15 @@
   {
    "id": "ans-25",
    "type": "needs_footnote",
+   "source": "agent_draft",
    "needs_footnote": true,
    "asool": {
     "ids": [
-     "riyad1956-c039",
-     "riyad1956-c033",
-     "riyad1956-c030",
+     "riyad1956-c036",
      "riyad1956-c032",
-     "riyad1956-c054"
+     "riyad1956-c029",
+     "riyad1956-c031",
+     "riyad1956-c051"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -763,14 +790,15 @@
   {
    "id": "ans-26",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c042",
-     "riyad1956-c040",
-     "riyad1956-c033",
-     "riyad1956-c051",
-     "riyad1956-c041"
+     "riyad1956-c039",
+     "riyad1956-c037",
+     "riyad1956-c032",
+     "riyad1956-c048",
+     "riyad1956-c038"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -793,14 +821,15 @@
   {
    "id": "ans-27",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c041",
-     "riyad1956-c048",
-     "riyad1956-c032",
-     "riyad1956-c004",
-     "riyad1956-c055"
+     "riyad1956-c038",
+     "riyad1956-c045",
+     "riyad1956-c031",
+     "riyad1956-c034",
+     "riyad1956-c004"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -823,14 +852,15 @@
   {
    "id": "ans-28",
    "type": "multi_condition",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c045",
-     "riyad1956-c051",
      "riyad1956-c042",
-     "riyad1956-c011",
-     "riyad1956-c041"
+     "riyad1956-c048",
+     "riyad1956-c038",
+     "riyad1956-c039",
+     "riyad1956-c011"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -853,14 +883,15 @@
   {
    "id": "ans-29",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
+     "riyad1956-c045",
      "riyad1956-c048",
-     "riyad1956-c051",
-     "riyad1956-c034",
+     "riyad1956-c033",
      "riyad1956-c019",
-     "riyad1956-c047"
+     "riyad1956-c037"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -883,12 +914,13 @@
   {
    "id": "ans-30",
    "type": "direct",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c053",
      "riyad1956-c050",
-     "riyad1956-c046",
+     "riyad1956-c047",
+     "riyad1956-c043",
      "riyad1956-c008",
      "riyad1956-c019"
     ],
@@ -913,14 +945,15 @@
   {
    "id": "ans-31",
    "type": "needs_footnote",
+   "source": "agent_draft",
    "needs_footnote": true,
    "asool": {
     "ids": [
-     "riyad1956-c054",
-     "riyad1956-c053",
-     "riyad1956-c029",
+     "riyad1956-c051",
+     "riyad1956-c050",
+     "riyad1956-c028",
      "riyad1956-c008",
-     "riyad1956-c050"
+     "riyad1956-c047"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -945,14 +978,15 @@
   {
    "id": "ans-32",
    "type": "cross_page",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c055",
-     "riyad1956-c034",
-     "riyad1956-c043",
-     "riyad1956-c054",
-     "riyad1956-c052"
+     "riyad1956-c052",
+     "riyad1956-c033",
+     "riyad1956-c040",
+     "riyad1956-c051",
+     "riyad1956-c049"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -975,6 +1009,7 @@
   {
    "id": "ans-33",
    "type": "english",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
@@ -982,12 +1017,13 @@
      "riyad1956-c019",
      "riyad1956-c016",
      "riyad1956-c017",
-     "riyad1956-c028"
+     "riyad1956-c027"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
     "mrr": 1.0,
-    "chunk_hit": true
+    "chunk_hit": true,
+    "context_complete": true
    },
    "baseline": {
     "ids": [
@@ -999,20 +1035,22 @@
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
-    "mrr": 1.0
+    "mrr": 1.0,
+    "context_complete": false
    }
   },
   {
    "id": "completeness-01",
    "type": "multi_condition",
+   "source": "owner_gate4",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c019",
      "riyad1956-c021",
      "riyad1956-c013",
-     "riyad1956-c026",
-     "riyad1956-c020"
+     "riyad1956-c025",
+     "riyad1956-c023"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -1035,14 +1073,15 @@
   {
    "id": "hostile-01",
    "type": "hostile",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
-     "riyad1956-c033",
-     "riyad1956-c036",
-     "riyad1956-c030",
-     "riyad1956-c049",
-     "riyad1956-c039"
+     "riyad1956-c032",
+     "riyad1956-c035",
+     "riyad1956-c029",
+     "riyad1956-c046",
+     "riyad1956-c036"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -1065,13 +1104,14 @@
   {
    "id": "hostile-02",
    "type": "hostile",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c019",
      "riyad1956-c021",
      "riyad1956-c013",
-     "riyad1956-c026",
+     "riyad1956-c025",
      "riyad1956-c016"
     ],
     "first_gold_rank": 3,
@@ -1095,6 +1135,7 @@
   {
    "id": "hostile-03",
    "type": "hostile",
+   "source": "agent_draft",
    "needs_footnote": false,
    "asool": {
     "ids": [
@@ -1107,7 +1148,7 @@
     "first_gold_rank": 1,
     "recall_at_5": true,
     "mrr": 1.0,
-    "chunk_hit": false
+    "chunk_hit": true
    },
    "baseline": {
     "ids": [
@@ -1125,11 +1166,12 @@
   {
    "id": "official-01",
    "type": "official",
+   "source": "official_package",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c002",
-     "riyad1956-c049",
+     "riyad1956-c046",
      "riyad1956-c007",
      "riyad1956-c021",
      "riyad1956-c000"
@@ -1155,19 +1197,21 @@
   {
    "id": "official-07",
    "type": "official",
+   "source": "official_package",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c008",
      "riyad1956-c002",
+     "riyad1956-c023",
      "riyad1956-c009",
-     "riyad1956-c020",
-     "riyad1956-c010"
+     "riyad1956-c020"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
     "mrr": 1.0,
-    "chunk_hit": false
+    "chunk_hit": false,
+    "context_complete": false
    },
    "baseline": {
     "ids": [
@@ -1179,20 +1223,22 @@
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
-    "mrr": 1.0
+    "mrr": 1.0,
+    "context_complete": false
    }
   },
   {
    "id": "official-08",
    "type": "official",
+   "source": "official_package",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c008",
      "riyad1956-c001",
      "riyad1956-c007",
-     "riyad1956-c029",
-     "riyad1956-c015"
+     "riyad1956-c003",
+     "riyad1956-c028"
     ],
     "first_gold_rank": 2,
     "recall_at_5": true,
@@ -1215,13 +1261,14 @@
   {
    "id": "official-09",
    "type": "official",
+   "source": "official_package",
    "needs_footnote": false,
    "asool": {
     "ids": [
+     "riyad1956-c045",
+     "riyad1956-c052",
      "riyad1956-c048",
-     "riyad1956-c051",
-     "riyad1956-c055",
-     "riyad1956-c034",
+     "riyad1956-c033",
      "riyad1956-c019"
     ],
     "first_gold_rank": 1,
@@ -1245,14 +1292,15 @@
   {
    "id": "official-10",
    "type": "official",
+   "source": "official_package",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c007",
-     "riyad1956-c002",
      "riyad1956-c009",
+     "riyad1956-c002",
      "riyad1956-c013",
-     "riyad1956-c055"
+     "riyad1956-c052"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
@@ -1275,19 +1323,21 @@
   {
    "id": "official-12",
    "type": "official",
+   "source": "official_package",
    "needs_footnote": false,
    "asool": {
     "ids": [
      "riyad1956-c008",
      "riyad1956-c003",
      "riyad1956-c009",
-     "riyad1956-c053",
+     "riyad1956-c050",
      "riyad1956-c002"
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
     "mrr": 1.0,
-    "chunk_hit": true
+    "chunk_hit": true,
+    "context_complete": true
    },
    "baseline": {
     "ids": [
@@ -1299,7 +1349,415 @@
     ],
     "first_gold_rank": 1,
     "recall_at_5": true,
+    "mrr": 1.0,
+    "context_complete": true
+   }
+  },
+  {
+   "id": "nat-01",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c019",
+     "riyad1956-c023",
+     "riyad1956-c016",
+     "riyad1956-c020",
+     "riyad1956-c011"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0021",
+     "base-0037",
+     "base-0026",
+     "base-0022",
+     "base-0012"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
     "mrr": 1.0
+   }
+  },
+  {
+   "id": "nat-02",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": true,
+   "asool": {
+    "ids": [
+     "riyad1956-c049",
+     "riyad1956-c000",
+     "riyad1956-c008",
+     "riyad1956-c004",
+     "riyad1956-c003"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5,
+    "chunk_hit": true,
+    "context_complete": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0000",
+     "base-0083",
+     "base-0055",
+     "base-0051",
+     "base-0036"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "context_complete": false
+   }
+  },
+  {
+   "id": "nat-03",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c038",
+     "riyad1956-c032",
+     "riyad1956-c031",
+     "riyad1956-c029",
+     "riyad1956-c036"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0059",
+     "base-0054",
+     "base-0057",
+     "base-0071",
+     "base-0076"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5
+   }
+  },
+  {
+   "id": "nat-04",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c005",
+     "riyad1956-c015",
+     "riyad1956-c013",
+     "riyad1956-c023",
+     "riyad1956-c019"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0019",
+     "base-0017",
+     "base-0018",
+     "base-0026",
+     "base-0051"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0
+   }
+  },
+  {
+   "id": "nat-05",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": true,
+   "asool": {
+    "ids": [
+     "riyad1956-c009",
+     "riyad1956-c028",
+     "riyad1956-c051",
+     "riyad1956-c027",
+     "riyad1956-c033"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true,
+    "context_complete": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0009",
+     "base-0053",
+     "base-0026",
+     "base-0087",
+     "base-0012"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "context_complete": false
+   }
+  },
+  {
+   "id": "nat-06",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c045",
+     "riyad1956-c019",
+     "riyad1956-c037",
+     "riyad1956-c033",
+     "riyad1956-c048"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0059",
+     "base-0060",
+     "base-0061",
+     "base-0006",
+     "base-0080"
+    ],
+    "first_gold_rank": null,
+    "recall_at_5": false,
+    "mrr": 0.0
+   }
+  },
+  {
+   "id": "nat-07",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c005",
+     "riyad1956-c031",
+     "riyad1956-c045",
+     "riyad1956-c048",
+     "riyad1956-c032"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": false
+   },
+   "baseline": {
+    "ids": [
+     "base-0057",
+     "base-0042",
+     "base-0012",
+     "base-0000",
+     "base-0072"
+    ],
+    "first_gold_rank": 3,
+    "recall_at_5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  {
+   "id": "nat-08",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c015",
+     "riyad1956-c014",
+     "riyad1956-c020",
+     "riyad1956-c047",
+     "riyad1956-c021"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0024",
+     "base-0018",
+     "base-0042",
+     "base-0025",
+     "base-0050"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5
+   }
+  },
+  {
+   "id": "nat-09",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c033",
+     "riyad1956-c039",
+     "riyad1956-c045",
+     "riyad1956-c037",
+     "riyad1956-c020"
+    ],
+    "first_gold_rank": null,
+    "recall_at_5": false,
+    "mrr": 0.0,
+    "chunk_hit": false
+   },
+   "baseline": {
+    "ids": [
+     "base-0060",
+     "base-0076",
+     "base-0083",
+     "base-0026",
+     "base-0042"
+    ],
+    "first_gold_rank": null,
+    "recall_at_5": false,
+    "mrr": 0.0
+   }
+  },
+  {
+   "id": "nat-10",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c019",
+     "riyad1956-c039",
+     "riyad1956-c047",
+     "riyad1956-c045",
+     "riyad1956-c048"
+    ],
+    "first_gold_rank": null,
+    "recall_at_5": false,
+    "mrr": 0.0,
+    "chunk_hit": false
+   },
+   "baseline": {
+    "ids": [
+     "base-0079",
+     "base-0086",
+     "base-0063",
+     "base-0009",
+     "base-0043"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5
+   }
+  },
+  {
+   "id": "nat-11",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c023",
+     "riyad1956-c018",
+     "riyad1956-c021",
+     "riyad1956-c019",
+     "riyad1956-c027"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0045",
+     "base-0021",
+     "base-0020",
+     "base-0019",
+     "base-0053"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0
+   }
+  },
+  {
+   "id": "nat-12",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c043",
+     "riyad1956-c042",
+     "riyad1956-c004",
+     "riyad1956-c048",
+     "riyad1956-c013"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0017",
+     "base-0075",
+     "base-0074",
+     "base-0080",
+     "base-0072"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5
+   }
+  },
+  {
+   "id": "nat-13",
+   "type": "natural_phrasing",
+   "source": "agent_natural",
+   "needs_footnote": false,
+   "asool": {
+    "ids": [
+     "riyad1956-c007",
+     "riyad1956-c000",
+     "riyad1956-c042",
+     "riyad1956-c032",
+     "riyad1956-c011"
+    ],
+    "first_gold_rank": 1,
+    "recall_at_5": true,
+    "mrr": 1.0,
+    "chunk_hit": true
+   },
+   "baseline": {
+    "ids": [
+     "base-0037",
+     "base-0008",
+     "base-0014",
+     "base-0024",
+     "base-0006"
+    ],
+    "first_gold_rank": 2,
+    "recall_at_5": true,
+    "mrr": 0.5
    }
   }
  ]

@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
-import { HadithBadge, LevelBadge, VerseChip } from "@/components/Bits";
+import { HadithBadge, LevelBadge, VerseChip, VerseMeaning } from "@/components/Bits";
 import { PageViewer, type PageViewerHandle } from "@/components/PageViewer";
 import { PassageCard } from "@/components/PassageCard";
 import { SearchBox } from "@/components/SearchBox";
@@ -11,9 +11,45 @@ import { ar, getJSON, postJSON } from "@/lib/api";
 import { useT } from "@/lib/i18n";
 import { blocksForQuote, norm } from "@/lib/norm";
 
+/** A quote from an approved source OUTSIDE the indexed book (Mushaf + tafsir, terminology). */
+function ExternalPoint({ pt, it }: { pt: SourcePoint; it: ExternalItem }) {
+  const inVerse = it.kind === "quran" && norm(it.text ?? "").includes(norm(pt.quote));
+  return (
+    <li className="rounded-lg border border-dashed border-insight/50 p-2">
+      <span className="mb-1 inline-block rounded bg-insight/10 px-1.5 py-0.5 text-xs text-insight">
+        من خارج الكتاب المفهرس · {it.kind === "quran" ? "مصحف مجمع الملك فهد" : "موسوعة المصطلحات الإسلامية المترجمة"}
+      </span>
+      {it.kind === "quran" ? (
+        <>
+          <p className="quran-text text-xl leading-loose">﴿{it.text}﴾</p>
+          <a href={it.url} target="_blank" rel="noreferrer" className="inline-block whitespace-nowrap rounded bg-thread/20 px-2 py-0.5 text-xs font-medium text-thread-strong">
+            آية · سورة {it.surah_name}: {ar(it.ayah ?? 0)} · ✓ من المصحف ↗
+          </a>
+          {!inVerse && (
+            <p className="mt-2 text-sm">
+              <span className="text-muted">من التفسير الميسر (QuranEnc): </span>
+              <span className="source-text">«{pt.quote}»</span>
+            </p>
+          )}
+          <VerseMeaning t={it.tafsir} />
+        </>
+      ) : (
+        <p className="mt-1">
+          <span className="font-medium">{it.term}</span>
+          {it.term_en ? <span className="text-muted"> ({it.term_en})</span> : null}:{" "}
+          <span className="source-text">«{pt.quote}»</span>{" "}
+          <a href={it.url} target="_blank" rel="noreferrer" className="text-xs text-insight underline">
+            المصدر ↗
+          </a>
+        </p>
+      )}
+    </li>
+  );
+}
+
 /** Main-text blocks plus the footnotes attached to a passage (quotes may come from either). */
 const allBlocks = (p: Passage) => [...(p.blocks ?? []), ...(p.footnotes ?? [])];
-import type { AnswerRes, PageData, Passage, SourcePoint } from "@/lib/types";
+import type { AnswerRes, ExternalItem, PageData, Passage, SourcePoint } from "@/lib/types";
 
 export default function AskPage() {
   return (
@@ -182,7 +218,8 @@ function Ask() {
                 </p>
                 <ul className="mt-2 grid gap-2">
                   {data.quoted_verse_check.candidates.map((c) => (
-                    <li key={`${c.surah}:${c.ayah_start}`} className="rounded-lg border border-line bg-surface p-3">
+                    <li key={`${c.surah}:${c.ayah_start}`} className={`rounded-lg border bg-surface p-3 ${c.closest ? "border-thread" : "border-line"}`}>
+                      {c.closest && <p className="mb-1 text-xs font-medium text-thread-strong">✓ الأقرب لفظًا ومعنى إلى ما ورد في السؤال</p>}
                       <p className="quran-text text-xl">﴿{c.canonical_text}﴾</p>
                       <p className="mt-1 text-sm">
                         <a href={c.quranpedia_url} target="_blank" rel="noreferrer" className="text-insight underline">
@@ -194,11 +231,16 @@ function Ask() {
                           ? `مذكورة في الكتاب ص ${c.in_corpus_pages.map(ar).join("، ")}`
                           : "ليست في صفحات الكتاب المفهرسة؛ نصها من مصحف مجمع الملك فهد"}
                       </p>
+                      <VerseMeaning t={c.tafsir} open={c.closest || data.quoted_verse_check!.candidates.length === 1} />
                     </li>
                   ))}
                 </ul>
                 {data.quoted_verse_check.candidates.length > 1 && (
-                  <p className="mt-2 text-sm">لا يمكن الجزم بأيّها المقصود؛ يُرجى الرجوع إلى النص الصحيح وعدم البناء على الصيغة الواردة في السؤال.</p>
+                  <p className="mt-2 text-sm">
+                    {data.quoted_verse_check.candidates.some((c) => c.closest)
+                      ? "الآية المعلَّمة هي الأقرب، إذ لا تختلف عمّا ورد في السؤال إلا في حرف لا يغيّر المعنى؛ ويُرجى الرجوع إلى النص الصحيح وعدم البناء على الصيغة الواردة في السؤال."
+                      : "لا يمكن الجزم بأيّها المقصود؛ يُرجى الرجوع إلى النص الصحيح وعدم البناء على الصيغة الواردة في السؤال."}
+                  </p>
                 )}
               </section>
             )}
@@ -211,6 +253,8 @@ function Ask() {
                 </div>
                 <ul className="mt-3 grid gap-3">
                   {data.answer.source_points.map((pt, i) => {
+                    const ext = pt.external ? data.external?.items[pt.passage] : undefined;
+                    if (ext) return <ExternalPoint key={i} pt={pt} it={ext} />;
                     const info = quoteInfo(pt);
                     const pg = info?.page;
                     const h = info?.hadith;
@@ -242,6 +286,7 @@ function Ask() {
                         {info?.verses.map((v, k) => (
                           <div key={k} className="ps-2 pt-1">
                             <VerseChip q={v} />
+                            <VerseMeaning t={v.tafsir} />
                           </div>
                         ))}
                       </li>
@@ -254,6 +299,20 @@ function Ask() {
                     {(data.answer.explanation || data.answer.source_points.map((pt) => pt.text).join(" ")).replace(/\s*\[P\d+(?:\s*[,،]\s*P\d+)*\]/g, "")}
                   </p>
                 </div>
+                {data.answer.source_points.some((p) => p.external) && (data.external?.referrals?.length ?? 0) > 0 && (
+                  <div className="mt-4 rounded-lg border border-insight/40 bg-insight/5 p-3 text-sm">
+                    <p className="font-medium">للاستزادة من مصادر معتمدة في الحزمة العلمية:</p>
+                    <ul className="mt-1 list-disc ps-5">
+                      {data.external!.referrals.map((r) => (
+                        <li key={r.url}>
+                          <a href={r.url} target="_blank" rel="noreferrer" className="text-insight underline">
+                            {r.title} ↗
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {data.answer.disagreement_noted && (
                   <p className="mt-2 text-sm text-amber-ink">في المسألة خلاف نقلته النصوص؛ عُرضت الأقوال دون ترجيح.</p>
                 )}
@@ -302,7 +361,21 @@ function Ask() {
                   {data.glossary.verified ? "✓ " : "⚠ "}
                   {data.glossary.source}
                 </p>
-                <p className="mt-2 text-xs text-muted">مأخوذ من المعجم مباشرة، وليس من توليد النموذج.</p>
+                {data.glossary.explanation && (
+                  <div className="mt-3 border-t border-line pt-2 text-sm">
+                    <p className="font-medium">شرح موجز من موسوعة المصطلحات الإسلامية المترجمة:</p>
+                    <p className="source-text mt-1">«{data.glossary.explanation.ar}»</p>
+                    {data.glossary.explanation.en && (
+                      <p dir="ltr" lang="en" className="mt-1 text-start">
+                        “{data.glossary.explanation.en}”
+                      </p>
+                    )}
+                    <a href={data.glossary.explanation.url} target="_blank" rel="noreferrer" className="text-xs text-insight underline">
+                      المصدر ↗
+                    </a>
+                  </div>
+                )}
+                <p className="mt-2 text-xs text-muted">مأخوذ من المعجم والموسوعة مباشرة، وليس من توليد النموذج.</p>
               </section>
             )}
 

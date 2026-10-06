@@ -1,0 +1,540 @@
+{
+ "ans-01": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:27:03.506501+00:00"
+ },
+ "ans-02": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:27:10.311549+00:00"
+ },
+ "ans-03": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:27:16.503635+00:00"
+ },
+ "ans-04": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تقتبس الإجابة الحاشيتين (١) و(٢) أسفل صفحة ٣١ (حاشية المحقق) لبيان معنى «الطهور» و«شطر»، مع وسمهما «حاشية المحقق». ويجوز للنموذج تبسيط المعنى في قسم «إيضاح مولَّد آليًا» بناءً على الحاشيتين، دون أن يضيف معنى لم يرد في الكتاب أو يجزم بقول واحد فيما يحتمل الخلاف.",
+  "edit": {
+   "question": "ما معنى «الطهور شطر الإيمان»؟",
+   "expected_behavior": "answer",
+   "gold_page_ids": [
+    "riyad1956-p031"
+   ],
+   "gold_anchor_blocks": [
+    "riyad1956-p031-b03"
+   ],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T19:33:16.619136+00:00"
+ },
+ "ans-05": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:34:02.520370+00:00"
+ },
+ "ans-06": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:34:15.088044+00:00"
+ },
+ "ans-07": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:34:58.970528+00:00"
+ },
+ "ans-08": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:35:07.904675+00:00"
+ },
+ "ans-09": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:35:15.195248+00:00"
+ },
+ "ans-10": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:35:27.775971+00:00"
+ },
+ "ans-11": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:35:37.545281+00:00"
+ },
+ "ans-12": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:35:51.862860+00:00"
+ },
+ "ans-13": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تقتبس الإجابة الحاشيتين (٧) و(٨) في صفحة ١٥ لبيان المقصود، حتى لا يُفهم الحديث على إطلاقه.",
+  "edit": {
+   "question": "لماذا كان المقتول في النار إذا التقى المسلمان بسيفيهما؟",
+   "expected_behavior": "answer",
+   "gold_page_ids": [
+    "riyad1956-p015"
+   ],
+   "gold_anchor_blocks": [
+    "riyad1956-p015-b09"
+   ],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T19:39:21.150867+00:00"
+ },
+ "ans-14": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:39:29.841297+00:00"
+ },
+ "ans-15": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:39:37.136192+00:00"
+ },
+ "ans-16": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تقتبس الإجابة الحاشية (٥) في صفحة ١٦ (حاشية المحقق) لبيان معنى «أغبق»، مع وسمها «حاشية المحقق». ويجوز للنموذج تبسيط المعنى في قسم «إيضاح مولَّد آليًا» بناءً على الحاشية، دون إضافة معنى لم يرد في الكتاب.",
+  "edit": {
+   "question": "ما معنى قوله «وكنت لا أغبق قبلهما أهلا ولا مالا»؟",
+   "expected_behavior": "answer",
+   "gold_page_ids": [
+    "riyad1956-p016",
+    "riyad1956-p017"
+   ],
+   "gold_anchor_blocks": [
+    "riyad1956-p016-b10"
+   ],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T19:42:35.214495+00:00"
+ },
+ "ans-17": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:42:41.126080+00:00"
+ },
+ "ans-18": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تقتبس الإجابة الحاشية (٧) في صفحة ١٩ (حاشية المحقق) لبيان معنى «يغرغر»: أن تصل روحه حلقومه، مع وسمها «حاشية المحقق». والحاشية تتضمن آية النساء ١٨ بلا أقواس، فيجب أن تظهر بجانبها شارة الآية (النساء: ١٨) متحققًا منها.",
+  "edit": {
+   "question": "ما معنى «ما لم يغرغر» في حديث قبول التوبة؟",
+   "expected_behavior": "answer",
+   "gold_page_ids": [
+    "riyad1956-p019"
+   ],
+   "gold_anchor_blocks": [
+    "riyad1956-p019-b13"
+   ],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T19:43:29.226560+00:00"
+ },
+ "ans-19": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:43:33.915997+00:00"
+ },
+ "ans-20": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تذكر الإجابة الالتزامين معًا: الانخلاع من ماله صدقة (وإمساك سهمه بخيبر)، وألا يحدّث إلا صدقًا ما بقي. الجملة تبدأ في صفحة ٢٧ وتكتمل في صفحة ٢٨، لكن التقسيم قطعها بين مقطعين (c025 يبدأ بـ«لك . فقلت»). يجب دمج الجمل الممتدة بين صفحتين في مقطع واحد، والتحقق من هذا في كل الصفحات.",
+  "edit": {
+   "question": "ماذا التزم كعب بن مالك بعد أن تاب الله عليه؟",
+   "expected_behavior": "answer",
+   "gold_page_ids": [
+    "riyad1956-p028",
+    "riyad1956-p029"
+   ],
+   "gold_anchor_blocks": [
+    "riyad1956-p029-b05"
+   ],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T19:52:45.735083+00:00"
+ },
+ "ans-21": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:52:54.647801+00:00"
+ },
+ "ans-22": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:53:00.747409+00:00"
+ },
+ "ans-23": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:53:07.920901+00:00"
+ },
+ "ans-24": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:53:11.900812+00:00"
+ },
+ "ans-25": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تقتبس الإجابة نص الحديث «إنما الصبر عند الصدمة الأولى»، والحاشية (رقم ...) في صفحة ٣٦ (حاشية المحقق) التي تشرح معنى الجملة، مع وسمها «حاشية المحقق». ويجوز للنموذج تبسيط المعنى في قسم «إيضاح مولَّد آليًا» بناءً على الحاشية، دون إضافة معنى لم يرد في الكتاب.",
+  "edit": {},
+  "decided_at": "2026-10-05T19:58:23.297771+00:00"
+ },
+ "ans-26": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:58:30.915822+00:00"
+ },
+ "ans-27": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:58:47.162710+00:00"
+ },
+ "ans-29": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:59:11.859648+00:00"
+ },
+ "ans-30": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:59:20.350352+00:00"
+ },
+ "ans-31": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T19:59:25.837524+00:00"
+ },
+ "ans-32": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:00:18.246415+00:00"
+ },
+ "ans-28": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:00:45.658101+00:00"
+ },
+ "ans-33": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "The answer must: (1) quote footnote (١) on page 18 (editor's footnote) for the meaning of tawbah, labeled as the editor's footnote; (2) list all conditions from the matn, including the fourth condition for rights of people («أن يبرأ من حق صاحبها»); (3) answer in English, keep the Arabic quotes in Arabic with an English rendering; (4) use the approved term \"Tawbah\" per the Jamhara/terminology dictionary, not a literal translation like \"repentance\" alone.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:02:00.553749+00:00"
+ },
+ "completeness-01": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:02:05.262242+00:00"
+ },
+ "unans-01": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {
+   "question": "ما حكم صيام يوم عرفة لغير الحاج؟",
+   "expected_behavior": "abstain",
+   "gold_page_ids": [],
+   "gold_anchor_blocks": [],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T20:03:11.285336+00:00"
+ },
+ "unans-02": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:03:36.550913+00:00"
+ },
+ "unans-03": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:03:52.208436+00:00"
+ },
+ "unans-04": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:03:55.269511+00:00"
+ },
+ "unans-05": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:03:59.059208+00:00"
+ },
+ "unans-06": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:04:07.095945+00:00"
+ },
+ "unans-07": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:04:30.070663+00:00"
+ },
+ "unans-08": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:04:31.739750+00:00"
+ },
+ "unans-09": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:04:34.152880+00:00"
+ },
+ "unans-10": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:04:56.599913+00:00"
+ },
+ "refer-01": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:05:00.162994+00:00"
+ },
+ "refer-02": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:05:03.973348+00:00"
+ },
+ "refer-03": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:05:07.399036+00:00"
+ },
+ "refer-04": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:05:11.306766+00:00"
+ },
+ "refer-05": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:05:15.634790+00:00"
+ },
+ "hostile-01": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:05:43.245245+00:00"
+ },
+ "hostile-02": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تكون الإجابة هادئة ومحترمة دون مجاراة العدائية، وأن تبيّن من الشروط تحديدًا أن العزم على عدم العودة ورد الحقوق لأصحابها ينفيان أن تكون التوبة «حيلة».",
+  "edit": {},
+  "decided_at": "2026-10-05T20:07:17.573024+00:00"
+ },
+ "hostile-03": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تصحح الإجابة الفهم الوارد في السؤال بهدوء ودون مجاراة: الإسلام يعتبر النية والعمل معًا، ولا يعاقب على مجرد الهمّ بالسيئة دون عمل، بل يكتبها حسنة لمن تركها لله (حديث ابن عباس، ص ١٦). وعند ذكر حديث القاتل والمقتول، يجب بيان أن المقتول خرج للقتال حريصًا على القتل، لا أنه عوقب على نية مجردة.",
+  "edit": {
+   "gold_page_ids": [
+    "riyad1956-p012",
+    "riyad1956-p015",
+    "riyad1956-p016"
+   ],
+   "gold_anchor_blocks": [
+    "riyad1956-p012-b12",
+    "riyad1956-p015-b09",
+    "riyad1956-p016-b07",
+    "riyad1956-p015-b03"
+   ]
+  },
+  "decided_at": "2026-10-05T20:08:50.432813+00:00"
+ },
+ "misquote-01": {
+  "action": "edit",
+  "reviewer": "rawan",
+  "note": "يجب أن تصحح الإجابة النص بلطف، وتعرض الآيات القريبة مع السورة ورقم الآية من مصحف المجمع، مع بيان أن الأقرب لقصد السائل آل عمران ١٤٦. أما المعنى: يُعرض من تفسير معتمد عبر واجهة QuranEnc (من مصادر الحزمة العلمية) منسوبًا لمصدره، لا من توليد النموذج.",
+  "edit": {
+   "question": "قال الله تعالى ﴿إن الله يحب الصابرين﴾، فما معنى هذه الآية؟",
+   "expected_behavior": "correct_verse",
+   "gold_page_ids": [],
+   "gold_anchor_blocks": [],
+   "required_anchor_blocks": []
+  },
+  "decided_at": "2026-10-05T20:13:14.566256+00:00"
+ },
+ "misquote-02": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تصحح الإجابة نص الآية بلطف («الصابرين» لا «المتقين»)، وتعرض البقرة ١٥٥-١٥٦ كاملة من مصحف المجمع، ثم تجيب عن فضل الصبر من نصوص باب الصبر في الكتاب (آيات ص ٣٠، وأحاديث ص ٣١-٣٢) مع الاستشهاد بها. والآية مذكورة في أول باب الصبر ص ٣٠، فيجب أن يستشهد بها من الكتاب نفسه، مع شارة التحقق من المصحف.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:16:06.587449+00:00"
+ },
+ "official-01": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تصحح الإجابة المفهوم بهدوء ودون تقريع، وتبين أن العبادة لله وحده مستشهدة بالآية في ص ١٢. وتبين أن الكعبة قبلة يتوجه إليها المسلمون وليست معبودًا، مستشهدة بآية القبلة (البقرة ١٤٤) من مصحف المجمع مع شارة التحقق، مع توضيح أن هذه الآية من المصحف وليست من الكتاب المفهرس.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:18:28.924161+00:00"
+ },
+ "official-02": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "ما كُتب عن الحزمة هنا غير دقيق: الحزمة تطلب «عرض الجواب التعريفي المؤصل دون ادعاءات غير موثقة، مع التدرج بحسب مستوى السائل»، لا الامتناع. يجب أن تجيب الإجابة بهدوء بأن القرآن وحي من الله، مستشهدة بآيات من مصحف المجمع مع شارة التحقق (مثل النجم ٣-٤، والبقرة ٢٣)، مع توضيح أن الآيات من المصحف وليست من الكتاب المفهرس، وأن الكتاب لا يتناول المسألة تفصيلًا، مع الإحالة إلى مصدر الحزمة المعتمد للشبهات: «بينات» (dawa.center/file/7937). ولا يضيف النموذج حججًا من عنده.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:19:42.614387+00:00"
+ },
+ "official-03": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "ما كُتب عن الحزمة هنا غير دقيق: الحزمة تطلب «تمييز السؤال التاريخي عن الاتهام العام، وتقديم جواب متوازن موثق وتجنب التعميمات»، لا الامتناع. يجب أن تفرّق الإجابة بين السؤال التاريخي والاتهام العام، وتذكر مبدأ ﴿لا إكراه في الدين﴾ (البقرة ٢٥٦) من مصحف المجمع مع شارة التحقق، وتصرّح بأن الكتاب المفهرس لا يتناول التاريخ، وتحيل للتفاصيل إلى «بينات» (dawa.center/file/7937) وdorar.net/history. ولا يذكر النموذج وقائع أو أرقامًا تاريخية من عنده.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:20:38.777433+00:00"
+ },
+ "official-04": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "ما كُتب عن الحزمة هنا غير دقيق: الحزمة تطلب «شرح معنى الاجتهاد وأسباب الخلاف بصورة مبسطة، وعدم تصوير كل خلاف على أنه تناقض». يجب أن تعرّف الإجابة الاجتهاد من مصدر معتمد (الجمهرة أو موسوعة المصطلحات الإسلامية) مع ذكر المرجع، ويبسط النموذج المعنى في «إيضاح مولَّد آليًا» بناءً عليه، مع بيان أن الكتاب المفهرس لا يتناول المسألة، والإحالة إلى dorar.net/feqhia للتوسع.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:21:20.412919+00:00"
+ },
+ "official-05": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:22:30.751684+00:00"
+ },
+ "official-06": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:22:58.754209+00:00"
+ },
+ "official-07": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تبدأ الإجابة بتعريف بلغة بسيطة غير اصطلاحية، ثم تذكر المصطلح «الإخلاص»، مع الحفاظ على الدقة. ويُبنى التعريف البسيط على حاشيتي المحقق (٤) «ما أريد به وجه الله تعالى» و(٥) في ص ١٢، مع وسمهما «حاشية المحقق»، ثم يُستشهد بالآية وحديثي «إنما الأعمال بالنيات» و«ولكن ينظر إلى قلوبكم».",
+  "edit": {},
+  "decided_at": "2026-10-05T20:23:44.904631+00:00"
+ },
+ "official-08": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تستعمل الإجابة المكافئ المعتمد «Tawhid / Oneness of God» من الجمهرة مع ذكر المرجع، وتُبقي المصطلح «Tawhid»، وتشرح معناه باختصار: إفراد الله بالربوبية والألوهية ووصفه بما جاء به الوحي من أسمائه الحسنى، ولا تختزله في الوحدانية العددية. ويمكن الاستشهاد بالآية في ص ١٢ وحاشيتها (١) «موحدين» مثالًا على الاستعمال.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:24:29.582012+00:00"
+ },
+ "official-09": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "",
+  "edit": {},
+  "decided_at": "2026-10-05T20:24:36.798787+00:00"
+ },
+ "official-10": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تبيّن الإجابة أن شرطية الإخلاص ثابتة بنصوص صريحة من الكتاب (الآية في ص ١٢، وحديث «إنما الأعمال بالنيات» المتفق عليه، وحديث «ينظر إلى قلوبكم»)، دون أن تدّعي «إجماعًا» لأن الكتاب لا ينقله في هذه المسألة. ويُستحسن التنبيه على الفرق: النووي نقل الإجماع صراحة على وجوب التوبة (ص ١٨)، ولم ينقله هنا.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:25:30.701967+00:00"
+ },
+ "official-11": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "يجب أن تنبّه الإجابة بلطف إلى أن النص الصحيح «وبشر الصابرين» لا «وبشر المؤمنين»، مع عرض البقرة ١٥٥ من مصحف المجمع وشارة التحقق، والاستشهاد بورودها في الكتاب ص ٣٠. ويُبيَّن معنى «الابتلاء» من حاشية المحقق (٥) على ﴿ولنبلونكم﴾ في ص ٣٠، مع وسمها «حاشية المحقق». ولا تبني الإجابة على النص المحرّف.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:26:19.164861+00:00"
+ },
+ "official-12": {
+  "action": "approve",
+  "reviewer": "rawan",
+  "note": "The answer must: keep the term \"Jihad\" with the approved equivalent from the Jamhara/terminology dictionary (cited), not translate it as \"holy war\"; explain from the quoted hadiths (pp. 13, 15) that in this book the topic is the INTENTION: striving and fighting count \"in the path of Allah\" only when done \"so that the word of Allah is uppermost\", not for spoils, fame or tribalism; quote footnote (٦) on «كلمة الله» (p.15) labeled as the editor's footnote. It must neither adopt the \"holy war against non-believers\" framing nor deny that the term includes fighting. It must state that the book does not detail the rulings and conditions of jihad, and refer to approved sources for that. Calm, respectful tone; Arabic quotes kept in Arabic with English rendering.",
+  "edit": {},
+  "decided_at": "2026-10-05T20:27:04.631348+00:00"
+ }
+}

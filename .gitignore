@@ -50,3 +50,6 @@ data/reference/hadeethenc/
 
 # Debug overlays contain page images
 data/debug/
+
+# التفسير الميسر via QuranEnc: downloaded by scripts/fetch_references.sh
+data/reference/quranenc/

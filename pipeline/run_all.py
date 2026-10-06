@@ -34,6 +34,8 @@ from pipeline.vlm_boxes import locate
 from pipeline.vlm_parse import model_dir, parse_page
 
 DB = DATA / "asool.db"
+WINDOW_MIN, WINDOW_CHARS = 2500, 1800
+_MARK_TAIL = re.compile(r"(\s*\(\s*[\d٠-٩]{1,3}\s*\))+\s*$")
 INDEX_DIR = DATA / "index"
 PARSER_PROMPT = "page_parse.v2"
 REVIEW_THRESHOLD = 0.75
@@ -237,12 +239,17 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
     chunks: list[dict] = []
     cur: dict | None = None
     last_matn: str | None = None
+    last_matn_obj: dict | None = None
 
     def close():
         nonlocal cur
-        if cur and cur["block_ids"]:
+        if cur and cur["block_ids"] and not any(c is cur for c in chunks):
             chunks.append(cur)
         cur = None
+
+    def sentence_end(bid: str) -> bool:
+        txt = _MARK_TAIL.sub("", byid[bid]["text"]).rstrip()
+        return bool(txt) and txt[-1] in ".؟!»:؛*"
 
     for b in blocks:
         t = b["type"]
@@ -266,7 +273,28 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
             cur["block_ids"].append(b["id"])
             continue
         starts_unit = t == "body" and hadith.START_RE.match(b["text"])
-        too_big = cur and sum(len(byid[x]["text"]) for x in cur["block_ids"]) > 2200
+        # A matn block continuing from the previous page after an interleaved editor note
+        # (p.32 poem between the two halves of a hadith) resumes that hadith's unit.
+        if (
+            cur is not None
+            and cur["kind"] == "editor_commentary"
+            and b.get("continues_from_prev")
+            and not starts_unit
+            and last_matn_obj is not None
+        ):
+            close()
+            cur = last_matn_obj
+            cur["block_ids"].append(b["id"])
+            continue
+        # Size limit: split only where a sentence ends and the next block does not continue
+        # it (never across a page break mid-sentence, owner report on c024/c025).
+        too_big = (
+            cur is not None
+            and cur["kind"] == "matn"
+            and sum(len(byid[x]["text"]) for x in cur["block_ids"]) > 2200
+            and sentence_end(cur["block_ids"][-1])
+            and not b.get("continues_from_prev")
+        )
         if (
             cur is None
             or cur["kind"] != "matn"
@@ -283,6 +311,7 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
             }
             n = len(chunks)
             last_matn = f"{BOOK_ID}-c{n:03d}"
+            last_matn_obj = cur
         cur["block_ids"].append(b["id"])
     close()
 
@@ -306,6 +335,36 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
             else "متن الإمام النووي"
         )
         tfe = f"{' › '.join(crumb)} › {label}\n{text}" + (f"\n[حواشي] {fn_text}" if fn_text else "")
+
+        # Search windows: a long unit (Ka'b's story, pp.23-28) stays ONE unit for reading and
+        # answering, but is searched in overlapping windows of whole blocks, each with its own
+        # footnotes, so one diluted embedding does not hide a specific sentence.
+        def window(bs: list[dict], crumb=crumb, label=label, attached=attached) -> dict:
+            wt = "\n".join(x["text"] for x in bs)
+            wf = " ".join(
+                " ".join([byid[f]["text"], *attached.get(f, [])])
+                for x in bs
+                for f in fn_by_anchor.get(x["id"], [])
+                if f in byid
+            )
+            head = f"{' › '.join(crumb)} › {label}"
+            return {
+                "text_for_embedding": f"{head}\n{wt}" + (f"\n[حواشي] {wf}" if wf else ""),
+                "text_norm": normalize(wt + " " + wf),
+            }
+
+        windows = []
+        if len(text) > WINDOW_MIN:
+            i = 0
+            while i < len(bl):
+                j, size = i, 0
+                while j < len(bl) and (size == 0 or size + len(bl[j]["text"]) <= WINDOW_CHARS):
+                    size += len(bl[j]["text"])
+                    j += 1
+                windows.append(window(bl[i:j]))
+                if j >= len(bl):
+                    break
+                i = max(i + 1, j - 1)  # one block of overlap
         out.append(
             {
                 "id": cid,
@@ -323,6 +382,7 @@ def _chunks(blocks, links, qrefs, hunits) -> list[dict]:
                 "commentary_on": (c["commentary_on"] if c["kind"] == "editor_commentary" else None),
                 "token_count": len(text.split()),
                 "min_confidence": min(x["final_confidence"] for x in bl),
+                "windows": windows,
             }
         )
     # commentary_on was recorded as the id the matn chunk would get; fix it to the real id
@@ -521,7 +581,8 @@ def _write_db(pages, blocks, links, qrefs, hunits, chunks, bflags, page_flags) -
                 c["min_confidence"],
             ),
         )
-        con.execute("INSERT INTO chunks_fts VALUES (?,?)", (c["id"], c["text_norm"]))
+        for w in c.get("windows") or [{"text_norm": c["text_norm"]}]:
+            con.execute("INSERT INTO chunks_fts VALUES (?,?)", (c["id"], w["text_norm"]))
     now = datetime.now(UTC).isoformat()
     for b in blocks:
         if b["final_confidence"] < REVIEW_THRESHOLD:
@@ -566,7 +627,13 @@ def _embed(chunks: list[dict], base: list[dict]) -> None:
     from api.llm import embed
 
     INDEX_DIR.mkdir(parents=True, exist_ok=True)
-    for name, rows, field in (("chunks", chunks, "text_for_embedding"), ("baseline", base, "text")):
+    # One vector per search window (long units) or per unit; ids repeat for windows.
+    win = [
+        {"id": c["id"], "text_for_embedding": w["text_for_embedding"]}
+        for c in chunks
+        for w in (c.get("windows") or [c])
+    ]
+    for name, rows, field in (("chunks", win, "text_for_embedding"), ("baseline", base, "text")):
         vecs = np.array(embed([r[field] for r in rows], stage=f"embed/{name}"), dtype=np.float32)
         vecs /= np.linalg.norm(vecs, axis=1, keepdims=True)
         np.save(INDEX_DIR / f"{name}.npy", vecs)

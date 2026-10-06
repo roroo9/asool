@@ -1,0 +1,166 @@
+{
+ "ans-04": {
+  "footnotes_all": [
+   "riyad1956-p031-b10-0",
+   "riyad1956-p031-b10-1"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "ans-13": {
+  "footnotes_all": [
+   "riyad1956-p015-b19",
+   "riyad1956-p015-b20"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "ans-16": {
+  "footnotes_all": [
+   "riyad1956-p016-b15"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "ans-18": {
+  "footnotes_all": [
+   "riyad1956-p019-b21"
+  ],
+  "verses_shown_all": [
+   "4:18"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "ans-20": {
+  "quotes_all": [
+   "ان انخلع من مالي صدقه",
+   "لا احدث الا صدقا"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "ans-25": {
+  "footnotes_any": [
+   "riyad1956-p036-b07",
+   "riyad1956-p036-b08"
+  ],
+  "quotes_all": [
+   "انما الصبر عند الصدمه الاولي"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "ans-33": {
+  "footnotes_all": [
+   "riyad1956-p018-b17"
+  ],
+  "quotes_all": [
+   "يبرا من حق صاحبها"
+  ],
+  "language": "en",
+  "terms_en_all": [
+   "Tawbah"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "hostile-02": {
+  "quotes_all": [
+   "يعزم ان لا يعود اليها",
+   "يبرا من حق صاحبها"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "hostile-03": {
+  "required_anchor_blocks": [
+   "riyad1956-p016-b07"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "misquote-01": {
+  "verses_shown_all": [
+   "3:146",
+   "2:153",
+   "8:46"
+  ],
+  "closest_verse": "3:146",
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "misquote-02": {
+  "verses_shown_all": [
+   "2:155",
+   "2:156"
+  ],
+  "required_anchor_blocks": [
+   "riyad1956-p030-b12"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-01": {
+  "verses_shown_all": [
+   "2:144"
+  ],
+  "required_anchor_blocks": [
+   "riyad1956-p012-b06"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-02": {
+  "external_quran": true,
+  "referrals_all": [
+   "https://dawa.center/file/7937"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-03": {
+  "verses_shown_all": [
+   "2:256"
+  ],
+  "referrals_all": [
+   "https://dawa.center/file/7937",
+   "https://dorar.net/history"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-04": {
+  "terms_cited_all": [
+   "الاجتهاد"
+  ],
+  "referrals_all": [
+   "https://dorar.net/feqhia"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-07": {
+  "footnotes_all": [
+   "riyad1956-p012-b19",
+   "riyad1956-p012-b17"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-08": {
+  "glossary_explanation": true,
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-10": {
+  "required_anchor_blocks": [
+   "riyad1956-p012-b06",
+   "riyad1956-p012-b12",
+   "riyad1956-p015-b03"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-11": {
+  "verses_shown_all": [
+   "2:155"
+  ],
+  "footnotes_all": [
+   "riyad1956-p030-b26"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ },
+ "official-12": {
+  "footnotes_all": [
+   "riyad1956-p015-b18"
+  ],
+  "language": "en",
+  "terms_en_all": [
+   "Jihad"
+  ],
+  "from": "reviewer note (rawan), structured by the AI agent"
+ }
+}

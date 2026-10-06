@@ -38,8 +38,56 @@ router = APIRouter(
 )
 
 
+ANCHORS = (
+    ("gold_anchor_blocks", "gold_chunk_ids"),
+    ("required_anchor_blocks", "required_chunk_ids"),
+)
+
+
+def _block_chunk() -> dict[str, str]:
+    """Block id -> chunk id. Citations are stored as anchor BLOCKS (stable when the chunking
+    changes) and resolved to the current chunks here."""
+    con = sqlite3.connect(DB)
+    out = {}
+    for cid, bids in con.execute("SELECT id, block_ids FROM chunks"):
+        for b in json.loads(bids):
+            out.setdefault(b, cid)
+    con.close()
+    return out
+
+
+def resolve(d: dict, bc: dict[str, str] | None = None) -> dict:
+    """Anchor blocks -> current chunk ids (in place of stored chunk ids)."""
+    bc = bc or _block_chunk()
+    d = dict(d)
+    for ak, ck in ANCHORS:
+        if ak in d:
+            d[ck] = list(dict.fromkeys(bc[b] for b in d[ak] if b in bc))
+    return d
+
+
+def to_anchors(d: dict) -> dict:
+    """Chunk ids (from the review screen) -> anchor blocks for storage."""
+    con = sqlite3.connect(DB)
+    types = dict(con.execute("SELECT id, type FROM blocks"))
+    blocks = {cid: json.loads(b) for cid, b in con.execute("SELECT id, block_ids FROM chunks")}
+    con.close()
+    d = dict(d)
+    for ak, ck in ANCHORS:
+        if ck in d:
+            d[ak] = [
+                next((b for b in blocks[c] if types.get(b) == "hadith"), blocks[c][0])
+                for c in d.pop(ck)
+                if c in blocks
+            ]
+    return d
+
+
 def _drafts() -> list[dict]:
-    return [json.loads(x) for x in QUESTIONS.read_text(encoding="utf-8").splitlines() if x]
+    bc = _block_chunk()
+    return [
+        resolve(json.loads(x), bc) for x in QUESTIONS.read_text(encoding="utf-8").splitlines() if x
+    ]
 
 
 def _json(p: Path) -> dict:
@@ -57,7 +105,7 @@ def reviewed_questions(include_removed: bool = False) -> list[dict]:
                 continue
             q = (
                 q
-                | r.get("edit", {})
+                | resolve(r.get("edit", {}))
                 | {
                     "human_verified": r["action"] in ("approve", "edit"),
                     "reviewed_by": r["reviewer"],
@@ -106,6 +154,7 @@ def listing() -> dict:
     items = []
     for q in _drafts():
         p = proposals.get(q["id"])
+        p = p and resolve(p)
         items.append(
             {
                 "id": q["id"],
@@ -119,7 +168,8 @@ def listing() -> dict:
                 "proposal": p
                 and p
                 | {"citations": _citations({k: p.get(k, q.get(k)) for k in EDITABLE}, chunks)},
-                "review": reviews.get(q["id"]),
+                "review": reviews.get(q["id"])
+                and (reviews[q["id"]] | {"edit": resolve(reviews[q["id"]].get("edit") or {})}),
             }
         )
     done = sum(1 for i in items if i["review"])
@@ -156,6 +206,7 @@ def decide(qid: str, body: Review) -> dict:
         if "gold_chunk_ids" in edit:  # pages follow the chosen citations
             pages = sorted({p for c in edit["gold_chunk_ids"] for p in _page_ids(c)})
             edit["gold_page_ids"] = pages
+        edit = to_anchors(edit)
     with _lock:
         reviews = _json(REVIEWS)
         reviews[qid] = {

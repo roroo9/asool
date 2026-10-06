@@ -9,6 +9,7 @@ import json
 import sqlite3
 
 from api.search import db, highlight_spans
+from pipeline import quran
 from pipeline.config import BOOK
 from pipeline.hadith import UNVERIFIED_AR
 
@@ -108,6 +109,7 @@ def passage(
                     "diff_ops": J(r["diff_ops"] or "[]"),
                     "reference_source": r["reference_source"],
                     "quranpedia_url": f"https://quranpedia.net/surah/{r['surah']}/{r['ayah_start']}",
+                    "tafsir": quran.tafsir(r["surah"], r["ayah_start"], r["ayah_end"]),
                 }
             )
     hadiths = []
@@ -193,7 +195,11 @@ def page(pid: str) -> dict | None:
     blocks = _block_rows(con, ids)
     links = [dict(r) for r in con.execute("SELECT * FROM footnote_links WHERE page_id=?", (pid,))]
     qrefs = [
-        dict(r) | {"diff_ops": J(r["diff_ops"] or "[]")}
+        dict(r)
+        | {
+            "diff_ops": J(r["diff_ops"] or "[]"),
+            "tafsir": quran.tafsir(r["surah"], r["ayah_start"], r["ayah_end"]),
+        }
         for r in con.execute(
             f"SELECT * FROM quran_refs WHERE block_id IN ({','.join('?' * len(ids))})", ids
         )

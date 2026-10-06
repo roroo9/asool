@@ -19,7 +19,7 @@ import re
 import time
 from pathlib import Path
 
-from api import budget
+from api import approved, budget
 from api.llm import generate
 from api.passages import passage
 from api.search import embed_query, hybrid
@@ -29,8 +29,8 @@ from pipeline.normalize import normalize
 
 PROMPTS = Path(__file__).parent / "prompts"
 CACHE = ROOT / "data" / "answers"  # committed: precomputed answers survive redeploys
-CLASSIFY_V = "level_classify.v1"
-ANSWER_V = "answer.v3"
+CLASSIFY_V = "level_classify.v2"
+ANSWER_V = "answer.v4"
 _GLOSSARY_FILE = json.loads((ROOT / "data" / "reference" / "glossary.json").read_text())
 GLOSSARY = _GLOSSARY_FILE["terms"]
 # The first ten entries are the package's own sample of the Jamhara dictionary (p.8).
@@ -92,6 +92,13 @@ CLASSIFY_SCHEMA = {
         "quoted_verse": {"type": "string"},
         "asks_for_evidence_text": {"type": "boolean"},
         "search_query_ar": {"type": "string"},
+        "foundational": {"type": "boolean"},
+        "referral_topic": {
+            "type": "string",
+            "enum": ["doubts", "history", "fiqh", "concept", "none"],
+        },
+        "mushaf_query_ar": {"type": "string"},
+        "key_terms_ar": {"type": "array", "items": {"type": "string"}},
         "reason": {"type": "string"},
     },
     "required": [
@@ -102,6 +109,10 @@ CLASSIFY_SCHEMA = {
         "quoted_verse",
         "asks_for_evidence_text",
         "search_query_ar",
+        "foundational",
+        "referral_topic",
+        "mushaf_query_ar",
+        "key_terms_ar",
         "reason",
     ],
     "additionalProperties": False,
@@ -209,6 +220,28 @@ def _in_corpus(surah: int, ayah: int) -> list[int]:
     return [r[0] for r in rows]
 
 
+_FUNCTION = {"ان", "إن", "أن", "و", "ف", "ثم", "قد", "لقد", "ما", "يا", "ل", "ب"}
+
+
+def _content(words: list[str]) -> list[str]:
+    out = []
+    for w in words:
+        w = normalize(w, "quran")
+        if len(w) > 2 and w[0] in "وف":
+            w = w[1:]
+        if w and w not in _FUNCTION:
+            out.append(w)
+    return sorted(out)
+
+
+def _function_words_only(c) -> bool:
+    """True when every difference between the quoted wording and this verse is a function
+    word or a conjunction (e.g. «إن الله» vs «والله»): the meaning-bearing words all match."""
+    return bool(c.diff_ops) and all(
+        _content(o["printed"]) == _content(o["reference"]) for o in c.diff_ops
+    )
+
+
 def _ayahs(i: dict) -> str:
     s, e = i["ayah_start"], i["ayah_end"]
     return _ar_num(s) if s == e else f"{_ar_num(s)}–{_ar_num(e)}"
@@ -252,6 +285,8 @@ def check_quoted_verse(question: str, quoted: str) -> dict | None:
                     for d in cands
                 )
             ]
+        closest = [c for c in cands if _function_words_only(c)] if not exact else []
+        closest_id = (closest[0].surah, closest[0].ayah_start) if len(closest) == 1 else None
         items = []
         for c in cands:
             pages = sorted(
@@ -267,6 +302,8 @@ def check_quoted_verse(question: str, quoted: str) -> dict | None:
                     "similarity": c.similarity,
                     "diff_ops": c.diff_ops,
                     "quranpedia_url": c.quranpedia_url,
+                    "tafsir": quran.tafsir(c.surah, c.ayah_start, c.ayah_end),
+                    "closest": closest_id == (c.surah, c.ayah_start),
                     "in_corpus_pages": pages,
                 }
             )
@@ -283,8 +320,12 @@ def check_quoted_verse(question: str, quoted: str) -> dict | None:
                 + refs
                 + ". "
                 + (
-                    "ولا يمكن الجزم بأيّها المقصود، فيُرجى الرجوع إلى النص الصحيح وعدم البناء على "
+                    f"والأقرب لفظًا ومعنى: {near['surah_name']}: {_ayahs(near)}، إذ لا يختلف عنها "
+                    "إلا في حرف لا يغيّر المعنى. ويُرجى الرجوع إلى النص الصحيح وعدم البناء على "
                     "الصيغة الواردة في السؤال."
+                    if several and (near := next((i for i in items if i["closest"]), None))
+                    else "ولا يمكن الجزم بأيّها المقصود، فيُرجى الرجوع إلى النص الصحيح "
+                    "وعدم البناء على الصيغة الواردة في السؤال."
                     if several
                     else "يُرجى الرجوع إلى النص الصحيح وعدم البناء على الصيغة الواردة في السؤال."
                 )
@@ -316,7 +357,10 @@ def verify_quotes(
     for pt in points:
         p = passages_by_tag.get(pt.get("passage", "").strip("[] "))
         q = _vnorm(pt.get("quote", ""))
-        if not p or len(q.split()) < 2:
+        whole_note = p is not None and any(  # a one-word footnote quoted in full («نصف»)
+            q and q == _vnorm(f["text"]) for f in p["footnotes"]
+        )
+        if not p or (len(q.split()) < 2 and not whole_note):
             removed.append(pt | {"why": "no passage" if not p else "quote too short"})
             continue
         hay = _vnorm(
@@ -336,11 +380,14 @@ def verify_quotes(
 _TAG = re.compile(r"\[P(\d+)\]")
 
 
+_TAG2 = re.compile(r"\b([PQT])(\d+)\b")
+
+
 def _explanation_ok(expl: str, tags: set[str]) -> str:
     """Drop explanation sentences that cite a passage that was not provided."""
     out = []
     for s in re.split(r"(?<=[.!؟?])\s+", expl.strip()):
-        cited = {f"P{n}" for n in _TAG.findall(s)}
+        cited = {f"{k}{n}" for k, n in _TAG2.findall(s)}
         if cited and not cited <= tags:
             continue
         out.append(s)
@@ -430,7 +477,8 @@ def answer(
     if g := glossary_request(question):
         ar_term, en = g
         ret = hybrid(question, k=3)
-        verified = ar_term in PACKAGE_TERMS
+        in_package = ar_term in PACKAGE_TERMS
+        entry = next(iter(approved.term_entries(ar_term, limit=1)), None)
         res = {
             "question": question,
             "language": "ar",
@@ -446,9 +494,19 @@ def answer(
                 "term_en": en,
                 "source": "معجم جمهرة للمصطلحات الإسلامية (islamic-content.com/dictionary)، "
                 "كما ورد في الحزمة العلمية للتحدي"
-                if verified
-                else "مقابل شائع لم يُتحقق منه بعد في معجم جمهرة",
-                "verified": verified,
+                if in_package
+                else "موسوعة المصطلحات الإسلامية المترجمة (terminologyenc.com)",
+                "verified": True,
+                # Brief explanation when the literal equivalent is not enough (package p.6),
+                # quoted from the encyclopedia, never generated.
+                "explanation": entry
+                and {
+                    "ar": entry["definition"],
+                    "en": entry["definition_en"],
+                    "term_en": entry["term_en"],
+                    "source": entry["source"],
+                    "url": entry["url"],
+                },
             },
             "message": f"المقابل المعتمد لمصطلح «{ar_term}» بالإنجليزية: {en}.",
             "stages": [{"stage": "glossary", "term": ar_term}],
@@ -498,6 +556,21 @@ def answer(
         "ai_notice": AI_NOTICE_AR,
         "cached": False,
     }
+    # Foundational A/B question: approved sources outside the book (Mushaf + tafsir, terminology
+    # encyclopedia) may complement the book, clearly labeled, plus the package's referrals.
+    external = None
+    if (
+        cls
+        and cls.get("foundational")
+        and cls["level"] in ("A", "B")
+        and not cls["is_personal_case"]
+    ):
+        try:
+            external = approved.context(question, cls, qvec)
+            base["external"] = external
+            stages.append({"stage": "approved_sources", "items": list(external["items"])})
+        except Exception as e:  # never break an answer because of the extra sources
+            stages.append({"stage": "approved_sources", "error": str(e)[:200]})
 
     def done(res: dict) -> dict:
         res["stages"] = stages
@@ -519,7 +592,10 @@ def answer(
     stages.append(
         {"stage": "support_gate", "best_sim": round(best, 3), "threshold": settings.support_min_sim}
     )
-    if not passages or (ret["dense_available"] and best < settings.support_min_sim):
+    has_external = bool(external and external["items"])
+    if not has_external and (
+        not passages or (ret["dense_available"] and best < settings.support_min_sim)
+    ):
         return done(
             base | {"status": "abstained", "message": ABSTAIN_AR if lang == "ar" else ABSTAIN_EN}
         )
@@ -544,6 +620,12 @@ def answer(
             else ""
         )
         + f"question: {question}\n\nPASSAGES:\n{_context(passages)}"
+        + (
+            "\n\nAPPROVED SOURCES OUTSIDE THE INDEXED BOOK (foundational question):\n"
+            + approved.prompt_block(external["items"])
+            if has_external
+            else ""
+        )
     )
     gen = None
     for m in dict.fromkeys([model, settings.answer_fallback_model]):
@@ -582,7 +664,19 @@ def answer(
         )
 
     by_tag = {f"P{i}": p for i, p in enumerate(passages, 1)}
-    kept, removed = verify_quotes(gen["source_points"], by_tag)
+    ext_items = external["items"] if has_external else {}
+    book_pts = [
+        p for p in gen["source_points"] if p.get("passage", "").strip("[] ") not in ext_items
+    ]
+    kept, removed = verify_quotes(book_pts, by_tag)
+    for pt in gen["source_points"]:
+        tag = pt.get("passage", "").strip("[] ")
+        if tag in ext_items:
+            it = ext_items[tag]
+            if approved.verify_external(pt.get("quote", ""), it):
+                kept.append(pt | {"verified": True, "external": it["kind"], "passage": tag})
+            else:
+                removed.append(pt | {"why": "quote not found verbatim in the approved source"})
     stages.append({"stage": "verify_quotes", "kept": len(kept), "removed": len(removed)})
     if not kept or len(removed) > len(gen["source_points"]) / 2:
         return done(
@@ -598,18 +692,16 @@ def answer(
                 },
             }
         )
-    cited = {k.get("passage", "").strip("[] ") for k in kept}
     return done(
         base
         | {
             "status": "answered",
             "model": gen["model"],
+            "uses_external": any(k.get("external") for k in kept),
             "level": gen["level"],
             "answer": {
                 "source_points": kept,
-                "explanation": _explanation_ok(
-                    gen["explanation"], set(by_tag) & (cited | set(by_tag))
-                ),
+                "explanation": _explanation_ok(gen["explanation"], set(by_tag) | set(ext_items)),
                 "disagreement_noted": gen["disagreement_noted"],
             },
             "verification": {

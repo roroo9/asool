@@ -1,0 +1,1072 @@
+{
+ "التوحيد": {
+  "id": "10482",
+  "term": "توحيد",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/10482",
+  "ar": {
+   "id": "10482",
+   "term": "توحيد",
+   "idio_def": "إفراد الله تعالى بكل ما يختص به من الربوبية والألوهية والأسماء والصفات، والبراءة من الشرك وأهله.",
+   "brief_expl": "التوحيد: أعظم ما فرضه الله تعالى على عباده، وهو حق الله على العبيد، وهو أساس دعوة الأنبياء والرسل جميعا من أولهم إلى آخرهم، والتوحيد هو: اعتقاد أن الله واحد منفرد في خلقه وملكه وتدبيره، وأنه المستحق للعبادة وحده لا شريك له، فلا تصرف لغيره منها شيء، وأن له أسماء وصفات لا مثيل ولا شبيه له فيها، وينقسم التوحيد إلى ثلاثة أقسام:\n1- توحيد الألوهية.\n2- توحيد الربوبية.\n3- توحيد الأسماء والصفات.\nولا يتم للإنسان التوحيد إلا بإثبات ونفي: \nالأول: الإثبات وهو أن يثبت لله ما يختص به من عبودية وربوبية وأسماء وصفات.\nالثاني: نفي العبودية والربوبية والأسماء والصفات عن غير الله تعالى.",
+   "brief_ling_def": "جعل الشيء واحدا غير متعدد، يقال: وحد الشيء، يوحده، توحيدا، أي: جعله واحدا. والواحد: أول العدد. ويأتي التوحيد بمعنى الإفراد والتمييز. وضده: الإشراك. والأحد والواحد: المنفرد الذي لا نظير له.",
+   "categories": [
+    "72",
+    "73",
+    "74",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يرد مصطلح (توحيد) في العقيدة في مواطن كثيرة، منها: باب: توحيد الربوبية، وباب: توحيد الأسماء والصفات، وباب: الإيمان وأركانه، وباب: الفرق والأديان، وغير ذلك من الأبواب.",
+   "ling_def": "جعل الشيء واحدا غير متعدد، يقال: وحد الشيء وأوحده، يوحده، توحيدا، أي: جعله واحدا. والواحد: أول العدد. وجمعه: وحدان. ويأتي التوحيد بمعنى الإفراد والتمييز، يقال: توحد برأيه، أي: انفرد به، وكل شيء على حدة، أي: متميز عن غيره. والوحدة: الانفراد والعزلة. والأحد والواحد: المنفرد الذي لا نظير له. وضده: الإشراك.",
+   "root": "وحد"
+  },
+  "en": {
+   "id": "10482",
+   "term": "Monotheism",
+   "idio_def": "Singling Allah out in everything exclusive to Him: His Lordship, His divinity (worship), and His names and attributes; and dissociating oneself from polytheism and its people.",
+   "brief_expl": "\"Tawhīd\" (monotheism) is the greatest thing that Allah Almighty has made obligatory upon His servants. It is Allah’s right upon His servants and the foundation of the mission of all the messengers and prophets. Tawhīd is the belief that Allah is One and that He is unique in His creation, His dominion, and His planning. He is the only One worthy of worship, without any partners; so, no acts of worship should be devoted to anyone other than Him. He has names and attributes that are matchless.\n Tawhīd is divided into three parts:\n 1. Tawhīd of worship.\n 2. Tawhīd of lordship.\n 3. Tawhīd of names and attributes.\n One’s belief in Tawhīd is incomplete without an affirmation and a negation:\n 1. Affirming what is unique to Allah; the right to be worshiped, His Lordship, and His names and attributes.\n 2. Negating the right of worship, lordship as well as the divine names and attributes from anyone other than Allah.",
+   "brief_ling_def": "\"Tawhīd\": to make something one and not numerous. \"Wāhid\": the first number (one). \"Al-Ahad\" and \"Al-Wāhid\" refer to the unique One Who has no equivalent. Opposite: \"ishrāk\" (polytheism). Other meanings: singling out, distinguishing.",
+   "categories": [
+    "72",
+    "73",
+    "74"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الاجتهاد": {
+  "id": "75221",
+  "term": "اجتهاد",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/75221",
+  "ar": {
+   "id": "75221",
+   "term": "اجتهاد",
+   "idio_def": "بَذْلُ العَالِمِ مَا فِي وُسْعِهِ لِطَلَبِ حُكْمٍ شَرْعِيٍّ فَرْعِيٍّ مِنْ أَدِلَّتِهِ.",
+   "brief_expl": "الاجْتِهَادُ طَرِيقٌ مِنْ طُرُقِ اسْتِفَادَةِ أَحْكَامِ الشَّرِيعَةِ وَإِدْراكِهَا مِنْ أَدِلَّتِهَا الشَّرْعِيَّةِ ، وَهُوَ بَذْلُ الفَقِيهِ طَاقَتَهُ لاسْتِنْبَاطِ حُكْمٍ مِنْ أَحْكَامِ الفُرُوعِ ، فَلاَ اجْتِهَادَ فِيمَا عُلِمَ مِنَ الدِّينِ بِالضَّرُورَةِ ، كَوُجُوبِ الصَّلَوَاتِ وَكَوْنِهَا خَمْسًا.\nوَيُقَسِّمُ العُلَمَاءُ الِاجْتِهَادَ الوَاقِعَ فِي الشَّرِيعَةِ بِحَسَبِ مَشَرْوعِيَتِهِ إِلَى قِسْمَيْنِ:\nأَحَدُهُمَا: الِاجْتِهَادُ الْمُعْتَبَرُ شَرْعًا ، وَهُوَ الاجْتـِهَادُ الصَّادِرُ عَنْ أَهْلِهِ العَارِفِينَ ، الذِي تَحَقَّقَتْ شُرُوطُهُ ، وَهِيَ نَوْعانِ:\n1- عَامَّةٌ: وَهِيَ العَقْلُ وَالبُلُوغُ وَالإِسْلاَمُ وَالعَدَالَةُ.\n2- خَاصَّةٌ: وَهِيَ القُدْرَةُ عَلَى النَّظَرِ وَالمَعْرِفَةُ بِطُرُقِ الاجْتِهادِ وَقَوَاعِدِ الاسْتِنْبَاطِ وَوَسَائِلِهِ كَمَعْرِفَةِ القُرْآنِ وَالسُنَّةِ وَاللُّغَةِ وَأُصُولِ الفِقْهِ وَغَيْرَهَا.\nالثَّانِي: الاجْتِهادُ غَيْرُ الْمُعْتَبَرِ شَرْعًا ، وَهُوَ الاجْتِهَادُ الصَّادِرُ عَمَّنْ لَيْسَ بِعَارِفٍ بِأَدَواتِ الاجْتِهَادِ وَطُرُقِهِ ، لِأَنَّ حَقِيقَتَهُ أَنَّهُ رَأْيٌ بِمُجَرَّدِ التَّشَهِّي وَالْأَغْرَاضِ، وَاتِّبَاعٌ لِلْهَوَى، فَكُلُّ رَأْيٍ صَدَرَ عَلَى هَذَا الْوَجْهِ فَلَا مِرْيَةَ فِي عَدَمِ اعْتِبَارِهِ؛ لِأَنَّهُ ضِدُّ الْحَقِّ الَّذِي أَنْزَلَ اللَّهُ.",
+   "brief_ling_def": "بَذْلُ الوُسْعِ وَالطَّاقةِ فِي أَيِّ فِعْلٍ كَانَ ، وَأَصْلُ الاجْتِهَادِ مِنَ الـجَهْدِ -بِالفَتْحِ- وَهُوَ الـمَشَقَّةُ وَالتَّعَبُ ، وقيلَ مِنَ الجُهْدِ -بِالضَّمِّ- وَهُوَ: الوُسْعُ وَالطَّاقَةُ ، وَمِنْ مَعَانِي الجَهْدِ أيْضًا: الغَايَةُ والمُبَالَغَةُ والجِدُّ والظُّهُورُ والعُلُوُّ.",
+   "categories": [
+    "622",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يُطْلَقُ مُصْطَلَحُ (الاجْتِهَادِ) فِي بَابِ النَّسْخِ ، وَبَابِ الإِجْمَاعِ ، وَبابِ القِياسِ ، وَغَيْرِهَا.\nوَيُطْلَقُ الاجْتِهَادُ فِي الفِقْهِ فِي مَوَاطِنَ عَدِيدَةٍ كَكِتَابِ الصَّلاَةِ عِنْد الكَلاَمِ عَنْ اسْتِقْبالِ القِبْلَةِ وَغَيْرِهِ، وَيُرادُ بِهِ: (التَّحَرِّي وَالبَحْثُ لِلتَّوَصُّلِ إِلَى أَدَاءِ عِبَادَةٍ مِنَ العِبَادَاتِ).",
+   "ling_def": "بَذْلُ الوُسْعِ وَالطّاقةِ فِي أَيِّ فِعْلٍ كَانَ ، يُقال: اجْتَهَدَ يَجْتَهِدُ إذا بَذَلَ طاقَتَهُ في تَحْصِيلِ شَيْءٍ مَا ، فهو مُجْتَهِدٌ ، وَأَصْلُ الاجْتِهَادِ مِنَ الـجَهْدِ -بِالفَتْحِ- وَهُوَ الـمَشَقَّةُ وَالتَّعَبُ ، يُقَالُ: جَهِدَ نَفْسَهُ يَجْهَدُ جُهْدًا أَيْ تَعِبَ ، وَكُلُّ مَا أَتْعَبَ الإِنْسَانَ فَهُوَ جَهْدٌ وَمَجْهودٌ، وَمِنْهُ الجَهَادُ، وَهِيَ الأَرْضُ الصُّلْبَةُ ؛ لِمَشَقَّةِ زَرْعِهَا ، وَقيلَ مِنَ الجُهْدِ -بِالضَّمِّ- وَهُوَ: الوُسْعُ وَالطّاقَةُ ، كَقَوْلِهِمْ: اجْهَدْ جَهْدَكَ أَيْ ابْذُلْ طَاقَتَكَ ، وَيَأْتِي الجَهْدُ بِمَعْنَى: الغَايَةِ ، وَالاجْتِهَادُ: بُلُوغُ الغَايَةِ ، وَمِنْ مَعَانِي الجَهْدِ فِي اللُّغَةِ َأيْضًا: المُبَالَغَةُ والجِدُّ والظُّهُورُ والعُلُوُّ.",
+   "root": "جهد"
+  },
+  "en": {
+   "id": "75221",
+   "term": "Independent reasoning",
+   "idio_def": "A scholar making his best efforts to reach a secondary Shariah ruling based on the relevant proofs.",
+   "brief_expl": "\"Ijtihād\" (independent reasoning) is a way of deducing Shariah rulings based on the relevant proofs. In Ijtihād, a scholar exerts his utmost effort to reach a secondary Shariah ruling. There must be no Ijtihād in the indisputably established facts of religion, such as the prayers being obligatory and five in number.\n Scholars divide Ijtihād, in terms of its validity into two categories:\n 1. Ijtihād recognized by the Shariah, which is done by competent scholars and in which the following conditions are fulfilled:\n a. General conditions: reason, puberty, Islam, and integrity.\n b. Specific conditions: the ability to conduct such reasoning and familiarity with the methods and rules of Ijtihād and deduction, like knowledge of the Qur’an, Sunnah, Arabic language, and the principles of Fiqh.\n 2. Ijtihād not recognized by the Shariah, which is done by incompetent individuals who are not familiar with the tools and methods of Ijtihād. In fact, such reasoning is merely an opinion rooted in one’s whim and personal inclination, which is why there is no doubt about its invalidity.",
+   "brief_ling_def": "\"Ijtihād\": exertion of effort. It is derived from \"jahd\", which means hardship and tiredness, or from \"juhd\", which means effort and energy. Other meanings: objective, exaggeration, diligence, prevalence, superiority.",
+   "categories": [
+    "622"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الإخلاص": {
+  "id": "11107",
+  "term": "إخلاص",
+  "category": "فضائل أعمال القلوب",
+  "url": "https://terminologyenc.com/ar/browse/term/11107",
+  "ar": {
+   "id": "11107",
+   "term": "إخلاص",
+   "idio_def": "إِرَادَةُ وَجْهِ اللهِ تَعَالَى بِالأَقْوَالِ وَالْأَفْعَالِ وَضِدُّهُ الرِّيَاءُ.",
+   "brief_expl": "-",
+   "brief_ling_def": "الإِمْحَاضُ والتَّصْفِيَةُ مِنْ الكَدَرِ والدَّرَنِ، والتَّنْقِيَةُ والتَّهْذِيبُ والاخْتِيَارُ، ثُمَّ أُطْلِقَ على التَّوْحِيْدِ، وَتَرْكِ الرِّيَاءِ في الطَّاعَةِ",
+   "categories": [
+    "88",
+    "94",
+    "280"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "id",
+    "ru",
+    "ur"
+   ],
+   "value": "يَرِدُ إِطْلاقُ مُصْطَلَحِ الإِخْلاصِ في عَدَدٍ مِنْ كُتُبِ الفِقْهِ وَأَبْوَابِهِ؛ وَمِنْ ذَلِكَ:\nكِتَابُ الطَّهَارَةِ: في بَابِ الوُضُوْءِ:عِنْدَ الكَلامِ على شُرُوْطِ الوُضُوْءِ، وَفي بَابِ الغُسْلِ: عِنْدَ الكَلامِ عَلَى شُرُوْطِ الغُسْلِ، وَفِي بَابِ التَّيَمُّمِ: عِنْدَ الكَلامِ عَلَى شُرُوْطِ التَّيَمُّمِ.\nوكِتَابُ الزَّكَاةِ: في بَابِ شُرُوْطِ الزَّكَاةِ.\nوكِتَابُ الصِّيَامِ: في بَابِ شُرُوْطِ الصِّيَامِ.\nوكِتَابُ الحَجِّ: في بَابِ شُرُوْطِ الحَجِّ.\nويَرِدُ إِطْلاقُ هَذَا الـمُصْطَلَحِ في عِلْمِ الفِقْهِ أَيْضَاً في كِتَابِ الصَّلاةِ: بَابِ القِرَاءَةِ في الصَّلاةِ بـمَعْنَى: سُوْرَةِ الإِخْلاصِ: وَهِيَ سُورَةٌ مَعْرُوْفَةٌ مِنْ سُوَرِ القُرْآنِ الكَرِيْمِ، تَتَضَمَّنُ أَرْبَعَ آيَاتٍ.\nويرد بهذا المعنى عند الفقهاء في كتاب الصلاة: باب القراءة في الصلاة.\nويَرِدُ إِطْلاقُ هَذَا الـمُصْطَلَحِ في عِلْمِ الاعْتِقَادِ غَالِبَاً ِبـمَعْنَى: النِّيَّةِ فـي التَّقَرُّبِ إِلـى اللهِ تعالـى، وَالقَصْدِ بِالعِبَادِةِ إِلـى أَنْ يُعْبَدَ وَحْدَهُ سُبْحَانَهُ.",
+   "ling_def": "الإِمْحَاضُ والتَّصْفِيَةُ مِنْ الكَدَرِ والدَّرَنِ، والتَّنْقِيَةُ والتَّهْذِيبُ والاخْتِيَارُ، ثُمَّ أُطْلِقَ على التَّوْحِيْدِ، وَتَرْكِ الرِّيَاءِ في الطَّاعَةِ، وَهُوَ مَصْدَرُ الفِعْلِ أَخْلَصَ، وأَخْلَصَ الشَّيْءَ: أَصْفَاهُ ونَقَّاهُ مِنْ شَوْبِهِ، والتَّخْلِيصُ: التـّصْفِيَةُ، وتَنْقِيَةُ الشَّيْءِ وتَـهْذِيبُهُ، ويَاقُوتٌ مُـخَلًّصٌ أي مُنَقًّى، والـخَالِصُ: مَا زَالَ عنه شَوْبُهُ بعد أن كان فيه، وأَخْلَصَ للهِ الدِّينَ: أَمحَضَهُ وتَرَكَ الرِّيَاءَ فِيهَ، فَهُوَ عَبْدٌ مُـخْلِصٌ.",
+   "root": "خلص"
+  },
+  "en": {
+   "id": "11107",
+   "term": "Sincerity",
+   "idio_def": "\"Ikhlās\": purity, filtration, refinement, selection. The term was later used to refer to pure monotheism and avoidance of showing off in performing acts of worship.",
+   "brief_expl": "",
+   "brief_ling_def": "",
+   "categories": [
+    "88",
+    "94",
+    "280"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "id",
+    "ru",
+    "ur"
+   ]
+  }
+ },
+ "الجهاد": {
+  "id": "6778",
+  "term": "جِهادٌ",
+  "category": "المهم جدا - ملحق",
+  "url": "https://terminologyenc.com/ar/browse/term/6778",
+  "ar": {
+   "id": "6778",
+   "term": "جِهادٌ",
+   "idio_def": "قِتالُ الـمُسْلِمِ لِلْكافِرِ الـمُحارِبِ.",
+   "brief_expl": "الـجِهادُ بمعناه الخاص: شريعةٌ مِن شرائعِ الإِسْلامِ، يَهْدِفُ إلى إِعْلاءِ كَلِمَةِ اللهِ تعالى ودَعْوَةِ غَيْرِ المُسْلِمِينَ إلى الإِسْلامِ، أو الدُّخُولِ في ذِمَّةِ المُسْلِمِينَ وحِمايَتِهِم، ودَفْعِ الجِزْيَةِ إليهِم، مع جَرَيانِ أَحْكامِ الإِسْلامِ عَلَيْهِم، وهو قِسْمانِ:\n1- جِهادُ طَلَبٍ: ويكونُ بِقِتالِ الكُفّارِ في دِيارِهِمْ ابْتِداءً، وهو فرضُ كفايةٍ.\n2- جِهادُ دَفْعٍ وحِمايَةٍ: ويَكونُ عند دُخولِ الكُفّارِ أَرْضَ الـمُسْلِمينَ، وهو فرضُ عينٍ.\nوالـجِهادُ لَهُ مَعْنًى عامٌّ يَشْمَلُ مُقاومَةَ الـمُسْلِمِ لِكُلِّ أَعْداءِ الإِسْلامِ، كَجِهادِ النَّفْسِ بِتَعْلِيمِها دِينَ اللهِ تعالى وإِرْغامِها على طاعَتِهِ سُبحانَه، وجِهادِ الشَّيْطانِ بِدَفْعِ ما يُلْقِيهِ مِنْ شُبُهاتٍ وما يَدْعو إِلَيْهِ مِنْ شَهَواتٍ، وجِهادِ أَهْلِ الفِسْقِ والنِّفاقِ بِالأَمْرِ بِالمَعْروفِ والنَّهْيِ عَنِ الـمُنْكَرِ.",
+   "brief_ling_def": "الـجِهادُ: المُبالَغةُ واسْتِفْراغُ ما في الوُسْع والطّاقة مِنْ قَوْلٍ أو فعْل.",
+   "categories": [
+    "139",
+    "803"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "ur",
+    "en"
+   ],
+   "value": "يَرِد مُصْطلَحُ (جِهاد) في الفِقْهِ في كِتابِ الصَّلاةِ، باب: صَلاة الخَوْفِ، وفي كِتابِ الزَّكاةِ، باب: أَهْل الزَّكاةِ، وفي كِتابِ الحَجِّ، باب: مُفْسِدات الحَجِّ، وفي كِتابِ السَّبْقِ والرَّمْيِ، باب: شُروط الـمُسابَقاتِ.",
+   "ling_def": "الـجِهادُ: المُبالَغة واسْتِفْراغ ما في الوُسْع والطّاقة مِنْ قَوْلٍ أو فعْل، يُقال: جاهَدَ يُجاهِدُ: إذا بَذَلَ طاقَتَهُ في تَحْصِيلِ شَيْءٍ ما، ويُقال: جَهَدَ الرَّجُلُ، وجاهَدَ في الشَّيْءِ، أيْ: جَدَّ فِيهِ وبالَغَ. مَأْخُوذٌ مِن الـجَهْدِ، وهو الـمَشَقَّةُ، وقيل: المُبالغةُ والغاية. أو مِن الجُهْدِ وهو: الوُسْعُ والطّاقَةُ.",
+   "root": "جهد"
+  },
+  "en": {
+   "id": "6778",
+   "term": "Jihad",
+   "idio_def": "\"Jihād\": exerting utmost effort and power in terms of speech or deeds.",
+   "brief_expl": "Tījāniyyah",
+   "brief_ling_def": "Fighting carried out by a Muslim against a belligerent disbeliever.",
+   "categories": [
+    "139"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "ur",
+    "en"
+   ]
+  }
+ },
+ "التوبة": {
+  "id": "36599",
+  "term": "تَوْبَةٌ",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/36599",
+  "ar": {
+   "id": "36599",
+   "term": "تَوْبَةٌ",
+   "idio_def": "تَرْكُ المَعْصِيَّةِ، والنَّدَمُ على فِعْلِها، والعَزْمُ على عَدَمِ العَوْدَةِ إليها، وتَدارُكُ ما أَمْكَنَ أن يُتَدارَكَ مِن الأَعْمالِ بِالإِعادَةِ.",
+   "brief_expl": "التَّوْبَةُ مِن أَعْظَمِ الأَعْمالِ الصَّالِحَةِ ومِن خِصالِ الأَنْبِياءِ والمُرْسَلِينَ، وهي رُجوعُ العَبْدِ مِمَّا يَكْرَهُهُ اللهُ إلى ما يُحِبُّهُ اللهُ ظاهِراً وباطِناً، وتَنْقَسِمُ التَّوْبَةُ إلى قِسمين:\n1- تَوْبَةٌ في الباطِنِ: وهذه تكون بين العَبْدِ وبين رَبِّهِ، واللهُ يَقْبَلُ التّوْبَةَ إذا تَحَقَّقَت شُروطُها.\n2- تَوْبَةٌ في الظَّاهِرِ: وهي التّوْبَةُ التي تَتَعَلَّقُ بِها الوِلايةُ، وقبُولُ الشَّهادَةِ، وإِسْقاطُ الحُدودِ، والحُكْم على الأَشْخاصِ ونَحْو ذلك، كتَوْبَةِ السَّاحِرِ والزِّنْدِيقِ.\nومِن شُروطِ التَّوبَة: أن تَكونَ خالِصَةً لِوَجْهِ اللهِ تعالى، فلا يُرادُ بِها الدُّنْيا أو مَدْحُ النَّاسِ وثَناؤُهُم، وأن يُقْلِعَ عن المَعْصِيَةِ، وأن يَنْدَمَ على فِعْلِها، مع العَزم أن لا يَعودَ إليها في المُسْتَقْبَلِ، وأن تكون قَبْلَ طُلوعِ الشَّمْسِ مِن مَغْرِبِها، وقَبْلَ غَرْغَرَةِ الرُّوحِ عند حُضورِ المَوْتِ.\nوإن كانت تَتَعلَّق بِها حُقوقُ الآخَرِين فلا بدَّ مِن إرجاعِ الحُقوقِ إلى أصحابِهِا.",
+   "brief_ling_def": "التَّوْبَةُ: الرُّجُوعُ مِن الذَّنْبِ والإِنابَةُ، يُقال: تابَ إلى اللهِ، يَتُوبُ، تَوْباً وتَوْبةً ومَتاباً، أيْ: أَنابَ ورَجَعَ عن المَعْصيةِ إلى الطَّاعَةِ. وأَصْلُها: الرُّجُوعُ والعَوْدَةُ.",
+   "categories": [
+    "321",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يَرِد مُصْطلَح (تَوْبَة) في عِدَّة مَواطِنَ مِن الفِقْهِ، منها: كِتاب الأقضِيَة، وكتاب الحدود، باب: حدّ الرِّدَّة، وغير ذلك.\nويرِد في العَقِيدَةِ في باب: تَوْحِيد الأُلُوهِيَّةِ وغَيْرِهِ.\nويُطْلَق أيضاً في العَقِيدَةِ، باب: تَوْحِيد الأسْماءِ والصِّفاتِ مُضافاً إلى اللهِ، ويُراد بِه: رُجوعُ لُطْفِ اللهِ ونِعْمَتِهِ على العَبْدِ، وتَوْفِيقهُ لِلْاسْتِغْفارِ وتَرْكِ المَعْصِيَةِ، وقَبُولُ ذلك مِنْهُ، ومِن أَسْماءِ اللهِ: التَّوابُ.\nويُطلَق في علوم القرآن عند الكلام على سُورِ القرآن، ويُراد بِه: اسْمُ سُورَةٍ مِن القُرْآنِ، رَقْمُها: تِسْعَةٌ، وعَدَدُ آياتِها: مِائَةٌ وتِسْعُ وعِشْرونَ آيَةٍ.",
+   "ling_def": "التَّوْبَةُ: الرُّجُوعُ مِن الذَّنْبِ والإِنابَةُ، يُقال: تابَ إلى اللهِ، يَتُوبُ، تَوْباً وتَوْبةً ومَتاباً، أيْ: أَنابَ ورَجَعَ عن المَعْصيةِ إلى الطَّاعَةِ. وأَصْلُها: الرُّجُوعُ والعَوْدَةُ، يُقال: تابَ اللهُ عليه، أيْ: رَجَعَ عليه بِفَضْلِهِ وقَبُولِهِ. والتَوَّابُ: كَثيرُ التَّوْبَةِ والرُّجُوعِ.",
+   "root": "توب"
+  },
+  "en": {
+   "id": "36599",
+   "term": "Repentance",
+   "idio_def": "Giving up sin, regretting to do it, resolving to never return to it, in addition to amending whatever deeds can be amended by repetiton.",
+   "brief_expl": "\"Tawbah\" (repentance) is one of the greatest righteous deeds and a characteristic of the prophets and messengers. It means a person’s return, inwardly and outwardly, from what Allah dislikes to what He likes. Tawbah falls under two categories:\n 1. Hidden Tawbah: It is between a slave and his Lord. Allah accepts Tawbah if its conditions are met.\n 2. Apparent Tawbah: It is the Tawbah necessary for eligibility of being in a position of authority, accepting of testimony, canceling corporal punishment, giving judgments concerning individuals, etc. An example of this is the Tawbah of a sorcerer or a heretic.\n Tawbah has the following conditions:\n 1. It should be done with full sincerity to Allah Almighty, not for worldly gains or attaining people’s praise.\n 2. One should give up the sin, regret committing it, and resolve to never go back to it again in the future.\n 3. It should be done before the sun rises from the west and before a person is in his final stages of death.\n 4. If the sin has to do with others’ rights, one should settle the due rights of others.",
+   "brief_ling_def": "\"Tawbah\": refraining from sin and returning to Allah. Original meaning: returning and going back.",
+   "categories": [
+    "321"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الصبر": {
+  "id": "181714",
+  "term": "الصَّبر",
+  "category": "صفات الله العلى",
+  "url": "https://terminologyenc.com/ar/browse/term/181714",
+  "ar": {
+   "id": "181714",
+   "term": "الصَّبر",
+   "idio_def": "قال ابن تيمية: (فهو يفرح بما يحبه، ويؤذيه ما يبغضه، ويصبر على ما يؤذيه، وحبه ورضاه وفرحه وسخطه وصبره على ما يؤذيه كل ذلك من كماله، وكل ذلك من صفاته وأفعاله، وهو الذي خلق الخلائق وأفعالهم وهم لن يبلغوا ضره فيضروه ولن يبلغوا نفعه فينفعوه). وقال ابن القيم: (وصبره تعالى يفارق صبر المخلوق ولا يماثله من وجوه متعددة،... وأما صبره سبحانه فمتعلق بكفر العباد وشركهم ومسبتهم له سبحانه وأنواع معاصيهم وفجورهم). وقال السعدي: (الذي يعصيه العاصون ويتجرأ عليه المتجرئون وهو يعافيهم ويرزقهم ويسدي عليهم نعمه الظاهرة والباطنة).",
+   "brief_expl": "صفة ثابتة لله بالسنة الصحيحة، أي رفقه وحلمه وعدم معاجلته للكفار والعاصين.",
+   "brief_ling_def": "يعتقد أهل السنة والجماعة أن الله يوصف بالصبر، كما هو ثابت في السنة الصحيحة.",
+   "categories": [
+    "759"
+   ],
+   "translations": [
+    "ar",
+    "",
+    "tl",
+    "tr",
+    "bn",
+    "hi",
+    "te",
+    "th",
+    "ml",
+    "fa",
+    "zh",
+    "pt",
+    "ur",
+    "en",
+    "ru",
+    "id"
+   ],
+   "value": "",
+   "ling_def": "دل على وصف الله تعالى بصفة (الصبر) السُّنَّةُ النبويةُ: ففي حديث أبي موسى رضي الله عنه عن النبي صلى الله عليه وسلم قال: (ما أحد أصبر على أذى سمعه من الله، يدعون له الولد ثم يعافيهم ويرزقهم) رواه البخاري (7378) ومسلم (49).",
+   "root": ""
+  },
+  "en": {
+   "id": "181714",
+   "term": "Sabr (Patience)",
+   "idio_def": null,
+   "brief_expl": "An attribute of Allah Almighty established by the authentic Sunnah, which means that He is Compassionate and Forbearing and does not hasten to punish the disbelievers and sinners.",
+   "brief_ling_def": "",
+   "categories": [],
+   "translations": [
+    "ar",
+    "",
+    "tl",
+    "tr",
+    "bn",
+    "hi",
+    "te",
+    "th",
+    "ml",
+    "fa",
+    "zh",
+    "pt",
+    "ur",
+    "en",
+    "ru",
+    "id"
+   ]
+  }
+ },
+ "النية": {
+  "id": "6880",
+  "term": "نِيَّـةٌ",
+  "category": "المهم جدا - المجموعة الأولى",
+  "url": "https://terminologyenc.com/ar/browse/term/6880",
+  "ar": {
+   "id": "6880",
+   "term": "نِيَّـةٌ",
+   "idio_def": "عَـزْمُ القَلْبِ على فِعْلِ الشَّيْءِ تَقَرُّبـاً إلى اللهِ تعالى.",
+   "brief_expl": "النِّيَّة: العَزْمُ على فِعْلِ الشَّيْءِ تَقَرُّباً إلى اللهِ تعالى، أو يُقال: هي قَصْدُ الطَّاعَةِ والتَّقرُّبِ إلى الله تعالى في إيجادِ الفِعلِ، ومحلُّها: القَلْبُ.\nوتَقَع النِّيَّةُ بِمَعنَيَين:\nأحدهما: تَميِيزُ العِبادات بعضِها عن بَعضٍ، كتَميِيزِ صَلاةِ الظُّهر مِن صَلاةِ العَصْرِ.\nوالثّاني: تَميِيز المَقصودِ بِالعَمَلِ، هل هو لِلّه وحدَه.",
+   "brief_ling_def": "النِّيَّةُ: القَصْدُ والإِرادَةُ وعَزْمُ القَلْبِ.",
+   "categories": [
+    "73",
+    "280",
+    "801"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "en",
+    "fr",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يردُ مُصطَلَحُ (النِّيَّة) في الفقهِ في مَواطِنَ كثيرةٍ، منها: كِتابُ الطَّهارَةِ، باب: صفة الغُسْلِ، وباب: التَّيَمُّم، وفي كِتابِ الصَّلاةِ، باب: أَرْكان الصَّلاةِ، وفي كِتابِ الزَّكاةِ، وكِتابِ الحَجِّ، وغَيْر ذلك مِنَ الأبواب.\nويُطلَق في عِلم العَقيدَةِ، باب: تَوْحيد الأُلوهِيَّةِ، ويُرادُ بِها: إِخْلاصُ العَمَلِ للهِ تعالى، وضِدُّها الشِّرْكُ.",
+   "ling_def": "النِّيَّةُ: القَصْدُ والإِرادَةُ، يُقال: نَوَى الشَّيْءَ، يَنْوِيهِ، نِيَّةً، أي: قَصَدَهُ وأَرادَهُ. وتَأْتي بِمَعنى عَزْمِ القَلْبِ، يُقالُ: نَوى السَّفَرَ إلى بَلَدِ كذا، أيْ: عَزَمَ وصَمَّمَ. ومِنْ مَعانيها: الحِفْظُ، يُقالُ: نَوَى اللهُ فُلاناً، أيْ: حَفِظَهُ. وتُطْلَقُ على الاِعْتِمادِ، والتَّوَجُّهِ إلى الشَّيْءِ.",
+   "root": "نوي"
+  },
+  "en": {
+   "id": "6880",
+   "term": "Intention",
+   "idio_def": "The determination of the heart to do something seeking to get close to Allah Almighty.",
+   "brief_expl": "\"Niyyah\" (intention) is the intent to do something seeking to get closer to Allah Almighty and to obey Him. It lies within the heart.\n Niyyah has two meanings: 1. Distinguishing between acts of worship, like distinguishing Zhuhr prayer from ‘Asr prayer.\n 2. Realizing the purpose of the act, and whether it is done purely for Allah’s sake.",
+   "brief_ling_def": "\"Niyyah\": intention, will, resolve.",
+   "categories": [
+    "73",
+    "280"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "en",
+    "fr",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "القبلة": {
+  "id": "5289",
+  "term": "قِبْلَةٌ",
+  "category": "المهم جدا - المجموعة الأولى",
+  "url": "https://terminologyenc.com/ar/browse/term/5289",
+  "ar": {
+   "id": "5289",
+   "term": "قِبْلَةٌ",
+   "idio_def": "الجِهَةُ التي يُصَلِّي إِلَيْها الـمُسلِمونَ.",
+   "brief_expl": "القِبْلَةُ: هي وِجْهَةُ الـمَصَلِّي أَثْناءَ صَلاتِهِ، وهي عند الـمُسْلِمينَ الكَعْبَةُ الـمُشَرَّفَةُ، وكانَت قَبْلَ هِجْرَةِ رَسولِ اللهِ صلّى اللهُ عليه وسلّم هي بَيْتُ الـمَقْدِسِ بِفِلَسْطِينَ الذي يُعدُّ أُولَى القِبْلَتَيْنِ، والقِبْلَةُ إمّا أن تكون الكَعْبَةُ بِعَيْنِها، وهذا لِلْقرِيبِ الذي يَراها، أو جِهَتُها، وهذا لِلْبَعيدِ.",
+   "brief_ling_def": "القِبْلَةُ: الـجِهَةُ وكُلّ ما يُسْتَقْبَلُ مِن الأَشْياءِ ويُتَوَجَّهُ إِلَيْهِ، وأَصْلُها مِن الـمُقابَلَةِ، وهي مُواجَهَةِ الشَّيْءِ لِلشَّيْءِ.",
+   "categories": [
+    "435",
+    "458",
+    "460",
+    "474",
+    "801"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "en",
+    "fr",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يَرِد مُصْطلَح (قِبْلَة) في الفقه في مَواطِنَ كَثِيرَةٍ، منها: كتاب الطَّهارَةِ، باب: آداب قَضاءِ الحاجَةِ، وكتاب الصَّلاةِ، باب: الأَذان والإِقامَة، وباب: صِفَة الصَّلاةِ، وباب: صَلاة الـمَريضِ، وكتاب الحَجِّ، باب: صِفَة الحَجِّ، وكتاب الصَّيْدِ والذَبائِحِ، باب: صِفَة الذَّبْحِ، وكتاب القَضاءِ، باب: آداب القاضِي، وغَيْر ذلك من الأبواب.\nويُطْلَقُ في عِلمِ العَقِيدَةِ، باب: تَوْحِيد الأُلُوهِيَّةِ مُضافاً، كَقَولِهِم:\" أَهْلُ القِبْلَةِ \"، وَالـمُراد بِهِم: أَهْلُ دِينِ الإِسْلامِ.",
+   "ling_def": "القِبْلَةُ: الـجِهَةُ، يُقال: لَيْسَ لِفُلانٍ قِبْلَةٌ، أيْ: جِهَةٌ يَتَوَجَّهُ إلَيْها ويُقْبِلُ عَلَيْها. وتُطْلَقُ القِبْلَةُ على كُلِّ ما يُسْتَقْبَلُ مِن الأَشْياءِ ويُتَوَجَّهُ إِلَيْهِ، يُقال: أَيْنَ قِبْلَتُكَ، أيْ: الشَّيْءُ الذي تُرِيدُ التَّوجُّهَ إِلَيْهِ. وأَصْلُ القِبْلَةِ مِن الـمُقَابَلَةِ، وهي مُواجَهَةِ الشَّيْءِ لِلشَّيْءِ. وجَمْعُ القِبْلَةِ: قِبْلات.",
+   "root": "قبل"
+  },
+  "en": {
+   "id": "5289",
+   "term": "Prayer direction",
+   "idio_def": "The direction the Muslims face in prayer.",
+   "brief_expl": "\"Qiblah\" (prayer direction) is the direction which one faces during his prayer. The Qiblah of Muslims is the honorable Ka‘bah. Before the Messenger’s emigration to Madinah, the Qiblah was Al-Aqsa Mosque in Jerusalem, Palestine, which is called \"The First of the Two Qiblahs\". The Qiblah is either the Ka‘bah itself for those who are close to it and can see it, or its direction for those who are far from it and cannot see it.",
+   "brief_ling_def": "\"Qiblah\": direction, anything that one faces. It is derived from \"muqābalah\", which means two things facing each other.",
+   "categories": [
+    "435",
+    "458",
+    "460",
+    "474"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "en",
+    "fr",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "العبادة": {
+  "id": "15008",
+  "term": "عبادة",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/15008",
+  "ar": {
+   "id": "15008",
+   "term": "عبادة",
+   "idio_def": "اسم جامع لكل ما يحبه الله ويرضاه من الأقوال والأعمال الظاهرة والباطنة.",
+   "brief_expl": "العبادة تشمل جميع أنواع الطاعات، وهي أربع مراتب: قول القلب، وهو اعتقاد ما أخبر الله سبحانه به، وقول اللسان، وهو الإخبار عنه بذلك وذكره والدعوة إليه، وعمل القلب كالمحبة له والتوكل عليه، وعمل الجوارح كالصلاة ونحوها.\nوللعبادة ثلاثة أركان: المحبة، الخوف، والرجاء، وتنقسم العبادة إلى قسمين:\nالأول: عبادة عامة كونية، وهي عبادة القهر والملك، وهي تشمل أهل السموات والأرض كلهم، مؤمنهم وكافرهم، فالجميع عبيد لله تعالى خاضعون لأمره الكوني، وهذه عبادة لا ثواب فيها ولا يمدح صاحبها.\nالثاني: عبادة خاصة شرعية، وهي عبادة الطاعة والخضوع والمحبة الاختيارية، وهي التي يمدح عليها الإنسان وهي خاصة لمن وفقه الله تعالى، ومن شروطها: الإخلاص والمتابعة.",
+   "brief_ling_def": "الطاعة والقربة، يقال: عبدت الله، أعبده، عبادة، أي: أطعته وتقربت إليه. وأصل العبادة: التذلل واللين. ومن معانيها: الخضوع، والانقياد.",
+   "categories": [
+    "73",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يرد مصطلح (عبادة) في العقيدة في باب: الإيمان. \nويطلق في العقيدة باعتبار فعل الإنسان، ويراد به: طاعة الله بفعل أوامره واجتناب نواهيه.\nومن إطلاقاته أيضا في العقيدة: توحيد الله وإفراده بالقصد والعمل. \nويطلق في الفقه، ويراد به: الأحكام الشرعية التي بين الإنسان وربه فقط، كقولهم: باب: العبادات، كالصلاة والصيام ونحوهما، وتقابلها: المعاملات، كالبيع، والجنايات.\nويطلق في الفقه أيضا، ويراد به: الطاعة بشرط نية التقرب إلى الله تعالى. وتقابلها: العادة.",
+   "ling_def": "الطاعة والقربة، يقال: عبدت الله، أعبده، عبادة، أي: أطعته وتقربت إليه. وأصل العبادة: التذلل واللين، ومنه قولهم: طريق معبد، أي: سهل مذلل؛ لكثرة وطء الأقدام له. ومن معانيها أيضا: الخضوع، والانقياد.",
+   "root": "عبد"
+  },
+  "en": {
+   "id": "15008",
+   "term": "Worship",
+   "idio_def": "A comprehensive name for all that is dear and pleasing to Allah Almighty of words and deeds, the hidden and apparent thereof.",
+   "brief_expl": "\"‘Ibādah\" (worship) is perfect submission and humility. The creation has been brought into existence for the purpose of worshiping Allah Almighty as the only deity worthy of worship, hence, dedicating any act of worship to anyone other than Allah Almighty is considered polytheism.\n ‘Ibādah is divided into two categories:\n 1. General universal ‘Ibādah: it is the worship of subjugation and domination and it includes the dwellers of the heavens and earth, believers and disbelievers alike. All of them are servants of Allah Almighty and submissive to His universal laws. They live and die according to His will, and He manages their affairs the way He wants according to His wisdom and they can do nothing about it. This kind of worship entails no reward and those who perform it are not praised for it.\n 2. Special religious ‘Ibādah: it is the worship of obedience, submission, humility, and voluntary love. The one performing this kind of ‘Ibādah deserves praise. It is special for those whom Allah has granted success. Among its conditions are faith, sincerity, and compliance with the Sunnah. This special ‘Ibādah includes all acts of obedience. It comprises four ranks: - Statement of the heart, which is belief in what Allah Almighty stated. - Statement of the tongue, which is reporting what Allah stated, remembering Him, and calling people to worship Him. - Action of the heart, which includes loving Allah and relying on Him. - Action of the limbs, which includes the prayer and the like. ‘Ibādah has three pillars: love, fear, and hope.",
+   "brief_ling_def": "\"‘Ibādah\": act of obedience, means of closeness to Allah. Original meaning: subservience, leniency. Other meanings: submission, compliance.",
+   "categories": [
+    "73"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الإسلام": {
+  "id": "43613",
+  "term": "الإسلام",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/43613",
+  "ar": {
+   "id": "43613",
+   "term": "الإسلام",
+   "idio_def": "الاستسلام لله بالتوحيد، والانقياد له بالطاعة، والبراءة من الشرك وأهله.",
+   "brief_expl": "ينقسم الإسلام إلى قسمين:\nالأول: الانقياد والاستسلام لأمر الله الكوني القدري طوعا وكرها، وهذا لا خيار فيه لأحد ولا ثواب فيه.\nالثاني: الانقياد والاستسلام لشرع الله، وهذا هو الإسلام الذي يحمد عليه الإنسان ويثاب، وهذا القسم ينقسم إلى عام وخاص: \n1- العام: وهو الدين الذي جاء به الأنبياء جميعا من نوح إلى محمد عليهم الصلاة والسلام، وهو عبادة الله وحده لا شريك له والقيام بشرعه.\n2- الخاص: وهو ما جاء به نبينا محمد صلى الله عليه وسلم، وله إطلاقان: \nإحداهما: الأقوال والأعمال الظاهرة، وهي الأركان الخمسة وما يتبعها. \nوالثانية: ما يشمل الأعمال الظاهرة والاعتقادات الباطنة، كأركان الإيمان الستة وما يتبعها.",
+   "brief_ling_def": "الإسلام: الانقياد والإذعان والخضوع، يقال: أسلم أمره، يسلم، إسلاما، أي: انقاد وخضع. وأصله: الخلوص والنجاة.",
+   "categories": [
+    "73",
+    "88",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يرد مصطلح (إسلام) في العقيدة في عدة أبواب، منها: باب: الإيمان ومسائله، وباب: توحيد الربوبية، وباب: الولاء والبراء، وباب: الفرق والأديان، وغير ذلك.",
+   "ling_def": "الإسلام: الانقياد والإذعان والخضوع، يقال: أسلم أمره، يسلم، إسلاما، أي: انقاد وخضع. وأصل الإسلام: الخلوص والنجاة، ومنه سمي الانقياد إسلاما؛ لأن صاحبه ينجو به ويخلص من الإباء والامتناع والكفر.",
+   "root": "سلم"
+  },
+  "en": {
+   "id": "43613",
+   "term": "Islam",
+   "idio_def": "Surrendering to Allah through monotheism, submitting to Him through obedience, and disowning polytheism and polytheists.",
+   "brief_expl": "\"Islām\" (Islam) is the true religion other than which Allah Almighty will not accept from His servants. This is the particular meaning of the word \"Islam\". As for its general meaning, it has two categories:\n 1. Submission and surrender to Allah’s universal and fate-related commands, willingly or unwillingly. None has a choice regarding this kind of submission and it entails no reward.\n 2. Submission and surrender to the Shariah ordained by Allah Almighty. This is the Islam for which one is praised and rewarded.\n This second category is divided into general and specific:\n 1. General: It refers to the religion brought by all the prophets from Noah to Muhammad (peace be upon them) and stands for worshiping Allah alone without partners and carrying out His laws.\n 2. Specific: It refers to the message brought by our Prophet Muhammad (may Allah’s peace and blessings be upon him).\n The specific category includes:\n 1. Apparent statements and deeds represented by the five main pillars of Islam and their associated acts.\n 2. Inner beliefs represented by the six articles of faith and their associated beliefs.",
+   "brief_ling_def": "\"Islām\": obedience, compliance, submission. Original meaning: purity, salvation.",
+   "categories": [
+    "73",
+    "88"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "القرآن": {
+  "id": "53650",
+  "term": "القرآن",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/53650",
+  "ar": {
+   "id": "53650",
+   "term": "القرآن",
+   "idio_def": "كلام الله تعالى المنزل على رسوله محمد صلى الله عليه وسلم المتعبد بتلاوته المكتوب في المصاحف المنقول إلينا بالتواتر.",
+   "brief_expl": "القرآن: هو الوحي المنزل على نبينا محمد صلى الله عليه وسلم، وهو كلام الله تعالى غير مخلوق، وكتاب الإسلام في عقائده وعباداته وأحكامه وآدابه، وللقرآن أوصاف كثيرة كالكرم والعزة والعظمة وغيرها، ووصف القرآن بأنه كريم لعدة أمور، منها:\n1- كرامة وجلالة وعظمة قائله سبحانه وتعالى.\n2- أن فيه تكريم الخلق وتفضيلهم على سائر الأمم.\n3- أنه كتاب معطاء كثير الخير والبركة، حيث يعطي قارئه الثواب والعلم والأدب.\n4- أنه كتاب مقدس عظيم جليل في ألفاظه ومعانيه.",
+   "brief_ling_def": "المقروء المكتوب في المصاحف، وأصله من القرء، وهو: الجمع والضم، يقال: قرأ الشيء، قرءا وقرآنا، أي: جمعه وضم بعضه إلى بعض.",
+   "categories": [
+    "74",
+    "77",
+    "78",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يرد مصطلح (القرآن) في العقيدة في عدة أبواب، منها: باب: توحيد الألوهية، وباب: توحيد الأسماء والصفات، وباب: الاعتصام بالكتاب والسنة، وغير ذلك.\nويرد في الفقه وأصوله في عامة الكتب و الأبواب.",
+   "ling_def": "المقروء المكتوب في المصاحف، وأصله من القرء، وهو: الجمع والضم، يقال: قرأ الشيء، قرءا وقرآنا، أي: جمعه وضم بعضه إلى بعض، ومنه سمي قرآنا؛ لأنه جمع الآيات والسور بعضها إلى بعض.",
+   "root": "قرأ"
+  },
+  "en": {
+   "id": "53650",
+   "term": "The Qur’an",
+   "idio_def": "The speech of Allah Almighty which He revealed to His Messenger Muhammad (may Allah’s peace and blessings be upon him) and His servants worship Him by reciting it. It is written in Mus-hafs and has reached us through successive transmission.",
+   "brief_expl": "\"Qur’ān\" (Qur’an) is the revelation that was sent down to our Prophet Muhammad (may Allah’s peace and blessings be upon him). It is the speech of Allah and it is uncreated. It is the scripture of Islamic beliefs, acts of worship, rulings, and manners. The Qur’an has many descriptions such as noble, mighty, and great.\n The Qur’an is especially described as \"karīm\" (noble) for several reasons including the following:\n 1. The honor, majesty, and greatness of Allah Almighty, Who spoke it.\n 2. It honors humans and deems them superior to the rest of the creation.\n 3. It is a book that yields much goodness and countless blessings. Those who read it gain reward, knowledge, and virtuous manners.\n 4. It is a sacred book that is great and majestic in its words and meanings.",
+   "brief_ling_def": "\"Qur’ān\": what is recited and written in the \"Mus-haf\" (copy of the Qur’an). It is derived from \"qar’\", which means collecting, including.",
+   "categories": [
+    "74",
+    "77",
+    "78"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الإجماع": {
+  "id": "570",
+  "term": "إِجْماعٌ",
+  "category": "الإجماع",
+  "url": "https://terminologyenc.com/ar/browse/term/570",
+  "ar": {
+   "id": "570",
+   "term": "إِجْماعٌ",
+   "idio_def": "اتِّفاقُ الـمُجْتَهِدِينِ مِنْ أُمَّةِ مُحَمَّدٍ صلَّى اللهُ عليه وسلَّم بَعْدَ زَمانِهِ في عَصْرٍ مِن العُصورِ على حُكْمٍ شَرْعِيٍّ.",
+   "brief_expl": "الإِجْماعُ في اصْطِلاحِ الأُصولِيِّين: هو اتِّفاقُ جَمِيعِ الـمُجْتَهِدِينَ من الـمُسلِمِين في عَصْرٍ من العُصورِ بعد وَفاةِ الرَّسولِ صلَّى اللهُ عليه وسلَّم على حُكْمٍ شَرْعِيٍّ في واقِعَةٍ ما، وعُدَّ إِجْماعُهُم على حُكْمٍ واحِدٍ فيها دَلِيلاً على أنّ هذا الحُكْمَ هو الحُكْمُ الشَّرْعِيُّ في الواقِعَةِ، وإنّما قِيلَ في التَّعْرِيفِ: \"بعد زَمانِ النَّبِيِّ صلى الله عليه وسلم ووَفاتِهِ\"؛ لأنّه في حَياةِ الرَّسولِ صلَّى اللهُ عليه وسلَّم يُعَدُّ هو الـمَرْجِعُ التَّشْرِيْعِيُّ وَحْدَهُ، فلا يُتَصَوَّرُ اخْتِلافٌ في حُكْمٍ شَرْعِيٍّ ولا اتِّفاقٌ؛ إِذ الاتِّفاقُ لا يَتَحَقَّقُ إلاّ مِنْ عَدَدٍ.",
+   "brief_ling_def": "الاتِّفاقُ، يُقالُ: أَجْمَعَ القَوْمُ على أمْرٍ ما، أي: اتَّفَقُوا عليه، واجْتَمَعَت آراؤُهُم عليه.",
+   "categories": [
+    "255"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "id",
+    "ur"
+   ],
+   "value": "يَرِدُ مُصطلح (إِجْماع) في مواطنَ عَدِيدَةٍ مِن كُتُبِ الفِقْهِ وأَبْوابِهِ، بِحَيْثُ يَعْسُرُ حَصْرُها؛ إِذْ قَلَّ بابٌ مِنْها إلاّ وفِيهِ ذِكْرُ هذا الـمُصْطَلَحِ.",
+   "ling_def": "مَصْدَرُ أَجْمَعَ، ومعناه: الاتِّفاقُ، يُقالُ: أَجْمَعَ القَوْمُ على أمْرٍ ما، أي: اتَّفَقُوا عليه، واجتَمَعَت آراؤُهم عليه، ويأتي بِمعنى الإِعْدادِ، يُقال: أَجْمَعْتُ كَذا، أي: أَعْدَدْتُهُ، ومِن معانيه أيضاً: العَزِيْمَةُ على الأَمْرِ، وجَعْلُ الـمُتَفَرِّقِ جميعاً.",
+   "root": "جمع"
+  },
+  "en": {
+   "id": "570",
+   "term": "Consensus",
+   "idio_def": "\"Ijmā‘\": the agreement among a group of people over a certain matter.",
+   "brief_expl": "Tījāniyyah",
+   "brief_ling_def": "An agreement of all the mujtahids (senior Muslim scholars) from the community of Muhammad, may Allah's peace and blessings be upon him, in a certain era after his death on a particular Islamic ruling.",
+   "categories": [
+    "255"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "id",
+    "ur"
+   ]
+  }
+ },
+ "الفتوى": {
+  "id": "114",
+  "term": "فَتْوَى",
+  "category": "المهم جدا - المجموعة الأولى",
+  "url": "https://terminologyenc.com/ar/browse/term/114",
+  "ar": {
+   "id": "114",
+   "term": "فَتْوَى",
+   "idio_def": "الإِخْبَارُ بِالـحُكْمِ الشَّرْعِيِّ دُونَ الإِلْزَامِ بِهِ.",
+   "brief_expl": "الفَتْوَى نَوْعٌ مِنْ أَنْواعِ الاِجْتِهادِ فِي بَيَانِ الأَحْكامِ الشَّرْعِيَّةِ، وَهِيَ الإِخْبارُ بِالـحُكْمِ الشَّرْعِيِّ فِي مَسْأَلَةٍ مُعَيَّنَةٍ، وَالـجَـوَابُ عمَّا يُشْكِلُ مِنْ الـمَسَائِلِ الشَّرْعِيَّةِ، عَلَى غَيْرِ وَجْهِ الإِلْزَامِ بِالـحُكْمِ، وَتَكونُ الفَتْوَى بِالكِتَابَةِ وَالإِشَارَةِ وَالفِعْلِ، وَيَشْمَلُ الإِفْتَاءُ بَيانَ الأَحْكَامِ الاِعْتِقَادِيَّةِ، وَالعَمَلِيَّةِ مِنَ العِبَادَاتِ وَالـمُعَامَلَاتِ وَالعُقُوباتِ وَالأَنْكِحَةِ وَغَيْرَهَا مِنَ أَبْوابِ الشَّرِيعَةِ.",
+   "brief_ling_def": "تَبْيِيْنُ الـمُشْكِلِ مِنْ الأَحْكامِ، وَتَأْتِي الفَتْوَى بِـمَعْنَى: التَّفْسِير وَالتَّعْبِير، وَأَصْلُ الفَتْوَى مِنَ الفُتُوَّةِ وَهِيَ القُوَّةُ.",
+   "categories": [
+    "260",
+    "801"
+   ],
+   "translations": [
+    "ar",
+    "ur",
+    "en",
+    "fr",
+    "id",
+    "ru",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يُطْلَقُ مُصْطَلَحُ (فَتْوَى) فِي الفِقْهِ فِي مَوَاطِنَ كَثِيرَةٍ كَكِتَابِ الصَّلاَةِ فِي بَابِ الإِمَامَةِ ، وَكِتابِ القَضَاءِ فِي بَابِ شُروطِ القَاضِي ، وَغَيْرَهَا مِنَ الأَبْوابِ .\nوَيُطْلَقُ فِي مَبَاحِثَ مِنْ أُصولِ الفِقْهِ فِي كِتابِ الاِجْتِهَادِ لِلتَّفْرِيقِ بَيْنَ الفَتْوَى وَالقَضَاءِ ، وَبَيَانِ شُرُوطِ الإِفْتَاءِ وَصِفَاتِ الـمُفْتِي.",
+   "ling_def": "تَبْيِيْنُ الـمُشْكِلِ مِنْ الأَحْكامِ، يُقَالُ: أَفْتاهُ فِي الأَمْرِ يُفْتِيهِ فَتْوَى وَفُتْيَا أَيْ: أبَانَهُ لَهُ، وَأَفْتَى الفَقِيهُ يُفْتي إفْتَاءً إِذَا بَيَّنَ الـمُبْهَمَ، وَالفَتْوَى أَيْضًا: الإِجَابَةُ عَنِ السُّؤَالِ، وَتَأْتِي الفَتْوَى بِـمَعْنَى: التَّفْسِيرِ وَالتَّعْبِيرِ، تَقُولُ: أَفْتَيْتُ فُلَاناً فِي رُؤْيَا رَآهَا أَيْ عَبَّرتُهَا وَفَسَّرْتُهَا لَهُ، وَأَصْلُ الفَتْوَى مِنَ الفُتُوَّةِ وَهِيَ القُوَّةُ، وَالفَتَى: الشَّابُّ الذِي شَبَّ وَقَوِيَ، وَسُـمِّيَتْ فَتْوَى؛ لأَنَّهُ يُقَوِّي الشَّخصَ الذي أَشْكَلَ عليه بِبَيانِ المُشكِلِ وَتَفْسِيرِهِ، وَجَمْعُ فَتْوَى: فَتَاوَى.",
+   "root": "فتي"
+  },
+  "en": {
+   "id": "114",
+   "term": "Religious opinion",
+   "idio_def": "Giving a non-binding religious ruling.",
+   "brief_expl": "\"Fatwa\" (religious opinion) is a type of personal reasoning in demonstrating the religious rulings. It is to provide the religious ruling on a certain issue and give an answer to a confusing issue on a non-binding basis. Fatwa may be given in writing, by signal, or action. Giving Fatwa includes the clarification of the rulings related to creed and actions that include acts of worship, dealings, punishments, marriages, etc.\n Only a competent scholar can issue Fatwas, which convey the rulings in the religion of Allah, and this is a serious matter. Engaging in Fatwas without knowledge is associated in the Qur’an with polytheism.",
+   "brief_ling_def": "\"Fatwa\": clarifying confusing rulings. It is derived from \"futuwwah\", which means strength. Other meanings: explaining, expressing.",
+   "categories": [
+    "260"
+   ],
+   "translations": [
+    "ar",
+    "ur",
+    "en",
+    "fr",
+    "id",
+    "ru",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "السنة": {
+  "id": "10811",
+  "term": "سنة",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/10811",
+  "ar": {
+   "id": "10811",
+   "term": "سنة",
+   "idio_def": "الهدي الذي كان عليه النبي صلى الله عليه وسلم، وصحابته الكرام رضوان الله عليهم من أمور الدين قولا، وعملا، واعتقادا.",
+   "brief_expl": "السنة : هي طريقة النبي صلى الله عليه وسلم التي كان عليها هو وأصحابه رضوان الله عليهم، السالمة من الشبهات والشهوات، ولفظ السنة يتناول السنة في العبادات والاعتقادات، وإن كان كثير ممن صنف في السنة يقصدون الكلام في الاعتقادات؛ لأنها أصل الدين، والمخالف فيها على خطر عظيم؛ لذا فقد استعمل لفظ \"السنة\" للدلالة على عقيدة أهل السنة والجماعة، وقد شاع هذا الاستعمال على ألسنة الأئمة الأعلام من السلف والخلف رضي الله عنهم أجمعين، فيقال: فلان من أهل السنة، أي: من أهل الطريقة الصحيحة المستقيمة المحمودة، والسنة هي الطريقة المسلوكة، فيشمل ذلك: التمسك بما كان عليه صلى الله عليه وسلم وخلفاؤه الراشدون من الاعتقادات، والأعمال، والأقوال، وهذه هي السنة العامة الكاملة، وهي دين الإسلام، التي لا يزيغ عنها إلا جاهل هالك مبتدع.",
+   "brief_ling_def": "-",
+   "categories": [
+    "115",
+    "254",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "id",
+    "ru",
+    "fr",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يطلق مصطلح (السنة النبوية) عند المحدثين، ويراد بها: كل ما أثر عن النبي صلى الله عليه وسلم من قول، أو فعل، أو تقرير، أو صفة خلقية أو خلقية، سواء كان ذلك قبل البعثة أو بعدها.\nويطلق عند علماء الأصول، ويراد بها: ما نقل عن النبي صلى الله عليه وسلم من قول، أو فعل، أو تقرير.\nوأما عند الفقهاء فيراد بها: ما أمر به النبي صلى الله عليه وسلم أمرا غير جازم\"، أو ما في فعله ثواب، وفي تركه ملامة وعتاب لا عقاب.\nويطلق مصطلح (السنة النبوية) على ما يقابل البدعة.",
+   "ling_def": "-",
+   "root": "-"
+  },
+  "en": {
+   "id": "10811",
+   "term": "The Sunnah",
+   "idio_def": "The guidance followed by the Prophet (may Allah’s peace and blessings be upon him) and his noble Companions in terms of religious affairs, which include statements, actions, and beliefs.",
+   "brief_expl": "\"As-Sunnah\" (the Sunnah) is the way followed by the Prophet (may Allah’s peace and blessings be upon him) and his noble Companions (may Allah be pleased with them), which is free from doubts and desires. The word \"Sunnah\" includes everything related to acts of worship as well as matters of belief. Many of those who authored books on the Sunnah, however, link the term to matters of belief only, being the origin of the religion, and the one who commits violations concerning them is in serious danger. For this reason, the word \"Sunnah\" has been used in reference to the beliefs of Ahl-us-Sunnah wa al-Jamā‘ah. The term \"Sunnah\" was widely used among the prominent scholars from the righteous predecessors and those who succeeded them. When it is said that so-and-so belongs to Ahl-us-Sunnah, this means that he is one of those who follow the upright praiseworthy path. \"Sunnah\", in origin, means a trodden path. Thus, this includes holding firmly to what the Prophet (may Allah’s peace and blessings be upon him) and his rightly-guided Caliphs followed of beliefs, actions, and words. This is the general and comprehensive meaning of the Sunnah. It is the core of the religion of Islam, which only a ruined ignorant innovator would deviate from.",
+   "brief_ling_def": "",
+   "categories": [
+    "115",
+    "254"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "id",
+    "ru",
+    "fr",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الشريعة": {
+  "id": "47755",
+  "term": "الشريعة",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/47755",
+  "ar": {
+   "id": "47755",
+   "term": "الشريعة",
+   "idio_def": "الطريقة الظاهرة في الدين من العقائد والأحكام والآداب.",
+   "brief_expl": "الشريعة: كل ما شرعه الله تعالى من العقائد والأحكام وغيرهما، ولها مصادر متفق عليها، وهي الكتاب والسنة والإجماع، ومصادر مختلف فيها، مثل القياس وقول الصحابي، وله مقاصد معروفة.",
+   "brief_ling_def": "الطريق الظاهر الذي يوصل منه إلى الماء، سمي بذلك؛ لوضوحه وظهوره، يقال: شرعت الإبل شرعا وشروعا: إذا وردت الماء.",
+   "categories": [
+    "73",
+    "249",
+    "262",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يطلق مصطلح (شريعة) ويراد به عدة معان، منها:\n1- كل ما أنزله الله تعالى على أنبيائه، وهي تنتظم الاعتقاد والأحكام العملية والأخلاق.\n2- ما خص الله تعالى به كل نبي من الأحكام، وما سنه لأمته مما يختلف من دعوة نبي لآخر من المناهج وتفصيل العبادات والمعاملات، وهي بهذا الاعتبار قسيمة للاعتقاد.\n3- وتطلق أحيانا على ما شرعه الله لجميع الرسل من أصول الاعتقاد والبر والطاعة مما لا يختلف من دعوة نبي لآخر.",
+   "ling_def": "الطريق الظاهر الذي يوصل منه إلى الماء، أو مورد الماء للاستسقاء، سمي بذلك؛ لوضوحه وظهوره، يقال: شرعت الإبل شرعا وشروعا: إذا وردت الماء. والجمع: شرائع.",
+   "root": "شرع"
+  },
+  "en": {
+   "id": "47755",
+   "term": "Islamic law",
+   "idio_def": "The clear course in the religion that includes the beliefs, rulings, and ethics.",
+   "brief_expl": "\"Sharī‘ah\" (Islamic law) is all beliefs, rulings, and the like that have been legislated by Allah Almighty and for which there are agreed-upon sources, namely the Qur’an, the Sunnah, consensus, and analogy; and there are other sources subject to disagreement, like the opinions of the Companions. Sharī‘ah has specific objectives.",
+   "brief_ling_def": "\"Sharī‘ah\": the clear path that leads to the water. It was called as such because of its clarity and visibility.",
+   "categories": [
+    "73",
+    "249",
+    "262"
+   ],
+   "translations": [
+    "ar",
+    "bs",
+    "en",
+    "es",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ },
+ "الابتلاء": {
+  "id": "8780",
+  "term": "اِبْتِلاءٌ",
+  "category": "تزكية النفوس",
+  "url": "https://terminologyenc.com/ar/browse/term/8780",
+  "ar": {
+   "id": "8780",
+   "term": "اِبْتِلاءٌ",
+   "idio_def": "اختِبارٌ وامتِحانٌ مِن اللهِ تعالى للعَبْدِ لِيتَبيَّنَ مَدى صَبرِهِ وإيمانِهِ.",
+   "brief_expl": "الابْتِلاءُ: اسْتِخراجُ ما عند العَبْدِ المُبْتَلى، وتَعرُّفُ حالِهِ في الخَيْرِ والشَّرِّ بِتَحْمِيلِهِ المَشَقَّةَ، وهو سنَّةُ اللهِ الجارِيَةِ لِتمحِيصِ أولِيائهِ، وهو دَلِيلُ الكَرامَةِ لا الإهانَةِ، وعُنوانُ الصِّدقِ في الإيمانِ، واللهُ عزَّ وجلَّ يعلمُ الصَّادقَ من الكاذبِ والمؤمنَ من المنافِقِ دونَ ابتلاءٍ، ولكنَّه سبحانه لا يُؤاخِذُ النَّاسَ بعلمه السَّابقِ، بل يبتليهم حتَّى يظهرَ فيهم علمه ظهورًا يقطعُ حجَّتهم، ويكونُ سببًا في ثوابِهم أو عقوبتِهم.",
+   "brief_ling_def": "الابْتِلاءُ: الاختِبارُ والامتِحانُ، يُقال: بَلَوتُ الرَّجلَ، وابْتَلَيْتُهُ، أي: امتَحَنتُهُ وجَرَّبتُهُ. وأصلُه مِن البَلاءِ، وهو: التَّكلِيفُ بِالأمْرِ الشّاقِ، ويكون في الخَيرِ والشَّرِّ معاً، وأكثر ما يُستَعمَلُ في المَكروهِ.",
+   "categories": [
+    "322"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "ur",
+    "en"
+   ],
+   "value": "-",
+   "ling_def": "الابْتِلاءُ: الاختِبارُ والامتِحانُ، يُقال: بَلَوتُ الرَّجلَ، وابْتَلَيْتُهُ، أي: امتَحَنتُهُ واختَبَرتُهُ وجَرَّبتُهُ. وأصلُ الابْتِلاءِ مِن البَلاءِ، وهو: التَّكلِيفُ بِالأمْرِ الشّاقِ، ويكون في الخَيرِ والشَّرِّ معًا، يُقالُ: ابتَلَيتُهُ بلاءً حَسَنًا وبَلاءً سَيِّئًا، وأكثر ما يُستَعمَلُ في المَكروهِ.",
+   "root": "بلا ، بلي "
+  },
+  "en": {
+   "id": "8780",
+   "term": "Test/Trial/Affliction",
+   "idio_def": "\"Ibtilā\": test, trial. It is derived from \"balā’\", which means: assigning a hard task. \"Ibtilā’\" applies to both ease and difficulty; however, it is mostly used to refer to adversity and affliction.",
+   "brief_expl": "Tījāniyyah",
+   "brief_ling_def": "The trial and test that Allah the Almighty puts His slave to so as to determine the extent of his patience and faith.",
+   "categories": [
+    "322"
+   ],
+   "translations": [
+    "ar",
+    "id",
+    "ur",
+    "en"
+   ]
+  }
+ },
+ "الهجرة": {
+  "id": "36590",
+  "term": "هِجْرَةٌ",
+  "category": "المهم جدا - المجموعة الثانية",
+  "url": "https://terminologyenc.com/ar/browse/term/36590",
+  "ar": {
+   "id": "36590",
+   "term": "هِجْرَةٌ",
+   "idio_def": "الانْتِقالُ مِن بَلَدِ الكُفرِ والشِّرْكِ إلى بِلادِ الإسْلامِ مِن أجلِ حِفْظِ الدِّينِ.",
+   "brief_expl": "الهِجْرَةُ: تَرْكُ الوَطَنِ الذي يكونُ فيه الشَّخصُ بين الكُفّارِ والانتِقالِ إلى دارِ الإسلام. وبلَدُ الشِّرْكِ: هو الذي تُقام فيه شَعائِر الكُفْرِ، ولا تُقام فيه شَعائِرُ الإسلام على وجهٍ عامٍّ، وأمّا بَلَد الإسلام: فهو البَلَدُ الذي تَظْهَر فيه شَعائِر الإسلام وأحكامُه على وَجْهٍ عامٍّ.\nوالهِجْرَةُ: عَمَلٌ جليلٌ وشَأنُها عَظِيمٌ، وأمرُها كَبِيرٌ، إذ هي مِن أبرَزِ مسائلِ الوَلاءِ والبَراءِ، لِما فيها مِن حِفْظِ الدِّينِ ومُفارَقَةِ المُشركِينِ، وهي أقسامٌ عَدِيدَة مِنها:\nأ - الهِجْرَةُ الأُولى إلى الحَبَشَةِ عِنْدَما آذَى الكُفَّارُ الصَّحابَةَ رِضْوانُ الله عليهم.\nب - الهِجْرَةُ الثَّانِيَةُ مِن مَكَّةَ إلى المَدِينَةِ.\nج - الهِجْرَةُ الثَّالِثَةُ: هِجْرَةُ القَبائِل إلى النَّبِيِّ صَلَّى الله عليه وسَلَّمَ لِتَعَلُّمِ الشَّرائِعِ، ثُمَّ يَرْجِعُونَ إلى المَواطِنِ ويُعَلِّمُونَ قَوْمَهُم.\nد - الهِجْرَةُ الرَّابِعَةُ: هِجْرَةُ مَن أَسْلَمَ مِن أَهْل مَكَّةَ لِيَأْتِيَ إلى النَّبِيِّ صَلَّى الله عليه وسَلَّمَ ثُمَّ يَرْجِعَ إلى مَكَّةَ.\nهـ - الهِجْرَةُ الخامِسَةُ: هَجْرُ ما نَهَى اللَّهُ عَنْهُ. \nوتنقسم باعتِبارٍ آخر إلى قسمين:\n1- هِجْرَةٌ بِالجِسْمِ مِن بَلَدٍ إلى بَلَدٍ، كالخُروجِ مِن أرض الكُفرِ إلى أرضِ الإسلام، والخروجِ مِن أرضِ البِدْعَةِ إلى أرضِ السُّنَّة، والخُروجِ عن أرضٍ غَلَبَ عليها الحَرامِ إلى غيرها، وغير ذلك مِن الأنواع. \n2- الهِجْرَةُ بِالقَلْبِ إلى الله ورَسُولِهِ، فَيُهاجِرُ بِقَلْبِهِ مِن مَحَبَّةِ غَيْرِ الله إلى مَحَبَّتِهِ، ومِن عُبُودِيَّةِ غَيْرِهِ إلى عُبُودِيَّتِهِ، ومِن خَوْفِ غَيْرِهِ ورَجائِهِ والتَّوَكُّل عليه إلى خَوْفِ الله ورَجائِهِ والتَّوَكُّل عليه، وهكذا.",
+   "brief_ling_def": "التَّرْكُ والخُروجُ مِن بَلَدٍ أو أَرْضٍ إلى أخرى، وأصلُها مِن الهَجْرِ، وضِدُّه: الوَصْل، ثمَّ غَلَبَ على الخُرُوج مِن أَرْضٍ إلى أَرْضٍ.",
+   "categories": [
+    "111",
+    "802"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ],
+   "value": "يُطلَق مُصطلَح (هِجْرَة) في كتاب الجامع للآداب، ويُراد به: تَرْكُ ما تَدْعُو إِلَيْهِ النَّفْسُ الأَمَّارَةُ بِالسُّوءِ والشَّيْطانُ.",
+   "ling_def": "التَّرْكُ والخُروجُ مِن بَلَدٍ أو أَرْضٍ إلى أخرى، يُقال: هَجَرَ الشَّيءَ، يَهْجُرُهُ، هَجْرَاً: إذا تَرَكَه وأَغْفَله وأعْرَضَ عنه، وهَجَرَ الرَّجُلُ هَجْرَاً: إذا تَباعَدَ ونأى، والهِجْرَةُ في الأصْلِ مِن الهَجْرِ، وضِدُّه: الوَصْل، ثمَّ غَلَبَ على الخُرُوج مِن أَرْضٍ إلى أَرْضٍ، وأصلُ المُهاجَرَة عند العَرَب: خُرُوج البَدَويِّ مِن بادِيَتِه إلى المُدُن.",
+   "root": "هجر"
+  },
+  "en": {
+   "id": "36590",
+   "term": "Immigration",
+   "idio_def": "Moving from a non-believing and non-Muslim country to a Muslim one for the sake of preserving one’s religion.",
+   "brief_expl": "\"Hijrah\" (immigration) is leaving the homeland, where a person lives among disbelievers, and going to the abode of Islam. A disbelieving country is one where the rituals of disbelief are performed and the rituals of Islam are not, generally speaking. As for the Muslim country, it is the land where the rituals and rulings of Islam are generally dominant.\n Hijrah is a great and significant act for it is one of the most notable issues involving allegiance and dissociation as a person seeks to preserve his religion and decides to leave the polytheists.\n There are many categories of Hijrah:\n a. The first Hijrah to Abyssinia, when the disbelievers persecuted the Companions (may Allah be pleased with them).\n b. The second Hijrah from Makkah to Madinah.\n c. The third Hijrah, when the tribes immigrated to the Prophet (may Allah’s peace and blessings be upon him) to learn the teachings of Islam and then return to their homeland to teach their people.\n d. The fourth Hijrah, when those who embraced Islam from the people of Makkah went to the Prophet (may Allah’s peace and blessings be upon him) and then returned to Makkah.\n e. The fifth Hijrah is the Hijrah of Muslims after the Prophet’s time from the land of disbelief to the land of Islam, and so on.\n f. The sixth Hijrah is Hijrah from what Allah Almighty prohibited.\n From another perspective, Hijrah falls under two categories:\n 1. Physical Hijrah from one country to another, like leaving the land of disbelief and going to the land of Islam. The same holds true for leaving the land of religious innovations and rife sins.\n 2. Hijrah by the heart to Allah Almighty and His Messenger. Hijrah from loving others than Allah to His love and from servitude to and fear from others than Allah to servitude to Him, fear from Him, hope in Him, reliance on Him and so on.",
+   "brief_ling_def": "\"Hijrah\": emigrating from one country to another. It is derived from \"hajr\", which means abandoning. Opposite: \"wasl\" (connecting).",
+   "categories": [
+    "111"
+   ],
+   "translations": [
+    "ar",
+    "en",
+    "fr",
+    "id",
+    "ru",
+    "ur",
+    "hi",
+    "pt",
+    "bn",
+    "zh",
+    "tl",
+    "te",
+    "ml",
+    "fa",
+    "th",
+    "tr"
+   ]
+  }
+ }
+}

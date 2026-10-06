@@ -40,7 +40,10 @@ export type QuranRef = {
   diff_ops: DiffOp[];
   reference_source: string;
   quranpedia_url?: string;
+  tafsir?: Tafsir;
 };
+
+export type Tafsir = { text: string | null; source: string; url: string };
 
 export type Hadith = {
   id: string;
@@ -101,14 +104,44 @@ export type VerseCandidate = {
   similarity: number;
   quranpedia_url: string;
   in_corpus_pages: number[];
+  tafsir?: Tafsir;
+  closest?: boolean;
 };
 
-export type SourcePoint = { text: string; passage: string; quote: string; verified?: boolean; passage_id?: string };
+export type SourcePoint = {
+  text: string;
+  passage: string;
+  quote: string;
+  verified?: boolean;
+  passage_id?: string;
+  external?: "quran" | "term";
+};
+
+export type ExternalItem = {
+  kind: "quran" | "term";
+  source: string;
+  url: string;
+  surah?: number;
+  surah_name?: string;
+  ayah?: number;
+  text?: string;
+  tafsir?: Tafsir;
+  term?: string;
+  term_en?: string | null;
+  definition?: string;
+};
 
 export type AnswerRes = {
   question: string;
   status: "answered" | "abstained" | "referral" | "unavailable" | "glossary";
-  glossary?: { term_ar: string; term_en: string; source: string; verified: boolean };
+  glossary?: {
+    term_ar: string;
+    term_en: string;
+    source: string;
+    verified: boolean;
+    explanation?: { ar: string; en: string; term_en: string | null; source: string; url: string } | null;
+  };
+  external?: { items: Record<string, ExternalItem>; referrals: { title: string; url: string }[] };
   language: string;
   level: string | null;
   message?: string;
