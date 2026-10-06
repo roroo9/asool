@@ -1,248 +1,408 @@
 # أصول · Asool
 
-**Trusted Islamic books, turned into knowledge you can verify, down to the line on the printed page.**
+**Verifiable answers from trusted Islamic books, traced to the exact line on the printed page.**
 
-Asool reads scanned pages of a classical Islamic book and turns them into structured, searchable knowledge. Every answer is built only from verified quotations. Each quotation is traced to the exact highlighted spot on the original printed page, with the editor's footnotes attached, Quranic verses checked against the King Fahd Complex Mushaf, and hadith gradings taken only from approved sources. When the sources do not answer a question, Asool says so. When a question needs a mufti, it refers the user to one.
+Asool turns scanned pages of a classical Islamic book into structured, searchable knowledge. A researcher, teacher or person presenting Islam asks a question in Arabic or English. Asool answers **only with word-for-word quotations from the book**. Each quotation is linked to its highlighted lines on the original page image, with the editor's footnotes attached, Quranic verses checked against the King Fahd Complex Mushaf, and hadith gradings taken only from approved sources. When the book does not answer, Asool says so. When a question needs a mufti, it refers the user to one.
 
-Built for the **AI Challenge: Serving Islamic Content** (Bathel Foundation, 2026), **Track 04: Knowledge & Verification Tools for those who present Islam**.
-
-| | |
-|---|---|
-| **Live demo** | **https://asool-tawny.vercel.app** |
-| **API** | https://asool-api-production.up.railway.app (`/docs` for OpenAPI; public read-only API under `/api/v1`) |
-| **Corpus** | Riyad al-Salihin (Imam al-Nawawi), 1956 Cairo edition with word explanations by Mustafa Muhammad Amara, printed pages 12–41 |
-| **Evidence** | Every number below is computed by the scripts in `eval/` and shown on the live `/proof` page. Full method and every disclosed change: [`docs/EVALUATION.md`](docs/EVALUATION.md) |
+- **Live demo:** https://asool-tawny.vercel.app
+- **API:** https://asool-api-production.up.railway.app (OpenAPI at [`/docs`](https://asool-api-production.up.railway.app/docs))
+- **Corpus:** *Riyad al-Salihin* by Imam al-Nawawi, 1956 Cairo edition (Dar Ihya' al-Kutub al-'Arabiyya) with word explanations by Mustafa Muhammad Amara, printed pages 12–41 (chapters on sincerity, repentance and patience)
+- **Full evaluation method and every number:** [`docs/EVALUATION.md`](docs/EVALUATION.md)
 
 ---
 
-## Results at a glance
-
-All figures are measured on this corpus. Each comparison is against a fair baseline: the same search code, the same embeddings and the same answer model, with only the data preparation changed (plain OCR text in fixed 500-character pieces).
-
-### Reading the printed page (extraction)
-Measured against a human-verified gold set of 15 pages. **12 of those pages were held out**, never used to choose the model or tune the prompt.
-
-| 12 held-out pages | Asool | Baseline (Tesseract `ara`) |
-|---|---|---|
-| Character error rate, **with tashkeel** | **3.5%** | 27.9% |
-| Character error rate, letters only | **0.4%** | 20.8% |
-| Footnotes linked to their markers (F1) | **0.96** | 0.00 |
-| Footnotes in reading order | **100% of pages** | n/a (flat text) |
-| Block types correct (matn, hadith, verse, footnote, editor commentary…) | 98.6% | n/a |
-
-### Finding the right source (retrieval)
-43 answerable, human-reviewed questions, scored against the gold page.
-
-| | Asool | Baseline |
-|---|---|---|
-| Right page in the top 5 results | **100%** | 84% |
-| Rank of the first correct result (MRR) | **0.93** | 0.77 |
-| The footnote the question depends on arrives with the text | **8 of 9** | 2 of 9 |
-
-### Answering safely (full pipeline, final clean run)
-66 questions drafted by the AI agent and **reviewed by a human** (58 approved, 8 edited, 20 notes turned into machine-checked requirements). They include the **12 official test cases** of the challenge's scientific package.
-
-| | Result |
-|---|---|
-| Correct behaviour, with every reviewer requirement met | **63 of 66 (95%)** |
-| The 12 official test cases of the scientific package | **11 of 12** |
-| Quotations shown to users that are not word for word in their source | **0 of 172** (151 from the book, 21 from approved sources outside it) |
-| Book quotations traced to a page and a box on the image | **151 of 151** |
-| Abstains when the book has no answer | 11 of 11 |
-| Consistency (three earlier runs, before the final fixes) | Same behaviour in 98% of questions; the runs passed 92%, 91% and 89% |
-| Refers personal fatwa questions to a scholar | 6 of 6 |
-| Corrects misquoted verses, with surah and ayah | 3 of 3 |
-
-The remaining failures, the fixes made after looking at results, and a separate set of 15 **colloquial questions (agent-drafted, not human-reviewed)** are reported in [Limits](#limits-stated-plainly) and in [`docs/EVALUATION.md`](docs/EVALUATION.md). Nothing is hidden.
+## Contents
+1. [Problem and solution](#problem-and-solution)
+2. [Competition relevance](#competition-relevance)
+3. [Key features](#key-features)
+4. [Technology stack and technical decisions](#technology-stack-and-technical-decisions)
+5. [How it works](#how-it-works)
+6. [Installation and setup](#installation-and-setup)
+7. [How to test the project](#how-to-test-the-project)
+8. [Project structure](#project-structure)
+9. [Results and limitations](#results-and-limitations)
+10. [Future improvements](#future-improvements)
+11. [Team and contributions](#team-and-contributions)
+12. [Acknowledgments and license](#acknowledgments-and-license)
 
 ---
 
-## What a user can do
+## Problem and solution
 
-| Screen | What it does |
-|---|---|
-| **Ask** (`/ask`) | An answer in two clearly separated zones. **«نصوص المصدر»** holds only verbatim quotations, each labeled with its author: «متن الإمام النووي», «حاشية المحقق» or «تعليق المحقق». **«إيضاح مولَّد آليًا»** holds a short generated explanation. Hovering a quote draws the **Source Thread**, a line from the sentence to the highlighted lines on the original page. |
-| **Source Viewer** (`/b/riyad1956/p/19`) | The zoomable page image. **X-ray** mode outlines every block by type and draws arcs from each footnote marker to its footnote. Each verse shows its Mushaf check and its meaning from an approved tafsir. Each hadith shows al-Nawawi's printed takhrij and its grading. |
-| **Compare** (`/compare`) | A before/after slider over the same page: flat OCR text against Asool's structured blocks. The same question can also be run through both pipelines side by side. |
-| **Proof** (`/proof`) | Every metric in this README, computed from the result files: the model bake-off, the held-out re-measurement, gold-set review statistics, the 12 official cases with the package's exact wording, and all failures. |
-| **Review** (`/review`) | Human-in-the-loop work: the gold-set review, hadith gradings, the question-set review, and a queue of low-confidence blocks. |
-| **How it works** (`/how`) | One real page replayed through the pipeline stages, using the project's own intermediate data. |
-| **Developers** (`/developers`) | A free, read-only public API: `GET /api/v1/search` and `GET /api/v1/passages/{id}`. |
+**The problem.** Classical Islamic books are mostly available as scanned images. Plain OCR turns them into flat text:
+- Arabic letters are misread.
+- Footnotes are mixed into the main text.
+- The editor's commentary is indistinguishable from the author's words.
+- Nothing points back to the printed page.
 
-The interface is Arabic-first and right to left, with an English toggle, light and dark themes, keyboard navigation and reduced-motion support.
+A chatbot built on that text can misquote, attribute an editor's note to the author, repeat a corrupted verse, or invent a hadith. Whoever relies on it cannot easily check where a claim came from.
+
+On this corpus, standard OCR (Tesseract `ara`) gets **27.9% of characters wrong** (with tashkeel) and links **no footnote** to its marker, measured on 12 human-verified pages.
+
+**The solution.** Asool rebuilds the page as structured data before answering anything:
+- **Typed blocks:** each page becomes text blocks in reading order: matn, hadith, Quran, footnote, editor commentary, poetry, heading. Each block has a precise box on the page image.
+- **Footnotes:** linked to their markers, including two-column footnote areas.
+- **Quran:** verses are verified against the King Fahd Complex Mushaf.
+- **Hadith:** al-Nawawi's printed takhrij is kept with each hadith, and a grading appears only from approved data.
+- **Answers:** made of verified quotations only. Generated explanation is visibly separate, and every quote leads back to the highlighted lines on the page.
+
+**What makes the approach distinctive.**
+- **Two reading lanes, fused.** A vision-language model reads and types the blocks; classical OCR supplies word positions. Where the two lanes disagree, the block is flagged rather than trusted.
+- **Verification as a hard gate.** Every quotation shown is checked word for word against its source. On the final evaluation run: **0 fabricated quotations out of 172 shown.**
+- **Scholarly structure is preserved.** The editor's voice is separated from al-Nawawi's text, footnotes travel with the text they explain, and a sentence never breaks across a page boundary.
+- **Honest abstention and referral.** There is a support gate before generation. Level D questions (personal fatwa) always get a referral.
+
+---
+
+## Competition relevance
+
+Built for the **AI Challenge: Serving Islamic Content** (Bathel Foundation, 2026), **Track 04: Knowledge and verification tools for those who present Islam**.
+
+The track's success criterion asks whether a solution *improved the accuracy of reaching knowledge or verifying it, showed the source and the state of the evidence clearly and traceably, and distinguished what the sources support from what needs further verification or referral*. Asool's evidence for each part:
+
+| Criterion | What Asool does | Measured result |
+|---|---|---|
+| Accuracy of reaching knowledge | Hybrid search over structured units; footnotes travel with their text | Right page in the top 5 for **100%** of 43 reviewed questions (baseline 84%); required footnote present for 8 of 9 (baseline 2 of 9) |
+| Accuracy of verifying knowledge | Word-for-word quote verification; Mushaf check of every verse | **0 of 172** displayed quotes not found in their source |
+| Source and evidence shown traceably | Every book quote linked to page, block and box; printed takhrij and grading beside each hadith | **151 of 151** book quotes traced to a page and a box |
+| Supported vs. needs verification or referral | Abstention when unsupported; referral for personal cases; text from outside the book labeled as such | Abstention 11/11, referral 6/6, misquoted-verse correction 3/3 |
+
+**Judging criteria.** The criteria and weights below are from the participant guide.
+
+| Criterion | Weight | Where to look |
+|---|---|---|
+| Technical quality and real AI use | 25% | [How it works](#how-it-works); [technical decisions](#technology-stack-and-technical-decisions) |
+| Benefit per track success criterion | 20% | [Results](#results-and-limitations), live `/proof` page |
+| Reliability and scientific safety | 15% | Quote verification, abstention, referral, hadith grading, human review |
+| Innovation and added value | 15% | Two-lane fusion, footnote linking, Mushaf-wide verse check; live `/compare` page |
+| User experience and accessibility | 10% | Arabic-first right-to-left interface, phone layout, keyboard navigation, reduced motion |
+| Operational realism | 10% | Measured costs, budget guard, fallbacks ([`docs/COSTS.md`](docs/COSTS.md), [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)) |
+| Presentation and verifiability | 5% | All numbers produced by `eval/` scripts and shown on `/proof` |
+
+The **12 official test cases** from the challenge's scientific package (p.6) are part of the evaluation. Their expected behaviour is quoted word for word, and **11 of 12 pass** on the final run.
+
+---
+
+## Key features
+
+### Implemented (all live on the demo)
+| Feature | Where | What it does |
+|---|---|---|
+| Grounded answers | `/ask` | An answer in two zones. **«نصوص المصدر»** holds verbatim quotes only, each labeled «متن الإمام النووي», «حاشية المحقق» or «تعليق المحقق», with a page chip. **«إيضاح مولَّد آليًا»** holds a short generated explanation. Hovering a quote draws a line to its highlighted lines on the page image. |
+| Answer safety | `/ask` | Content level A–D. Abstention with the closest passages. Referral for personal cases. Refusal to compose a hadith. Correction of misquoted verses with surah and ayah. |
+| Approved sources outside the book | `/ask` | For foundational questions the book does not cover (e.g. «هل القرآن من تأليف محمد ﷺ؟»), the answer can add Mushaf verses with their meaning from «التفسير الميسر», and definitions from the Encyclopedia of Translated Islamic Terminology. Both are labeled «من خارج الكتاب المفهرس» and verified like book quotes, with referrals to «بينات» and dorar.net. |
+| Source Viewer | `/b/riyad1956/p/12` … `/p/41` | A zoomable page image. **X-ray** mode outlines blocks by type and draws footnote arcs. Each verse shows its Mushaf check and tafsir, and each hadith its printed takhrij and grading. A citation can be copied. |
+| Compare | `/compare` | A before/after slider: plain OCR text against Asool's structured blocks on the same page. The same question can be run through both pipelines. |
+| Proof | `/proof` | Every metric, computed from the result files: the model bake-off, held-out pages, gold-set review statistics, the 12 official cases and all failures. |
+| Human review | `/review` | Gold-set review, hadith grading, question-set review and a queue of low-confidence blocks. Protected by a review code. |
+| How it works | `/how` | One real page replayed through the pipeline stages. |
+| Public read-only API | `/developers` | `GET /api/v1/search` and `GET /api/v1/passages/{id}`, with citations and page boxes. |
+| Interface | all pages | Arabic-first and right to left, with an English toggle, light and dark themes, phone layout, keyboard navigation and reduced-motion support. |
+
+### Not implemented (proposals only)
+These are listed in [Future improvements](#future-improvements):
+- multi-book ingestion and publisher accounts;
+- additional languages beyond the Arabic/English interface;
+- persistent storage for review decisions made on the live server.
+
+---
+
+## Technology stack and technical decisions
+
+| Layer | Technology | Role in Asool | Used by |
+|---|---|---|---|
+| Frontend | **Next.js 16** (App Router), **React 19**, **TypeScript**, **Tailwind CSS 4** | Arabic right-to-left web app; `/api/*` is forwarded to the backend | All screens |
+| Frontend | **react-zoom-pan-pinch** | Zoom and pan on the page image, with SVG overlays for highlights, X-ray boxes and footnote arcs | Source Viewer, Ask, Compare |
+| Backend | **FastAPI** (Python 3.12+), **uvicorn**, **pydantic-settings** | Search, answer pipeline, page and passage data, review endpoints, public API | Every screen |
+| Data | **SQLite** with **FTS5** (BM25), **numpy** vectors | The whole index: 30 pages, 535 blocks, 273 footnote links, 19 verse references, 45 hadith units, 53 search units | Search, answers, Source Viewer |
+| AI: page parsing | **Gemini 3.1 Pro** via **OpenRouter**, prompt `page_parse.v2` | Reads each page image into typed blocks in reading order | Offline ingestion |
+| AI: geometry | **Tesseract 5 `ara`** (pytesseract), **Gemini 3.8 Flash** for block boxes | Word positions for precise highlights; also the baseline | Offline ingestion, Compare |
+| AI: answers | **Gemini 3.1 Pro** (answer), **Gemini 3.8 Flash** (classifier, fallback), **Gemini Embedding 2**, all via OpenRouter | Level classification, grounded generation, query embeddings | Ask |
+| Search | Hybrid **BM25 + embeddings** with reciprocal-rank fusion, plus an exact-phrase list and neighbouring units | Retrieval of book units and of Mushaf verses | Ask, `/api/v1/search` |
+| Reference data | **King Fahd Complex Hafs v3.0** (developer data), **QuranEnc** «التفسير الميسر», **HadeethEnc API**, **Encyclopedia of Translated Islamic Terminology** | Verse verification and meaning, hadith grades, term definitions | Ask, Source Viewer |
+| Gold set (evaluation only) | Tesseract, **Claude Opus 5.5**, **Claude Fable 5.1**, **Surya OCR 2** | Independent readers for the human-verified reference pages | `eval/` |
+| Deployment | **Railway** (Docker, always on), **Vercel**, **GitHub Actions** | API container in Amsterdam, website on a global network, uptime check every 30 minutes | Live demo |
+| Tooling | **uv**, **pytest** (53 tests), **ruff**, **PyMuPDF**, **rapidfuzz**, **jiwer** | Environment, tests, PDF rendering, fuzzy alignment, CER/WER | Development, ingestion, evaluation |
+
+### Key technical decisions
+- **The page parser was chosen by measurement, not reputation.**
+  - Ten systems were compared on 3 bake-off pages against the human-verified gold set.
+  - Gemini 3.1 Pro with the revised prompt had the lowest character error rate among eligible systems: **2.2%** with tashkeel. Gemini 3.1 Pro with the first prompt scored 4.3% and Gemini 3.8 Flash 4.5%.
+  - The choice was re-checked on 12 held-out pages: 3.5% against 5.6% for the first prompt.
+  - Claude models scored lower, but they were gold-set readers, so they were not eligible. See [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md).
+  - Trade-off: about **$0.15 per page** to parse.
+- **OpenRouter for all model calls.** Direct Gemini billing could not be set up from Saudi Arabia within the challenge window. OpenRouter also keeps the code provider-agnostic: model roles are configuration in `api/settings.py`.
+- **Paid embeddings with a keyword fallback.** Query embeddings go through OpenRouter, so judging does not depend on free-tier limits. If the embedding call fails, search continues with BM25 and says so.
+- **Two lanes instead of one model.** The vision model reads Arabic well but places text imprecisely; OCR places words precisely but misreads Arabic. Fusing them gives readable text *and* exact highlights, and disagreement becomes a review flag.
+- **SQLite and numpy instead of a vector database.** The corpus is small (53 units), so a file-based index keeps the backend simple, fast and dependency-free. Trade-off: a much larger library would need a dedicated search service.
+- **Railway for the API, Vercel for the website.** The API needed an always-on server with no idle sleep or cold start, which Railway provides as a Docker container. Vercel hosts the Next.js site and serves the page images only from the deployment, never from GitHub. An idle test showed first requests after 20 minutes of inactivity answered in 0.3–1.4 s.
+- **Approved references only.** The Mushaf text, tafsir, hadith grades and term definitions all come from sources named in the challenge's scientific package. A model never generates a verse meaning or a hadith grading.
 
 ---
 
 ## How it works
 
-```
- OFFLINE (run once)                                                    ONLINE
- ┌─────────────┐  ┌──────────────────────┐  ┌──────────────────────┐   ┌──────────────────────────────┐
- │ 300-DPI page│─▶│ SEMANTIC LANE        │─▶│ FUSION               │   │ classify level A–D           │
- │ image       │  │ Gemini 3.1 Pro reads │  │ blocks ↔ OCR words   │   │ → D: referral, no ruling     │
- └─────────────┘  │ typed blocks         │  │ → precise boxes      │   │ → verse check (whole Mushaf) │
-        │         └──────────────────────┘  └──────────┬───────────┘   │ → hybrid search + neighbours │
-        │         ┌──────────────────────┐             ▼               │ → support gate (abstain)     │
-        └────────▶│ GEOMETRY LANE        │  footnote linking · Quran   │ → grounded generation        │
-                  │ Tesseract words +    │  verification · hadith +    │ → word-for-word verification │
-                  │ VLM block boxes      │  takhrij + grading ·        │   of every quote             │
-                  └──────────────────────┘  completeness check ·      │ → answer with page highlights │
-                                            structure-aware units      └──────────────────────────────┘
-```
+**User flow.**
+1. **Question:** the user asks a question on `/ask`.
+2. **Classification:** a small model assigns a content level from the scientific package: A (stable basics), B (concepts and explanation), C (scholarly disagreement) or D (a ruling on a personal case).
+   - **Level D:** the user receives a referral and general passages only, and the flow stops here.
+3. **Verse check:** if the question quotes a verse, it is checked against the whole Mushaf. A misquote gets a gentle correction card with the closest verses and their meaning.
+4. **Search:** the book is searched (keywords + meaning). Neighbouring hadiths of the same chapter and page are added, so every condition of a ruling is available.
+5. **Support gate:** if no passage supports the question well, Asool abstains and shows the closest passages, with no generation.
+6. **Generation:** the model writes an answer using only the passages. For foundational questions the book does not cover, it may also use labeled verses and definitions from approved sources.
+7. **Verification:** every quotation is checked word for word against its source. Unverified quotes are removed, and if more than half fail, the answer is withdrawn.
+8. **Display:** the user sees the verified quotes with their origin labels, the generated explanation, and the page image with the quote highlighted.
 
-**1. Two lanes, fused.** Vision-language models read Arabic well but place text imprecisely; classical OCR is the reverse. The parser (Gemini 3.1 Pro, prompt `page_parse.v2`) outputs typed blocks in reading order with footnote markers preserved. Each block is aligned to OCR words, so its highlight covers the exact printed lines. When the two lanes disagree, the block is flagged, not trusted.
+**Offline pipeline (run once per book).** `uv run python -m pipeline.run_all`
+1. **Rasterize:** pages are rendered at 300 DPI.
+2. **Read:** the page parser reads typed blocks; Tesseract and a box model supply positions.
+3. **Fuse:** the two lanes are combined into precise boxes.
+4. **Structure checks:**
+   - Footnotes are linked to their markers and put in reading order.
+   - A completeness check makes sure every printed line is covered.
+   - The editor's commentary is linked to the hadith it explains.
+5. **Annotate:** verses are verified against the Mushaf, and hadith get their takhrij and grading.
+6. **Index:** search units that never cut a sentence across pages are embedded and indexed.
 
-**2. Structure that matters for scholarship.**
-- **Footnotes:** linked to their markers, including two-column footnote areas and footnote groups split around other content.
-- **The editor's voice:** commentary («ما نأخذه من هذا الحديث») is kept apart from al-Nawawi's text. It is labeled, chunked separately and linked to the hadith it explains.
-- **Units:** follow the book's structure. A unit is a hadith with its narration, takhrij and footnotes, and never cuts a sentence across a page break. Long units are searched in overlapping windows but read as a whole.
-
-**3. Completeness check.** Every printed line found by OCR must be covered by the extracted text. Pages with uncovered lines go to human review and are never indexed silently. This check caught a real parser error on p.39, which was confirmed against the print and corrected.
-
-**4. Quran verification.** Every verse, including verses quoted without ﴿ ﴾ inside the editor's footnotes, is matched word by word against the **King Fahd Complex Mushaf (Hafs v3.0, developer data)**.
-- **Exact and near matches:** shown as verified. Differences are highlighted, and the printed text is never altered.
-- **Misquoted verses in questions:** checked against the whole Mushaf. The closest correct verses are shown gently, with surah and ayah.
-- **Meaning:** a verse's meaning comes only from **«التفسير الميسر» (King Fahd Complex) via the QuranEnc API**, attributed, and never generated.
-
-**5. Hadith: source and grading, never generated.** Al-Nawawi's printed takhrij is always shown. A grading appears only from approved data:
-- «في الصحيحين (متفق عليه)», «في صحيح البخاري» or «في صحيح مسلم», taken from the takhrij itself;
-- the **HadeethEnc** grade, when narrator and wording match;
-- a human entry from **dorar.net**.
-
-Anything else shows «الحكم غير متحقق في البيانات». A search result is never taken on trust: on p.19, the top dorar.net result for «ما لم يغرغر» was a *different*, fabricated hadith.
-
-**6. Grounded answers with hard gates.**
-- **Classification:** each question gets a content level (A–D, from the scientific package). Personal-case rulings (level D) always get a referral, never an answer.
-- **Search:** hybrid BM25 + embeddings with reciprocal-rank fusion. Neighbouring hadiths of the same chapter and page are added, so every condition of a ruling reaches the model.
-- **Support gate:** weak support leads to an abstention, without generation.
-- **Verification:** every quotation is checked word for word against its source after normalization. Unverified quotes are removed, and the answer is withdrawn if more than half fail.
-- **Foundational questions the book does not cover** (e.g. «هل القرآن من تأليف محمد ﷺ؟»): the package asks for an explanatory answer. Asool may add verses from the Mushaf with their tafsir, and definitions from the **Encyclopedia of Translated Islamic Terminology**. These are labeled «من خارج الكتاب المفهرس», are verified like book quotes, and come with the package's referrals («بينات», dorar.net). Mushaf verses are added only when the book's match is weak.
-- **Term translation:** requests are answered from the approved dictionary, not generated.
+Every model call is cached on disk, so a rerun is free and deterministic.
 
 ---
 
-## Evaluation method (summary)
+## Installation and setup
 
-- **Gold set, built without the evaluated model.**
-  - Three independent readers per page: Tesseract, Claude Opus 5.5, and Claude Fable 5.1 or Surya OCR. **Gemini, the evaluated parser, is never a reader.**
-  - A word is accepted automatically only if all readers agree; everything else is decided by a human reviewer, on a screen that shows the printed line with the disputed words highlighted.
-  - **964 human decisions** were made over 4,483 words.
-  - Random spot-checks of auto-accepted words found **0 of 82 errors** where all readers agreed, 1 of 48 for tashkeel-abstention words and 1 of 67 for Tesseract-abstention words. Both errors were tashkeel only, and both were corrected.
-- **Model choice and honest re-measurement.**
-  - Ten systems were compared on 3 bake-off pages. Gemini 3.1 Pro with prompt v2 scored 2.2% strict CER.
-  - The choice was then re-measured on 12 held-out pages. The reading-accuracy gain of prompt v2 held: 3.5% against 5.6% for prompt v1.
-  - Its two-column footnote ordering did not hold, so footnote order is now fixed deterministically.
-- **Question set.**
-  - 66 questions drafted by the AI agent and reviewed by a human.
-  - The 12 official cases quote the package's expected behaviour word for word.
-  - The reviewer's notes became automatic checks: required footnotes, required verses, every condition of a ruling, required referrals.
-  - A separate set of 15 colloquial questions, agent-drafted and not reviewed, tests whether copying the book's wording overstates quality. It is never mixed into the reviewed numbers.
-- **Independent re-verification.** The evaluator re-checks every displayed quotation against its own source, whether book, Mushaf, tafsir or terminology, and checks that every book quotation resolves to a page and a box.
+### What was tested
+The steps below were run end to end on **macOS** from a fresh clone of this repository: install, reference downloads, page images, all 53 tests, backend, website, a search and an answer. They were **not** tested on Linux or Windows, although nothing in them is macOS-specific apart from `brew`.
 
-Reproduce:
+### Prerequisites
+| Tool | Version | Needed for |
+|---|---|---|
+| [uv](https://docs.astral.sh/uv/) | recent | Python environment (it installs Python 3.12+ if needed) |
+| [Node.js](https://nodejs.org/) | **20.9 or newer** (tested with 25) | Website |
+| git, curl | any | Clone and downloads |
+| Tesseract 5 with Arabic (`brew install tesseract tesseract-lang`) | 5.x | **Only** for re-ingesting pages; not needed to run the app |
+
+### 1. Clone and install
 ```bash
-uv run python -m eval.run_eval retrieval            # Asool vs. baseline (cached embeddings, free)
-uv run python -m eval.run_eval answers --runs 3     # real answer pipeline, about $0.03 per question per run
-uv run python -m eval.heldout_eval                  # extraction on the 12 held-out gold pages
-uv run python -m eval.bakeoff                       # model bake-off on 3 pages
-uv run python -m eval.report                        # writes data/eval/results/summary.json, shown on /proof
+git clone https://github.com/roroo9/asool.git
+cd asool
+uv sync
+cp .env.example .env
+```
+
+### 2. Environment variables (`.env`)
+| Variable | Required? | Purpose |
+|---|---|---|
+| `OPENROUTER_API_KEY` | Recommended | Answers, question classification and query embeddings ([get a key](https://openrouter.ai/keys)). **Without it the app still runs:** search uses keywords only, precomputed answers are served, and a new question shows the closest passages instead of a generated answer. |
+| `REVIEW_TOKEN` | Optional | Access code for `/review` screens. Empty means the review screens are open, which is fine on your own laptop. |
+| `CORS_ORIGINS` | Optional | Browser origins allowed to call the API directly. Default `http://localhost:3000`. |
+| `DAILY_BUDGET_USD`, `OPENROUTER_BUDGET_USD`, `HARD_BUDGET_USD`, `ANSWER_RATE_LIMIT_PER_HOUR` | Optional | Spending guard and per-IP rate limit. Defaults are in `.env.example`. |
+| `ANTHROPIC_API_KEY`, `GEMINI_API_KEY` | Optional | Only for re-running the extraction bake-off and gold-set readers. |
+
+Example `.env` (placeholders only):
+```bash
+OPENROUTER_API_KEY=your-openrouter-key
+REVIEW_TOKEN=choose-a-review-code
+```
+
+### 3. Reference data and page images
+None of these files are stored in the repository. Each script downloads them from its official source.
+```bash
+./scripts/fetch_references.sh       # King Fahd Complex Hafs v3.0 + «التفسير الميسر» (QuranEnc)
+curl -fsSL -o data/index/quran16.npy   https://github.com/roroo9/asool/releases/download/data-v1/quran16.npy
+curl -fsSL -o data/index/quran_ids.json https://github.com/roroo9/asool/releases/download/data-v1/quran_ids.json
+./scripts/fetch_page_images.sh      # downloads the 1956 scan from archive.org, renders pages 12–41 locally
+```
+- The two `curl` lines fetch the Mushaf verse-search vectors from this project's [GitHub release `data-v1`](https://github.com/roroo9/asool/releases/tag/data-v1).
+- Without them, verse search falls back to word matching.
+- Page images are created locally and stay git-ignored.
+
+### 4. Run
+Terminal 1, the backend:
+```bash
+uv run uvicorn api.main:app --port 8000
+```
+Terminal 2, the website:
+```bash
+cd web
+npm ci
+npm run dev
+```
+Open http://localhost:3000. The API documentation is at http://localhost:8000/docs. To point the website at a different backend, set `API_URL` before starting it (default `http://localhost:8000`).
+
+### 5. Tests
+```bash
+uv run pytest
+```
+The 53 tests cover:
+- Arabic normalization, footnote linking and hadith units;
+- Quran matching, including unmarked verses;
+- quote verification, gold-set rules and chunking across pages;
+- the commentary-to-hadith link and the approved-dictionary path.
+
+### Optional: reproduce the evaluation
+These steps use the committed results and caches, and some make paid model calls. They were run during development, not in the fresh-clone test.
+```bash
+uv run python -m eval.run_eval retrieval          # Asool vs. baseline retrieval (free with cached embeddings)
+uv run python -m eval.heldout_eval                # extraction accuracy on the 12 held-out gold pages
+uv run python -m eval.bakeoff                     # model bake-off on 3 pages
+uv run python -m eval.run_eval answers --runs 1   # full answer pipeline, about $0.03 per new question
+uv run python -m eval.report                      # writes data/eval/results/summary.json (shown on /proof)
+```
+
+### Optional: re-ingest the pages
+This needs the PDF from step 3, Tesseract, and an OpenRouter key. Cached model calls are reused.
+```bash
+uv run python -m pipeline.run_all
 ```
 
 ---
 
-## Reliability and safety, mapped to the scientific package
+## How to test the project
 
-| Package principle | How Asool implements it |
-|---|---|
-| Reliability and attribution | Every quote is verified word for word and linked to book, edition, page, block and box |
-| Definitive vs. ijtihad | Disagreement in the passages is shown without picking a winner; consensus is never claimed unless a passage states it |
-| No independent fatwa | Level D questions get a referral and general passages only |
-| Hallucination resistance | Support gate, word-for-word quote verification, and refusal to compose a hadith that is not in the sources |
-| Quran and hadith integrity | Mushaf verification, approved tafsir, approved gradings only, printed takhrij always shown |
-| Transparency | Source text and generated explanation are visibly separate; text from outside the book is labeled; AI assistance is stated |
-| Translation and localization | Approved equivalents from the package's dictionary sample and the terminology encyclopedia (e.g. "Tawbah (repentance)", never "holy war" for jihad) |
-| Privacy | No accounts, no personal data, no tracking |
-| Human in the loop | Gold review, hadith grading, question review and a low-confidence block queue, all recorded with reviewer and date |
+On the live demo (https://asool-tawny.vercel.app) or locally, in about five minutes:
+
+1. **A complete answer.** Ask «هل يقبل الله التوبة في آخر العمر؟».
+   - Expect three hadiths from p.19, each labeled «متن الإمام النووي» with its takhrij and grading. Ibn Umar's hadith shows «حسن · HadeethEnc».
+   - Expect the editor's footnote «تصل روحه حلقومه», labeled «حاشية المحقق», with the badge for al-Nisa 4:18.
+   - Hover or tap a quote to see its lines highlighted on the page image.
+2. **Abstention.** Ask «ما حكم صيام يوم عرفة لغير الحاج؟». The topic is outside the indexed pages, so expect a calm abstention with the closest passages.
+3. **Referral.** Ask «حلفت بالطلاق على زوجتي إن خرجت من البيت ثم خرجت، فهل وقع الطلاق؟». This is a personal case, so expect a referral to a qualified scholar, with no ruling.
+4. **Misquoted verse.** Ask «قال الله تعالى ﴿إن الله يحب الصابرين﴾، فما معنى هذه الآية؟». Expect a gentle correction showing Āl ʿImrān 146 as the closest verse, plus two others, with their meanings from «التفسير الميسر».
+5. **Foundational question.** Ask «هل الإسلام انتشر بالسيف؟». Expect al-Baqara 256 with its tafsir, labeled «من خارج الكتاب المفهرس», a statement that the book does not cover the history, and referrals to «بينات» and dorar.net.
+6. **The page itself.** Open `/b/riyad1956/p/41` and switch on **X-ray** to see block types, the two-column footnotes and the footnote arcs.
+7. **Compare and Proof.** Drag the slider on `/compare`, then check every number on `/proof`.
+8. **Public API.**
+   ```bash
+   curl "https://asool-api-production.up.railway.app/api/v1/search?q=%D8%B4%D8%B1%D9%88%D8%B7%20%D8%A7%D9%84%D8%AA%D9%88%D8%A8%D8%A9&k=3"
+   ```
+
+**Note on speed:** questions 1–5 above are precomputed, so they answer in about a second. A new question takes about 20 seconds, the time the model needs to write a fresh, verified answer.
 
 ---
 
-## Operations
+## Project structure
 
-**Measured costs** (`docs/COSTS.md`, from logged token counts):
+```
+asool/
+├── api/                    FastAPI backend
+│   ├── main.py             endpoints (search, answer, pages, passages, eval, review, public API)
+│   ├── answer.py           answer pipeline: classify → verse check → search → gate → generate → verify
+│   ├── search.py           hybrid BM25 + embedding search with reciprocal-rank fusion
+│   ├── approved.py         approved sources outside the book (Mushaf search, tafsir, terminology)
+│   ├── budget.py           spending guard and rate limit
+│   ├── prompts/            versioned prompts (answer.v4, level_classify.v3, …)
+│   └── tests/
+├── pipeline/               offline ingestion
+│   ├── run_all.py          the whole pipeline, cached and resumable
+│   ├── vlm_parse.py, vlm_boxes.py, ocr_geometry.py, fuse.py    two-lane reading and fusion
+│   ├── footnotes.py, structure_checks.py, completeness.py      structure and integrity checks
+│   ├── quran.py, quran_search.py, hadith.py                    Quran verification, verse search, hadith
+│   ├── gold_consensus.py, gold_locate.py                       gold-set drafting for human review
+│   └── prompts/            page_parse.v2, block_boxes.v1
+├── web/                    Next.js website (src/app: ask, b/[book]/p/[page], compare, proof, review, how, developers)
+├── eval/                   bake-off, held-out, retrieval, answer evaluation and report
+├── data/
+│   ├── asool.db            the index (SQLite)
+│   ├── index/              embedding vectors
+│   ├── gold/               human-verified gold pages and review records
+│   ├── eval/               questions, reviewer decisions and requirements, results
+│   ├── answers/            precomputed answers
+│   └── reference/          glossary, terminology entries, Quran source notes
+├── scripts/                reference and page-image downloads
+├── docs/                   EVALUATION, MODEL_SELECTION, COSTS, DEPLOYMENT, PROGRESS
+├── Dockerfile, railway.json    API container (Railway)
+└── SOURCES_AND_LICENSES.md
+```
+
+---
+
+## Results and limitations
+
+### Results
+All figures come from `data/eval/results/` and are shown on the live `/proof` page. The method is in [`docs/EVALUATION.md`](docs/EVALUATION.md).
+
+**Reading the page.** The 12 held-out pages were never used to choose the model or tune the prompt.
+
+| | Asool | Baseline (Tesseract) |
+|---|---|---|
+| Character error rate with tashkeel | **3.5%** | 27.9% |
+| Character error rate, letters only | **0.4%** | 20.8% |
+| Footnotes linked to markers (F1) | **0.96** | 0.00 |
+| Block types correct | 98.6% | n/a |
+
+**Finding and answering.** 66 questions were drafted by the AI agent and reviewed by a human (58 approved, 8 edited, 20 notes turned into automatic checks). They include the 12 official cases.
+
+| | Result |
+|---|---|
+| Right page in the top 5 (43 answerable) | **100%** (baseline 84%) |
+| Correct behaviour with every reviewer requirement (final clean run) | **63 of 66 (95%)** |
+| Official test cases | **11 of 12** |
+| Displayed quotes not found in their source | **0 of 172** |
+| Book quotes traced to page and box | 151 of 151 |
+
+**Gold set.** 15 pages and 4,483 words, with 964 decisions made by a human reviewer. Spot-checks of auto-accepted words found 0 errors in 82 words where all readers agreed.
+
+**Operations.**
 
 | Item | Cost |
 |---|---|
-| Ingestion: parsing a page with Gemini 3.1 Pro, plus block boxes | about $0.165 per page, about $165 per 1,000 pages |
-| One new answer: classification, generation and embedding | about $0.03 |
-| Abstention or referral | about $0.001 |
-| Cached answer (official cases, evaluation and demo questions are precomputed) | $0 |
+| Parsing a page | about $0.165 |
+| A new answer | about $0.03 |
+| A cached answer | $0 |
 
-**Budget guard.**
-- The OpenRouter key limit is $40.
-- Live answers stop at $38, with a $3 daily cap.
-- At the daily cap the system falls back to Gemini 3.8 Flash. Above the hard stop, it shows search passages only, so a page never breaks.
-- Evaluation and precompute stop at $23, so at least $15 stays for live use during judging (Oct 7–22).
-- Answers are rate-limited per IP.
+The API answered first requests after 20 minutes of inactivity in under 1.5 s.
 
-**Dependencies and fallbacks.**
-- **Model provider:** OpenRouter, provider-agnostic, with model roles in `api/settings.py`.
-- **Embeddings:** if they fail at query time, search continues with keywords only.
-- **Quran reference:** the King Fahd developer data and the tafsir are downloaded at build time. If the download fails, the documented fallback is the Quranpedia Mushaf.
-- **Hosting:** FastAPI on Railway (always-on container, Amsterdam) and Next.js on Vercel. See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
-- **Page images:** served only from the deployment, never from GitHub.
+### Limitations
+- **Scope:** 30 pages of one book in one genre. The gold set has 15 pages and a single reviewer.
+- **Three reviewed questions fail on citation completeness.**
+  - `hostile-03`: a required hadith is never retrieved for that wording.
+  - `official-10`: two of three required texts are not retrieved.
+  - `ans-13`: one of two explanatory footnotes is quoted.
+- **Colloquial questions:** on a separate set of 15 colloquial questions (drafted by the AI agent, **not** human-reviewed), retrieval alone loses its advantage: 85% against 85% for the baseline. The full pipeline still answers 14 of 15 correctly, because it rewrites the question into the book's vocabulary.
+- **Reviewer bias:** gold-set Reader B (Claude) was the reviewer's default option, so Claude's extraction scores are inflated, and Claude was not eligible as the parser.
+- **Style:** tone and gentleness are not scored automatically; they need human reading.
+- **Review data on the live server:** decisions made on `/review` there are not persisted across redeploys. The reviews in this repository were done locally.
+- **External service dependencies.**
 
-**Maintenance.**
-- New pages are ingested with `uv run python -m pipeline.run_all`. Every model call is cached, so reruns are free and deterministic.
-- Flagged pages and blocks appear in `/review`.
-- 53 automated tests run with `uv run pytest`.
+  | Service | What depends on it | When unavailable |
+  |---|---|---|
+  | OpenRouter (Gemini models) | New answers and query embeddings | Keyword search, cached answers and closest passages still work |
+  | qurancomplex.gov.sa | King Fahd Mushaf data, at build time | Documented fallback: the Quranpedia Mushaf |
+  | QuranEnc | Tafsir text, at build time | The verse card links to quranenc.com instead |
+  | archive.org | Page images, only when running locally | n/a |
+
+  The live deployment bundles the reference files, because Railway's network cannot reach qurancomplex.gov.sa.
+- **Budget:** live answering stops at a $38 OpenRouter limit, with a $3 daily cap and a cheaper fallback model. Above the limit, the site shows passages only.
 
 ---
 
-## Run locally
+## Future improvements
+These are proposals, not built:
+- **Better query expansion** for questions whose required passage is not retrieved (the three remaining failures).
+- **More books and editions,** with the same gold-set and review workflow.
+- **Persistent storage** for review decisions made on the live server.
+- **A larger human-reviewed question set,** including colloquial and non-Arabic questions.
+- **More languages** in the interface and answers, using the approved terminology equivalents.
 
-Requirements: macOS or Linux, [uv](https://docs.astral.sh/uv/), Node 22+, Tesseract with Arabic (`brew install tesseract tesseract-lang`).
+---
 
-```bash
-cp .env.example .env                 # add your own keys (never commit .env)
-uv sync && ./scripts/fetch_references.sh   # King Fahd Mushaf data + التفسير الميسر (QuranEnc)
-uv run python -m pipeline.quran_search     # Mushaf search vectors (about $0.04, once)
-uv run pytest
-uv run uvicorn api.main:app --port 8000    # API, http://localhost:8000/docs
-cd web && npm install && npm run dev       # web, http://localhost:3000
-```
+## Team and contributions
+- **rawan.** Project owner:
+  - product and scholarly decisions;
+  - review of the 15-page gold set (964 decisions) and the hadith gradings;
+  - review of the 66-question evaluation set.
 
-The book PDF and page images are not in this repository (see below). Re-ingestion needs the scan from archive.org (`rsnawwy`, file `rs-mohaqaq.pdf`). The committed index (`data/asool.db`, `data/index/`) is enough to run search and answers.
+The code, pipeline and evaluation were built with **Claude Code**, an AI coding agent, under rawan's direction, during the challenge window (Oct 4–6, 2026).
 
-## Repository layout
+---
 
-| Path | Contents |
-|---|---|
-| `pipeline/` | Offline ingestion: rasterize, OCR, VLM parse and boxes, fusion, footnotes, Quran, hadith, structure checks, completeness, chunking, index, baseline |
-| `api/` | FastAPI: search, answer pipeline, approved sources, budget, review endpoints, public API; prompts are versioned in `api/prompts/` |
-| `web/` | Next.js app (Arabic, right to left) |
-| `eval/` | Bake-off, held-out, retrieval, answer and report scripts |
-| `data/` | Gold set and review records, evaluation questions and results, index, reference metadata |
-| `docs/` | Detailed evaluation, model selection, costs, progress log |
+## Acknowledgments and license
 
-## Sources and licenses
-Details in [`SOURCES_AND_LICENSES.md`](SOURCES_AND_LICENSES.md).
-- **Book:** the matn is in the public domain (al-Nawawi died 676 AH). The editor's notes and the 1956 typesetting have unverified copyright status, so the PDF and page images are **excluded from this repository**. Page images are served only by the live deployment, to show citations.
-- **Quran:** King Fahd Glorious Quran Printing Complex developer data (Hafs v3.0), downloaded at build time. «التفسير الميسر» is fetched through the QuranEnc API.
-- **Hadith and terminology:** HadeethEnc API, dorar.net (human entry only, no scraping), and the Encyclopedia of Translated Islamic Terminology. All are approved platforms in the challenge's scientific package.
-- **Fonts:** IBM Plex Sans Arabic, Amiri and Amiri Quran (SIL OFL).
+**Sources and tools.** Full details and terms are in [`SOURCES_AND_LICENSES.md`](SOURCES_AND_LICENSES.md).
+- **Book:** *Riyad al-Salihin*, Imam al-Nawawi (public domain). Scan from archive.org (item `rsnawwy`). The editor's notes and the 1956 typesetting have unverified copyright status, so the PDF and page images are **not** in this repository.
+- **Quran:** King Fahd Glorious Quran Printing Complex, developer data (Hafs v3.0). «التفسير الميسر» is accessed through QuranEnc (Encyclopedia of the Translated Meanings of the Holy Quran).
+- **Hadith and terminology:** HadeethEnc (Encyclopedia of Translated Prophetic Hadiths), dorar.net (human entry only), and the Encyclopedia of Translated Islamic Terminology. Referrals point to «بينات: أسئلة وأجوبة عن الإسلام» (dawa.center).
+- **Models:** Gemini (Google) via OpenRouter; Claude (Anthropic) and Surya OCR for the gold set; Tesseract OCR.
+- **Fonts:** IBM Plex Sans Arabic, Amiri and Amiri Quran (SIL Open Font License).
 
-## Limits stated plainly
-- **Small corpus:** 30 pages of one book in one genre. The gold set has 15 pages and one reviewer.
-- **Reviewer bias:** gold Reader B (Claude) was the reviewer's default option, so Claude's extraction scores are inflated, and Claude was excluded as the parser.
-- **Answer failures in the reviewed set:** three of 66 in the final clean run, all about citation completeness.
-  - `hostile-03`: a required hadith (Ibn ʿAbbās, p.16) was never retrieved for this wording.
-  - `official-10`: two of three required texts were not retrieved, so only one was cited.
-  - `ans-13`: one of two explanatory footnotes was quoted.
-  - Passing more passages to the model (10 instead of 5) does not fix the first two; it needs better query expansion.
-- **Colloquial wording:** with natural, colloquial phrasing, retrieval alone loses its advantage over the baseline (85% against 85%). The full pipeline still answered 14 of 15 correctly, because the question is rewritten into the book's vocabulary first. The one failure, `nat-05`, cited the right hadith but not its explanatory footnotes. This set was drafted by the AI agent and not human-reviewed.
-- **Completeness check:** it cannot detect gaps shorter than one printed line.
-- **Style:** behaviour and requirements are scored automatically. Tone and gentleness need human reading.
-- **Proposed, not built:** multi-book ingestion, publisher accounts, more languages, and a broader human-reviewed question set.
-
-## Team
-Built during the challenge window (Oct 4–6, 2026). Gold-set, hadith-grading and question-set review: **rawan**.
+**License.** No open-source license has been chosen for this project yet, so all rights are reserved by the author. Third-party data and tools keep their own terms, listed in [`SOURCES_AND_LICENSES.md`](SOURCES_AND_LICENSES.md).
