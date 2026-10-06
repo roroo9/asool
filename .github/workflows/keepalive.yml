@@ -1,12 +1,19 @@
-# Keeps the free Render instance warm during judging (pings /health every 10 minutes).
-name: keep-alive
+# Uptime check during judging (Oct 7-22). The API runs on an always-on Railway container and the
+# website on Vercel, so nothing needs waking; this job only verifies that both answer and FAILS
+# (GitHub emails the repository owner) if either is down.
+name: uptime-check
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 jobs:
-  ping:
+  check:
     runs-on: ubuntu-latest
+    if: ${{ vars.ASOOL_SITE_URL != '' }}
     steps:
-      - name: Ping API
-        run: curl -fsS --max-time 60 "${{ vars.ASOOL_API_URL }}/health" || echo "API not reachable"
+      - name: Website
+        run: curl -fsS --max-time 60 -o /dev/null -w "site %{http_code} %{time_total}s\n" "${{ vars.ASOOL_SITE_URL }}/"
+      - name: API through the website
+        run: curl -fsS --max-time 60 "${{ vars.ASOOL_SITE_URL }}/api/health" | grep -q '"status":"ok"'
+      - name: API direct
+        run: curl -fsS --max-time 60 "${{ vars.ASOOL_API_URL }}/health" | grep -q '"status":"ok"'

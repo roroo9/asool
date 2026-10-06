@@ -8,8 +8,8 @@ Built for the **AI Challenge: Serving Islamic Content** (Bathel Foundation, 2026
 
 | | |
 |---|---|
-| **Live demo** | _added at deployment_ |
-| **API** | _added at deployment_ (`/docs` for OpenAPI) |
+| **Live demo** | **https://asool-tawny.vercel.app** |
+| **API** | https://asool-api-production.up.railway.app (`/docs` for OpenAPI; public read-only API under `/api/v1`) |
 | **Corpus** | Riyad al-Salihin (Imam al-Nawawi), 1956 Cairo edition with word explanations by Mustafa Muhammad Amara, printed pages 12–41 |
 | **Evidence** | Every number below is computed by the scripts in `eval/` and shown on the live `/proof` page. Full method and every disclosed change: [`docs/EVALUATION.md`](docs/EVALUATION.md) |
 
@@ -188,7 +188,7 @@ uv run python -m eval.report                        # writes data/eval/results/s
 - **Model provider:** OpenRouter, provider-agnostic, with model roles in `api/settings.py`.
 - **Embeddings:** if they fail at query time, search continues with keywords only.
 - **Quran reference:** the King Fahd developer data and the tafsir are downloaded at build time. If the download fails, the documented fallback is the Quranpedia Mushaf.
-- **Hosting:** FastAPI on Render (always-on Starter plan) and Next.js on Vercel.
+- **Hosting:** FastAPI on Railway (always-on container, Amsterdam) and Next.js on Vercel. See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
 - **Page images:** served only from the deployment, never from GitHub.
 
 **Maintenance.**
