@@ -5,6 +5,7 @@
     "healthcheckPath": "/health",
     "healthcheckTimeout": 120,
     "restartPolicyType": "ALWAYS",
-    "numReplicas": 1
+    "sleepApplication": false,
+    "multiRegionConfig": { "europe-west4-drams3a": { "numReplicas": 1 } }
   }
 }
