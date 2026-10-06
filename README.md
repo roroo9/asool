@@ -131,7 +131,7 @@ These are listed in [Future improvements](#future-improvements):
   - The choice was re-checked on 12 held-out pages: 3.5% against 5.6% for the first prompt.
   - Claude models scored lower, but they were gold-set readers, so they were not eligible. See [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md).
   - Trade-off: about **$0.15 per page** to parse.
-- **OpenRouter for all model calls.** Direct Gemini billing could not be set up from Saudi Arabia within the challenge window. OpenRouter also keeps the code provider-agnostic: model roles are configuration in `api/settings.py`.
+- **OpenRouter for all model calls.** One gateway for every model keeps the code provider-agnostic: model roles are configuration in `api/settings.py`, so a model can be swapped without code changes.
 - **Paid embeddings with a keyword fallback.** Query embeddings go through OpenRouter, so judging does not depend on free-tier limits. If the embedding call fails, search continues with BM25 and says so.
 - **Two lanes instead of one model.** The vision model reads Arabic well but places text imprecisely; OCR places words precisely but misreads Arabic. Fusing them gives readable text *and* exact highlights, and disagreement becomes a review flag.
 - **SQLite and numpy instead of a vector database.** The corpus is small (53 units), so a file-based index keeps the backend simple, fast and dependency-free. Trade-off: a much larger library would need a dedicated search service.
@@ -341,16 +341,6 @@ All figures come from `data/eval/results/` and are shown on the live `/proof` pa
 | Book quotes traced to page and box | 151 of 151 |
 
 **Gold set.** 15 pages and 4,483 words, with 964 decisions made by a human reviewer. Spot-checks of auto-accepted words found 0 errors in 82 words where all readers agreed.
-
-**Operations.**
-
-| Item | Cost |
-|---|---|
-| Parsing a page | about $0.165 |
-| A new answer | about $0.03 |
-| A cached answer | $0 |
-
-The API answered first requests after 20 minutes of inactivity in under 1.5 s.
 
 ### Limitations
 - **Scope:** 30 pages of one book in one genre. The gold set has 15 pages and a single reviewer.
