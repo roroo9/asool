@@ -53,3 +53,7 @@ data/debug/
 
 # التفسير الميسر via QuranEnc: downloaded by scripts/fetch_references.sh
 data/reference/quranenc/
+
+# Mushaf search vectors (73 MB): built at deploy time by `python -m pipeline.quran_search`
+data/index/quran.npy
+data/index/quran_ids.json

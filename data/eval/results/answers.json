@@ -55,6 +55,76 @@
     "model": "openrouter:google/gemini-3.1-pro-preview",
     "seconds": 0.0,
     "status": "answered"
+   },
+   "ans-04": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 3,
+    "fabricated_quotes": 0,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c030"
+    ],
+    "cites_gold": true,
+    "requirements_failed": [],
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 9.5,
+    "status": "answered"
+   },
+   "ans-05": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 3,
+    "fabricated_quotes": 0,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c030"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 0.0,
+    "status": "answered"
+   },
+   "ans-06": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 4,
+    "fabricated_quotes": 1,
+    "quotes_traced": 3,
+    "cited_chunks": [
+     "riyad1956-c001",
+     "riyad1956-c003"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 0.0,
+    "status": "answered"
+   },
+   "ans-07": {
+    "behaviour": "answer",
+    "allowed": [
+     "answer"
+    ],
+    "pass": true,
+    "quotes_shown": 2,
+    "fabricated_quotes": 0,
+    "quotes_traced": 2,
+    "cited_chunks": [
+     "riyad1956-c002"
+    ],
+    "cites_gold": true,
+    "model": "openrouter:google/gemini-3.1-pro-preview",
+    "seconds": 10.6,
+    "status": "answered"
    }
   }
  }

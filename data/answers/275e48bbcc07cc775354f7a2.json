@@ -727,8 +727,8 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03125,
-    "bm25_rank": 4,
+    "rrf": 0.0315,
+    "bm25_rank": 3,
     "dense_rank": 4,
     "dense_sim": 0.7276936769485474
    }
@@ -2088,8 +2088,8 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.0289,
-    "bm25_rank": 5,
+    "rrf": 0.02867,
+    "bm25_rank": 6,
     "dense_rank": 14,
     "dense_sim": 0.6449298858642578
    }
@@ -2331,8 +2331,8 @@
    "commentary_on": null,
    "min_confidence": 0.99,
    "retrieval": {
-    "rrf": 0.02831,
-    "bm25_rank": 6,
+    "rrf": 0.02854,
+    "bm25_rank": 5,
     "dense_rank": 16,
     "dense_sim": 0.6422686576843262
    }
@@ -3318,5 +3318,5 @@
    "removed": 0
   }
  ],
- "seconds": 18.85
+ "seconds": 0.01
 }

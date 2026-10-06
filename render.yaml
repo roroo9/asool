@@ -5,7 +5,7 @@ services:
     runtime: python
     plan: starter         # always on during judging (owner decision, Oct 5)
     region: frankfurt
-    buildCommand: pip install uv && uv sync --frozen --no-dev && (./scripts/fetch_references.sh || echo "KFGQPC download failed: Quranpedia fallback in use")
+    buildCommand: pip install uv && uv sync --frozen --no-dev && (./scripts/fetch_references.sh || echo "KFGQPC download failed: Quranpedia fallback in use") && (uv run --no-dev python -m pipeline.quran_search || echo "Mushaf vectors not built: verse search uses word matching only")
     startCommand: uv run --no-dev uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     autoDeploy: true
