@@ -334,6 +334,7 @@ def _requirements(req: dict, res: dict, con: sqlite3.Connection) -> list[str]:
 def answers(runs: int, only: str | None, start_run: int = 0, human_only: bool = False) -> dict:
     path = RESULTS / "answers.json"
     old = json.loads(path.read_text()) if path.exists() else {"runs": {}}
+    old.setdefault("primary", str(start_run))  # the first run written to a fresh file
     con = sqlite3.connect(DB)
     con.row_factory = sqlite3.Row
     for run in range(start_run, start_run + runs):

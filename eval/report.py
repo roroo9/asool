@@ -73,6 +73,9 @@ def gold_stats() -> dict:
     return out
 
 
+PRIMARY = ["0"]  # run reported as the main result (set from answers.json)
+
+
 def review_counts() -> dict:
     from api.question_review import REVIEWS, _drafts
 
@@ -116,7 +119,7 @@ def _retrieval_metrics(rows: list[dict]) -> dict:
 
 def _answer_metrics(runs: dict, qs: dict, include) -> tuple[dict, list[dict]]:
     m: dict[str, dict] = {}
-    run0 = {i: s for i, s in runs.get("0", {}).items() if i in qs and include(qs[i])}
+    run0 = {i: s for i, s in runs.get(PRIMARY[0], {}).items() if i in qs and include(qs[i])}
 
     def rows(pred) -> list[dict]:
         return [s for i, s in run0.items() if pred(qs[i])]
@@ -230,10 +233,12 @@ def build() -> dict:
     official, failures, nat = [], [], None
     ap = RESULTS / "answers.json"
     if ap.exists():
-        runs = json.loads(ap.read_text())["runs"]
+        _ad = json.loads(ap.read_text())
+        runs = _ad["runs"]
+        PRIMARY[0] = _ad.get("primary", "0")
         am, failures = _answer_metrics(runs, qs, human)
         metrics |= am
-        for qid, s in runs.get("0", {}).items():
+        for qid, s in runs.get(PRIMARY[0], {}).items():
             q = qs.get(qid)
             if q and q["source"] == "official_package":
                 official.append(

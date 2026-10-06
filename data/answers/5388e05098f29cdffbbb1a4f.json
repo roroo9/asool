@@ -9,16 +9,17 @@
   "language": "ar",
   "quoted_verse": "",
   "asks_for_evidence_text": false,
-  "search_query_ar": "شرح حديث إذا التقى المسلمان بسيفيهما فالقاتل والمقتول في النار حرصه على قتل صاحبه",
+  "search_query_ar": "شرح حديث إذا التقى المسلمان بسيفيهما فالقاتل والمقتول في النار علة المقتول",
   "foundational": true,
-  "referral_topic": "concept",
-  "mushaf_query_ar": "جزاء قتل المؤمن والنية في المعصية",
+  "referral_topics": [
+   "concept"
+  ],
+  "mushaf_query_ar": "حرمة قتل المسلم وعقوبة العزم على المعصية",
   "key_terms_ar": [
    "النية",
-   "القتل",
-   "الوعيد"
+   "القتال"
   ],
-  "reason": "السؤال يستفسر عن علة وحكمة نبوية في مسألة شرعية متعلقة بمعنى حديث شريف واستحقاق العقوبة بالنية والعزم."
+  "reason": "السؤال يطلب شرح علة حكم نبوي متعلق بحالة القاتل والمقتول وأثر النية والحرص على القتل."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -76,18 +77,6 @@
     [
      225,
      229
-    ],
-    [
-     237,
-     240
-    ],
-    [
-     241,
-     247
-    ],
-    [
-     248,
-     254
     ]
    ],
    "pages": [
@@ -297,204 +286,7 @@
     "rrf": 0.03279,
     "bm25_rank": 1,
     "dense_rank": 1,
-    "dense_sim": 0.7808067202568054
-   }
-  },
-  {
-   "id": "riyad1956-c028",
-   "kind": "matn",
-   "author_role": "matn",
-   "author_label": "متن الإمام النووي",
-   "breadcrumb": [
-    "رياض الصالحين",
-    "باب التوبة"
-   ],
-   "text": "وعن أبى هريرة رضى الله عنه أنَّ رسول الله صلى الله عليه وسلم قال :\n« يضحكُ (١) اللَّهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمَّ يتوب الله على القاتل فيسلم فيستشهد »\nمتفق عليه .",
-   "highlights": [
-    [
-     111,
-     116
-    ],
-    [
-     146,
-     151
-    ],
-    [
-     156,
-     158
-    ],
-    [
-     169,
-     174
-    ],
-    [
-     190,
-     193
-    ],
-    [
-     194,
-     200
-    ]
-   ],
-   "pages": [
-    {
-     "id": "riyad1956-p030",
-     "printed": 30,
-     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 30"
-    }
-   ],
-   "blocks": [
-    {
-     "id": "riyad1956-p030-b05",
-     "page_id": "riyad1956-p030",
-     "type": "body",
-     "author_role": "matn",
-     "text": "وعن أبى هريرة رضى الله عنه أنَّ رسول الله صلى الله عليه وسلم قال :",
-     "bbox": [
-      434,
-      798,
-      1655,
-      899
-     ],
-     "rects": [
-      [
-       434,
-       798,
-       1655,
-       899
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p030-b06",
-     "page_id": "riyad1956-p030",
-     "type": "hadith",
-     "author_role": "matn",
-     "text": "« يضحكُ (١) اللَّهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمَّ يتوب الله على القاتل فيسلم فيستشهد »",
-     "bbox": [
-      417,
-      894,
-      1754,
-      1124
-     ],
-     "rects": [
-      [
-       417,
-       894,
-       1754,
-       1124
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p030-b07",
-     "page_id": "riyad1956-p030",
-     "type": "body",
-     "author_role": "matn",
-     "text": "متفق عليه .",
-     "bbox": [
-      454,
-      1009,
-      621,
-      1124
-     ],
-     "rects": [
-      [
-       454,
-       1009,
-       621,
-       1124
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "",
-     "attached_to": null
-    }
-   ],
-   "footnotes": [
-    {
-     "id": "riyad1956-p030-b22",
-     "page_id": "riyad1956-p030",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(١) يرضى بفعلهما",
-     "bbox": [
-      1395,
-      2255,
-      1612,
-      2322
-     ],
-     "rects": [
-      [
-       1395,
-       2255,
-       1612,
-       2322
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(١)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 156,
-       "page_id": "riyad1956-p030",
-       "marker": "(١)",
-       "anchor_block_id": "riyad1956-p030-b06",
-       "anchor_char_offset": 8,
-       "footnote_block_id": "riyad1956-p030-b22",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    }
-   ],
-   "quran": [],
-   "hadith": [
-    {
-     "id": "h023-riyad1956-p030-b05",
-     "narrator": "ابي هريره",
-     "takhrij_printed": "متفق عليه",
-     "grading_status": "in_sahihayn",
-     "grading": "في الصحيحين (متفق عليه)",
-     "grading_source": "تخريج الإمام النووي المطبوع",
-     "grading_source_url": null,
-     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%B6%D8%AD%D9%83%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B3%D8%A8%D8%AD%D8%A7%D9%86%D9%87%20%D9%88%D8%AA%D8%B9%D8%A7%D9%84%D9%89%20%D8%A5%D9%84%D9%89%20%D8%B1%D8%AC%D9%84%D9%8A%D9%86",
-     "block_ids": [
-      "riyad1956-p030-b05",
-      "riyad1956-p030-b06",
-      "riyad1956-p030-b07"
-     ]
-    }
-   ],
-   "commentary_on": null,
-   "min_confidence": 0.85,
-   "retrieval": {
-    "rrf": 0.03175,
-    "bm25_rank": 4,
-    "dense_rank": 2,
-    "dense_sim": 0.7077544927597046
+    "dense_sim": 0.778548538684845
    }
   },
   {
@@ -825,10 +617,421 @@
    "commentary_on": null,
    "min_confidence": 1.0,
    "retrieval": {
-    "rrf": 0.03175,
-    "bm25_rank": 3,
+    "rrf": 0.032,
+    "bm25_rank": 2,
     "dense_rank": 3,
-    "dense_sim": 0.6883323192596436
+    "dense_sim": 0.6828520894050598
+   }
+  },
+  {
+   "id": "riyad1956-c028",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب التوبة"
+   ],
+   "text": "وعن أبى هريرة رضى الله عنه أنَّ رسول الله صلى الله عليه وسلم قال :\n« يضحكُ (١) اللَّهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمَّ يتوب الله على القاتل فيسلم فيستشهد »\nمتفق عليه .",
+   "highlights": [
+    [
+     146,
+     151
+    ],
+    [
+     156,
+     158
+    ],
+    [
+     194,
+     200
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p030",
+     "printed": 30,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 30"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p030-b05",
+     "page_id": "riyad1956-p030",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى هريرة رضى الله عنه أنَّ رسول الله صلى الله عليه وسلم قال :",
+     "bbox": [
+      434,
+      798,
+      1655,
+      899
+     ],
+     "rects": [
+      [
+       434,
+       798,
+       1655,
+       899
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p030-b06",
+     "page_id": "riyad1956-p030",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« يضحكُ (١) اللَّهُ سبحانه وتعالى إلى رجلين يقتلُ أحدهما الآخرَ يدخلانِ الجنةَ يقاتل هذا فى سبيل الله فيقتل ثمَّ يتوب الله على القاتل فيسلم فيستشهد »",
+     "bbox": [
+      417,
+      894,
+      1754,
+      1124
+     ],
+     "rects": [
+      [
+       417,
+       894,
+       1754,
+       1124
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p030-b07",
+     "page_id": "riyad1956-p030",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه .",
+     "bbox": [
+      454,
+      1009,
+      621,
+      1124
+     ],
+     "rects": [
+      [
+       454,
+       1009,
+       621,
+       1124
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p030-b22",
+     "page_id": "riyad1956-p030",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(١) يرضى بفعلهما",
+     "bbox": [
+      1395,
+      2255,
+      1612,
+      2322
+     ],
+     "rects": [
+      [
+       1395,
+       2255,
+       1612,
+       2322
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 156,
+       "page_id": "riyad1956-p030",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p030-b06",
+       "anchor_char_offset": 8,
+       "footnote_block_id": "riyad1956-p030-b22",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h023-riyad1956-p030-b05",
+     "narrator": "ابي هريره",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%B6%D8%AD%D9%83%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B3%D8%A8%D8%AD%D8%A7%D9%86%D9%87%20%D9%88%D8%AA%D8%B9%D8%A7%D9%84%D9%89%20%D8%A5%D9%84%D9%89%20%D8%B1%D8%AC%D9%84%D9%8A%D9%86",
+     "block_ids": [
+      "riyad1956-p030-b05",
+      "riyad1956-p030-b06",
+      "riyad1956-p030-b07"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.032,
+    "bm25_rank": 3,
+    "dense_rank": 2,
+    "dense_sim": 0.7037046551704407
+   }
+  },
+  {
+   "id": "riyad1956-c045",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "وعن أنس رضى الله عنه قال : قال رسولُ الله صلى الله عليه وسلم\n« لا يتمنينَّ أحدكمُ الموتَ لضرٍّ أصابَهُ ، فإن كان لابدَّ (١) فاعلاً فليقُلْ : اللهمَّ أحينِي (٢) ما كانتِ الحياةُ خيْراً لى وتوفنِى إذا كانت الوفاةُ خيراً لى »\nمتفق عليه .",
+   "highlights": [
+    [
+     109,
+     112
+    ],
+    [
+     195,
+     198
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p038",
+     "printed": 38,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 38"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p038-b02",
+     "page_id": "riyad1956-p038",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أنس رضى الله عنه قال : قال رسولُ الله صلى الله عليه وسلم",
+     "bbox": [
+      751,
+      444,
+      1639,
+      542
+     ],
+     "rects": [
+      [
+       751,
+       444,
+       1639,
+       542
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p038-b03",
+     "page_id": "riyad1956-p038",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« لا يتمنينَّ أحدكمُ الموتَ لضرٍّ أصابَهُ ، فإن كان لابدَّ (١) فاعلاً فليقُلْ : اللهمَّ أحينِي (٢) ما كانتِ الحياةُ خيْراً لى وتوفنِى إذا كانت الوفاةُ خيراً لى »",
+     "bbox": [
+      389,
+      444,
+      1731,
+      768
+     ],
+     "rects": [
+      [
+       389,
+       444,
+       1731,
+       768
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p038-b04",
+     "page_id": "riyad1956-p038",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه .",
+     "bbox": [
+      585,
+      614,
+      765,
+      753
+     ],
+     "rects": [
+      [
+       585,
+       614,
+       765,
+       753
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p038-b09",
+     "page_id": "riyad1956-p038",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(١) لافراق، لامحالة",
+     "bbox": [
+      1343,
+      2353,
+      1683,
+      2441
+     ],
+     "rects": [
+      [
+       1343,
+       2353,
+       1683,
+       2441
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 231,
+       "page_id": "riyad1956-p038",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p038-b03",
+       "anchor_char_offset": 59,
+       "footnote_block_id": "riyad1956-p038-b09",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p038-b10",
+     "page_id": "riyad1956-p038",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٢) أدم لى الحياة بأن أوفق لمرضاتك وقد وقع ما أخبر به صلى الله عليه وسلم",
+     "bbox": [
+      406,
+      2353,
+      1730,
+      2524
+     ],
+     "rects": [
+      [
+       406,
+       2353,
+       1210,
+       2441
+      ],
+      [
+       1447,
+       2438,
+       1730,
+       2524
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.98,
+     "flags": [],
+     "footnote_marker": "(٢)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 232,
+       "page_id": "riyad1956-p038",
+       "marker": "(٢)",
+       "anchor_block_id": "riyad1956-p038-b03",
+       "anchor_char_offset": 95,
+       "footnote_block_id": "riyad1956-p038-b10",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h038-riyad1956-p038-b02",
+     "narrator": "انس",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%AA%D9%85%D9%86%D9%8A%D9%86%20%D8%A3%D8%AD%D8%AF%D9%83%D9%85%20%D8%A7%D9%84%D9%85%D9%88%D8%AA%20%D9%84%D8%B6%D8%B1%20%D8%A3%D8%B5%D8%A7%D8%A8%D9%87%20%D9%81%D8%A5%D9%86",
+     "block_ids": [
+      "riyad1956-p038-b02",
+      "riyad1956-p038-b03",
+      "riyad1956-p038-b04"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.02801,
+    "bm25_rank": 9,
+    "dense_rank": 14,
+    "dense_sim": 0.6410682797431946
    }
   },
   {
@@ -849,26 +1052,6 @@
     [
      112,
      116
-    ],
-    [
-     129,
-     133
-    ],
-    [
-     186,
-     189
-    ],
-    [
-     217,
-     221
-    ],
-    [
-     334,
-     337
-    ],
-    [
-     359,
-     363
     ],
     [
      562,
@@ -1336,323 +1519,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03021,
-    "bm25_rank": 2,
+    "rrf": 0.02797,
+    "bm25_rank": 12,
     "dense_rank": 11,
-    "dense_sim": 0.650313675403595
-   }
-  },
-  {
-   "id": "riyad1956-c051",
-   "kind": "matn",
-   "author_role": "matn",
-   "author_label": "متن الإمام النووي",
-   "breadcrumb": [
-    "رياض الصالحين",
-    "باب الصبر"
-   ],
-   "text": "وعن سُليمانَ بن صرد رضى الله عنه قال : كُنتُ جالساً مع النبىِّ صلى الله عليه وسلم ورجلانِ (٥) يستبان، وأحدهما قد احمرَّ وجهه ، وانتفختْ أوداجهُ (٦) .\nفقال رسول الله صلى الله عليه وسلم :\n« إنى لأعلمُ كلمةً لو قالها لذهبَ عنهُ ما يجدُ (٧) ، لو قال . أعوذُ بالله منَ الشيطانِ الرَّجيمِ (٨) ذهبَ عنهُ ما يجدُ »\n. فقالوا لهُ :",
-   "highlights": [],
-   "pages": [
-    {
-     "id": "riyad1956-p041",
-     "printed": 41,
-     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 41"
-    }
-   ],
-   "blocks": [
-    {
-     "id": "riyad1956-p041-b07",
-     "page_id": "riyad1956-p041",
-     "type": "body",
-     "author_role": "matn",
-     "text": "وعن سُليمانَ بن صرد رضى الله عنه قال : كُنتُ جالساً مع النبىِّ صلى الله عليه وسلم ورجلانِ (٥) يستبان، وأحدهما قد احمرَّ وجهه ، وانتفختْ أوداجهُ (٦) .\nفقال رسول الله صلى الله عليه وسلم :",
-     "bbox": [
-      414,
-      1369,
-      1751,
-      1702
-     ],
-     "rects": [
-      [
-       414,
-       1369,
-       866,
-       1505
-      ],
-      [
-       423,
-       1460,
-       1751,
-       1585
-      ],
-      [
-       1395,
-       1552,
-       1749,
-       1702
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 0.99,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p041-b08",
-     "page_id": "riyad1956-p041",
-     "type": "hadith",
-     "author_role": "matn",
-     "text": "« إنى لأعلمُ كلمةً لو قالها لذهبَ عنهُ ما يجدُ (٧) ، لو قال . أعوذُ بالله منَ الشيطانِ الرَّجيمِ (٨) ذهبَ عنهُ ما يجدُ »",
-     "bbox": [
-      414,
-      1369,
-      1751,
-      1771
-     ],
-     "rects": [
-      [
-       414,
-       1369,
-       1038,
-       1505
-      ],
-      [
-       423,
-       1460,
-       1751,
-       1585
-      ],
-      [
-       850,
-       1665,
-       1747,
-       1771
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 0.99,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p041-b09",
-     "page_id": "riyad1956-p041",
-     "type": "body",
-     "author_role": "matn",
-     "text": ". فقالوا لهُ :",
-     "bbox": [
-      455,
-      1665,
-      621,
-      1771
-     ],
-     "rects": [
-      [
-       455,
-       1665,
-       621,
-       1771
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    }
-   ],
-   "footnotes": [
-    {
-     "id": "riyad1956-p041-b16",
-     "page_id": "riyad1956-p041",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٥) يسب كل منهما صاحبه",
-     "bbox": [
-      1029,
-      2540,
-      1464,
-      2622
-     ],
-     "rects": [
-      [
-       1029,
-       2540,
-       1464,
-       2622
-      ]
-     ],
-     "bbox_source": "vlm",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(٥)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 270,
-       "page_id": "riyad1956-p041",
-       "marker": "(٥)",
-       "anchor_block_id": "riyad1956-p041-b07",
-       "anchor_char_offset": 90,
-       "footnote_block_id": "riyad1956-p041-b16",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p041-b17",
-     "page_id": "riyad1956-p041",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٦) عروق عنقه",
-     "bbox": [
-      708,
-      2540,
-      986,
-      2619
-     ],
-     "rects": [
-      [
-       708,
-       2540,
-       986,
-       2619
-      ]
-     ],
-     "bbox_source": "vlm",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(٦)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 271,
-       "page_id": "riyad1956-p041",
-       "marker": "(٦)",
-       "anchor_block_id": "riyad1956-p041-b07",
-       "anchor_char_offset": 144,
-       "footnote_block_id": "riyad1956-p041-b17",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p041-b18",
-     "page_id": "riyad1956-p041",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٧) شدة الغضب",
-     "bbox": [
-      399,
-      2540,
-      665,
-      2616
-     ],
-     "rects": [
-      [
-       399,
-       2540,
-       665,
-       2616
-      ]
-     ],
-     "bbox_source": "vlm",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(٧)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 272,
-       "page_id": "riyad1956-p041",
-       "marker": "(٧)",
-       "anchor_block_id": "riyad1956-p041-b08",
-       "anchor_char_offset": 47,
-       "footnote_block_id": "riyad1956-p041-b18",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p041-b19",
-     "page_id": "riyad1956-p041",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "(٨) أعتصم بالله من المبعد من رحمة الله",
-     "bbox": [
-      1044,
-      2616,
-      1593,
-      2699
-     ],
-     "rects": [
-      [
-       1044,
-       2616,
-       1593,
-       2699
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "(٨)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 273,
-       "page_id": "riyad1956-p041",
-       "marker": "(٨)",
-       "anchor_block_id": "riyad1956-p041-b08",
-       "anchor_char_offset": 97,
-       "footnote_block_id": "riyad1956-p041-b19",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    }
-   ],
-   "quran": [],
-   "hadith": [
-    {
-     "id": "h044-riyad1956-p041-b07",
-     "narrator": "سليمان بن صرد",
-     "takhrij_printed": null,
-     "grading_status": "hadeethenc",
-     "grading": "صحيح",
-     "grading_source": "موسوعة الأحاديث النبوية (HadeethEnc)",
-     "grading_source_url": "https://hadeethenc.com/ar/browse/hadith/3578",
-     "dorar_search_url": "https://dorar.net/hadith/search?q=%D8%A5%D9%86%D9%89%20%D9%84%D8%A3%D8%B9%D9%84%D9%85%20%D9%83%D9%84%D9%85%D8%A9%20%D9%84%D9%88%20%D9%82%D8%A7%D9%84%D9%87%D8%A7%20%D9%84%D8%B0%D9%87%D8%A8",
-     "block_ids": [
-      "riyad1956-p041-b07",
-      "riyad1956-p041-b08",
-      "riyad1956-p041-b09"
-     ]
-    }
-   ],
-   "commentary_on": null,
-   "min_confidence": 0.99,
-   "retrieval": {
-    "rrf": 0.02899,
-    "bm25_rank": 8,
-    "dense_rank": 10,
-    "dense_sim": 0.6510977149009705
+    "dense_sim": 0.6463565230369568
    }
   },
   {
@@ -1669,10 +1539,6 @@
     [
      83,
      85
-    ],
-    [
-     103,
-     106
     ],
     [
      113,
@@ -1693,10 +1559,6 @@
     [
      370,
      372
-    ],
-    [
-     427,
-     430
     ],
     [
      444,
@@ -2286,194 +2148,12 @@
     "dense_sim": null,
     "neighbor_of": "riyad1956-c009"
    }
-  },
-  {
-   "id": "riyad1956-c027",
-   "kind": "matn",
-   "author_role": "matn",
-   "author_label": "متن الإمام النووي",
-   "breadcrumb": [
-    "رياض الصالحين",
-    "باب التوبة"
-   ],
-   "text": "وعن ابن عباس وأنس بن مالك رضى الله عنهم أنَّ رسول الله صلى الله عليه وسلم قال:\n« لَوْ أنَّ لابنِ آدم وادياً منْ ذهب أحبَّ أنْ يكونَ له واديان ، ولنْ يملأَ فاه إلا التراب ويتوب اللَّهُ على منْ تابَ »\nمتفق عليه .",
-   "highlights": [
-    [
-     184,
-     187
-    ]
-   ],
-   "pages": [
-    {
-     "id": "riyad1956-p030",
-     "printed": 30,
-     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 30"
-    }
-   ],
-   "blocks": [
-    {
-     "id": "riyad1956-p030-b02",
-     "page_id": "riyad1956-p030",
-     "type": "body",
-     "author_role": "matn",
-     "text": "وعن ابن عباس وأنس بن مالك رضى الله عنهم أنَّ رسول الله صلى الله عليه وسلم قال:",
-     "bbox": [
-      427,
-      465,
-      1663,
-      688
-     ],
-     "rects": [
-      [
-       427,
-       465,
-       1663,
-       688
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p030-b03",
-     "page_id": "riyad1956-p030",
-     "type": "hadith",
-     "author_role": "matn",
-     "text": "« لَوْ أنَّ لابنِ آدم وادياً منْ ذهب أحبَّ أنْ يكونَ له واديان ، ولنْ يملأَ فاه إلا التراب ويتوب اللَّهُ على منْ تابَ »",
-     "bbox": [
-      430,
-      570,
-      1744,
-      779
-     ],
-     "rects": [
-      [
-       430,
-       570,
-       1522,
-       689
-      ],
-      [
-       1120,
-       696,
-       1744,
-       779
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 0.99,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p030-b04",
-     "page_id": "riyad1956-p030",
-     "type": "body",
-     "author_role": "matn",
-     "text": "متفق عليه .",
-     "bbox": [
-      870,
-      696,
-      1058,
-      779
-     ],
-     "rects": [
-      [
-       870,
-       696,
-       1058,
-       779
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    }
-   ],
-   "footnotes": [],
-   "quran": [],
-   "hadith": [
-    {
-     "id": "h022-riyad1956-p030-b02",
-     "narrator": "ابن عباس وانس بن مالك",
-     "takhrij_printed": "متفق عليه",
-     "grading_status": "in_sahihayn",
-     "grading": "في الصحيحين (متفق عليه)",
-     "grading_source": "تخريج الإمام النووي المطبوع",
-     "grading_source_url": null,
-     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%84%D8%A7%D8%A8%D9%86%20%D8%A2%D8%AF%D9%85%20%D9%88%D8%A7%D8%AF%D9%8A%D8%A7%20%D9%85%D9%86%20%D8%B0%D9%87%D8%A8%20%D8%A3%D8%AD%D8%A8",
-     "block_ids": [
-      "riyad1956-p030-b02",
-      "riyad1956-p030-b03",
-      "riyad1956-p030-b04"
-     ]
-    }
-   ],
-   "commentary_on": null,
-   "min_confidence": 0.85,
-   "retrieval": {
-    "rrf": null,
-    "bm25_rank": null,
-    "dense_rank": null,
-    "dense_sim": null,
-    "neighbor_of": "riyad1956-c028"
-   }
   }
  ],
  "ai_notice": "أداة بحث مدعومة بالذكاء الاصطناعي؛ نصوص المصدر منقولة حرفيًا من الكتاب ومتحقَّق منها، والإيضاح مولَّد آليًا.",
  "cached": false,
  "external": {
   "items": {
-   "Q1": {
-    "kind": "quran",
-    "surah": 17,
-    "surah_name": "الإِسۡرَاءِ",
-    "ayah": 33,
-    "text": "وَلَا تَقۡتُلُواْ ٱلنَّفۡسَ ٱلَّتِي حَرَّمَ ٱللَّهُ إِلَّا بِٱلۡحَقِّۗ وَمَن قُتِلَ مَظۡلُومࣰا فَقَدۡ جَعَلۡنَا لِوَلِيِّهِۦ سُلۡطَٰنࣰا فَلَا يُسۡرِف فِّي ٱلۡقَتۡلِۖ إِنَّهُۥ كَانَ مَنصُورࣰا ۝٣٣",
-    "tafsir": {
-     "text": "ولا تقتلوا النفس التي حرم الله قَتْلها إلا بالحق الشرعي كالقصاص أو رجم الزاني المحصن أو قتل المرتد. ومن قُتِل بغير حق شرعي فقد جعلنا لولي أمره مِن وارث أو حاكم حجة في طلب قَتْل قاتله أو الدية، ولا يصح لولي أمر المقتول أن يجاوز حدَّ الله في القصاص كأن يقتل بالواحد اثنين أو جماعة، أو يُمَثِّل بالقاتل، إن الله معين وليَّ المقتول على القاتل حتى يتمكن مِن قَتْله قصاصًا.",
-     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-     "url": "https://quranenc.com/ar/browse/arabic_moyassar/17#33"
-    },
-    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-    "url": "https://quranpedia.net/surah/17/33"
-   },
-   "Q2": {
-    "kind": "quran",
-    "surah": 4,
-    "surah_name": "النِّسَاءِ",
-    "ayah": 92,
-    "text": "وَمَا كَانَ لِمُؤۡمِنٍ أَن يَقۡتُلَ مُؤۡمِنًا إِلَّا خَطَـࣰٔاۚ وَمَن قَتَلَ مُؤۡمِنًا خَطَـࣰٔا فَتَحۡرِيرُ رَقَبَةࣲ مُّؤۡمِنَةࣲ وَدِيَةࣱ مُّسَلَّمَةٌ إِلَىٰٓ أَهۡلِهِۦٓ إِلَّآ أَن يَصَّدَّقُواْۚ فَإِن كَانَ مِن قَوۡمٍ عَدُوࣲّ لَّكُمۡ وَهُوَ مُؤۡمِنࣱ فَتَحۡرِيرُ رَقَبَةࣲ مُّؤۡمِنَةࣲۖ وَإِن كَانَ مِن قَوۡمِۭ بَيۡنَكُمۡ وَبَيۡنَهُم مِّيثَٰقࣱ فَدِيَةࣱ مُّسَلَّمَةٌ إِلَىٰٓ أَهۡلِهِۦ وَتَحۡرِيرُ رَقَبَةࣲ مُّؤۡمِنَةࣲۖ فَمَن لَّمۡ يَجِدۡ فَصِيَامُ شَهۡرَيۡنِ مُتَتَابِعَيۡنِ تَوۡبَةࣰ مِّنَ ٱللَّهِۗ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمࣰا ۝٩٢",
-    "tafsir": {
-     "text": "ولا يحق لمؤمن الاعتداء على أخيه المؤمن وقتله بغير حق، إلا أن يقع منه ذلك على وجه الخطأ الذي لا عمد فيه، ومن وقع منه ذلك الخطأ فعليه عتق رقبة مؤمنة، وتسليم دية مقدرة إلى أوليائه، إلا أن يتصدقوا بها عليه ويعفوا عنه. فإن كان المقتول من قوم كفار أعداء للمؤمنين، وهو مؤمن بالله تعالى، وبما أنزل من الحق على رسوله محمد صلى الله عليه وسلم، فعلى قاتله عتق رقبة مؤمنة، وإن كان من قوم بينكم وبينهم عهد وميثاق، فعلى قاتله دية تسلم إلى أوليائه وعتق رقبة مؤمنة، فمن لم يجد القدرة على عتق رقبة مؤمنة، فعليه صيام شهرين متتابعين; ليتوب الله تعالى عليه. وكان الله تعالى عليما بحقيقة شأن عباده، حكيمًا فيما شرعه لهم.",
-     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-     "url": "https://quranenc.com/ar/browse/arabic_moyassar/4#92"
-    },
-    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-    "url": "https://quranpedia.net/surah/4/92"
-   },
-   "Q3": {
-    "kind": "quran",
-    "surah": 5,
-    "surah_name": "المَائـِدَةِ",
-    "ayah": 32,
-    "text": "مِنۡ أَجۡلِ ذَٰلِكَ كَتَبۡنَا عَلَىٰ بَنِيٓ إِسۡرَٰٓءِيلَ أَنَّهُۥ مَن قَتَلَ نَفۡسَۢا بِغَيۡرِ نَفۡسٍ أَوۡ فَسَادࣲ فِي ٱلۡأَرۡضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعࣰا وَمَنۡ أَحۡيَاهَا فَكَأَنَّمَآ أَحۡيَا ٱلنَّاسَ جَمِيعࣰاۚ وَلَقَدۡ جَآءَتۡهُمۡ رُسُلُنَا بِٱلۡبَيِّنَٰتِ ثُمَّ إِنَّ كَثِيرࣰا مِّنۡهُم بَعۡدَ ذَٰلِكَ فِي ٱلۡأَرۡضِ لَمُسۡرِفُونَ ۝٣٢",
-    "tafsir": {
-     "text": "بسبب جناية القتل هذه شَرَعْنا لبني اسرائيل أنه من قتل نفسا بغير سبب من قصاص، أو فساد في الأرض بأي نوع من أنواع الفساد، الموجب للقتل كالشرك والمحاربة فكأنما قتل الناس جميعًا فيما استوجب من عظيم العقوبة من الله، وأنه من امتنع عن قَتْل نفس حرَّمها الله فكأنما أحيا الناس جميعًا; فالحفاظ على حرمة إنسان واحد حفاظ على حرمات الناس كلهم. ولقد أتت بني إسرائيل رسلُنا بالحجج والدلائل على صحة ما دعَوهم إليه من الإيمان بربهم، وأداء ما فُرِضَ عليهم، ثم إن كثيرًا منهم بعد مجيء الرسل إليهم لمتجاوزون حدود الله بارتكاب محارم الله وترك أوامره.",
-     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
-     "url": "https://quranenc.com/ar/browse/arabic_moyassar/5#32"
-    },
-    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
-    "url": "https://quranpedia.net/surah/5/32"
-   },
    "T1": {
     "kind": "term",
     "term": "النية",
@@ -2502,21 +2182,21 @@
  "answer": {
   "source_points": [
    {
-    "text": "أوضح النبي صلى الله عليه وسلم أن سبب دخول المقتول النار هو إرادته وعزمه على قتل خصمه.",
+    "text": "أوضح النبي صلى الله عليه وسلم أن المقتول يستحق النار لأنه كان يسعى جادا لقتل خصمه.",
     "passage": "P1",
     "quote": "إنهُ كانَ حريصاً على قَتْلِ صاحبهِ",
     "verified": true,
     "passage_id": "riyad1956-c009"
    },
    {
-    "text": "وفي تعليق المحقق، أكد أن هذا المصير للمقتول كان بسبب إرادته لذلك.",
+    "text": "وفي تعليق المحقق، بين أن سبب ذلك يعود إلى حرص المقتول على فعل القتل.",
     "passage": "P1",
     "quote": "لحرصه",
     "verified": true,
     "passage_id": "riyad1956-c009"
    }
   ],
-  "explanation": "عندما سُئل النبي صلى الله عليه وسلم عن سبب دخول المقتول النار رغم أنه هو الضحية في القتال بين المسلمين، بيّن أن السبب يرجع إلى نيته وإرادته [P1]. فقد كان المقتول عازماً ومصمماً على قتل صاحبه، وفي تعليق المحقق تأكيد على أن هذا الجزاء وقع عليه لحرصه على ارتكاب القتل [P1].",
+  "explanation": "إذا تقاتل مسلمان بسيفيهما فإن القاتل والمقتول كلاهما في النار [P1]. والسبب الذي يجعل المقتول في النار رغم أنه هو من فقد حياته، يعود إلى نيته وحرصه الشديد على قتل صاحبه، فكانت إرادته للقتل سببا في استحقاقه للعقوبة [P1].",
   "disagreement_noted": false
  },
  "verification": {
@@ -2528,26 +2208,23 @@
   {
    "stage": "classify",
    "level": "B",
-   "reason": "السؤال يستفسر عن علة وحكمة نبوية في مسألة شرعية متعلقة بمعنى حديث شريف واستحقاق العقوبة بالنية والعزم."
+   "reason": "السؤال يطلب شرح علة حكم نبوي متعلق بحالة القاتل والمقتول وأثر النية والحرص على القتل."
   },
   {
    "stage": "retrieve",
-   "n": 8,
-   "neighbors": 3,
+   "n": 7,
+   "neighbors": 2,
    "dense": true
   },
   {
    "stage": "approved_sources",
    "items": [
-    "Q1",
-    "Q2",
-    "Q3",
     "T1"
    ]
   },
   {
    "stage": "support_gate",
-   "best_sim": 0.781,
+   "best_sim": 0.779,
    "threshold": 0.55
   },
   {
@@ -2561,5 +2238,5 @@
    "removed": 0
   }
  ],
- "seconds": 21.0
+ "seconds": 17.18
 }

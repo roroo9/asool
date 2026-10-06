@@ -9,18 +9,18 @@
   "language": "ar",
   "quoted_verse": "",
   "asks_for_evidence_text": false,
-  "search_query_ar": "أجر من حبسه العذر عن الغزو والجهاد بالنية الصادقة",
+  "search_query_ar": "أجر من حبسه العذر عن الغزو والجهاد بالنية",
   "foundational": true,
   "referral_topics": [
    "concept"
   ],
-  "mushaf_query_ar": "لا يستوي القاعدون من المؤمنين غير أولي الضرر والمجاهدون",
+  "mushaf_query_ar": "ليس على الضعفاء ولا على المرضى حرج",
   "key_terms_ar": [
    "النية",
    "الجهاد",
    "العذر"
   ],
-  "reason": "السؤال يتناول مسألة شرعية ثابتة بالأحاديث الصحيحة حول نيل المعذور أجر الغازين بالنية الصالحة."
+  "reason": "السؤال يتناول مسألة إيمانية وأخلاقية عامة مستندة إلى نصوص صريحة في فضل النية الصالحة للمعذور."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -212,7 +212,7 @@
     "rrf": 0.03252,
     "bm25_rank": 1,
     "dense_rank": 2,
-    "dense_sim": 0.6998238563537598
+    "dense_sim": 0.7031275629997253
    }
   },
   {
@@ -627,7 +627,7 @@
     "rrf": 0.03252,
     "bm25_rank": 2,
     "dense_rank": 1,
-    "dense_sim": 0.7704778909683228
+    "dense_sim": 0.7749614715576172
    }
   },
   {
@@ -788,333 +788,7 @@
     "rrf": 0.03077,
     "bm25_rank": 5,
     "dense_rank": 5,
-    "dense_sim": 0.6757047176361084
-   }
-  },
-  {
-   "id": "riyad1956-c008",
-   "kind": "matn",
-   "author_role": "matn",
-   "author_label": "متن الإمام النووي",
-   "breadcrumb": [
-    "رياض الصالحين",
-    "باب الإخلاص وإحضار النية في جميع الأعمال"
-   ],
-   "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :\n« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »\nمتفق عليه .",
-   "highlights": [
-    [
-     95,
-     97
-    ],
-    [
-     172,
-     174
-    ],
-    [
-     227,
-     231
-    ],
-    [
-     275,
-     277
-    ]
-   ],
-   "pages": [
-    {
-     "id": "riyad1956-p015",
-     "printed": 15,
-     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 15"
-    }
-   ],
-   "blocks": [
-    {
-     "id": "riyad1956-p015-b05",
-     "page_id": "riyad1956-p015",
-     "type": "body",
-     "author_role": "matn",
-     "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :",
-     "bbox": [
-      464,
-      852,
-      1752,
-      1170
-     ],
-     "rects": [
-      [
-       465,
-       852,
-       1667,
-       959
-      ],
-      [
-       464,
-       957,
-       1750,
-       1065
-      ],
-      [
-       677,
-       1069,
-       1752,
-       1170
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p015-b06",
-     "page_id": "riyad1956-p015",
-     "type": "hadith",
-     "author_role": "matn",
-     "text": "« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »",
-     "bbox": [
-      461,
-      1069,
-      1748,
-      1274
-     ],
-     "rects": [
-      [
-       461,
-       1069,
-       654,
-       1170
-      ],
-      [
-       1003,
-       1170,
-       1748,
-       1274
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    },
-    {
-     "id": "riyad1956-p015-b07",
-     "page_id": "riyad1956-p015",
-     "type": "body",
-     "author_role": "matn",
-     "text": "متفق عليه .",
-     "bbox": [
-      806,
-      1170,
-      984,
-      1274
-     ],
-     "rects": [
-      [
-       806,
-       1170,
-       984,
-       1274
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "",
-     "attached_to": null
-    }
-   ],
-   "footnotes": [
-    {
-     "id": "riyad1956-p015-b15",
-     "page_id": "riyad1956-p015",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "إقداما على العدو بروية",
-     "bbox": [
-      449,
-      2364,
-      1745,
-      2522
-     ],
-     "rects": [
-      [
-       449,
-       2364,
-       1745,
-       2522
-      ]
-     ],
-     "bbox_source": "vlm+ocr_snap",
-     "confidence": 0.85,
-     "flags": [
-      "position from the vision model only (OCR could not confirm)"
-     ],
-     "footnote_marker": "(٣)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 26,
-       "page_id": "riyad1956-p015",
-       "marker": "(٣)",
-       "anchor_block_id": "riyad1956-p015-b05",
-       "anchor_char_offset": 123,
-       "footnote_block_id": "riyad1956-p015-b15",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p015-b16",
-     "page_id": "riyad1956-p015",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "أنفة وغيرة ومحاماة عن عشيرته",
-     "bbox": [
-      966,
-      2443,
-      1423,
-      2518
-     ],
-     "rects": [
-      [
-       966,
-       2443,
-       1423,
-       2518
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "(٤)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 27,
-       "page_id": "riyad1956-p015",
-       "marker": "(٤)",
-       "anchor_block_id": "riyad1956-p015-b05",
-       "anchor_char_offset": 141,
-       "footnote_block_id": "riyad1956-p015-b16",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p015-b17",
-     "page_id": "riyad1956-p015",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "يرى الناس قتاله أو يسمع الناس",
-     "bbox": [
-      451,
-      2443,
-      1738,
-      2611
-     ],
-     "rects": [
-      [
-       451,
-       2443,
-       742,
-       2518
-      ],
-      [
-       1656,
-       2524,
-       1738,
-       2611
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "(٥)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 28,
-       "page_id": "riyad1956-p015",
-       "marker": "(٥)",
-       "anchor_block_id": "riyad1956-p015-b05",
-       "anchor_char_offset": 159,
-       "footnote_block_id": "riyad1956-p015-b17",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    },
-    {
-     "id": "riyad1956-p015-b18",
-     "page_id": "riyad1956-p015",
-     "type": "footnote",
-     "author_role": "editor",
-     "text": "دين الإسلام",
-     "bbox": [
-      1328,
-      2524,
-      1503,
-      2611
-     ],
-     "rects": [
-      [
-       1328,
-       2524,
-       1503,
-       2611
-      ]
-     ],
-     "bbox_source": "fusion",
-     "confidence": 1.0,
-     "flags": [],
-     "footnote_marker": "(٦)",
-     "attached_to": null,
-     "attached_text": [],
-     "marker_links": [
-      {
-       "id": 29,
-       "page_id": "riyad1956-p015",
-       "marker": "(٦)",
-       "anchor_block_id": "riyad1956-p015-b06",
-       "anchor_char_offset": 32,
-       "footnote_block_id": "riyad1956-p015-b18",
-       "confidence": 1.0,
-       "method": "marker_exact"
-      }
-     ]
-    }
-   ],
-   "quran": [],
-   "hadith": [
-    {
-     "id": "h007-riyad1956-p015-b05",
-     "narrator": "ابي موسي عبد الله بن قيس الاشعري",
-     "takhrij_printed": "متفق عليه",
-     "grading_status": "in_sahihayn",
-     "grading": "في الصحيحين (متفق عليه)",
-     "grading_source": "تخريج الإمام النووي المطبوع",
-     "grading_source_url": null,
-     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%82%D8%A7%D8%AA%D9%84%20%D9%84%D8%AA%D9%83%D9%88%D9%86%20%D9%83%D9%84%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%87%D9%89%20%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D8%A7",
-     "block_ids": [
-      "riyad1956-p015-b05",
-      "riyad1956-p015-b06",
-      "riyad1956-p015-b07"
-     ]
-    }
-   ],
-   "commentary_on": null,
-   "min_confidence": 1.0,
-   "retrieval": {
-    "rrf": 0.02976,
-    "bm25_rank": 12,
-    "dense_rank": 3,
-    "dense_sim": 0.699023425579071
+    "dense_sim": 0.6819905638694763
    }
   },
   {
@@ -4494,10 +4168,336 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.02951,
+    "rrf": 0.02971,
     "bm25_rank": 4,
-    "dense_rank": 12,
-    "dense_sim": 0.6625477075576782
+    "dense_rank": 11,
+    "dense_sim": 0.6661003232002258
+   }
+  },
+  {
+   "id": "riyad1956-c008",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الإخلاص وإحضار النية في جميع الأعمال"
+   ],
+   "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :\n« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »\nمتفق عليه .",
+   "highlights": [
+    [
+     95,
+     97
+    ],
+    [
+     172,
+     174
+    ],
+    [
+     227,
+     231
+    ],
+    [
+     275,
+     277
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p015",
+     "printed": 15,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 15"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p015-b05",
+     "page_id": "riyad1956-p015",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبى موسى عبد الله بن قيسٍ الأشعرىِّ رضى الله عنه قال : سُئلَ رسولُ الله صلى الله عليه وسلم عن الرَّجلِ يقاتلُ شجاعةً ، (٣) ويقاتلُ حميةً (٤) ويقاتلُ رياءً (٥) أىُّ ذلك فى سَبيلِ الله ؟ فقال رسول الله صلى الله عليه وسلم :",
+     "bbox": [
+      464,
+      852,
+      1752,
+      1170
+     ],
+     "rects": [
+      [
+       465,
+       852,
+       1667,
+       959
+      ],
+      [
+       464,
+       957,
+       1750,
+       1065
+      ],
+      [
+       677,
+       1069,
+       1752,
+       1170
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p015-b06",
+     "page_id": "riyad1956-p015",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« مَنْ قاتلَ لتكونَ كلمةُ اللهِ (٦) هى العليا فهو فى سبيلِ الله »",
+     "bbox": [
+      461,
+      1069,
+      1748,
+      1274
+     ],
+     "rects": [
+      [
+       461,
+       1069,
+       654,
+       1170
+      ],
+      [
+       1003,
+       1170,
+       1748,
+       1274
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p015-b07",
+     "page_id": "riyad1956-p015",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه .",
+     "bbox": [
+      806,
+      1170,
+      984,
+      1274
+     ],
+     "rects": [
+      [
+       806,
+       1170,
+       984,
+       1274
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p015-b15",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "إقداما على العدو بروية",
+     "bbox": [
+      449,
+      2364,
+      1745,
+      2522
+     ],
+     "rects": [
+      [
+       449,
+       2364,
+       1745,
+       2522
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٣)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 26,
+       "page_id": "riyad1956-p015",
+       "marker": "(٣)",
+       "anchor_block_id": "riyad1956-p015-b05",
+       "anchor_char_offset": 123,
+       "footnote_block_id": "riyad1956-p015-b15",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b16",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "أنفة وغيرة ومحاماة عن عشيرته",
+     "bbox": [
+      966,
+      2443,
+      1423,
+      2518
+     ],
+     "rects": [
+      [
+       966,
+       2443,
+       1423,
+       2518
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٤)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 27,
+       "page_id": "riyad1956-p015",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p015-b05",
+       "anchor_char_offset": 141,
+       "footnote_block_id": "riyad1956-p015-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b17",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "يرى الناس قتاله أو يسمع الناس",
+     "bbox": [
+      451,
+      2443,
+      1738,
+      2611
+     ],
+     "rects": [
+      [
+       451,
+       2443,
+       742,
+       2518
+      ],
+      [
+       1656,
+       2524,
+       1738,
+       2611
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٥)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 28,
+       "page_id": "riyad1956-p015",
+       "marker": "(٥)",
+       "anchor_block_id": "riyad1956-p015-b05",
+       "anchor_char_offset": 159,
+       "footnote_block_id": "riyad1956-p015-b17",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p015-b18",
+     "page_id": "riyad1956-p015",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "دين الإسلام",
+     "bbox": [
+      1328,
+      2524,
+      1503,
+      2611
+     ],
+     "rects": [
+      [
+       1328,
+       2524,
+       1503,
+       2611
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٦)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 29,
+       "page_id": "riyad1956-p015",
+       "marker": "(٦)",
+       "anchor_block_id": "riyad1956-p015-b06",
+       "anchor_char_offset": 32,
+       "footnote_block_id": "riyad1956-p015-b18",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h007-riyad1956-p015-b05",
+     "narrator": "ابي موسي عبد الله بن قيس الاشعري",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%82%D8%A7%D8%AA%D9%84%20%D9%84%D8%AA%D9%83%D9%88%D9%86%20%D9%83%D9%84%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%87%D9%89%20%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D8%A7",
+     "block_ids": [
+      "riyad1956-p015-b05",
+      "riyad1956-p015-b06",
+      "riyad1956-p015-b07"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 1.0,
+   "retrieval": {
+    "rrf": 0.02951,
+    "bm25_rank": 12,
+    "dense_rank": 4,
+    "dense_sim": 0.7006531953811646
    }
   },
   {
@@ -5062,35 +5062,35 @@
  "answer": {
   "source_points": [
    {
-    "text": "أخبر النبي صلى الله عليه وسلم أن هناك رجالا بقوا في المدينة منعهم المرض من الغزو، ومع ذلك فهم مع الغازين في مسيرهم.",
+    "text": "أخبر النبي صلى الله عليه وسلم أن هناك رجالا بالمدينة منعهم المرض من الخروج، ومع ذلك فهم مع الغزاة في كل مسير ووادٍ.",
     "passage": "P2",
     "quote": "« إنَّ بالمدينةِ لرجالاً ما سرتمْ مسيراً ، ولا قطعتمْ وادياً إلا كانوا معكم حبسهمُ المرضُ »",
     "verified": true,
     "passage_id": "riyad1956-c004"
    },
    {
-    "text": "وفي تعليق المحقق، بيّن أن معنى المعية هنا هو المشاركة في الثواب.",
-    "passage": "P2",
-    "quote": "في الأجر وادراك الثواب",
-    "verified": true,
-    "passage_id": "riyad1956-c004"
-   },
-   {
-    "text": "وقد صرحت رواية أخرى بأن هؤلاء المعذورين يشاركون الغازين في الأجر.",
+    "text": "وفي رواية أخرى صرح النبي صلى الله عليه وسلم بأنهم يشاركون الغازين في الأجر.",
     "passage": "P2",
     "quote": "« إلا شركوكم في الأجرِ »",
     "verified": true,
     "passage_id": "riyad1956-c004"
    },
    {
-    "text": "وفي حديث آخر، أكد النبي صلى الله عليه وسلم أن من منعهم العذر من الخروج هم مع الغازين في كل طريق يسلكونه.",
+    "text": "وفي حديث أنس رضي الله عنه بين النبي صلى الله عليه وسلم أن من حبسهم العذر هم مع الغزاة في كل شعب ووادٍ.",
     "passage": "P2",
     "quote": "« إنَّ أقواماً خلفنا بالمدينة ما سلكنا شعباً ولا وادياً إلا وهمْ معنا ، حبسهمُ العذرُ »",
     "verified": true,
     "passage_id": "riyad1956-c004"
+   },
+   {
+    "text": "وفي تعليق المحقق، فسر معنى كونهم مع الغزاة بأنهم يشاركونهم في الأجر والثواب.",
+    "passage": "P2",
+    "quote": "في الأجر وادراك الثواب",
+    "verified": true,
+    "passage_id": "riyad1956-c004"
    }
   ],
-  "explanation": "تؤكد النصوص المذكورة أن من منعه العذر كالمرض عن الخروج للغزو فإنه يشارك الغازين في أجرهم [P2]. وقد بينت الأحاديث أن هؤلاء المعذورين حاضرون مع الغازين في كل مسير يقطعونه، وفي تعليق المحقق أنهم شركاء لهم في إدراك الثواب [P2].",
+  "explanation": "نعم، يشارك من حبسه العذر عن الغزو في أجر الغازين. فقد بينت النصوص أن من تخلف عن الجهاد بسبب المرض أو أي عذر آخر، فإنه يكون مع الغزاة في مسيرهم ويشاركهم في الأجر والثواب بفضل نيته الصادقة [P2].",
   "disagreement_noted": false
  },
  "verification": {
@@ -5102,7 +5102,7 @@
   {
    "stage": "classify",
    "level": "A",
-   "reason": "السؤال يتناول مسألة شرعية ثابتة بالأحاديث الصحيحة حول نيل المعذور أجر الغازين بالنية الصالحة."
+   "reason": "السؤال يتناول مسألة إيمانية وأخلاقية عامة مستندة إلى نصوص صريحة في فضل النية الصالحة للمعذور."
   },
   {
    "stage": "retrieve",
@@ -5119,7 +5119,7 @@
   },
   {
    "stage": "support_gate",
-   "best_sim": 0.77,
+   "best_sim": 0.775,
    "threshold": 0.55
   },
   {
@@ -5133,5 +5133,5 @@
    "removed": 0
   }
  ],
- "seconds": 18.09
+ "seconds": 16.89
 }

@@ -11,13 +11,16 @@
   "asks_for_evidence_text": false,
   "search_query_ar": "عدد ركعات صلاة التراويح قيام رمضان واختلاف الفقهاء",
   "foundational": false,
-  "referral_topic": "fiqh",
+  "referral_topics": [
+   "fiqh"
+  ],
   "mushaf_query_ar": "",
   "key_terms_ar": [
    "التراويح",
+   "قيام الليل",
    "الصلاة"
   ],
-  "reason": "مسألة فقهية فرعية فيها سعة وخلاف مشهور بين الفقهاء في عدد الركعات المستحب."
+  "reason": "مسألة فقهية فرعية فيها تفصيل واختلاف مشهور بين الفقهاء في عدد الركعات المستحب."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -4876,7 +4879,7 @@
   {
    "stage": "classify",
    "level": "C",
-   "reason": "مسألة فقهية فرعية فيها سعة وخلاف مشهور بين الفقهاء في عدد الركعات المستحب."
+   "reason": "مسألة فقهية فرعية فيها تفصيل واختلاف مشهور بين الفقهاء في عدد الركعات المستحب."
   },
   {
    "stage": "retrieve",
@@ -4895,5 +4898,5 @@
    "supported": false
   }
  ],
- "seconds": 10.96
+ "seconds": 12.36
 }

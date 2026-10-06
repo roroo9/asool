@@ -9,15 +9,17 @@
   "language": "ar",
   "quoted_verse": "",
   "asks_for_evidence_text": false,
-  "search_query_ar": "قسمة التركة والميراث بين الورثة الشرعيين والزوجة والأبناء",
+  "search_query_ar": "قسمة التركة وتوزيع الميراث بين الورثة الشرعيين",
   "foundational": false,
-  "referral_topic": "fiqh",
+  "referral_topics": [
+   "fiqh"
+  ],
   "mushaf_query_ar": "",
   "key_terms_ar": [
    "الميراث",
    "التركة"
   ],
-  "reason": "السؤال نازلة شخصية واقعية تتعلق بقسمة تركة محددة بين ورثة معينين تحتاج لحساب فرائض ومفتٍ مختص."
+  "reason": "السؤال نازلة شخصية واقعية تتعلق بقسمة ميراث وتتطلب فتوى من جهة شرعية مختصة."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -84,10 +86,10 @@
    "commentary_on": "riyad1956-c049",
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03227,
-    "bm25_rank": 1,
-    "dense_rank": 3,
-    "dense_sim": 0.5823368430137634
+    "rrf": 0.03175,
+    "bm25_rank": 2,
+    "dense_rank": 4,
+    "dense_sim": 0.5722599029541016
    }
   },
   {
@@ -410,10 +412,10 @@
    "commentary_on": null,
    "min_confidence": 0.99,
    "retrieval": {
-    "rrf": 0.02791,
-    "bm25_rank": 7,
-    "dense_rank": 17,
-    "dense_sim": 0.5441763401031494
+    "rrf": 0.02904,
+    "bm25_rank": 6,
+    "dense_rank": 12,
+    "dense_sim": 0.5482102632522583
    }
   },
   {
@@ -675,10 +677,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.02767,
-    "bm25_rank": 4,
-    "dense_rank": 23,
-    "dense_sim": 0.5385913252830505
+    "rrf": 0.02807,
+    "bm25_rank": 3,
+    "dense_rank": 22,
+    "dense_sim": 0.5362784266471863
    }
   },
   {
@@ -878,10 +880,10 @@
    "commentary_on": null,
    "min_confidence": 1.0,
    "retrieval": {
-    "rrf": 0.02686,
-    "bm25_rank": 13,
+    "rrf": 0.02705,
+    "bm25_rank": 12,
     "dense_rank": 16,
-    "dense_sim": 0.5447443723678589
+    "dense_sim": 0.5440163612365723
    }
   },
   {
@@ -1345,10 +1347,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.0262,
+    "rrf": 0.02647,
     "bm25_rank": 8,
-    "dense_rank": 27,
-    "dense_sim": 0.5351119041442871
+    "dense_rank": 25,
+    "dense_sim": 0.5348725318908691
    }
   },
   {
@@ -2332,7 +2334,7 @@
   {
    "stage": "classify",
    "level": "D",
-   "reason": "السؤال نازلة شخصية واقعية تتعلق بقسمة تركة محددة بين ورثة معينين تحتاج لحساب فرائض ومفتٍ مختص."
+   "reason": "السؤال نازلة شخصية واقعية تتعلق بقسمة ميراث وتتطلب فتوى من جهة شرعية مختصة."
   },
   {
    "stage": "retrieve",
@@ -2341,5 +2343,5 @@
    "dense": true
   }
  ],
- "seconds": 3.36
+ "seconds": 3.09
 }

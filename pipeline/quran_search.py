@@ -43,11 +43,13 @@ def build() -> int:
 
 @lru_cache(maxsize=1)
 def _vectors() -> tuple[np.ndarray, list[tuple[int, int]]] | None:
-    p = INDEX / "quran.npy"
-    if not p.exists():
+    # quran16.npy: the same vectors at half precision (38 MB; identical top-10 rankings,
+    # checked), shipped as a GitHub release asset for deployment.
+    p = next((INDEX / n for n in ("quran.npy", "quran16.npy") if (INDEX / n).exists()), None)
+    if p is None:
         return None
     ids = [tuple(x) for x in json.loads((INDEX / "quran_ids.json").read_text())]
-    return np.load(p), ids
+    return np.load(p).astype(np.float32), ids
 
 
 @lru_cache(maxsize=1)
