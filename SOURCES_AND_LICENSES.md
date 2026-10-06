@@ -35,6 +35,9 @@ Shamela: used only as an independent text cross-check during gold review (differ
 | Shamela (shamela.ws), book 2348 «رياض الصالحين» ت. ماهر الفحل، دار ابن كثير 1428هـ (the editor made it free) | Text fetched for review only (pages 10–90, 1 req/s), not redistributed | Independent text cross-check during gold review |
 | dorar.net hadith search API (dorar.net/article/389) | Official public API | Hadith grading for non-Sahihayn hadiths. Blocked from our machine on Oct 4 (Cloudflare); see CLAUDE.md §12.D |
 | HadeethEnc API (hadeethenc.com/api/v1) | Official public API | Second hadith reference (attribution + grade) |
+| QuranEnc API (quranenc.com/api/v1), «التفسير الميسر» (King Fahd Complex), key `arabic_moyassar` | Official public API of an approved platform (scientific package p.9); downloaded at build time by `scripts/fetch_tafsir.py`, not committed | Meaning of every verified verse, attributed and linked; never generated |
+| Encyclopedia of Translated Islamic Terminology (terminologyenc.com/api/v1) | Official public API of an approved platform (package p.9); 17 entries stored with their source links in `data/reference/terminologyenc/terms.json` | Definitions for foundational questions and term translations, labeled as outside the indexed book |
+| «بينات: أسئلة وأجوبة عن الإسلام» (dawa.center/file/7937), dorar.net | Links only | Referrals for foundational questions, as recommended by the package |
 | Jamhara (islamic-content.com/dictionary), terminologyenc.com | Public reference | English equivalents of Islamic terms |
 
 ## Fonts (all SIL Open Font License 1.1)

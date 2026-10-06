@@ -1,191 +1,246 @@
 # أصول · Asool
 
-Asool turns scanned pages of trusted Islamic books into structured, verifiable knowledge.
-Every search result and answer links back to the exact highlighted spot on the original printed page,
-with footnotes attached, Quranic verses verified, and uncertain extractions flagged.
+**Trusted Islamic books, turned into knowledge you can verify, down to the line on the printed page.**
 
-Built for the AI Challenge: Serving Islamic Content (Bathel Foundation, 2026), Track 04.
+Asool reads scanned pages of a classical Islamic book and turns them into structured, searchable knowledge. Every answer is built only from verified quotations. Each quotation is traced to the exact highlighted spot on the original printed page, with the editor's footnotes attached, Quranic verses checked against the King Fahd Complex Mushaf, and hadith gradings taken only from approved sources. When the sources do not answer a question, Asool says so. When a question needs a mufti, it refers the user to one.
 
-> Status: under construction. See `docs/PROGRESS.md`.
+Built for the **AI Challenge: Serving Islamic Content** (Bathel Foundation, 2026), **Track 04: Knowledge & Verification Tools for those who present Islam**.
 
-## Corpus
-رياض الصالحين للإمام النووي, 1956 edition (دار إحياء الكتاب العربي), printed pages 12–41.
-See `SOURCES_AND_LICENSES.md`. Book files are not in this repo.
+| | |
+|---|---|
+| **Live demo** | _added at deployment_ |
+| **API** | _added at deployment_ (`/docs` for OpenAPI) |
+| **Corpus** | Riyad al-Salihin (Imam al-Nawawi), 1956 Cairo edition with word explanations by Mustafa Muhammad Amara, printed pages 12–41 |
+| **Evidence** | Every number below is computed by the scripts in `eval/` and shown on the live `/proof` page. Full method and every disclosed change: [`docs/EVALUATION.md`](docs/EVALUATION.md) |
+
+---
+
+## Results at a glance
+
+All figures are measured on this corpus. Each comparison is against a fair baseline: the same search code, the same embeddings and the same answer model, with only the data preparation changed (plain OCR text in fixed 500-character pieces).
+
+### Reading the printed page (extraction)
+Measured against a human-verified gold set of 15 pages. **12 of those pages were held out**, never used to choose the model or tune the prompt.
+
+| 12 held-out pages | Asool | Baseline (Tesseract `ara`) |
+|---|---|---|
+| Character error rate, **with tashkeel** | **3.5%** | 27.9% |
+| Character error rate, letters only | **0.4%** | 20.8% |
+| Footnotes linked to their markers (F1) | **0.96** | 0.00 |
+| Footnotes in reading order | **100% of pages** | n/a (flat text) |
+| Block types correct (matn, hadith, verse, footnote, editor commentary…) | 98.6% | n/a |
+
+### Finding the right source (retrieval)
+43 answerable, human-reviewed questions, scored against the gold page.
+
+| | Asool | Baseline |
+|---|---|---|
+| Right page in the top 5 results | **100%** | 84% |
+| Rank of the first correct result (MRR) | **0.93** | 0.77 |
+| The footnote the question depends on arrives with the text | **8 of 9** | 2 of 9 |
+
+### Answering safely (full pipeline, three runs)
+66 questions drafted by the AI agent and **reviewed by a human** (58 approved, 8 edited, 20 notes turned into machine-checked requirements). They include the **12 official test cases** of the challenge's scientific package.
+
+| | Result |
+|---|---|
+| Correct behaviour, with every reviewer requirement met | **61 of 66 (92%)**; the three runs passed 92%, 91% and 89% |
+| Same behaviour across three runs | 98% |
+| Quotations shown to users that are not word for word in their source | **0 of 183** |
+| Book quotations traced to a page and a box on the image | **157 of 157** |
+| Abstains when the book has no answer | 10 of 11 |
+| Refers personal fatwa questions to a scholar | 6 of 6 |
+| Corrects misquoted verses, with surah and ayah | 3 of 3 |
+
+The remaining failures, the fixes made after looking at results, and a separate set of 15 **colloquial questions (agent-drafted, not human-reviewed)** are reported in [Limits](#limits-stated-plainly) and in [`docs/EVALUATION.md`](docs/EVALUATION.md). Nothing is hidden.
+
+---
+
+## What a user can do
+
+| Screen | What it does |
+|---|---|
+| **Ask** (`/ask`) | An answer in two clearly separated zones. **«نصوص المصدر»** holds only verbatim quotations, each labeled with its author: «متن الإمام النووي», «حاشية المحقق» or «تعليق المحقق». **«إيضاح مولَّد آليًا»** holds a short generated explanation. Hovering a quote draws the **Source Thread**, a line from the sentence to the highlighted lines on the original page. |
+| **Source Viewer** (`/b/riyad1956/p/19`) | The zoomable page image. **X-ray** mode outlines every block by type and draws arcs from each footnote marker to its footnote. Each verse shows its Mushaf check and its meaning from an approved tafsir. Each hadith shows al-Nawawi's printed takhrij and its grading. |
+| **Compare** (`/compare`) | A before/after slider over the same page: flat OCR text against Asool's structured blocks. The same question can also be run through both pipelines side by side. |
+| **Proof** (`/proof`) | Every metric in this README, computed from the result files: the model bake-off, the held-out re-measurement, gold-set review statistics, the 12 official cases with the package's exact wording, and all failures. |
+| **Review** (`/review`) | Human-in-the-loop work: the gold-set review, hadith gradings, the question-set review, and a queue of low-confidence blocks. |
+| **How it works** (`/how`) | One real page replayed through the pipeline stages, using the project's own intermediate data. |
+| **Developers** (`/developers`) | A free, read-only public API: `GET /api/v1/search` and `GET /api/v1/passages/{id}`. |
+
+The interface is Arabic-first and right to left, with an English toggle, light and dark themes, keyboard navigation and reduced-motion support.
+
+---
+
+## How it works
+
+```
+ OFFLINE (run once)                                                    ONLINE
+ ┌─────────────┐  ┌──────────────────────┐  ┌──────────────────────┐   ┌──────────────────────────────┐
+ │ 300-DPI page│─▶│ SEMANTIC LANE        │─▶│ FUSION               │   │ classify level A–D           │
+ │ image       │  │ Gemini 3.1 Pro reads │  │ blocks ↔ OCR words   │   │ → D: referral, no ruling     │
+ └─────────────┘  │ typed blocks         │  │ → precise boxes      │   │ → verse check (whole Mushaf) │
+        │         └──────────────────────┘  └──────────┬───────────┘   │ → hybrid search + neighbours │
+        │         ┌──────────────────────┐             ▼               │ → support gate (abstain)     │
+        └────────▶│ GEOMETRY LANE        │  footnote linking · Quran   │ → grounded generation        │
+                  │ Tesseract words +    │  verification · hadith +    │ → word-for-word verification │
+                  │ VLM block boxes      │  takhrij + grading ·        │   of every quote             │
+                  └──────────────────────┘  completeness check ·      │ → answer with page highlights │
+                                            structure-aware units      └──────────────────────────────┘
+```
+
+**1. Two lanes, fused.** Vision-language models read Arabic well but place text imprecisely; classical OCR is the reverse. The parser (Gemini 3.1 Pro, prompt `page_parse.v2`) outputs typed blocks in reading order with footnote markers preserved. Each block is aligned to OCR words, so its highlight covers the exact printed lines. When the two lanes disagree, the block is flagged, not trusted.
+
+**2. Structure that matters for scholarship.**
+- **Footnotes:** linked to their markers, including two-column footnote areas and footnote groups split around other content.
+- **The editor's voice:** commentary («ما نأخذه من هذا الحديث») is kept apart from al-Nawawi's text. It is labeled, chunked separately and linked to the hadith it explains.
+- **Units:** follow the book's structure. A unit is a hadith with its narration, takhrij and footnotes, and never cuts a sentence across a page break. Long units are searched in overlapping windows but read as a whole.
+
+**3. Completeness check.** Every printed line found by OCR must be covered by the extracted text. Pages with uncovered lines go to human review and are never indexed silently. This check caught a real parser error on p.39, which was confirmed against the print and corrected.
+
+**4. Quran verification.** Every verse, including verses quoted without ﴿ ﴾ inside the editor's footnotes, is matched word by word against the **King Fahd Complex Mushaf (Hafs v3.0, developer data)**.
+- **Exact and near matches:** shown as verified. Differences are highlighted, and the printed text is never altered.
+- **Misquoted verses in questions:** checked against the whole Mushaf. The closest correct verses are shown gently, with surah and ayah.
+- **Meaning:** a verse's meaning comes only from **«التفسير الميسر» (King Fahd Complex) via the QuranEnc API**, attributed, and never generated.
+
+**5. Hadith: source and grading, never generated.** Al-Nawawi's printed takhrij is always shown. A grading appears only from approved data:
+- «في الصحيحين (متفق عليه)», «في صحيح البخاري» or «في صحيح مسلم», taken from the takhrij itself;
+- the **HadeethEnc** grade, when narrator and wording match;
+- a human entry from **dorar.net**.
+
+Anything else shows «الحكم غير متحقق في البيانات». A search result is never taken on trust: on p.19, the top dorar.net result for «ما لم يغرغر» was a *different*, fabricated hadith.
+
+**6. Grounded answers with hard gates.**
+- **Classification:** each question gets a content level (A–D, from the scientific package). Personal-case rulings (level D) always get a referral, never an answer.
+- **Search:** hybrid BM25 + embeddings with reciprocal-rank fusion. Neighbouring hadiths of the same chapter and page are added, so every condition of a ruling reaches the model.
+- **Support gate:** weak support leads to an abstention, without generation.
+- **Verification:** every quotation is checked word for word against its source after normalization. Unverified quotes are removed, and the answer is withdrawn if more than half fail.
+- **Foundational questions the book does not cover** (e.g. «هل القرآن من تأليف محمد ﷺ؟»): the package asks for an explanatory answer. Asool may add verses from the Mushaf with their tafsir, and definitions from the **Encyclopedia of Translated Islamic Terminology**. These are labeled «من خارج الكتاب المفهرس», are verified like book quotes, and come with the package's referrals («بينات», dorar.net). Mushaf verses are added only when the book's match is weak.
+- **Term translation:** requests are answered from the approved dictionary, not generated.
+
+---
+
+## Evaluation method (summary)
+
+- **Gold set, built without the evaluated model.**
+  - Three independent readers per page: Tesseract, Claude Opus 5.5, and Claude Fable 5.1 or Surya OCR. **Gemini, the evaluated parser, is never a reader.**
+  - A word is accepted automatically only if all readers agree; everything else is decided by a human reviewer, on a screen that shows the printed line with the disputed words highlighted.
+  - **964 human decisions** were made over 4,483 words.
+  - Random spot-checks of auto-accepted words found **0 of 82 errors** where all readers agreed, 1 of 48 for tashkeel-abstention words and 1 of 67 for Tesseract-abstention words. Both errors were tashkeel only, and both were corrected.
+- **Model choice and honest re-measurement.**
+  - Ten systems were compared on 3 bake-off pages. Gemini 3.1 Pro with prompt v2 scored 2.2% strict CER.
+  - The choice was then re-measured on 12 held-out pages. The reading-accuracy gain of prompt v2 held: 3.5% against 5.6% for prompt v1.
+  - Its two-column footnote ordering did not hold, so footnote order is now fixed deterministically.
+- **Question set.**
+  - 66 questions drafted by the AI agent and reviewed by a human.
+  - The 12 official cases quote the package's expected behaviour word for word.
+  - The reviewer's notes became automatic checks: required footnotes, required verses, every condition of a ruling, required referrals.
+  - A separate set of 15 colloquial questions, agent-drafted and not reviewed, tests whether copying the book's wording overstates quality. It is never mixed into the reviewed numbers.
+- **Independent re-verification.** The evaluator re-checks every displayed quotation against its own source, whether book, Mushaf, tafsir or terminology, and checks that every book quotation resolves to a page and a box.
+
+Reproduce:
+```bash
+uv run python -m eval.run_eval retrieval            # Asool vs. baseline (cached embeddings, free)
+uv run python -m eval.run_eval answers --runs 3     # real answer pipeline, about $0.03 per question per run
+uv run python -m eval.heldout_eval                  # extraction on the 12 held-out gold pages
+uv run python -m eval.bakeoff                       # model bake-off on 3 pages
+uv run python -m eval.report                        # writes data/eval/results/summary.json, shown on /proof
+```
+
+---
+
+## Reliability and safety, mapped to the scientific package
+
+| Package principle | How Asool implements it |
+|---|---|
+| Reliability and attribution | Every quote is verified word for word and linked to book, edition, page, block and box |
+| Definitive vs. ijtihad | Disagreement in the passages is shown without picking a winner; consensus is never claimed unless a passage states it |
+| No independent fatwa | Level D questions get a referral and general passages only |
+| Hallucination resistance | Support gate, word-for-word quote verification, and refusal to compose a hadith that is not in the sources |
+| Quran and hadith integrity | Mushaf verification, approved tafsir, approved gradings only, printed takhrij always shown |
+| Transparency | Source text and generated explanation are visibly separate; text from outside the book is labeled; AI assistance is stated |
+| Translation and localization | Approved equivalents from the package's dictionary sample and the terminology encyclopedia (e.g. "Tawbah (repentance)", never "holy war" for jihad) |
+| Privacy | No accounts, no personal data, no tracking |
+| Human in the loop | Gold review, hadith grading, question review and a low-confidence block queue, all recorded with reviewer and date |
+
+---
+
+## Operations
+
+**Measured costs** (`docs/COSTS.md`, from logged token counts):
+
+| Item | Cost |
+|---|---|
+| Ingestion: parsing a page with Gemini 3.1 Pro, plus block boxes | about $0.165 per page, about $165 per 1,000 pages |
+| One new answer: classification, generation and embedding | about $0.03 |
+| Abstention or referral | about $0.001 |
+| Cached answer (official cases, evaluation and demo questions are precomputed) | $0 |
+
+**Budget guard.**
+- The OpenRouter key limit is $40.
+- Live answers stop at $38, with a $3 daily cap.
+- At the daily cap the system falls back to Gemini 3.8 Flash. Above the hard stop, it shows search passages only, so a page never breaks.
+- Evaluation and precompute stop at $23, so at least $15 stays for live use during judging (Oct 7–22).
+- Answers are rate-limited per IP.
+
+**Dependencies and fallbacks.**
+- **Model provider:** OpenRouter, provider-agnostic, with model roles in `api/settings.py`.
+- **Embeddings:** if they fail at query time, search continues with keywords only.
+- **Quran reference:** the King Fahd developer data and the tafsir are downloaded at build time. If the download fails, the documented fallback is the Quranpedia Mushaf.
+- **Hosting:** FastAPI on Render (always-on Starter plan) and Next.js on Vercel.
+- **Page images:** served only from the deployment, never from GitHub.
+
+**Maintenance.**
+- New pages are ingested with `uv run python -m pipeline.run_all`. Every model call is cached, so reruns are free and deterministic.
+- Flagged pages and blocks appear in `/review`.
+- 53 automated tests run with `uv run pytest`.
+
+---
 
 ## Run locally
-Requirements: macOS/Linux, [uv](https://docs.astral.sh/uv/), Node 22+, Tesseract with Arabic (`brew install tesseract tesseract-lang`).
+
+Requirements: macOS or Linux, [uv](https://docs.astral.sh/uv/), Node 22+, Tesseract with Arabic (`brew install tesseract tesseract-lang`).
 
 ```bash
-cp .env.example .env          # then fill in the keys
-uv sync                       # Python deps
-uv run pytest                 # tests
-uv run uvicorn api.main:app --reload --port 8000   # API at http://localhost:8000/docs
-cd web && npm install && npm run dev               # web at http://localhost:3000
+cp .env.example .env                 # add your own keys (never commit .env)
+uv sync && ./scripts/fetch_references.sh   # King Fahd Mushaf data + التفسير الميسر (QuranEnc)
+uv run python -m pipeline.quran_search     # Mushaf search vectors (about $0.04, once)
+uv run pytest
+uv run uvicorn api.main:app --port 8000    # API, http://localhost:8000/docs
+cd web && npm install && npm run dev       # web, http://localhost:3000
 ```
+
+The book PDF and page images are not in this repository (see below). Re-ingestion needs the scan from archive.org (`rsnawwy`, file `rs-mohaqaq.pdf`). The committed index (`data/asool.db`, `data/index/`) is enough to run search and answers.
 
 ## Repository layout
-- `pipeline/` offline ingestion (page image → blocks → footnotes → Quran check → chunks → index)
-- `api/` FastAPI backend
-- `web/` Next.js frontend (Arabic, right-to-left)
-- `eval/` evaluation scripts
-- `data/` reference data, gold set, eval questions, index
-- `docs/` progress, model selection, costs, limits
 
-## Gold set: method, bias controls, spot-check
-The gold set is the human-verified reference used to measure extraction quality. It covers 15 of the 30 corpus pages (printed pp. 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 33, 35, 37, 39, 41).
+| Path | Contents |
+|---|---|
+| `pipeline/` | Offline ingestion: rasterize, OCR, VLM parse and boxes, fusion, footnotes, Quran, hadith, structure checks, completeness, chunking, index, baseline |
+| `api/` | FastAPI: search, answer pipeline, approved sources, budget, review endpoints, public API; prompts are versioned in `api/prompts/` |
+| `web/` | Next.js app (Arabic, right to left) |
+| `eval/` | Bake-off, held-out, retrieval, answer and report scripts |
+| `data/` | Gold set and review records, evaluation questions and results, index, reference metadata |
+| `docs/` | Detailed evaluation, model selection, costs, progress log |
 
-**Reviewer:** rawan (team member, native Arabic speaker).
+## Sources and licenses
+Details in [`SOURCES_AND_LICENSES.md`](SOURCES_AND_LICENSES.md).
+- **Book:** the matn is in the public domain (al-Nawawi died 676 AH). The editor's notes and the 1956 typesetting have unverified copyright status, so the PDF and page images are **excluded from this repository**. Page images are served only by the live deployment, to show citations.
+- **Quran:** King Fahd Glorious Quran Printing Complex developer data (Hafs v3.0), downloaded at build time. «التفسير الميسر» is fetched through the QuranEnc API.
+- **Hadith and terminology:** HadeethEnc API, dorar.net (human entry only, no scraping), and the Encyclopedia of Translated Islamic Terminology. All are approved platforms in the challenge's scientific package.
+- **Fonts:** IBM Plex Sans Arabic, Amiri and Amiri Quran (SIL OFL).
 
-**Method (consensus-assisted human review).**
-1. Each gold page is read by three independent readers:
-   - Reader A: Tesseract 5 `ara` (classical OCR, run locally).
-   - Reader B: Claude Opus 5.5 (vision-language model).
-   - Reader C: Claude Fable 5.1 on the 3 bake-off pages; **Surya OCR 2** (open-source, run locally) on the other 12 pages.
-2. A word is **auto-accepted only if all three readers agree** on its letters, and Readers B and C also agree on its tashkeel. Tesseract votes on letters only, because it does not read tashkeel reliably. Two abstention rules (owner decisions, Oct 4):
-   - **Tashkeel abstention:** a reader that outputs **no tashkeel at all** on a word whose letters match the others abstains on tashkeel only; the remaining reader decides the tashkeel.
-   - **Tesseract abstention:** when Tesseract reads a word with **less than 60% confidence** (or not at all), it abstains, and the remaining independent readers B and C must then agree **exactly**, tashkeel included.
-   Words accepted under either abstention rule are spot-checked at **10%** (twice the normal rate). Everything else goes to a human.
-3. The human reviewer sees only the disputed phrases, each with the full printed line from the original page and **only the disputed words** highlighted, and chooses a reading or types a correction (`/review/gold`). If the words cannot be located reliably, the screen says «الموقع غير مؤكد» and shows the full page with the likely area marked; a «عرض الصفحة كاملة» button is always available.
-4. A random 5% of fully agreed words (weighted toward words with tashkeel) and 10% of words accepted by abstention are shown to the reviewer as a spot-check.
-5. **Equivalent readings are not disputes (owner rule, Oct 5).** Readings that differ only in Unicode (combining-mark order such as shadda + fatha, fixed by NFC) or in whitespace just inside brackets, around footnote markers or before punctuation («الرحيم )» = «الرحيم)», «﴿ قُلْ» = «﴿قُلْ», «شهدا (٨)» = «شهدا(٨)») are the same printed text. Such a dispute is auto-accepted when Readers B and C are identical after this canonicalization and Tesseract agrees on the letters or gave no reading. Spaces *between words* («يارسول» / «يا رسول») are a real difference in the print and stay with the human. Strict CER applies the same canonicalization to both sides. This removed **28** of 792 open disputes; the remaining 764 (522 tashkeel differences between B and C, 120 letter differences, 108 where Tesseract confidently reads other letters, 13 word-spacing differences, 1 with no Reader C) were all decided by the reviewer.
-6. The reviewer confirms the block types (body, hadith, Quran, footnote, editor commentary…) before the page is finalized.
+## Limits stated plainly
+- **Small corpus:** 30 pages of one book in one genre. The gold set has 15 pages and one reviewer.
+- **Reviewer bias:** gold Reader B (Claude) was the reviewer's default option, so Claude's extraction scores are inflated, and Claude was excluded as the parser.
+- **Answer failures in the reviewed set:** five in the reported run.
+  - Two are citation completeness: a required hadith was not retrieved (`hostile-03`), and only one of three required texts was cited (`official-10`).
+  - One is a missed second footnote (`ans-13`).
+  - Two were scope bugs, fixed afterwards and re-checked separately: a fiqh ruling answered from a verse, and a missing history referral.
+- **Colloquial wording:** with natural, colloquial phrasing, retrieval alone loses its advantage over the baseline (85% against 85%). The full pipeline still answered 14 of 15 correctly, because the question is rewritten into the book's vocabulary first. This set was drafted by the AI agent and not human-reviewed.
+- **Completeness check:** it cannot detect gaps shorter than one printed line.
+- **Style:** behaviour and requirements are scored automatically. Tone and gentleness need human reading.
+- **Proposed, not built:** multi-book ingestion, publisher accounts, more languages, and a broader human-reviewed question set.
 
-**Bias controls.**
-- **Asool's own page parser (Gemini) is never one of the gold readers**, so the gold set does not come from the model it evaluates.
-- The review screen shows how many readers support a candidate, not which model produced it.
-- Readers A and C are classical/open OCR engines with weaker tashkeel than the vision-language models, so **more disagreements reach human review**; auto-accept still requires all three readers to agree.
-- Known limitation: Reader B (Claude) was the pivot reading and the reviewer's default option, so Claude scores are inflated against this gold set and Claude is not eligible as Asool's parser. Diacritic conventions may lean toward Claude's style.
-
-**Final review (completed Oct 5).** All 15 gold pages are finalized by **rawan**; nothing is left in the queue. Every finalized gold file was re-derived from the recorded decisions and matches them exactly. The print writes final yaa without dots («فى»، «على»); the gold keeps the text exactly as printed (search normalization handles ى/ي).
-
-| Pages | Words | Auto-accepted (3 readers agree) | Equivalent readings (auto) | Human decisions | of which typed corrections |
-|---|---|---|---|---|---|
-| 41, 30, 20 (bake-off) | 942 | 425 | 11 | 226 | 3 |
-| 12 held-out pages | 3,541 | 2,375 | 17 | 738 | 53 |
-| **Total** | **4,483** | **2,800** | **28** | **964** | **56** |
-
-**Spot-check results** (random auto-accepted words shown back to the reviewer):
-
-| Kind of auto-accepted word | Checked | Wrong | Error rate |
-|---|---|---|---|
-| All three readers agreed | 82 | 0 | 0% |
-| Tashkeel decided after a reader abstained | 48 | 1 | 2.1% |
-| Decided after Tesseract abstained (< 60% confidence) | 67 | 1 | 1.5% |
-
-Both errors were tashkeel only (p.12 «فهجرتُه» → «فهجرَتُهُ», p.26 «وهذه» → «وهذِه») and were corrected in the gold. The bake-off spot-check records affected by the early review-screen bug were reclassified (`correction_note`).
-
-**Review-screen bug and audit (Oct 4).** The first version of the review screen could show a neighbouring line when a disputed phrase was not found by OCR, highlighted whole lines instead of the disputed words, and could keep the previous image visible while the next one loaded. Fixed: word-level location with honest "uncertain" labels, one image per dispute, full-page view. All decisions made with the old screen were audited against the new locator: **37 of 237 bake-off decisions** (and both decisions made on page 12) were put back in the review queue because their crop did not show the disputed words. No spot-check answer was affected. Audit file: `data/gold/audit_2026-10-04_crops.json`.
-
-Shamela (book 2348, a different edition) is available to the reviewer as an independent text cross-check; page numbers differ, so it is never used as gold directly.
-
-## Hadith grading rule
-No hadith is shown without its source and a grading from approved data; a grading is **never generated by a model**.
-1. Al-Nawawi's printed takhrij names al-Bukhari and/or Muslim («متفق عليه»، «رواه البخاري»، «رواه مسلم») → the exact source as printed: «متفق عليه» → **«في الصحيحين (متفق عليه)»**, «رواه البخاري» → **«في صحيح البخاري»**, «رواه مسلم» → **«في صحيح مسلم»** (owner decision, GATE 4: «في الصحيحين» alone would wrongly imply both books).
-2. Otherwise, if the hadith is found in **HadeethEnc** (موسوعة الأحاديث النبوية, an approved platform in the challenge's scientific package, reviewed by scholars) with the **same narrator and core wording**, its grade (الدرجة) and link are used automatically. If the match is uncertain, the project owner confirms or rejects it in `/review/hadith`.
-3. Otherwise the owner enters the result from **dorar.net** by hand: grading, muhaddith, source, number and link. The screen warns when the entered narrator differs from the book's narrator.
-4. Nothing verified → **«الحكم غير متحقق في البيانات»**.
-Al-Nawawi's printed takhrij is always shown beside the grading.
-
-In the 30-page corpus: 41 hadiths are in the Sahihayn by al-Nawawi's takhrij (24 «متفق عليه», 8 al-Bukhari, 8 Muslim, 1 «رواه إماما المحدثين» naming both), and 4 are graded from HadeethEnc (3 automatically, 1 confirmed by the owner). None needs manual dorar entry.
-
-**Why search results are never used for grading automatically (dorar lesson, Oct 4).** For the hadith «إن الله يقبل توبة العبد ما لم يغرغر» (p.19), the first dorar.net result for «ما لم يغرغر» was a *different*, fabricated hadith graded «كذب». Taking the top search result would have attached a "fabricated" verdict to an authentic hadith. That is why the grading is taken only after checking narrator and wording, or confirmed by a person. The prefilled dorar search uses a short distinctive phrase with footnote markers and tashkeel removed and joined words split («مالم» → «ما لم»).
-
-## Extraction results (final gold)
-**Bake-off, re-scored on the corrected gold (pages 41, 30, 20).** Gemini 3.1 Pro with prompt v2 remains the best eligible parser: strict CER (with tashkeel) 2.2%, loose 0.4%, footnote-link F1 1.00, block types 100%; Gemini 3.1 Pro with v1 4.3%; Gemini 3.8 Flash 4.5%; Tesseract 30.4%. (Claude Opus 1.0% and Fable 1.2% are gold readers and not eligible.) Before the gold corrections v2 scored 2.3%.
-
-**Held-out re-measurement (12 pages never used to choose the model or tune the prompt)**, `uv run python -m eval.heldout_eval`:
-
-| System | Strict CER as output | Loose CER as output | Strict CER, footnote order normalized | Loose CER, normalized | Footnotes in reading order |
-|---|---|---|---|---|---|
-| Gemini 3.1 Pro + v2 (parser) | 6.5% | 3.9% | **3.5%** | 0.5% | 58% of pages |
-| Gemini 3.1 Pro + v1 | 7.3% | 2.7% | 5.6% | 0.8% | 75% |
-| Gemini 3.5 Flash | 8.7% | 1.7% | 7.7% | 0.7% | 83% |
-| **Asool final index** | **4.4%** | **1.7%** | **3.5%** | **0.4%** | **100%** |
-| Tesseract (baseline) | 27.9% | 20.8% | — | — | — |
-
-"As output" scores the text in the order the system produced it (as in the bake-off). "Normalized" puts footnotes in marker order after the main text, for the gold and every structured system alike, so it measures reading accuracy only.
-
-**What the held-out check shows.**
-- The prompt v2 gain in **reading accuracy generalizes**: 3.5% vs. 5.6% strict CER on unseen pages (bake-off: 2.2% vs. 4.3%).
-- The v2 instruction on **two-column footnote order did not generalize**: v2 put footnotes in reading order on only 58% of held-out pages (v1: 75%). The parser lists them row by row across the two columns ((١)(٥)(٢)(٦)…).
-- Fix (disclosed, made after this measurement): the index now orders each contiguous run of numbered footnotes by marker (`structure_checks.order_footnote_runs`); groups separated by other content (p.41) stay separate. Final index: footnotes in reading order on 100% of held-out pages; strict CER as stored 6.4% → 4.4%. Retrieval and answers are unaffected (footnotes attach to text by marker link).
-- Asool's index vs. the Tesseract baseline on held-out pages: **3.5% vs. 27.9% strict CER, 0.4% vs. 20.8% loose CER, footnote-link F1 0.96 vs. 0.00**.
-
-## Evaluation (Phase 5)
-Everything on `/proof` is computed by these scripts; nothing is typed by hand.
-
-```bash
-uv run python -m eval.run_eval retrieval          # Asool vs. baseline, free (cached embeddings)
-uv run python -m eval.run_eval answers --runs 3   # real /answer pipeline, ~$0.03 per question per run
-uv run python -m eval.heldout_eval                # extraction on the 12 held-out gold pages
-uv run python -m eval.report                      # -> data/eval/results/summary.json -> /proof
-```
-
-**Question set (human-reviewed).** `data/eval/questions.jsonl`, 66 questions. **The questions were drafted by the AI agent and approved or edited by a human reviewer (rawan) in `/review/questions`: 58 approved, 8 edited, 0 removed; 20 decisions carry a note.** Decisions are stored in `data/eval/question_reviews.json` and applied on top of the drafts, so every change is attributable. The reviewer's notes (which footnotes must be quoted, which verses must be shown, which conditions must all appear, which approved sources and referrals are expected) were turned into machine-checked requirements in `data/eval/question_requirements.json`, each marked as coming from the reviewer's note. Contents: 33 answerable questions (direct, needs-footnote, cross-page, multi-condition, Quran, editor commentary, English), 1 owner case (`completeness-01`), 10 unanswerable from this corpus, 5 personal cases needing a fatwa (level D), 3 hostile phrasings, 2 misquoted verses, and the **12 official test cases** of the scientific package (p.6), whose expected behaviour is quoted word for word from the package.
-
-**Natural-phrasing questions (NOT human-reviewed).** `data/eval/questions_natural.jsonl`, 15 questions **drafted by the AI agent, not human-reviewed**, on the same topics but phrased the way an ordinary user asks, partly in colloquial Arabic, with no wording copied from the book (e.g. «أنا أذنبت كثير، هل الله يقبل توبتي؟»، «وش يعني الإخلاص؟»، «وش أسوي إذا عصبت؟»). Most reviewed questions reuse the book's wording, which makes retrieval easy; this set checks whether that overstates quality. Its results are reported separately and never mixed into the reviewed numbers.
-
-**Approved sources outside the book (owner decision, Oct 6).** The package (p.6) asks for a grounded explanatory answer to foundational questions such as «هل القرآن من تأليف محمد ﷺ؟», not abstention. When the classifier marks a level A/B question as foundational, the answer may add, clearly labeled «من خارج الكتاب المفهرس»:
-- verses of the **King Fahd Complex Mushaf**, found by meaning with a new search over all 6,236 verses (`pipeline/quran_search.py`: embeddings + word overlap, RRF); the verse text comes from the Mushaf file and its meaning only from **«التفسير الميسر» (King Fahd Complex) via the QuranEnc API**;
-- definitions from the **Encyclopedia of Translated Islamic Terminology** (terminologyenc.com, package p.9), fetched by `scripts/fetch_terminology.py` with their source links;
-- a referral to the package's resources: «بينات: أسئلة وأجوبة عن الإسلام» (dawa.center/file/7937), dorar.net/history, dorar.net/feqhia.
-Book passages come first. Every quote from these sources is verified word for word against the source text, like book quotes. The prompt forbids arguments, events, dates or numbers that are not in the given texts, and forbids using texts about fighting as evidence for or against an accusation such as «انتشر بالسيف».
-
-**Verse meanings.** Every verified verse (in the book, in a verse-correction card, or from the Mushaf search) shows its meaning from «التفسير الميسر» via QuranEnc, attributed and linked, never generated (`scripts/fetch_tafsir.py`, 114 requests at build time). When a misquoted verse has several close candidates and exactly one differs from the question only by a function word (e.g. «إن الله» vs «والله»), it is marked as the closest (Āl ʿImrān 146 for «إن الله يحب الصابرين»).
-
-**Cross-page chunking fix (owner report, Oct 6).** Units were cut by a size limit at a page break in the middle of a sentence (Ka'b's commitments, pp. 27–28), and an editor's poem interleaved on p.32 split a hadith in two. Units now split only where a sentence ends and the next block does not continue it, and a matn block continuing after an interleaved editor note rejoins its hadith. All 30 pages were checked: no unit starts mid-sentence (test `test_no_unit_starts_mid_sentence_across_pages`); 56 → 53 units. Question citations are stored as anchor blocks, so they survive re-chunking. Side effect found by the evaluation (`ans-20`): the merged Ka'b unit (pp. 23–28, about 6,600 characters) was no longer retrieved for a specific sentence, because one embedding of a long unit is diluted. Long units (> 2,500 characters) are therefore **searched in overlapping windows of whole blocks** (about 1,800 characters, one block of overlap, each with its own footnotes) while they stay one unit for reading and answering; search maps each window back to its unit.
-
-**Fair baseline.** Same embeddings, same hybrid search code (BM25 + dense + RRF), same k=5 and same answer model; only the data preparation differs (Tesseract plain text in fixed 500-character pieces). Retrieval is measured with the raw question for both systems.
-
-**Metrics.** Recall@5 and MRR by gold page; context completeness (a top-5 unit from the gold page also carries the footnote the question depends on); behaviour (answer / abstain / refer / correct the verse); quotes re-verified independently (fabricated quotes shown must be 0); traceability (every shown quote resolves to a stored block with a page and a box); multi-condition answers must cite every required unit; consistency across 3 repeated runs.
-
-**Changes made after looking at evaluation results (disclosed).**
-- `completeness-01` (owner, GATE 4): answers now add same-chapter, same-page neighbouring units and prompt `answer.v3` requires every condition/limit to be cited.
-- `ans-16`: a quotation from the book inside «…» in the question is now a third ranked list in the fusion (exact phrase match, footnote markers ignored), applied identically to the baseline. Before: Asool Recall@5 95.3%; after: 97.7% (baseline unchanged, 81.4%).
-- `ans-21`: editor commentary printed among the footnotes was linked to the *next* hadith (p.29, p.41). It is now linked to the hadith whose footnote is printed just before it, and its search text names that hadith's opening. Asool Recall@5: 97.7% → 100%.
-- `official-08`: a request to translate a term from the approved glossary is now answered from the dictionary itself (status `glossary`), never generated; terms outside the package's sample are labeled as not yet verified against Jamhara.
-- `official-11` / `official-12`: prompt rules: the explanation never writes surah/ayah numbers itself (the verified verse card does), and loaded terms are explained in the passages' own context without adopting the asker's framing.
-
-## Evaluation results (Oct 6, after the human question review)
-All numbers come from `data/eval/results/summary.json` (shown on `/proof`). Three runs of the full answer pipeline: run 0 on all 81 questions, runs 1 and 2 on the 66 reviewed questions. Responses are cached per run, so every run can be re-scored for free.
-
-**Before vs. after the review.** Before the review, all 66 agent-drafted questions passed. The checks were only behaviour plus required units. After the reviewer's notes became requirements, the same pipeline passes fewer. That is expected: the bar is higher, not the system worse.
-
-| Human-reviewed set (66 questions) | Before review (Oct 5) | After review (run 0) |
-|---|---|---|
-| Correct behaviour with all requirements | 66/66 | **61/66 (92%)** |
-| Pass rate per run (runs 0, 1, 2) | — | 92%, 91%, 89% |
-| Same behaviour in all three runs | — | 98% |
-| Right page in top 5 (Asool vs. baseline) | 100% vs. 81% | **100% vs. 84%** (43 questions) |
-| MRR (Asool vs. baseline) | 0.93 vs. 0.76 | 0.93 vs. 0.77 |
-| Required footnote arrives with the text | 5/5 vs. 0/5 | 8/9 vs. 2/9 |
-| Reviewer requirements met | — | 18/20 |
-| Multi-condition answers citing every required unit | 3/3 | 5/7 |
-| Quotes shown and verified word for word | 136, 0 fabricated | **183, 0 fabricated** (157 from the book, 26 from approved sources outside it) |
-| Book quotes traced to page and box | 100% | 100% |
-
-**Failures in run 0 (reported, not tuned away).**
-- `ans-13`: footnote (٨) was quoted but footnote (٧) was not. The question asks "why", so the meaning-footnote rule did not trigger.
-- `hostile-03`: the answer did not cite Ibn ʿAbbās's hadith on an intended bad deed (p.16), which the reviewer required.
-- `official-10`: the answer cited only one of the three required texts (the p.12 verse, «إنما الأعمال بالنيات», «ينظر إلى قلوبكم»).
-- `unans-10` («ما كفارة اليمين؟»): the answer came from Al-Māʾida 89 instead of abstaining. A ruling is not a foundational question, so this was a scope bug.
-- `official-03`: the dorar.net/history referral was missing.
-- In runs 1 and 2, `official-07` failed twice (footnote (٥) on p.12 not quoted) and `ans-32` abstained once.
-
-**Fixes after the runs (disclosed), with a separate post-fix check.**
-1. Classifier v3: a question asking for a specific ruling is never foundational, and a question can carry several referral topics. Re-check: `unans-10` now abstains, and `official-03` shows both «بينات» and dorar.net/history.
-2. The runs showed that the model used Mushaf verses in about 14 answers the book already covers. Verses from the Mushaf are now offered only when the book's best match is below 0.65; on the reviewed set, the questions needing outside sources (official 1–4) score 0.58–0.64 and book questions 0.69 and above. Term definitions remain available for foundational questions, as in the reviewer's official-12 note.
-3. Re-check of the 14 affected questions plus the two above: **13 of 16 pass, 0 fabricated quotes.** `hostile-03`, `official-10` and `nat-01` still fail, on citation completeness.
-4. The three reported runs used the pipeline before fixes 1–2. A clean full re-run needs about $2.40 that is not available within the budget (see `docs/COSTS.md`).
-5. The scorer first counted quotes from the Mushaf, the tafsir and the terminology encyclopedia as "fabricated", because its independent re-check only knew book passages. Fixed: each quote is re-verified against its own source, and the runs were re-scored from cached responses at no cost. The results above use the fixed scorer.
-
-**Natural-phrasing set: drafted by the AI agent, not human-reviewed.** Reported separately, never mixed into the numbers above.
-
-| 15 questions | Asool | Baseline |
-|---|---|---|
-| Right page in top 5 (13 answerable) | 85% | 85% |
-| MRR | 0.77 | 0.60 |
-| Correct behaviour with all requirements | 14/15 | — |
-| Quotes verified word for word | 62, 0 fabricated | — |
-
-With everyday wording, retrieval alone loses its advantage over the baseline. The two misses are colloquial: «أبكي» (crying at a death) and «عصبت» (anger). The full pipeline still answers 14 of 15 correctly, because the classifier rewrites the question into the book's vocabulary before searching. `nat-01` («أنا أذنبت كثير…») gave the time limits but not the conditions of repentance.
+## Team
+Built during the challenge window (Oct 4–6, 2026). Gold-set, hadith-grading and question-set review: **rawan**.
