@@ -517,7 +517,8 @@ def answer(
     offline = offline_run is not None
     prefix = (f"eval/r{offline_run}/" if offline_run else "eval/") if offline else ""
     if offline:
-        model = None if budget.status()["hard_stop"] else settings.answer_model
+        st = budget.status()
+        model = None if st["hard_stop"] or st["eval_stop"] else settings.answer_model
     else:
         model = budget.answer_model()
     lang = "ar"

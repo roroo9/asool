@@ -22,10 +22,13 @@ class Settings(BaseSettings):
     classifier_model: str = "openrouter:google/gemini-3.8-flash"
     embed_model: str = "openrouter:google/gemini-embedding-2"
     box_model: str = "openrouter:google/gemini-3.8-flash"
-    openrouter_budget_usd: float = 25.0
+    openrouter_budget_usd: float = 40.0
     # spend before the usage log tracked every call (truncated calls, Oct 4): keeps totals honest
     openrouter_spend_offset_usd: float = 0.89
-    hard_budget_usd: float = 23.0
+    hard_budget_usd: float = 38.0
+    # Evaluation / precompute stop at hard stop - reserve (38 - 15 = $23), so at least $15 stays
+    # for live answers during judging (Oct 7-22); live answers stop at the hard stop ($38).
+    live_reserve_usd: float = 15.0
     # support gate: minimum dense similarity of the best passage (calibrated in Phase 5)
     support_min_sim: float = 0.55
     # Mushaf verses (approved source outside the book) are offered only when the book's best
@@ -35,7 +38,7 @@ class Settings(BaseSettings):
 
     cors_origins: str = "http://localhost:3000"
     db_path: str = str(ROOT / "data" / "asool.db")
-    daily_budget_usd: float = 1.5
+    daily_budget_usd: float = 3.0
     answer_rate_limit_per_hour: int = 20
     review_token: str = ""
 

@@ -340,6 +340,11 @@ def answers(runs: int, only: str | None, start_run: int = 0, human_only: bool = 
         bucket = old["runs"].setdefault(str(run), {})
         for q in load_questions(only, natural=not human_only):
             t0 = time.time()
+            from api import budget
+
+            if budget.status()["eval_stop"]:
+                print("STOP: evaluation budget reached; the live reserve is kept", flush=True)
+                return old
             res = answer(q["question"], use_cache=False, offline_run=run)
             s = score(q, res, con)
             s["seconds"] = round(time.time() - t0, 1)

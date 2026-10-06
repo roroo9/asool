@@ -20,5 +20,9 @@ services:
         sync: false        # the Vercel site URL, e.g. https://asool.vercel.app
       - key: DAILY_BUDGET_USD
         value: "3"
+      - key: OPENROUTER_BUDGET_USD
+        value: "40"
+      - key: HARD_BUDGET_USD
+        value: "38"
       - key: ANSWER_RATE_LIMIT_PER_HOUR
         value: "20"

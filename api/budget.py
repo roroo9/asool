@@ -90,6 +90,8 @@ def status() -> dict:
         "used_pct": round(100 * total / budget, 1) if budget else None,
         "warning": total >= 0.8 * budget,
         "hard_stop": total >= settings.hard_budget_usd,
+        # offline evaluation / precompute must leave the live reserve untouched
+        "eval_stop": total >= settings.hard_budget_usd - settings.live_reserve_usd,
         "source": "openrouter" if remote is not None else "local log",
     }
 
