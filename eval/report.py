@@ -152,17 +152,20 @@ def _answer_metrics(runs: dict, qs: dict, include) -> tuple[dict, list[dict]]:
     shown = sum(s["quotes_shown"] for s in run0.values())
     if shown:
         fab = sum(s["fabricated_quotes"] for s in run0.values())
+        book = sum(s.get("book_quotes", s["quotes_shown"]) for s in run0.values())
+        ext = sum(s.get("external_quotes", 0) for s in run0.values())
         traced = sum(s["quotes_traced"] for s in run0.values())
         m["الاقتباسات المعروضة المتحقق منها حرفيًا"] = {
             "asool": 1 - fab / shown,
             "n": shown,
-            "note": f"اقتباسات مختلقة معروضة: {fab}",
+            "note": f"اقتباسات مختلقة معروضة: {fab}؛ من الكتاب {book}، "
+            f"ومن مصادر معتمدة خارجه {ext}",
         }
-        m["إمكانية التتبع: اقتباس مرتبط بصفحة وموضع على الصورة"] = {
-            "asool": traced / shown,
-            "n": shown,
-            "note": "اقتباسات المصحف والموسوعة من خارج الكتاب لا تُحسب صفحةً من الكتاب",
-        }
+        if book:
+            m["إمكانية التتبع: اقتباس من الكتاب مرتبط بصفحة وموضع على الصورة"] = {
+                "asool": traced / book,
+                "n": book,
+            }
     if len(runs) > 1:
         same, per_run = [], []
         for qid in run0:
@@ -190,6 +193,21 @@ def _answer_metrics(runs: dict, qs: dict, include) -> tuple[dict, list[dict]]:
         if not s["pass"]
     ]
     return m, failures
+
+
+def _postfix() -> dict | None:
+    p = RESULTS / "postfix_classifier_v3.json"
+    if not p.exists():
+        return None
+    d = json.loads(p.read_text(encoding="utf-8"))
+    rows = d["results"]
+    return {
+        "note": d["note"],
+        "passed": sum(1 for s in rows.values() if s["pass"]),
+        "total": len(rows),
+        "failed": sorted(k for k, s in rows.items() if not s["pass"]),
+        "fabricated_quotes": sum(s.get("fabricated_quotes", 0) for s in rows.values()),
+    }
 
 
 def build() -> dict:
@@ -284,6 +302,7 @@ def build() -> dict:
         "failures": failures,
         "natural_phrasing": nat,
         "question_review": rc,
+        "postfix": _postfix(),
         "heldout": heldout,
         "gold": gold_stats(),
         "limits": limits,

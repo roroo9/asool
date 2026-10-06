@@ -1,0 +1,373 @@
+{
+ "note": "Post-fix checks, run separately from the three reported runs: (1) classifier v3 (rulings are not foundational; several referral topics) on unans-10 and official-03; (2) Mushaf verses only when the book's best match is below 0.65, re-run on the 14 questions whose answers had used outside sources although the book covers them.",
+ "results": {
+  "unans-10": {
+   "behaviour": "abstain",
+   "allowed": [
+    "abstain"
+   ],
+   "pass": true,
+   "quotes_shown": 0,
+   "book_quotes": 0,
+   "external_quotes": 0,
+   "fabricated_quotes": 0,
+   "quotes_traced": 0,
+   "cited_chunks": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "abstained",
+   "classifier": {
+    "foundational": false,
+    "referral_topics": [
+     "fiqh"
+    ]
+   }
+  },
+  "official-03": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 1,
+   "book_quotes": 0,
+   "external_quotes": 1,
+   "fabricated_quotes": 0,
+   "quotes_traced": 0,
+   "cited_chunks": [],
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "classifier": {
+    "foundational": true,
+    "referral_topics": [
+     "doubts",
+     "history"
+    ]
+   }
+  },
+  "hostile-01": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 8,
+   "book_quotes": 6,
+   "external_quotes": 2,
+   "fabricated_quotes": 0,
+   "quotes_traced": 6,
+   "cited_chunks": [
+    "riyad1956-c029",
+    "riyad1956-c032",
+    "riyad1956-c048"
+   ],
+   "cites_gold": true,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "hostile-03": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": false,
+   "quotes_shown": 8,
+   "book_quotes": 6,
+   "external_quotes": 2,
+   "fabricated_quotes": 0,
+   "quotes_traced": 6,
+   "cited_chunks": [
+    "riyad1956-c000",
+    "riyad1956-c002",
+    "riyad1956-c003",
+    "riyad1956-c004",
+    "riyad1956-c005"
+   ],
+   "cites_gold": false,
+   "required_cited": 0.0,
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "official-11": {
+   "behaviour": "answer",
+   "allowed": [
+    "correct_verse"
+   ],
+   "verse_corrected": true,
+   "pass": true,
+   "quotes_shown": 4,
+   "book_quotes": 1,
+   "external_quotes": 3,
+   "fabricated_quotes": 0,
+   "quotes_traced": 1,
+   "cited_chunks": [
+    "riyad1956-c029"
+   ],
+   "cites_gold": true,
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "official-10": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": false,
+   "quotes_shown": 5,
+   "book_quotes": 5,
+   "external_quotes": 0,
+   "fabricated_quotes": 0,
+   "quotes_traced": 5,
+   "cited_chunks": [
+    "riyad1956-c002",
+    "riyad1956-c007",
+    "riyad1956-c008"
+   ],
+   "cites_gold": true,
+   "required_cited": 0.3333333333333333,
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": []
+  },
+  "misquote-01": {
+   "behaviour": "answer",
+   "allowed": [
+    "correct_verse"
+   ],
+   "verse_corrected": true,
+   "pass": true,
+   "quotes_shown": 3,
+   "book_quotes": 3,
+   "external_quotes": 0,
+   "fabricated_quotes": 0,
+   "quotes_traced": 3,
+   "cited_chunks": [
+    "riyad1956-c029",
+    "riyad1956-c031"
+   ],
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": []
+  },
+  "official-07": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 5,
+   "book_quotes": 4,
+   "external_quotes": 1,
+   "fabricated_quotes": 0,
+   "quotes_traced": 4,
+   "cited_chunks": [
+    "riyad1956-c000",
+    "riyad1956-c001",
+    "riyad1956-c007"
+   ],
+   "cites_gold": true,
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "nat-10": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 4,
+   "book_quotes": 4,
+   "external_quotes": 0,
+   "fabricated_quotes": 0,
+   "quotes_traced": 4,
+   "cited_chunks": [
+    "riyad1956-c047",
+    "riyad1956-c050",
+    "riyad1956-c051"
+   ],
+   "cites_gold": true,
+   "required_cited": 1.0,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": []
+  },
+  "nat-01": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": false,
+   "quotes_shown": 7,
+   "book_quotes": 6,
+   "external_quotes": 1,
+   "fabricated_quotes": 0,
+   "quotes_traced": 6,
+   "cited_chunks": [
+    "riyad1956-c016",
+    "riyad1956-c017",
+    "riyad1956-c018",
+    "riyad1956-c019",
+    "riyad1956-c021"
+   ],
+   "cites_gold": true,
+   "required_cited": 0.5,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "nat-02": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 4,
+   "book_quotes": 3,
+   "external_quotes": 1,
+   "fabricated_quotes": 0,
+   "quotes_traced": 3,
+   "cited_chunks": [
+    "riyad1956-c000",
+    "riyad1956-c001",
+    "riyad1956-c007"
+   ],
+   "cites_gold": true,
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "completeness-01": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 5,
+   "book_quotes": 5,
+   "external_quotes": 0,
+   "fabricated_quotes": 0,
+   "quotes_traced": 5,
+   "cited_chunks": [
+    "riyad1956-c017",
+    "riyad1956-c018",
+    "riyad1956-c019",
+    "riyad1956-c020"
+   ],
+   "cites_gold": true,
+   "required_cited": 1.0,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": []
+  },
+  "nat-07": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 5,
+   "book_quotes": 4,
+   "external_quotes": 1,
+   "fabricated_quotes": 0,
+   "quotes_traced": 4,
+   "cited_chunks": [
+    "riyad1956-c004",
+    "riyad1956-c005",
+    "riyad1956-c011"
+   ],
+   "cites_gold": true,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "official-12": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 7,
+   "book_quotes": 4,
+   "external_quotes": 3,
+   "fabricated_quotes": 0,
+   "quotes_traced": 4,
+   "cited_chunks": [
+    "riyad1956-c003",
+    "riyad1956-c008"
+   ],
+   "cites_gold": true,
+   "requirements_failed": [],
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "ans-06": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 5,
+   "book_quotes": 4,
+   "external_quotes": 1,
+   "fabricated_quotes": 0,
+   "quotes_traced": 4,
+   "cited_chunks": [
+    "riyad1956-c001",
+    "riyad1956-c002",
+    "riyad1956-c003"
+   ],
+   "cites_gold": true,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": [
+    "term"
+   ]
+  },
+  "ans-08": {
+   "behaviour": "answer",
+   "allowed": [
+    "answer"
+   ],
+   "pass": true,
+   "quotes_shown": 4,
+   "book_quotes": 4,
+   "external_quotes": 0,
+   "fabricated_quotes": 0,
+   "quotes_traced": 4,
+   "cited_chunks": [
+    "riyad1956-c004"
+   ],
+   "cites_gold": true,
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "status": "answered",
+   "external_used": []
+  }
+ }
+}

@@ -52,3 +52,27 @@ The new spend since GATE 3 is mostly evaluation:
 **Remaining plan**
 - Two more evaluation runs, needed for consistency: about $4.
 - Live use during judging, capped at $3 per day: about $0.03 per new question.
+
+## Update: Tue Oct 6 (after the question review)
+
+| Provider | Budget | Spent | Used |
+|---|---|---|---|
+| **OpenRouter** | $25.00 | **$22.39** | **89.6%** (past the 80% warning) |
+
+Spend since the last update, about $8.40:
+
+| Item | Spend |
+|---|---|
+| Three evaluation runs: run 0 on 81 questions, runs 1 and 2 on 66 | about $6.30 |
+| A pass stopped early after a chunking regression, 22 questions | about $0.70 |
+| Prompt v1 on the 12 held-out pages | about $1.65 |
+| Post-fix checks on 16 questions | about $0.55 |
+| Development tests of the outside-sources path | about $0.40 |
+| Demo precompute | about $0.15 |
+| Mushaf verse vectors | $0.04 |
+
+Re-scoring the runs with the fixed scorer cost $0, because every call was served from cache.
+
+**Risk.** The hard stop is at $23, which leaves about $0.60 for new live questions during judging. The 81 evaluation questions and the demo questions are served from cache for free. Above the hard stop, the site shows search passages only, so a page never breaks.
+
+**Recommendation.** Add about $10 of OpenRouter credit before judging (Oct 7). Then raise `OPENROUTER_BUDGET_USD` and `HARD_BUDGET_USD` in the Render settings. About $2.40 of that would fund a clean full re-run of the evaluation on the final pipeline.

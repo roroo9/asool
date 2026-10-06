@@ -26,6 +26,7 @@ import time
 from pathlib import Path
 
 from api.answer import _vnorm, answer, verify_quotes
+from api.approved import verify_external
 from api.passages import baseline_passage, passage
 from api.question_review import reviewed_questions
 from api.search import hybrid
@@ -185,14 +186,25 @@ def score(q: dict, res: dict, con: sqlite3.Connection) -> dict:
     pts = ans.get("source_points", [])
     passages = res.get("passages", [])
     by_tag = {f"P{i}": p for i, p in enumerate(passages, 1)}
-    # Re-verify every shown quote independently: a fabricated quote is one that is shown
-    # but is not in its passage (must be 0; the pipeline removes them before showing).
-    kept, removed = verify_quotes(pts, by_tag) if pts else ([], [])
+    # Re-verify every shown quote independently against ITS OWN source (book passage, or the
+    # Mushaf/tafsir/terminology item it cites). A fabricated quote is one that is shown but is
+    # not in that source (must be 0; the pipeline removes them before showing).
+    items = (res.get("external") or {}).get("items", {})
+    book = [pt for pt in pts if not pt.get("external")]
+    ext = [pt for pt in pts if pt.get("external")]
+    _, removed = verify_quotes(book, by_tag) if book else ([], [])
+    ext_bad = [
+        pt
+        for pt in ext
+        if not (pt["passage"] in items and verify_external(pt["quote"], items[pt["passage"]]))
+    ]
     s["quotes_shown"] = len(pts)
-    s["fabricated_quotes"] = len(removed)
-    # Traceability: every shown quote resolves to a stored block with a page and a box.
+    s["book_quotes"] = len(book)
+    s["external_quotes"] = len(ext)
+    s["fabricated_quotes"] = len(removed) + len(ext_bad)
+    # Traceability (book quotes): each resolves to a stored block with a page and a box.
     traced = 0
-    for pt in pts:
+    for pt in book:
         p = by_tag.get(pt["passage"])
         if not p:
             continue
@@ -319,14 +331,14 @@ def _requirements(req: dict, res: dict, con: sqlite3.Connection) -> list[str]:
     return fails
 
 
-def answers(runs: int, only: str | None, start_run: int = 0) -> dict:
+def answers(runs: int, only: str | None, start_run: int = 0, human_only: bool = False) -> dict:
     path = RESULTS / "answers.json"
     old = json.loads(path.read_text()) if path.exists() else {"runs": {}}
     con = sqlite3.connect(DB)
     con.row_factory = sqlite3.Row
     for run in range(start_run, start_run + runs):
         bucket = old["runs"].setdefault(str(run), {})
-        for q in load_questions(only):
+        for q in load_questions(only, natural=not human_only):
             t0 = time.time()
             res = answer(q["question"], use_cache=False, offline_run=run)
             s = score(q, res, con)
@@ -345,6 +357,7 @@ if __name__ == "__main__":
     ap.add_argument("--runs", type=int, default=1)
     ap.add_argument("--start-run", type=int, default=0)
     ap.add_argument("--only", default=None, help="id prefix or question type")
+    ap.add_argument("--human-only", action="store_true", help="skip the natural-phrasing set")
     a = ap.parse_args()
     if a.what == "retrieval":
         r = retrieval()
@@ -352,4 +365,4 @@ if __name__ == "__main__":
             qs = r["questions"]
             print(m, "R@5", sum(x[m]["recall_at_5"] for x in qs) / len(qs))
     else:
-        answers(a.runs, a.only, a.start_run)
+        answers(a.runs, a.only, a.start_run, a.human_only)

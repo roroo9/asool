@@ -80,3 +80,10 @@ Human tasks in parallel: gold review of 12 more pages (992 phrases, Sun), hadith
   - eval/report.py (summary.json for /proof).
   - eval/precompute.py (demo answers).
   - 66-question set including the 12 official cases; drafts await owner verification.
+- 2026-10-06: Question review processed: 66 questions, 58 approved, 8 edited, 20 notes turned into requirements.
+  - Official cases quote page 6 exactly; cases 2–4 now answer from approved sources outside the book.
+  - New sources: Mushaf search and «التفسير الميسر» via QuranEnc, plus terminologyenc definitions.
+  - Natural-phrasing set: 15 questions, agent-drafted, not reviewed.
+  - Cross-page chunking fix, with search windows for long units.
+  - Three runs: 92%, 91% and 89% pass on the reviewed set. Results and failures are in the README.
+  - Spend is at 89.6%: a credit top-up is recommended before judging. Not deployed (owner hold).

@@ -29,7 +29,7 @@ from pipeline.normalize import normalize
 
 PROMPTS = Path(__file__).parent / "prompts"
 CACHE = ROOT / "data" / "answers"  # committed: precomputed answers survive redeploys
-CLASSIFY_V = "level_classify.v2"
+CLASSIFY_V = "level_classify.v3"
 ANSWER_V = "answer.v4"
 _GLOSSARY_FILE = json.loads((ROOT / "data" / "reference" / "glossary.json").read_text())
 GLOSSARY = _GLOSSARY_FILE["terms"]
@@ -93,9 +93,9 @@ CLASSIFY_SCHEMA = {
         "asks_for_evidence_text": {"type": "boolean"},
         "search_query_ar": {"type": "string"},
         "foundational": {"type": "boolean"},
-        "referral_topic": {
-            "type": "string",
-            "enum": ["doubts", "history", "fiqh", "concept", "none"],
+        "referral_topics": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["doubts", "history", "fiqh", "concept"]},
         },
         "mushaf_query_ar": {"type": "string"},
         "key_terms_ar": {"type": "array", "items": {"type": "string"}},
@@ -110,7 +110,7 @@ CLASSIFY_SCHEMA = {
         "asks_for_evidence_text",
         "search_query_ar",
         "foundational",
-        "referral_topic",
+        "referral_topics",
         "mushaf_query_ar",
         "key_terms_ar",
         "reason",
@@ -566,7 +566,13 @@ def answer(
         and not cls["is_personal_case"]
     ):
         try:
-            external = approved.context(question, cls, qvec)
+            book_best = max(((p["retrieval"]["dense_sim"] or 0.0) for p in passages), default=0.0)
+            external = approved.context(
+                question,
+                cls,
+                qvec,
+                verses=book_best < settings.external_verses_max_book_sim,
+            )
             base["external"] = external
             stages.append({"stage": "approved_sources", "items": list(external["items"])})
         except Exception as e:  # never break an answer because of the extra sources

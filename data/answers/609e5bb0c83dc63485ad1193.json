@@ -11,13 +11,16 @@
   "asks_for_evidence_text": false,
   "search_query_ar": "حقيقة انتشار الإسلام بالسيف ودعوى الإكراه في الدين",
   "foundational": true,
-  "referral_topic": "doubts",
+  "referral_topics": [
+   "doubts",
+   "history"
+  ],
   "mushaf_query_ar": "لا إكراه في الدين قد تبين الرشد من الغي",
   "key_terms_ar": [
    "الجهاد",
    "الدعوة"
   ],
-  "reason": "السؤال يناقش شبهة فكرية عامة ومشهورة حول كيفية انتشار الإسلام وحرية الاعتقاد."
+  "reason": "السؤال يعالج شبهة فكرية وتاريخية شائعة حول كيفية انتشار الإسلام وحرية الاعتقاد."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -811,8 +814,8 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.02932,
-    "bm25_rank": 13,
+    "rrf": 0.02914,
+    "bm25_rank": 14,
     "dense_rank": 4,
     "dense_sim": 0.5869791507720947
    }
@@ -1097,8 +1100,8 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.02818,
-    "bm25_rank": 23,
+    "rrf": 0.02847,
+    "bm25_rank": 21,
     "dense_rank": 2,
     "dense_sim": 0.5975791215896606
    }
@@ -2014,6 +2017,10 @@
    {
     "title": "بينات: أسئلة وأجوبة عن الإسلام",
     "url": "https://dawa.center/file/7937"
+   },
+   {
+    "title": "الدرر السنية: الموسوعة التاريخية",
+    "url": "https://dorar.net/history"
    }
   ]
  },
@@ -2042,7 +2049,7 @@
   {
    "stage": "classify",
    "level": "B",
-   "reason": "السؤال يناقش شبهة فكرية عامة ومشهورة حول كيفية انتشار الإسلام وحرية الاعتقاد."
+   "reason": "السؤال يعالج شبهة فكرية وتاريخية شائعة حول كيفية انتشار الإسلام وحرية الاعتقاد."
   },
   {
    "stage": "retrieve",
@@ -2076,5 +2083,5 @@
    "removed": 0
   }
  ],
- "seconds": 19.87
+ "seconds": 19.53
 }

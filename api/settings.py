@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     hard_budget_usd: float = 23.0
     # support gate: minimum dense similarity of the best passage (calibrated in Phase 5)
     support_min_sim: float = 0.55
+    # Mushaf verses (approved source outside the book) are offered only when the book's best
+    # match is weaker than this, i.e. the book does not cover the question (owner rule, Oct 6).
+    external_verses_max_book_sim: float = 0.65
     anthropic_budget_usd: float = 5.0
 
     cors_origins: str = "http://localhost:3000"

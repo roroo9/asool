@@ -296,7 +296,7 @@ function Ask() {
                 <div className="mt-4 border-t border-line pt-3">
                   <h3 className="text-sm font-medium text-muted">{t("clarification")}</h3>
                   <p className="mt-1 leading-loose text-foreground/85">
-                    {(data.answer.explanation || data.answer.source_points.map((pt) => pt.text).join(" ")).replace(/\s*\[P\d+(?:\s*[,،]\s*P\d+)*\]/g, "")}
+                    {(data.answer.explanation || data.answer.source_points.map((pt) => pt.text).join(" ")).replace(/\s*\[[PQT]\d+(?:\s*[,،]\s*[PQT]\d+)*\]/g, "")}
                   </p>
                 </div>
                 {data.answer.source_points.some((p) => p.external) && (data.external?.referrals?.length ?? 0) > 0 && (

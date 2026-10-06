@@ -32,6 +32,7 @@ type Summary = {
     note?: string;
   }[];
   failures?: { id: string; question: string; behaviour: string; requirements_failed: string[] }[];
+  postfix?: { note: string; passed: number; total: number; failed: string[]; fabricated_quotes: number } | null;
   question_review?: { total: number; reviewed: number; approved: number; edited: number; removed: number; with_notes: number; reviewer: string[] };
   natural_phrasing?: {
     label_ar: string;
@@ -319,6 +320,14 @@ export default function ProofPage() {
         {sum?.question_review && (
           <p className="mt-4 text-sm text-muted">
             الأسئلة ({ar(sum.question_review.total)}) صاغها الوكيل الآلي وراجعتها المراجِعة {sum.question_review.reviewer.join("، ")}: اعتُمد {ar(sum.question_review.approved)}، وعُدِّل {ar(sum.question_review.edited)}، وحُذف {ar(sum.question_review.removed)}؛ وحُوِّلت ملاحظاتها ({ar(sum.question_review.with_notes)}) إلى متطلبات تُفحص آليًا.
+          </p>
+        )}
+        {sum?.postfix && (
+          <p className="mt-4 rounded border border-line p-3 text-sm">
+            <span className="font-medium">فحص بعد الإصلاح (منفصل عن التشغيلات الثلاثة): </span>
+            نجح {ar(sum.postfix.passed)} من {ar(sum.postfix.total)}، واقتباسات مختلقة: {ar(sum.postfix.fabricated_quotes)}. لم ينجح:{" "}
+            <span dir="ltr">{sum.postfix.failed.join(", ") || "—"}</span>
+            <span className="block text-xs text-muted" dir="ltr">{sum.postfix.note}</span>
           </p>
         )}
         {sum?.failures && (

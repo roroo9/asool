@@ -1,0 +1,1785 @@
+{
+ "question": "هل يكفّر الله الخطايا بالهم والحزن والمرض؟",
+ "language": "ar",
+ "level": "A",
+ "classification": {
+  "level": "A",
+  "is_personal_case": false,
+  "is_hostile": false,
+  "language": "ar",
+  "quoted_verse": "",
+  "asks_for_evidence_text": false,
+  "search_query_ar": "تكفير الخطايا والسيئات بالمصائب والهم والحزن والمرض",
+  "foundational": true,
+  "referral_topic": "concept",
+  "mushaf_query_ar": "تكفير السيئات والابتلاء بالهم والحزن والصبر",
+  "key_terms_ar": [
+   "الابتلاء",
+   "الصبر",
+   "المغفرة"
+  ],
+  "reason": "السؤال يتناول مسألة إيمانية وأخلاقية أساسية وثابتة في الأحاديث الصحيحة حول تكفير الذنوب بالابتلاءات."
+ },
+ "quoted_verse_check": null,
+ "passages": [
+  {
+   "id": "riyad1956-c042",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "وعن أبي سعيدٍ وأبي هريرة رضي الله عنهما عن النبي صلى الله عليه وسلم قال :\n« مايصيبُ المسلمَ من نصبٍ (٢) ولا وصبٍ ولا همٍّ ولا حزنٍ ولا أذىً ولا غمٍّ حتى الشوكةِ يشاكُها إلا كفَّرَ الله بها منْ خطاياهُ »\nمتفق عليه . و « الوصبُ » : المرضُ .",
+   "highlights": [
+    [
+     29,
+     33
+    ],
+    [
+     53,
+     57
+    ],
+    [
+     126,
+     130
+    ],
+    [
+     180,
+     184
+    ],
+    [
+     230,
+     236
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p037",
+     "printed": 37,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 37"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p037-b05",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبي سعيدٍ وأبي هريرة رضي الله عنهما عن النبي صلى الله عليه وسلم قال :",
+     "bbox": [
+      609,
+      916,
+      1647,
+      1087
+     ],
+     "rects": [
+      [
+       609,
+       916,
+       1647,
+       1087
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b06",
+     "page_id": "riyad1956-p037",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« مايصيبُ المسلمَ من نصبٍ (٢) ولا وصبٍ ولا همٍّ ولا حزنٍ ولا أذىً ولا غمٍّ حتى الشوكةِ يشاكُها إلا كفَّرَ الله بها منْ خطاياهُ »",
+     "bbox": [
+      407,
+      1037,
+      1730,
+      1225
+     ],
+     "rects": [
+      [
+       407,
+       1037,
+       1730,
+       1225
+      ]
+     ],
+     "bbox_source": "vlm",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b07",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه . و « الوصبُ » : المرضُ .",
+     "bbox": [
+      405,
+      1105,
+      1733,
+      1326
+     ],
+     "rects": [
+      [
+       405,
+       1105,
+       1733,
+       1326
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p037-b17",
+     "page_id": "riyad1956-p037",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "تعب ووجع",
+     "bbox": [
+      865,
+      2552,
+      1044,
+      2625
+     ],
+     "rects": [
+      [
+       865,
+       2552,
+       1044,
+       2625
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(٢)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 228,
+       "page_id": "riyad1956-p037",
+       "marker": "(٢)",
+       "anchor_block_id": "riyad1956-p037-b06",
+       "anchor_char_offset": 26,
+       "footnote_block_id": "riyad1956-p037-b17",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h035-riyad1956-p037-b05",
+     "narrator": "ابي سعيد وابي هريره",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%85%D8%A7%D9%8A%D8%B5%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%20%D9%85%D9%86%20%D9%86%D8%B5%D8%A8%20%D9%88%D9%84%D8%A7%20%D9%88%D8%B5%D8%A8",
+     "block_ids": [
+      "riyad1956-p037-b05",
+      "riyad1956-p037-b06",
+      "riyad1956-p037-b07"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.03279,
+    "bm25_rank": 1,
+    "dense_rank": 1,
+    "dense_sim": 0.7317706942558289
+   }
+  },
+  {
+   "id": "riyad1956-c043",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "وعن ابن مسعود رضي الله عنه قال : دخلتُ على النبي صلى الله عليه وسلم وهو يوعكُ فقلتُ : يارسول الله إنكَ توعكُ (٣) وعْكاً شديداً قال\n« أجلْ إنِّي أوعكُ كما يوعكُ رجلانِ منكمْ »\nقلتُ . ذلك أنَّ لك أجرينِ ؟ قال\n« أجلْ ذلك كذلك مامنْ مسلمٍ يصيبهُ أذىً شوكةٌ فما فوْقها إلَّا كفَّرَ الله بها سيئاته ، وحُطتْ عنهُ ذُنُوبُه كما تحطُّ الشجرةُ ورقها »\nمتفق عليه و « الوعْكُ » مغثُ الحمى ، وقيل : الحمَّى .",
+   "highlights": [
+    [
+     18,
+     22
+    ],
+    [
+     53,
+     57
+    ],
+    [
+     93,
+     97
+    ],
+    [
+     277,
+     281
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p037",
+     "printed": 37,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 37"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p037-b08",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن ابن مسعود رضي الله عنه قال : دخلتُ على النبي صلى الله عليه وسلم وهو يوعكُ فقلتُ : يارسول الله إنكَ توعكُ (٣) وعْكاً شديداً قال",
+     "bbox": [
+      411,
+      1371,
+      1726,
+      1567
+     ],
+     "rects": [
+      [
+       411,
+       1371,
+       1643,
+       1474
+      ],
+      [
+       673,
+       1471,
+       1726,
+       1567
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b09",
+     "page_id": "riyad1956-p037",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« أجلْ إنِّي أوعكُ كما يوعكُ رجلانِ منكمْ »",
+     "bbox": [
+      423,
+      1471,
+      1729,
+      1792
+     ],
+     "rects": [
+      [
+       423,
+       1471,
+       641,
+       1567
+      ],
+      [
+       425,
+       1582,
+       1727,
+       1688
+      ],
+      [
+       423,
+       1684,
+       1729,
+       1792
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b10",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "قلتُ . ذلك أنَّ لك أجرينِ ؟ قال",
+     "bbox": [
+      570,
+      1582,
+      1172,
+      1688
+     ],
+     "rects": [
+      [
+       570,
+       1582,
+       1172,
+       1688
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b11",
+     "page_id": "riyad1956-p037",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« أجلْ ذلك كذلك مامنْ مسلمٍ يصيبهُ أذىً شوكةٌ فما فوْقها إلَّا كفَّرَ الله بها سيئاته ، وحُطتْ عنهُ ذُنُوبُه كما تحطُّ الشجرةُ ورقها »",
+     "bbox": [
+      423,
+      1582,
+      1729,
+      1880
+     ],
+     "rects": [
+      [
+       425,
+       1582,
+       550,
+       1688
+      ],
+      [
+       423,
+       1684,
+       1729,
+       1792
+      ],
+      [
+       1001,
+       1794,
+       1725,
+       1880
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.98,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b12",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه و « الوعْكُ » مغثُ الحمى ، وقيل : الحمَّى .",
+     "bbox": [
+      418,
+      1794,
+      1723,
+      1984
+     ],
+     "rects": [
+      [
+       418,
+       1794,
+       1116,
+       1880
+      ],
+      [
+       1367,
+       1902,
+       1723,
+       1984
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p037-b18",
+     "page_id": "riyad1956-p037",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "تمرض",
+     "bbox": [
+      632,
+      2561,
+      802,
+      2625
+     ],
+     "rects": [
+      [
+       632,
+       2561,
+       802,
+       2625
+      ]
+     ],
+     "bbox_source": "vlm",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٣)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 229,
+       "page_id": "riyad1956-p037",
+       "marker": "(٣)",
+       "anchor_block_id": "riyad1956-p037-b08",
+       "anchor_char_offset": 109,
+       "footnote_block_id": "riyad1956-p037-b18",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h036-riyad1956-p037-b08",
+     "narrator": "ابن مسعود",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D8%A3%D8%AC%D9%84%20%D8%A5%D9%86%D9%8A%20%D8%A3%D9%88%D8%B9%D9%83%20%D9%83%D9%85%D8%A7%20%D9%8A%D9%88%D8%B9%D9%83%20%D8%B1%D8%AC%D9%84%D8%A7%D9%86",
+     "block_ids": [
+      "riyad1956-p037-b08",
+      "riyad1956-p037-b09",
+      "riyad1956-p037-b10",
+      "riyad1956-p037-b11",
+      "riyad1956-p037-b12"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.98,
+   "retrieval": {
+    "rrf": 0.03128,
+    "bm25_rank": 6,
+    "dense_rank": 2,
+    "dense_sim": 0.695897102355957
+   }
+  },
+  {
+   "id": "riyad1956-c035",
+   "kind": "editor_commentary",
+   "author_role": "editor",
+   "author_label": "تعليق المحقق مصطفى محمد عمارة",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "أنشدت السيدة فاطمة ابنته صلى الله عليه وسلم ورضى الله عنها :\nما ذا على من شم تربة أحمد * ألا يشم مدى الزمان غواليا\nصبت علىَّ مصائب لو أنها * صبت على الأيام عدن لياليا",
+   "highlights": [
+    [
+     29,
+     33
+    ],
+    [
+     49,
+     53
+    ],
+    [
+     125,
+     130
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p032",
+     "printed": 32,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 32"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p032-b16",
+     "page_id": "riyad1956-p032",
+     "type": "editor_commentary",
+     "author_role": "editor",
+     "text": "أنشدت السيدة فاطمة ابنته صلى الله عليه وسلم ورضى الله عنها :",
+     "bbox": [
+      742,
+      2176,
+      1690,
+      2260
+     ],
+     "rects": [
+      [
+       742,
+       2176,
+       1690,
+       2260
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.95,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p032-b17",
+     "page_id": "riyad1956-p032",
+     "type": "poetry",
+     "author_role": "editor",
+     "text": "ما ذا على من شم تربة أحمد * ألا يشم مدى الزمان غواليا",
+     "bbox": [
+      661,
+      2271,
+      1550,
+      2348
+     ],
+     "rects": [
+      [
+       661,
+       2271,
+       1550,
+       2348
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.95,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p032-b18",
+     "page_id": "riyad1956-p032",
+     "type": "poetry",
+     "author_role": "editor",
+     "text": "صبت علىَّ مصائب لو أنها * صبت على الأيام عدن لياليا",
+     "bbox": [
+      656,
+      2355,
+      1546,
+      2432
+     ],
+     "rects": [
+      [
+       656,
+       2355,
+       1546,
+       2432
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.95,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [],
+   "quran": [],
+   "hadith": [],
+   "commentary_on": "riyad1956-c033",
+   "min_confidence": 0.95,
+   "retrieval": {
+    "rrf": 0.03083,
+    "bm25_rank": 2,
+    "dense_rank": 8,
+    "dense_sim": 0.6379636526107788
+   }
+  },
+  {
+   "id": "riyad1956-c048",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "وعن أنس رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم :\n« إذا أراد الله بعبدِهِ الخيرَ عجَّلَ له العقوبَةَ فى الدنيا (٤) ، وإذا أراد اللهُ بعبدِهِ الشرَّ أمسكَ عنْه بذنْبِهِ (٥) حتى يوَافِىَ بِهِ (٦) يومَ القيامةِ »\nوقال النبى صلى الله عليه وسلم ،\n« إنَّ عِظَمَ الجزاءِ مع عِظَمِ البلاءِ (٧) ، وإنَّ الله تعالى إذا أحبَّ قوماً ابتلاهم ، فمنْ رضِىَ (٨) فلهُ الرضا ومنْ سَخِطَ (٩) فلهُ السخط »\nرواه الترمذى وقال : حديث حسن .",
+   "highlights": [
+    [
+     12,
+     16
+    ],
+    [
+     36,
+     40
+    ],
+    [
+     45,
+     49
+    ],
+    [
+     73,
+     77
+    ],
+    [
+     139,
+     144
+    ],
+    [
+     237,
+     241
+    ],
+    [
+     306,
+     310
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p039",
+     "printed": 39,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 39"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p039-b03",
+     "page_id": "riyad1956-p039",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أنس رضى الله عنه قال : قال رسول الله صلى الله عليه وسلم :",
+     "bbox": [
+      854,
+      847,
+      1661,
+      950
+     ],
+     "rects": [
+      [
+       854,
+       847,
+       1661,
+       950
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p039-b04",
+     "page_id": "riyad1956-p039",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إذا أراد الله بعبدِهِ الخيرَ عجَّلَ له العقوبَةَ فى الدنيا (٤) ، وإذا أراد اللهُ بعبدِهِ الشرَّ أمسكَ عنْه بذنْبِهِ (٥) حتى يوَافِىَ بِهِ (٦) يومَ القيامةِ »",
+     "bbox": [
+      455,
+      848,
+      1740,
+      1147
+     ],
+     "rects": [
+      [
+       464,
+       848,
+       674,
+       946
+      ],
+      [
+       455,
+       946,
+       1735,
+       1049
+      ],
+      [
+       1629,
+       1023,
+       1740,
+       1147
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p039-b05",
+     "page_id": "riyad1956-p039",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وقال النبى صلى الله عليه وسلم ،",
+     "bbox": [
+      448,
+      1034,
+      837,
+      1135
+     ],
+     "rects": [
+      [
+       448,
+       1034,
+       837,
+       1135
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p039-b06",
+     "page_id": "riyad1956-p039",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« إنَّ عِظَمَ الجزاءِ مع عِظَمِ البلاءِ (٧) ، وإنَّ الله تعالى إذا أحبَّ قوماً ابتلاهم ، فمنْ رضِىَ (٨) فلهُ الرضا ومنْ سَخِطَ (٩) فلهُ السخط »",
+     "bbox": [
+      453,
+      1137,
+      1735,
+      1332
+     ],
+     "rects": [
+      [
+       453,
+       1137,
+       1584,
+       1254
+      ],
+      [
+       819,
+       1248,
+       1735,
+       1332
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p039-b07",
+     "page_id": "riyad1956-p039",
+     "type": "body",
+     "author_role": "matn",
+     "text": "رواه الترمذى وقال : حديث حسن .",
+     "bbox": [
+      455,
+      1248,
+      1733,
+      1438
+     ],
+     "rects": [
+      [
+       455,
+       1248,
+       793,
+       1332
+      ],
+      [
+       1498,
+       1385,
+       1733,
+       1438
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p039-b12",
+     "page_id": "riyad1956-p039",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٤) جزاء سيئاته",
+     "bbox": [
+      671,
+      2162,
+      980,
+      2241
+     ],
+     "rects": [
+      [
+       671,
+       2162,
+       980,
+       2241
+      ]
+     ],
+     "bbox_source": "vlm",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "٤",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 240,
+       "page_id": "riyad1956-p039",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p039-b04",
+       "anchor_char_offset": 61,
+       "footnote_block_id": "riyad1956-p039-b12",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p039-b13",
+     "page_id": "riyad1956-p039",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٥) ليثاب فى الآخرة",
+     "bbox": [
+      437,
+      2153,
+      665,
+      2255
+     ],
+     "rects": [
+      [
+       437,
+       2153,
+       665,
+       2255
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "٥",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 241,
+       "page_id": "riyad1956-p039",
+       "marker": "(٥)",
+       "anchor_block_id": "riyad1956-p039-b04",
+       "anchor_char_offset": 118,
+       "footnote_block_id": "riyad1956-p039-b13",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p039-b14",
+     "page_id": "riyad1956-p039",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٦) فيجازى به",
+     "bbox": [
+      1442,
+      2258,
+      1608,
+      2321
+     ],
+     "rects": [
+      [
+       1442,
+       2258,
+       1608,
+       2321
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "٦",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 242,
+       "page_id": "riyad1956-p039",
+       "marker": "(٦)",
+       "anchor_block_id": "riyad1956-p039-b04",
+       "anchor_char_offset": 140,
+       "footnote_block_id": "riyad1956-p039-b14",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p039-b15",
+     "page_id": "riyad1956-p039",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٧) الأذى فى تبعات ذنبه",
+     "bbox": [
+      995,
+      2247,
+      1288,
+      2323
+     ],
+     "rects": [
+      [
+       995,
+       2247,
+       1288,
+       2323
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "٧",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 243,
+       "page_id": "riyad1956-p039",
+       "marker": "(٧)",
+       "anchor_block_id": "riyad1956-p039-b06",
+       "anchor_char_offset": 40,
+       "footnote_block_id": "riyad1956-p039-b15",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p039-b16",
+     "page_id": "riyad1956-p039",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٨) لم يتبرم بقضاء الله جل وعلا منقادا للرجوع الى الله مولاه",
+     "bbox": [
+      442,
+      2247,
+      1721,
+      2402
+     ],
+     "rects": [
+      [
+       442,
+       2247,
+       631,
+       2323
+      ],
+      [
+       1290,
+       2312,
+       1721,
+       2402
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "٨",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 244,
+       "page_id": "riyad1956-p039",
+       "marker": "(٨)",
+       "anchor_block_id": "riyad1956-p039-b06",
+       "anchor_char_offset": 100,
+       "footnote_block_id": "riyad1956-p039-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    },
+    {
+     "id": "riyad1956-p039-b17",
+     "page_id": "riyad1956-p039",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "(٩) كره فللساخط الانتقام لأنه لم يرض عن فعل ربه جل وعلا",
+     "bbox": [
+      441,
+      2312,
+      1720,
+      2483
+     ],
+     "rects": [
+      [
+       441,
+       2312,
+       1123,
+       2402
+      ],
+      [
+       1522,
+       2394,
+       1720,
+       2483
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.98,
+     "flags": [],
+     "footnote_marker": "٩",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 245,
+       "page_id": "riyad1956-p039",
+       "marker": "(٩)",
+       "anchor_block_id": "riyad1956-p039-b06",
+       "anchor_char_offset": 127,
+       "footnote_block_id": "riyad1956-p039-b17",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h041-riyad1956-p039-b03",
+     "narrator": "انس",
+     "takhrij_printed": "رواه الترمذى وقال : حديث حسن",
+     "grading_status": "hadeethenc",
+     "grading": "صحيح",
+     "grading_source": "موسوعة الأحاديث النبوية (HadeethEnc)",
+     "grading_source_url": "https://hadeethenc.com/ar/browse/hadith/3339",
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D8%A5%D8%B0%D8%A7%20%D8%A3%D8%B1%D8%A7%D8%AF%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A8%D8%B9%D8%A8%D8%AF%D9%87%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%20%D8%B9%D8%AC%D9%84",
+     "block_ids": [
+      "riyad1956-p039-b03",
+      "riyad1956-p039-b04",
+      "riyad1956-p039-b05",
+      "riyad1956-p039-b06",
+      "riyad1956-p039-b07"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": 0.03037,
+    "bm25_rank": 9,
+    "dense_rank": 3,
+    "dense_sim": 0.6580305099487305
+   }
+  },
+  {
+   "id": "riyad1956-c026",
+   "kind": "editor_commentary",
+   "author_role": "editor",
+   "author_label": "تعليق المحقق مصطفى محمد عمارة",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب التوبة"
+   ],
+   "text": "فى الحديث فضيلة أهل بدر والعقبة والتأسف على ما فات من خير ورد الغيبة وهجران أهل البدعة واستحباب صلاة القادم ودخول المسجد للاعتراف بشكر المعبود بحق سبحانه وتعالى وحده وتوجه الناس إليه عند قدومه والمبايعة مع الإمام وقبول المعاذير واستحباب البكاء على نفسه وفضيلة الصدق وإيثار طاعة الله ورسوله على القريب ومودته وخدمة المرأة لزوجها والاحتياط بمجانبة ما يخاف الوقوع فى منهى عنه واستحباب التبشير عند وجود نعمة واندفاع كربة والتصدق بشيء عند ارتفاع الحزن وإجازة البشير بخلعة وجواز العارية ومصافحة القادر",
+   "highlights": [
+    [
+     278,
+     282
+    ],
+    [
+     441,
+     446
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p029",
+     "printed": 29,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 29"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p029-b11",
+     "page_id": "riyad1956-p029",
+     "type": "editor_commentary",
+     "author_role": "editor",
+     "text": "فى الحديث فضيلة أهل بدر والعقبة والتأسف على ما فات من خير ورد الغيبة وهجران أهل البدعة واستحباب صلاة القادم ودخول المسجد للاعتراف بشكر المعبود بحق سبحانه وتعالى وحده وتوجه الناس إليه عند قدومه والمبايعة مع الإمام وقبول المعاذير واستحباب البكاء على نفسه وفضيلة الصدق وإيثار طاعة الله ورسوله على القريب ومودته وخدمة المرأة لزوجها والاحتياط بمجانبة ما يخاف الوقوع فى منهى عنه واستحباب التبشير عند وجود نعمة واندفاع كربة والتصدق بشيء عند ارتفاع الحزن وإجازة البشير بخلعة وجواز العارية ومصافحة القادر",
+     "bbox": [
+      412,
+      1977,
+      1708,
+      2625
+     ],
+     "rects": [
+      [
+       413,
+       1977,
+       447,
+       2062
+      ],
+      [
+       412,
+       2059,
+       1699,
+       2139
+      ],
+      [
+       413,
+       2136,
+       1700,
+       2219
+      ],
+      [
+       414,
+       2225,
+       1700,
+       2300
+      ],
+      [
+       412,
+       2297,
+       1702,
+       2376
+      ],
+      [
+       414,
+       2377,
+       1705,
+       2497
+      ],
+      [
+       416,
+       2449,
+       1705,
+       2564
+      ],
+      [
+       1252,
+       2541,
+       1708,
+       2625
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [],
+   "quran": [],
+   "hadith": [],
+   "commentary_on": "riyad1956-c024",
+   "min_confidence": 1.0,
+   "retrieval": {
+    "rrf": 0.03031,
+    "bm25_rank": 5,
+    "dense_rank": 7,
+    "dense_sim": 0.6384553909301758
+   }
+  },
+  {
+   "id": "riyad1956-c041",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "وعن أبي عبدالرحمن عبدالله بن مسعودٍ رضي الله عنه قال : كأني أنظرُ إلى رسولِ الله صلى الله عليه وسلم يحكي نبياً من الأنبياء صلواتُ اللهِ وسلامهُ عليهمْ ضربهُ قومهُ فأدموهُ وهوَ يمسحُ (١) الدَّمَ عن وجههِ وهوَ يقولُ :\n« اللهمَّ اغفرْ لقومى فإنهم لا يعلمونَ »\nمتفق عليه .",
+   "highlights": [
+    [
+     18,
+     25
+    ],
+    [
+     40,
+     44
+    ],
+    [
+     76,
+     80
+    ],
+    [
+     85,
+     89
+    ],
+    [
+     130,
+     135
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p037",
+     "printed": 37,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 37"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p037-b02",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبي عبدالرحمن عبدالله بن مسعودٍ رضي الله عنه قال : كأني أنظرُ إلى رسولِ الله صلى الله عليه وسلم يحكي نبياً من الأنبياء صلواتُ اللهِ وسلامهُ عليهمْ ضربهُ قومهُ فأدموهُ وهوَ يمسحُ (١) الدَّمَ عن وجههِ وهوَ يقولُ :",
+     "bbox": [
+      419,
+      469,
+      1731,
+      788
+     ],
+     "rects": [
+      [
+       419,
+       469,
+       1731,
+       788
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b03",
+     "page_id": "riyad1956-p037",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« اللهمَّ اغفرْ لقومى فإنهم لا يعلمونَ »",
+     "bbox": [
+      425,
+      691,
+      1728,
+      897
+     ],
+     "rects": [
+      [
+       425,
+       691,
+       632,
+       793
+      ],
+      [
+       1335,
+       799,
+       1728,
+       897
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b04",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "متفق عليه .",
+     "bbox": [
+      1125,
+      799,
+      1317,
+      897
+     ],
+     "rects": [
+      [
+       1125,
+       799,
+       1317,
+       897
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p037-b16",
+     "page_id": "riyad1956-p037",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "يزيله، فقد شج رأسه وكسرت رباعيته وقد قابل صلى الله عليه وسلم جهلهم بفضله فدعا لهم بالغفران واعتذر عن فعلهم",
+     "bbox": [
+      428,
+      2464,
+      1724,
+      2625
+     ],
+     "rects": [
+      [
+       428,
+       2464,
+       1438,
+       2542
+      ],
+      [
+       1193,
+       2552,
+       1724,
+       2625
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "(١)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 227,
+       "page_id": "riyad1956-p037",
+       "marker": "(١)",
+       "anchor_block_id": "riyad1956-p037-b02",
+       "anchor_char_offset": 182,
+       "footnote_block_id": "riyad1956-p037-b16",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h034-riyad1956-p037-b02",
+     "narrator": "ابي عبدالرحمن عبدالله بن مسعود",
+     "takhrij_printed": "متفق عليه",
+     "grading_status": "in_sahihayn",
+     "grading": "في الصحيحين (متفق عليه)",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D8%A7%D9%84%D9%84%D9%87%D9%85%20%D8%A7%D8%BA%D9%81%D8%B1%20%D9%84%D9%82%D9%88%D9%85%D9%89%20%D9%81%D8%A5%D9%86%D9%87%D9%85%20%D9%84%D8%A7%20%D9%8A%D8%B9%D9%84%D9%85%D9%88%D9%86",
+     "block_ids": [
+      "riyad1956-p037-b02",
+      "riyad1956-p037-b03",
+      "riyad1956-p037-b04"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": null,
+    "bm25_rank": null,
+    "dense_rank": null,
+    "dense_sim": null,
+    "neighbor_of": "riyad1956-c042"
+   }
+  },
+  {
+   "id": "riyad1956-c044",
+   "kind": "matn",
+   "author_role": "matn",
+   "author_label": "متن الإمام النووي",
+   "breadcrumb": [
+    "رياض الصالحين",
+    "باب الصبر"
+   ],
+   "text": "وعن أبي هريرة رضي الله عنه قال : قال رسولُ الله صلى الله عليه وسلم\n« منْ يرِدِ اللهُ بِهِ خَيْراً يُصِبْ (٤) منهُ »\nرواه البخاري. وضبطوا «يُصَبْ » : بفتحِ الصاد وكسرها .",
+   "highlights": [
+    [
+     18,
+     22
+    ],
+    [
+     43,
+     47
+    ],
+    [
+     52,
+     56
+    ],
+    [
+     79,
+     84
+    ]
+   ],
+   "pages": [
+    {
+     "id": "riyad1956-p037",
+     "printed": 37,
+     "citation": "رياض الصالحين، الإمام يحيى بن شرف النووي، دار إحياء الكتب العربية (عيسى البابي الحلبي)، القاهرة، 1375هـ / 1956م، ص 37"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "riyad1956-p037-b13",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "وعن أبي هريرة رضي الله عنه قال : قال رسولُ الله صلى الله عليه وسلم",
+     "bbox": [
+      619,
+      2037,
+      1310,
+      2143
+     ],
+     "rects": [
+      [
+       619,
+       2037,
+       1310,
+       2143
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 1.0,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b14",
+     "page_id": "riyad1956-p037",
+     "type": "hadith",
+     "author_role": "matn",
+     "text": "« منْ يرِدِ اللهُ بِهِ خَيْراً يُصِبْ (٤) منهُ »",
+     "bbox": [
+      683,
+      2031,
+      1733,
+      2244
+     ],
+     "rects": [
+      [
+       683,
+       2031,
+       1733,
+       2244
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "",
+     "attached_to": null
+    },
+    {
+     "id": "riyad1956-p037-b15",
+     "page_id": "riyad1956-p037",
+     "type": "body",
+     "author_role": "matn",
+     "text": "رواه البخاري. وضبطوا «يُصَبْ » : بفتحِ الصاد وكسرها .",
+     "bbox": [
+      424,
+      2144,
+      1725,
+      2326
+     ],
+     "rects": [
+      [
+       424,
+       2144,
+       1223,
+       2238
+      ],
+      [
+       1571,
+       2256,
+       1725,
+       2326
+      ]
+     ],
+     "bbox_source": "fusion",
+     "confidence": 0.99,
+     "flags": [],
+     "footnote_marker": "",
+     "attached_to": null
+    }
+   ],
+   "footnotes": [
+    {
+     "id": "riyad1956-p037-b19",
+     "page_id": "riyad1956-p037",
+     "type": "footnote",
+     "author_role": "editor",
+     "text": "يوجه اليه مصيبة في ماله أو بدنه أو محبوبه .",
+     "bbox": [
+      1077,
+      2623,
+      1522,
+      2700
+     ],
+     "rects": [
+      [
+       1077,
+       2623,
+       1522,
+       2700
+      ]
+     ],
+     "bbox_source": "vlm+ocr_snap",
+     "confidence": 0.85,
+     "flags": [
+      "position from the vision model only (OCR could not confirm)"
+     ],
+     "footnote_marker": "(٤)",
+     "attached_to": null,
+     "attached_text": [],
+     "marker_links": [
+      {
+       "id": 230,
+       "page_id": "riyad1956-p037",
+       "marker": "(٤)",
+       "anchor_block_id": "riyad1956-p037-b14",
+       "anchor_char_offset": 38,
+       "footnote_block_id": "riyad1956-p037-b19",
+       "confidence": 1.0,
+       "method": "marker_exact"
+      }
+     ]
+    }
+   ],
+   "quran": [],
+   "hadith": [
+    {
+     "id": "h037-riyad1956-p037-b13",
+     "narrator": "ابي هريره",
+     "takhrij_printed": "رواه البخاري",
+     "grading_status": "in_sahihayn",
+     "grading": "في صحيح البخاري",
+     "grading_source": "تخريج الإمام النووي المطبوع",
+     "grading_source_url": null,
+     "dorar_search_url": "https://dorar.net/hadith/search?q=%D9%8A%D8%B1%D8%AF%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A8%D9%87%20%D8%AE%D9%8A%D8%B1%D8%A7%20%D9%8A%D8%B5%D8%A8%20%D9%85%D9%86%D9%87",
+     "block_ids": [
+      "riyad1956-p037-b13",
+      "riyad1956-p037-b14",
+      "riyad1956-p037-b15"
+     ]
+    }
+   ],
+   "commentary_on": null,
+   "min_confidence": 0.85,
+   "retrieval": {
+    "rrf": null,
+    "bm25_rank": null,
+    "dense_rank": null,
+    "dense_sim": null,
+    "neighbor_of": "riyad1956-c042"
+   }
+  }
+ ],
+ "ai_notice": "أداة بحث مدعومة بالذكاء الاصطناعي؛ نصوص المصدر منقولة حرفيًا من الكتاب ومتحقَّق منها، والإيضاح مولَّد آليًا.",
+ "cached": false,
+ "external": {
+  "items": {
+   "Q1": {
+    "kind": "quran",
+    "surah": 47,
+    "surah_name": "مُحَمَّدٍ",
+    "ayah": 2,
+    "text": "وَٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ وَءَامَنُواْ بِمَا نُزِّلَ عَلَىٰ مُحَمَّدࣲ وَهُوَ ٱلۡحَقُّ مِن رَّبِّهِمۡ كَفَّرَ عَنۡهُمۡ سَيِّـَٔاتِهِمۡ وَأَصۡلَحَ بَالَهُمۡ ۝٢",
+    "tafsir": {
+     "text": "والذين صدَّقوا الله واتَّبَعوا شرعه وصدَّقوا بالكتاب الذي أنزل على محمد صلى الله عليه وسلم، وهو الحق الذي لا شك فيه من ربهم، عفا عنهم وستر عليهم ما عملوا من السيئات، فلم يعاقبهم عليها، وأصلح شأنهم في الدنيا والآخرة.",
+     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
+     "url": "https://quranenc.com/ar/browse/arabic_moyassar/47#2"
+    },
+    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+    "url": "https://quranpedia.net/surah/47/2"
+   },
+   "Q2": {
+    "kind": "quran",
+    "surah": 7,
+    "surah_name": "الأَعۡرَافِ",
+    "ayah": 153,
+    "text": "وَٱلَّذِينَ عَمِلُواْ ٱلسَّيِّـَٔاتِ ثُمَّ تَابُواْ مِنۢ بَعۡدِهَا وَءَامَنُوٓاْ إِنَّ رَبَّكَ مِنۢ بَعۡدِهَا لَغَفُورࣱ رَّحِيمࣱ ۝١٥٣",
+    "tafsir": {
+     "text": "والذين عملوا السيئات من الكفر والمعاصي، ثم رجعوا مِن بعد فعلها إلى الإيمان والعمل الصالح، إن ربك من بعد التوبة النصوح لغفور لأعمالهم غير فاضحهم بها، رحيم بهم وبكل مَن كان مثلهم من التائبين.",
+     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
+     "url": "https://quranenc.com/ar/browse/arabic_moyassar/7#153"
+    },
+    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+    "url": "https://quranpedia.net/surah/7/153"
+   },
+   "Q3": {
+    "kind": "quran",
+    "surah": 47,
+    "surah_name": "مُحَمَّدٍ",
+    "ayah": 5,
+    "text": "سَيَهۡدِيهِمۡ وَيُصۡلِحُ بَالَهُمۡ ۝٥",
+    "tafsir": {
+     "text": "فإذا لقيتم- أيها المؤمنون- الذين كفروا في ساحات الحرب فاصدقوهم القتال، واضربوا منهم الأعناق، حتى إذا أضعفتموهم بكثرة القتل، وكسرتم شوكتهم، فأحكموا قيد الأسرى: فإما أن تَمُنُّوا عليهم بفك أسرهم بغير عوض، وإما أن يفادوا أنفسهم بالمال أو غيره، وإما أن يُسْتَرَقُّوا أو يُقْتَلوا، واستمِرُّوا على ذلك حتى تنتهي الحرب. ذلك الحكم المذكور في ابتلاء المؤمنين بالكافرين ومداولة الأيام بينهم، ولو يشاء الله لانتصر للمؤمنين من الكافرين بغير قتال، ولكن جعل عقوبتهم على أيديكم، فشرع الجهاد؛ ليختبركم بهم، ولينصر بكم دينه. والذين قُتلوا في سبيل الله من المؤمنين فلن يُبْطِل الله ثواب أعمالهم، سيوفقهم أيام حياتهم في الدنيا إلى طاعته ومرضاته، ويُصْلح حالهم وأمورهم وثوابهم في الدنيا والآخرة، ويدخلهم الجنة، عرَّفهم بها ونعتها لهم، ووفقهم للقيام بما أمرهم به -ومن جملته الشهادة في سبيله-، ثم عرَّفهم إذا دخلوا الجنة منازلهم بها.",
+     "source": "التفسير الميسر، مجمع الملك فهد لطباعة المصحف الشريف، عبر موسوعة القرآن الكريم (QuranEnc)",
+     "url": "https://quranenc.com/ar/browse/arabic_moyassar/47#5"
+    },
+    "source": "مجمع الملك فهد لطباعة المصحف الشريف، بيانات المطورين، رواية حفص، الإصدار 3.0",
+    "url": "https://quranpedia.net/surah/47/5"
+   },
+   "T1": {
+    "kind": "term",
+    "term": "الصبر",
+    "term_en": "Sabr (Patience)",
+    "definition": "قال ابن تيمية: (فهو يفرح بما يحبه، ويؤذيه ما يبغضه، ويصبر على ما يؤذيه، وحبه ورضاه وفرحه وسخطه وصبره على ما يؤذيه كل ذلك من كماله، وكل ذلك من صفاته وأفعاله، وهو الذي خلق الخلائق وأفعالهم وهم لن يبلغوا ضره فيضروه ولن يبلغوا نفعه فينفعوه). وقال ابن القيم: (وصبره تعالى يفارق صبر المخلوق ولا يماثله من وجوه متعددة،... وأما صبره سبحانه فمتعلق بكفر العباد وشركهم ومسبتهم له سبحانه وأنواع معاصيهم وفجورهم). وقال السعدي: (الذي يعصيه العاصون ويتجرأ عليه المتجرئون وهو يعافيهم ويرزقهم ويسدي عليهم نعمه الظاهرة والباطنة).",
+    "explanation": "صفة ثابتة لله بالسنة الصحيحة، أي رفقه وحلمه وعدم معاجلته للكفار والعاصين.",
+    "definition_en": "",
+    "source": "موسوعة المصطلحات الإسلامية المترجمة (terminologyenc.com)",
+    "url": "https://terminologyenc.com/ar/browse/term/181714"
+   },
+   "T2": {
+    "kind": "term",
+    "term": "الابتلاء",
+    "term_en": "Test/Trial/Affliction",
+    "definition": "اختِبارٌ وامتِحانٌ مِن اللهِ تعالى للعَبْدِ لِيتَبيَّنَ مَدى صَبرِهِ وإيمانِهِ.",
+    "explanation": "الابْتِلاءُ: اسْتِخراجُ ما عند العَبْدِ المُبْتَلى، وتَعرُّفُ حالِهِ في الخَيْرِ والشَّرِّ بِتَحْمِيلِهِ المَشَقَّةَ، وهو سنَّةُ اللهِ الجارِيَةِ لِتمحِيصِ أولِيائهِ، وهو دَلِيلُ الكَرامَةِ لا الإهانَةِ، وعُنوانُ الصِّدقِ في الإيمانِ، واللهُ عزَّ وجلَّ يعلمُ الصَّادقَ من الكاذبِ والمؤمنَ من المنافِقِ دونَ ابتلاءٍ، ولكنَّه سبحانه لا يُؤاخِذُ النَّاسَ بعلمه السَّابقِ، بل يبتليهم حتَّى يظهرَ فيهم علمه ظهورًا يقطعُ حجَّتهم، ويكونُ سببًا في ثوابِهم أو عقوبتِهم.",
+    "definition_en": "\"Ibtilā\": test, trial. It is derived from \"balā’\", which means: assigning a hard task. \"Ibtilā’\" applies to both ease and difficulty; however, it is mostly used to refer to adversity and affliction.",
+    "source": "موسوعة المصطلحات الإسلامية المترجمة (terminologyenc.com)",
+    "url": "https://terminologyenc.com/ar/browse/term/8780"
+   }
+  },
+  "referrals": [
+   {
+    "title": "بينات: أسئلة وأجوبة عن الإسلام",
+    "url": "https://dawa.center/file/7937"
+   },
+   {
+    "title": "موسوعة المصطلحات الإسلامية المترجمة",
+    "url": "https://terminologyenc.com"
+   }
+  ]
+ },
+ "status": "answered",
+ "model": "openrouter:google/gemini-3.1-pro-preview",
+ "uses_external": false,
+ "answer": {
+  "source_points": [
+   {
+    "text": "يكفّر الله خطايا المسلم بكل ما يصيبه من تعب ومرض وهم وحزن وغم.",
+    "passage": "P1",
+    "quote": "مايصيبُ المسلمَ من نصبٍ ولا وصبٍ ولا همٍّ ولا حزنٍ ولا أذىً ولا غمٍّ حتى الشوكةِ يشاكُها إلا كفَّرَ الله بها منْ خطاياهُ",
+    "verified": true,
+    "passage_id": "riyad1956-c042"
+   },
+   {
+    "text": "كلمة الوصب في الحديث تعني المرض.",
+    "passage": "P1",
+    "quote": "و « الوصبُ » : المرضُ .",
+    "verified": true,
+    "passage_id": "riyad1956-c042"
+   },
+   {
+    "text": "أي أذى يصيب المسلم، ولو كان مجرد شوكة، يكفر الله به سيئاته وتحط عنه ذنوبه.",
+    "passage": "P2",
+    "quote": "مامنْ مسلمٍ يصيبهُ أذىً شوكةٌ فما فوْقها إلَّا كفَّرَ الله بها سيئاته ، وحُطتْ عنهُ ذُنُوبُه كما تحطُّ الشجرةُ ورقها",
+    "verified": true,
+    "passage_id": "riyad1956-c043"
+   },
+   {
+    "text": "تعجيل العقوبة للمسلم في الدنيا هو من علامات إرادة الله الخير به.",
+    "passage": "P4",
+    "quote": "إذا أراد الله بعبدِهِ الخيرَ عجَّلَ له العقوبَةَ فى الدنيا",
+    "verified": true,
+    "passage_id": "riyad1956-c048"
+   },
+   {
+    "text": "من يرد الله به خيرا يبتليه ويصب منه.",
+    "passage": "P7",
+    "quote": "منْ يرِدِ اللهُ بِهِ خَيْراً يُصِبْ منهُ",
+    "verified": true,
+    "passage_id": "riyad1956-c044"
+   },
+   {
+    "text": "وفي تعليق المحقق، الإصابة تعني توجيه مصيبة للإنسان في ماله أو بدنه أو محبوبه.",
+    "passage": "P7",
+    "quote": "يوجه اليه مصيبة في ماله أو بدنه أو محبوبه .",
+    "verified": true,
+    "passage_id": "riyad1956-c044"
+   }
+  ],
+  "explanation": "تؤكد النصوص أن الله تعالى يكفّر خطايا المسلم بما يصيبه من هم وحزن ومرض وأذى، حتى الشوكة يشاكها [P1]. وتتساقط ذنوب المسلم بهذه الابتلاءات كما تتساقط أوراق الشجر [P2]. ويُعد تعجيل العقوبة والمصائب في الدنيا، سواء في البدن أو المال أو الأحباب، علامة على إرادة الله الخير بعبده وتطهيره [P4, P7].",
+  "disagreement_noted": false
+ },
+ "verification": {
+  "total": 6,
+  "verified": 6,
+  "removed": []
+ },
+ "stages": [
+  {
+   "stage": "classify",
+   "level": "A",
+   "reason": "السؤال يتناول مسألة إيمانية وأخلاقية أساسية وثابتة في الأحاديث الصحيحة حول تكفير الذنوب بالابتلاءات."
+  },
+  {
+   "stage": "retrieve",
+   "n": 7,
+   "neighbors": 2,
+   "dense": true
+  },
+  {
+   "stage": "approved_sources",
+   "items": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "T1",
+    "T2"
+   ]
+  },
+  {
+   "stage": "support_gate",
+   "best_sim": 0.732,
+   "threshold": 0.55
+  },
+  {
+   "stage": "generate",
+   "model": "openrouter:google/gemini-3.1-pro-preview",
+   "supported": true
+  },
+  {
+   "stage": "verify_quotes",
+   "kept": 6,
+   "removed": 0
+  }
+ ],
+ "seconds": 22.53
+}

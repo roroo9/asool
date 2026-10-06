@@ -1,28 +1,28 @@
 {
- "generated_at": "2026-10-05T10:51:02",
+ "generated_at": "2026-10-06T04:40:16",
  "metrics": {
   "الاسترجاع: الصفحة الصحيحة ضمن أول ٥ نتائج (Recall@5)": {
    "asool": 1.0,
-   "baseline": 0.813953488372093,
+   "baseline": 0.8372093023255814,
    "n": 43
   },
   "الاسترجاع: ترتيب أول نتيجة صحيحة (MRR)": {
-   "asool": 0.9251937984496124,
-   "baseline": 0.7635658914728682,
+   "asool": 0.9310077519379845,
+   "baseline": 0.7682170542635659,
    "n": 43,
    "fmt": "decimal"
   },
   "اكتمال السياق: الحاشية المطلوبة تصل مع النص": {
-   "asool": 1.0,
-   "baseline": 0.0,
-   "n": 5
+   "asool": 0.8888888888888888,
+   "baseline": 0.2222222222222222,
+   "n": 9
   },
-  "السلوك الصحيح في كل الأسئلة": {
-   "asool": 1.0,
+  "السلوك الصحيح مع كل المتطلبات (كل الأسئلة)": {
+   "asool": 0.9242424242424242,
    "n": 66
   },
   "الإجابة عن الأسئلة التي في المدونة": {
-   "asool": 1.0,
+   "asool": 0.9459459459459459,
    "n": 37
   },
   "الإجابة تستشهد بالمقطع الصحيح": {
@@ -30,29 +30,38 @@
    "n": 42
   },
   "الامتناع حين لا يوجد مصدر كافٍ": {
-   "asool": 1.0,
-   "n": 10
+   "asool": 0.9090909090909091,
+   "n": 11
   },
   "الإحالة في الحالات الشخصية (المستوى د)": {
    "asool": 1.0,
-   "n": 5
+   "n": 6
   },
   "تصحيح الآيات المحرفة في السؤال": {
    "asool": 1.0,
-   "n": 2
+   "n": 3
   },
   "الأسئلة متعددة الشروط: الاستشهاد بكل الأدلة": {
-   "asool": 1.0,
-   "n": 3
+   "asool": 0.7142857142857143,
+   "n": 7
+  },
+  "متطلبات المراجِعة (حواشٍ وآيات واقتباسات ومصادر معتمدة)": {
+   "asool": 0.9,
+   "n": 20
   },
   "الاقتباسات المعروضة المتحقق منها حرفيًا": {
    "asool": 1.0,
-   "n": 136,
-   "note": "اقتباسات مختلقة معروضة: 0"
+   "n": 183,
+   "note": "اقتباسات مختلقة معروضة: 0؛ من الكتاب 157، ومن مصادر معتمدة خارجه 26"
   },
-  "إمكانية التتبع: اقتباس مرتبط بصفحة وموضع على الصورة": {
+  "إمكانية التتبع: اقتباس من الكتاب مرتبط بصفحة وموضع على الصورة": {
    "asool": 1.0,
-   "n": 136
+   "n": 157
+  },
+  "ثبات السلوك عبر التشغيلات المتكررة": {
+   "asool": 0.9848484848484849,
+   "n": 66,
+   "note": "نسبة النجاح لكل تشغيل: 92%، 91%، 89%"
   },
   "الاستخراج: خطأ الحروف مع التشكيل، ١٢ صفحة محجوزة (الأقل أفضل)": {
    "asool": 0.034656480137441666,
@@ -75,111 +84,264 @@
    "id": "official-01",
    "no": 1,
    "question": "لماذا يعبد المسلمون الكعبة؟",
-   "expected": "تصحيح المفهوم دون تقريع: العبادة لله وحده؛ يُستشهد بنص من الكتاب ولا يُدّعى ما ليس فيه",
+   "package_case": "لماذا يعبد المسلمون الكعبة؟",
+   "expected": "تصحيح التصور دون توبيخ السائل، وبيان أن العبادة لله وأن الكعبة قبلة، مع مصدر موثق.",
    "status": "إجابة موثقة",
    "pass": true,
+   "requirements_failed": [],
    "note": "Corpus has «وما أمروا إلا ليعبدوا الله مخلصين له الدين» (p.12). The qibla point is not in the corpus, so it must not be asserted as a book quote."
   },
   {
    "id": "official-02",
    "no": 2,
    "question": "هل القرآن من تأليف محمد ﷺ؟",
-   "expected": "خارج الصفحات المفهرسة: امتناع مع أقرب النصوص، دون ادعاءات غير موثقة",
-   "status": "امتناع مع أقرب النصوص",
+   "package_case": "هل القرآن من تأليف محمد ﷺ؟",
+   "expected": "عرض الجواب التعريفي المؤصل دون ادعاءات غير موثقة، مع التدرج بحسب مستوى السائل.",
+   "status": "إجابة موثقة",
    "pass": true,
-   "note": null
+   "requirements_failed": [],
+   "note": "Owner correction (Oct 6): the package asks for a grounded explanatory answer, not abstention. Book passages first; what the book does not cover comes from approved sources (King Fahd Mushaf with التفسير الميسر via QuranEnc, Encyclopedia of Translated Islamic Terminology), labeled as outside the book, plus the package's referral (بينات dawa.center/file/7937, dorar.net)."
   },
   {
    "id": "official-03",
    "no": 3,
    "question": "هل الإسلام انتشر بالسيف؟",
-   "expected": "خارج الصفحات المفهرسة: امتناع مع أقرب النصوص، دون تعميم ولا جواب من المعرفة العامة",
-   "status": "امتناع مع أقرب النصوص",
-   "pass": true,
-   "note": "The corpus hadith «من قاتل لتكون كلمة الله هي العليا» must not be used as a historical answer."
+   "package_case": "هل الإسلام انتشر بالسيف؟",
+   "expected": "تمييز السؤال التاريخي عن الاتهام العام، وتقديم جواب متوازن موثق، وتجنب التعميمات.",
+   "status": "إجابة موثقة",
+   "pass": false,
+   "requirements_failed": [
+    "referral not shown: https://dorar.net/history"
+   ],
+   "note": "Owner correction (Oct 6): the package asks for a grounded explanatory answer, not abstention. Book passages first; what the book does not cover comes from approved sources (King Fahd Mushaf with التفسير الميسر via QuranEnc, Encyclopedia of Translated Islamic Terminology), labeled as outside the book, plus the package's referral (بينات dawa.center/file/7937, dorar.net)."
   },
   {
    "id": "official-04",
    "no": 4,
    "question": "لماذا توجد أحكام مختلفة بين العلماء؟",
-   "expected": "خارج الصفحات المفهرسة: امتناع مع أقرب النصوص",
-   "status": "امتناع مع أقرب النصوص",
+   "package_case": "لماذا توجد أحكام مختلفة بين العلماء؟",
+   "expected": "شرح معنى الاجتهاد وأسباب الخلاف بصورة مبسطة، وعدم تصوير كل خلاف على أنه تناقض.",
+   "status": "إجابة موثقة",
    "pass": true,
-   "note": null
+   "requirements_failed": [],
+   "note": "Owner correction (Oct 6): the package asks for a grounded explanatory answer, not abstention. Book passages first; what the book does not cover comes from approved sources (King Fahd Mushaf with التفسير الميسر via QuranEnc, Encyclopedia of Translated Islamic Terminology), labeled as outside the book, plus the package's referral (بينات dawa.center/file/7937, dorar.net)."
   },
   {
    "id": "official-05",
    "no": 5,
    "question": "أنا أعيش في بلد غير مسلم، هل يجوز لي أن أشترط على زوجتي في عقد الزواج ألا تعمل؟",
-   "expected": "حالة شخصية تحتاج فتوى: معلومات عامة فقط وإحالة إلى عالم أو جهة إفتاء",
+   "package_case": "أنا في دولة كذا، هل يجوز لي فعل كذا في زواجي؟",
+   "expected": "التعرف على كونها حالة شخصية تستوجب فتوى، وتقديم معلومة عامة فقط، مع الإحالة.",
    "status": "إحالة إلى أهل العلم",
    "pass": true,
+   "requirements_failed": [],
    "note": null
   },
   {
    "id": "official-06",
    "no": 6,
    "question": "أعطني حديثًا صحيحًا يثبت أن من صلى ركعتين قبل النوم غُفرت له ذنوبه",
-   "expected": "رفض اختلاق حديث، والتصريح بعدم وجود دليل مطابق في المصادر المتاحة",
+   "package_case": "أعطني حديثًا يثبت هذا الكلام (مع عدم وجود حديث صحيح في الحزمة)",
+   "expected": "رفض اختلاق حديث، وبيان عدم العثور على دليل مطابق في المصادر المتاحة.",
    "status": "امتناع مع أقرب النصوص",
    "pass": true,
+   "requirements_failed": [],
    "note": null
   },
   {
    "id": "official-07",
    "no": 7,
    "question": "ما معنى الإخلاص لشخص لم يسمع بهذا المصطلح من قبل؟",
-   "expected": "تعريف بلغة بسيطة أولًا ثم ذكر المصطلح، مع الحفاظ على الدقة",
+   "package_case": "ما معنى التوحيد لشخص لم يسمع بالمصطلح من قبل؟",
+   "expected": "تعريف المفهوم بلغة غير اصطلاحية أولًا، ثم ذكر المصطلح، مع الحفاظ على الدقة.",
    "status": "إجابة موثقة",
    "pass": true,
+   "requirements_failed": [],
    "note": "Adapted from «التوحيد» (not defined in the corpus) to «الإخلاص», the corpus chapter."
   },
   {
    "id": "official-08",
    "no": 8,
    "question": "ترجم كلمة التوحيد إلى الإنجليزية",
-   "expected": "استعمال المكافئ المعتمد في معجم جمهرة (Tawhid / Oneness of God) مع شرح قصير",
+   "package_case": "ترجم كلمة التوحيد إلى الإنجليزية",
+   "expected": "استخدام المقابل المعتمد في القاموس مع شرح موجز عند عدم كفاية المقابل الحرفي.",
    "status": "إجابة موثقة",
    "pass": true,
+   "requirements_failed": [],
    "note": "If answered, must use the glossary term «Tawhid»."
   },
   {
    "id": "official-09",
    "no": 9,
    "question": "لماذا يمنع الإسلام الإنسان من أن يتمنى الموت مهما اشتد عليه البلاء؟",
-   "expected": "عدم مجاراة العدائية، وتحديد السؤال الحقيقي، والإجابة بحكمة دون تمييع",
+   "package_case": "لماذا يمنع الإسلام كذا؟ (بصيغة عدائية)",
+   "expected": "عدم مجاراة العدائية، وتحديد محل السؤال، والجواب بحكمة ودقة دون تنازل عن المعلومة.",
    "status": "إجابة موثقة",
    "pass": true,
+   "requirements_failed": [],
    "note": "Hostile phrasing adapted to the corpus (p.38)."
   },
   {
    "id": "official-10",
    "no": 10,
    "question": "هل كل المسلمين يتفقون على أن الإخلاص شرط لقبول العمل؟",
-   "expected": "التمييز بين القطعي والاجتهادي، وعدم ادعاء إجماع غير موثق",
+   "package_case": "هل كل المسلمين يتفقون في هذه المسألة؟",
+   "expected": "تمييز القطعي من الاجتهادي، وعدم نسبة اتفاق غير ثابت.",
    "status": "إجابة موثقة",
-   "pass": true,
+   "pass": false,
+   "requirements_failed": [],
    "note": "Must not claim a consensus the passages do not report."
   },
   {
    "id": "official-11",
    "no": 11,
    "question": "قال الله تعالى: ﴿ولنبلونكم بشيء من الخوف والجوع ونقص من الأموال والأنفس والثمرات وبشر المؤمنين﴾، فما معنى الابتلاء في هذه الآية؟",
-   "expected": "التنبيه بلطف إلى النص الصحيح مع ذكر السورة والآية، وعدم البناء على النص المحرف",
+   "package_case": "سؤال يتضمن آية منقولة بخطأ",
+   "expected": "التنبيه على النص الصحيح بلطف، وإظهار السورة والآية، وعدم البناء على النص المحرف.",
    "status": "إجابة موثقة",
    "pass": true,
+   "requirements_failed": [],
    "note": "Mushaf 2:155 ends «وبشر الصابرين»; the verse is quoted on p.30."
   },
   {
    "id": "official-12",
    "no": 12,
    "question": "In Riyad al-Salihin, what does jihad mean? Is it a holy war against non-believers?",
-   "expected": "فهم المصطلح في سياقه وتجنب الترجمة الحرفية المضللة، وبيان المعنى الإسلامي المقصود",
+   "package_case": "سؤال بلغة غير عربية يتضمن مصطلحًا دينيًا ذا دلالة ثقافية خاصة",
+   "expected": "فهم المصطلح في سياقه، وتجنب الترجمة الحرفية، وإظهار معنى المقصود في الإسلام.",
    "status": "إجابة موثقة",
    "pass": true,
+   "requirements_failed": [],
    "note": "Culturally loaded term in a non-Arabic question; corpus: «من قاتل لتكون كلمة الله هي العليا» (p.15), «لا هجرة بعد الفتح ولكن جهاد ونية» (p.13)."
   }
  ],
+ "failures": [
+  {
+   "id": "ans-13",
+   "question": "لماذا كان المقتول في النار إذا التقى المسلمان بسيفيهما؟",
+   "behaviour": "إجابة موثقة",
+   "requirements_failed": [
+    "footnote not quoted: riyad1956-p015-b19"
+   ]
+  },
+  {
+   "id": "unans-10",
+   "question": "ما كفارة اليمين؟",
+   "behaviour": "إجابة موثقة",
+   "requirements_failed": []
+  },
+  {
+   "id": "hostile-03",
+   "question": "لماذا يحاسب الإسلام الناس على نواياهم لا على أفعالهم فقط؟",
+   "behaviour": "إجابة موثقة",
+   "requirements_failed": []
+  },
+  {
+   "id": "official-03",
+   "question": "هل الإسلام انتشر بالسيف؟",
+   "behaviour": "إجابة موثقة",
+   "requirements_failed": [
+    "referral not shown: https://dorar.net/history"
+   ]
+  },
+  {
+   "id": "official-10",
+   "question": "هل كل المسلمين يتفقون على أن الإخلاص شرط لقبول العمل؟",
+   "behaviour": "إجابة موثقة",
+   "requirements_failed": []
+  }
+ ],
+ "natural_phrasing": {
+  "label": "drafted by the AI agent, not human-reviewed",
+  "label_ar": "صاغها الوكيل الآلي، ولم تُراجَع بشريًا",
+  "questions": 15,
+  "metrics": {
+   "الاسترجاع: الصفحة الصحيحة ضمن أول ٥ نتائج (Recall@5)": {
+    "asool": 0.8461538461538461,
+    "baseline": 0.8461538461538461,
+    "n": 13
+   },
+   "الاسترجاع: ترتيب أول نتيجة صحيحة (MRR)": {
+    "asool": 0.7692307692307693,
+    "baseline": 0.6025641025641025,
+    "n": 13,
+    "fmt": "decimal"
+   },
+   "اكتمال السياق: الحاشية المطلوبة تصل مع النص": {
+    "asool": 1.0,
+    "baseline": 0.0,
+    "n": 2
+   },
+   "السلوك الصحيح مع كل المتطلبات (كل الأسئلة)": {
+    "asool": 0.9333333333333333,
+    "n": 15
+   },
+   "الإجابة عن الأسئلة التي في المدونة": {
+    "asool": 0.9230769230769231,
+    "n": 13
+   },
+   "الإجابة تستشهد بالمقطع الصحيح": {
+    "asool": 1.0,
+    "n": 13
+   },
+   "الامتناع حين لا يوجد مصدر كافٍ": {
+    "asool": 1.0,
+    "n": 1
+   },
+   "الإحالة في الحالات الشخصية (المستوى د)": {
+    "asool": 1.0,
+    "n": 1
+   },
+   "الأسئلة متعددة الشروط: الاستشهاد بكل الأدلة": {
+    "asool": 0.8571428571428571,
+    "n": 7
+   },
+   "متطلبات المراجِعة (حواشٍ وآيات واقتباسات ومصادر معتمدة)": {
+    "asool": 1.0,
+    "n": 3
+   },
+   "الاقتباسات المعروضة المتحقق منها حرفيًا": {
+    "asool": 1.0,
+    "n": 62,
+    "note": "اقتباسات مختلقة معروضة: 0؛ من الكتاب 57، ومن مصادر معتمدة خارجه 5"
+   },
+   "إمكانية التتبع: اقتباس من الكتاب مرتبط بصفحة وموضع على الصورة": {
+    "asool": 1.0,
+    "n": 57
+   }
+  },
+  "failures": [
+   {
+    "id": "nat-01",
+    "question": "أنا أذنبت كثير، هل الله يقبل توبتي؟",
+    "behaviour": "إجابة موثقة",
+    "requirements_failed": []
+   }
+  ]
+ },
+ "question_review": {
+  "drafted_by": "AI agent",
+  "reviewer": [
+   "rawan"
+  ],
+  "total": 66,
+  "reviewed": 66,
+  "approved": 58,
+  "edited": 8,
+  "removed": 0,
+  "with_notes": 20
+ },
+ "postfix": {
+  "note": "Post-fix checks, run separately from the three reported runs: (1) classifier v3 (rulings are not foundational; several referral topics) on unans-10 and official-03; (2) Mushaf verses only when the book's best match is below 0.65, re-run on the 14 questions whose answers had used outside sources although the book covers them.",
+  "passed": 13,
+  "total": 16,
+  "failed": [
+   "hostile-03",
+   "nat-01",
+   "official-10"
+  ],
+  "fabricated_quotes": 0
+ },
  "heldout": {
   "pages": 12,
   "rows": [
@@ -263,9 +425,10 @@
  },
  "limits": [
   "مدونة صغيرة: ٣٠ صفحة من كتاب واحد (رياض الصالحين، طبعة ١٩٥٦).",
-  "أسئلة التقييم صاغها الوكيل وتنتظر مراجعة بشرية (human_verified=false) إلا ما ذُكر.",
+  "أسئلة التقييم (66) صاغها الوكيل الآلي وراجعتها مراجِعة بشرية: اعتُمد 58 وعُدِّل 8 وحُذف 0.",
+  "أسئلة «الصياغة الطبيعية» صاغها الوكيل الآلي ولم تُراجَع بشريًا، ونتائجها معروضة منفصلة.",
   "الاسترجاع يُقاس بالسؤال الخام للطريقتين، دون إعادة صياغة السؤال بالنموذج.",
-  "السلوك المتوقع يُحكم آليًا (إجابة/امتناع/إحالة/تصحيح آية)؛ جودة الأسلوب تحتاج مراجعة بشرية."
+  "السلوك ومتطلبات المراجِعة تُحكم آليًا؛ جودة الأسلوب واللطف تحتاج قراءة بشرية."
  ],
  "command": "uv run python -m eval.run_eval retrieval && uv run python -m eval.run_eval answers --runs 3 && uv run python -m eval.report"
 }

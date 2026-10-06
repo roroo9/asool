@@ -9,7 +9,7 @@
   "language": "ar",
   "quoted_verse": "",
   "asks_for_evidence_text": false,
-  "search_query_ar": "من قاتل لتكون كلمة الله هي العليا فهو في سبيل الله نية الجهاد",
+  "search_query_ar": "من قاتل لتكون كلمة الله هي العليا فهو في سبيل الله والنية في الجهاد",
   "foundational": true,
   "referral_topic": "concept",
   "mushaf_query_ar": "الذين آمنوا يقاتلون في سبيل الله لتكون كلمة الله هي العليا",
@@ -18,7 +18,7 @@
    "النية",
    "الإخلاص"
   ],
-  "reason": "السؤال يستفسر عن ضابط ومعيار القتال في سبيل الله وهو أصل شرعي مستقر بالنصوص النبوية والقرآنية."
+  "reason": "السؤال يستفسر عن ضابط ومعنى القتال في سبيل الله وهو أصل شرعي ثابت في السنة النبوية."
  },
  "quoted_verse_check": null,
  "passages": [
@@ -421,7 +421,7 @@
     "rrf": 0.03279,
     "bm25_rank": 1,
     "dense_rank": 1,
-    "dense_sim": 0.7571827173233032
+    "dense_sim": 0.7788528203964233
    }
   },
   {
@@ -617,10 +617,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03175,
+    "rrf": 0.032,
     "bm25_rank": 2,
-    "dense_rank": 4,
-    "dense_sim": 0.6590002775192261
+    "dense_rank": 3,
+    "dense_sim": 0.6822003722190857
    }
   },
   {
@@ -830,10 +830,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.03058,
+    "rrf": 0.03033,
     "bm25_rank": 8,
-    "dense_rank": 3,
-    "dense_sim": 0.6625759601593018
+    "dense_rank": 4,
+    "dense_sim": 0.6793424487113953
    }
   },
   {
@@ -1251,10 +1251,10 @@
    "commentary_on": null,
    "min_confidence": 0.85,
    "retrieval": {
-    "rrf": 0.02927,
+    "rrf": 0.02908,
     "bm25_rank": 5,
-    "dense_rank": 12,
-    "dense_sim": 0.6233810782432556
+    "dense_rank": 13,
+    "dense_sim": 0.6500654220581055
    }
   },
   {
@@ -1434,7 +1434,7 @@
     "rrf": 0.02844,
     "bm25_rank": 14,
     "dense_rank": 7,
-    "dense_sim": 0.6414589881896973
+    "dense_sim": 0.6663270592689514
    }
   },
   {
@@ -2322,7 +2322,7 @@
   {
    "stage": "classify",
    "level": "A",
-   "reason": "السؤال يستفسر عن ضابط ومعيار القتال في سبيل الله وهو أصل شرعي مستقر بالنصوص النبوية والقرآنية."
+   "reason": "السؤال يستفسر عن ضابط ومعنى القتال في سبيل الله وهو أصل شرعي ثابت في السنة النبوية."
   },
   {
    "stage": "retrieve",
@@ -2343,7 +2343,7 @@
   },
   {
    "stage": "support_gate",
-   "best_sim": 0.757,
+   "best_sim": 0.779,
    "threshold": 0.55
   },
   {
@@ -2357,5 +2357,5 @@
    "removed": 0
   }
  ],
- "seconds": 14.96
+ "seconds": 15.28
 }

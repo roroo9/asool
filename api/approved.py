@@ -91,25 +91,24 @@ def verse_entries(query: str, qvec: np.ndarray | None, k: int = 4) -> list[dict]
     return out
 
 
-def context(question: str, cls: dict, qvec: np.ndarray | None) -> dict:
+def context(question: str, cls: dict, qvec: np.ndarray | None, verses: bool = True) -> dict:
     """External items tagged Q1.. / T1.. for the prompt, plus referrals."""
     mq = cls.get("mushaf_query_ar") or ""
     q = f"{question} {mq or cls.get('search_query_ar', '')}"
-    if mq:
+    if mq and verses:
         from api.search import embed_query
 
         qvec = embed_query(f"{question}\n{mq}")
-    verses = verse_entries(q, qvec, k=3)
+    verse_items = verse_entries(q, qvec, k=3) if verses else []
     terms = term_entries(" ".join([question, *(cls.get("key_terms_ar") or [])]))
     items = {}
-    for i, v in enumerate(verses, 1):
+    for i, v in enumerate(verse_items, 1):
         items[f"Q{i}"] = v
     for i, t in enumerate(terms, 1):
         items[f"T{i}"] = t
-    topic = cls.get("referral_topic") or "none"
+    topics = cls.get("referral_topics") or [cls.get("referral_topic") or "doubts"]
     refs = [REFERRALS["doubts"]]
-    if topic in ("history", "fiqh", "concept"):
-        refs.append(REFERRALS[topic])
+    refs += [REFERRALS[x] for x in ("history", "fiqh", "concept") if x in topics]
     return {"items": items, "referrals": refs}
 
 

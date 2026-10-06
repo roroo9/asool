@@ -145,3 +145,47 @@ Book passages come first. Every quote from these sources is verified word for wo
 - `ans-21`: editor commentary printed among the footnotes was linked to the *next* hadith (p.29, p.41). It is now linked to the hadith whose footnote is printed just before it, and its search text names that hadith's opening. Asool Recall@5: 97.7% → 100%.
 - `official-08`: a request to translate a term from the approved glossary is now answered from the dictionary itself (status `glossary`), never generated; terms outside the package's sample are labeled as not yet verified against Jamhara.
 - `official-11` / `official-12`: prompt rules: the explanation never writes surah/ayah numbers itself (the verified verse card does), and loaded terms are explained in the passages' own context without adopting the asker's framing.
+
+## Evaluation results (Oct 6, after the human question review)
+All numbers come from `data/eval/results/summary.json` (shown on `/proof`). Three runs of the full answer pipeline: run 0 on all 81 questions, runs 1 and 2 on the 66 reviewed questions. Responses are cached per run, so every run can be re-scored for free.
+
+**Before vs. after the review.** Before the review, all 66 agent-drafted questions passed. The checks were only behaviour plus required units. After the reviewer's notes became requirements, the same pipeline passes fewer. That is expected: the bar is higher, not the system worse.
+
+| Human-reviewed set (66 questions) | Before review (Oct 5) | After review (run 0) |
+|---|---|---|
+| Correct behaviour with all requirements | 66/66 | **61/66 (92%)** |
+| Pass rate per run (runs 0, 1, 2) | — | 92%, 91%, 89% |
+| Same behaviour in all three runs | — | 98% |
+| Right page in top 5 (Asool vs. baseline) | 100% vs. 81% | **100% vs. 84%** (43 questions) |
+| MRR (Asool vs. baseline) | 0.93 vs. 0.76 | 0.93 vs. 0.77 |
+| Required footnote arrives with the text | 5/5 vs. 0/5 | 8/9 vs. 2/9 |
+| Reviewer requirements met | — | 18/20 |
+| Multi-condition answers citing every required unit | 3/3 | 5/7 |
+| Quotes shown and verified word for word | 136, 0 fabricated | **183, 0 fabricated** (157 from the book, 26 from approved sources outside it) |
+| Book quotes traced to page and box | 100% | 100% |
+
+**Failures in run 0 (reported, not tuned away).**
+- `ans-13`: footnote (٨) was quoted but footnote (٧) was not. The question asks "why", so the meaning-footnote rule did not trigger.
+- `hostile-03`: the answer did not cite Ibn ʿAbbās's hadith on an intended bad deed (p.16), which the reviewer required.
+- `official-10`: the answer cited only one of the three required texts (the p.12 verse, «إنما الأعمال بالنيات», «ينظر إلى قلوبكم»).
+- `unans-10` («ما كفارة اليمين؟»): the answer came from Al-Māʾida 89 instead of abstaining. A ruling is not a foundational question, so this was a scope bug.
+- `official-03`: the dorar.net/history referral was missing.
+- In runs 1 and 2, `official-07` failed twice (footnote (٥) on p.12 not quoted) and `ans-32` abstained once.
+
+**Fixes after the runs (disclosed), with a separate post-fix check.**
+1. Classifier v3: a question asking for a specific ruling is never foundational, and a question can carry several referral topics. Re-check: `unans-10` now abstains, and `official-03` shows both «بينات» and dorar.net/history.
+2. The runs showed that the model used Mushaf verses in about 14 answers the book already covers. Verses from the Mushaf are now offered only when the book's best match is below 0.65; on the reviewed set, the questions needing outside sources (official 1–4) score 0.58–0.64 and book questions 0.69 and above. Term definitions remain available for foundational questions, as in the reviewer's official-12 note.
+3. Re-check of the 14 affected questions plus the two above: **13 of 16 pass, 0 fabricated quotes.** `hostile-03`, `official-10` and `nat-01` still fail, on citation completeness.
+4. The three reported runs used the pipeline before fixes 1–2. A clean full re-run needs about $2.40 that is not available within the budget (see `docs/COSTS.md`).
+5. The scorer first counted quotes from the Mushaf, the tafsir and the terminology encyclopedia as "fabricated", because its independent re-check only knew book passages. Fixed: each quote is re-verified against its own source, and the runs were re-scored from cached responses at no cost. The results above use the fixed scorer.
+
+**Natural-phrasing set: drafted by the AI agent, not human-reviewed.** Reported separately, never mixed into the numbers above.
+
+| 15 questions | Asool | Baseline |
+|---|---|---|
+| Right page in top 5 (13 answerable) | 85% | 85% |
+| MRR | 0.77 | 0.60 |
+| Correct behaviour with all requirements | 14/15 | — |
+| Quotes verified word for word | 62, 0 fabricated | — |
+
+With everyday wording, retrieval alone loses its advantage over the baseline. The two misses are colloquial: «أبكي» (crying at a death) and «عصبت» (anger). The full pipeline still answers 14 of 15 correctly, because the classifier rewrites the question into the book's vocabulary before searching. `nat-01` («أنا أذنبت كثير…») gave the time limits but not the conditions of repentance.
